@@ -1,0 +1,12 @@
+{
+  "name": "LaplandNightlife",
+  "short_name": "LaplandNightlife",
+  "description": "The honest guide to Finnish Lapland nightlife — clubs, aurora bars, events, midnight sun.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

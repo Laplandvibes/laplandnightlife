@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+
+    <!-- Favicons / app icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Default title — overridden per route by PageSeo. Kept here as fallback for crawlers
+         that don't render JS and to avoid an empty <title> in the SPA shell. -->
+    <title>LaplandNightlife — Finnish Lapland After Dark & Midnight Sun</title>
+    <meta name="author" content="LaplandVibes editorial team" />
+
+    <!-- Per-route <meta description>, <link rel=canonical>, og:*, twitter:* are emitted
+         by src/components/PageSeo.tsx so each of the 21 routes has unique values.
+         We deliberately do NOT set them here to avoid duplicate-tag ambiguity. -->
+
+    <!-- Preload home hero image -->
+    <link rel="preload" as="image" href="/images/hero/aurora-bars-neon.webp" fetchpriority="high" />
+
+    <!-- Static og:meta needed before React mounts (Slack/WhatsApp link previews don't render JS).
+         PageSeo overrides og:title / og:description / og:image / og:url per route on the client. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LaplandNightlife" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://laplandnightlife.com/" />
+    <meta property="og:title" content="LaplandNightlife — Finnish Lapland After Dark & Midnight Sun" />
+    <meta property="og:description" content="The honest guide to Finnish Lapland nightlife. 14 cities, 50+ verified nightclubs, aurora bars, live music and 2026 Oulu European Capital of Culture events." />
+    <meta property="og:image" content="https://laplandnightlife.com/images/hero/aurora-bars-neon.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LaplandNightlife — Finnish Lapland After Dark & Midnight Sun" />
+    <meta name="twitter:description" content="14 cities, 50+ verified nightclubs, aurora bars, midnight-sun film festival." />
+    <meta name="twitter:image" content="https://laplandnightlife.com/images/hero/aurora-bars-neon.webp" />
+    <meta name="description" content="The honest guide to Finnish Lapland nightlife. 14 cities, 50+ verified nightclubs, aurora bars, live music and 2026 Oulu European Capital of Culture events." />
+    <link rel="canonical" href="https://laplandnightlife.com/" />
+
+    <!-- DNS warmup for hot third parties -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://go.laplandvibes.com" />
+    <link rel="preconnect" href="https://widget.getyourguide.com" />
+
+    <!-- GetYourGuide Integration Analyzer (required for affiliate attribution) -->
+    <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="VRMKD7N"></script>
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Google Analytics Consent Mode v2 — default denied until user accepts cookie banner -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        wait_for_update: 500
+      });
+      if (localStorage.getItem('laplandnightlife_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1MNNKEY0X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R1MNNKEY0X', {
+        linker: {
+          domains: [
+            'laplandvibes.com',
+            'laplandnightlife.com',
+            'laplandstays.com',
+            'laplandbars.com',
+            'laplanddining.com',
+            'laplandtransport.com',
+            'laplandnature.com',
+            'laplandhuskysafaris.com',
+            'laplandsnowmobile.com',
+            'laplandskiresorts.com',
+            'laplandcarrental.com',
+            'laplandgifts.com',
+            'laplandwellness.com',
+            'laplandwork.com',
+            'laplandkids.com',
+            'laplandchristmas.com',
+            'laplandhoteldeals.com',
+            'laplanddeals.com',
+            'laplandfood.com',
+            'laplandstore.com',
+            'laplandvisit.com',
+            'laplandweddings.online',
+            'laplandactivities.online',
+            'lapland.blog'
+          ]
+        }
+      });
+    </script>
+
+    <!-- JSON-LD: Organization + WebSite (home-level structured data) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://laplandnightlife.com/#org",
+          "name": "LaplandNightlife",
+          "url": "https://laplandnightlife.com/",
+          "logo": "https://laplandnightlife.com/favicon.svg",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "LaplandVibes",
+            "url": "https://laplandvibes.com/"
+          },
+          "sameAs": [
+            "https://laplandvibes.com",
+            "https://youtube.com/@laplandvibes",
+            "https://facebook.com/laplandvibes",
+            "https://instagram.com/laplandvibesofficial",
+            "https://tiktok.com/@laplandvibesofficial"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://laplandnightlife.com/#website",
+          "url": "https://laplandnightlife.com/",
+          "name": "LaplandNightlife",
+          "publisher": { "@id": "https://laplandnightlife.com/#org" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

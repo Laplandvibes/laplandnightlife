@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* CRITICAL: Tailwind v4 must scan ../../shared/ for class names used by
+   the shared Footer/CookieBanner/NewsletterPopup/Legal components. */
+@source "../../shared/**/*.{ts,tsx}";
+
+@theme {
+  /* Per-site personality — Vesa-approved 2026-04-27 */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Site-specific palette: deep-night base + violet/purple glow + vibe-pink CTA + arctic-cyan accent */
+  --color-night: #0F172A;
+  --color-night-light: #1E293B;
+  --color-night-lighter: #334155;
+  --color-pink: #EC4899;
+  --color-pink-dark: #BE185D;
+  --color-purple: #7C3AED;
+  --color-purple-dark: #5B21B6;
+  --color-purple-light: #A78BFA;
+  --color-aurora-blue: #38BDF8;
+  --color-neon-yellow: #FACC15;
+
+  /* Canonical LV ecosystem tokens — required so shared/ components
+     (Footer, CookieBanner, NewsletterPopup, Legal/*) render correctly.
+     Do NOT use these in laplandnightlife page code; keep using
+     pink/purple/night for this site's own surfaces. */
+  --color-deep-night: #0F172A;
+  --color-snow: #F9FAFB;
+  --color-vibe-pink: #EC4899;
+  --color-arctic-cyan: #06B6D4;
+  --color-finland-blue: #002F6C;
+  --color-aurora-green: #10B981;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-night);
+    color: #E2E8F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-pink);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-night); }
+  ::-webkit-scrollbar-thumb { background: var(--color-purple); border-radius: 3px; }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 3s ease-in-out infinite;
+}
