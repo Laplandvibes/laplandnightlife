@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables — never commit. Use .env.example for the required-keys list.
+.env
+.env.local
+.env.*.local
