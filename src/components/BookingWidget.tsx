@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Hotel, Plane, Car, Search, MapPin, Calendar, Users } from 'lucide-react';
 import { buildAffiliateHref } from './AffiliateCTA';
+import { buildTripFlightUrl, buildTripFlightHome } from '../lib/tripcom';
 
 type Tab = 'hotels' | 'flights' | 'cars';
 
@@ -38,12 +39,31 @@ export default function BookingWidget() {
         query: { pickup_date: checkin, dropoff_date: checkout },
       });
     } else {
-      href = buildAffiliateHref({
-        partner: 'hotels',
-        sid: 'hero_flights_search',
-        destination,
-        query: { origin, depart: checkin, return: checkout },
-      });
+      // Flights → Trip.com (Impact direct, NOT through go.lv worker — see lib/tripcom.ts).
+      // Map common Lapland city names to IATA codes; if user typed something else,
+      // fall back to Trip.com flight homepage with affiliate tracking.
+      const dest = destination.trim().toLowerCase();
+      const iataMap: Record<string, string> = {
+        rovaniemi: 'rvn',
+        ivalo: 'ivl',
+        kittilä: 'ktt', kittila: 'ktt', levi: 'ktt',
+        kemi: 'kem',
+        kuusamo: 'kao', ruka: 'kao',
+        oulu: 'oul',
+        helsinki: 'hel',
+      };
+      const toIata = iataMap[dest];
+      if (origin && toIata) {
+        href = buildTripFlightUrl({
+          from: origin,
+          to: toIata,
+          depart: checkin,
+          returnDate: checkout,
+          sid: 'hero_flight_search',
+        });
+      } else {
+        href = buildTripFlightHome('hero_flight_search_generic');
+      }
     }
     window.open(href, '_blank', 'noopener,noreferrer');
   }
@@ -189,7 +209,9 @@ export default function BookingWidget() {
         </button>
 
         <p className="text-center text-xs text-white/40 mt-3">
-          Powered by Expedia — you book securely on their platform
+          {tab === 'flights'
+            ? 'Powered by Trip.com — you book securely on their platform'
+            : 'Powered by Expedia — you book securely on their platform'}
         </p>
       </div>
     </form>
