@@ -1,4 +1,4 @@
-import CookieContent from '../../../shared/Legal/CookieContent';
+import CookieContent from '../shared/Legal/CookieContent';
 
 export default function CookiePolicy() {
   return (

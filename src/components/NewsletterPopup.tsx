@@ -1,4 +1,4 @@
-import SharedNewsletterPopup from '../../../shared/NewsletterPopup';
+import SharedNewsletterPopup from '../shared/NewsletterPopup';
 import { trackNewsletterSignup } from '../lib/analytics';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;

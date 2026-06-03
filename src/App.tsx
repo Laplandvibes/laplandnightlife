@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import SharedFooter from '../../shared/Footer';
-import SharedCookieBanner from '../../shared/CookieBanner';
+import SharedFooter from './shared/Footer';
+import SharedCookieBanner from './shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
 import Home from './pages/Home';
 import Cities from './pages/Cities';

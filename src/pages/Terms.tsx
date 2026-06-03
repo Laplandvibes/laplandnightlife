@@ -1,4 +1,4 @@
-import TermsContent from '../../../shared/Legal/TermsContent';
+import TermsContent from '../shared/Legal/TermsContent';
 
 export default function Terms() {
   return (
