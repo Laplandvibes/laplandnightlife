@@ -70,7 +70,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'By accessing or using this website, you agree to these terms. If you do not agree, please stop using the site.',
     s2Title: '2. Information Accuracy',
-    s2Body: 'Travel information — including prices, opening hours, weather conditions, and availability — changes frequently. We aim to keep content accurate and up to date, but we cannot guarantee that all information is current at the time of your visit. Always verify critical details directly with service providers before making bookings.',
+    s2Body: 'Travel information, including prices, opening hours, weather conditions, and availability, changes frequently. We aim to keep content accurate and up to date, but we cannot guarantee that all information is current at the time of your visit. Always verify critical details directly with service providers before making bookings.',
     s3Title: '3. Affiliate Links & Partnerships',
     s3P1: (siteName) => `Some links on ${siteName} are affiliate links. When you click these links and make a booking or purchase, we may receive a small commission at no additional cost to you. Affiliate relationships do not influence our editorial recommendations. We only link to services we believe provide genuine value.`,
     s3P2: 'Affiliate partners include but are not limited to: Hotels.com, EconomyBookings, GetYourGuide, and other travel service providers via CJ (Commission Junction). Each booking is subject to the terms and conditions of the respective service provider.',
@@ -95,7 +95,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Any contract for travel services — accommodation, flights, car rental, tours — is concluded directly
+        Any contract for travel services, accommodation, flights, car rental, tours, is concluded directly
         between you and the relevant third-party provider, on their terms and under their privacy policy.
         Their cancellation rules, refund policies, and consumer-protection rights apply, not ours. The Finnish
         consumer right of withdrawal under <em>kuluttajansuojalaki 6 luku</em> is exercised against the
@@ -111,7 +111,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Intellectual Property',
-    s7Body: (siteName) => `All original content on ${siteName} — including text, graphics, and design — is owned by Lapeso Oy or licensed for use. You may not reproduce, distribute, or create derivative works without written permission. Fair use for non-commercial personal reference is permitted with attribution.`,
+    s7Body: (siteName) => `All original content on ${siteName}, including text, graphics, and design, is owned by Lapeso Oy or licensed for use. You may not reproduce, distribute, or create derivative works without written permission. Fair use for non-commercial personal reference is permitted with attribution.`,
     s8Title: '8. Limitation of Liability',
     s8Body: (siteName) => `${siteName} and Lapeso Oy are not liable for any loss, injury, or damage arising from reliance on information on this site, from use of linked third-party services, or from travel decisions made based on our content. Travel to Arctic regions involves inherent risks; always obtain appropriate travel insurance and follow local safety guidelines.`,
     s9Title: '9. Governing Law',
@@ -119,7 +119,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Changes to These Terms',
     s10Body: 'We may update these terms from time to time. Changes are effective upon posting. Continued use of the site after updates constitutes acceptance of the revised terms.',
     s11Title: '11. Severability',
-    s11Body: 'If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions remain in full force and effect. The invalid provision shall be replaced — to the extent permitted by law — with a valid provision that most closely matches the original commercial intent.',
+    s11Body: 'If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions remain in full force and effect. The invalid provision shall be replaced, to the extent permitted by law, with a valid provision that most closely matches the original commercial intent.',
     s12Title: '12. Digital Services Act (DSA) Contact Point',
     s12Intro: 'Under the EU Digital Services Act (Regulation (EU) 2022/2065), our designated contact point for authorities and recipients of the service is:',
     s12Items: [
@@ -145,7 +145,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Käyttämällä tätä sivustoa hyväksyt nämä käyttöehdot. Jos et hyväksy niitä, lopeta sivuston käyttö.',
     s2Title: '2. Tietojen ajantasaisuus',
-    s2Body: 'Matkailutiedot — kuten hinnat, aukioloajat, sääolosuhteet ja saatavuus — muuttuvat usein. Pyrimme pitämään sisällön ajantasaisena ja tarkkana, mutta emme voi taata, että kaikki tiedot ovat ajantasaisia vierailuhetkelläsi. Tarkista kriittiset yksityiskohdat aina suoraan palveluntarjoajalta ennen varauksen tekemistä.',
+    s2Body: 'Matkailutiedot, kuten hinnat, aukioloajat, sääolosuhteet ja saatavuus, muuttuvat usein. Pyrimme pitämään sisällön ajantasaisena ja tarkkana, mutta emme voi taata, että kaikki tiedot ovat ajantasaisia vierailuhetkelläsi. Tarkista kriittiset yksityiskohdat aina suoraan palveluntarjoajalta ennen varauksen tekemistä.',
     s3Title: '3. Kumppanilinkit ja yhteistyökumppanit',
     s3P1: (siteName) => `Osa ${siteName}-sivuston linkeistä on kumppanilinkkejä. Kun klikkaat näitä linkkejä ja teet varauksen tai ostoksen, saatamme saada pienen komission ilman lisäkustannuksia sinulle. Kumppanuussuhteet eivät vaikuta toimituksellisiin suosituksiimme. Linkitämme vain palveluihin, joiden uskomme tuottavan aitoa arvoa.`,
     s3P2: 'Kumppaneitamme ovat esimerkiksi Hotels.com, EconomyBookings, GetYourGuide ja muut matkailupalvelujen tarjoajat CJ:n (Commission Junction) kautta. Jokainen varaus on kunkin palveluntarjoajan omien ehtojen alainen.',
@@ -158,7 +158,7 @@ const COPY: Record<Lang, TermsCopy> = {
         joilla on omat käyttöehtonsa ja tietosuojakäytäntönsä.
       </>
     ),
-    s5Title: '5. Kolmannen osapuolen palvelut — emme ole myyjä',
+    s5Title: '5. Kolmannen osapuolen palvelut, emme ole myyjä',
     s5P1: (siteName) => (
       <>
         Sivuston hotellihaut, lentohaut, autovuokraus- ja aktiviteettivarausvälineet ohjaavat kolmannen osapuolen alustoille
@@ -169,7 +169,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Sopimus matkailupalvelusta — majoituksesta, lennoista, autovuokrauksesta, retkistä — solmitaan suoraan sinun ja kyseisen
+        Sopimus matkailupalvelusta, majoituksesta, lennoista, autovuokrauksesta, retkistä, solmitaan suoraan sinun ja kyseisen
         kolmannen osapuolen palveluntarjoajan välillä, heidän ehtojensa ja tietosuojakäytäntönsä mukaisesti. Heidän peruutus-, hyvitys-
         ja kuluttajansuojasääntönsä pätevät, eivät meidän. Suomen <em>kuluttajansuojalain 6 luvun</em> mukainen peruuttamisoikeus
         kohdistuu elinkeinonharjoittajaan; {siteName} ei ole osapuolena kyseisessä prosessissa.
@@ -184,7 +184,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Tekijänoikeudet',
-    s7Body: (siteName) => `Kaikki ${siteName}-sivuston alkuperäissisältö — teksti, kuvitus ja muotoilu — kuuluu Lapeso Oy:lle tai on käytössä lisenssillä. Sisältöä ei saa jäljentää, jakaa tai muokata ilman kirjallista lupaa. Ei-kaupallinen henkilökohtainen käyttö lähteen mainiten on sallittu.`,
+    s7Body: (siteName) => `Kaikki ${siteName}-sivuston alkuperäissisältö, teksti, kuvitus ja muotoilu, kuuluu Lapeso Oy:lle tai on käytössä lisenssillä. Sisältöä ei saa jäljentää, jakaa tai muokata ilman kirjallista lupaa. Ei-kaupallinen henkilökohtainen käyttö lähteen mainiten on sallittu.`,
     s8Title: '8. Vastuunrajoitus',
     s8Body: (siteName) => `${siteName} ja Lapeso Oy eivät vastaa menetyksistä, vahingoista tai haitoista, jotka aiheutuvat sivuston tietoihin luottamisesta, linkitettyjen kolmansien osapuolten palveluiden käytöstä tai sisällön perusteella tehdyistä matkapäätöksistä. Arktisille alueille matkustaminen sisältää aina riskejä; hanki kattava matkavakuutus ja noudata paikallisia turvallisuusohjeita.`,
     s9Title: '9. Sovellettava laki',
@@ -192,7 +192,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Käyttöehtojen muutokset',
     s10Body: 'Voimme päivittää näitä käyttöehtoja aika ajoin. Muutokset astuvat voimaan, kun ne on julkaistu. Jatkamalla sivuston käyttöä päivitysten jälkeen hyväksyt päivitetyt ehdot.',
     s11Title: '11. Erotettavuus',
-    s11Body: 'Jos toimivaltainen tuomioistuin toteaa jonkin näiden käyttöehtojen kohdan pätemättömäksi, lainvastaiseksi tai täytäntöönpanokelvottomaksi, muut kohdat pysyvät täysimääräisesti voimassa. Pätemätön kohta korvataan — lain sallimissa rajoissa — pätevällä määräyksellä, joka vastaa mahdollisimman tarkasti alkuperäistä kaupallista tarkoitusta.',
+    s11Body: 'Jos toimivaltainen tuomioistuin toteaa jonkin näiden käyttöehtojen kohdan pätemättömäksi, lainvastaiseksi tai täytäntöönpanokelvottomaksi, muut kohdat pysyvät täysimääräisesti voimassa. Pätemätön kohta korvataan, lain sallimissa rajoissa, pätevällä määräyksellä, joka vastaa mahdollisimman tarkasti alkuperäistä kaupallista tarkoitusta.',
     s12Title: '12. Digipalvelusäädöksen (DSA) yhteyspiste',
     s12Intro: 'EU:n digipalvelusäädöksen (asetus (EU) 2022/2065) mukainen yhteyspisteemme viranomaisille ja palvelun vastaanottajille on:',
     s12Items: [
@@ -218,9 +218,9 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Mit dem Zugriff auf bzw. der Nutzung dieser Website erklären Sie sich mit diesen Bedingungen einverstanden. Sind Sie damit nicht einverstanden, stellen Sie die Nutzung bitte ein.',
     s2Title: '2. Richtigkeit der Informationen',
-    s2Body: 'Reiseinformationen — einschließlich Preise, Öffnungszeiten, Wetterbedingungen und Verfügbarkeit — ändern sich häufig. Wir bemühen uns um aktuelle und genaue Inhalte, können jedoch nicht garantieren, dass alle Angaben zum Zeitpunkt Ihres Besuchs aktuell sind. Bitte prüfen Sie wesentliche Details vor jeder Buchung direkt beim Anbieter.',
+    s2Body: 'Reiseinformationen, einschließlich Preise, Öffnungszeiten, Wetterbedingungen und Verfügbarkeit, ändern sich häufig. Wir bemühen uns um aktuelle und genaue Inhalte, können jedoch nicht garantieren, dass alle Angaben zum Zeitpunkt Ihres Besuchs aktuell sind. Bitte prüfen Sie wesentliche Details vor jeder Buchung direkt beim Anbieter.',
     s3Title: '3. Partnerlinks und Kooperationen',
-    s3P1: (siteName) => `Einige Links auf ${siteName} sind Partnerlinks. Wenn Sie über diese Links eine Buchung oder einen Kauf tätigen, erhalten wir ggf. eine kleine Provision — für Sie ohne zusätzliche Kosten. Partnerschaften beeinflussen unsere redaktionellen Empfehlungen nicht. Wir verlinken ausschließlich Dienste, die wir für sinnvoll halten.`,
+    s3P1: (siteName) => `Einige Links auf ${siteName} sind Partnerlinks. Wenn Sie über diese Links eine Buchung oder einen Kauf tätigen, erhalten wir ggf. eine kleine Provision, für Sie ohne zusätzliche Kosten. Partnerschaften beeinflussen unsere redaktionellen Empfehlungen nicht. Wir verlinken ausschließlich Dienste, die wir für sinnvoll halten.`,
     s3P2: 'Zu unseren Partnern gehören u. a. Hotels.com, EconomyBookings, GetYourGuide sowie weitere Reisedienstleister über CJ (Commission Junction). Jede Buchung unterliegt den Bedingungen des jeweiligen Anbieters.',
     s4Title: '4. Gesponserte Inhalte',
     s4Body: (siteName) => (
@@ -231,7 +231,7 @@ const COPY: Record<Lang, TermsCopy> = {
         eigenen Bedingungen und Datenschutzrichtlinien.
       </>
     ),
-    s5Title: '5. Dienste Dritter — wir sind kein Händler',
+    s5Title: '5. Dienste Dritter, wir sind kein Händler',
     s5P1: (siteName) => (
       <>
         Hotelsuche, Flugsuche, Mietwagen- und Aktivitätsbuchungstools auf dieser Website leiten an externe Plattformen weiter
@@ -242,7 +242,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Verträge über Reiseleistungen — Unterkunft, Flüge, Mietwagen, Touren — kommen direkt zwischen Ihnen und dem jeweiligen Drittanbieter
+        Verträge über Reiseleistungen, Unterkunft, Flüge, Mietwagen, Touren, kommen direkt zwischen Ihnen und dem jeweiligen Drittanbieter
         nach dessen Bedingungen und Datenschutzrichtlinie zustande. Es gelten dessen Stornierungs-, Rückerstattungs- und Verbraucherrechtsregeln, nicht unsere.
         Das finnische Widerrufsrecht nach <em>kuluttajansuojalaki 6 luku</em> richtet sich gegen den Händler; {siteName} ist hieran nicht beteiligt.
       </>
@@ -256,7 +256,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Geistiges Eigentum',
-    s7Body: (siteName) => `Alle originalen Inhalte auf ${siteName} — Text, Grafiken, Design — gehören Lapeso Oy oder werden lizenziert genutzt. Vervielfältigung, Verbreitung oder Bearbeitung sind nur mit schriftlicher Genehmigung gestattet. Eine nicht-kommerzielle persönliche Nutzung mit Quellenangabe ist erlaubt.`,
+    s7Body: (siteName) => `Alle originalen Inhalte auf ${siteName}, Text, Grafiken, Design, gehören Lapeso Oy oder werden lizenziert genutzt. Vervielfältigung, Verbreitung oder Bearbeitung sind nur mit schriftlicher Genehmigung gestattet. Eine nicht-kommerzielle persönliche Nutzung mit Quellenangabe ist erlaubt.`,
     s8Title: '8. Haftungsbeschränkung',
     s8Body: (siteName) => `${siteName} und Lapeso Oy haften nicht für Verluste, Verletzungen oder Schäden, die aus dem Vertrauen auf Informationen dieser Website, der Nutzung verlinkter Dienste Dritter oder Reiseentscheidungen auf Basis unserer Inhalte entstehen. Reisen in arktische Regionen sind mit inhärenten Risiken verbunden; schließen Sie eine geeignete Reiseversicherung ab und befolgen Sie örtliche Sicherheitsvorgaben.`,
     s9Title: '9. Anwendbares Recht',
@@ -264,7 +264,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Änderungen dieser Bedingungen',
     s10Body: 'Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Änderungen werden mit ihrer Veröffentlichung wirksam. Die fortgesetzte Nutzung der Website nach Aktualisierungen gilt als Zustimmung zu den geänderten Bedingungen.',
     s11Title: '11. Salvatorische Klausel',
-    s11Body: 'Sollte eine Bestimmung dieser Bedingungen von einem zuständigen Gericht als ungültig, rechtswidrig oder nicht durchsetzbar erklärt werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die ungültige Bestimmung ist — soweit gesetzlich zulässig — durch eine gültige Regelung zu ersetzen, die der ursprünglichen wirtschaftlichen Absicht am nächsten kommt.',
+    s11Body: 'Sollte eine Bestimmung dieser Bedingungen von einem zuständigen Gericht als ungültig, rechtswidrig oder nicht durchsetzbar erklärt werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die ungültige Bestimmung ist, soweit gesetzlich zulässig, durch eine gültige Regelung zu ersetzen, die der ursprünglichen wirtschaftlichen Absicht am nächsten kommt.',
     s12Title: '12. Kontaktstelle gemäß Digital Services Act (DSA)',
     s12Intro: 'Gemäß der EU-Verordnung (EU) 2022/2065 (Digital Services Act) ist unsere Kontaktstelle für Behörden und Nutzer:',
     s12Items: [
@@ -300,7 +300,7 @@ const COPY: Record<Lang, TermsCopy> = {
         <strong className="text-snow/90">「PR」</strong>のラベルで明示されます。{siteName} は広告主の製品・サービス・主張については責任を負いません。スポンサーリンクをクリックすると、独自の規約とプライバシーポリシーを持つ外部サイトに移動します。
       </>
     ),
-    s5Title: '5. 第三者サービス — 当サイトは販売業者ではありません',
+    s5Title: '5. 第三者サービス, 当サイトは販売業者ではありません',
     s5P1: (siteName) => (
       <>
         本サイトのホテル検索、航空券検索、レンタカー、アクティビティ予約の各ツールは、第三者のプラットフォーム(Hotels.com、EconomyBookings、GetYourGuide ほか)へリダイレクトされます。{' '}
@@ -354,7 +354,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Al acceder o utilizar este sitio web, usted acepta estos términos. Si no está de acuerdo, deje de utilizar el sitio.',
     s2Title: '2. Exactitud de la información',
-    s2Body: 'La información turística — incluidos precios, horarios, condiciones meteorológicas y disponibilidad — cambia con frecuencia. Procuramos mantener el contenido preciso y actualizado, pero no podemos garantizar que toda la información esté vigente en el momento de su visita. Verifique siempre los detalles críticos directamente con el proveedor antes de reservar.',
+    s2Body: 'La información turística, incluidos precios, horarios, condiciones meteorológicas y disponibilidad, cambia con frecuencia. Procuramos mantener el contenido preciso y actualizado, pero no podemos garantizar que toda la información esté vigente en el momento de su visita. Verifique siempre los detalles críticos directamente con el proveedor antes de reservar.',
     s3Title: '3. Enlaces de afiliados y colaboraciones',
     s3P1: (siteName) => `Algunos enlaces de ${siteName} son enlaces de afiliados. Cuando hace clic en estos enlaces y realiza una reserva o compra, podemos recibir una pequeña comisión sin coste adicional para usted. Las relaciones de afiliación no influyen en nuestras recomendaciones editoriales. Solo enlazamos a servicios que consideramos que aportan valor real.`,
     s3P2: 'Entre nuestros socios afiliados se incluyen, sin limitarse a: Hotels.com, EconomyBookings, GetYourGuide y otros proveedores de servicios turísticos a través de CJ (Commission Junction). Cada reserva está sujeta a los términos y condiciones del proveedor correspondiente.',
@@ -367,7 +367,7 @@ const COPY: Record<Lang, TermsCopy> = {
         será dirigido a sitios externos sujetos a sus propios términos y políticas de privacidad.
       </>
     ),
-    s5Title: '5. Servicios de terceros — no somos comerciantes',
+    s5Title: '5. Servicios de terceros, no somos comerciantes',
     s5P1: (siteName) => (
       <>
         Las herramientas de búsqueda de hoteles, vuelos, alquiler de coches y reserva de actividades de este sitio redirigen
@@ -379,7 +379,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Todo contrato de servicios de viaje — alojamiento, vuelos, alquiler de coches, tours — se celebra directamente
+        Todo contrato de servicios de viaje, alojamiento, vuelos, alquiler de coches, tours, se celebra directamente
         entre usted y el proveedor externo correspondiente, según sus términos y su política de privacidad.
         Se aplican sus reglas de cancelación, reembolso y derechos del consumidor, no las nuestras. El derecho de
         desistimiento finlandés conforme al <em>kuluttajansuojalaki 6 luku</em> se ejerce frente al comerciante;
@@ -395,7 +395,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Propiedad intelectual',
-    s7Body: (siteName) => `Todo el contenido original de ${siteName} — incluidos textos, gráficos y diseño — es propiedad de Lapeso Oy o se utiliza bajo licencia. No puede reproducirse, distribuirse ni crear obras derivadas sin autorización por escrito. Se permite un uso justo para referencia personal no comercial con cita de la fuente.`,
+    s7Body: (siteName) => `Todo el contenido original de ${siteName}, incluidos textos, gráficos y diseño, es propiedad de Lapeso Oy o se utiliza bajo licencia. No puede reproducirse, distribuirse ni crear obras derivadas sin autorización por escrito. Se permite un uso justo para referencia personal no comercial con cita de la fuente.`,
     s8Title: '8. Limitación de responsabilidad',
     s8Body: (siteName) => `${siteName} y Lapeso Oy no se hacen responsables de pérdidas, lesiones o daños derivados de la confianza en la información de este sitio, del uso de servicios de terceros enlazados, o de decisiones de viaje tomadas a partir de nuestro contenido. Viajar a regiones árticas implica riesgos inherentes; contrate un seguro de viaje adecuado y siga las indicaciones de seguridad locales.`,
     s9Title: '9. Ley aplicable',
@@ -403,7 +403,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Cambios en estos términos',
     s10Body: 'Podemos actualizar estos términos ocasionalmente. Los cambios entran en vigor al publicarse. El uso continuado del sitio tras las actualizaciones implica la aceptación de los términos revisados.',
     s11Title: '11. Divisibilidad',
-    s11Body: 'Si un tribunal competente declara inválida, ilegal o inaplicable alguna disposición de estos Términos, el resto de las disposiciones seguirán vigentes en su totalidad. La disposición inválida se sustituirá — en la medida que permita la ley — por otra válida que se ajuste lo más posible al propósito comercial original.',
+    s11Body: 'Si un tribunal competente declara inválida, ilegal o inaplicable alguna disposición de estos Términos, el resto de las disposiciones seguirán vigentes en su totalidad. La disposición inválida se sustituirá, en la medida que permita la ley, por otra válida que se ajuste lo más posible al propósito comercial original.',
     s12Title: '12. Punto de contacto a efectos de la Ley de Servicios Digitales (DSA)',
     s12Intro: 'Conforme al Reglamento (UE) 2022/2065 (DSA), nuestro punto de contacto designado para autoridades y destinatarios del servicio es:',
     s12Items: [
@@ -429,7 +429,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Ao acessar ou usar este site, você concorda com estes termos. Se não concordar, interrompa o uso do site.',
     s2Title: '2. Precisão das informações',
-    s2Body: 'As informações de viagem — incluindo preços, horários, condições climáticas e disponibilidade — mudam com frequência. Buscamos manter o conteúdo atualizado e preciso, mas não podemos garantir que todas as informações estejam vigentes no momento da sua visita. Sempre confirme os detalhes críticos diretamente com os fornecedores antes de reservar.',
+    s2Body: 'As informações de viagem, incluindo preços, horários, condições climáticas e disponibilidade, mudam com frequência. Buscamos manter o conteúdo atualizado e preciso, mas não podemos garantir que todas as informações estejam vigentes no momento da sua visita. Sempre confirme os detalhes críticos diretamente com os fornecedores antes de reservar.',
     s3Title: '3. Links de afiliados e parcerias',
     s3P1: (siteName) => `Alguns links em ${siteName} são links de afiliados. Quando você clica nesses links e faz uma reserva ou compra, podemos receber uma pequena comissão, sem custo adicional para você. As relações de afiliação não influenciam nossas recomendações editoriais. Só indicamos serviços que acreditamos oferecer valor genuíno.`,
     s3P2: 'Entre os parceiros afiliados estão, sem se limitar a: Hotels.com, EconomyBookings, GetYourGuide e outros fornecedores de serviços de viagem via CJ (Commission Junction). Cada reserva está sujeita aos termos e condições do respectivo fornecedor.',
@@ -442,7 +442,7 @@ const COPY: Record<Lang, TermsCopy> = {
         você a sites externos regidos por seus próprios termos e políticas de privacidade.
       </>
     ),
-    s5Title: '5. Serviços de terceiros — não somos comerciantes',
+    s5Title: '5. Serviços de terceiros, não somos comerciantes',
     s5P1: (siteName) => (
       <>
         As ferramentas de busca de hotéis, voos, aluguel de carros e reserva de atividades neste site redirecionam para
@@ -454,7 +454,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Qualquer contrato relativo a serviços de viagem — hospedagem, voos, aluguel de carros, passeios — é celebrado
+        Qualquer contrato relativo a serviços de viagem, hospedagem, voos, aluguel de carros, passeios, é celebrado
         diretamente entre você e o respectivo fornecedor terceiro, sob os termos e a política de privacidade dele.
         São aplicáveis as regras de cancelamento, reembolso e defesa do consumidor desse fornecedor, e não as nossas.
         O direito de arrependimento finlandês previsto no <em>kuluttajansuojalaki 6 luku</em> é exercido contra o
@@ -470,7 +470,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Propriedade intelectual',
-    s7Body: (siteName) => `Todo o conteúdo original em ${siteName} — incluindo textos, imagens e design — pertence à Lapeso Oy ou é usado mediante licença. Você não pode reproduzir, distribuir ou criar obras derivadas sem autorização por escrito. O uso justo para fins de referência pessoal não comercial é permitido com a devida atribuição.`,
+    s7Body: (siteName) => `Todo o conteúdo original em ${siteName}, incluindo textos, imagens e design, pertence à Lapeso Oy ou é usado mediante licença. Você não pode reproduzir, distribuir ou criar obras derivadas sem autorização por escrito. O uso justo para fins de referência pessoal não comercial é permitido com a devida atribuição.`,
     s8Title: '8. Limitação de responsabilidade',
     s8Body: (siteName) => `O ${siteName} e a Lapeso Oy não se responsabilizam por perdas, lesões ou danos decorrentes da confiança nas informações deste site, do uso de serviços de terceiros vinculados ou de decisões de viagem tomadas com base em nosso conteúdo. Viajar a regiões árticas envolve riscos inerentes; contrate sempre um seguro de viagem adequado e siga as orientações locais de segurança.`,
     s9Title: '9. Legislação aplicável',
@@ -478,7 +478,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Alterações nestes termos',
     s10Body: 'Podemos atualizar estes termos de tempos em tempos. As alterações entram em vigor após a publicação. O uso continuado do site após as atualizações constitui aceitação dos termos revisados.',
     s11Title: '11. Independência das cláusulas',
-    s11Body: 'Se qualquer disposição destes Termos for considerada inválida, ilegal ou inexequível por um tribunal competente, as demais disposições permanecerão em pleno vigor. A disposição inválida será substituída — na medida permitida por lei — por outra válida que mais se aproxime da intenção comercial original.',
+    s11Body: 'Se qualquer disposição destes Termos for considerada inválida, ilegal ou inexequível por um tribunal competente, as demais disposições permanecerão em pleno vigor. A disposição inválida será substituída, na medida permitida por lei, por outra válida que mais se aproxime da intenção comercial original.',
     s12Title: '12. Ponto de contato para a Lei de Serviços Digitais (DSA)',
     s12Intro: 'Conforme o Regulamento (UE) 2022/2065 (DSA), nosso ponto de contato designado para autoridades e destinatários do serviço é:',
     s12Items: [
@@ -514,7 +514,7 @@ const COPY: Record<Lang, TermsCopy> = {
         {siteName} 不对广告主的产品、服务或主张负责。点击赞助链接将带您前往拥有自身条款与隐私政策的外部网站。
       </>
     ),
-    s5Title: '5. 第三方服务 — 我们不是销售方',
+    s5Title: '5. 第三方服务, 我们不是销售方',
     s5P1: (siteName) => (
       <>
         本网站上的酒店搜索、机票搜索、租车与活动预订工具会将您重定向至第三方平台(Hotels.com、EconomyBookings、GetYourGuide 等)。{' '}
@@ -585,7 +585,7 @@ const COPY: Record<Lang, TermsCopy> = {
         외부 웹사이트로 이동합니다.
       </>
     ),
-    s5Title: '5. 제3자 서비스 — 당사는 판매자가 아닙니다',
+    s5Title: '5. 제3자 서비스, 당사는 판매자가 아닙니다',
     s5P1: (siteName) => (
       <>
         본 사이트의 호텔 검색, 항공편 검색, 렌터카, 액티비티 예약 도구는 제3자 플랫폼(Hotels.com,
@@ -647,7 +647,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'En accédant à ce site ou en l\'utilisant, vous acceptez ces conditions. Si vous n\'acceptez pas, veuillez cesser d\'utiliser le site.',
     s2Title: '2. Exactitude des informations',
-    s2Body: 'Les informations de voyage — prix, horaires d\'ouverture, conditions météorologiques, disponibilité — changent fréquemment. Nous nous efforçons de tenir le contenu à jour, mais nous ne pouvons garantir que toutes les informations sont actuelles au moment de votre visite. Vérifiez toujours les détails critiques directement auprès des prestataires avant de réserver.',
+    s2Body: 'Les informations de voyage, prix, horaires d\'ouverture, conditions météorologiques, disponibilité, changent fréquemment. Nous nous efforçons de tenir le contenu à jour, mais nous ne pouvons garantir que toutes les informations sont actuelles au moment de votre visite. Vérifiez toujours les détails critiques directement auprès des prestataires avant de réserver.',
     s3Title: '3. Liens d\'affiliation et partenariats',
     s3P1: (siteName) => `Certains liens sur ${siteName} sont des liens d'affiliation. Lorsque vous cliquez sur ces liens et effectuez une réservation ou un achat, nous pouvons percevoir une petite commission sans coût supplémentaire pour vous. Les relations d'affiliation n'influencent pas nos recommandations éditoriales. Nous ne créons des liens que vers des services dont nous estimons qu'ils apportent une réelle valeur.`,
     s3P2: 'Les partenaires d\'affiliation incluent notamment : Hotels.com, EconomyBookings, GetYourGuide et d\'autres prestataires de services de voyage via CJ (Commission Junction). Chaque réservation est soumise aux conditions générales du prestataire concerné.',
@@ -660,7 +660,7 @@ const COPY: Record<Lang, TermsCopy> = {
         lien sponsorisé vous amènera sur des sites externes régis par leurs propres conditions et politiques de confidentialité.
       </>
     ),
-    s5Title: '5. Services tiers — Nous ne sommes pas un commerçant',
+    s5Title: '5. Services tiers, Nous ne sommes pas un commerçant',
     s5P1: (siteName) => (
       <>
         Les outils de recherche d\'hôtels, de vols, de location de voitures et de réservation d\'activités sur ce
@@ -672,7 +672,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Tout contrat portant sur des services de voyage — hébergement, vols, location de voiture, excursions —
+        Tout contrat portant sur des services de voyage, hébergement, vols, location de voiture, excursions, 
         est conclu directement entre vous et le prestataire tiers concerné, selon ses conditions et sa politique
         de confidentialité. Ses règles d\'annulation, de remboursement et ses droits de protection des
         consommateurs s\'appliquent, pas les nôtres. Le droit de rétractation finlandais prévu par{' '}
@@ -688,7 +688,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Propriété intellectuelle',
-    s7Body: (siteName) => `Tout le contenu original sur ${siteName} — y compris les textes, graphismes et design — est la propriété de Lapeso Oy ou est utilisé sous licence. Vous ne pouvez ni reproduire, ni distribuer, ni créer d'œuvres dérivées sans autorisation écrite. L'usage loyal pour une référence personnelle non commerciale est autorisé avec attribution.`,
+    s7Body: (siteName) => `Tout le contenu original sur ${siteName}, y compris les textes, graphismes et design, est la propriété de Lapeso Oy ou est utilisé sous licence. Vous ne pouvez ni reproduire, ni distribuer, ni créer d'œuvres dérivées sans autorisation écrite. L'usage loyal pour une référence personnelle non commerciale est autorisé avec attribution.`,
     s8Title: '8. Limitation de responsabilité',
     s8Body: (siteName) => `${siteName} et Lapeso Oy ne sont pas responsables des pertes, blessures ou dommages résultant de la confiance accordée aux informations de ce site, de l'utilisation de services tiers liés ou de décisions de voyage prises sur la base de notre contenu. Les voyages dans les régions arctiques comportent des risques inhérents ; souscrivez toujours une assurance voyage adaptée et suivez les consignes de sécurité locales.`,
     s9Title: '9. Loi applicable',
@@ -696,7 +696,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Modifications de ces conditions',
     s10Body: 'Nous pouvons mettre à jour ces conditions de temps à autre. Les modifications prennent effet dès leur publication. L\'utilisation continue du site après les mises à jour vaut acceptation des conditions révisées.',
     s11Title: '11. Divisibilité',
-    s11Body: 'Si une disposition des présentes Conditions est jugée invalide, illégale ou inapplicable par un tribunal compétent, les autres dispositions demeurent pleinement en vigueur. La disposition invalide sera remplacée — dans la mesure permise par la loi — par une disposition valide se rapprochant au plus près de l\'intention commerciale d\'origine.',
+    s11Body: 'Si une disposition des présentes Conditions est jugée invalide, illégale ou inapplicable par un tribunal compétent, les autres dispositions demeurent pleinement en vigueur. La disposition invalide sera remplacée, dans la mesure permise par la loi, par une disposition valide se rapprochant au plus près de l\'intention commerciale d\'origine.',
     s12Title: '12. Point de contact Digital Services Act (DSA)',
     s12Intro: 'En vertu du règlement européen sur les services numériques (Règlement (UE) 2022/2065), notre point de contact désigné pour les autorités et les destinataires du service est :',
     s12Items: [
@@ -722,7 +722,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Accedendo o utilizzando il presente sito web, Lei accetta i presenti termini. Se non accetta, La preghiamo di interrompere l\'uso del sito.',
     s2Title: '2. Accuratezza delle informazioni',
-    s2Body: 'Le informazioni di viaggio — inclusi prezzi, orari di apertura, condizioni meteo e disponibilità — cambiano di frequente. Ci impegniamo a mantenere il contenuto accurato e aggiornato, ma non possiamo garantire che tutte le informazioni siano attuali al momento della Sua visita. Verifichi sempre i dettagli critici direttamente con i fornitori di servizi prima di prenotare.',
+    s2Body: 'Le informazioni di viaggio, inclusi prezzi, orari di apertura, condizioni meteo e disponibilità, cambiano di frequente. Ci impegniamo a mantenere il contenuto accurato e aggiornato, ma non possiamo garantire che tutte le informazioni siano attuali al momento della Sua visita. Verifichi sempre i dettagli critici direttamente con i fornitori di servizi prima di prenotare.',
     s3Title: '3. Link di affiliazione e partnership',
     s3P1: (siteName) => `Alcuni link su ${siteName} sono link di affiliazione. Quando Lei clicca su questi link ed effettua una prenotazione o un acquisto, potremmo ricevere una piccola commissione senza costi aggiuntivi. I rapporti di affiliazione non influenzano le nostre raccomandazioni editoriali. Inseriamo link solo verso servizi che riteniamo offrano un valore reale.`,
     s3P2: 'I partner di affiliazione includono, a titolo esemplificativo: Hotels.com, EconomyBookings, GetYourGuide e altri fornitori di servizi di viaggio tramite CJ (Commission Junction). Ogni prenotazione è soggetta ai termini e alle condizioni del rispettivo fornitore.',
@@ -735,7 +735,7 @@ const COPY: Record<Lang, TermsCopy> = {
         link sponsorizzati verrà reindirizzato a siti esterni regolati da propri termini e politiche sulla privacy.
       </>
     ),
-    s5Title: '5. Servizi di terzi — non siamo un commerciante',
+    s5Title: '5. Servizi di terzi, non siamo un commerciante',
     s5P1: (siteName) => (
       <>
         Gli strumenti di ricerca hotel, voli, autonoleggio e prenotazione attività su questo sito reindirizzano
@@ -747,7 +747,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Qualsiasi contratto per servizi di viaggio — alloggio, voli, autonoleggio, tour — è concluso direttamente
+        Qualsiasi contratto per servizi di viaggio, alloggio, voli, autonoleggio, tour, è concluso direttamente
         tra Lei e il relativo fornitore terzo, secondo i suoi termini e la sua informativa sulla privacy.
         Si applicano le sue regole di cancellazione, rimborso e tutela del consumatore, non le nostre. Il diritto
         di recesso finlandese previsto dal <em>kuluttajansuojalaki 6 luku</em> si esercita nei confronti del
@@ -763,7 +763,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Proprietà intellettuale',
-    s7Body: (siteName) => `Tutti i contenuti originali su ${siteName} — inclusi testi, grafica e design — sono di proprietà di Lapeso Oy o utilizzati su licenza. Non è consentito riprodurre, distribuire o creare opere derivate senza autorizzazione scritta. L'uso corretto per riferimento personale non commerciale è consentito con citazione della fonte.`,
+    s7Body: (siteName) => `Tutti i contenuti originali su ${siteName}, inclusi testi, grafica e design, sono di proprietà di Lapeso Oy o utilizzati su licenza. Non è consentito riprodurre, distribuire o creare opere derivate senza autorizzazione scritta. L'uso corretto per riferimento personale non commerciale è consentito con citazione della fonte.`,
     s8Title: '8. Limitazione di responsabilità',
     s8Body: (siteName) => `${siteName} e Lapeso Oy non sono responsabili di alcuna perdita, lesione o danno derivante dall'affidamento alle informazioni di questo sito, dall'uso di servizi di terzi collegati o da decisioni di viaggio prese sulla base dei nostri contenuti. I viaggi in regioni artiche comportano rischi intrinseci; sottoscriva sempre un'assicurazione di viaggio adeguata e segua le indicazioni di sicurezza locali.`,
     s9Title: '9. Legge applicabile',
@@ -771,7 +771,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Modifiche ai presenti termini',
     s10Body: 'Possiamo aggiornare i presenti termini periodicamente. Le modifiche hanno effetto dal momento della pubblicazione. L\'uso continuato del sito dopo gli aggiornamenti costituisce accettazione dei termini rivisti.',
     s11Title: '11. Separabilità',
-    s11Body: 'Qualora un\'autorità giurisdizionale competente dichiarasse non valida, illegittima o inapplicabile una qualsiasi disposizione dei presenti Termini, le restanti disposizioni rimarranno pienamente efficaci. La disposizione non valida sarà sostituita — nei limiti consentiti dalla legge — con una disposizione valida che rispecchi quanto più possibile l\'originaria intenzione commerciale.',
+    s11Body: 'Qualora un\'autorità giurisdizionale competente dichiarasse non valida, illegittima o inapplicabile una qualsiasi disposizione dei presenti Termini, le restanti disposizioni rimarranno pienamente efficaci. La disposizione non valida sarà sostituita, nei limiti consentiti dalla legge, con una disposizione valida che rispecchi quanto più possibile l\'originaria intenzione commerciale.',
     s12Title: '12. Punto di contatto Digital Services Act (DSA)',
     s12Intro: 'Ai sensi del Regolamento sui servizi digitali (Regolamento (UE) 2022/2065), il nostro punto di contatto designato per autorità e destinatari del servizio è:',
     s12Items: [
@@ -797,7 +797,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s1P2: 'Door deze website te bezoeken of te gebruiken, gaat u akkoord met deze voorwaarden. Als u niet akkoord gaat, dient u het gebruik van de site te staken.',
     s2Title: '2. Juistheid van informatie',
-    s2Body: 'Reisinformatie — waaronder prijzen, openingstijden, weersomstandigheden en beschikbaarheid — verandert regelmatig. Wij streven ernaar de inhoud accuraat en actueel te houden, maar kunnen niet garanderen dat alle informatie actueel is op het moment van uw bezoek. Verifieer kritieke details altijd rechtstreeks bij dienstverleners voordat u boekt.',
+    s2Body: 'Reisinformatie, waaronder prijzen, openingstijden, weersomstandigheden en beschikbaarheid, verandert regelmatig. Wij streven ernaar de inhoud accuraat en actueel te houden, maar kunnen niet garanderen dat alle informatie actueel is op het moment van uw bezoek. Verifieer kritieke details altijd rechtstreeks bij dienstverleners voordat u boekt.',
     s3Title: '3. Affiliate links en partnerschappen',
     s3P1: (siteName) => `Sommige links op ${siteName} zijn affiliate links. Wanneer u op deze links klikt en een boeking of aankoop doet, kunnen wij een kleine commissie ontvangen zonder extra kosten voor u. Affiliate-relaties beïnvloeden onze redactionele aanbevelingen niet. Wij linken alleen naar diensten waarvan wij denken dat zij echte waarde bieden.`,
     s3P2: 'Affiliate-partners omvatten onder meer: Hotels.com, EconomyBookings, GetYourGuide en andere aanbieders van reisdiensten via CJ (Commission Junction). Elke boeking is onderworpen aan de algemene voorwaarden van de betreffende dienstverlener.',
@@ -810,7 +810,7 @@ const COPY: Record<Lang, TermsCopy> = {
         brengt u naar externe websites die zijn onderworpen aan hun eigen voorwaarden en privacybeleid.
       </>
     ),
-    s5Title: '5. Diensten van derden — wij zijn geen handelaar',
+    s5Title: '5. Diensten van derden, wij zijn geen handelaar',
     s5P1: (siteName) => (
       <>
         De hotelzoekmachine, vluchtzoekmachine, autoverhuur- en activiteitenboekingstools op deze site verwijzen
@@ -822,7 +822,7 @@ const COPY: Record<Lang, TermsCopy> = {
     ),
     s5P2: (siteName) => (
       <>
-        Elk contract voor reisdiensten — accommodatie, vluchten, autoverhuur, tours — wordt rechtstreeks gesloten
+        Elk contract voor reisdiensten, accommodatie, vluchten, autoverhuur, tours, wordt rechtstreeks gesloten
         tussen u en de betreffende externe aanbieder, op diens voorwaarden en onder diens privacybeleid. Hun
         annulerings-, terugbetalings- en consumentenbeschermingsregels zijn van toepassing, niet de onze. Het
         Finse herroepingsrecht onder <em>kuluttajansuojalaki 6 luku</em> wordt uitgeoefend jegens de handelaar;
@@ -838,7 +838,7 @@ const COPY: Record<Lang, TermsCopy> = {
       </>
     ),
     s7Title: '7. Intellectueel eigendom',
-    s7Body: (siteName) => `Alle originele inhoud op ${siteName} — inclusief tekst, afbeeldingen en design — is eigendom van Lapeso Oy of wordt in licentie gebruikt. U mag deze niet reproduceren, verspreiden of er afgeleide werken van maken zonder schriftelijke toestemming. Redelijk gebruik voor niet-commerciële persoonlijke referentie is toegestaan met bronvermelding.`,
+    s7Body: (siteName) => `Alle originele inhoud op ${siteName}, inclusief tekst, afbeeldingen en design, is eigendom van Lapeso Oy of wordt in licentie gebruikt. U mag deze niet reproduceren, verspreiden of er afgeleide werken van maken zonder schriftelijke toestemming. Redelijk gebruik voor niet-commerciële persoonlijke referentie is toegestaan met bronvermelding.`,
     s8Title: '8. Beperking van aansprakelijkheid',
     s8Body: (siteName) => `${siteName} en Lapeso Oy zijn niet aansprakelijk voor enig verlies, letsel of schade voortvloeiend uit het vertrouwen op informatie op deze site, uit het gebruik van gelinkte externe diensten of uit reisbeslissingen op basis van onze inhoud. Reizen naar het Arctische gebied brengt inherente risico's met zich mee; sluit altijd een passende reisverzekering af en volg lokale veiligheidsrichtlijnen.`,
     s9Title: '9. Toepasselijk recht',
@@ -846,7 +846,7 @@ const COPY: Record<Lang, TermsCopy> = {
     s10Title: '10. Wijzigingen van deze voorwaarden',
     s10Body: 'Wij kunnen deze voorwaarden van tijd tot tijd bijwerken. Wijzigingen worden van kracht na publicatie. Voortgezet gebruik van de site na de updates houdt aanvaarding van de herziene voorwaarden in.',
     s11Title: '11. Scheidbaarheid',
-    s11Body: 'Indien een bepaling van deze Voorwaarden door een bevoegde rechtbank ongeldig, onwettig of niet-afdwingbaar wordt geacht, blijven de overige bepalingen volledig van kracht. De ongeldige bepaling wordt — voor zover wettelijk toegestaan — vervangen door een geldige bepaling die de oorspronkelijke commerciële bedoeling het dichtst benadert.',
+    s11Body: 'Indien een bepaling van deze Voorwaarden door een bevoegde rechtbank ongeldig, onwettig of niet-afdwingbaar wordt geacht, blijven de overige bepalingen volledig van kracht. De ongeldige bepaling wordt, voor zover wettelijk toegestaan, vervangen door een geldige bepaling die de oorspronkelijke commerciële bedoeling het dichtst benadert.',
     s12Title: '12. Contactpunt Digital Services Act (DSA)',
     s12Intro: 'Onder de EU Digital Services Act (Verordening (EU) 2022/2065) is ons aangewezen contactpunt voor autoriteiten en afnemers van de dienst:',
     s12Items: [

@@ -1,71 +1,112 @@
 import { useParams, Link } from 'react-router-dom';
-import { MapPin, AlertTriangle, ArrowLeft, ArrowRight, ExternalLink, Sparkles, Sun, Camera, Music } from 'lucide-react';
+import { MapPin, AlertTriangle, ArrowLeft, ArrowRight, ExternalLink, Sparkles, Sun, Camera, Music, BedDouble, CarFront, Beer, PawPrint, Trees, MountainSnow } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import PageSeo, { citySchema } from '../components/PageSeo';
+import PageBreadcrumb from '../components/PageBreadcrumb';
 import AffiliateCTA from '../components/AffiliateCTA';
 import GygWidget from '../components/GygWidget';
-import { CITIES, CITY_BY_SLUG, CITY_QUICK_FACTS } from '../data/cities';
+import { CITIES, CITY_BY_SLUG } from '../data/cities';
+import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 const SHADOW = {
   textShadow:
     '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7), 0 8px 24px rgba(0,0,0,0.55)',
 };
 
-const PILLAR_LINKS = [
-  { to: '/aurora-bars', label: 'Aurora bars', icon: Sparkles, why: 'Where the ceiling does the work.' },
-  { to: '/nightclubs', label: 'Nightclubs & dance', icon: Music, why: 'The 1 700-capacity superclub and its rivals.' },
-  { to: '/summer-nights', label: 'Summer nights', icon: Sun, why: 'When the sun forgets to set.' },
-  { to: '/photography', label: 'Aurora photography', icon: Camera, why: 'The dark hours that pay the camera back.' },
-];
+// GYG ranks by query relevance. "<City> Lapland" let the word "Lapland" pull
+// Rovaniemi/Kemi bestsellers onto every city page (Vesa saw icebreaker cruises
+// on /city/ivalo). Anchor each city to its own area; default = bare city name.
+// Sister-site icons for the network cross-link cards.
+const SISTER_ICON: Record<string, LucideIcon> = {
+  LaplandStays: BedDouble,
+  LaplandTransport: CarFront,
+  LaplandBars: Beer,
+  LaplandHuskySafaris: PawPrint,
+  LaplandNature: Trees,
+  LaplandSkiResorts: MountainSnow,
+};
+
+const GYG_CITY_Q: Record<string, string> = {
+  ivalo: 'Ivalo Inari',
+  inari: 'Inari Ivalo',
+  saariselka: 'Saariselkä Ivalo',
+  yllas: 'Ylläs Äkäslompolo',
+  'pyha-luosto': 'Pyhä Luosto',
+  kittila: 'Levi Kittilä',
+  ruka: 'Ruka Kuusamo',
+};
 
 export default function CityPage() {
-  const { slug } = useParams<{ slug: string }>();
-  const city = slug ? CITY_BY_SLUG[slug] : undefined;
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].cityPage;
 
-  if (!city) {
+  const { slug } = useParams<{ slug: string }>();
+  const baseCity = slug ? CITY_BY_SLUG[slug] : undefined;
+
+  if (!baseCity) {
     return (
       <section className="min-h-screen pt-32 px-4 text-center">
-        <h1 className="font-heading text-5xl text-white mb-4">City not found</h1>
-        <p className="text-white/70 mb-6">We don&rsquo;t cover this town yet.</p>
-        <Link to="/cities" className="text-pink underline">Back to all cities →</Link>
+        <h1 className="font-heading text-5xl text-white mb-4">{c.notFoundH}</h1>
+        <p className="text-white/70 mb-6">{c.notFoundBody}</p>
+        <Link to={to('/cities')} className="text-pink underline">{c.notFoundLink}</Link>
       </section>
     );
   }
 
+  const city = localizeCity(baseCity, lang);
+
+  const PILLAR_LINKS = [
+    { to: to('/aurora-bars'), label: c.pillar1, icon: Sparkles, why: c.pillar1Why },
+    { to: to('/nightclubs'), label: c.pillar2, icon: Music, why: c.pillar2Why },
+    { to: to('/summer-nights'), label: c.pillar3, icon: Sun, why: c.pillar3Why },
+    { to: to('/photography'), label: c.pillar4, icon: Camera, why: c.pillar4Why },
+  ];
+
   const description = `${city.pageTagline} ${city.intro.slice(0, 120)}`;
-  const quickFacts = CITY_QUICK_FACTS[city.slug] ?? [];
+  const quickFacts = localizeQuickFacts(city.slug, lang);
   const crossLinks = getCrossLinks(city);
   const nearbySlugs = NEARBY[city.slug] ?? [];
   const nearbyCities = nearbySlugs
-    .map((s) => CITIES.find((c) => c.slug === s))
-    .filter((c): c is NonNullable<typeof c> => Boolean(c));
+    .map((s) => CITIES.find((cc) => cc.slug === s))
+    .filter((cc): cc is NonNullable<typeof cc> => Boolean(cc))
+    .map((cc) => localizeCity(cc, lang));
+
+  const path = lang === 'en' ? `/city/${city.slug}` : `/${lang}/city/${city.slug}`;
 
   return (
     <>
       <PageSeo
-        title={`${city.name} Nightlife — ${city.pageTagline}`}
+        title={`${city.name} — ${city.pageTagline}`}
         description={description}
-        path={`/city/${city.slug}`}
+        path={path}
         ogImage={`https://laplandnightlife.com${city.img}`}
         jsonLd={citySchema(city.name, city.slug, city.intro)}
       />
 
-      {/* Hero — taller, image-forward, light overlay only */}
-      <section className="relative min-h-[70svh] pt-28 pb-16 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8 flex items-end overflow-hidden">
+      <section className="relative min-h-[56vh] md:min-h-[62vh] pt-28 py-16 md:py-20 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${city.img})` }}
+          role="img"
+          aria-label={`Aurora over a rooftop bar in ${city.name} — Lapland nightlife`}
         />
-        {/* Thin bottom vignette only — keep image visible */}
+        {/* Left-weighted scrim darkens the upper-left headline zone over bright
+            city photos; top fade + bottom fade keep the rest readable. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-night/85 via-night/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/70 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/60 to-transparent pointer-events-none" />
 
         <div className="relative w-full max-w-5xl mx-auto">
           <Link
-            to="/cities"
+            to={to('/cities')}
             className="inline-flex items-center gap-2 text-white hover:text-pink mb-5 text-xs sm:text-sm uppercase tracking-wider font-bold"
             style={SHADOW}
           >
-            <ArrowLeft size={14} /> All cities
+            <ArrowLeft size={14} /> {c.back}
           </Link>
           <p
             className="text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3"
@@ -88,7 +129,8 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Quick facts strip */}
+      <PageBreadcrumb />
+
       {quickFacts.length > 0 && (
         <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-night-light/40">
           <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
@@ -109,20 +151,18 @@ export default function CityPage() {
         </section>
       )}
 
-      {/* Intro */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
           <p className="text-white/85 text-base sm:text-lg leading-relaxed">{city.intro}</p>
         </div>
       </section>
 
-      {/* Verified venues */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Verified by us</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.verifiedEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
-              Where {city.name} actually goes out
+              {c.verifiedH(city.name)}
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -140,12 +180,11 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Local intel */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="text-neon-yellow" size={20} />
-            <h2 className="font-heading text-3xl text-white tracking-tight">Local intel</h2>
+            <h2 className="font-heading text-3xl text-white tracking-tight">{c.intel}</h2>
           </div>
           <ul className="space-y-3">
             {city.knowList.map((k, i) => (
@@ -158,29 +197,27 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Tonight's tours — bookable */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Bookable now</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">
-              Tonight&rsquo;s tours in {city.name}
+              {c.gygH(city.name)}
             </h2>
             <p className="text-white/65 max-w-xl mx-auto">
-              Live availability, instant confirmation. Book the activity that matches the night you&rsquo;re planning.
+              {c.gygBody}
             </p>
           </div>
-          <GygWidget query={`${city.name} Lapland`} campaign={`city_${city.slug}`} count={6} />
+          <GygWidget query={GYG_CITY_Q[city.slug] ?? city.name} campaign={`city_${city.slug}`} count={6} />
         </div>
       </section>
 
-      {/* Topical pillars — internal links */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Go deeper</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.deeperEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
-              {city.name} by night, by theme
+              {c.deeperH(city.name)}
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -194,9 +231,9 @@ export default function CityPage() {
                 <p className="font-heading text-lg text-white tracking-tight mb-1.5 group-hover:text-pink transition-colors">
                   {p.label}
                 </p>
-                <p className="text-xs text-white/60 leading-relaxed mb-3">{p.why}</p>
+                <p className="text-xs text-white/80 leading-relaxed mb-3">{p.why}</p>
                 <span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold inline-flex items-center gap-1">
-                  Read <ArrowRight size={12} />
+                  {c.read} <ArrowRight size={12} />
                 </span>
               </Link>
             ))}
@@ -204,73 +241,96 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* More in Lapland — ecosystem cross-links */}
       {crossLinks.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
-          <div className="max-w-5xl mx-auto">
+        <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5 overflow-hidden">
+          {/* Ambient warmth — this section was a wall of identical dark cards
+              (Vesa 2026-07-06: "väriä ja valoa"). */}
+          <div className="absolute -top-24 left-1/4 w-[560px] h-[240px] bg-amber-400/10 rounded-full blur-[110px] pointer-events-none" />
+          <div className="absolute -bottom-24 right-1/5 w-[460px] h-[220px] bg-pink/10 rounded-full blur-[110px] pointer-events-none" />
+          <div className="relative max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Sister sites</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3 drop-shadow-[0_0_16px_rgba(250,204,21,0.45)]">{c.sisterEyebrow}</p>
               <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">
-                More of {city.name} in the LaplandVibes network
+                {c.sisterH(city.name)}
               </h2>
-              <p className="text-white/60 max-w-xl mx-auto">
-                Beyond the bars — sleep, transport, ski, nature, husky safaris. All curated by the same team.
+              <p className="text-white/80 max-w-xl mx-auto">
+                {c.sisterBody}
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {crossLinks.map((l) => (
-                <a
-                  key={l.url}
-                  href={l.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="group bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/40 hover:-translate-y-0.5 transition-all flex flex-col"
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold">{l.site}</p>
-                    <ExternalLink size={12} className="text-white/40 group-hover:text-pink transition-colors" />
-                  </div>
-                  <p className="font-heading text-base text-white tracking-tight mb-2 group-hover:text-pink transition-colors leading-snug">
-                    {l.label}
-                  </p>
-                  <p className="text-xs text-white/55 leading-relaxed">{l.why}</p>
-                </a>
-              ))}
+              {crossLinks.map((l) => {
+                const Icon = SISTER_ICON[l.site] ?? ExternalLink;
+                return (
+                  <a
+                    key={l.url}
+                    href={l.url}
+                    target="_blank"
+                    rel="noopener"
+                    className="group relative overflow-hidden bg-night-light/40 border rounded-xl p-5 hover:-translate-y-1 transition-all flex flex-col"
+                    style={{ borderColor: `${l.accent}45` }}
+                  >
+                    <span
+                      className="absolute inset-x-0 top-0 h-[3px]"
+                      style={{ background: `linear-gradient(90deg, ${l.accent}, transparent)` }}
+                      aria-hidden="true"
+                    />
+                    <span
+                      className="absolute -top-10 -left-10 w-40 h-40 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
+                      style={{ background: `${l.accent}2E` }}
+                      aria-hidden="true"
+                    />
+                    <div className="relative flex items-start justify-between mb-3">
+                      <span
+                        className="inline-flex items-center justify-center w-9 h-9 rounded-lg"
+                        style={{ background: `${l.accent}1F`, color: l.accent, boxShadow: `0 0 18px ${l.accent}40` }}
+                      >
+                        <Icon size={18} strokeWidth={1.8} />
+                      </span>
+                      <ExternalLink size={13} style={{ color: l.accent }} />
+                    </div>
+                    <p className="relative text-[0.6rem] uppercase tracking-[0.18em] font-bold mb-1.5" style={{ color: l.accent }}>{l.site}</p>
+                    <p className="relative font-heading text-base text-white tracking-tight mb-2 leading-snug">
+                      {l.label}
+                    </p>
+                    <p className="relative text-xs text-white/80 leading-relaxed">{l.why}</p>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>
       )}
 
-      {/* Nearby cities */}
       {nearbyCities.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Nearby in Lapland</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.nearbyEyebrow}</p>
               <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
-                Pair {city.name} with another night
+                {c.nearbyH(city.name)}
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {nearbyCities.map((c) => (
+              {nearbyCities.map((cc) => (
                 <Link
-                  key={c.slug}
-                  to={`/city/${c.slug}`}
+                  key={cc.slug}
+                  to={to(`/city/${cc.slug}`)}
                   className="group relative overflow-hidden rounded-xl border border-white/10 hover:border-pink/40 transition-all hover:-translate-y-0.5"
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                    style={{ backgroundImage: `url(${c.img})` }}
+                    style={{ backgroundImage: `url(${cc.img})` }}
+                    aria-hidden="true"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-transparent" />
                   <div className="relative p-4 min-h-[160px] flex flex-col justify-end">
                     <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
-                      {c.tag}
+                      {cc.tag}
                     </p>
                     <h3 className="font-heading text-xl text-white tracking-tight mb-1" style={SHADOW}>
-                      {c.name}
+                      {cc.name}
                     </h3>
-                    <p className="text-xs text-white/80 line-clamp-2" style={SHADOW}>{c.blurb}</p>
+                    <p className="text-xs text-white/80 line-clamp-2" style={SHADOW}>{cc.blurb}</p>
                   </div>
                 </Link>
               ))}
@@ -279,13 +339,12 @@ export default function CityPage() {
         </section>
       )}
 
-      {/* Stay in {city} CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
           <MapPin className="text-pink mx-auto mb-3" size={26} />
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">Stay in {city.name}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.stayH(city.name)}</h2>
           <p className="text-white/65 mb-6 max-w-xl mx-auto">
-            Hotel, cabin or igloo — book through Expedia partners. Search runs through our affiliate redirect; the price you see is the price you pay.
+            {c.stayBody}
           </p>
           <AffiliateCTA
             partner="hotels"
@@ -293,7 +352,7 @@ export default function CityPage() {
             destination={city.name}
             className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink/30"
           >
-            Browse {city.name} stays →
+            {c.stayBtn(city.name)}
           </AffiliateCTA>
         </div>
       </section>

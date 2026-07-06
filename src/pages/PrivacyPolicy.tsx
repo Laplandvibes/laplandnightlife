@@ -1,13 +1,17 @@
 import PrivacyContent from '../shared/Legal/PrivacyContent';
+import { useLang } from '../i18n/useLang';
+import PageSeo from '../components/PageSeo';
 
 export default function PrivacyPolicy() {
+  const lang = useLang();
   return (
     <>
-      <title>Privacy Policy | LaplandNightlife</title>
-      <meta name="description" content="How LaplandNightlife handles your data — GDPR compliant. Operated by Lapeso Oy." />
-      <link rel="canonical" href="https://laplandnightlife.com/privacy" />
-      <meta name="robots" content="index, follow" />
-      <PrivacyContent siteName="LaplandNightlife" />
+      <PageSeo
+        title="Privacy Policy"
+        description="How LaplandNightlife handles your data — GDPR compliant. Operated by Lapeso Oy."
+        path="/privacy"
+      />
+      <PrivacyContent siteName="LaplandNightlife" lang={lang} />
     </>
   );
 }

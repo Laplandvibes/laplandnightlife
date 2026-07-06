@@ -3,49 +3,55 @@ import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo'
 import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import { IMG } from '../data/images';
-
-const settings = [
-  { h: 'Aurora capture', body: 'ISO 1600–3200, f/2.8 (or as wide as your lens goes), 6–15 s exposure. Manual focus on infinity. Tripod is not optional.' },
-  { h: 'Inside a club', body: 'ISO 3200–6400, f/1.8 if possible, 1/60 s. Shoot RAW so you can pull the colour cast — most Lapland clubs run heavy purple/pink LEDs.' },
-  { h: 'Igloo bar', body: 'Mixed light: candle warm + aurora cold. White-balance to 3 800 K and let the green roof stay green. ISO 800, f/2.8, 1/30 s.' },
-  { h: 'Midnight sun', body: 'Counterintuitively easy — you can shoot 03:00 like 11:00. Watch for the sun staying low all night; back-light golden hour lasts 6 hours.' },
-];
-
-const venues = [
-  { h: 'Kakslauttanen Igloo Bar', city: 'Saariselkä', shot: 'Glass-roof + aurora — the Lonely Planet cover' },
-  { h: 'Sodankylä Vanha Kirkko 03:00', city: 'Sodankylä', shot: 'Audience silhouettes against full daylight, June' },
-  { h: 'SnowCastle Ice Bar', city: 'Kemi', shot: 'Ice glasses + blue back-light, January through April' },
-  { h: 'Roy Club terrace', city: 'Rovaniemi', shot: 'North-facing smoke terrace — aurora plus crowd silhouettes' },
-  { h: 'Hullu Poro Areena', city: 'Levi', shot: 'Wide-angle from the upper floor — 1 700 lit faces' },
-  { h: 'Oulu Rotuaari at midnight', city: 'Oulu', shot: 'Pedestrian strip lit by 8 venues — long exposure for car-light trails on the cross streets' },
-];
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 export default function Photography() {
+  const lang = useLang();
+  const c = COPY[lang].photo;
+  const path = lang === 'en' ? '/photography' : `/${lang}/photography`;
+
+  const settings = [
+    { h: c.s1H, body: c.s1Body },
+    { h: c.s2H, body: c.s2Body },
+    { h: c.s3H, body: c.s3Body },
+    { h: c.s4H, body: c.s4Body },
+  ];
+
+  const venues = [
+    { h: c.pv1H, city: c.pv1City, shot: c.pv1Shot },
+    { h: c.pv2H, city: c.pv2City, shot: c.pv2Shot },
+    { h: c.pv3H, city: c.pv3City, shot: c.pv3Shot },
+    { h: c.pv4H, city: c.pv4City, shot: c.pv4Shot },
+    { h: c.pv5H, city: c.pv5City, shot: c.pv5Shot },
+    { h: c.pv6H, city: c.pv6City, shot: c.pv6Shot },
+  ];
+
   return (
     <>
       <PageSeo
-        title="Night Photography in Finnish Lapland — Settings, Venues, Permissions"
-        description="How to shoot Lapland after dark. Aurora settings, igloo-bar mixed-light, club photography, midnight sun. Six verified venues that give photo permission, six that don't."
-        path="/photography"
+        title={c.seoTitle}
+        description={c.seoDesc}
+        path={path}
         jsonLd={[
-          articleSchema('Night photography in Finnish Lapland', 'Settings, venues, permissions.', '/photography'),
-          pillarBreadcrumb('Photography', '/photography'),
+          articleSchema(c.seoTitle, c.seoDesc, path),
+          pillarBreadcrumb(c.heroTitle, path),
         ]}
       />
 
       <PillarHero
         icon={Camera}
-        eyebrow="Settings · venues · etiquette"
-        title="Night Photography"
-        subtitle="The settings nobody tells you. The venues that allow flash."
-        intro="Lapland nights are split between aurora cold and club purple. Different exposures, different permissions, different etiquette. Here's the honest cheat-sheet."
+        eyebrow={c.heroEyebrow}
+        title={c.heroTitle}
+        subtitle={c.heroSub}
+        intro={c.heroIntro}
         bgImage={IMG.pillarPhotography}
         accentClass="from-aurora-blue/20 via-night/80 to-night"
       />
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">Settings cheat-sheet</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.cheatH}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {settings.map((s) => (
               <div key={s.h} className="bg-night-light/40 border border-white/10 rounded-xl p-6 hover:border-pink/30 transition-colors">
@@ -59,7 +65,7 @@ export default function Photography() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">Six verified shoot locations</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.venuesH}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {venues.map((v) => (
               <div key={v.h} className="bg-night-light/60 border border-white/10 rounded-xl p-5 hover:border-purple/30 transition-colors">
@@ -74,12 +80,12 @@ export default function Photography() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">The etiquette nobody writes down</h2>
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">{c.ethicsH}</h2>
           <ul className="space-y-3 text-sm text-white/75">
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Inside any club:</strong> ask the door staff before you shoot. Most say yes; flash is universally no.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Igloo bars:</strong> guests-only photo policies vary. Kakslauttanen says yes for non-flash; ask reception.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Sámi cultural events:</strong> never photograph joik singers without explicit consent.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Aurora forecasts:</strong> apps like Aurora Service Europe + Soft Serve News are the local standard.</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e1L}</strong> {c.e1}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e2L}</strong> {c.e2}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e3L}</strong> {c.e3}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e4L}</strong> {c.e4}</li>
           </ul>
         </div>
       </section>
@@ -87,9 +93,9 @@ export default function Photography() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Bookable now</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">Photographer-led aurora tours</h2>
-            <p className="text-white/60 max-w-xl mx-auto">Pro guides with cameras + tripods + the warm soup. Most of these tours include image rights and on-the-spot edits.</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland photography aurora tour" campaign="photography_pillar" count={6} />
         </div>

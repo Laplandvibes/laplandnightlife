@@ -1,0 +1,116 @@
+{
+  "site": "laplandnightlife-new",
+  "scanned_webp": 17,
+  "converted": 17,
+  "skipped_exists": 0,
+  "skipped_avif_larger": 0,
+  "errors": 0,
+  "total_webp_bytes": 1649750,
+  "total_avif_bytes": 1315666,
+  "saved_mb": "0.32",
+  "saved_pct": "20.3",
+  "report": [
+    {
+      "file": "public\\images\\card\\city-inari.webp",
+      "webp_bytes": 79428,
+      "avif_bytes": 58225,
+      "saved_pct": "26.7"
+    },
+    {
+      "file": "public\\images\\card\\city-ivalo.webp",
+      "webp_bytes": 36898,
+      "avif_bytes": 25482,
+      "saved_pct": "30.9"
+    },
+    {
+      "file": "public\\images\\card\\city-kemi.webp",
+      "webp_bytes": 60520,
+      "avif_bytes": 43220,
+      "saved_pct": "28.6"
+    },
+    {
+      "file": "public\\images\\card\\city-kittila.webp",
+      "webp_bytes": 153414,
+      "avif_bytes": 141846,
+      "saved_pct": "7.5"
+    },
+    {
+      "file": "public\\images\\card\\city-levi.webp",
+      "webp_bytes": 98172,
+      "avif_bytes": 84985,
+      "saved_pct": "13.4"
+    },
+    {
+      "file": "public\\images\\card\\city-muonio.webp",
+      "webp_bytes": 54912,
+      "avif_bytes": 44132,
+      "saved_pct": "19.6"
+    },
+    {
+      "file": "public\\images\\card\\city-oulu.webp",
+      "webp_bytes": 112146,
+      "avif_bytes": 103880,
+      "saved_pct": "7.4"
+    },
+    {
+      "file": "public\\images\\card\\city-pyha.webp",
+      "webp_bytes": 71164,
+      "avif_bytes": 56155,
+      "saved_pct": "21.1"
+    },
+    {
+      "file": "public\\images\\card\\city-rovaniemi.webp",
+      "webp_bytes": 110022,
+      "avif_bytes": 92907,
+      "saved_pct": "15.6"
+    },
+    {
+      "file": "public\\images\\card\\city-ruka.webp",
+      "webp_bytes": 41644,
+      "avif_bytes": 33244,
+      "saved_pct": "20.2"
+    },
+    {
+      "file": "public\\images\\card\\city-saariselka.webp",
+      "webp_bytes": 62172,
+      "avif_bytes": 46914,
+      "saved_pct": "24.5"
+    },
+    {
+      "file": "public\\images\\card\\city-salla.webp",
+      "webp_bytes": 77082,
+      "avif_bytes": 60873,
+      "saved_pct": "21.0"
+    },
+    {
+      "file": "public\\images\\card\\city-sodankyla.webp",
+      "webp_bytes": 82676,
+      "avif_bytes": 69258,
+      "saved_pct": "16.2"
+    },
+    {
+      "file": "public\\images\\card\\city-yllas.webp",
+      "webp_bytes": 116056,
+      "avif_bytes": 101482,
+      "saved_pct": "12.6"
+    },
+    {
+      "file": "public\\images\\card\\venue-street-bar.webp",
+      "webp_bytes": 166168,
+      "avif_bytes": 143240,
+      "saved_pct": "13.8"
+    },
+    {
+      "file": "public\\images\\hero\\aurora-bars-neon.webp",
+      "webp_bytes": 158848,
+      "avif_bytes": 103033,
+      "saved_pct": "35.1"
+    },
+    {
+      "file": "public\\images\\hero\\cities-rovaniemi-bridge.webp",
+      "webp_bytes": 168428,
+      "avif_bytes": 106790,
+      "saved_pct": "36.6"
+    }
+  ]
+}

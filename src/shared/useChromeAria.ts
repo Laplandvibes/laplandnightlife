@@ -1,4 +1,4 @@
-// useChromeAria — shared 11-language aria-label dictionary for nav chrome.
+// useChromeAria, shared 11-language aria-label dictionary for nav chrome.
 //
 // Drop this into any LV spoke that has a multi-language header / footer
 // chrome. It returns the aria-label strings that almost every site needs

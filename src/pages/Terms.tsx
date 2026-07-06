@@ -1,13 +1,17 @@
 import TermsContent from '../shared/Legal/TermsContent';
+import { useLang } from '../i18n/useLang';
+import PageSeo from '../components/PageSeo';
 
 export default function Terms() {
+  const lang = useLang();
   return (
     <>
-      <title>Terms of Service | LaplandNightlife</title>
-      <meta name="description" content="Terms of service for LaplandNightlife. Editorial standards, affiliate disclosure, content licensing. Operated by Lapeso Oy." />
-      <link rel="canonical" href="https://laplandnightlife.com/terms" />
-      <meta name="robots" content="index, follow" />
-      <TermsContent siteName="LaplandNightlife" />
+      <PageSeo
+        title="Terms of Service"
+        description="Terms of service for LaplandNightlife. Editorial standards, affiliate disclosure, content licensing. Operated by Lapeso Oy."
+        path="/terms"
+      />
+      <TermsContent siteName="LaplandNightlife" lang={lang} />
     </>
   );
 }

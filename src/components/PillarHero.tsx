@@ -1,4 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
+import PageBreadcrumb from './PageBreadcrumb';
 
 interface PillarHeroProps {
   icon: LucideIcon;
@@ -10,6 +11,13 @@ interface PillarHeroProps {
   bgImage?: string;
   /** Optional accent gradient. Defaults to a subtle bottom-only vignette. */
   accentClass?: string;
+  /**
+   * Accessible description of the background image. Defaults to a descriptive
+   * label built from the (already-localized) page title so the primary visual
+   * is exposed to screen readers and image search instead of being an
+   * invisible CSS background.
+   */
+  imageAlt?: string;
 }
 
 const SHADOW = {
@@ -26,12 +34,43 @@ export default function PillarHero({
   intro,
   bgImage = '/images/hero/aurora-bars-neon.webp',
   accentClass,
+  imageAlt,
 }: PillarHeroProps) {
   return (
-    <section className="relative min-h-[70svh] pt-32 pb-20 sm:pt-36 sm:pb-24 px-4 sm:px-6 lg:px-8 flex items-end overflow-hidden">
+    <>
+    <section className="relative min-h-[56vh] md:min-h-[62vh] pt-28 py-16 md:py-20 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url(${bgImage})`, filter: 'saturate(1.2)' }}
+        role="img"
+        aria-label={imageAlt ?? `${title} — Finnish Lapland nightlife`}
+      />
+      {/* Full dark wash + center radial scrim so the centered text stays legible
+          even over the brightest pillar images. Sits under the neon accents. */}
+      <div className="absolute inset-0 bg-night/35 pointer-events-none" aria-hidden="true" />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 85% 60% at 50% 45%, rgba(8,10,22,0.62) 0%, transparent 72%)',
+        }}
+        aria-hidden="true"
+      />
+      {/* Neon glow accents — adds nightlife energy without obscuring image */}
+      <div
+        className="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full pointer-events-none mix-blend-screen opacity-50"
+        style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.55) 0%, transparent 70%)' }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none mix-blend-screen opacity-45"
+        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.55) 0%, transparent 70%)' }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] rounded-full pointer-events-none mix-blend-screen opacity-30 blur-2xl"
+        style={{ background: 'radial-gradient(ellipse, rgba(6,182,212,0.5) 0%, transparent 70%)' }}
+        aria-hidden="true"
       />
       {/* Thin bottom vignette only — keep the image visible. */}
       <div
@@ -46,7 +85,7 @@ export default function PillarHero({
           <span className="text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW}>{eyebrow}</span>
         </div>
         <h1
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95] mb-5"
+          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95] mb-5 break-words hyphens-auto"
           style={SHADOW}
         >
           {title}
@@ -65,5 +104,7 @@ export default function PillarHero({
         </p>
       </div>
     </section>
+    <PageBreadcrumb />
+    </>
   );
 }

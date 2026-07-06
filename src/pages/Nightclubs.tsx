@@ -3,34 +3,25 @@ import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo'
 import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
+import AirportRideAd from '../components/AirportRideAd';
 import { IMG } from '../data/images';
+import { useLang, type Lang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
-const tiers = [
-  {
-    h: 'The mega-club',
-    where: 'Levi',
-    body: 'Hullu Poro Areena. 1 700 capacity, 10 bars, 2 floors. The biggest nightclub in Lapland, hands down. Concert venue Wed–Sat in ski season.',
-    accent: 'from-pink/30 to-night-light',
-  },
-  {
-    h: 'The real-scene clubs',
-    where: 'Oulu · Rovaniemi',
-    body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Year-round programmes, touring DJs, queues at midnight. The Rotuaari strip in Oulu has 8 venues inside a 400-metre walk.',
-    accent: 'from-purple/30 to-night-light',
-  },
-  {
-    h: 'The northernmost club',
-    where: 'Ivalo',
-    body: 'Club Nord at Hotel Ivalo. Open Friday and Saturday. The northernmost mainland club in Finland — a logistical curiosity worth one Saturday.',
-    accent: 'from-aurora-blue/25 to-night-light',
-  },
-  {
-    h: 'The hotel-bar circuit',
-    where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto',
-    body: "Wilderness destinations don't do clubs. They do hotel bars with fireplaces, aurora windows and one DJ slot a week. Different night out — same drink prices.",
-    accent: 'from-neon-yellow/15 to-night-light',
-  },
-];
+// Localized lead for the airport-transfer ad (getting to and from the clubs).
+const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
+  en: { eyebrow: 'Getting there & home', h: 'The ride to the door, and back' },
+  fi: { eyebrow: 'Meno ja paluu', h: 'Kyyti ovelle, ja takaisin' },
+  de: { eyebrow: 'Hin und zurück', h: 'Die Fahrt bis vor die Tür, und zurück' },
+  ja: { eyebrow: '行きも帰りも', h: '入口までの足、そして帰りの足' },
+  es: { eyebrow: 'Ida y vuelta', h: 'El viaje hasta la puerta, y de vuelta' },
+  'pt-BR': { eyebrow: 'Ida e volta', h: 'A corrida até a porta, e de volta' },
+  'zh-CN': { eyebrow: '往返接送', h: '送到门口的车,以及回程' },
+  ko: { eyebrow: '갈 때와 올 때', h: '문 앞까지, 그리고 돌아오는 길' },
+  fr: { eyebrow: 'Aller et retour', h: 'La course jusqu’à la porte, et le retour' },
+  it: { eyebrow: 'Andata e ritorno', h: 'La corsa fino alla porta, e ritorno' },
+  nl: { eyebrow: 'Heen en terug', h: 'De rit tot de deur, en terug' },
+};
 
 const top = [
   { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', open: 'Wed–Sat in season' },
@@ -45,24 +36,35 @@ const top = [
 ];
 
 export default function Nightclubs() {
+  const lang = useLang();
+  const c = COPY[lang].nightclubs;
+  const path = lang === 'en' ? '/nightclubs' : `/${lang}/nightclubs`;
+
+  const tiers = [
+    { h: c.tier1H, where: c.tier1Where, body: c.tier1Body, accent: 'from-pink/30 to-night-light' },
+    { h: c.tier2H, where: c.tier2Where, body: c.tier2Body, accent: 'from-purple/30 to-night-light' },
+    { h: c.tier3H, where: c.tier3Where, body: c.tier3Body, accent: 'from-aurora-blue/25 to-night-light' },
+    { h: c.tier4H, where: c.tier4Where, body: c.tier4Body, accent: 'from-neon-yellow/15 to-night-light' },
+  ];
+
   return (
     <>
       <PageSeo
-        title="Nightclubs & Live Music — Finnish Lapland"
-        description="50+ verified nightclubs and live-music venues across Finnish Lapland. Hullu Poro Areena (1 700 cap), Roy Club, the Oulu Rotuaari strip, and the northernmost mainland club — Ivalo's Club Nord."
-        path="/nightclubs"
+        title={c.seoTitle}
+        description={c.seoDesc}
+        path={path}
         jsonLd={[
-          articleSchema('Nightclubs & live music in Finnish Lapland', 'Verified nightclubs across all 14 Lapland cities.', '/nightclubs'),
-          pillarBreadcrumb('Nightclubs', '/nightclubs'),
+          articleSchema(c.seoTitle, c.seoDesc, path),
+          pillarBreadcrumb(c.heroTitle, path),
         ]}
       />
 
       <PillarHero
         icon={Music}
-        eyebrow="50+ verified venues"
-        title="Nightclubs & Live Music"
-        subtitle="From 1 700-capacity to 250 — and the queue at the door."
-        intro="Lapland nightclubs split into four tiers. Knowing which is which is the difference between a Friday in Levi and a Friday in Salla."
+        eyebrow={c.heroEyebrow}
+        title={c.heroTitle}
+        subtitle={c.heroSub}
+        intro={c.heroIntro}
         bgImage={IMG.pillarNightclubs}
         accentClass="from-pink/25 via-night/75 to-night"
       />
@@ -88,15 +90,15 @@ export default function Nightclubs() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">The verified list</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.listH}</h2>
           <div className="bg-night/60 border border-white/10 rounded-2xl overflow-hidden">
             <table className="w-full text-left text-sm">
-              <thead className="bg-night-light/60 text-white/60 text-[0.65rem] uppercase tracking-wider">
+              <thead className="bg-night-light/60 text-white/80 text-[0.65rem] uppercase tracking-wider">
                 <tr>
-                  <th className="px-5 py-3">Venue</th>
-                  <th className="px-5 py-3">City</th>
-                  <th className="px-5 py-3">Capacity</th>
-                  <th className="px-5 py-3">Open</th>
+                  <th className="px-5 py-3">{c.tVenue}</th>
+                  <th className="px-5 py-3">{c.tCity}</th>
+                  <th className="px-5 py-3">{c.tCap}</th>
+                  <th className="px-5 py-3">{c.tOpen}</th>
                 </tr>
               </thead>
               <tbody>
@@ -105,7 +107,7 @@ export default function Nightclubs() {
                     <td className="px-5 py-3 font-heading text-lg text-white tracking-tight">{v.name}</td>
                     <td className="px-5 py-3 text-pink">{v.city}</td>
                     <td className="px-5 py-3 text-white/70">{v.cap}</td>
-                    <td className="px-5 py-3 text-white/60">{v.open}</td>
+                    <td className="px-5 py-3 text-white/80">{v.open}</td>
                   </tr>
                 ))}
               </tbody>
@@ -115,11 +117,21 @@ export default function Nightclubs() {
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{RIDE_LEAD[lang].eyebrow}</p>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight" style={{ textWrap: 'balance' }}>{RIDE_LEAD[lang].h}</h2>
+          </div>
+          <AirportRideAd sid="nightclubs_airport_ride" />
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">Bookable now</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">Combine the night with a tour</h2>
-            <p className="text-white/60 max-w-xl mx-auto">Aurora chasing on the way home, snowmobile sunrise rides, husky-safari pre-game.</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Rovaniemi Levi tours nightlife" campaign="nightclubs_pillar" count={6} />
         </div>
@@ -127,10 +139,10 @@ export default function Nightclubs() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">Stay near the action</h2>
-          <p className="text-white/65 mb-6">Hotels in walking distance of the clubs — Rovaniemi Koskikatu, Oulu Rotuaari, Levi slope-side.</p>
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.ctaH}</h2>
+          <p className="text-white/65 mb-6">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="nightclubs_cta" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
-            Browse club-district hotels →
+            {c.ctaBtn}
           </AffiliateCTA>
         </div>
       </section>

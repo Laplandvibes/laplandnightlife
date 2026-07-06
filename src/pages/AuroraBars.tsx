@@ -4,66 +4,42 @@ import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
-
-const venues = [
-  {
-    h: 'Kakslauttanen Igloo Bar',
-    where: 'Saariselkä',
-    body: "The world's most-photographed bar. Glass-roof igloo, vodka cocktails, ceiling is the aurora when active. Open to non-guests with reservation.",
-    type: 'Glass-roof bar',
-  },
-  {
-    h: 'Hotel Aurora Luosto',
-    where: 'Luosto',
-    body: 'Aurora-window bar facing north. Wake-up service when activity peaks. The quiet pick — fewer Instagram tripods than Kakslauttanen.',
-    type: 'Aurora-window bar',
-  },
-  {
-    h: 'SnowCastle Ice Bar',
-    where: 'Kemi',
-    body: 'Walls at –5 °C, bar built from ice, vodka served in ice glasses. Open Jan–Apr. The Kemi SnowCastle is rebuilt every winter since 1996.',
-    type: 'Ice bar',
-  },
-  {
-    h: 'Arctic Snow Hotel Ice Bar',
-    where: 'Sinettä (Rovaniemi)',
-    body: 'Snow-built ice bar 25 minutes from Rovaniemi. Reindeer-fur seating, ice glasses, the Lonely Planet shot.',
-    type: 'Ice bar',
-  },
-  {
-    h: 'Nova Skyland Hotel Aurora Lounge',
-    where: 'Rovaniemi',
-    body: 'Sky-bar with a north-facing terrace. Aurora-alert service for guests; cocktails until 01:00.',
-    type: 'Aurora terrace',
-  },
-  {
-    h: 'Hotel Riekonlinna Aurora Lobby',
-    where: 'Saariselkä',
-    body: 'Big lobby fireplace, north-facing window wall, local DJ on Friday nights in season.',
-    type: 'Aurora lobby bar',
-  },
-];
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 export default function AuroraBars() {
+  const lang = useLang();
+  const c = COPY[lang].aurora;
+  const path = lang === 'en' ? '/aurora-bars' : `/${lang}/aurora-bars`;
+
+  const venues = [
+    { h: c.v1H, where: c.v1Where, body: c.v1Body, type: c.v1Type },
+    { h: c.v2H, where: c.v2Where, body: c.v2Body, type: c.v2Type },
+    { h: c.v3H, where: c.v3Where, body: c.v3Body, type: c.v3Type },
+    { h: c.v4H, where: c.v4Where, body: c.v4Body, type: c.v4Type },
+    { h: c.v5H, where: c.v5Where, body: c.v5Body, type: c.v5Type },
+    { h: c.v6H, where: c.v6Where, body: c.v6Body, type: c.v6Type },
+  ];
+
   return (
     <>
       <PageSeo
-        title="Aurora Bars & Ice Bars — Finnish Lapland"
-        description="Glass-roof igloo bars, aurora-window cocktail rooms, and the SnowCastle ice bar. Six verified northern-lights drinking spots from Saariselkä to Kemi."
-        path="/aurora-bars"
+        title={c.seoTitle}
+        description={c.seoDesc}
+        path={path}
         jsonLd={[
-          articleSchema('Aurora bars & ice bars in Finnish Lapland', 'Glass-roof igloos, aurora-window bars, and the SnowCastle.', '/aurora-bars'),
-          pillarBreadcrumb('Aurora Bars', '/aurora-bars'),
+          articleSchema(c.seoTitle, c.seoDesc, path),
+          pillarBreadcrumb(c.heroTitle, path),
         ]}
       />
 
       <PillarHero
         icon={Sparkles}
         iconColor="text-purple-light"
-        eyebrow="6 verified spots"
-        title="Aurora & Ice Bars"
-        subtitle="Drink with the ceiling on fire."
-        intro="Two categories. Aurora bars: glass roofs, north-facing windows, wake-up services. Ice bars: walls at –5 °C, vodka in ice glasses, snow-built every winter."
+        eyebrow={c.heroEyebrow}
+        title={c.heroTitle}
+        subtitle={c.heroSub}
+        intro={c.heroIntro}
         bgImage={IMG.pillarAuroraBars}
         accentClass="from-purple/30 via-night/70 to-night"
       />
@@ -86,12 +62,12 @@ export default function AuroraBars() {
 
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">Plan the night</h2>
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">{c.planH}</h2>
           <ul className="space-y-3 text-sm text-white/75">
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Aurora season:</strong> September – March. Peak nights are clear, cold and around new moon.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Ice-bar season:</strong> January – April only. SnowCastle melts every spring.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Reservation rules:</strong> Kakslauttanen Igloo Bar requires booking if you&rsquo;re not a hotel guest.</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">Wake-up service:</strong> Most aurora-window hotels will knock at 02:00 if activity spikes — opt in at check-in.</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan1L}</strong> {c.plan1}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan2L}</strong> {c.plan2}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan3L}</strong> {c.plan3}</li>
+            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan4L}</strong> {c.plan4}</li>
           </ul>
         </div>
       </section>
@@ -99,9 +75,9 @@ export default function AuroraBars() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-purple-light font-bold mb-3">Bookable now</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">Aurora chasing tonight</h2>
-            <p className="text-white/60 max-w-xl mx-auto">Guided aurora hunts, glass-igloo dinners, photographer-led northern-lights tours.</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-purple-light font-bold mb-3">{c.gygEyebrow}</p>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland aurora hunt igloo" campaign="aurora_pillar" count={6} />
         </div>
@@ -109,10 +85,10 @@ export default function AuroraBars() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">Sleep where the aurora is</h2>
-          <p className="text-white/65 mb-6">Glass igloos, aurora-window hotels, ice-themed cabins.</p>
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.ctaH}</h2>
+          <p className="text-white/65 mb-6">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="aurora_bars_cta" destination="Saariselkä" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
-            Browse aurora stays →
+            {c.ctaBtn}
           </AffiliateCTA>
         </div>
       </section>

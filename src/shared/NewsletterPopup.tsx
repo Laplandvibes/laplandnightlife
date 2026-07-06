@@ -10,12 +10,12 @@ import { Send, CheckCircle, AlertCircle, Loader2, X } from 'lucide-react';
  * comes first. Suppressed on policy / utility routes. State stored per-site in
  * localStorage so a dismissal on one site does not silence the popup on others.
  *
- * The newsletter list is shared across the entire ecosystem — submissions land
+ * The newsletter list is shared across the entire ecosystem, submissions land
  * in the same Supabase + Resend pipeline. The `source` tag differentiates the
  * referring site in GA4 / mailing-list analytics.
  *
  * Default copy positions the newsletter as the *#LaplandVibes newsletter* even
- * on sister sites — there is one master newsletter, and the visitor's current
+ * on sister sites, there is one master newsletter, and the visitor's current
  * site is just where they encountered it.
  */
 
@@ -74,12 +74,12 @@ interface NewsletterPopupProps {
   headline?: string;
   /** Optional supporting paragraph override (rendered as-is, plain text). */
   description?: string;
-  /** Optional translation dictionary — see NewsletterPopupDict. */
+  /** Optional translation dictionary, see NewsletterPopupDict. */
   dict?: NewsletterPopupDict;
   /**
    * Current site locale. If provided AND `headline`/`description` are NOT
    * overridden, the popup picks built-in localized copy + dict.
-   * Added 2026-05-23 — fixes Vesa's flag that EN newsletter appeared on /fi /cn etc.
+   * Added 2026-05-23, fixes Vesa's flag that EN newsletter appeared on /fi /cn etc.
    */
   lang?: SupportedLang;
   /**
@@ -99,7 +99,7 @@ interface NewsletterPopupProps {
   /**
    * Optional same-origin proxy endpoint (e.g. `/api/newsletter`). When set,
    * the popup POSTs `{email, source}` here instead of calling Supabase
-   * directly — useful for sister sites whose origins aren't yet on the
+   * directly, useful for sister sites whose origins aren't yet on the
    * Supabase function's CORS allowlist. The proxy must accept the same
    * `{email, source}` payload and return `{message, alreadySubscribed?}`.
    *
@@ -125,7 +125,7 @@ function writeStored(key: string, s: StoredState) {
   try {
     localStorage.setItem(key, JSON.stringify(s));
   } catch {
-    // ignore — Safari private mode etc.
+    // ignore, Safari private mode etc.
   }
 }
 
@@ -134,7 +134,7 @@ function writeStored(key: string, s: StoredState) {
 // EN newsletter copy appeared on /fi /cn /de etc. across the ecosystem.
 const LOCALE_HEADLINES: Record<SupportedLang, { headline: string; description: string }> = {
   en: {
-    headline: 'Lapland in your inbox — straight from Finland.',
+    headline: 'Lapland in your inbox, straight from Finland.',
     description: "Aurora alerts before the clearest nights, glass-igloo booking windows before they sell out, and seasonal travel guides. Written from Finland, sources cited.",
   },
   fi: {
@@ -142,19 +142,19 @@ const LOCALE_HEADLINES: Record<SupportedLang, { headline: string; description: s
     description: 'Revontulivaroituksia ennen kirkkaimpia öitä, lasi-iglujen varausikkunat ennen kuin paikat loppuvat ja kausivinkit. Kirjoitettu Suomesta, lähteet näkyvillä.',
   },
   de: {
-    headline: 'Lappland direkt in Ihr Postfach — aus Finnland.',
+    headline: 'Lappland direkt in Ihr Postfach, aus Finnland.',
     description: 'Polarlicht-Warnungen vor den klarsten Nächten, Glasiglu-Buchungsfenster, bevor alles ausverkauft ist, und saisonale Reiseguides. Aus Finnland, mit Quellen.',
   },
   ja: {
     headline: 'ラップランドを、フィンランドから直接お届け。',
-    description: '晴天の夜が来る前のオーロラ予報、売り切れる前のガラスイグルー予約タイミング、季節ごとの旅行ガイド — フィンランド現地から、出典付きで。',
+    description: '晴天の夜が来る前のオーロラ予報、売り切れる前のガラスイグルー予約タイミング、季節ごとの旅行ガイド, フィンランド現地から、出典付きで。',
   },
   es: {
-    headline: 'Laponia en tu bandeja — directo desde Finlandia.',
+    headline: 'Laponia en tu bandeja, directo desde Finlandia.',
     description: 'Avisos de auroras antes de las noches más claras, ventanas de reserva de iglús de cristal antes de que se agoten y guías de temporada. Escrito desde Finlandia, con fuentes.',
   },
   'pt-BR': {
-    headline: 'Lapônia direto na sua caixa — escrito da Finlândia.',
+    headline: 'Lapônia direto na sua caixa, escrito da Finlândia.',
     description: 'Alertas de aurora antes das noites mais claras, janelas de reserva dos iglus de vidro antes de esgotarem e guias sazonais. Escrito da Finlândia, com fontes.',
   },
   'zh-CN': {
@@ -166,15 +166,15 @@ const LOCALE_HEADLINES: Record<SupportedLang, { headline: string; description: s
     description: '맑은 밤이 오기 전 오로라 알림, 매진되기 전 글래스 이글루 예약 창, 계절별 여행 가이드. 핀란드 현지에서 작성, 출처 명시.',
   },
   fr: {
-    headline: 'La Laponie dans votre boîte — direct de Finlande.',
+    headline: 'La Laponie dans votre boîte, direct de Finlande.',
     description: 'Alertes aurores avant les nuits les plus claires, fenêtres de réservation des igloos en verre avant qu\'ils ne se vendent et guides saisonniers. Écrit depuis la Finlande, sources citées.',
   },
   it: {
-    headline: 'La Lapponia nella tua casella — dalla Finlandia.',
+    headline: 'La Lapponia nella tua casella, dalla Finlandia.',
     description: 'Avvisi aurore prima delle notti più limpide, finestre di prenotazione degli igloo di vetro prima del tutto esaurito e guide stagionali. Scritto dalla Finlandia, con fonti.',
   },
   nl: {
-    headline: 'Lapland in je inbox — rechtstreeks uit Finland.',
+    headline: 'Lapland in je inbox, rechtstreeks uit Finland.',
     description: 'Noorderlicht-meldingen vóór de helderste nachten, boekingsvensters voor glazen iglo\'s voordat ze uitverkocht zijn en seizoenreisgidsen. Geschreven vanuit Finland, met bronnen.',
   },
 };
@@ -182,7 +182,7 @@ const LOCALE_HEADLINES: Record<SupportedLang, { headline: string; description: s
 const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   en: {
     successHeadline: "You're in.",
-    successBody: 'Check your inbox for a welcome email — and the next aurora alert when the forecast lights up.',
+    successBody: 'Check your inbox for a welcome email, and the next aurora alert when the forecast lights up.',
     alreadyHeadline: 'Already on the list!',
     alreadyBody: "Looks like you're already subscribed. We'll keep the Lapland updates coming.",
     emailPlaceholder: 'Your email address',
@@ -200,7 +200,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   fi: {
     successHeadline: 'Olet listalla.',
-    successBody: 'Tarkista sähköpostisi — tervetuloviesti on tulossa. Seuraavan revontulivaroituksen saat kun ennuste lupaa kirkasta yötä.',
+    successBody: 'Tarkista sähköpostisi, tervetuloviesti on tulossa. Seuraavan revontulivaroituksen saat kun ennuste lupaa kirkasta yötä.',
     alreadyHeadline: 'Olit jo listalla.',
     alreadyBody: 'Tilauksesi oli jo voimassa. Lappi-päivitykset jatkuvat normaalisti.',
     emailPlaceholder: 'Sähköpostiosoitteesi',
@@ -218,7 +218,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   de: {
     successHeadline: 'Sie sind dabei.',
-    successBody: 'Schauen Sie in Ihren Posteingang für eine Willkommens-E-Mail — und die nächste Polarlicht-Warnung, wenn die Prognose günstig steht.',
+    successBody: 'Schauen Sie in Ihren Posteingang für eine Willkommens-E-Mail, und die nächste Polarlicht-Warnung, wenn die Prognose günstig steht.',
     alreadyHeadline: 'Schon auf der Liste!',
     alreadyBody: 'Sieht so aus, als wären Sie bereits abonniert. Die Lappland-Updates kommen weiter.',
     emailPlaceholder: 'Ihre E-Mail-Adresse',
@@ -230,13 +230,13 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
     trust: 'Nur wenn etwas wirklich der Rede wert ist. Jederzeit kündbar. Wir teilen Ihre E-Mail nie.',
     errorGeneric: 'Anmeldung fehlgeschlagen. Bitte versuchen Sie es erneut.',
     codeLabel: 'Ihr Abonnentencode',
-    codeFootnote: 'Bewahren Sie diesen Code auf — er ist für Sie im #LaplandVibes-Netzwerk reserviert.',
+    codeFootnote: 'Bewahren Sie diesen Code auf, er ist für Sie im #LaplandVibes-Netzwerk reserviert.',
     codeCopied: 'Kopiert!',
     codeCopyAria: 'Code in die Zwischenablage kopieren',
   },
   ja: {
     successHeadline: '登録完了。',
-    successBody: 'ようこそメールを受信トレイでご確認ください — Kp指数が上昇したら次のオーロラアラートをお届けします。',
+    successBody: 'ようこそメールを受信トレイでご確認ください, Kp指数が上昇したら次のオーロラアラートをお届けします。',
     alreadyHeadline: 'すでに登録済みです!',
     alreadyBody: 'すでにご登録いただいているようです。ラップランドの最新情報を引き続きお届けします。',
     emailPlaceholder: 'メールアドレス',
@@ -254,7 +254,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   es: {
     successHeadline: 'Estás dentro.',
-    successBody: 'Revisa tu bandeja de entrada para el correo de bienvenida — y la próxima alerta de aurora cuando el Kp suba.',
+    successBody: 'Revisa tu bandeja de entrada para el correo de bienvenida, y la próxima alerta de aurora cuando el Kp suba.',
     alreadyHeadline: '¡Ya estás en la lista!',
     alreadyBody: 'Parece que ya estás suscrito. Seguiremos enviándote las novedades de Laponia.',
     emailPlaceholder: 'Tu correo electrónico',
@@ -272,7 +272,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   'pt-BR': {
     successHeadline: 'Você está dentro.',
-    successBody: 'Confira sua caixa de entrada para o e-mail de boas-vindas — e o próximo alerta de aurora quando o Kp subir.',
+    successBody: 'Confira sua caixa de entrada para o e-mail de boas-vindas, e o próximo alerta de aurora quando o Kp subir.',
     alreadyHeadline: 'Já está na lista!',
     alreadyBody: 'Parece que você já está inscrito. Continuaremos enviando as atualizações da Lapônia.',
     emailPlaceholder: 'Seu e-mail',
@@ -308,7 +308,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   ko: {
     successHeadline: '구독 완료.',
-    successBody: '환영 이메일을 확인해 주세요 — 다음 오로라 예보가 좋을 때 알림을 보내드립니다.',
+    successBody: '환영 이메일을 확인해 주세요, 다음 오로라 예보가 좋을 때 알림을 보내드립니다.',
     alreadyHeadline: '이미 구독 중입니다!',
     alreadyBody: '이미 구독하고 계신 것 같습니다. 라플란드 업데이트를 계속 보내드릴게요.',
     emailPlaceholder: '이메일 주소',
@@ -326,7 +326,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   fr: {
     successHeadline: 'C\'est fait.',
-    successBody: 'Vérifiez votre boîte pour l\'e-mail de bienvenue — et la prochaine alerte aurore au pic du Kp.',
+    successBody: 'Vérifiez votre boîte pour l\'e-mail de bienvenue, et la prochaine alerte aurore au pic du Kp.',
     alreadyHeadline: 'Déjà inscrit·e !',
     alreadyBody: 'Il semble que vous êtes déjà abonné·e. Nous continuons à envoyer les nouvelles de la Laponie.',
     emailPlaceholder: 'Votre adresse e-mail',
@@ -344,7 +344,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   it: {
     successHeadline: 'Sei dentro.',
-    successBody: 'Controlla la posta per l\'e-mail di benvenuto — e il prossimo avviso aurora quando le previsioni si fanno favorevoli.',
+    successBody: 'Controlla la posta per l\'e-mail di benvenuto, e il prossimo avviso aurora quando le previsioni si fanno favorevoli.',
     alreadyHeadline: 'Sei già nella lista!',
     alreadyBody: 'Sembra che Lei sia già iscritto. Continueremo a inviarLe gli aggiornamenti dalla Lapponia.',
     emailPlaceholder: 'Il Suo indirizzo e-mail',
@@ -362,7 +362,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   },
   nl: {
     successHeadline: 'U bent erbij.',
-    successBody: 'Controleer uw inbox voor de welkomstmail — en de volgende noorderlicht-melding bij stijgende Kp.',
+    successBody: 'Controleer uw inbox voor de welkomstmail, en de volgende noorderlicht-melding bij stijgende Kp.',
     alreadyHeadline: 'Al op de lijst!',
     alreadyBody: 'Het lijkt erop dat u al geabonneerd bent. We blijven u de Lapland-updates sturen.',
     emailPlaceholder: 'Uw e-mailadres',
@@ -408,11 +408,17 @@ export default function NewsletterPopup({
   const resolvedDescription = description ?? localized.description;
   const D = { ...LOCALE_DICTS[safeLang], ...(dict ?? {}) };
   const storageKey = `${siteId}_newsletter_popup`;
+  // Per-session "already shown" guard (sessionStorage). Once the popup has
+  // appeared once this browsing session it will NOT pop again on later page
+  // views, even if the visitor never clicked dismiss (Vesa 2026-07-03: "ettei
+  // joka sivulla tulisi vastaan, aika ärsyttävä"). Cleared when the browser
+  // session ends. Layered on top of the localStorage dismiss (7 d) / subscribe.
+  const sessionShownKey = `${siteId}_newsletter_shown`;
   const sourceTag = `${siteId}-popup`;
 
   const [status, setStatus] = useState<Status>(defaultOpen ? 'visible' : 'hidden');
   const [email, setEmail] = useState('');
-  const [website, setWebsite] = useState(''); // honeypot — humans leave blank
+  const [website, setWebsite] = useState(''); // honeypot, humans leave blank
   const [errorMsg, setErrorMsg] = useState('');
   const [discountCode, setDiscountCode] = useState<string | null>(null);
   const [codeCopied, setCodeCopied] = useState(false);
@@ -425,11 +431,15 @@ export default function NewsletterPopup({
     const stored = readStored(storageKey);
     if (stored?.subscribed) return; // never show again after subscribe
     if (stored?.dismissed && Date.now() - stored.dismissed < REMIND_AFTER_MS) return;
+    // Already shown once this session → do not re-arm on this (or any later)
+    // page view. This is what stops it appearing on every page as you browse.
+    try { if (sessionStorage.getItem(sessionShownKey)) return; } catch { /* private mode */ }
 
     let fired = false;
     const trigger = () => {
       if (fired) return;
       fired = true;
+      try { sessionStorage.setItem(sessionShownKey, '1'); } catch { /* private mode */ }
       setStatus('visible');
     };
 
@@ -451,7 +461,7 @@ export default function NewsletterPopup({
       if (timer) window.clearTimeout(timer);
       if (scrollPercent > 0) window.removeEventListener('scroll', onScroll);
     };
-  }, [location.pathname, storageKey, defaultOpen, delaySeconds, scrollPercent]);
+  }, [location.pathname, storageKey, sessionShownKey, defaultOpen, delaySeconds, scrollPercent]);
 
   // Esc to dismiss when visible
   useEffect(() => {
@@ -559,7 +569,7 @@ export default function NewsletterPopup({
         </button>
 
         <div className="p-6 sm:p-8">
-          {/* Brand mark — adapts to current site */}
+          {/* Brand mark, adapts to current site */}
           <p className="font-heading tracking-wide text-2xl sm:text-3xl mb-4 leading-none">
             <span className="text-vibe-pink">#</span>
             <span className="text-snow">LAPLAND</span>
@@ -602,7 +612,7 @@ export default function NewsletterPopup({
                         setCodeCopied(true);
                         window.setTimeout(() => setCodeCopied(false), 1800);
                       } catch {
-                        // ignore — user can still read & copy the code
+                        // ignore, user can still read & copy the code
                       }
                     }}
                     className="font-heading text-2xl sm:text-[28px] tracking-[0.10em] text-snow leading-none cursor-pointer hover:opacity-80 transition-opacity"
@@ -656,7 +666,7 @@ export default function NewsletterPopup({
                   disabled={status === 'loading'}
                   autoComplete="email"
                   // 2026-05-12: switched from Tailwind `bg-white/8 text-snow` to
-                  // explicit inline style — not every LV site (e.g. laplandvisit)
+                  // explicit inline style, not every LV site (e.g. laplandvisit)
                   // defines the `snow` colour token in tailwind.config, which
                   // made the input render as pure white-on-white and invisible.
                   style={{
@@ -692,12 +702,12 @@ export default function NewsletterPopup({
               <button
                 type="button"
                 onClick={dismiss}
-                className="mt-4 w-full text-center text-snow/45 hover:text-snow/75 text-xs transition-colors cursor-pointer"
+                className="mt-4 w-full text-center text-snow/60 hover:text-snow/75 text-xs transition-colors cursor-pointer"
               >
                 {D.later}
               </button>
 
-              <p className="mt-4 text-[11px] text-snow/35 text-center leading-relaxed">
+              <p className="mt-4 text-[11px] text-snow/60 text-center leading-relaxed">
                 {D.trust}
               </p>
             </>

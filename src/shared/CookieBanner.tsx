@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 /*
   Pole on LEFT, flag flies RIGHT.
   Grid: 5fr | 3fr | 10fr
-    col 1 (5fr):  hoist — narrow white, near pole, empty
+    col 1 (5fr):  hoist, narrow white, near pole, empty
     col 2 (3fr):  blue cross (vertical stripe)
-    col 3 (10fr): fly side — wide white, holds all content
+    col 3 (10fr): fly side, wide white, holds all content
 
   Mobile:  pole left:15px (6px wide) → right edge 21px; banner left:27px → gap 6px
   Desktop: pole left:45px (5px wide) → right edge 50px; banner left:56px → gap 6px
@@ -77,8 +77,14 @@ export default function CookieBanner({
   consentKey = 'laplandvibes_cookie_consent',
   lang,
   dict,
-  policyHref = '/cookie-policy',
+  policyHref,
 }: CookieBannerProps) {
+  // Keep the policy link in the visitor's locale: derive the URL prefix from the
+  // first path segment (fi/de/ja/es/br/cn/kr/fr/it/nl) unless an explicit
+  // policyHref is passed. A bare /cookie-policy would dump a /fr visitor to EN.
+  const { pathname } = useLocation();
+  const _seg = pathname.split('/')[1] || '';
+  const _href = policyHref ?? (/^(fi|de|ja|es|br|cn|kr|fr|it|nl)$/.test(_seg) ? `/${_seg}/cookie-policy` : '/cookie-policy');
   const D: Required<CookieBannerDict> = {
     ...DEFAULT_DICT,
     ...(lang && COOKIE_BANNER_LOCALES[lang] ? COOKIE_BANNER_LOCALES[lang] : {}),
@@ -113,7 +119,7 @@ export default function CookieBanner({
 
   return (
     <>
-      {/* ── Flagpole — LEFT side ── */}
+      {/* ── Flagpole, LEFT side ── */}
       <div className="lv-pole fixed bottom-0 z-[9997] pointer-events-none">
         {/* Ball finial */}
         <div
@@ -149,7 +155,7 @@ export default function CookieBanner({
           {/* Rope container */}
           <div className="lv-card" style={{ position: 'relative' }}>
 
-            {/* Top rope — banner top-left corner → pole */}
+            {/* Top rope, banner top-left corner → pole */}
             <div
               className="lv-rope"
               style={{
@@ -158,7 +164,7 @@ export default function CookieBanner({
                 transform: 'rotate(2deg)',
               }}
             />
-            {/* Bottom rope — banner bottom-left corner → pole */}
+            {/* Bottom rope, banner bottom-left corner → pole */}
             <div
               className="lv-rope"
               style={{
@@ -169,7 +175,7 @@ export default function CookieBanner({
             />
 
             {/*
-              Nordic cross — hoist on LEFT (near pole)
+              Nordic cross, hoist on LEFT (near pole)
               Columns: 5fr | 3fr | 10fr
               Rows:     4fr | 3fr | 4fr
             */}
@@ -178,26 +184,26 @@ export default function CookieBanner({
               style={{ gridTemplateColumns: '5fr 3fr 10fr', gridTemplateRows: '4fr 3fr 4fr' }}
             >
               {/* Row 1 */}
-              <div className="bg-white" />               {/* hoist — empty */}
+              <div className="bg-white" />               {/* hoist, empty */}
               <div className="bg-[#002F6C]" />
               <div className="bg-white flex items-center px-3">
                 <p className="lv-label text-[#002F6C] font-extrabold tracking-[0.22em] uppercase">{D.label}</p>
               </div>
 
-              {/* Row 2 — horizontal stripe */}
+              {/* Row 2, horizontal stripe */}
               <div className="bg-[#002F6C]" />
               <div className="bg-[#002F6C]" />
               <div className="bg-[#002F6C] flex items-center px-3">
                 <p className="lv-body text-white leading-[1.35]">
                   {D.body}{' '}
-                  <Link to={policyHref} className="underline opacity-80 hover:opacity-100 transition-opacity">
+                  <Link to={_href} className="underline opacity-80 hover:opacity-100 transition-opacity">
                     {D.policyLink}
                   </Link>
                 </p>
               </div>
 
               {/* Row 3 */}
-              <div className="bg-white" />               {/* hoist — empty */}
+              <div className="bg-white" />               {/* hoist, empty */}
               <div className="bg-[#002F6C]" />
               <div className="bg-white flex items-center justify-start gap-2 px-3">
                 <button
@@ -220,25 +226,25 @@ export default function CookieBanner({
 
       <style>{`
         /* ── Mobile ── (fixed pixel bottoms so mobile browser chrome resize does not displace the flag) */
-        .lv-pole   { width: 4px; left: 14px; height: 274px; }
+        .lv-pole   { width: 4px; left: 14px; height: 322px; }
         .lv-finial { top: -5px; width: 10px; height: 10px; }
         .lv-banner { left: 24px; bottom: 140px; }
-        .lv-card   { width: min(220px, 55vw); aspect-ratio: 18/11; }
+        .lv-card   { width: min(270px, 74vw); aspect-ratio: 18/11; }
         .lv-rope   { width: 8px; height: 1.5px; background: #334155; border-radius: 1px; }
-        .lv-label  { font-size: 7px; letter-spacing: 0.15em; }
-        .lv-body   { font-size: 6.5px; }
-        .lv-btn    { font-size: 7.5px; padding: 3px 7px; }
+        .lv-label  { font-size: 8.5px; letter-spacing: 0.14em; }
+        .lv-body   { font-size: 9px; }
+        .lv-btn    { font-size: 9.5px; padding: 4px 9px; }
 
         /* ── Desktop ── */
         @media (min-width: 768px) {
-          .lv-pole   { width: 5px; left: 45px; height: 488px; }
+          .lv-pole   { width: 5px; left: 45px; height: 545px; }
           .lv-finial { top: -6px; width: 12px; height: 12px; }
           .lv-banner { left: 56px; bottom: 280px; }
-          .lv-card   { width: 340px; }
+          .lv-card   { width: 420px; }
           .lv-rope   { width: 10px; height: 2px; }
-          .lv-label  { font-size: 9.5px; letter-spacing: 0.2em; }
-          .lv-body   { font-size: 10px; }
-          .lv-btn    { font-size: 10px; padding: 5px 12px; }
+          .lv-label  { font-size: 12px; letter-spacing: 0.18em; }
+          .lv-body   { font-size: 13.5px; }
+          .lv-btn    { font-size: 13px; padding: 7px 15px; }
         }
 
         @keyframes cookieFlagRise {

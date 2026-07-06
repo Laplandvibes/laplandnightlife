@@ -1,35 +1,25 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight, CheckCircle2, Bell, Sparkles, Music, Sun, AlertCircle } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
+import { useLang, useLocalePath } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
 const SOURCE = 'laplandnightlife';
 
-const benefits: { icon: typeof Bell; title: string; body: string }[] = [
-  {
-    icon: Bell,
-    title: 'When the aurora actually shows',
-    body: "We watch FMI's Kp forecast every clear night. When the index lines up, we drop you a heads-up so you can be at the right bar window — not in your hotel.",
-  },
-  {
-    icon: Sparkles,
-    title: 'When the igloo bars open',
-    body: "Kakslauttanen and Aurora Luosto unveil their season in November. We share opening dates and which year's igloo design is worth the trip — before they sell out.",
-  },
-  {
-    icon: Music,
-    title: "Hullu Poro's lineup",
-    body: "Levi's 1 700-cap superclub announces touring acts in October. We pass on the names worth flying in for, plus the smaller Saariselkä gigs nobody else flags.",
-  },
-  {
-    icon: Sun,
-    title: 'The 32-day midnight-sun window',
-    body: "Sodankylä Film Festival, Juhannus bonfires, lake saunas till 03:00. We tell you which June dates locals quietly call the best — and the ones tourists pile into.",
-  },
-];
-
 export default function Newsletter() {
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang].newsletter;
+
+  const benefits: { icon: typeof Bell; title: string; body: string }[] = [
+    { icon: Bell,      title: c.b1H, body: c.b1Body },
+    { icon: Sparkles,  title: c.b2H, body: c.b2Body },
+    { icon: Music,     title: c.b3H, body: c.b3Body },
+    { icon: Sun,       title: c.b4H, body: c.b4Body },
+  ];
+
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
@@ -42,7 +32,7 @@ export default function Newsletter() {
     setError(null);
     try {
       if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-        throw new Error('Newsletter is offline — try again later');
+        throw new Error(c.errFallback);
       }
       const res = await fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
         method: 'POST',
@@ -62,8 +52,8 @@ export default function Newsletter() {
       setStatus('error');
       setError(
         err instanceof Error
-          ? `Could not subscribe (${err.message}). Try again or email info@laplandvibes.com.`
-          : 'Could not subscribe. Try again or email info@laplandvibes.com.',
+          ? `${c.errPrefix} (${err.message}).`
+          : c.errFallback,
       );
     }
   }
@@ -77,14 +67,13 @@ export default function Newsletter() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/85 font-semibold mb-3">
-            The <span className="font-heading tracking-wider">#LAPLANDVIBES</span> newsletter
+            {c.pre && <>{c.pre} </>}<span className="font-heading tracking-wider">{c.brand}</span>{c.post}
           </p>
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white tracking-wide mb-4">
-            Don&rsquo;t miss a single night.
+            {c.h}
           </h2>
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed">
-            One short email when the aurora window opens, when an igloo bar unveils its winter, or when a Hullu Poro
-            lineup actually deserves a flight. Written from Finland, in English. Roughly once a month — never on a schedule.
+            {c.body}
           </p>
         </div>
 
@@ -110,17 +99,17 @@ export default function Newsletter() {
           {status === 'done' ? (
             <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-sm border border-white/30 text-white px-6 py-4 rounded-2xl">
               <CheckCircle2 className="w-6 h-6 shrink-0" />
-              <p className="text-base font-medium">Got you. We&rsquo;ll see you under the aurora.</p>
+              <p className="text-base font-medium">{c.done}</p>
             </div>
           ) : (
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
-              <label className="sr-only" htmlFor="newsletter-email">Email address</label>
+              <label className="sr-only" htmlFor="newsletter-email">Email</label>
               <input
                 id="newsletter-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder={c.placeholder}
                 required
                 className="flex-1 px-5 py-4 rounded-xl text-night bg-white placeholder:text-night/50 focus:outline-none focus:ring-2 focus:ring-white/70 border border-white/40"
               />
@@ -130,7 +119,7 @@ export default function Newsletter() {
                 className="px-6 py-4 bg-white font-bold rounded-xl hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                 style={{ color: '#DB2777' }}
               >
-                {status === 'loading' ? 'Sending…' : 'Send me Lapland'}
+                {status === 'loading' ? c.sending : c.btn}
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -144,8 +133,8 @@ export default function Newsletter() {
           )}
 
           <p className="text-white/75 text-xs mt-5">
-            One email when there&rsquo;s something to say. Unsubscribe with one click — no questions.{' '}
-            <a href="/privacy" className="underline hover:text-white">Privacy Policy</a>.
+            {c.footer}{' '}
+            <a href={to('/privacy')} className="underline hover:text-white">{c.privacy}</a>.
           </p>
         </div>
       </div>

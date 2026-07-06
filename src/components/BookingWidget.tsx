@@ -2,6 +2,8 @@ import { useState, type FormEvent } from 'react';
 import { Hotel, Plane, Car, Search, MapPin, Calendar, Users } from 'lucide-react';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { buildTripFlightUrl, buildTripFlightHome } from '../lib/tripcom';
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 type Tab = 'hotels' | 'flights' | 'cars';
 
@@ -13,8 +15,11 @@ const PLUS = (d: number) => {
 };
 
 export default function BookingWidget() {
+  const lang = useLang();
+  const c = COPY[lang].booking;
+
   const [tab, setTab] = useState<Tab>('hotels');
-  const [destination, setDestination] = useState('All of Finnish Lapland');
+  const [destination, setDestination] = useState<string>(c.destinationDefault);
   const [guests, setGuests] = useState('2');
   const [checkin, setCheckin] = useState(PLUS(14));
   const [checkout, setCheckout] = useState(PLUS(18));
@@ -39,9 +44,6 @@ export default function BookingWidget() {
         query: { pickup_date: checkin, dropoff_date: checkout },
       });
     } else {
-      // Flights → Trip.com (Impact direct, NOT through go.lv worker — see lib/tripcom.ts).
-      // Map common Lapland city names to IATA codes; if user typed something else,
-      // fall back to Trip.com flight homepage with affiliate tracking.
       const dest = destination.trim().toLowerCase();
       const iataMap: Record<string, string> = {
         rovaniemi: 'rvn',
@@ -60,25 +62,26 @@ export default function BookingWidget() {
           depart: checkin,
           returnDate: checkout,
           sid: 'hero_flight_search',
+          lang,
         });
       } else {
-        href = buildTripFlightHome('hero_flight_search_generic');
+        href = buildTripFlightHome('hero_flight_search_generic', lang);
       }
     }
-    window.open(href, '_blank', 'noopener,noreferrer');
+    window.open(href, '_blank', 'noopener');
   }
 
   const tabBtn = (active: boolean) =>
     `flex-1 min-w-0 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 py-3 sm:py-4 px-1 sm:px-3 font-body font-semibold text-[0.7rem] sm:text-sm uppercase tracking-wider transition-all ${
       active
         ? 'text-pink border-b-2 border-pink'
-        : 'text-white/60 border-b-2 border-transparent hover:text-white/90'
+        : 'text-white/80 border-b-2 border-transparent hover:text-white'
     }`;
 
   const inputCls =
     'w-full bg-night-light/60 backdrop-blur-sm text-white border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/40 transition-colors';
   const labelCls =
-    'block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/50 mb-1.5';
+    'block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/75 mb-1.5';
 
   return (
     <form
@@ -88,17 +91,17 @@ export default function BookingWidget() {
       <div className="flex border-b border-white/10">
         <button type="button" onClick={() => setTab('hotels')} className={tabBtn(tab === 'hotels')}>
           <Hotel size={16} className="shrink-0" />
-          <span className="sm:hidden">Stay</span>
-          <span className="hidden sm:inline">Hotels &amp; Cabins</span>
+          <span className="sm:hidden">{c.tabHotelsShort}</span>
+          <span className="hidden sm:inline">{c.tabHotels}</span>
         </button>
         <button type="button" onClick={() => setTab('flights')} className={tabBtn(tab === 'flights')}>
           <Plane size={16} className="shrink-0" />
-          <span>Flights</span>
+          <span>{c.tabFlights}</span>
         </button>
         <button type="button" onClick={() => setTab('cars')} className={tabBtn(tab === 'cars')}>
           <Car size={16} className="shrink-0" />
-          <span className="sm:hidden">Cars</span>
-          <span className="hidden sm:inline">Car Rental</span>
+          <span className="sm:hidden">{c.tabCarsShort}</span>
+          <span className="hidden sm:inline">{c.tabCars}</span>
         </button>
       </div>
 
@@ -108,40 +111,41 @@ export default function BookingWidget() {
             <div>
               <label className={labelCls}>
                 <MapPin size={10} className="inline mr-1" />
-                Destination
+                {c.destination}
               </label>
               <input
+                aria-label={c.destination}
                 value={destination}
                 onChange={(e) => setDestination(e.target.value)}
                 className={inputCls}
-                placeholder="Rovaniemi, Levi, Saariselkä…"
+                placeholder={c.placeholderDest}
               />
             </div>
             <div>
               <label className={labelCls}>
                 <Users size={10} className="inline mr-1" />
-                Guests
+                {c.guests}
               </label>
-              <select value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
-                <option value="1">1 Guest</option>
-                <option value="2">2 Guests</option>
-                <option value="3">3 Guests</option>
-                <option value="4">4 Guests</option>
+              <select aria-label={c.guests} value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
+                <option value="1">{c.g1}</option>
+                <option value="2">{c.g2}</option>
+                <option value="3">{c.g3}</option>
+                <option value="4">{c.g4}</option>
               </select>
             </div>
             <div>
               <label className={labelCls}>
                 <Calendar size={10} className="inline mr-1" />
-                Check in
+                {c.checkin}
               </label>
-              <input type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <input aria-label={c.checkin} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
               <label className={labelCls}>
                 <Calendar size={10} className="inline mr-1" />
-                Check out
+                {c.checkout}
               </label>
-              <input type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <input aria-label={c.checkout} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
@@ -149,20 +153,20 @@ export default function BookingWidget() {
         {tab === 'flights' && (
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className={labelCls}>From (IATA)</label>
-              <input value={origin} onChange={(e) => setOrigin(e.target.value.toUpperCase())} className={inputCls} maxLength={3} />
+              <label className={labelCls}>{c.from}</label>
+              <input aria-label={c.from} value={origin} onChange={(e) => setOrigin(e.target.value.toUpperCase())} className={inputCls} maxLength={3} />
             </div>
             <div>
-              <label className={labelCls}>To (Lapland city)</label>
-              <input value={destination} onChange={(e) => setDestination(e.target.value)} className={inputCls} placeholder="Rovaniemi, Ivalo, Kittilä…" />
+              <label className={labelCls}>{c.to}</label>
+              <input aria-label={c.to} value={destination} onChange={(e) => setDestination(e.target.value)} className={inputCls} placeholder={c.placeholderTo} />
             </div>
             <div>
-              <label className={labelCls}>Depart</label>
-              <input type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <label className={labelCls}>{c.depart}</label>
+              <input aria-label={c.depart} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
-              <label className={labelCls}>Return</label>
-              <input type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <label className={labelCls}>{c.return}</label>
+              <input aria-label={c.return} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
@@ -170,23 +174,23 @@ export default function BookingWidget() {
         {tab === 'cars' && (
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label className={labelCls}>Pickup airport (IATA)</label>
-              <input value={pickup} onChange={(e) => setPickup(e.target.value.toUpperCase())} className={inputCls} maxLength={3} placeholder="RVN, IVL, KTT" />
+              <label className={labelCls}>{c.pickup}</label>
+              <input aria-label={c.pickup} value={pickup} onChange={(e) => setPickup(e.target.value.toUpperCase())} className={inputCls} maxLength={3} placeholder={c.placeholderPickup} />
             </div>
             <div>
-              <label className={labelCls}>Drivers</label>
-              <select value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
-                <option value="1">1 Driver</option>
-                <option value="2">2 Drivers</option>
+              <label className={labelCls}>{c.drivers}</label>
+              <select aria-label={c.drivers} value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
+                <option value="1">{c.d1}</option>
+                <option value="2">{c.d2}</option>
               </select>
             </div>
             <div>
-              <label className={labelCls}>Pickup</label>
-              <input type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <label className={labelCls}>{c.pickupDate}</label>
+              <input aria-label={c.pickupDate} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
-              <label className={labelCls}>Drop off</label>
-              <input type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <label className={labelCls}>{c.dropoff}</label>
+              <input aria-label={c.dropoff} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
@@ -199,19 +203,17 @@ export default function BookingWidget() {
           <Search size={18} className="shrink-0 hidden sm:inline-block" />
           {tab === 'hotels' && (
             <>
-              <span className="sm:hidden">Search stays</span>
-              <span className="hidden sm:inline">Search Hotels &amp; Cabins</span>
+              <span className="sm:hidden">{c.searchHotelsShort}</span>
+              <span className="hidden sm:inline">{c.searchHotels}</span>
             </>
           )}
-          {tab === 'flights' && <span>Search flights</span>}
-          {tab === 'cars' && <span>Search cars</span>}
+          {tab === 'flights' && <span>{c.searchFlights}</span>}
+          {tab === 'cars' && <span>{c.searchCars}</span>}
           <span className="opacity-60">→</span>
         </button>
 
-        <p className="text-center text-xs text-white/40 mt-3">
-          {tab === 'flights'
-            ? 'Powered by Trip.com — you book securely on their platform'
-            : 'Powered by Expedia — you book securely on their platform'}
+        <p className="text-center text-xs text-white/75 mt-3">
+          {tab === 'flights' ? c.poweredTrip : c.poweredExpedia}
         </p>
       </div>
     </form>

@@ -1,0 +1,646 @@
+{
+  "/city/oulu": {
+    "en": {
+      "title": "Oulu — European Capital of Culture 2026.",
+      "description": "European Capital of Culture 2026. 200 000 people, a student-driven club scene, and the Rotuaari pedestrian strip with eight venues inside a 400-metre walk.…"
+    },
+    "fi": {
+      "title": "Oulu — Euroopan kulttuuripääkaupunki 2026.",
+      "description": "Euroopan kulttuuripääkaupunki 2026. 200 000 asukasta, opiskelijavetoinen klubikulttuuri ja Rotuaarin kävelykatu, jonka varrelle mahtuu kahdeksan menopaikkaa…"
+    },
+    "de": {
+      "title": "Oulu — Kulturhauptstadt Europas 2026.",
+      "description": "Kulturhauptstadt Europas 2026. 200.000 Menschen, eine von Studenten getragene Clubszene und die Fußgängermeile Rotuaari mit acht Locations in 400 Metern…"
+    },
+    "ja": {
+      "title": "Oulu — 欧州文化首都2026。",
+      "description": "欧州文化首都2026。 20万人の人口、学生が牽引するクラブシーン、そして400メートルの徒歩圏内に8軒の会場が並ぶ歩行者天国Rotuaari。平日の夜が本当に機能している北部の街はOuluだけだ — 火曜は45 Specialのカラオケ、水曜はNever Grow OldのDJセット、金曜は45…"
+    },
+    "es": {
+      "title": "Oulu — Capital Europea de la Cultura 2026.",
+      "description": "Capital Europea de la Cultura 2026. 200 000 habitantes, una escena de clubes movida por estudiantes y la calle peatonal Rotuaari con ocho locales en apenas…"
+    },
+    "pt-BR": {
+      "title": "Oulu — Capital Europeia da Cultura 2026.",
+      "description": "Capital Europeia da Cultura 2026. 200 mil pessoas, uma cena de baladas movida pela galera universitária e o calçadão Rotuaari, com oito casas dentro de uma…"
+    },
+    "zh-CN": {
+      "title": "Oulu — 2026 年欧洲文化之都。",
+      "description": "2026 年欧洲文化之都。 20 万人口、一个由学生撑起的夜店场景，再加上 Rotuaari 步行街——八家场所全挤在 400 米的步行范围内。Oulu 是北方唯一一座工作日夜晚真的还在运转的城市：周二 45 Special 的卡拉 OK、周三 Never Grow Old 的 DJ 现场、周五 45…"
+    },
+    "ko": {
+      "title": "Oulu — 2026 유럽 문화 수도.",
+      "description": "2026 유럽 문화 수도. 20만 명의 인구, 학생들이 이끄는 클럽 신, 그리고 400미터 안에 여덟 곳이 늘어선 Rotuaari 보행자 거리. 오울루는 평일 밤이 실제로 살아 있는 북부 유일의 도시다 — 화요일엔 45 Special의 노래방, 수요일엔 Never Grow Old의…"
+    },
+    "fr": {
+      "title": "Oulu — Capitale européenne de la culture 2026.",
+      "description": "Capitale européenne de la culture 2026. 200 000 habitants, une scène club portée par les étudiants et la rue piétonne Rotuaari, qui aligne huit adresses dans…"
+    },
+    "it": {
+      "title": "Oulu — Capitale Europea della Cultura 2026.",
+      "description": "Capitale Europea della Cultura 2026. 200.000 abitanti, una scena clubbing trainata dagli studenti e la passeggiata pedonale di Rotuaari con otto locali…"
+    },
+    "nl": {
+      "title": "Oulu — Culturele Hoofdstad van Europa 2026.",
+      "description": "Culturele Hoofdstad van Europa 2026. 200.000 inwoners, een clubscene die op studenten draait, en de Rotuaari-wandelstrook met acht zaken binnen 400 meter…"
+    }
+  },
+  "/city/rovaniemi": {
+    "en": {
+      "title": "Rovaniemi — The Arctic capital.",
+      "description": "The Arctic capital. Two scenes inside one city. Koskikatu is the tourist strip — Roy Club has thrown \"the city's best parties since 1985\", Tivoli pulls…"
+    },
+    "fi": {
+      "title": "Rovaniemi — Arktinen pääkaupunki.",
+      "description": "Arktinen pääkaupunki. Kaksi kulttuuria yhden kaupungin sisällä. Koskikatu on turistien katu — Roy Club on heittänyt 'kaupungin parhaita bileitä vuodesta…"
+    },
+    "de": {
+      "title": "Rovaniemi — Die arktische Hauptstadt.",
+      "description": "Die arktische Hauptstadt. Zwei Szenen in einer Stadt. Die Koskikatu ist die Touristenmeile — das Roy Club schmeißt seit 1985 „die besten Partys der Stadt“…"
+    },
+    "ja": {
+      "title": "Rovaniemi — 北極圏の首都。",
+      "description": "北極圏の首都。 ひとつの街に二つのシーンが同居している。Koskikatuは観光客の通り — Roy Clubは「1985年以来この街で最高のパーティー」を打ち続け、Tivoliは海外DJのツアーを呼び、Bull Barは最も騒がしいスポーツバーのテラスだ。地元民が飲むのはMaakuntakatu…"
+    },
+    "es": {
+      "title": "Rovaniemi — La capital ártica.",
+      "description": "La capital ártica. Dos escenas dentro de una misma ciudad. Koskikatu es la calle turística: Roy Club lleva montando \"las mejores fiestas de la ciudad desde…"
+    },
+    "pt-BR": {
+      "title": "Rovaniemi — A capital do Ártico.",
+      "description": "A capital do Ártico. Duas cenas dentro de uma só cidade. A Koskikatu é o trecho turístico — o Roy Club promove \"as melhores festas da cidade desde 1985\", o…"
+    },
+    "zh-CN": {
+      "title": "Rovaniemi — 北极之都。",
+      "description": "北极之都。 一座城里藏着两种场景。Koskikatu 是游客街——Roy Club 自称“从 1985 年起办着全城最棒的派对”，Tivoli 招揽国际 DJ 巡演，Bull Bar 则是最吵的体育露台。Maakuntakatu 才是本地人喝酒的地方——Cafe & Bar 21 喝鸡尾酒、Three Cats…"
+    },
+    "ko": {
+      "title": "Rovaniemi — 북극의 수도.",
+      "description": "북극의 수도. 한 도시 안에 두 개의 신이 있다. Koskikatu는 관광객 거리 — Roy Club은 \"1985년 이래 도시 최고의 파티\"를 열어 왔고, Tivoli는 해외 DJ 투어를 끌어오며, Bull Bar는 가장 시끄러운 스포츠 테라스다. Maakuntakatu는 현지인이…"
+    },
+    "fr": {
+      "title": "Rovaniemi — La capitale arctique.",
+      "description": "La capitale arctique. Deux scènes dans une seule ville. Koskikatu, c'est la rue des touristes — le Roy Club organise « les meilleures fêtes de la ville…"
+    },
+    "it": {
+      "title": "Rovaniemi — La capitale dell'Artico.",
+      "description": "La capitale dell'Artico. Due scene dentro la stessa città. Koskikatu è la strip turistica — il Roy Club organizza \"le feste migliori della città dal 1985\"…"
+    },
+    "nl": {
+      "title": "Rovaniemi — De arctische hoofdstad.",
+      "description": "De arctische hoofdstad. Twee scenes binnen één stad. Koskikatu is de toeristenstrook — Roy Club gooit naar eigen zeggen \"de beste feesten van de stad sinds…"
+    }
+  },
+  "/city/levi": {
+    "en": {
+      "title": "Levi — Finland's biggest ski-resort party.",
+      "description": "Finland's biggest ski-resort party. Hullu Poro Areena is the centrepiece — 1 700 capacity, two floors, ten bars, and the biggest dancefloor north of…"
+    },
+    "fi": {
+      "title": "Levi — Suomen suurimmat hiihtokeskusbileet.",
+      "description": "Suomen suurimmat hiihtokeskusbileet. Hullu Poro Areena on keskipiste — 1 700 hengen kapasiteetti, kaksi kerrosta, kymmenen baaria ja Helsingin pohjoispuolen…"
+    },
+    "de": {
+      "title": "Levi — Die größte Skigebiets-Party Finnlands.",
+      "description": "Die größte Skigebiets-Party Finnlands. Die Hullu Poro Areena ist das Herzstück — 1.700 Plätze, zwei Etagen, zehn Bars und die größte Tanzfläche nördlich von…"
+    },
+    "ja": {
+      "title": "Levi — フィンランド最大のスキーリゾート・パーティー。",
+      "description": "フィンランド最大のスキーリゾート・パーティー。 主役はHullu Poro Areena — 収容1 700人、2フロア、バー10軒、そしてヘルシンキ以北で最大のダンスフロア。その周りには、ブーツのままフロアに上がっていいと言われる伝説のアプレスキー小屋Ihku、カクテルのJenny…"
+    },
+    "es": {
+      "title": "Levi — La mayor fiesta de estación de esquí de Finlandia.",
+      "description": "La mayor fiesta de estación de esquí de Finlandia. Hullu Poro Areena es la pieza central: aforo de 1 700, dos plantas, diez barras y la pista más grande al…"
+    },
+    "pt-BR": {
+      "title": "Levi — A maior festa de estação de esqui da Finlândia.",
+      "description": "A maior festa de estação de esqui da Finlândia. A Hullu Poro Areena é o coração de tudo — capacidade para 1 700 pessoas, dois andares, dez bares e a maior…"
+    },
+    "zh-CN": {
+      "title": "Levi — 芬兰最盛大的滑雪场派对。",
+      "description": "芬兰最盛大的滑雪场派对。 Hullu Poro Areena 是核心——1 700 人容量、两层楼、十个吧台，还有赫尔辛基以北最大的舞池。围着它的还有：Ihku，那间传奇的滑雪后小木屋，鼓励你穿着雪靴上舞池；Jenny Wolf 喝鸡尾酒；Pasaati 留给深夜的本地人。11 月，FIS 世界杯带来一场为期…"
+    },
+    "ko": {
+      "title": "Levi — 핀란드 최대의 스키 리조트 파티.",
+      "description": "핀란드 최대의 스키 리조트 파티. Hullu Poro Areena가 중심이다 — 수용 인원 1,700명, 2층, 바 10개, 헬싱키 이북에서 가장 큰 댄스플로어. 그 주변으로는 부츠 신은 채 춤추는 게 권장되는 전설의 애프터스키 통나무집 Ihku, 칵테일을 위한 Jenny…"
+    },
+    "fr": {
+      "title": "Levi — La plus grosse fête de station de ski de Finlande.",
+      "description": "La plus grosse fête de station de ski de Finlande. Le Hullu Poro Areena est la pièce maîtresse — 1 700 places, deux étages, dix bars et la plus grande piste…"
+    },
+    "it": {
+      "title": "Levi — La festa da stazione sciistica più grande della Finlandia.",
+      "description": "La festa da stazione sciistica più grande della Finlandia. La Hullu Poro Areena è il fulcro — 1.700 posti, due piani, dieci bar e la pista da ballo più…"
+    },
+    "nl": {
+      "title": "Levi — Het grootste skigebiedsfeest van Finland.",
+      "description": "Het grootste skigebiedsfeest van Finland. Hullu Poro Areena is het middelpunt — capaciteit van 1.700, twee verdiepingen, tien bars en de grootste dansvloer…"
+    }
+  },
+  "/city/saariselka": {
+    "en": {
+      "title": "Saariselkä — Wilderness premium — the igloo-bar village.",
+      "description": "Wilderness premium — the igloo-bar village. Saariselkä is not a club destination. It's a glass-igloo destination — and that's the point. Kakslauttanen Arctic…"
+    },
+    "fi": {
+      "title": "Saariselkä — Erämaan premium — iglubaarien kylä.",
+      "description": "Erämaan premium — iglubaarien kylä. Saariselkä ei ole klubikohde. Se on lasi-iglukohde — ja juuri siinä on pointti. Kakslauttanen Arctic Resortilla on…"
+    },
+    "de": {
+      "title": "Saariselkä — Wilderness-Premium — das Dorf der Iglu-Bar.",
+      "description": "Wilderness-Premium — das Dorf der Iglu-Bar. Saariselkä ist kein Ziel für Clubs. Es ist ein Ziel für Glas-Iglus — und genau darum geht es. Das Kakslauttanen…"
+    },
+    "ja": {
+      "title": "Saariselkä — ウィルダネス・プレミアム — イグルーバーの村。",
+      "description": "ウィルダネス・プレミアム — イグルーバーの村。 Saariselkäはクラブの街ではない。ガラスのイグルーの地であり、それこそが本質だ。Kakslauttanen Arctic Resortには世界で最も写真に撮られるバーがある（天井がオーロラになるガラスのイグルー）。村そのものはメインストリートが一本、食べる価…"
+    },
+    "es": {
+      "title": "Saariselkä — Lujo en plena naturaleza: el pueblo de los bares-iglú.",
+      "description": "Lujo en plena naturaleza: el pueblo de los bares-iglú. Saariselkä no es un destino de clubes. Es un destino de iglús de cristal, y de eso se trata. El…"
+    },
+    "pt-BR": {
+      "title": "Saariselkä — Luxo na natureza — a vila dos bares-iglu.",
+      "description": "Luxo na natureza — a vila dos bares-iglu. Saariselkä não é um destino de balada. É um destino de iglu de vidro — e essa é a graça. O Kakslauttanen Arctic…"
+    },
+    "zh-CN": {
+      "title": "Saariselkä — 荒野高端——玻璃冰屋酒吧之村。",
+      "description": "荒野高端——玻璃冰屋酒吧之村。 Saariselkä 不是一个去蹦迪的地方。它是一个玻璃冰屋的目的地——而这正是重点所在。Kakslauttanen Arctic Resort 拥有全世界被拍得最多的酒吧（一间玻璃冰屋，天花板就是极光）。村子本身只有一条主街、两家值得一吃的餐厅，以及 Local Pub…"
+    },
+    "ko": {
+      "title": "Saariselkä — 와일더니스 프리미엄 — 이글루 바 마을.",
+      "description": "와일더니스 프리미엄 — 이글루 바 마을. Saariselkä는 클럽을 위한 곳이 아니다. 글래스 이글루를 위한 곳이다 — 그게 핵심이다. Kakslauttanen Arctic Resort에는 세계에서 가장 많이 사진에 담긴 바가 있다 (천장이 곧 오로라인 글래스 이글루). 마을…"
+    },
+    "fr": {
+      "title": "Saariselkä — Le luxe sauvage — le village des bars-igloos.",
+      "description": "Le luxe sauvage — le village des bars-igloos. Saariselkä n'est pas une destination club. C'est une destination igloos de verre — et c'est tout l'intérêt. Le…"
+    },
+    "it": {
+      "title": "Saariselkä — Wilderness premium — il villaggio dell'igloo-bar.",
+      "description": "Wilderness premium — il villaggio dell'igloo-bar. Saariselkä non è una meta da clubbing. È una meta da igloo di vetro — ed è proprio questo il punto. Il…"
+    },
+    "nl": {
+      "title": "Saariselkä — Wildernis-premium — het iglobar-dorp.",
+      "description": "Wildernis-premium — het iglobar-dorp. Saariselkä is geen clubbestemming. Het is een glaziglo-bestemming — en dat is precies de bedoeling. Kakslauttanen…"
+    }
+  },
+  "/city/inari": {
+    "en": {
+      "title": "Inari — The Sámi cultural capital.",
+      "description": "The Sámi cultural capital. Inari is the cultural seat of the Sámi parliament (Sajos) and home to Siida — the museum that explains everything you didn't know…"
+    },
+    "fi": {
+      "title": "Inari — Saamelaiskulttuurin pääkaupunki.",
+      "description": "Saamelaiskulttuurin pääkaupunki. Inari on saamelaiskäräjien (Sajos) kulttuurinen kotipaikka ja Siidan koti — museon, joka selittää kaiken, mitä et tiennyt…"
+    },
+    "de": {
+      "title": "Inari — Die kulturelle Hauptstadt der Samen.",
+      "description": "Die kulturelle Hauptstadt der Samen. Inari ist der kulturelle Sitz des samischen Parlaments (Sajos) und Heimat des Siida — des Museums, das alles erklärt…"
+    },
+    "ja": {
+      "title": "Inari — サーミ文化の首都。",
+      "description": "サーミ文化の首都。 Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。ここの「ナイトライフ」は文化そのもの — 1月の先住民映画祭Skábmagovat、8月のサーミ音楽祭Ijahis…"
+    },
+    "es": {
+      "title": "Inari — La capital cultural sami.",
+      "description": "La capital cultural sami. Inari es la sede cultural del parlamento sami (Sajos) y alberga Siida, el museo que te explica todo lo que no sabías sobre Sápmi.…"
+    },
+    "pt-BR": {
+      "title": "Inari — A capital cultural sámi.",
+      "description": "A capital cultural sámi. Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida — o museu que explica tudo que você não sabia sobre Sápmi. A…"
+    },
+    "zh-CN": {
+      "title": "Inari — 萨米文化之都。",
+      "description": "萨米文化之都。 Inari 是萨米议会的文化所在地（Sajos），也是 Siida 的家——这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。这里的“夜生活”是文化性的：1 月的 Skábmagovat 原住民电影节、8 月的 Ijahis Idja…"
+    },
+    "ko": {
+      "title": "Inari — 사미 문화의 수도.",
+      "description": "사미 문화의 수도. Inari는 사미 의회(Sajos)가 자리한 문화의 중심이자, 당신이 사프미(Sápmi)에 대해 몰랐던 모든 것을 설명해 주는 박물관 Siida의 고향이다. 이곳의 \"나이트라이프\"는 문화적이다: 1월의 원주민 영화제 Skábmagovat, 8월의 사미 음악 축제…"
+    },
+    "fr": {
+      "title": "Inari — La capitale culturelle sámi.",
+      "description": "La capitale culturelle sámi. Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida — le musée qui explique tout ce que vous ignoriez du…"
+    },
+    "it": {
+      "title": "Inari — La capitale culturale Sámi.",
+      "description": "La capitale culturale Sámi. Inari è la sede culturale del parlamento Sámi (Sajos) e ospita il Siida — il museo che ti spiega tutto ciò che non sapevi sulla…"
+    },
+    "nl": {
+      "title": "Inari — De culturele hoofdstad van de Sámi.",
+      "description": "De culturele hoofdstad van de Sámi. Inari is de culturele zetel van het Sámi-parlement (Sajos) en de thuisbasis van Siida — het museum dat alles uitlegt wat…"
+    }
+  },
+  "/city/kemi": {
+    "en": {
+      "title": "Kemi — SnowCastle, icebreaker, sea Lapland.",
+      "description": "SnowCastle, icebreaker, sea Lapland. Kemi is the gateway between Helsinki rail and Lapland — and a town with one trick: the SnowCastle, rebuilt every winter…"
+    },
+    "fi": {
+      "title": "Kemi — LumiLinna, jäänmurtaja, Meri-Lappi.",
+      "description": "LumiLinna, jäänmurtaja, Meri-Lappi. Kemi on portti Helsingin junayhteyden ja Lapin välissä — ja kaupunki, jolla on yksi temppu: LumiLinna, joka on rakennettu…"
+    },
+    "de": {
+      "title": "Kemi — SnowCastle, Eisbrecher, Meereslappland.",
+      "description": "SnowCastle, Eisbrecher, Meereslappland. Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland — und eine Stadt mit einem Trick: dem SnowCastle, das…"
+    },
+    "ja": {
+      "title": "Kemi — SnowCastle、砕氷船、海のラップランド。",
+      "description": "SnowCastle、砕氷船、海のラップランド。 Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ — 1996年以来毎冬建て直されるSnowCastle。礼拝堂、ホテル、そして氷の壁に囲まれたバーがある。12月から運航するSampo砕氷船は、バー会場を兼ねたツアーを毎晩催…"
+    },
+    "es": {
+      "title": "Kemi — SnowCastle, rompehielos, Laponia del mar.",
+      "description": "SnowCastle, rompehielos, Laponia del mar. Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: el SnowCastle…"
+    },
+    "pt-BR": {
+      "title": "Kemi — SnowCastle, quebra-gelo, Lapônia do mar.",
+      "description": "SnowCastle, quebra-gelo, Lapônia do mar. Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia — e uma cidade com um truque só: o SnowCastle…"
+    },
+    "zh-CN": {
+      "title": "Kemi — 雪堡、破冰船、海拉普兰。",
+      "description": "雪堡、破冰船、海拉普兰。 Kemi 是赫尔辛基铁路与拉普兰之间的门户——一座只有一招的城镇：雪堡（SnowCastle），自 1996 年起年年重建，内有礼拜堂、酒店和一间冰墙环绕的酒吧。Sampo 破冰船从 12 月起每晚出航，航程本身也兼作酒吧场地。陆地上的夜生活规模很小：Hotel Merihovi…"
+    },
+    "ko": {
+      "title": "Kemi — SnowCastle, 쇄빙선, 바다 라플란드.",
+      "description": "SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 다시 짓는 SnowCastle. 예배당, 호텔, 그리고 얼음 벽으로 둘러싸인 바를 갖췄다. 12월부터 운항하는 Sampo…"
+    },
+    "fr": {
+      "title": "Kemi — SnowCastle, brise-glace, Laponie maritime.",
+      "description": "SnowCastle, brise-glace, Laponie maritime. Kemi est la porte d'entrée entre le rail d'Helsinki et la Laponie — une ville avec un seul tour de magie : le…"
+    },
+    "it": {
+      "title": "Kemi — SnowCastle, rompighiaccio, Lapponia del mare.",
+      "description": "SnowCastle, rompighiaccio, Lapponia del mare. Kemi è la porta tra la ferrovia di Helsinki e la Lapponia — e una cittadina con un asso nella manica: lo…"
+    },
+    "nl": {
+      "title": "Kemi — SnowCastle, ijsbreker, Zee-Lapland.",
+      "description": "SnowCastle, ijsbreker, Zee-Lapland. Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland — en een stad met één troef: het SnowCastle, elke winter…"
+    }
+  },
+  "/city/yllas": {
+    "en": {
+      "title": "Ylläs — Finland's second-biggest ski area.",
+      "description": "Finland's second-biggest ski area. Ylläs has 63 slopes split between two villages — Äkäslompolo (north) and Ylläsjärvi (south) — connected by ski runs but…"
+    },
+    "fi": {
+      "title": "Ylläs — Suomen toiseksi suurin hiihtoalue.",
+      "description": "Suomen toiseksi suurin hiihtoalue. Ylläksellä on 63 rinnettä jaettuna kahden kylän kesken — Äkäslompolo (pohjoinen) ja Ylläsjärvi (etelä) — joita yhdistävät…"
+    },
+    "de": {
+      "title": "Ylläs — Finnlands zweitgrößtes Skigebiet.",
+      "description": "Finnlands zweitgrößtes Skigebiet. Ylläs hat 63 Pisten, aufgeteilt auf zwei Dörfer — Äkäslompolo (Norden) und Ylläsjärvi (Süden) — über Skiabfahrten…"
+    },
+    "ja": {
+      "title": "Ylläs — フィンランドで2番目に大きいスキーエリア。",
+      "description": "フィンランドで2番目に大きいスキーエリア。 Ylläsには63のスロープがあり、二つの村 — Äkäslompolo（北）とYlläsjärvi（南）— に分かれている。スキーコースでつながっているが、車では20分離れている。Äkäsの方がアプレスシーンは賑やか（Sport Resort…"
+    },
+    "es": {
+      "title": "Ylläs — La segunda mayor zona esquiable de Finlandia.",
+      "description": "La segunda mayor zona esquiable de Finlandia. Ylläs tiene 63 pistas repartidas entre dos pueblos —Äkäslompolo (norte) y Ylläsjärvi (sur)— conectados por las…"
+    },
+    "pt-BR": {
+      "title": "Ylläs — A segunda maior área de esqui da Finlândia.",
+      "description": "A segunda maior área de esqui da Finlândia. Ylläs tem 63 pistas divididas entre duas vilas — Äkäslompolo (norte) e Ylläsjärvi (sul) — ligadas pelas pistas de…"
+    },
+    "zh-CN": {
+      "title": "Ylläs — 芬兰第二大滑雪区。",
+      "description": "芬兰第二大滑雪区。 Ylläs 有 63 条雪道，分属两个村子——Äkäslompolo（北）和 Ylläsjärvi（南）——靠雪道相连，却被 20 分钟的车程隔开。Äkäs 那边的滑雪后场景更热闹（Sport Resort Ylläs、Kotahovi 露台）。Ylläsjärvi 那边有 Lapin…"
+    },
+    "ko": {
+      "title": "Ylläs — 핀란드에서 두 번째로 큰 스키 구역.",
+      "description": "핀란드에서 두 번째로 큰 스키 구역. Ylläs에는 두 마을로 나뉜 63개의 슬로프가 있다 — Äkäslompolo(북)와 Ylläsjärvi(남) — 스키 코스로 연결되지만 차로 20분 거리로 떨어져 있다. Äkäs 쪽이 애프터스키 신이 더 시끌벅적하다 (Sport Resort…"
+    },
+    "fr": {
+      "title": "Ylläs — Le deuxième plus grand domaine skiable de Finlande.",
+      "description": "Le deuxième plus grand domaine skiable de Finlande. Ylläs compte 63 pistes réparties entre deux villages — Äkäslompolo (au nord) et Ylläsjärvi (au sud)…"
+    },
+    "it": {
+      "title": "Ylläs — La seconda area sciistica più grande della Finlandia.",
+      "description": "La seconda area sciistica più grande della Finlandia. Ylläs ha 63 piste divise tra due villaggi — Äkäslompolo (a nord) e Ylläsjärvi (a sud) — collegati dalle…"
+    },
+    "nl": {
+      "title": "Ylläs — Het op een na grootste skigebied van Finland.",
+      "description": "Het op een na grootste skigebied van Finland. Ylläs heeft 63 pistes, verdeeld over twee dorpen — Äkäslompolo (noorden) en Ylläsjärvi (zuiden) — verbonden…"
+    }
+  },
+  "/city/ruka": {
+    "en": {
+      "title": "Ruka — Bear country ski resort.",
+      "description": "Bear country ski resort. Ruka is technically Kuusamo, technically not in Lapland, but skiers don't care — it's the second-busiest resort in Finland and the…"
+    },
+    "fi": {
+      "title": "Ruka — Karhumaan hiihtokeskus.",
+      "description": "Karhumaan hiihtokeskus. Ruka on teknisesti Kuusamoa, teknisesti ei Lappia, mutta laskijoita ei kiinnosta — se on Suomen toiseksi vilkkain keskus ja…"
+    },
+    "de": {
+      "title": "Ruka — Skigebiet im Bärenland.",
+      "description": "Skigebiet im Bärenland. Ruka gehört streng genommen zu Kuusamo und liegt streng genommen nicht in Lappland, aber den Skifahrern ist das egal — es ist das…"
+    },
+    "ja": {
+      "title": "Ruka — クマの国のスキーリゾート。",
+      "description": "クマの国のスキーリゾート。 Rukaは厳密にはKuusamoであり、厳密にはラップランドではない。だがスキーヤーは気にしない — フィンランドで2番目に混むリゾートで、11月のオープン週が最も盛り上がる。Zone Barはゲレンデ麓の主役アプレス会場。Pyörreは深夜のダンス向けの選択肢。オフシーズンは過酷で、町…"
+    },
+    "es": {
+      "title": "Ruka — Estación de esquí en tierra de osos.",
+      "description": "Estación de esquí en tierra de osos. Ruka es técnicamente Kuusamo y técnicamente no está en Laponia, pero a los esquiadores les da igual: es la segunda…"
+    },
+    "pt-BR": {
+      "title": "Ruka — Estação de esqui no país dos ursos.",
+      "description": "Estação de esqui no país dos ursos. Ruka é tecnicamente Kuusamo, tecnicamente fora da Lapônia, mas os esquiadores não ligam — é a segunda estação mais…"
+    },
+    "zh-CN": {
+      "title": "Ruka — 熊出没之地的滑雪场。",
+      "description": "熊出没之地的滑雪场。 Ruka 严格说来属于 Kuusamo，严格说来不在拉普兰，但滑雪客才不在乎——它是芬兰第二繁忙的度假区，而 11 月的开板周是最热闹的。Zone Bar 是雪道脚下的核心滑雪后场所。Pyörre 是深夜的蹦迪选择。淡季残酷：镇上人口骤降到 1 200 人。11 月至 4 月则有多达 3…"
+    },
+    "ko": {
+      "title": "Ruka — 곰의 땅, 스키 리조트.",
+      "description": "곰의 땅, 스키 리조트. Ruka는 엄밀히는 Kuusamo이고, 엄밀히는 라플란드가 아니지만, 스키어들은 신경 쓰지 않는다 — 핀란드에서 두 번째로 붐비는 리조트이며 11월 개장 주가 가장 시끄럽다. Zone Bar는 슬로프 베이스의 중심 애프터스키 매장이다. Pyörre는 심야…"
+    },
+    "fr": {
+      "title": "Ruka — La station de ski au pays de l'ours.",
+      "description": "La station de ski au pays de l'ours. Ruka, c'est techniquement Kuusamo, techniquement pas en Laponie, mais les skieurs s'en moquent — c'est la deuxième…"
+    },
+    "it": {
+      "title": "Ruka — Stazione sciistica nella terra degli orsi.",
+      "description": "Stazione sciistica nella terra degli orsi. Ruka è tecnicamente Kuusamo, tecnicamente fuori dalla Lapponia, ma agli sciatori non importa — è il secondo resort…"
+    },
+    "nl": {
+      "title": "Ruka — Skiresort in berenland.",
+      "description": "Skiresort in berenland. Ruka valt technisch gezien onder Kuusamo, ligt technisch gezien niet in Lapland, maar dat boeit skiërs niet — het is het op een na…"
+    }
+  },
+  "/city/pyha-luosto": {
+    "en": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "fi": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "de": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "ja": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "es": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "pt-BR": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "zh-CN": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "ko": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "fr": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "it": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "nl": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    }
+  },
+  "/city/sodankyla": {
+    "en": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä is a 9 000-person village on the Kemijoki river — and once a year, in mid-June, it becomes the most surreal cinema…"
+    },
+    "fi": {
+      "title": "Sodankylä — Sodankylän elokuvajuhlat.",
+      "description": "Sodankylän elokuvajuhlat. Sodankylä on 9 000 asukkaan kylä Kemijoen varrella — ja kerran vuodessa, kesäkuun puolivälissä, siitä tulee maailman surrealistisin…"
+    },
+    "de": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä ist ein Dorf mit 9.000 Einwohnern am Fluss Kemijoki — und einmal im Jahr, Mitte Juni, wird es zum surrealsten…"
+    },
+    "ja": {
+      "title": "Sodankylä — 真夜中の太陽映画祭。",
+      "description": "真夜中の太陽映画祭。 SodankyläはKemijoki川沿いの人口9 000人の村だ — そして年に一度、6月中旬には世界で最もシュールな映画祭の地になる。Midnight Sun Film Festivalは4日間にわたり80本以上の映画を上映し、17世紀の木造教会（Vanha…"
+    },
+    "es": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä es un pueblo de 9 000 habitantes a orillas del río Kemijoki, y una vez al año, a mediados de junio, se convierte en el…"
+    },
+    "pt-BR": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä é uma vila de 9 mil habitantes às margens do rio Kemijoki — e, uma vez por ano, em meados de junho, vira o festival de…"
+    },
+    "zh-CN": {
+      "title": "Sodankylä — 午夜阳光电影节。",
+      "description": "午夜阳光电影节。 Sodankylä 是 Kemijoki 河畔一个 9 000 人的村子——每年一次，在 6 月中旬，它会变成全世界最超现实的电影节。午夜阳光电影节连办四天，放映 80 多部影片，而在 17 世纪木造教堂（Vanha kirkko）里 03:00…"
+    },
+    "ko": {
+      "title": "Sodankylä — 미드나이트 선 영화제.",
+      "description": "미드나이트 선 영화제. Sodankylä는 Kemijoki 강가의 인구 9,000명 마을이다 — 그리고 1년에 한 번, 6월 중순이면 세계에서 가장 초현실적인 영화제로 변한다. 미드나이트 선 영화제는 나흘간 80편이 넘는 영화를 상영하며, 17세기 목조 교회(Vanha…"
+    },
+    "fr": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä est un village de 9 000 habitants sur la rivière Kemijoki — et une fois par an, à la mi-juin, il devient le festival de…"
+    },
+    "it": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä è un villaggio di 9.000 persone sul fiume Kemijoki — e una volta all'anno, a metà giugno, diventa il festival…"
+    },
+    "nl": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä is een dorp van 9.000 inwoners aan de rivier de Kemijoki — en eens per jaar, half juni, wordt het het meest…"
+    }
+  },
+  "/city/kittila": {
+    "en": {
+      "title": "Kittilä town — Where Levi locals actually live.",
+      "description": "Where Levi locals actually live. Kittilä is the municipal seat — 6 500 residents, the airport, and the people who staff Levi 18 km away. Bar life is…"
+    },
+    "fi": {
+      "title": "Kittilä town — Missä Levin paikalliset oikeasti asuvat.",
+      "description": "Missä Levin paikalliset oikeasti asuvat. Kittilä on kuntakeskus — 6 500 asukasta, lentoasema ja ne ihmiset, jotka pyörittävät 18 km päässä olevaa Leviä.…"
+    },
+    "de": {
+      "title": "Kittilä town — Wo die Einheimischen von Levi wirklich wohnen.",
+      "description": "Wo die Einheimischen von Levi wirklich wohnen. Kittilä ist der Verwaltungssitz der Gemeinde — 6.500 Einwohner, der Flughafen und die Leute, die das 18 km…"
+    },
+    "ja": {
+      "title": "Kittilä town — Leviの地元民が実際に暮らす場所。",
+      "description": "Leviの地元民が実際に暮らす場所。 Kittiläは自治体の中心地 — 住民6 500人、空港、そして18 km先のLeviで働く人々の町だ。バーの賑わいは地元民だけのもの — Bar Skolは仕事終わりのパブ、Auroraはカラオケの選択肢、ほぼそれだけ。観光客のほとんどは素通りしていく。Leviの観光客向け…"
+    },
+    "es": {
+      "title": "Kittilä town — Donde viven de verdad los locales de Levi.",
+      "description": "Donde viven de verdad los locales de Levi. Kittilä es la capital municipal: 6 500 habitantes, el aeropuerto y la gente que trabaja en Levi, a 18 km. La vida…"
+    },
+    "pt-BR": {
+      "title": "Kittilä town — Onde os locais de Levi realmente moram.",
+      "description": "Onde os locais de Levi realmente moram. Kittilä é a sede municipal — 6 500 moradores, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km dali. A vida…"
+    },
+    "zh-CN": {
+      "title": "Kittilä town — Levi 的本地人真正生活的地方。",
+      "description": "Levi 的本地人真正生活的地方。 Kittilä 是市镇所在地——6 500 名居民、那座机场，以及那些去 18 公里外的 Levi 上班的人。酒吧生活只属于本地人：Bar Skol 是下班后的酒馆，Aurora 是卡拉 OK 的选择，差不多就这些了。大多数游客都直接开车路过。如果你想要一个不带 Levi…"
+    },
+    "ko": {
+      "title": "Kittilä town — Levi 현지인이 실제로 사는 곳.",
+      "description": "Levi 현지인이 실제로 사는 곳. Kittilä는 지자체의 중심지다 — 주민 6,500명, 공항, 그리고 18km 떨어진 Levi에서 일하는 사람들. 바 풍경은 철저히 현지인 위주다: Bar Skol은 퇴근 후 펍, Aurora는 노래방 선택지, 그게 거의 전부다. 관광객…"
+    },
+    "fr": {
+      "title": "Kittilä town — Là où vivent vraiment les locaux de Levi.",
+      "description": "Là où vivent vraiment les locaux de Levi. Kittilä est le chef-lieu de la commune — 6 500 habitants, l'aéroport, et les gens qui font tourner Levi, à 18 km de…"
+    },
+    "it": {
+      "title": "Kittilä town — Dove vivono davvero i locali di Levi.",
+      "description": "Dove vivono davvero i locali di Levi. Kittilä è il capoluogo comunale — 6.500 residenti, l'aeroporto e le persone che fanno funzionare Levi a 18 km di…"
+    },
+    "nl": {
+      "title": "Kittilä town — Waar de locals van Levi echt wonen.",
+      "description": "Waar de locals van Levi echt wonen. Kittilä is de gemeentelijke hoofdplaats — 6.500 inwoners, de luchthaven, en de mensen die Levi 18 km verderop bemannen.…"
+    }
+  },
+  "/city/ivalo": {
+    "en": {
+      "title": "Ivalo — The northernmost airport with a club.",
+      "description": "The northernmost airport with a club. Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland. Town itself is…"
+    },
+    "fi": {
+      "title": "Ivalo — Pohjoisin lentoasema, jolla on klubi.",
+      "description": "Pohjoisin lentoasema, jolla on klubi. Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on…"
+    },
+    "de": {
+      "title": "Ivalo — Der nördlichste Flughafen mit einem Club.",
+      "description": "Der nördlichste Flughafen mit einem Club. Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die…"
+    },
+    "ja": {
+      "title": "Ivalo — クラブのある最北の空港。",
+      "description": "クラブのある最北の空港。 Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel IvaloはClub Nordを運営している — 金曜と土曜に開く、フィンランド本土で最北のクラブだ。Hotel…"
+    },
+    "es": {
+      "title": "Ivalo — El aeropuerto más al norte con un club.",
+      "description": "El aeropuerto más al norte con un club. Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra Natal Sami.…"
+    },
+    "pt-BR": {
+      "title": "Ivalo — O aeroporto mais ao norte com uma balada.",
+      "description": "O aeroporto mais ao norte com uma balada. Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi. A…"
+    },
+    "zh-CN": {
+      "title": "Ivalo — 最北的、带夜店的机场。",
+      "description": "最北的、带夜店的机场。 Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 经营着 Club Nord——芬兰大陆最北的夜店，周五、周六营业。Hotel Kultahippu…"
+    },
+    "ko": {
+      "title": "Ivalo — 클럽이 있는 최북단 공항.",
+      "description": "클럽이 있는 최북단 공항. Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문이다. 마을 자체는 인구 4,000명. Hotel Ivalo가 Club Nord를 운영하는데 — 핀란드 본토 최북단 클럽으로, 금·토에 문을 연다. Hotel…"
+    },
+    "fr": {
+      "title": "Ivalo — L'aéroport le plus au nord à avoir un club.",
+      "description": "L'aéroport le plus au nord à avoir un club. Ivalo est l'aéroport le plus au nord de Finlande et la porte d'entrée vers Inari, Saariselkä et le Pays sámi. La…"
+    },
+    "it": {
+      "title": "Ivalo — L'aeroporto più a nord con un club.",
+      "description": "L'aeroporto più a nord con un club. Ivalo è l'aeroporto più a nord della Finlandia e la porta d'accesso a Inari, Saariselkä e alla Terra dei Sámi. La…"
+    },
+    "nl": {
+      "title": "Ivalo — De noordelijkste luchthaven met een club.",
+      "description": "De noordelijkste luchthaven met een club. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland.…"
+    }
+  },
+  "/city/muonio": {
+    "en": {
+      "title": "Muonio — The national-park gateway.",
+      "description": "The national-park gateway. Muonio is 2 300 people and one of the gateways to Pallas-Yllästunturi National Park (1 020 km², second-biggest in Finland). There…"
+    },
+    "fi": {
+      "title": "Muonio — Portti kansallispuistoon.",
+      "description": "Portti kansallispuistoon. Muonio on 2 300 asukasta ja yksi porteista Pallas-Yllästunturin kansallispuistoon (1 020 km², Suomen toiseksi suurin). Ei klubia…"
+    },
+    "de": {
+      "title": "Muonio — Das Tor zum Nationalpark.",
+      "description": "Das Tor zum Nationalpark. Muonio hat 2.300 Einwohner und ist eines der Tore zum Pallas-Yllästunturi-Nationalpark (1.020 km², der zweitgrößte Finnlands). Es…"
+    },
+    "ja": {
+      "title": "Muonio — 国立公園の玄関口。",
+      "description": "国立公園の玄関口。 Muonioは2 300人の町で、Pallas-Yllästunturi国立公園（1 020 km²、フィンランドで2番目に大きい）への玄関口のひとつだ。クラブはなく、はしご酒もできず、ほとんどの夜は22:00に終わる。Harriniva Wilderness…"
+    },
+    "es": {
+      "title": "Muonio — La puerta al parque nacional.",
+      "description": "La puerta al parque nacional. Muonio tiene 2 300 habitantes y es una de las puertas de entrada al parque nacional de Pallas-Yllästunturi (1 020 km², el…"
+    },
+    "pt-BR": {
+      "title": "Muonio — A porta de entrada do parque nacional.",
+      "description": "A porta de entrada do parque nacional. Muonio tem 2 300 pessoas e é uma das portas de entrada do Parque Nacional Pallas-Yllästunturi (1 020 km², o segundo…"
+    },
+    "zh-CN": {
+      "title": "Muonio — 国家公园门户。",
+      "description": "国家公园门户。 Muonio 只有 2 300 人，是通往 Pallas-Yllästunturi 国家公园（1 020 平方公里，芬兰第二大）的门户之一。这里没有夜店、没有酒吧巡游，大多数夜晚 22:00 就结束了。Harriniva Wilderness Hotel 为参加哈士奇雪橇团的客人提供晚间桑拿 +…"
+    },
+    "ko": {
+      "title": "Muonio — 국립공원의 관문.",
+      "description": "국립공원의 관문. Muonio는 인구 2,300명에, Pallas-Yllästunturi 국립공원(1,020km², 핀란드 두 번째 규모)으로 들어가는 관문 중 하나다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 22:00에 끝난다. Harriniva Wilderness…"
+    },
+    "fr": {
+      "title": "Muonio — La porte d'entrée du parc national.",
+      "description": "La porte d'entrée du parc national. Muonio, c'est 2 300 habitants et l'une des portes d'entrée du parc national de Pallas-Yllästunturi (1 020 km², le…"
+    },
+    "it": {
+      "title": "Muonio — La porta del parco nazionale.",
+      "description": "La porta del parco nazionale. Muonio conta 2.300 persone ed è una delle porte d'accesso al parco nazionale di Pallas-Yllästunturi (1.020 km², il secondo più…"
+    },
+    "nl": {
+      "title": "Muonio — De toegangspoort tot het nationaal park.",
+      "description": "De toegangspoort tot het nationaal park. Muonio telt 2.300 inwoners en is een van de toegangspoorten tot Nationaal Park Pallas-Yllästunturi (1.020 km², het…"
+    }
+  },
+  "/city/salla": {
+    "en": {
+      "title": "Salla — In the middle of nowhere.",
+      "description": "In the middle of nowhere. 3 300 residents and one ski slope. The town's tagline is literally \"In the Middle of Nowhere\" and they mean it as a compliment.…"
+    },
+    "fi": {
+      "title": "Salla — Keskellä ei-mitään.",
+      "description": "Keskellä ei-mitään. 3 300 asukasta ja yksi rinne. Kaupungin slogan on kirjaimellisesti 'In the Middle of Nowhere', ja se tarkoitetaan kohteliaisuudeksi.…"
+    },
+    "de": {
+      "title": "Salla — Mitten im Nirgendwo.",
+      "description": "Mitten im Nirgendwo. 3.300 Einwohner und eine Skipiste. Der Slogan der Stadt lautet wörtlich „In the Middle of Nowhere“, und das ist als Kompliment gemeint.…"
+    },
+    "ja": {
+      "title": "Salla — 何もないど真ん中。",
+      "description": "何もないど真ん中。 住民3 300人とスキースロープが一本。町のキャッチフレーズは文字通り「In the Middle of Nowhere（何もないど真ん中）」で、それを褒め言葉として掲げている。夜遅くまで開くバーはHotel Revontuliのものだけ。スキー村にはAurora…"
+    },
+    "es": {
+      "title": "Salla — En medio de la nada.",
+      "description": "En medio de la nada. 3 300 habitantes y una sola pista de esquí. El lema del pueblo es literalmente \"In the Middle of Nowhere\" y lo dicen como un cumplido.…"
+    },
+    "pt-BR": {
+      "title": "Salla — No meio do nada.",
+      "description": "No meio do nada. 3 300 moradores e uma pista de esqui. O slogan da cidade é literalmente \"No Meio do Nada\", e eles dizem isso como elogio. O Hotel Revontuli…"
+    },
+    "zh-CN": {
+      "title": "Salla — 位于天涯海角。",
+      "description": "位于天涯海角。 3 300 名居民，一条雪道。小镇的标语字面上就是“位于天涯海角”，而他们把这当作一句褒奖。Hotel Revontuli 拥有唯一一家开到很晚的酒吧。滑雪村里有 Aurora Bar（旺季周三至周六营业）。冬季之外：一片寂静。2032 年冬奥会的申办让 Salla…"
+    },
+    "ko": {
+      "title": "Salla — 한복판의 아무것도 없는 곳.",
+      "description": "한복판의 아무것도 없는 곳. 주민 3,300명에 스키 슬로프 하나. 마을의 슬로건은 말 그대로 \"한복판의 아무것도 없는 곳(In the Middle of Nowhere)\"이고, 그들은 이를 칭찬으로 여긴다. Hotel Revontuli에는 늦게까지 운영하는 유일한 바가 있다. 스키…"
+    },
+    "fr": {
+      "title": "Salla — Au milieu de nulle part.",
+      "description": "Au milieu de nulle part. 3 300 habitants et une seule piste de ski. Le slogan de la ville est littéralement « Au milieu de nulle part » (In the Middle of…"
+    },
+    "it": {
+      "title": "Salla — In mezzo al nulla.",
+      "description": "In mezzo al nulla. 3.300 residenti e una pista da sci. Lo slogan della cittadina è letteralmente \"In the Middle of Nowhere\" — in mezzo al nulla — e lo…"
+    },
+    "nl": {
+      "title": "Salla — In the middle of nowhere.",
+      "description": "In the middle of nowhere. 3.300 inwoners en één skipiste. De slogan van de plaats is letterlijk \"In the Middle of Nowhere\" en ze bedoelen het als compliment.…"
+    }
+  }
+}

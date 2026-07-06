@@ -1,5 +1,5 @@
 /**
- * JobNetworkBanner — drop-in component for any LaplandVibes sister site to
+ * JobNetworkBanner, drop-in component for any LaplandVibes sister site to
  * show paid Network-tier job listings that bought a placement on it.
  *
  * Usage on a sister site (e.g. laplandskiresorts):

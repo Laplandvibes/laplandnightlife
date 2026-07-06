@@ -36,6 +36,23 @@ function attachAffiliateParams(url: URL, sid: string): void {
   url.searchParams.set('trip_sub2', sid);
 }
 
+// LOCALE: 2026-05-16 — pass user locale to Trip.com so DE/FI users land on the
+// local Trip.com flow (locale=de-DE / fi-FI). EN defaults to en-XX (multi-lang EN).
+export type TripLang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+const TRIP_LOCALE: Record<TripLang, string> = {
+  en: 'en-XX',
+  fi: 'fi-FI',
+  de: 'de-DE',
+  ja: 'ja-JP',
+  es: 'es-ES',
+  'pt-BR': 'pt-BR',
+  'zh-CN': 'zh-CN',
+  ko: 'ko-KR',
+  fr: 'fr-FR',
+  it: 'it-IT',
+  nl: 'nl-NL',
+};
+
 // ─── Flights ────────────────────────────────────────────────────────────
 
 export interface TripFlightOpts {
@@ -51,6 +68,8 @@ export interface TripFlightOpts {
   returnDate?: string;
   /** 'rt' (default round-trip) or 'ow' (one-way) */
   triptype?: 'rt' | 'ow';
+  /** Site language — sets Trip.com locale param. */
+  lang?: TripLang;
 }
 
 /**
@@ -71,14 +90,15 @@ export function buildTripFlightUrl(o: TripFlightOpts): string {
   url.searchParams.set('class', 'y');
   url.searchParams.set('quantity', '1');
   url.searchParams.set('curr', 'EUR');
-  url.searchParams.set('locale', 'en-XX');
+  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
   attachAffiliateParams(url, o.sid);
   return url.toString();
 }
 
 /** Generic Trip.com flight homepage (affiliate-tagged). */
-export function buildTripFlightHome(sid: string): string {
+export function buildTripFlightHome(sid: string, lang: TripLang = 'en'): string {
   const url = new URL('https://www.trip.com/flights');
+  url.searchParams.set('locale', TRIP_LOCALE[lang]);
   attachAffiliateParams(url, sid);
   return url.toString();
 }
