@@ -4,23 +4,11 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Ostrobotnia del Norte',
     blurb: 'Capital Europea de la Cultura 2026, y la única escena de clubes que funciona de verdad todo el año en el norte.',
     pageTagline: 'Capital Europea de la Cultura 2026.',
-    intro: '200 000 habitantes, una escena de clubes movida por estudiantes y la calle peatonal Rotuaari con ocho locales en apenas 400 metros. Oulu es la única ciudad del norte donde las noches entre semana funcionan de verdad: karaoke los martes en 45 Special, sesiones de DJ los miércoles en Never Grow Old, y colas los viernes en 45 Special y Tähtitorni. 2026 suma el programa de Capital Europea de la Cultura: 1 500 eventos, entre ellos el Air Guitar World Championships, Qstock, Elojazz y el festival invernal Frozen People.',
     venues: {
       '45 Special': { type: 'Discoteca', note: 'El club favorito de los estudiantes. Abierto de miércoles a sábado, hasta tarde.' },
       'Never Grow Old': { type: 'Música en vivo + club', note: 'Programación indie / alternativa. El más pequeño de la calle, pero con el público más fiel.' },
-      'Tähtitorni': { type: 'Cócteles + club', note: 'Bar en la última planta, en pleno centro: cócteles de madrugada y una pista a reventar.' },
-      'Tex Mex Cantina': { type: 'Bar', note: 'Copas antes del club, con terraza en verano.' },
-      'Bishop\'s Arms': { type: 'Pub', note: 'Pub de whisky, el ancla de Rotuaari para una pinta más tranquila.' },
       'St Michael': { type: 'Directos + club', note: 'La sala más grande de la calle. DJ de gira y noches tributo.' },
-      'Hemingway\'s': { type: 'Coctelería', note: 'Aire de bar clandestino y un buen programa de coctelería.' },
-      'Kaarlenholvi': { type: 'Cervecería', note: 'Bar de sótano con una larga carta de cerveza artesanal finlandesa de barril.' },
     },
-    knowList: [
-      'Rotuaari es peatonal: ocho locales en un mismo paseo.',
-      'El programa de Capital Europea de la Cultura va de enero a diciembre de 2026: reserva alojamiento con tiempo.',
-      'El último servicio es a las 03:30 en los locales del centro; las puertas cierran a las 04:00.',
-      'Oulu es la única ciudad de Laponia con una escena diurna real los domingos (Hospoda Plzeň, Cafe Bisketti).',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '210 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'OUL · 15 min' },
@@ -32,23 +20,11 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia',
     blurb: 'La capital ártica: dividida entre los fines de semana turísticos y los días de diario solo para locales.',
     pageTagline: 'La capital ártica.',
-    intro: 'Dos escenas dentro de una misma ciudad. Koskikatu es la calle turística: Roy Club lleva montando "las mejores fiestas de la ciudad desde 1985", Tivoli trae giras de DJ internacionales y Bull Bar es la terraza deportiva más ruidosa. Maakuntakatu es donde beben los locales: Cafe & Bar 21 para cócteles, Three Cats para indie, Oluthuone para whisky. Los fines de semana turísticos significan colas en Koskikatu; entre semana, Maakuntakatu es lo único abierto.',
     venues: {
       'Roy Club': { type: 'Discoteca', note: 'Abierto desde 1985. Tres salas: la pista más grande de la ciudad.' },
-      'Tivoli': { type: 'Discoteca', note: 'Programación de DJ internacionales; la cola de los viernes es real.' },
       'Bull Bar': { type: 'Bar deportivo', note: 'Ruidoso, lleno, terraza de Premier League y comida hasta tarde.' },
-      'Cafe & Bar 21': { type: 'Coctelería', note: 'Coctelería favorita de los locales en Maakuntakatu.' },
-      'Three Cats': { type: 'Indie / directos', note: 'Música en vivo en sala pequeña: indie y jazz finlandés.' },
-      'Oluthuone': { type: 'Pub de whisky', note: 'Una selección de single malt que supera a la mayoría de pubs de Helsinki.' },
-      'Half Past Nine': { type: 'Karaoke', note: 'El bar de karaoke al que los locales mandan a los turistas (con una sonrisilla).' },
       'Kauppayhtiö': { type: 'Café + bar', note: 'Estética de salón vintage; cócteles hasta tarde.' },
     },
-    knowList: [
-      'Koskikatu es la calle turística; Maakuntakatu es a donde van los locales de verdad.',
-      'El último servicio es a las 03:00; los clubes cierran a las 03:30 en invierno, a veces a las 04:00 en plena temporada.',
-      'No hay Uber: guarda el número del taxi local, 0100 84 84.',
-      'La previsión de auroras alcanza su punto máximo de octubre a marzo; Roy Club tiene una terraza de fumadores orientada al norte.',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '64 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'RVN · 10 min' },
@@ -60,22 +36,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Municipio de Kittilä',
     blurb: 'Hullu Poro Areena: aforo de 1 700, 10 barras, 2 plantas; la discoteca más grande de Laponia.',
     pageTagline: 'La mayor fiesta de estación de esquí de Finlandia.',
-    intro: 'Hullu Poro Areena es la pieza central: aforo de 1 700, dos plantas, diez barras y la pista más grande al norte de Helsinki. A su alrededor: Ihku, la legendaria cabaña de après-ski donde se anima a subir a la pista con las botas puestas; Jenny Wolf para cócteles; Pasaati para los locales de madrugada. Noviembre trae la Copa del Mundo de la FIS y diez días de fiesta. De febrero a abril llegan las despedidas, las escuelas de esquí y los fines de semana a tope. Fuera de temporada: cerrado lunes y martes, y la mitad de los locales hibernando.',
     venues: {
       'Hullu Poro Areena': { type: 'Megadiscoteca', note: 'Aforo de 1 700, 10 barras, 2 plantas. Sala de conciertos de miércoles a sábado.' },
       'Ihku': { type: 'Après-ski', note: 'Cabaña de madera al pie de la pista. Botas de esquí en la pista de baile.' },
-      'Jenny Wolf': { type: 'Coctelería', note: 'La opción para adultos: chimenea y coctelería completa.' },
-      'Pasaati': { type: 'Bar de madrugada', note: 'Donde acaban los locales cuando se van los turistas.' },
-      'Crazy Reindeer Bar': { type: 'Bar de hotel', note: 'El bar propio del Hullu Poro Hotel; abierto todos los días en temporada.' },
-      'Tuikku': { type: 'Lounge', note: 'Cócteles más tranquilos; acústico en vivo los domingos.' },
-      'Donkey Bar': { type: 'Pub', note: 'Larga carta de cervezas finlandesas de barril; el único pub de verdad en la pista.' },
     },
-    knowList: [
-      'Levi cierra lunes y martes fuera de la temporada de esquí, incluso el Hullu Poro.',
-      'La Copa del Mundo de la FIS, a mediados de noviembre, se agota con un año de antelación.',
-      'Último servicio a las 03:30 en temporada; algunos locales abren toda la noche durante la semana de la Copa del Mundo.',
-      'La política de botas de esquí varía: Ihku dice que sí, Jenny Wolf dice que no.',
-    ],
     quickFacts: {
       'Beds in resort': { label: 'Camas en la estación', value: '24 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KTT · 18 km' },
@@ -92,7 +56,6 @@ const overlay: Record<string, CityOverlay> = {
       'Kakslauttanen Igloo Bar': { type: 'Bar de techo de cristal', note: 'La foto mundialmente famosa. Abierto a no alojados con reserva.' },
       'Local Pub Panimo': { type: 'Pub de microcervecería', note: 'Cervezas propias; el único pub de verdad del pueblo.' },
       'Hotel Riekonlinna Bar': { type: 'Bar de hotel', note: 'Gran chimenea en el hall y DJ local los viernes por la noche.' },
-      'Tunturi Aurora Lobby': { type: 'Lounge', note: 'Mocktails y botas de nieve bienvenidas.' },
     },
     knowList: [
       'No hay clubes independientes: la vida nocturna gira en torno a los hoteles.',
@@ -139,7 +102,6 @@ const overlay: Record<string, CityOverlay> = {
       'SnowCastle Ice Bar': { type: 'Bar de hielo', note: 'Abierto de ene a abr. Chupitos de vodka en vasos de hielo, paredes a –5 °C.' },
       'Hotel Merihovi': { type: 'Complejo hotelero', note: 'Bar del hall + terraza deportiva + restaurante.' },
       'Sampo Icebreaker': { type: 'Bar a bordo', note: 'Travesías a las 12:00 y las 18:00 en temporada; el bar funciona durante todo el trayecto.' },
-      'Restaurant Otso': { type: 'Restaurante + bar', note: 'Favorito local para una cena tardía con vino.' },
     },
     knowList: [
       'Casi toda la acción está en el SnowCastle de enero a abril.',
@@ -158,19 +120,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'La segunda mayor zona esquiable de Finlandia.',
     pageTagline: 'La segunda mayor zona esquiable de Finlandia.',
-    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos —Äkäslompolo (norte) y Ylläsjärvi (sur)— conectados por las pistas pero separados por 20 minutos en coche. Äkäs tiene el ambiente de après más animado (Sport Resort Ylläs, terraza de Kotahovi). Ylläsjärvi tiene Lapin Eräherrat, el único bar/restaurante de verdad de ese lado. Ningún megaclub. Más tranquilo, más mayor, más parejas que Levi. El parque nacional de Pallas-Yllästunturi es el segundo más grande de Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Bar de hotel', note: 'El bar de après más concurrido de Äkäslompolo.' },
-      'Kotahovi': { type: 'Cabaña de madera', note: 'Chimenea abierta, bebidas calientes hasta tarde y el público de après en la terraza.' },
-      'Lapin Eräherrat': { type: 'Restaurante + bar', note: 'La única opción de "salir" en Ylläsjärvi: cenas tardías y vino.' },
-      'Saagan Kelo': { type: 'Bar de hotel', note: 'Cócteles, chimenea, más tranquilo.' },
     },
-    knowList: [
-      'Äkäs y Ylläsjärvi están a 20 minutos por carretera: el taxi entre ambos cuesta unos 25 €.',
-      'El último servicio es hacia las 02:00, antes que en Levi.',
-      'No hay clubes. Solo bares.',
-      'El parque nacional abarca 1 020 km²: el silencio es el verdadero reclamo.',
-    ],
     quickFacts: {
       'Beds in resort': { label: 'Camas en la estación', value: '23 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KTT · 50 min' },
@@ -182,19 +134,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Noreste de Finlandia',
     blurb: 'La segunda estación de esquí de Finlandia por jornadas de esquiador.',
     pageTagline: 'Estación de esquí en tierra de osos.',
-    intro: 'Ruka es técnicamente Kuusamo y técnicamente no está en Laponia, pero a los esquiadores les da igual: es la segunda estación más concurrida de Finlandia y la semana de apertura de noviembre es la más ruidosa. Zone Bar es el local de après central al pie de la pista. Pyörre es la opción de baile de madrugada. La temporada baja es brutal: el pueblo cae a 1 200 habitantes. De noviembre a abril rebosa con 30 000 visitantes.',
     venues: {
       'Zone Bar': { type: 'Après-ski', note: 'Al pie de la pista: la sede de la fiesta de apertura de la Copa del Mundo de la FIS.' },
-      'Pyörre': { type: 'Club de madrugada', note: 'El único club de verdad; abierto de jueves a sábado en temporada.' },
-      'Cabin Bar': { type: 'Pub', note: 'Pub de whisky, chimenea, la opción tranquila.' },
-      'Hotel Rantasipi Lobby': { type: 'Bar de hotel', note: 'Música en vivo los viernes y sábados en plena temporada.' },
     },
-    knowList: [
-      'Ruka abre con la Copa del Mundo de Esquí de Fondo de la FIS a finales de noviembre: esa semana es el pico.',
-      'El último servicio es a las 03:00 en temporada y a la 01:00 fuera de temporada.',
-      'Aeropuerto más cercano: Kuusamo (KAO), a 30 minutos.',
-      'Técnicamente no es Laponia, pero todo el mundo la trata como tal.',
-    ],
     quickFacts: {
       'Beds in resort': { label: 'Camas en la estación', value: '15 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KAO · 30 min' },
@@ -229,18 +171,8 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia Central',
     blurb: 'Midnight Sun Film Festival: proyectan películas a las 03:00 a plena luz del día.',
     pageTagline: 'Midnight Sun Film Festival.',
-    intro: 'Sodankylä es un pueblo de 9 000 habitantes a orillas del río Kemijoki, y una vez al año, a mediados de junio, se convierte en el festival de cine más surrealista del mundo. El Midnight Sun Film Festival dura cuatro días, proyecta más de 80 películas, y la sesión de las 03:00 en la iglesia de madera del siglo XVII (Vanha kirkko) es la franja más fotografiada. Fuera del festival, el pueblo tiene un bar (Hotel Sodankylä) y una tienda. Vente para el festival o no vengas.',
     venues: {
-      'Hotel Sodankylä Bar': { type: 'Bar de hotel', note: 'El único local de "noche". Abierto hasta la 01:00.' },
-      'Vanha Kirkko (Old Church)': { type: 'Sede del festival', note: 'Iglesia de madera del siglo XVII. Sesiones a las 03:00 solo durante el MSFF.' },
-      'Lapinland Pub': { type: 'Pub', note: 'Favorito local: tranquilo casi todo el año, a reventar durante el festival.' },
     },
-    knowList: [
-      'El Midnight Sun Film Festival se celebra a mediados de junio: reserva alojamiento con 6 meses de antelación.',
-      'Fuera de la semana del festival, la vida de bar es tranquila, sobre todo de hotel.',
-      'La iglesia de madera del siglo XVII es una de las más antiguas de Finlandia.',
-      'Último servicio a la 01:00 casi todo el año; a las 04:00 durante el festival.',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '8 600' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'RVN · 1h45' },
@@ -252,18 +184,8 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Municipio de Kittilä',
     blurb: 'Donde viven de verdad los locales (Levi es sobre todo turistas).',
     pageTagline: 'Donde viven de verdad los locales de Levi.',
-    intro: 'Kittilä es la capital municipal: 6 500 habitantes, el aeropuerto y la gente que trabaja en Levi, a 18 km. La vida de bar es solo de locales: Bar Skol es el pub de después del turno, Aurora es la opción de karaoke, y poco más. La mayoría de los turistas pasan de largo. Si quieres una noche de pub en un pueblecito finlandés sin el recargo turístico de Levi, esto es lo que buscas.',
     venues: {
-      'Bar Skol': { type: 'Pub local', note: 'Copas de después del turno para el personal de Levi. Buena terraza de fumadores.' },
-      'Aurora Karaoke': { type: 'Karaoke', note: 'Abierto de jueves a sábado. Habituales que cantan en finlandés.' },
-      'Hotel Kittilä Bar': { type: 'Bar de hotel', note: 'Más tranquilo: la opción para quienes quieren evitar los precios de Levi.' },
     },
-    knowList: [
-      'La mayoría del personal de Levi vive en el pueblo de Kittilä y bebe aquí, no en las pistas.',
-      'Último servicio a las 02:00.',
-      'El aeropuerto (KTT) está a 5 km del pueblo.',
-      'La cerveza es entre un 30 y un 40 % más barata que en Levi.',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '6 500' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KTT · 5 min' },
@@ -298,18 +220,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia Occidental',
     blurb: 'Sin vida nocturna. El reclamo es el parque nacional de Pallas-Yllästunturi.',
     pageTagline: 'La puerta al parque nacional.',
-    intro: 'Muonio tiene 2 300 habitantes y es una de las puertas de entrada al parque nacional de Pallas-Yllästunturi (1 020 km², el segundo más grande de Finlandia). No hay club, no hay ruta de pubs, y casi todas las noches terminan a las 22:00. El Harriniva Wilderness Hotel ofrece una combinación de sauna por la tarde y bar en el hall para los huéspedes de los safaris con perros de trineo. Esa es, sinceramente, la "escena" de Muonio.',
     venues: {
       'Harriniva Wilderness Hotel': { type: 'Bar de hotel', note: 'Sauna y bar, sobre todo para huéspedes de safari.' },
-      'Hotelli Muonion Jeti': { type: 'Bar de hotel', note: 'Con restaurante anexo, solo a última hora de la tarde.' },
-      'Pakkahuone': { type: 'Pub local', note: 'El único pub local. Cierra a las 23:00.' },
     },
-    knowList: [
-      'No hay escena de vida nocturna: el parque es la razón para venir.',
-      'Último servicio a las 23:00 entre semana y a la 01:00 los fines de semana en verano.',
-      'Aeropuerto más cercano: Kittilä (KTT), a 80 km.',
-      'La observación de auroras es excelente aquí precisamente porque no hay contaminación lumínica.',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '2 300' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KTT · 1h15' },
@@ -321,18 +234,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia Oriental',
     blurb: 'En medio de la nada. La estación de esquí más tranquila de Finlandia.',
     pageTagline: 'En medio de la nada.',
-    intro: '3 300 habitantes y una sola pista de esquí. El lema del pueblo es literalmente "In the Middle of Nowhere" y lo dicen como un cumplido. El Hotel Revontuli tiene el único bar que abre hasta tarde. El pueblo de la estación tiene el Aurora Bar (abierto de miércoles a sábado en temporada). Fuera del invierno: silencio. La candidatura a los Juegos Olímpicos de Invierno de 2032 puso a Salla en el mapa, pero la escena en sí no cambió. No vengas por los clubes.',
     venues: {
       'Hotel Revontuli Bar': { type: 'Bar de hotel', note: 'El único local que abre hasta tarde. Restaurante y bar.' },
-      'Aurora Bar (ski village)': { type: 'Bar de pista', note: 'Abierto de miércoles a sábado en temporada de esquí. Cierra a la 01:00.' },
       'Salla Wilderness Park': { type: 'Local de día', note: 'Almuerzo y café diurno para los visitantes del parque.' },
     },
-    knowList: [
-      'Aeropuerto más cercano: Kuusamo (KAO), a 90 km.',
-      'La frontera rusa está a 9 km: gran parte del pueblo habla ruso como segunda lengua.',
-      'Último servicio a la 01:00 en temporada y a las 23:00 fuera de temporada.',
-      'La candidatura a los Juegos Olímpicos de Invierno de 2032 es real: Salla se presentó junto a otras tres estaciones de Laponia.',
-    ],
     quickFacts: {
       'Population': { label: 'Población', value: '3 300' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'KAO · 1h30' },

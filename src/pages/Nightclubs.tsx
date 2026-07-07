@@ -24,15 +24,15 @@ const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
 };
 
 const top = [
-  { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', open: 'Wed–Sat in season' },
-  { name: 'Roy Club', city: 'Rovaniemi', cap: '600', open: 'Daily, late' },
-  { name: 'Tivoli', city: 'Rovaniemi', cap: '500', open: 'Wed–Sat' },
-  { name: '45 Special', city: 'Oulu', cap: '500', open: 'Wed–Sat' },
-  { name: 'St Michael', city: 'Oulu', cap: '600', open: 'Wed–Sat' },
-  { name: 'Never Grow Old', city: 'Oulu', cap: '300', open: 'Wed–Sat' },
-  { name: 'Tähtitorni', city: 'Oulu', cap: '350', open: 'Thu–Sat' },
-  { name: 'Pyörre', city: 'Ruka', cap: '400', open: 'Thu–Sat in season' },
-  { name: 'Club Nord', city: 'Ivalo', cap: '250', open: 'Fri–Sat' },
+  { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', open: 'Wed-Sat in season' },
+  { name: 'Roy Club', city: 'Rovaniemi', cap: '-', open: 'Weekends, late' },
+  { name: 'Half Moon Night Club', city: 'Rovaniemi', cap: '-', open: 'Weekends' },
+  { name: '45 Special', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
+  { name: 'St Michael', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
+  { name: 'Never Grow Old', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
+  { name: 'Kaarlenholvi', city: 'Oulu', cap: '-', open: 'Fri-Sat disco' },
+  { name: 'Zone Bar', city: 'Ruka', cap: '-', open: 'Daily in season' },
+  { name: 'Club Nord (Hotel Ivalo)', city: 'Ivalo', cap: '-', open: 'Seasonal' },
 ];
 
 export default function Nightclubs() {

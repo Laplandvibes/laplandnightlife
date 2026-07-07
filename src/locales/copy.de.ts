@@ -92,7 +92,7 @@ const de = {
       heroSub: 'Von 1 700 Plätzen bis 250 und die Schlange an der Tür.',
       heroIntro: 'Die Nachtclubs Lapplands lassen sich in vier Kategorien einteilen. Wer den Unterschied kennt, erlebt einen guten Freitag in Levi und keinen verschwendeten in Salla.',
       tier1H: 'Der Megaclub', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. 1 700 Plätze, 10 Bars, 2 Etagen. Der größte Nachtclub Lapplands, ohne Frage. Konzert-Venue Mi–Sa in der Skisaison.',
-      tier2H: 'Die Clubs der echten Szene', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Ganzjähriges Programm, Gast-DJs, Warteschlangen um Mitternacht. Der Rotuaari-Boulevard in Oulu vereint 8 Venues auf 400 Metern.',
+      tier2H: 'Die Clubs der echten Szene', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Ganzjähriges Programm, Gast-DJs, Warteschlangen um Mitternacht. Der Rotuaari-Boulevard in Oulu vereint 8 Venues auf 400 Metern.',
       tier3H: 'Der nördlichste Club', tier3Where: 'Ivalo', tier3Body: 'Club Nord im Hotel Ivalo. Geöffnet Freitag und Samstag. Der nördlichste Festland-Club Finnlands, eine logistische Kuriosität, einen Samstag wert.',
       tier4H: 'Der Hotelbar-Kreis', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: 'Wildnis-Destinationen haben keine Clubs. Sie haben Hotelbars mit Kaminen, Polarlicht-Fenstern und einem DJ-Set pro Woche. Ein anderer Abend, gleiche Getränkepreise.',
       listH: 'Die handverlesene Liste',

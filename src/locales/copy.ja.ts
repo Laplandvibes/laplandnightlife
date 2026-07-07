@@ -94,7 +94,7 @@ const ja = {
     heroSub: '1,700名収容から250名、そして入口の行列まで。',
     heroIntro: 'ラップランドのナイトクラブは4つの層に分かれます。どの層か知ることが、レヴィの金曜とサッラの金曜の違いを生みます。',
     tier1H: 'メガクラブ', tier1Where: 'レヴィ', tier1Body: 'Hullu Poro Areena。収容1,700名、バー10店、2フロア。文句なしにラップランド最大のナイトクラブ。スキーシーズンは水曜〜土曜にコンサート会場としても稼働します。',
-    tier2H: '本物のシーンのクラブ', tier2Where: 'オウル · ロヴァニエミ', tier2Body: 'Roy Club、Tivoli、45 Special、Never Grow Old、St Michael。通年プログラム、ツアーDJ、深夜0時には行列。オウルのRotuaari通りは400メートルの徒歩圏内に8つの会場が並びます。',
+    tier2H: '本物のシーンのクラブ', tier2Where: 'オウル · ロヴァニエミ', tier2Body: 'Roy Club、Half Moon、45 Special、Never Grow Old、St Michael。通年プログラム、ツアーDJ、深夜0時には行列。オウルのRotuaari通りは400メートルの徒歩圏内に8つの会場が並びます。',
     tier3H: '最北のクラブ', tier3Where: 'イヴァロ', tier3Body: 'Hotel IvaloのClub Nord。金曜と土曜営業。フィンランド本土最北のクラブ、1回の土曜の価値がある物流上の珍しさです。',
     tier4H: 'ホテルバーの連なり', tier4Where: 'サーリセルカ · ユッラス · ケミ · ピュハ・ルオスト', tier4Body: 'ウィルダネスの目的地にクラブはありません。代わりに暖炉、オーロラ窓、週1回のDJ枠を持つホテルバーがあります。違う夜の過ごし方、でもドリンクの値段は同じです。',
     listH: '認定リスト',

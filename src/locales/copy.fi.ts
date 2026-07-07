@@ -92,7 +92,7 @@ const fi = {
       heroSub: '1 700 hengestä 250 henkeen ja jono ovella.',
       heroIntro: 'Lapin yökerhot jakautuvat neljään luokkaan. Kun tietää kumpi on kumpi, ero on perjantaillan välillä Levillä ja perjantaillan välillä Sallassa.',
       tier1H: 'Megaklubi', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. 1 700 hengen kapasiteetti, 10 baaria, 2 kerrosta. Lapin suurin yökerho, kiistatta. Konserttipaikka ke–la hiihtokaudella.',
-      tier2H: 'Oikean skenen klubit', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Ympärivuotinen ohjelma, kiertävät DJ:t, jonot keskiyöllä. Oulun Rotuaarilla on 8 paikkaa 400 metrin sisällä.',
+      tier2H: 'Oikean skenen klubit', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Ympärivuotinen ohjelma, kiertävät DJ:t, jonot keskiyöllä. Oulun Rotuaarilla on 8 paikkaa 400 metrin sisällä.',
       tier3H: 'Pohjoisin klubi', tier3Where: 'Ivalo', tier3Body: 'Club Nord Hotel Ivalossa. Avoinna perjantaisin ja lauantaisin. Pohjoisin manner-Suomen klubi, logistinen kuriositeetti, joka on yhden lauantain arvoinen.',
       tier4H: 'Hotellibaarikierros', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: 'Erämaakohteissa ei ole klubeja. Niissä on hotellibaareja takkatulilla, revontuli-ikkunoilla ja yhdellä DJ-vuorolla viikossa. Eri ilta, samat juomahinnat.',
       listH: 'Käsin valittu lista',

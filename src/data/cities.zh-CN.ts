@@ -5,23 +5,11 @@ const overlay: Record<string, CityOverlay> = {
     region: '北博滕区',
     blurb: '2026 年欧洲文化之都——也是北方唯一一座全年都有真正夜店场景的城市。',
     pageTagline: '2026 年欧洲文化之都。',
-    intro: '20 万人口、一个由学生撑起的夜店场景，再加上 Rotuaari 步行街——八家场所全挤在 400 米的步行范围内。Oulu 是北方唯一一座工作日夜晚真的还在运转的城市：周二 45 Special 的卡拉 OK、周三 Never Grow Old 的 DJ 现场、周五 45 Special 和 Tähtitorni 门口排起的长队。2026 年又加上了欧洲文化之都的整套节目：1 500 场活动，包括空气吉他世界锦标赛、Qstock、Elojazz，以及 Frozen People 冬季音乐节。',
     venues: {
       '45 Special': { type: '夜店', note: '学生最爱的夜店。周三至周六营业，开到很晚。' },
       'Never Grow Old': { type: '现场音乐 + 夜店', note: '独立 / 另类风格的演出排期。是这条街上最小的一家，却拥有最忠实的人群。' },
-      'Tähtitorni': { type: '鸡尾酒 + 夜店', note: '市中心的顶层酒吧——深夜鸡尾酒一路喝到挤满人的舞池。' },
-      'Tex Mex Cantina': { type: '酒吧', note: '夜店前的热身小酌，夏天还有露台。' },
-      "Bishop's Arms": { type: '酒馆', note: '威士忌酒馆，Rotuaari 街上想安静喝一杯的落脚点。' },
       'St Michael': { type: '现场 + 夜店', note: '这条街上最大的场地。巡演 DJ 和致敬之夜。' },
-      "Hemingway's": { type: '鸡尾酒吧', note: '地下酒吧的感觉；有专门的调酒项目。' },
-      'Kaarlenholvi': { type: '啤酒馆', note: '地窖酒吧，长长一列芬兰精酿生啤龙头。' },
     },
-    knowList: [
-      'Rotuaari 禁止车辆通行——八家场所一趟步行全走遍。',
-      '欧洲文化之都的节目从 2026 年 1 月持续到 12 月：住宿要趁早订。',
-      '市中心场所最后点单时间为 03:30；04:00 关门。',
-      'Oulu 是拉普兰唯一一座有真正周日白天场景的城市（Hospoda Plzeň、Cafe Bisketti）。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '21 万' },
       'Closest airport': { label: '最近机场', value: 'OUL · 15 分钟' },
@@ -33,23 +21,11 @@ const overlay: Record<string, CityOverlay> = {
     region: '拉普兰',
     blurb: '北极之都——在游客云集的周末和只属于本地人的工作日之间一分为二。',
     pageTagline: '北极之都。',
-    intro: '一座城里藏着两种场景。Koskikatu 是游客街——Roy Club 自称“从 1985 年起办着全城最棒的派对”，Tivoli 招揽国际 DJ 巡演，Bull Bar 则是最吵的体育露台。Maakuntakatu 才是本地人喝酒的地方——Cafe & Bar 21 喝鸡尾酒、Three Cats 听独立乐、Oluthuone 品威士忌。游客云集的周末意味着 Koskikatu 排长队；工作日则意味着 Maakuntakatu 是唯一还开着的去处。',
     venues: {
       'Roy Club': { type: '夜店', note: '1985 年开业至今。三个厅——全城最大的舞池。' },
-      'Tivoli': { type: '夜店', note: '招揽国际 DJ；周五的排队是真的。' },
       'Bull Bar': { type: '体育酒吧', note: '吵闹、人挤人、转播英超的露台，还有深夜餐食。' },
-      'Cafe & Bar 21': { type: '鸡尾酒吧', note: 'Maakuntakatu 街上深受本地人喜爱的调酒酒吧。' },
-      'Three Cats': { type: '独立 / 现场', note: '小厅现场音乐——芬兰独立乐 + 爵士。' },
-      'Oluthuone': { type: '威士忌酒馆', note: '单一麦芽的选品胜过赫尔辛基大多数酒馆。' },
-      'Half Past Nine': { type: '卡拉 OK', note: '本地人（带着坏笑）把游客打发过去的那家卡拉 OK。' },
       'Kauppayhtiö': { type: '咖啡馆 + 酒吧', note: '复古客厅风；鸡尾酒供应到深夜。' },
     },
-    knowList: [
-      'Koskikatu 是游客街；Maakuntakatu 才是本地人真正会去的地方。',
-      '最后点单 03:00；冬季夜店 03:30 关门，旺季有时撑到 04:00。',
-      '没有 Uber——把本地出租车号码 0100 84 84 存好。',
-      '极光预报在 10 月至次年 3 月达到高峰——Roy Club 有一处朝北的吸烟露台。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '6.4 万' },
       'Closest airport': { label: '最近机场', value: 'RVN · 10 分钟' },
@@ -61,22 +37,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 市镇',
     blurb: 'Hullu Poro Areena：1 700 人容量、10 个吧台、2 层楼——拉普兰最大的夜店。',
     pageTagline: '芬兰最盛大的滑雪场派对。',
-    intro: 'Hullu Poro Areena 是核心——1 700 人容量、两层楼、十个吧台，还有赫尔辛基以北最大的舞池。围着它的还有：Ihku，那间传奇的滑雪后小木屋，鼓励你穿着雪靴上舞池；Jenny Wolf 喝鸡尾酒；Pasaati 留给深夜的本地人。11 月，FIS 世界杯带来一场为期 10 天的派对。2 月至 4 月则是单身派对团、滑雪学校和全速狂欢的周末。淡季：周一、周二歇业，半数场所进入冬眠。',
     venues: {
       'Hullu Poro Areena': { type: '超大夜店', note: '1 700 人容量、10 个吧台、2 层楼。周三至周六兼作演唱会场地。' },
       'Ihku': { type: '滑雪后酒吧', note: '雪道脚下的木屋。可以穿着雪靴上舞池。' },
-      'Jenny Wolf': { type: '鸡尾酒吧', note: '更成熟的选择——壁炉、完整的调酒吧台。' },
-      'Pasaati': { type: '深夜酒吧', note: '游客散去后本地人最终落脚的地方。' },
-      'Crazy Reindeer Bar': { type: '酒店酒吧', note: 'Hullu Poro Hotel 的店内酒吧——旺季每天营业。' },
-      'Tuikku': { type: '休闲厅', note: '更安静的鸡尾酒；周日有原声现场。' },
-      'Donkey Bar': { type: '酒馆', note: '长长一列芬兰生啤龙头；雪场上唯一一家像样的酒馆。' },
     },
-    knowList: [
-      '滑雪季之外，Levi 周一、周二歇业——连 Hullu Poro 也不例外。',
-      '11 月中旬的 FIS 世界杯提前一年就售罄。',
-      '旺季最后点单 03:30；世界杯那一周有些场所通宵营业。',
-      '雪靴政策各家不同——Ihku 说行，Jenny Wolf 说不行。',
-    ],
     quickFacts: {
       'Beds in resort': { label: '度假区床位', value: '2.4 万' },
       'Closest airport': { label: '最近机场', value: 'KTT · 18 公里' },
@@ -93,7 +57,6 @@ const overlay: Record<string, CityOverlay> = {
       'Kakslauttanen Igloo Bar': { type: '玻璃顶酒吧', note: '世界闻名的打卡照。非住客凭预约也可进入。' },
       'Local Pub Panimo': { type: '微型酿酒坊酒馆', note: '自家酿造，村里唯一一家像样的酒馆。' },
       'Hotel Riekonlinna Bar': { type: '酒店酒吧', note: '大堂里的大壁炉，周五晚上有本地 DJ。' },
-      'Tunturi Aurora Lobby': { type: '休闲厅', note: '无酒精鸡尾酒 + 欢迎穿着厚重雪靴进来。' },
     },
     knowList: [
       '没有独立夜店——夜生活都依托于酒店。',
@@ -140,7 +103,6 @@ const overlay: Record<string, CityOverlay> = {
       'SnowCastle Ice Bar': { type: '冰吧', note: '1 月至 4 月营业。用冰杯喝伏特加，墙壁维持在 –5°C。' },
       'Hotel Merihovi': { type: '酒店综合体', note: '大堂吧 + 体育露台 + 餐厅。' },
       'Sampo Icebreaker': { type: '船上酒吧', note: '旺季 12:00 与 18:00 出航；酒吧全程营业。' },
-      'Restaurant Otso': { type: '餐厅 + 酒吧', note: '本地人最爱，适合配着葡萄酒吃顿晚饭。' },
     },
     knowList: [
       '从 1 月到 4 月，热闹大多集中在雪堡里。',
@@ -159,19 +121,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '芬兰第二大滑雪区。',
     pageTagline: '芬兰第二大滑雪区。',
-    intro: 'Ylläs 有 63 条雪道，分属两个村子——Äkäslompolo（北）和 Ylläsjärvi（南）——靠雪道相连，却被 20 分钟的车程隔开。Äkäs 那边的滑雪后场景更热闹（Sport Resort Ylläs、Kotahovi 露台）。Ylläsjärvi 那边有 Lapin Eräherrat——是这一侧唯一一家像样的酒吧 / 餐厅。没有超大夜店。比 Levi 更安静、更年长，情侣多过年轻人。Pallas-Yllästunturi 国家公园是芬兰第二大的国家公园。',
     venues: {
       'Sport Resort Ylläs': { type: '酒店酒吧', note: 'Äkäslompolo 最热闹的滑雪后酒吧。' },
-      'Kotahovi': { type: '木屋', note: '开放式壁炉、深夜热饮，以及露台上的滑雪后人群。' },
-      'Lapin Eräherrat': { type: '餐厅 + 酒吧', note: 'Ylläsjärvi 唯一的“外出”去处——晚来的晚餐 + 葡萄酒。' },
-      'Saagan Kelo': { type: '酒店酒吧', note: '鸡尾酒、壁炉，更安静。' },
     },
-    knowList: [
-      'Äkäs 与 Ylläsjärvi 之间车程 20 分钟——出租车单程约 €25。',
-      '最后点单 02:00 左右——比 Levi 早。',
-      '没有夜店。只有酒吧。',
-      '国家公园占地 1 020 平方公里——宁静才是真正的卖点。',
-    ],
     quickFacts: {
       'Beds in resort': { label: '度假区床位', value: '2.3 万' },
       'Closest airport': { label: '最近机场', value: 'KTT · 50 分钟' },
@@ -183,19 +135,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '芬兰东北部',
     blurb: '按滑雪人次计算，芬兰第二大滑雪度假区。',
     pageTagline: '熊出没之地的滑雪场。',
-    intro: 'Ruka 严格说来属于 Kuusamo，严格说来不在拉普兰，但滑雪客才不在乎——它是芬兰第二繁忙的度假区，而 11 月的开板周是最热闹的。Zone Bar 是雪道脚下的核心滑雪后场所。Pyörre 是深夜的蹦迪选择。淡季残酷：镇上人口骤降到 1 200 人。11 月至 4 月则有多达 3 万名访客涌入。',
     venues: {
       'Zone Bar': { type: '滑雪后酒吧', note: '位于雪道脚下——FIS 世界杯开幕派对的大本营。' },
-      'Pyörre': { type: '深夜夜店', note: '唯一一家像样的夜店——旺季周四至周六营业。' },
-      'Cabin Bar': { type: '酒馆', note: '威士忌酒馆、壁炉，安静的选择。' },
-      'Hotel Rantasipi Lobby': { type: '酒店酒吧', note: '旺季周五、周六有现场音乐。' },
     },
-    knowList: [
-      'Ruka 在 11 月下旬迎来 FIS 越野滑雪世界杯——那一周是高峰。',
-      '旺季最后点单 03:00，淡季 01:00。',
-      '最近机场：Kuusamo（KAO），30 分钟车程。',
-      '它严格说来不属于拉普兰，但大家都把它当成拉普兰的一部分。',
-    ],
     quickFacts: {
       'Beds in resort': { label: '度假区床位', value: '1.5 万' },
       'Closest airport': { label: '最近机场', value: 'KAO · 30 分钟' },
@@ -230,18 +172,8 @@ const overlay: Record<string, CityOverlay> = {
     region: '中拉普兰',
     blurb: '午夜阳光电影节——他们在大白天的 03:00 放映电影。',
     pageTagline: '午夜阳光电影节。',
-    intro: 'Sodankylä 是 Kemijoki 河畔一个 9 000 人的村子——每年一次，在 6 月中旬，它会变成全世界最超现实的电影节。午夜阳光电影节连办四天，放映 80 多部影片，而在 17 世纪木造教堂（Vanha kirkko）里 03:00 的那场放映，是被拍得最多的时段。电影节之外的小镇只有一家酒吧（Hotel Sodankylä）和一家商店。要么为电影节而来，要么干脆别来。',
     venues: {
-      'Hotel Sodankylä Bar': { type: '酒店酒吧', note: '唯一的“夜间”场所。营业至 01:00。' },
-      'Vanha Kirkko (Old Church)': { type: '电影节场地', note: '17 世纪木造教堂。仅在午夜阳光电影节期间有 03:00 放映。' },
-      'Lapinland Pub': { type: '酒馆', note: '本地人最爱——一年中大多时候很安静，电影节期间挤满人。' },
     },
-    knowList: [
-      '午夜阳光电影节在 6 月中旬举办——住宿要提前 6 个月预订。',
-      '电影节那一周之外：酒吧生活很安静，主要靠酒店。',
-      '那座 17 世纪木造教堂是芬兰最古老的教堂之一。',
-      '一年中大多时候最后点单 01:00；电影节期间为 04:00。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '8 600' },
       'Closest airport': { label: '最近机场', value: 'RVN · 1 小时 45 分' },
@@ -253,18 +185,8 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 市镇',
     blurb: '本地人真正生活的地方（Levi 多半是游客）。',
     pageTagline: 'Levi 的本地人真正生活的地方。',
-    intro: 'Kittilä 是市镇所在地——6 500 名居民、那座机场，以及那些去 18 公里外的 Levi 上班的人。酒吧生活只属于本地人：Bar Skol 是下班后的酒馆，Aurora 是卡拉 OK 的选择，差不多就这些了。大多数游客都直接开车路过。如果你想要一个不带 Levi 游客附加费的芬兰小镇酒馆之夜，这里就对了。',
     venues: {
-      'Bar Skol': { type: '本地酒馆', note: 'Levi 员工下班后的小酌。有像样的吸烟露台。' },
-      'Aurora Karaoke': { type: '卡拉 OK', note: '周四至周六营业。说芬兰语的常客。' },
-      'Hotel Kittilä Bar': { type: '酒店酒吧', note: '更安静——想避开 Levi 价格的访客的选择。' },
     },
-    knowList: [
-      '大多数 Levi 员工住在 Kittilä 镇上，并在这里喝酒，而不是在雪场上。',
-      '最后点单 02:00。',
-      '机场（KTT）在镇外 5 公里处。',
-      '啤酒价格比 Levi 便宜 30–40%。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '6 500' },
       'Closest airport': { label: '最近机场', value: 'KTT · 5 分钟' },
@@ -299,18 +221,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '西拉普兰',
     blurb: '没有夜生活。Pallas-Yllästunturi 国家公园才是卖点。',
     pageTagline: '国家公园门户。',
-    intro: 'Muonio 只有 2 300 人，是通往 Pallas-Yllästunturi 国家公园（1 020 平方公里，芬兰第二大）的门户之一。这里没有夜店、没有酒吧巡游，大多数夜晚 22:00 就结束了。Harriniva Wilderness Hotel 为参加哈士奇雪橇团的客人提供晚间桑拿 + 大堂吧的组合。老实说，那就是 Muonio 的“场景”了。',
     venues: {
       'Harriniva Wilderness Hotel': { type: '酒店酒吧', note: '桑拿 + 酒吧，主要是雪橇团的客人。' },
-      'Hotelli Muonion Jeti': { type: '酒店酒吧', note: '附设餐厅，仅在深夜营业。' },
-      'Pakkahuone': { type: '本地酒馆', note: '唯一一家本地酒馆。23:00 关门。' },
     },
-    knowList: [
-      '没有夜生活场景——公园才是来这里的理由。',
-      '工作日最后点单 23:00，夏季周末 01:00。',
-      '最近机场：Kittilä（KTT），80 公里。',
-      '这里的极光观赏极佳，正是因为没有光污染。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '2 300' },
       'Closest airport': { label: '最近机场', value: 'KTT · 1 小时 15 分' },
@@ -322,18 +235,10 @@ const overlay: Record<string, CityOverlay> = {
     region: '东拉普兰',
     blurb: '位于天涯海角。芬兰最安静的滑雪度假区。',
     pageTagline: '位于天涯海角。',
-    intro: '3 300 名居民，一条雪道。小镇的标语字面上就是“位于天涯海角”，而他们把这当作一句褒奖。Hotel Revontuli 拥有唯一一家开到很晚的酒吧。滑雪村里有 Aurora Bar（旺季周三至周六营业）。冬季之外：一片寂静。2032 年冬奥会的申办让 Salla 上了地图——但实际的场景并没有改变。别为蹦迪而来。',
     venues: {
       'Hotel Revontuli Bar': { type: '酒店酒吧', note: '唯一一家深夜营业的场所。餐厅 + 酒吧。' },
-      'Aurora Bar (ski village)': { type: '雪道酒吧', note: '滑雪季周三至周六营业。01:00 关门。' },
       'Salla Wilderness Park': { type: '日间场所', note: '为公园访客提供午餐 + 日间咖啡馆。' },
     },
-    knowList: [
-      '最近机场：Kuusamo（KAO），90 公里。',
-      '俄罗斯边境只在 9 公里外——镇上大多数人把俄语当作第二语言。',
-      '旺季最后点单 01:00，淡季 23:00。',
-      '2032 年冬奥会的申办是真的——Salla 与另外三个拉普兰度假区一起提出了申请。',
-    ],
     quickFacts: {
       'Population': { label: '人口', value: '3 300' },
       'Closest airport': { label: '最近机场', value: 'KAO · 1 小时 30 分' },

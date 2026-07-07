@@ -94,7 +94,7 @@ const ptBR = {
     heroSub: 'De 1.700 de capacidade a 250 e a fila na porta.',
     heroIntro: 'As casas noturnas da Lapônia se dividem em quatro níveis. Saber qual é qual faz a diferença entre uma sexta em Levi e uma sexta em Salla.',
     tier1H: 'O megaclube', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. Capacidade 1.700, 10 bares, 2 andares. A maior casa noturna da Lapônia, sem discussão. Casa de shows de quarta a sábado na temporada de esqui.',
-    tier2H: 'As baladas de cena real', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Programação o ano todo, DJs em turnê, fila à meia-noite. O Rotuaari de Oulu tem 8 locais num trecho de 400 metros.',
+    tier2H: 'As baladas de cena real', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Programação o ano todo, DJs em turnê, fila à meia-noite. O Rotuaari de Oulu tem 8 locais num trecho de 400 metros.',
     tier3H: 'A balada mais ao norte', tier3Where: 'Ivalo', tier3Body: 'Club Nord no Hotel Ivalo. Aberto sexta e sábado. A casa noturna continental mais setentrional da Finlândia, curiosidade logística que vale um sábado.',
     tier4H: 'O circuito de bar de hotel', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: 'Destinos de wilderness não têm balada. Têm bares de hotel com lareira, janela para a aurora e um slot de DJ por semana. Noite diferente, mesmos preços.',
     listH: 'A lista verificada',

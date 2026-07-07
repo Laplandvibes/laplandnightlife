@@ -101,7 +101,7 @@ const ko = {
     heroSub: '1,700명 규모부터 250명까지, 그리고 그 문 앞의 줄.',
     heroIntro: '라플란드의 나이트클럽은 네 단계로 나뉩니다. 어느 것이 어느 것인지 아는 것이 Levi의 금요일과 Salla의 금요일 사이의 차이를 만듭니다.',
     tier1H: '메가 클럽', tier1Where: '레비', tier1Body: 'Hullu Poro Areena. 1,700명 수용, 10개 바, 2개 층. 라플란드 최대 규모의 나이트클럽, 의심의 여지가 없다. 스키 시즌 동안 수–토 콘서트 베뉴.',
-    tier2H: '진짜 신의 클럽들', tier2Where: '오울루 · 로바니에미', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. 연중 프로그램, 투어 DJ, 자정의 대기 줄. 오울루의 Rotuaari 거리에는 400m 안에 8곳의 베뉴가 있다.',
+    tier2H: '진짜 신의 클럽들', tier2Where: '오울루 · 로바니에미', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. 연중 프로그램, 투어 DJ, 자정의 대기 줄. 오울루의 Rotuaari 거리에는 400m 안에 8곳의 베뉴가 있다.',
     tier3H: '최북단 클럽', tier3Where: '이발로', tier3Body: 'Hotel Ivalo의 Club Nord. 금·토만 영업. 라플란드 최북단의 클럽, 토요일 하룻밤의 가치가 있는 로지스틱한 호기심.',
     tier4H: '호텔 바 회로', tier4Where: '사리셀카 · 윌래스 · 케미 · 퓌해-루오스토', tier4Body: '와일더니스 목적지에는 클럽이 없다. 벽난로, 오로라 창,  DJ 슬롯이 있는 호텔 바들이 있다. 다른 밤, 같은 음료 가격.',
     listH: '검증된 리스트',

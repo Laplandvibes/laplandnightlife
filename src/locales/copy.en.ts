@@ -91,7 +91,7 @@ const en = {
       heroSub: 'From 1 700-capacity to 250 and the queue at the door.',
       heroIntro: 'Lapland nightclubs split into four tiers. Knowing which is which is the difference between a Friday in Levi and a Friday in Salla.',
       tier1H: 'The mega-club', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. 1 700 capacity, 10 bars, 2 floors. The biggest nightclub in Lapland, hands down. Concert venue Wed–Sat in ski season.',
-      tier2H: 'The real-scene clubs', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Year-round programmes, touring DJs, queues at midnight. The Rotuaari strip in Oulu has 8 venues inside a 400-metre walk.',
+      tier2H: 'The real-scene clubs', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Year-round programmes, touring DJs, queues at midnight. The Rotuaari strip in Oulu has 8 venues inside a 400-metre walk.',
       tier3H: 'The northernmost club', tier3Where: 'Ivalo', tier3Body: 'Club Nord at Hotel Ivalo. Open Friday and Saturday. The northernmost mainland club in Finland, a logistical curiosity worth one Saturday.',
       tier4H: 'The hotel-bar circuit', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: "Wilderness destinations don't do clubs. They do hotel bars with fireplaces, aurora windows and one DJ slot a week. Different night out, same drink prices.",
       listH: 'The verified list',

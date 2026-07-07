@@ -94,7 +94,7 @@ const zhCN = {
     heroSub: '从 1,700 容量到 250，以及门口的长龙。',
     heroIntro: '拉普兰的夜店分为四个层次。分清是哪个层次,决定您在莱维或在萨拉度过怎样的周五夜。',
     tier1H: '巨型俱乐部', tier1Where: '莱维', tier1Body: 'Hullu Poro Areena。容量 1,700、10 个吧台、两层。无可争议的拉普兰最大夜店。雪季周三至周六作为演出场地。',
-    tier2H: '真街区俱乐部', tier2Where: '奥卢 · 罗瓦涅米', tier2Body: 'Roy Club、Tivoli、45 Special、Never Grow Old、St Michael。全年节目、巡演 DJ、午夜排队。奥卢的 Rotuaari 街在 400 米内有 8 个场所。',
+    tier2H: '真街区俱乐部', tier2Where: '奥卢 · 罗瓦涅米', tier2Body: 'Roy Club、Half Moon、45 Special、Never Grow Old、St Michael。全年节目、巡演 DJ、午夜排队。奥卢的 Rotuaari 街在 400 米内有 8 个场所。',
     tier3H: '最北的夜店', tier3Where: '伊瓦洛', tier3Body: 'Hotel Ivalo 内的 Club Nord。周五、周六营业。芬兰本土最北的夜店，值得一个周六的物流好奇。',
     tier4H: '酒店酒吧巡回', tier4Where: '萨利色尔克 · 于莱斯 · 凯米 · Pyhä-Luosto', tier4Body: '旷野目的地没有夜店。它们有带壁炉、面向极光的窗户、 DJ 的酒店酒吧。不同的夜，价格相同。',
     listH: '经核实清单',

@@ -14,7 +14,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.' },
-      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club + Tivoli sell out. The non-rally crowd treat it as Friday.' },
+      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club + Half Moon sell out. The non-rally crowd treat it as Friday.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Sami Week / Sámi Soveeknaki', date: 'Early Feb', city: 'Rovaniemi', body: 'Reindeer races, Sámi music, joik concerts, evening cultural events.' },
@@ -55,7 +55,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   fi: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat-alkuperäiskansojen filmifestivaali', date: 'Tammikuun loppu 2026', city: 'Inari', body: 'Alkuperäiskansojen filmifestivaali Sajoksessa. Joikukonsertit, pimeän ajan näytökset, saamelaisateriaohjelmat.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24.1.2026', city: 'Rovaniemi', body: 'Kaksi päivää. Roy Club ja Tivoli myydään loppuun. Muutkin kuin rallikansa pitävät tätä perjantai-iltana.' },
+      { name: 'Arctic Lapland Rally', date: '23.–24.1.2026', city: 'Rovaniemi', body: 'Kaksi päivää. Roy Club ja Half Moon myydään loppuun. Muutkin kuin rallikansa pitävät tätä perjantai-iltana.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Saamelaisten viikko / Sámi Soveeknaki', date: 'Helmikuun alku', city: 'Rovaniemi', body: 'Poroajot, saamelaismusiikkia, joikukonsertit, iltakulttuuritapahtumat.' },
@@ -96,7 +96,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   de: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat – Indigenes Filmfestival', date: 'Ende Januar 2026', city: 'Inari', body: 'Indigenes Filmfestival im Sajos. Joik-Konzerte, Vorführungen in der Dunkelzeit, samische Diner-Programme.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Roy Club + Tivoli sind ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
+      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Roy Club + Half Moon sind ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Samische Woche / Sámi Soveeknaki', date: 'Anfang Februar', city: 'Rovaniemi', body: 'Rentierrennen, samische Musik, Joik-Konzerte, abendliche Kulturveranstaltungen.' },

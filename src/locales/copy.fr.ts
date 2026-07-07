@@ -101,7 +101,7 @@ const fr = {
     heroSub: 'De 1 700 places à 250 et la file à l\'entrée.',
     heroIntro: 'Les boîtes lapones se classent en quatre catégories. Savoir laquelle est laquelle, c\'est la différence entre un vendredi à Levi et un vendredi à Salla.',
     tier1H: 'La méga-boîte', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. 1 700 places, 10 bars, 2 étages. La plus grande discothèque de Laponie, sans débat. Salle de concert mer–sam en saison de ski.',
-    tier2H: 'Les vraies boîtes de la scène', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Programmes à l\'année, DJ en tournée, files dès minuit. La rue de Rotuaari à Oulu compte 8 salles dans 400 mètres à pied.',
+    tier2H: 'Les vraies boîtes de la scène', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Programmes à l\'année, DJ en tournée, files dès minuit. La rue de Rotuaari à Oulu compte 8 salles dans 400 mètres à pied.',
     tier3H: 'La boîte la plus au nord', tier3Where: 'Ivalo', tier3Body: 'Club Nord à l\'Hotel Ivalo. Ouvert vendredi et samedi. La boîte la plus septentrionale du continent finlandais, une curiosité logistique qui vaut un samedi.',
     tier4H: 'Le circuit des bars d\'hôtel', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: 'Les destinations sauvages n\'ont pas de clubs. Elles ont des bars d\'hôtel avec cheminée, fenêtre aurore et un DJ par semaine. Autre soirée, mêmes prix.',
     listH: 'La liste vérifiée',

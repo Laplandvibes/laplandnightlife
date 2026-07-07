@@ -5,23 +5,11 @@ const overlay: Record<string, CityOverlay> = {
     region: '북오스트로보트니아',
     blurb: '2026 유럽 문화 수도 — 그리고 북부 핀란드에서 유일하게 사계절 내내 돌아가는 진짜 클럽 신.',
     pageTagline: '2026 유럽 문화 수도.',
-    intro: '20만 명의 인구, 학생들이 이끄는 클럽 신, 그리고 400미터 안에 여덟 곳이 늘어선 Rotuaari 보행자 거리. 오울루는 평일 밤이 실제로 살아 있는 북부 유일의 도시다 — 화요일엔 45 Special의 노래방, 수요일엔 Never Grow Old의 DJ 세트, 금요일엔 45 Special과 Tähtitorni 앞에 줄이 늘어선다. 2026년엔 유럽 문화 수도 프로그램이 더해진다: Air Guitar World Championships, Qstock, Elojazz, 그리고 겨울 축제 Frozen People을 포함한 1,500개의 이벤트.',
     venues: {
       '45 Special': { type: '나이트클럽', note: '학생들이 가장 사랑하는 클럽. 수–토 영업, 늦게까지.' },
       'Never Grow Old': { type: '라이브 음악 + 클럽', note: '인디 / 얼터너티브 라인업. 거리에서 가장 작지만 가장 충성스러운 손님층.' },
-      'Tähtitorni': { type: '칵테일 + 클럽', note: '시내 꼭대기 층 바 — 늦은 밤 칵테일에서 꽉 들어찬 댄스플로어로 이어진다.' },
-      'Tex Mex Cantina': { type: '바', note: '클럽 전 가볍게 한잔, 여름엔 테라스.' },
-      'Bishop\'s Arms': { type: '펍', note: '위스키 펍. 조용히 한 잔 하기 좋은 Rotuaari의 중심.' },
       'St Michael': { type: '라이브 + 클럽', note: '거리에서 가장 큰 공간. 투어 DJ와 트리뷰트 나이트.' },
-      'Hemingway\'s': { type: '칵테일 바', note: '스피크이지 분위기, 본격 믹솔로지 프로그램.' },
-      'Kaarlenholvi': { type: '비어홀', note: '핀란드 크래프트 맥주 탭 리스트가 긴 지하 셀러 바.' },
     },
-    knowList: [
-      'Rotuaari는 차량 통행 금지 구역 — 한 번에 걸어서 여덟 곳을 돈다.',
-      '유럽 문화 수도 프로그램은 2026년 1월~12월 내내 진행된다: 숙소는 일찍 예약할 것.',
-      '시내 매장 라스트콜은 03:30, 입장 마감은 04:00.',
-      '오울루는 일요일 낮 신이 실제로 존재하는 라플란드 유일의 도시다 (Hospoda Plzeň, Cafe Bisketti).',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '210,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'OUL · 15분' },
@@ -33,23 +21,11 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드',
     blurb: '북극의 수도 — 관광객의 주말과 현지인만의 평일로 나뉜다.',
     pageTagline: '북극의 수도.',
-    intro: '한 도시 안에 두 개의 신이 있다. Koskikatu는 관광객 거리 — Roy Club은 "1985년 이래 도시 최고의 파티"를 열어 왔고, Tivoli는 해외 DJ 투어를 끌어오며, Bull Bar는 가장 시끄러운 스포츠 테라스다. Maakuntakatu는 현지인이 마시는 곳 — 칵테일은 Cafe & Bar 21, 인디는 Three Cats, 위스키는 Oluthuone. 관광 주말이면 Koskikatu에 줄이 서고, 평일이면 Maakuntakatu만 문을 연다.',
     venues: {
       'Roy Club': { type: '나이트클럽', note: '1985년 개업. 세 개의 룸 — 도시에서 가장 큰 댄스플로어.' },
-      'Tivoli': { type: '나이트클럽', note: '해외 DJ 라인업, 금요일 줄은 진짜다.' },
       'Bull Bar': { type: '스포츠 바', note: '시끄럽고 꽉 차고, 프리미어리그 테라스에 야식까지.' },
-      'Cafe & Bar 21': { type: '칵테일 바', note: 'Maakuntakatu에 자리한 현지인 단골 믹솔로지 바.' },
-      'Three Cats': { type: '인디 / 라이브', note: '작은 공간의 라이브 음악 — 핀란드 인디 + 재즈.' },
-      'Oluthuone': { type: '위스키 펍', note: '헬싱키 웬만한 펍을 능가하는 싱글몰트 셀렉션.' },
-      'Half Past Nine': { type: '노래방', note: '현지인이 (씩 웃으며) 관광객을 보내는 노래방 바.' },
       'Kauppayhtiö': { type: '카페 + 바', note: '빈티지 거실 같은 분위기, 칵테일은 늦게까지.' },
     },
-    knowList: [
-      'Koskikatu는 관광객 거리, Maakuntakatu는 현지인이 실제로 가는 곳.',
-      '라스트콜은 03:00, 클럽은 겨울엔 03:30, 성수기엔 가끔 04:00까지.',
-      'Uber 없음 — 현지 택시 번호 0100 84 84를 저장해 둘 것.',
-      '오로라 예보는 10월~3월에 정점 — Roy Club엔 북쪽을 향한 흡연 테라스가 있다.',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '64,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'RVN · 10분' },
@@ -61,22 +37,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 지자체',
     blurb: 'Hullu Poro Areena: 수용 인원 1,700명, 바 10개, 2층 — 라플란드 최대의 나이트클럽.',
     pageTagline: '핀란드 최대의 스키 리조트 파티.',
-    intro: 'Hullu Poro Areena가 중심이다 — 수용 인원 1,700명, 2층, 바 10개, 헬싱키 이북에서 가장 큰 댄스플로어. 그 주변으로는 부츠 신은 채 춤추는 게 권장되는 전설의 애프터스키 통나무집 Ihku, 칵테일을 위한 Jenny Wolf, 늦은 밤 현지인의 Pasaati가 있다. 11월엔 FIS 월드컵이 열흘간의 파티를 몰고 온다. 2월~4월엔 총각 파티 무리, 스키 스쿨, 풀스로틀 주말. 비수기엔 월·화 휴무에 절반의 매장이 동면에 든다.',
     venues: {
       'Hullu Poro Areena': { type: '메가 나이트클럽', note: '수용 1,700명, 바 10개, 2층. 수–토 콘서트장으로도 운영.' },
       'Ihku': { type: '애프터스키', note: '슬로프 베이스의 통나무집. 댄스플로어에서 스키 부츠 환영.' },
-      'Jenny Wolf': { type: '칵테일 바', note: '어른스러운 선택 — 벽난로에 본격 믹솔로지 바.' },
-      'Pasaati': { type: '심야 바', note: '관광객이 떠난 뒤 현지인이 흘러드는 곳.' },
-      'Crazy Reindeer Bar': { type: '호텔 바', note: 'Hullu Poro Hotel 자체 운영 — 시즌엔 매일 영업.' },
-      'Tuikku': { type: '라운지', note: '조용한 칵테일, 일요일엔 어쿠스틱 라이브.' },
-      'Donkey Bar': { type: '펍', note: '핀란드 탭 리스트가 긴, 슬로프의 유일한 제대로 된 펍.' },
     },
-    knowList: [
-      'Levi는 스키 시즌 외엔 월·화 휴무 — Hullu Poro마저도.',
-      'FIS 월드컵(11월 중순)은 1년 전부터 매진된다.',
-      '시즌 라스트콜은 03:30, 월드컵 주간엔 밤새 운영하는 매장도.',
-      '스키 부츠 규정은 제각각 — Ihku는 OK, Jenny Wolf는 안 됨.',
-    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '24,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 18km' },
@@ -93,7 +57,6 @@ const overlay: Record<string, CityOverlay> = {
       'Kakslauttanen Igloo Bar': { type: '글래스 지붕 바', note: '세계적으로 유명한 인증샷. 예약하면 투숙객이 아니어도 입장 가능.' },
       'Local Pub Panimo': { type: '마이크로브루어리 펍', note: '자체 양조 맥주, 마을 유일의 제대로 된 펍.' },
       'Hotel Riekonlinna Bar': { type: '호텔 바', note: '커다란 로비 벽난로, 금요일 밤엔 현지 DJ.' },
-      'Tunturi Aurora Lobby': { type: '라운지', note: '목테일 + 두툼한 스노부츠 환영.' },
     },
     knowList: [
       '독립 클럽 없음 — 나이트라이프는 호텔 중심이다.',
@@ -140,7 +103,6 @@ const overlay: Record<string, CityOverlay> = {
       'SnowCastle Ice Bar': { type: '아이스 바', note: '1월~4월 영업. 얼음 잔에 보드카 샷, 벽 온도는 –5°C.' },
       'Hotel Merihovi': { type: '호텔 복합관', note: '로비 바 + 스포츠 테라스 + 레스토랑.' },
       'Sampo Icebreaker': { type: '선상 바', note: '시즌엔 12:00 + 18:00 운항, 항해 내내 바가 돌아간다.' },
-      'Restaurant Otso': { type: '레스토랑 + 바', note: '늦은 저녁 와인을 곁들인 식사로 현지인이 사랑하는 곳.' },
     },
     knowList: [
       '대부분의 무대는 1월부터 4월까지 SnowCastle 안에 있다.',
@@ -159,19 +121,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '핀란드에서 두 번째로 큰 스키 구역.',
     pageTagline: '핀란드에서 두 번째로 큰 스키 구역.',
-    intro: 'Ylläs에는 두 마을로 나뉜 63개의 슬로프가 있다 — Äkäslompolo(북)와 Ylläsjärvi(남) — 스키 코스로 연결되지만 차로 20분 거리로 떨어져 있다. Äkäs 쪽이 애프터스키 신이 더 시끌벅적하다 (Sport Resort Ylläs, Kotahovi 테라스). Ylläsjärvi 쪽엔 그쪽의 유일한 제대로 된 바/레스토랑 Lapin Eräherrat가 있다. 메가 클럽은 없다. Levi보다 더 조용하고, 더 나이 든, 커플이 더 많은 곳. Pallas-Yllästunturi 국립공원은 핀란드에서 두 번째로 크다.',
     venues: {
       'Sport Resort Ylläs': { type: '호텔 바', note: 'Äkäslompolo에서 가장 붐비는 애프터스키 바.' },
-      'Kotahovi': { type: '통나무 로지', note: '벽난로, 늦은 시간 따뜻한 음료, 테라스의 애프터스키 손님들.' },
-      'Lapin Eräherrat': { type: '레스토랑 + 바', note: 'Ylläsjärvi의 유일한 "외출" 선택지 — 늦은 저녁 식사 + 와인.' },
-      'Saagan Kelo': { type: '호텔 바', note: '칵테일, 벽난로, 더 조용한 곳.' },
     },
-    knowList: [
-      'Äkäs와 Ylläsjärvi는 도로로 20분 거리 — 둘 사이 택시는 약 €25.',
-      '라스트콜은 02:00 무렵 — Levi보다 이르다.',
-      '클럽 없음. 바만 있다.',
-      '국립공원은 1,020km²에 달한다 — 진짜 매력은 고요함이다.',
-    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '23,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 50분' },
@@ -183,19 +135,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '핀란드 북동부',
     blurb: '스키어 이용일 수 기준 핀란드 2위 스키 리조트.',
     pageTagline: '곰의 땅, 스키 리조트.',
-    intro: 'Ruka는 엄밀히는 Kuusamo이고, 엄밀히는 라플란드가 아니지만, 스키어들은 신경 쓰지 않는다 — 핀란드에서 두 번째로 붐비는 리조트이며 11월 개장 주가 가장 시끄럽다. Zone Bar는 슬로프 베이스의 중심 애프터스키 매장이다. Pyörre는 심야 댄스 선택지. 비수기는 가혹하다: 마을 인구가 1,200명으로 줄어든다. 11월~4월엔 방문객 3만 명이 깊숙이 들어찬다.',
     venues: {
       'Zone Bar': { type: '애프터스키', note: '슬로프 베이스 — FIS 월드컵 개막 파티의 본거지.' },
-      'Pyörre': { type: '심야 클럽', note: '유일한 제대로 된 클럽 — 시즌엔 목–토 영업.' },
-      'Cabin Bar': { type: '펍', note: '위스키 펍, 벽난로, 차분한 선택지.' },
-      'Hotel Rantasipi Lobby': { type: '호텔 바', note: '성수기엔 금·토 라이브 음악.' },
     },
-    knowList: [
-      'Ruka는 11월 말 FIS 크로스컨트리 월드컵으로 개장 — 그 주가 정점이다.',
-      '라스트콜은 시즌엔 03:00, 비수기엔 01:00.',
-      '가장 가까운 공항: Kuusamo (KAO), 30분 거리.',
-      '엄밀히는 라플란드가 아니지만 다들 라플란드처럼 친다.',
-    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '15,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KAO · 30분' },
@@ -230,18 +172,8 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 중부',
     blurb: '미드나이트 선 영화제 — 환한 대낮에 03:00 상영을 한다.',
     pageTagline: '미드나이트 선 영화제.',
-    intro: 'Sodankylä는 Kemijoki 강가의 인구 9,000명 마을이다 — 그리고 1년에 한 번, 6월 중순이면 세계에서 가장 초현실적인 영화제로 변한다. 미드나이트 선 영화제는 나흘간 80편이 넘는 영화를 상영하며, 17세기 목조 교회(Vanha kirkko)에서 열리는 03:00 상영이 가장 많이 사진에 담기는 시간대다. 축제 밖의 이 마을엔 바 하나(Hotel Sodankylä)와 상점 하나가 있다. 축제를 위해 오거나, 아예 오지 말거나.',
     venues: {
-      'Hotel Sodankylä Bar': { type: '호텔 바', note: '유일한 "저녁" 매장. 01:00까지 영업.' },
-      'Vanha Kirkko (Old Church)': { type: '축제 장소', note: '17세기 목조 교회. 03:00 상영은 MSFF 기간에만.' },
-      'Lapinland Pub': { type: '펍', note: '현지인이 사랑하는 곳 — 평소엔 조용하다가 축제 때 꽉 찬다.' },
     },
-    knowList: [
-      '미드나이트 선 영화제는 6월 중순 — 숙소는 6개월 전 예약할 것.',
-      '축제 주간 밖엔 바 풍경이 조용하고, 대부분 호텔 위주다.',
-      '17세기 목조 교회는 핀란드에서 가장 오래된 교회 중 하나다.',
-      '라스트콜은 평상시 01:00, 축제 중엔 04:00.',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '8,600' },
       'Closest airport': { label: '가장 가까운 공항', value: 'RVN · 1시간 45분' },
@@ -253,18 +185,8 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 지자체',
     blurb: '현지인이 실제로 사는 곳 (Levi는 거의 관광객 차지).',
     pageTagline: 'Levi 현지인이 실제로 사는 곳.',
-    intro: 'Kittilä는 지자체의 중심지다 — 주민 6,500명, 공항, 그리고 18km 떨어진 Levi에서 일하는 사람들. 바 풍경은 철저히 현지인 위주다: Bar Skol은 퇴근 후 펍, Aurora는 노래방 선택지, 그게 거의 전부다. 관광객 대부분은 그냥 지나친다. Levi의 관광객 할증 없이 핀란드 소도시 펍의 밤을 원한다면, 바로 여기다.',
     venues: {
-      'Bar Skol': { type: '현지 펍', note: 'Levi 직원들의 퇴근 후 한잔. 제대로 된 흡연 테라스.' },
-      'Aurora Karaoke': { type: '노래방', note: '목–토 영업. 핀란드어 단골들.' },
-      'Hotel Kittilä Bar': { type: '호텔 바', note: '더 조용한 곳 — Levi 물가를 피하려는 방문객을 위한 선택지.' },
     },
-    knowList: [
-      'Levi 직원 대부분은 Kittilä 시내에 살며 슬로프가 아니라 여기서 마신다.',
-      '라스트콜은 02:00.',
-      '공항(KTT)은 시내에서 5km 떨어져 있다.',
-      '맥주 가격은 Levi보다 30~40% 저렴하다.',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '6,500' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 5분' },
@@ -299,18 +221,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 서부',
     blurb: '나이트라이프 없음. 매력은 Pallas-Yllästunturi 국립공원.',
     pageTagline: '국립공원의 관문.',
-    intro: 'Muonio는 인구 2,300명에, Pallas-Yllästunturi 국립공원(1,020km², 핀란드 두 번째 규모)으로 들어가는 관문 중 하나다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 22:00에 끝난다. Harriniva Wilderness Hotel은 허스키 사파리 손님을 위해 저녁 사우나 + 로비 바 조합을 운영한다. 솔직히 그게 Muonio의 "신"이다.',
     venues: {
       'Harriniva Wilderness Hotel': { type: '호텔 바', note: '사우나 + 바, 대부분 사파리 손님.' },
-      'Hotelli Muonion Jeti': { type: '호텔 바', note: '레스토랑 딸림, 늦은 저녁에만.' },
-      'Pakkahuone': { type: '현지 펍', note: '하나뿐인 현지 펍. 23:00에 닫는다.' },
     },
-    knowList: [
-      '나이트라이프 신은 없다 — 올 이유는 공원이다.',
-      '라스트콜은 평일 23:00, 여름 주말엔 01:00.',
-      '가장 가까운 공항: Kittilä (KTT), 80km.',
-      '빛 공해가 없기에 오히려 오로라 관측이 탁월하다.',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '2,300' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 1시간 15분' },
@@ -322,18 +235,10 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 동부',
     blurb: '한복판의 아무것도 없는 곳. 핀란드에서 가장 조용한 스키 리조트.',
     pageTagline: '한복판의 아무것도 없는 곳.',
-    intro: '주민 3,300명에 스키 슬로프 하나. 마을의 슬로건은 말 그대로 "한복판의 아무것도 없는 곳(In the Middle of Nowhere)"이고, 그들은 이를 칭찬으로 여긴다. Hotel Revontuli에는 늦게까지 운영하는 유일한 바가 있다. 스키 마을엔 Aurora Bar가 있다 (시즌엔 수–토 영업). 겨울 밖엔 고요뿐. 2032 동계 올림픽 유치 도전으로 Salla가 지도에 올랐지만 — 실제 신은 변하지 않았다. 클럽을 기대하고 오지 말 것.',
     venues: {
       'Hotel Revontuli Bar': { type: '호텔 바', note: '유일한 늦은 저녁 매장. 레스토랑 + 바.' },
-      'Aurora Bar (ski village)': { type: '슬로프 바', note: '스키 시즌엔 수–토 영업. 01:00에 닫는다.' },
       'Salla Wilderness Park': { type: '주간 매장', note: '공원 방문객을 위한 점심 + 낮 시간 카페.' },
     },
-    knowList: [
-      '가장 가까운 공항: Kuusamo (KAO), 90km.',
-      '러시아 국경이 9km — 마을 대부분이 러시아어를 제2언어로 쓴다.',
-      '라스트콜은 시즌엔 01:00, 비수기엔 23:00.',
-      '2032 동계 올림픽 유치 도전은 진짜다 — Salla는 라플란드의 다른 세 리조트와 함께 신청했다.',
-    ],
     quickFacts: {
       'Population': { label: '인구', value: '3,300' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KAO · 1시간 30분' },

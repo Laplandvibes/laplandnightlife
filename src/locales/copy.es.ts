@@ -94,7 +94,7 @@ const es = {
     heroSub: 'Desde aforo 1.700 hasta 250 y la cola a la entrada.',
     heroIntro: 'Las discotecas de Laponia se dividen en cuatro niveles. Saber cuál es cuál marca la diferencia entre un viernes en Levi y un viernes en Salla.',
     tier1H: 'El megaclub', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. Aforo 1.700, 10 barras, 2 plantas. La mayor discoteca de Laponia, sin discusión. Sala de conciertos de miércoles a sábado en temporada de esquí.',
-    tier2H: 'Las discotecas de escena real', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Tivoli, 45 Special, Never Grow Old, St Michael. Programación todo el año, DJs de gira, colas a medianoche. La calle Rotuaari de Oulu tiene 8 locales en 400 metros.',
+    tier2H: 'Las discotecas de escena real', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Programación todo el año, DJs de gira, colas a medianoche. La calle Rotuaari de Oulu tiene 8 locales en 400 metros.',
     tier3H: 'La discoteca más al norte', tier3Where: 'Ivalo', tier3Body: 'Club Nord del Hotel Ivalo. Abierto viernes y sábado. La discoteca continental más septentrional de Finlandia, curiosidad logística que justifica un sábado.',
     tier4H: 'El circuito de bares de hotel', tier4Where: 'Saariselkä · Ylläs · Kemi · Pyhä-Luosto', tier4Body: 'Los destinos salvajes no tienen discotecas. Tienen bares de hotel con chimenea, ventanal a la aurora y una sesión de DJ semanal. Otra noche, los mismos precios.',
     listH: 'La lista verificada',
