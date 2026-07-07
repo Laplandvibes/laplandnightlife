@@ -5,11 +5,20 @@ const overlay: Record<string, CityOverlay> = {
     region: '북오스트로보트니아',
     blurb: '2026 유럽 문화 수도 — 그리고 북부 핀란드에서 유일하게 사계절 내내 돌아가는 진짜 클럽 신.',
     pageTagline: '2026 유럽 문화 수도.',
+    intro: '인구 20만 명, 학생들이 이끄는 클럽 신, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리. 오울루는 평일 밤이 실제로 돌아가는 북부 유일의 도시입니다 — 사람들은 늦게까지 45 Special, Never Grow Old, St Michael 사이를 오갑니다. 2026년에는 유럽 문화수도 프로그램이 더해집니다: 에어기타 세계선수권, Qstock, Elojazz, 겨울 축제 Frozen People 등 1,500개 행사.',
     venues: {
+      'St Michael': { type: '아이리시 펍 + 라이브', note: '로투아리의 중심축 — 투어 공연과 트리뷰트 나이트가 열리는 아이리시 펍.' },
+      "Hemingway's": { type: '바', note: '키르코카투의 위스키·크래프트 맥주 바 — 조용한 한 잔, 늦게까지 영업.' },
+      'Kaarlenholvi': { type: '나이트 바', note: '오울루에서 두 번째로 오래된 석조 건물의 나이트 바; 주말 디스코가 늦게까지 이어지고, 아래층엔 Jumpru Pub.' },
       '45 Special': { type: '나이트클럽', note: '학생들이 가장 사랑하는 클럽. 수–토 영업, 늦게까지.' },
       'Never Grow Old': { type: '라이브 음악 + 클럽', note: '인디 / 얼터너티브 라인업. 거리에서 가장 작지만 가장 충성스러운 손님층.' },
-      'St Michael': { type: '라이브 + 클럽', note: '거리에서 가장 큰 공간. 투어 DJ와 트리뷰트 나이트.' },
     },
+    knowList: [
+      '로투아리는 차량 통제 구역 — 신의 거의 전부가 짧은 도보 안에 있습니다.',
+      '유럽 문화수도 프로그램은 2026년 1–12월: 숙소는 일찍 예약하세요.',
+      '시내 라스트콜은 03:30, 문은 04:00에 닫습니다.',
+      '이만큼 북쪽에서 진짜 일요일 낮 카페 문화가 있는 도시는 오울루뿐입니다.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '210,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'OUL · 15분' },
@@ -21,11 +30,23 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드',
     blurb: '북극의 수도 — 관광객의 주말과 현지인만의 평일로 나뉜다.',
     pageTagline: '북극의 수도.',
+    intro: '한 도시, 두 개의 속도. 주말 관광객은 코스키카투 주변에 줄을 섭니다 — Roy Club은 "1985년부터 도시 최고의 파티"를 열고, Half Moon은 노래방·디스코 플로어를 돌리며, Bull Bar는 가장 시끌벅적한 스포츠 테라스입니다. 현지인들은 보행자 거리를 따라 흩어집니다 — 칵테일은 Cafe & Bar 21, 맥주는 Rovaniemen Oluthuone, 위스키는 Oliver\'s Corner. 관광 주말엔 줄, 평일엔 조용하고 로컬합니다.',
     venues: {
+      'Half Moon Night Club': { type: '나이트클럽', note: '노래방, 디스코 플로어, VIP룸을 갖춘 시내 중심 클럽.' },
+      'Cafe & Bar 21': { type: '칵테일 바', note: '시내 중심에 있는 현지인들의 단골 칵테일 바.' },
+      'Rovaniemen Oluthuone': { type: '비어 펍', note: '보행자 거리의 맥주 레스토랑 — 넓은 야외석과 폭넓은 탭 리스트.' },
+      "Oliver's Corner": { type: '펍', note: '위스키 선반이 방대한 보행자 거리의 펍.' },
+      'Kansan Karaoke Pub': { type: '노래방 펍', note: '당구대, 게임, 저녁엔 노래방 — 이보다 로컬할 수 없습니다.' },
       'Roy Club': { type: '나이트클럽', note: '1985년 개업. 세 개의 룸 — 도시에서 가장 큰 댄스플로어.' },
       'Bull Bar': { type: '스포츠 바', note: '시끄럽고 꽉 차고, 프리미어리그 테라스에 야식까지.' },
       'Kauppayhtiö': { type: '카페 + 바', note: '빈티지 거실 같은 분위기, 칵테일은 늦게까지.' },
     },
+    knowList: [
+      '코스키카투와 보행자 거리에 신의 거의 전부가 모여 있습니다 — 모두 걸어서 이동 가능합니다.',
+      '라스트콜은 03:00; 클럽은 겨울 03:30, 성수기엔 때로 04:00까지.',
+      '우버는 없습니다 — 현지 택시 번호 0100 84 84를 저장해 두세요.',
+      '오로라 시즌은 10–3월이 절정 — 댄스플로어에 밤을 걸기 전에 예보를 확인하세요.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '64,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'RVN · 10분' },
@@ -37,10 +58,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 지자체',
     blurb: 'Hullu Poro Areena: 수용 인원 1,700명, 바 10개, 2층 — 라플란드 최대의 나이트클럽.',
     pageTagline: '핀란드 최대의 스키 리조트 파티.',
+    intro: 'Hullu Poro Areena가 중심입니다 — 수용 인원 1,700명, 2개 층, 10개의 바, 헬싱키 이북 최대의 댄스플로어. 그 주변엔 스키 부츠를 신고 춤춰도 되는 전설의 아프레스키 오두막 Ihku, 그리고 전망 한 잔을 위한 Hotel Levi Panorama의 Panorama Sky Bar가 있습니다. 11월엔 FIS 월드컵이 열흘간의 파티를 몰고 옵니다. 2–4월은 총각파티 무리, 스키 스쿨, 풀가동 주말. 비수기엔 마을 상당수가 주 초반부터 한산해집니다.',
     venues: {
+      'Panorama Sky Bar': { type: '전망 바', note: '곤돌라 위 Hotel Levi Panorama의 바 — 산 전망과 함께하는 한 잔.' },
       'Hullu Poro Areena': { type: '메가 나이트클럽', note: '수용 1,700명, 바 10개, 2층. 수–토 콘서트장으로도 운영.' },
       'Ihku': { type: '애프터스키', note: '슬로프 베이스의 통나무집. 댄스플로어에서 스키 부츠 환영.' },
     },
+    knowList: [
+      '스키 시즌 외의 레비는 한산합니다 — 큰 밤을 계획하기 전에 영업일을 확인하세요.',
+      '11월 중순 FIS 월드컵은 1년 전에 매진됩니다.',
+      '시즌 중 라스트콜은 03:30; 월드컵 주간엔 더 늦게까지 하는 곳도 있습니다.',
+      '스키 부츠 허용 여부는 업장마다 다릅니다 — Ihku는 유명하게도 \'예스\'.',
+    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '24,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 18km' },
@@ -54,9 +83,10 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: '와일더니스 프리미엄 — 이글루 바 마을.',
     intro: 'Saariselkä는 클럽을 위한 곳이 아니다. 글래스 이글루를 위한 곳이다 — 그게 핵심이다. Kakslauttanen Arctic Resort에는 세계에서 가장 많이 사진에 담긴 바가 있다 (천장이 곧 오로라인 글래스 이글루). 마을 자체는 메인 거리 하나, 식사할 만한 식당 둘, 그리고 라플란드에서 가장 믿을 만한 크래프트 탭 리스트를 갖춘 마이크로브루어리 Local Pub Panimo가 전부다. 해가 진 뒤의 무대는 마을이 아니라 리조트에 있다.',
     venues: {
+      'Local Pub Panimo': { type: '마을 펍', note: '로컬·크래프트 탭, 펍 메뉴, 노래방과 라이브의 밤 — 마을의 자체 펍.' },
+      'Hotel Riekonlinna Bar': { type: '호텔 바', note: '로비의 큰 벽난로; 시즌엔 저녁 프로그램도.' },
+      'Teerenpesä': { type: '펍 + 나이트클럽', note: '마을의 펍-클럽 콤보 — 사리셀카에서 가장 늦게까지 여는 플로어.' },
       'Kakslauttanen Igloo Bar': { type: '글래스 지붕 바', note: '세계적으로 유명한 인증샷. 예약하면 투숙객이 아니어도 입장 가능.' },
-      'Local Pub Panimo': { type: '마이크로브루어리 펍', note: '자체 양조 맥주, 마을 유일의 제대로 된 펍.' },
-      'Hotel Riekonlinna Bar': { type: '호텔 바', note: '커다란 로비 벽난로, 금요일 밤엔 현지 DJ.' },
     },
     knowList: [
       '독립 클럽 없음 — 나이트라이프는 호텔 중심이다.',
@@ -100,9 +130,9 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'SnowCastle, 쇄빙선, 바다 라플란드.',
     intro: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 다시 짓는 SnowCastle. 예배당, 호텔, 그리고 얼음 벽으로 둘러싸인 바를 갖췄다. 12월부터 운항하는 Sampo 쇄빙선은 밤마다 투어를 도는데, 그 자체가 바 역할도 한다. 본토 나이트라이프는 작다: Hotel Merihovi가 층층의 복합관(로비 바, 스포츠 테라스, 레스토랑)을 운영하고, 사실상 그게 전부다. 겨울이면 체급 이상으로 한 방 먹이는 산업 항구 도시.',
     venues: {
-      'SnowCastle Ice Bar': { type: '아이스 바', note: '1월~4월 영업. 얼음 잔에 보드카 샷, 벽 온도는 –5°C.' },
+      'SnowCastle Ice Bar': { type: '아이스 바', note: '1–4월 영업. 얼음 잔에 담긴 음료, 벽은 –5°C.' },
+      'Sampo Icebreaker': { type: '선상 바', note: '시즌 중 운항; 바는 항해 내내 운영됩니다.' },
       'Hotel Merihovi': { type: '호텔 복합관', note: '로비 바 + 스포츠 테라스 + 레스토랑.' },
-      'Sampo Icebreaker': { type: '선상 바', note: '시즌엔 12:00 + 18:00 운항, 항해 내내 바가 돌아간다.' },
     },
     knowList: [
       '대부분의 무대는 1월부터 4월까지 SnowCastle 안에 있다.',
@@ -121,9 +151,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '핀란드에서 두 번째로 큰 스키 구역.',
     pageTagline: '핀란드에서 두 번째로 큰 스키 구역.',
+    intro: '윌라스에는 63개의 슬로프가 두 마을 — 애캐슬롬폴로(북)와 윌래스얘르비(남) — 에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Taiga Pub & Kitchen과 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 두 번째로 큽니다.',
     venues: {
-      'Sport Resort Ylläs': { type: '호텔 바', note: 'Äkäslompolo에서 가장 붐비는 애프터스키 바.' },
+      'Sport Resort Ylläs': { type: '아프레 + 바', note: '슬로프 옆, 애캐슬롬폴로에서 가장 붐비는 아프레 스폿.' },
+      'Taiga Pub & Kitchen': { type: '펍 + 키친', note: '애캐슬롬폴로의 펍 레스토랑 — 탭, 펍 푸드, 스포츠.' },
+      'Ravintola Otso': { type: '레스토랑 + 바', note: '애캐슬롬폴로와 윌래스얘르비 양쪽에 매장을 둔 마을의 인기 식당 — 늦은 저녁과 한 잔.' },
     },
+    knowList: [
+      '애캐스와 윌래스얘르비는 차로 20분 거리 — 택시는 미리 계획하세요.',
+      '라스트콜은 02:00쯤 — 레비보다 이릅니다.',
+      '클럽은 없습니다. 바뿐입니다.',
+      '국립공원 면적은 1,020km² — 진짜 볼거리는 고요함입니다.',
+    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '23,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 50분' },
@@ -135,9 +174,20 @@ const overlay: Record<string, CityOverlay> = {
     region: '핀란드 북동부',
     blurb: '스키어 이용일 수 기준 핀란드 2위 스키 리조트.',
     pageTagline: '곰의 땅, 스키 리조트.',
+    intro: '루카는 엄밀히는 쿠사모이고 엄밀히는 라플란드가 아니지만, 스키어들은 개의치 않습니다 — 핀란드에서 가장 붐비는 리조트 중 하나이며, 11월 개장 주간이 가장 시끌벅적합니다. 슬로프 아래 Zone이 아프레스키의 중심이고, Piste와 Colorado Bar가 밤을 이어갑니다. 비수기의 마을은 매우 조용하고, 11–4월엔 풀가동입니다.',
     venues: {
-      'Zone Bar': { type: '애프터스키', note: '슬로프 베이스 — FIS 월드컵 개막 파티의 본거지.' },
+      'Zone Bar': { type: '아프레스키', note: '슬로프 바로 아래 — 라이브 공연과 FIS 개장 주간 파티의 본거지.' },
+      'Piste': { type: '아프레 + 바', note: '아프레스키에서 밤까지 쉼 없이 이어지는 마을 바.' },
+      'Colorado Bar': { type: '바', note: '스키 마을의 아메리칸 스타일 바 — 스포츠와 늦은 한 잔.' },
+      'Hanki Baari': { type: '바', note: '단순하고 좋은 곳: 커피, 제대로 된 맥주 셀렉션, 그리고 음식.' },
+      'Hotel Rukahovi': { type: '호텔 바', note: '마을의 큰 호텔 — 성수기 주말엔 라이브 음악.' },
     },
+    knowList: [
+      '루카는 11월 말 FIS 크로스컨트리 월드컵과 함께 개장합니다 — 그 주가 절정입니다.',
+      '시즌 중 라스트콜은 03:00, 비수기엔 더 이릅니다.',
+      '가장 가까운 공항: 쿠사모(KAO), 30분.',
+      '엄밀히는 라플란드가 아니지만 모두가 그렇게 대합니다.',
+    ],
     quickFacts: {
       'Beds in resort': { label: '리조트 객실 침대 수', value: '15,000' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KAO · 30분' },
@@ -172,8 +222,18 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 중부',
     blurb: '미드나이트 선 영화제 — 환한 대낮에 03:00 상영을 한다.',
     pageTagline: '미드나이트 선 영화제.',
+    intro: '소단퀼래는 케미요키 강가의 인구 9,000명 마을입니다 — 그리고 1년에 한 번, 6월 중순이면 세계에서 가장 초현실적인 영화제의 무대가 됩니다. 백야 영화제(Midnight Sun Film Festival)는 나흘간 밤낮없이 상영이 이어집니다 — 해가 지지 않으니 아무도 잠들지 않습니다. 축제 주간 외의 신은 호텔 바 하나와 로컬 펍 두어 곳. 축제를 위해 오거나, 고요함을 위해 오세요.',
     venues: {
+      'Hotel Sodankylä Bar': { type: '호텔 바', note: '시내 중심의 호텔 바 — 01:00까지 영업.' },
+      'Piitsi Pub': { type: '펍', note: '키티넨 강변의 테라스; 여름엔 공연도 열립니다.' },
+      'Olohuone Tähti': { type: '카페 + 펍', note: '시내의 거실 같은 카페 바 — 현지인들의 아지트.' },
     },
+    knowList: [
+      '백야 영화제는 6월 중순 — 숙소는 6개월 전에 예약하세요.',
+      '축제 주간 외엔 바 생활이 조용하고 대부분 호텔 위주입니다.',
+      '17세기 목조 교회는 핀란드에서 가장 오래된 축에 듭니다.',
+      '라스트콜은 연중 대부분 01:00; 축제 주간엔 더 늦습니다.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '8,600' },
       'Closest airport': { label: '가장 가까운 공항', value: 'RVN · 1시간 45분' },
@@ -185,8 +245,16 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilä 지자체',
     blurb: '현지인이 실제로 사는 곳 (Levi는 거의 관광객 차지).',
     pageTagline: 'Levi 현지인이 실제로 사는 곳.',
+    intro: '키틸래는 지자체의 중심지입니다 — 인구 6,500명, 공항, 그리고 18km 떨어진 레비를 움직이는 사람들. 바 생활은 작고 로컬합니다: 호텔 바 하나와 마을 펍 두어 곳, 관광 프로그램은 없습니다. 대부분의 방문객은 그냥 지나칩니다. 레비의 리조트 가격 없이 조용한 핀란드 소도시의 저녁을 원한다면, 바로 여기입니다.',
     venues: {
+      'Hotel Kittilä Bar': { type: '호텔 바', note: '시내의 믿을 만한 선택지 — 레비보다 조용하고 저렴합니다.' },
     },
+    knowList: [
+      '레비 직원 상당수가 키틸래 시내에 삽니다 — 이곳의 저녁은 로컬하지, 관광지스럽지 않습니다.',
+      '라스트콜은 02:00.',
+      '공항(KTT)은 시내에서 5km.',
+      '물가는 마을 수준 — 레비 슬로프 바보다 확실히 저렴합니다.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '6,500' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 5분' },
@@ -221,9 +289,17 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 서부',
     blurb: '나이트라이프 없음. 매력은 Pallas-Yllästunturi 국립공원.',
     pageTagline: '국립공원의 관문.',
+    intro: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 2위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁 사우나+로비 바 콤보를 운영하고, Hotel Jeris는 예리스얘르비 호숫가에서 같은 경험을 제공합니다. 솔직히 그것이 무오니오의 \'신\'입니다.',
     venues: {
+      'Hotel Jeris': { type: '호텔 바', note: '예리스얘르비 호숫가 호텔 — 저녁을 위한 레스토랑과 바.' },
       'Harriniva Wilderness Hotel': { type: '호텔 바', note: '사우나 + 바, 대부분 사파리 손님.' },
     },
+    knowList: [
+      '나이트라이프는 없습니다 — 국립공원이 여기 오는 이유입니다.',
+      '평일 저녁은 일찍 끝납니다; 휴가철엔 조금 늦게까지.',
+      '가장 가까운 공항: 키틸래(KTT), 80km.',
+      '빛공해가 전혀 없기에 오로라 관측이 탁월합니다.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '2,300' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KTT · 1시간 15분' },
@@ -235,10 +311,18 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 동부',
     blurb: '한복판의 아무것도 없는 곳. 핀란드에서 가장 조용한 스키 리조트.',
     pageTagline: '한복판의 아무것도 없는 곳.',
+    intro: '인구 3,300명, 스키 슬로프 하나. 마을 슬로건은 말 그대로 "In the Middle of Nowhere" — 그리고 그것은 칭찬으로 쓰입니다. 늦게까지 여는 바는 Hotel Revontuli뿐이고, 슬로프 쪽엔 시즌에 펍이 한두 곳 더 열립니다. 겨울 외엔: 고요함. 위트 있는 "Salla 2032" 동계대회 캠페인이 마을을 지도에 올렸지만, 실제 신은 변하지 않았습니다. 클럽을 위해 오지는 마세요.',
     venues: {
+      'Koptapubi': { type: '슬로프 펍', note: '산 동쪽의 아늑한 펍 — 시즌의 쉼터.' },
       'Hotel Revontuli Bar': { type: '호텔 바', note: '유일한 늦은 저녁 매장. 레스토랑 + 바.' },
       'Salla Wilderness Park': { type: '주간 매장', note: '공원 방문객을 위한 점심 + 낮 시간 카페.' },
     },
+    knowList: [
+      '가장 가까운 공항: 쿠사모(KAO), 90km.',
+      '러시아 국경이 동쪽으로 몇 km — 통행은 폐쇄됐고, 핵심은 야생입니다.',
+      '라스트콜은 시즌 중 01:00, 그 외엔 더 이릅니다.',
+      '"Salla 2032" 유치전은 위트 있는 기후 캠페인이었습니다 — 마을 특유의 유머와 꼭 맞습니다.',
+    ],
     quickFacts: {
       'Population': { label: '인구', value: '3,300' },
       'Closest airport': { label: '가장 가까운 공항', value: 'KAO · 1시간 30분' },

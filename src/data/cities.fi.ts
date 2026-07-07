@@ -5,11 +5,20 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Pohjois-Pohjanmaa',
     blurb: 'Euroopan kulttuuripääkaupunki 2026 — ja pohjoisen ainoa aidosti ympärivuotinen klubikulttuuri.',
     pageTagline: 'Euroopan kulttuuripääkaupunki 2026.',
+    intro: '200 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä. Oulu on pohjoisen ainoa kaupunki, jossa arki-illat oikeasti elävät — porukka kiertää 45 Specialin, Never Grow Oldin ja St Michaelin väliä myöhään. Vuonna 2026 päälle tulee Euroopan kulttuuripääkaupunkiohjelma: 1 500 tapahtumaa, mukana ilmakitaransoiton MM-kisat, Qstock, Elojazz ja Frozen People -talvifestivaali.',
     venues: {
+      'St Michael': { type: 'Irkkupubi + livemusiikki', note: 'Rotuaarin kiintopiste — irlantilaispubi, jossa kiertue-esiintyjiä ja tribuutti-iltoja.' },
+      "Hemingway's": { type: 'Baari', note: 'Viski- ja pienpanimobaari Kirkkokadulla — rauhallisempi tuoppi, auki myöhään.' },
+      'Kaarlenholvi': { type: 'Yöbaari', note: 'Yöbaari Oulun toiseksi vanhimmassa kivitalossa; viikonlopun disko jatkuu pikkutunneille, Jumpru Pub alakerrassa.' },
       '45 Special': { type: 'Yökerho', note: 'Opiskelijoiden suosikkiklubi. Auki ke–la, myöhään.' },
       'Never Grow Old': { type: 'Livemusiikki + klubi', note: 'Indie- ja vaihtoehtokeikat. Kadun pienin paikka mutta uskollisin yleisö.' },
-      'St Michael': { type: 'Live + klubi', note: 'Kadun suurin sali. Kiertävät DJ:t ja tribuutti-illat.' },
     },
+    knowList: [
+      'Rotuaari on suljettu autoliikenteeltä — lähes koko skene on yhden lyhyen kävelyn sisällä.',
+      'Kulttuuripääkaupunkiohjelma pyörii tammi–joulukuun 2026: varaa majoitus ajoissa.',
+      'Anniskelu päättyy keskustassa 03:30; ovet menevät kiinni 04:00.',
+      'Oulu on ainoa näin pohjoinen kaupunki, jossa on aito sunnuntain päiväkahvilaskene.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '210 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'OUL · 15 min' },
@@ -21,11 +30,23 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lappi',
     blurb: 'Arktinen pääkaupunki — jakautuu turistien viikonloppuihin ja paikallisten arkipäiviin.',
     pageTagline: 'Arktinen pääkaupunki.',
+    intro: 'Kaksi rytmiä samassa kaupungissa. Viikonlopputuristit jonottavat Koskikadun tuntumassa — Roy Club on järjestänyt "kaupungin parhaat bileet vuodesta 1985", Half Moon pyörittää karaoke- ja diskolattioita ja Bull Bar on äänekkäin urheiluterassi. Paikalliset levittäytyvät kävelykadulle — Cafe & Bar 21 cocktaileihin, Rovaniemen Oluthuone oluelle ja Oliver\'s Corner viskille. Turistiviikonloppuina jonotetaan; arkisin kaupunki on hiljainen ja paikallinen.',
     venues: {
+      'Half Moon Night Club': { type: 'Yökerho', note: 'Keskustan klubi, jossa karaokea, diskolattioita ja VIP-tiloja.' },
+      'Cafe & Bar 21': { type: 'Cocktailbaari', note: 'Paikallisten suosikkicocktailbaari ydinkeskustassa.' },
+      'Rovaniemen Oluthuone': { type: 'Olutravintola', note: 'Olutravintola kävelykadulla — iso terassi ja leveä hanavalikoima.' },
+      "Oliver's Corner": { type: 'Pubi', note: 'Kävelykadun pubi, jonka viskihylly on kaupungin kattavin.' },
+      'Kansan Karaoke Pub': { type: 'Karaokepubi', note: 'Biljardia, pelejä ja karaokea iltaisin — niin paikallista kuin olla voi.' },
       'Roy Club': { type: 'Yökerho', note: 'Auki vuodesta 1985. Kolme salia — kaupungin suurin tanssilattia.' },
       'Bull Bar': { type: 'Urheilubaari', note: 'Äänekäs, täysi, Valioliiga-terassi, myöhäistä ruokaa.' },
       'Kauppayhtiö': { type: 'Kahvila + baari', note: 'Vintage-olohuoneen estetiikkaa; cocktaileja myöhään.' },
     },
+    knowList: [
+      'Koskikatu ja kävelykatu kattavat lähes koko skenen — kaikki on kävelymatkan päässä.',
+      'Anniskelu päättyy 03:00; klubit sulkevat talvella 03:30, sesongissa joskus 04:00.',
+      'Uberia ei ole — tallenna paikallistaksin numero 0100 84 84.',
+      'Revontulikausi huipentuu loka–maaliskuussa — tsekkaa ennuste ennen kuin lyöt illan lukkoon tanssilattialle.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '64 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'RVN · 10 min' },
@@ -37,10 +58,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilän kunta',
     blurb: 'Hullu Poro Areena: 1 700 hengen kapasiteetti, 10 baaria, 2 kerrosta — Lapin suurin yökerho.',
     pageTagline: 'Suomen suurimmat hiihtokeskusbileet.',
+    intro: 'Hullu Poro Areena on keskipiste — 1 700 hengen kapasiteetti, kaksi kerrosta, kymmenen baaria ja Helsingin pohjoispuolen suurin tanssilattia. Sen ympärillä: Ihku, legendaarinen after ski -mökki, jossa monot kuuluvat tanssilattialle, ja Panorama Sky Bar Hotel Levi Panoramassa näköaladrinkille. Marraskuussa FIS:n maailmancup tuo 10 päivän juhlat. Helmi–huhtikuu tarkoittaa polttariporukoita, hiihtokouluja ja täysiä viikonloppuja. Sesongin ulkopuolella iso osa kylästä hiljenee jo alkuviikosta.',
     venues: {
+      'Panorama Sky Bar': { type: 'Näköalabaari', note: 'Hotel Levi Panoraman baari gondolin yläasemalla — drinkit tunturimaisemalla.' },
       'Hullu Poro Areena': { type: 'Megayökerho', note: '1 700 hengen kapasiteetti, 10 baaria, 2 kerrosta. Konserttipaikka ke–la.' },
       'Ihku': { type: 'Après-ski', note: 'Hirsimökki rinteen juurella. Monot tanssilattialla.' },
     },
+    knowList: [
+      'Levi hiljenee laskettelukauden ulkopuolella — tarkista aukiolopäivät ennen isoa iltaa.',
+      'FIS-maailmancup marraskuun puolivälissä myydään loppuun vuotta etukäteen.',
+      'Anniskelu päättyy sesongissa 03:30; osa paikoista jatkaa myöhempään maailmancup-viikolla.',
+      'Monolinja vaihtelee paikoittain — Ihku sanoo kuuluisasti kyllä.',
+    ],
     quickFacts: {
       'Beds in resort': { label: 'Vuodepaikkoja keskuksessa', value: '24 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KTT · 18 km' },
@@ -54,9 +83,10 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Erämaan premium — iglubaarien kylä.',
     intro: 'Saariselkä ei ole klubikohde. Se on lasi-iglukohde — ja juuri siinä on pointti. Kakslauttanen Arctic Resortilla on maailman valokuvatuin baari (lasi-iglu, jonka kattona ovat revontulet). Itse kylä on yksi pääkatu, kaksi syömisen arvoista ravintolaa ja Local Pub Panimo — pienpanimo, jolla on Lapin luotettavin pienpanimo-oluen hanalista. Pimeän tultua tapahtumat ovat keskuksissa, eivät kylässä.',
     venues: {
+      'Local Pub Panimo': { type: 'Kyläpubi', note: 'Paikallisia ja pienpanimohanoja, pubiruokaa, karaokea ja live-iltoja — kylän oma pubi.' },
+      'Hotel Riekonlinna Bar': { type: 'Hotellibaari', note: 'Iso aulatakka; iltaohjelmaa sesongissa.' },
+      'Teerenpesä': { type: 'Pubi + yökerho', note: 'Kylän pubi–yökerho-yhdistelmä — Saariselän myöhäisimpään auki oleva lattia.' },
       'Kakslauttanen Igloo Bar': { type: 'Lasikattobaari', note: 'Maailmankuulu valokuva. Avoinna myös ulkopuolisille varauksella.' },
-      'Local Pub Panimo': { type: 'Pienpanimopubi', note: 'Omat panimotuotteet, kylän ainoa kunnon pubi.' },
-      'Hotel Riekonlinna Bar': { type: 'Hotellibaari', note: 'Iso aulan takka, paikallinen DJ perjantai-iltaisin.' },
     },
     knowList: [
       'Ei erillisiä klubeja — yöelämä on hotellien varassa.',
@@ -100,9 +130,9 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'LumiLinna, jäänmurtaja, Meri-Lappi.',
     intro: 'Kemi on portti Helsingin junayhteyden ja Lapin välissä — ja kaupunki, jolla on yksi temppu: LumiLinna, joka on rakennettu uudelleen joka talvi vuodesta 1996, kappeleineen, hotelleineen ja jääseinäisine baareineen. Jäänmurtaja Sampon risteilyt pyörivät joulukuusta lähtien öisin ja toimivat samalla baaripaikkoina. Mantereen yöelämä on pientä: Hotel Merihovi pyörittää monikerroksista kokonaisuutta (aulabaari, urheiluterassi, ravintola) ja siinä se pääosin onkin. Teollinen satamakaupunki, joka lyö talvella yli oman painonsa.',
     venues: {
-      'SnowCastle Ice Bar': { type: 'Jääbaari', note: 'Auki tammi–huhti. Vodkashotit jäälaseista, seinät –5 °C:ssa.' },
+      'SnowCastle Ice Bar': { type: 'Jääbaari', note: 'Auki tammi–huhtikuun. Juomat jäälaseista, seinät –5 °C:ssa.' },
+      'Sampo Icebreaker': { type: 'Laivabaari', note: 'Risteilyt sesongissa; baari palvelee koko matkan.' },
       'Hotel Merihovi': { type: 'Hotellikokonaisuus', note: 'Aulabaari + urheiluterassi + ravintola.' },
-      'Sampo Icebreaker': { type: 'Laivabaari', note: 'Risteilyt 12:00 ja 18:00 sesongissa; baari pyörii koko matkan.' },
     },
     knowList: [
       'Suurin osa tapahtumista on LumiLinnassa tammikuusta huhtikuuhun.',
@@ -121,9 +151,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Suomen toiseksi suurin hiihtoalue.',
     pageTagline: 'Suomen toiseksi suurin hiihtoalue.',
+    intro: 'Ylläksellä on 63 rinnettä kahden kylän — Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä) — kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen toiseksi suurin.',
     venues: {
-      'Sport Resort Ylläs': { type: 'Hotellibaari', note: 'Äkäslompolon vilkkain après-baari.' },
+      'Sport Resort Ylläs': { type: 'After ski + baari', note: 'Äkäslompolon vilkkain after ski -paikka rinteiden juurella.' },
+      'Taiga Pub & Kitchen': { type: 'Pubi + keittiö', note: 'Äkäslompolon pubiravintola — hanat, pubiruokaa ja urheilua.' },
+      'Ravintola Otso': { type: 'Ravintola + baari', note: 'Kylän suosikki, salit sekä Äkäslompolossa että Ylläsjärvellä — myöhäinen illallinen ja juomat.' },
     },
+    knowList: [
+      'Äkäslompolo ja Ylläsjärvi ovat 20 minuutin ajomatkan päässä toisistaan — sovi taksi etukäteen.',
+      'Anniskelu päättyy noin 02:00 — aiemmin kuin Levillä.',
+      'Klubeja ei ole. Vain baareja.',
+      'Kansallispuisto kattaa 1 020 km² — hiljaisuus on se varsinainen vetonaula.',
+    ],
     quickFacts: {
       'Beds in resort': { label: 'Vuodepaikkoja keskuksessa', value: '23 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KTT · 50 min' },
@@ -135,9 +174,20 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Koillis-Suomi',
     blurb: 'Suomen toiseksi vilkkain hiihtokeskus laskijapäivissä mitattuna.',
     pageTagline: 'Karhumaan hiihtokeskus.',
+    intro: 'Ruka on virallisesti Kuusamoa eikä virallisesti Lappia, mutta laskettelijoita se ei haittaa — kyseessä on yksi Suomen vilkkaimmista keskuksista, ja marraskuun avausviikko on äänekkäin. Zone on rinteen juurella after skin keskipiste, ja Piste sekä Colorado Bar jatkavat siitä iltaan. Sesongin ulkopuolella kylä on hyvin hiljainen; marras–huhtikuussa mennään täysillä.',
     venues: {
-      'Zone Bar': { type: 'Après-ski', note: 'Rinteen juurella — FIS-maailmancupin avajaisbileiden kotipesä.' },
+      'Zone Bar': { type: 'After ski', note: 'Rinteen juurella — live-esiintyjiä ja FIS-avausviikon bileiden koti.' },
+      'Piste': { type: 'After ski + baari', note: 'Rinnekylän baari, joka jatkaa after skistä pitkälle iltaan.' },
+      'Colorado Bar': { type: 'Baari', note: 'Amerikkalaishenkinen baari hiihtokylässä — urheilua ja myöhäisiä juomia.' },
+      'Hanki Baari': { type: 'Baari', note: 'Yksinkertaisen hyvä: kahvia, kunnon olutvalikoima ja ruokaa.' },
+      'Hotel Rukahovi': { type: 'Hotellibaari', note: 'Kylän iso hotelli — livemusiikkia viikonloppuisin huippusesongissa.' },
     },
+    knowList: [
+      'Ruka avautuu FIS:n maastohiihdon maailmancupiin marraskuun lopulla — se viikko on huippu.',
+      'Anniskelu päättyy sesongissa 03:00, sesongin ulkopuolella aiemmin.',
+      'Lähin lentokenttä: Kuusamo (KAO), 30 minuutin päässä.',
+      'Ei virallisesti Lappia, mutta kaikki kohtelevat sitä sellaisena.',
+    ],
     quickFacts: {
       'Beds in resort': { label: 'Vuodepaikkoja keskuksessa', value: '15 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KAO · 30 min' },
@@ -172,8 +222,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Keski-Lappi',
     blurb: 'Sodankylän elokuvajuhlat — elokuvia näytetään klo 03:00 täydessä päivänvalossa.',
     pageTagline: 'Sodankylän elokuvajuhlat.',
+    intro: 'Sodankylä on 9 000 asukkaan kylä Kemijoen varrella — ja kerran vuodessa, kesäkuun puolivälissä, siitä tulee maailman surrealistisin elokuvafestivaali. Sodankylän elokuvajuhlat kestävät neljä päivää ja näytöksiä on kellon ympäri — kukaan ei nuku, koska aurinko ei laske. Festivaaliviikon ulkopuolella skene on hotellibaari ja pari paikallista pubia. Tule festivaaleille — tai tule hiljaisuuden takia.',
     venues: {
+      'Hotel Sodankylä Bar': { type: 'Hotellibaari', note: 'Hotellin baari keskustassa — auki 01:00 asti.' },
+      'Piitsi Pub': { type: 'Pubi', note: 'Terassi Kitisen rannalla; kesäisin vaihtuvia esiintyjiä.' },
+      'Olohuone Tähti': { type: 'Kahvila + pubi', note: 'Olohuonemainen kahvilabaari keskustassa — paikallisten kantapaikka.' },
     },
+    knowList: [
+      'Sodankylän elokuvajuhlat ovat kesäkuun puolivälissä — varaa majoitus puoli vuotta etukäteen.',
+      'Festivaaliviikon ulkopuolella baarielämä on hiljaista, lähinnä hotellia.',
+      '1600-luvun puukirkko on Suomen vanhimpia.',
+      'Anniskelu päättyy suurimman osan vuotta 01:00; festivaaliviikolla myöhemmin.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '8 600' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'RVN · 1 h 45' },
@@ -185,8 +245,16 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kittilän kunta',
     blurb: 'Missä paikalliset oikeasti asuvat (Levi on pääosin turisteja).',
     pageTagline: 'Missä Levin paikalliset oikeasti asuvat.',
+    intro: 'Kittilä on kuntakeskus — 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä. Baarielämä on pientä ja paikallista: hotellibaari ja pari kylän pubia, ei turistiohjelmaa. Useimmat ajavat suoraan ohi. Jos haluat rauhallisen suomalaisen pikkukaupunki-illan ilman Levin resort-hintoja, tämä on se paikka.',
     venues: {
+      'Hotel Kittilä Bar': { type: 'Hotellibaari', note: 'Kaupungin luottopaikka — hiljaisempi ja edullisempi kuin Levi.' },
     },
+    knowList: [
+      'Moni Levin työntekijä asuu Kittilän kirkonkylällä — illat täällä ovat paikallisia, eivät turistimaisia.',
+      'Anniskelu päättyy 02:00.',
+      'Lentokenttä (KTT) on 5 km keskustasta.',
+      'Hintataso on kylätasoa — selvästi Levin rinnebaareja edullisempi.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '6 500' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KTT · 5 min' },
@@ -221,9 +289,17 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Länsi-Lappi',
     blurb: 'Ei yöelämää. Pallas-Yllästunturin kansallispuisto on vetonaula.',
     pageTagline: 'Portti kansallispuistoon.',
+    intro: 'Muoniossa on 2 300 asukasta, ja se on yksi Pallas-Yllästunturin kansallispuiston (1 020 km², Suomen toiseksi suurin) porteista. Klubia ei ole, pubikierrosta ei ole, ja useimmat illat päättyvät aikaisin. Harriniva Wilderness Hotel pyörittää iltasauna + aulabaari -yhdistelmää safarivieraille, ja Hotel Jeris tekee saman Jerisjärven rannalla. Se on Muonion "skene", ihan rehellisesti.',
     venues: {
+      'Hotel Jeris': { type: 'Hotellibaari', note: 'Järvenrantahotelli Jerisjärvellä — ravintola ja baari illaksi.' },
       'Harriniva Wilderness Hotel': { type: 'Hotellibaari', note: 'Sauna + baari, pääosin safarivieraita.' },
     },
+    knowList: [
+      'Yöelämää ei ole — kansallispuisto on syy tulla.',
+      'Illat päättyvät arkisin aikaisin; lomasesongissa hieman myöhemmin.',
+      'Lähin lentokenttä: Kittilä (KTT), 80 km.',
+      'Revontulien katselu on täällä erinomaista juuri siksi, ettei valosaastetta ole.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '2 300' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KTT · 1 h 15' },
@@ -235,10 +311,18 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Itä-Lappi',
     blurb: 'Keskellä ei-mitään. Suomen hiljaisin hiihtokeskus.',
     pageTagline: 'Keskellä ei-mitään.',
+    intro: '3 300 asukasta ja yksi laskettelurinne. Kunnan tunnuslause on kirjaimellisesti "Erämaassa" (In the Middle of Nowhere) — ja se on tarkoitettu kehuksi. Hotel Revontulissa on ainoa myöhään auki oleva baari; rinteen puolella aukeaa sesongissa pubi tai pari. Talven ulkopuolella: hiljaisuutta. Pilke silmäkulmassa tehty "Salla 2032" -talvikisakampanja nosti kylän kartalle — mutta itse skene ei muuttunut. Älä tule klubien takia.',
     venues: {
+      'Koptapubi': { type: 'Rinnepubi', note: 'Kodikas pubi tunturin itäpuolella — sesongin pysähdyspaikka.' },
       'Hotel Revontuli Bar': { type: 'Hotellibaari', note: 'Ainoa myöhäisillan menopaikka. Ravintola + baari.' },
       'Salla Wilderness Park': { type: 'Päiväpaikka', note: 'Lounas + päiväkahvila puiston vierailijoille.' },
     },
+    knowList: [
+      'Lähin lentokenttä: Kuusamo (KAO), 90 km.',
+      'Venäjän raja on muutaman kilometrin päässä idässä — rajanylitys on kiinni; erämaa on se pointti.',
+      'Anniskelu päättyy sesongissa 01:00, muulloin aiemmin.',
+      '"Salla 2032" -talvikisahaku oli pilke silmäkulmassa tehty ilmastokampanja — sopii kylän huumoriin.',
+    ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '3 300' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'KAO · 1 h 30' },
