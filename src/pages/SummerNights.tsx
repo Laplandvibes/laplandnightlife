@@ -289,7 +289,11 @@ export default function SummerNights() {
               {c.gygBody}
             </p>
           </div>
-          <GygWidget query="Lapland midnight sun summer activities" campaign="summer_pillar" count={6} />
+          {/* Query must title-match GYG tours ("Midnight Sun ...") with a city
+              anchor. Generic words (Lapland/summer/activities) dilute the match
+              and GYG falls back to destination bestsellers = winter tours
+              (Vesa 2026-07-07; same failure class as the Ivalo city-page fix). */}
+          <GygWidget query="midnight sun Rovaniemi" campaign="summer_pillar" count={6} />
         </div>
       </section>
 
