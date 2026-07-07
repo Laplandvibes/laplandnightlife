@@ -7,6 +7,7 @@ import CityCard from '../components/CityCard';
 import GygWidget from '../components/GygWidget';
 import AiraloAd from '../components/AiraloAd';
 import Newsletter from '../components/Newsletter';
+import FAQ from '../components/FAQ';
 import PageSeo from '../components/PageSeo';
 import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
@@ -42,6 +43,8 @@ export default function Home() {
         { '@type': 'Question', name: c.faq1Q, acceptedAnswer: { '@type': 'Answer', text: c.faq1A } },
         { '@type': 'Question', name: c.faq2Q, acceptedAnswer: { '@type': 'Answer', text: c.faq2A } },
         { '@type': 'Question', name: c.faq3Q, acceptedAnswer: { '@type': 'Answer', text: c.faq3A } },
+        { '@type': 'Question', name: c.faq4Q, acceptedAnswer: { '@type': 'Answer', text: c.faq4A } },
+        { '@type': 'Question', name: c.faq5Q, acceptedAnswer: { '@type': 'Answer', text: c.faq5A } },
       ],
     },
   ];
@@ -196,6 +199,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FAQ />
 
       <Newsletter />
     </>
