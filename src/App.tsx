@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useEffect, useReducer, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import SharedFooter from './shared/Footer';
 import SharedCookieBanner from './shared/CookieBanner';
@@ -19,8 +19,28 @@ const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 import { trackPageView } from './lib/analytics';
 import { useHtmlLang, useLocalePath, useLang } from './i18n/useLang';
-import { COPY } from './locales/copy';
+import { COPY, loadCopy, isCopyLoaded } from './locales/copy';
+import { isCityOverlayLoaded, loadCityOverlays } from './data/cityI18n';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
+
+/**
+ * Non-EN copy + city overlays live in per-language lazy chunks (see
+ * locales/copy.ts + data/cityI18n.ts). Gate the UI until both chunks for
+ * the active language are registered, so every consumer keeps reading
+ * synchronously. EN is bundled eagerly — English visitors never wait.
+ */
+function CopyGate({ children }: { children: React.ReactNode }) {
+  const lang = useLang();
+  const [, bump] = useReducer((x: number) => x + 1, 0);
+  const ready = isCopyLoaded(lang) && isCityOverlayLoaded(lang);
+  useEffect(() => {
+    let alive = true;
+    if (!ready) Promise.all([loadCopy(lang), loadCityOverlays(lang)]).then(() => { if (alive) bump(); });
+    return () => { alive = false; };
+  }, [lang, ready]);
+  if (!ready) return <div className="min-h-screen bg-night" />;
+  return <>{children}</>;
+}
 
 function LocaleSync() {
   const lang = useHtmlLang();
@@ -65,6 +85,7 @@ function AppLayout() {
       <ScrollToTop />
       <LocaleAutoRedirect />
       <LocaleSync />
+      <CopyGate>
       <Navbar />
       <main>
         <Suspense fallback={<div className="min-h-screen" />}>
@@ -102,6 +123,7 @@ function AppLayout() {
         </Suspense>
       </main>
       <FooterWithLocale />
+      </CopyGate>
       <SharedCookieBanner consentKey="laplandnightlife_cookie_consent" lang={lang} />
       <NewsletterPopup />
     </div>

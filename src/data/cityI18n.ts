@@ -25,16 +25,26 @@ export interface CityOverlay {
 
 type OverlayMap = Record<string, CityOverlay>; // slug -> overlay
 
-// Eagerly import every cities.<lang>.ts overlay present (glob excludes cities.ts).
-const modules = import.meta.glob<{ default: OverlayMap }>('./cities.*.ts', { eager: true });
+// Lazy glob: each cities.<lang>.ts overlay is its own chunk, fetched by the
+// App-level CopyGate alongside the copy chunk. Was `eager: true`, which
+// bundled all 10 overlay languages into the main bundle.
+const modules = import.meta.glob<{ default: OverlayMap }>('./cities.*.ts');
 
 const OVERLAYS: Partial<Record<Lang, OverlayMap>> = {};
-for (const path in modules) {
-  const m = path.match(/cities\.([a-zA-Z-]+)\.ts$/);
-  if (!m) continue;
-  const lang = m[1] as Lang;
-  const mod = modules[path];
-  if (mod && mod.default) OVERLAYS[lang] = mod.default;
+const loaded = new Set<string>(['en']);
+
+export function isCityOverlayLoaded(lang: Lang): boolean {
+  return loaded.has(lang);
+}
+
+export function loadCityOverlays(lang: Lang): Promise<void> {
+  if (!lang || loaded.has(lang)) return Promise.resolve();
+  const entry = Object.keys(modules).find((p) => p.endsWith(`cities.${lang}.ts`));
+  if (!entry) { loaded.add(lang); return Promise.resolve(); }
+  return modules[entry]().then((mod) => {
+    if (mod && mod.default) OVERLAYS[lang] = mod.default;
+    loaded.add(lang);
+  });
 }
 
 /** Return a city with its translatable fields replaced by the locale overlay
