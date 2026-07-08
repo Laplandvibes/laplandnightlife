@@ -69,10 +69,10 @@ export default function Home() {
   ];
 
   const scenes = [
-    { tag: c.scenes.c1Tag, h: c.scenes.c1H, body: c.scenes.c1Body, desc: c.scenes.c1Desc, tint: 'from-pink/20 to-night-light', to: to('/city/oulu') },
-    { tag: c.scenes.c2Tag, h: c.scenes.c2H, body: c.scenes.c2Body, desc: c.scenes.c2Desc, tint: 'from-aurora-blue/20 to-night-light', to: to('/city/levi') },
-    { tag: c.scenes.c3Tag, h: c.scenes.c3H, body: c.scenes.c3Body, desc: c.scenes.c3Desc, tint: 'from-purple/25 to-night-light', to: to('/aurora-bars') },
-    { tag: c.scenes.c4Tag, h: c.scenes.c4H, body: c.scenes.c4Body, desc: c.scenes.c4Desc, tint: 'from-neon-yellow/15 to-night-light', to: to('/city/sodankyla') },
+    { tag: c.scenes.c1Tag, h: c.scenes.c1H, body: c.scenes.c1Body, desc: c.scenes.c1Desc, img: IMG.pubScene, accent: '#EC4899', to: to('/city/oulu') },
+    { tag: c.scenes.c2Tag, h: c.scenes.c2H, body: c.scenes.c2Body, desc: c.scenes.c2Desc, img: IMG.pillarNightclubs, accent: '#38BDF8', to: to('/city/levi') },
+    { tag: c.scenes.c3Tag, h: c.scenes.c3H, body: c.scenes.c3Body, desc: c.scenes.c3Desc, img: IMG.pillarAuroraBars, accent: '#A78BFA', to: to('/aurora-bars') },
+    { tag: c.scenes.c4Tag, h: c.scenes.c4H, body: c.scenes.c4Body, desc: c.scenes.c4Desc, img: IMG.pillarSummer, accent: '#FACC15', to: to('/city/sodankyla') },
   ];
 
   return (
@@ -109,14 +109,25 @@ export default function Home() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {scenes.map((sc) => (
-              <Link key={sc.h} to={sc.to} className={`group bg-gradient-to-br ${sc.tint} border border-white/15 rounded-2xl p-5 text-left hover:border-pink/40 hover:-translate-y-1 transition-all`}>
-                <p className="text-[0.7rem] uppercase tracking-[0.18em] text-pink font-bold mb-2">{sc.tag}</p>
-                <h3 className="font-heading text-2xl text-white tracking-tight mb-1">{sc.h}</h3>
-                <p className="text-sm text-white mb-1 font-semibold">{sc.body}</p>
-                <p className="text-sm text-white/85 mb-3">{sc.desc}</p>
-                <span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold inline-flex items-center gap-1">
-                  {c.scenes.go} <ArrowRight size={12} />
-                </span>
+              <Link
+                key={sc.h}
+                to={sc.to}
+                className="group relative flex flex-col min-h-[260px] overflow-hidden rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(236,72,153,0.35)] text-left"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                  style={{ backgroundImage: `url(${sc.img})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-8% via-night/85 via-[58%] to-night/25 pointer-events-none" />
+                <div className="relative mt-auto p-5">
+                  <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>{sc.tag}</p>
+                  <h3 className="font-heading text-2xl text-white tracking-tight mb-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
+                  <p className="text-sm text-white font-semibold mb-0.5" style={OVERLAY_SHADOW}>{sc.body}</p>
+                  <p className="text-xs text-white/75 mb-3 leading-snug" style={OVERLAY_SHADOW}>{sc.desc}</p>
+                  <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
+                    {c.scenes.go} <ArrowRight size={12} />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
