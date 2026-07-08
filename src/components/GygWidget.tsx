@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { useLang } from '../i18n/useLang';
 import AffiliateCTA from './AffiliateCTA';
@@ -11,10 +11,6 @@ const GYG_LOCALE: Record<string, string> = {
   'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL',
 };
 
-// Ad-block fallback: uBlock/Brave/ETP block widget.getyourguide.com (the
-// embedded iframe), but a top-level link to getyourguide.com is never blocked.
-// Always rendered under the widget — for blocked viewers it's the only booking
-// path, for everyone else it's a "see more" CTA. Same pattern as wellness.
 const SEE_ALL: Record<string, string> = {
   en: 'See all experiences on GetYourGuide',
   fi: 'Katso kaikki elämykset GetYourGuidessa',
@@ -29,6 +25,24 @@ const SEE_ALL: Record<string, string> = {
   nl: 'Bekijk alle ervaringen op GetYourGuide',
 };
 
+// Shown only when the embed is blocked (ad-block / tracking-protection) — turns
+// what was a bare empty box + link into an enticing image panel with a CTA.
+const FALLBACK_LEAD: Record<string, string> = {
+  en: 'Live prices and instant confirmation — open the bookable tours on GetYourGuide.',
+  fi: 'Live-hinnat ja välitön vahvistus — avaa varattavat retket GetYourGuidessa.',
+  de: 'Live-Preise und sofortige Bestätigung — buchbare Touren auf GetYourGuide öffnen.',
+  ja: 'リアルタイムの料金と即時確認 — 予約可能なツアーを GetYourGuide で開く。',
+  es: 'Precios en tiempo real y confirmación inmediata: abre las excursiones reservables en GetYourGuide.',
+  'pt-BR': 'Preços em tempo real e confirmação imediata — abra os passeios reserváveis no GetYourGuide.',
+  'zh-CN': '实时价格、即时确认——在 GetYourGuide 打开可预订的行程。',
+  ko: '실시간 가격과 즉시 확정 — GetYourGuide에서 예약 가능한 투어를 확인하세요.',
+  fr: 'Prix en temps réel et confirmation immédiate — ouvrez les excursions réservables sur GetYourGuide.',
+  it: 'Prezzi in tempo reale e conferma immediata: apri le escursioni prenotabili su GetYourGuide.',
+  nl: 'Actuele prijzen en directe bevestiging — open de boekbare tours op GetYourGuide.',
+};
+
+const SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
+
 interface GygWidgetProps {
   /** GYG search query (e.g. "Rovaniemi nightlife", "Lapland aurora", "Levi tours"). */
   query: string;
@@ -38,28 +52,48 @@ interface GygWidgetProps {
   campaign?: string;
   /** Currency code shown on prices (default EUR). */
   currency?: string;
+  /** Background image for the ad-block fallback panel (on-theme per placement). */
+  fallbackImage?: string;
 }
 
 /**
  * GetYourGuide activities widget. Picked up by the Integration Analyzer
  * script in `index.html` (data-gyg-partner-id="VRMKD7N").
  *
- * Full-info mode: prices, ratings, durations all rendered. The previous
- * `data-gyg-partial-view` mode hid prices, which kills perceived value.
+ * Ad-block resilience: uBlock/Brave/ETP block widget.getyourguide.com, which
+ * left the section as an empty bordered box with a bare link. If no iframe has
+ * mounted shortly after render we treat the embed as blocked and swap in a
+ * designed image panel + booking CTA instead (Vesa 2026-07-08).
  */
-export default function GygWidget({ query, count = 6, campaign = 'laplandnightlife', currency = 'EUR' }: GygWidgetProps) {
+export default function GygWidget({
+  query,
+  count = 6,
+  campaign = 'laplandnightlife',
+  currency = 'EUR',
+  fallbackImage = '/images/drive/pillarAuroraBars.webp',
+}: GygWidgetProps) {
   const ref = useRef<HTMLDivElement>(null);
   const lang = useLang();
+  const [blocked, setBlocked] = useState(false);
 
   useEffect(() => {
     const w = window as unknown as { GYG?: { trigger?: () => void } };
     if (typeof w.GYG?.trigger === 'function') w.GYG.trigger();
+    // If the SDK hasn't injected an iframe by now, the embed is blocked.
+    const t = setTimeout(() => {
+      const el = ref.current;
+      const loaded = !!el && el.querySelector('iframe') !== null;
+      setBlocked(!loaded);
+    }, 2500);
+    return () => clearTimeout(t);
   }, [query, lang]);
 
   return (
-    <div className="bg-night-light/40 border border-white/10 rounded-2xl p-4 sm:p-6">
+    <div className={blocked ? '' : 'bg-night-light/40 border border-white/10 rounded-2xl p-4 sm:p-6'}>
+      {/* Embed target — kept mounted (just hidden when blocked) so the SDK can populate it. */}
       <div
         ref={ref}
+        className={blocked ? 'hidden' : ''}
         key={`gyg-${lang}-${query}`}
         data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
         data-gyg-locale-code={GYG_LOCALE[lang] ?? 'en-US'}
@@ -72,17 +106,39 @@ export default function GygWidget({ query, count = 6, campaign = 'laplandnightli
       >
         <span className="sr-only">Powered by GetYourGuide</span>
       </div>
-      <div className="mt-4 text-center">
-        <AffiliateCTA
-          partner="activities"
-          sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_see_all`}
-          destination="s"
-          query={{ q: query }}
-          className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] font-bold text-white/70 hover:text-pink transition-colors"
-        >
-          {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={12} />
-        </AffiliateCTA>
-      </div>
+
+      {blocked ? (
+        <div className="relative flex items-end overflow-hidden rounded-2xl border border-white/10 min-h-[240px]">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${fallbackImage})` }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-night from-5% via-night/80 via-[55%] to-night/30 pointer-events-none" />
+          <div className="relative w-full p-6 sm:p-8">
+            <p className="text-sm text-white/90 leading-relaxed max-w-md mb-5" style={SHADOW}>
+              {FALLBACK_LEAD[lang] ?? FALLBACK_LEAD.en}
+            </p>
+            <AffiliateCTA
+              partner="activities"
+              sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_fallback`}
+              destination="s"
+              query={{ q: query }}
+              className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-colors"
+            >
+              {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={14} />
+            </AffiliateCTA>
+          </div>
+        </div>
+      ) : (
+        <div className="mt-4 text-center">
+          <AffiliateCTA
+            partner="activities"
+            sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_see_all`}
+            destination="s"
+            query={{ q: query }}
+            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] font-bold text-white/70 hover:text-pink transition-colors"
+          >
+            {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={12} />
+          </AffiliateCTA>
+        </div>
+      )}
     </div>
   );
 }
