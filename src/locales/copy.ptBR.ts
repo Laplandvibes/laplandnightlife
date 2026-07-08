@@ -63,7 +63,7 @@ const ptBR = {
     events: {
       eyebrow: 'Calendário 2026',
       h: 'As noites que importam',
-      e1Name: 'Kemi SnowCastle 2026', e1When: 'Jan – abr', e1Desc: 'Bar com paredes de gelo, capela de neve, vodca em copos de gelo. Reconstruído todo inverno desde 1996.',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Meados jan – abr', e1Desc: 'Bar de gelo, uma SnowChapel de neve e um SnowHotel, reconstruídos com um novo design todo inverno desde 1996. Vodca em copos de gelo — e o SnowExperience365, aberto o ano todo, cobre a baixa temporada.',
       e2Name: 'Festival de cinema do sol da meia-noite', e2When: '10–14 jun de 2026', e2Desc: 'Sodankylä, mais de 80 filmes; a sessão das 03:00 na igreja de madeira é a foto.',
       e3Name: 'Festival Qstock 2026', e3When: '24–26 jul de 2026', e3Desc: 'O maior festival de rock de Oulu. 60.000 visitantes ao longo do fim de semana.',
       full: 'Calendário completo 2026 →',

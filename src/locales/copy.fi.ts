@@ -61,7 +61,7 @@ const fi = {
       events: {
         eyebrow: 'Kalenteri 2026',
         h: 'Illat, joilla on merkitystä',
-        e1Name: 'Kemi LumiLinna 2026', e1When: 'Tammi – huhti', e1Desc: 'Jääseinäinen baari, lumesta rakennettu kappeli, vodkaa jäälaseissa. Rakennetaan uudelleen joka talvi vuodesta 1996.',
+        e1Name: 'Kemin SnowCastle Winter Park', e1When: 'Tammi puoliväli–huhti', e1Desc: 'Jääbaari, lumesta rakennettu SnowChapel-kappeli ja SnowHotel, jotka rakennetaan uuteen ilmeeseen joka talvi vuodesta 1996. Vodkaa jäälaseissa — ja ympärivuotinen SnowExperience365 kattaa sesongin ulkopuolen.',
         e2Name: 'Keskiyön auringon filmifestivaali', e2When: '10.–14.6.2026', e2Desc: 'Sodankylä, 80+ elokuvaa, 03:00-näytös puukirkossa on legendaarinen.',
         e3Name: 'Qstock-festivaali 2026', e3When: '24.–26.7.2026', e3Desc: 'Oulun suurin rockfestivaali. 60 000 kävijää viikonlopun aikana.',
         full: 'Koko 2026-kalenteri →',

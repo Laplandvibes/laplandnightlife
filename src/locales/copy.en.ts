@@ -60,7 +60,7 @@ const en = {
       events: {
         eyebrow: '2026 Calendar',
         h: 'The Nights That Matter',
-        e1Name: 'Kemi SnowCastle 2026', e1When: 'Jan – Apr', e1Desc: 'Ice-walled bar, snow-built chapel, vodka in ice glasses. Rebuilt every winter since 1996.',
+        e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Mid-Jan – Apr', e1Desc: 'Ice bar, a snow-built SnowChapel and a SnowHotel, rebuilt to a new design every winter since 1996. Vodka in ice glasses — and the year-round SnowExperience365 covers the off-season.',
         e2Name: 'Midnight Sun Film Festival', e2When: 'Jun 10–14, 2026', e2Desc: 'Sodankylä, 80+ films, the 03:00 screening at the wooden church is the photo.',
         e3Name: 'Qstock Festival 2026', e3When: 'Jul 24–26, 2026', e3Desc: "Oulu's biggest rock festival. 60 000 visitors over the weekend.",
         full: 'Full 2026 calendar →',

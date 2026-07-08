@@ -11,8 +11,12 @@ import FAQ from '../components/FAQ';
 import PageSeo from '../components/PageSeo';
 import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
+import { IMG } from '../data/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+
+// Text-shadow for copy that sits over a photo (same recipe as PrimeTime).
+const OVERLAY_SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
 
 // Localized lead for the "before you go" connectivity strip that frames the
 // Airalo ad. Kept inline (not in copy.ts) so the ad placement is self-contained.
@@ -52,9 +56,9 @@ export default function Home() {
   const homeCities = CITIES.slice(0, 8).map((c) => localizeCity(c, lang));
 
   const events = [
-    { name: c.events.e1Name, when: c.events.e1When, desc: c.events.e1Desc },
-    { name: c.events.e2Name, when: c.events.e2When, desc: c.events.e2Desc },
-    { name: c.events.e3Name, when: c.events.e3When, desc: c.events.e3Desc },
+    { name: c.events.e1Name, when: c.events.e1When, desc: c.events.e1Desc, img: IMG.iceCastle },
+    { name: c.events.e2Name, when: c.events.e2When, desc: c.events.e2Desc, img: IMG.primeFilm },
+    { name: c.events.e3Name, when: c.events.e3When, desc: c.events.e3Desc, img: IMG.pillarEvents },
   ];
 
   const tips = [
@@ -161,11 +165,27 @@ export default function Home() {
               <Link
                 key={e.name}
                 to={to('/events')}
-                className="group bg-night-light/60 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all"
+                className="group relative flex flex-col min-h-[320px] overflow-hidden rounded-2xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)]"
               >
-                <p className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mb-2">{e.when}</p>
-                <h3 className="font-heading text-xl text-white tracking-tight mb-2 group-hover:text-pink transition-colors">{e.name}</h3>
-                <p className="text-sm text-white/85 leading-relaxed">{e.desc}</p>
+                <div
+                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                  style={{ backgroundImage: `url(${e.img})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-5% via-night/80 via-[60%] to-night/20 pointer-events-none" />
+                {/* Date as a top pill (own dark backing) so it stays legible on any
+                    image regardless of how tall the body copy below runs. */}
+                <div className="relative p-5">
+                  <span
+                    className="inline-block text-[0.6rem] uppercase tracking-[0.2em] font-bold text-white bg-black/45 backdrop-blur-md border border-white/25 rounded-full px-2.5 py-1"
+                    style={OVERLAY_SHADOW}
+                  >
+                    {e.when}
+                  </span>
+                </div>
+                <div className="relative mt-auto p-6 pt-0">
+                  <h3 className="font-heading text-2xl text-white tracking-tight mb-2 group-hover:text-pink transition-colors" style={OVERLAY_SHADOW}>{e.name}</h3>
+                  <p className="text-sm text-white/90 leading-relaxed line-clamp-4" style={OVERLAY_SHADOW}>{e.desc}</p>
+                </div>
               </Link>
             ))}
           </div>
@@ -183,12 +203,16 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.tips.eyebrow}</p>
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight">{c.tips.h}</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 gap-3">
             {tips.map((t) => (
-              <Link key={t.h} to={t.to} className="group flex flex-col bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/40 hover:-translate-y-0.5 transition-all">
-                <t.icon size={22} className="text-pink mb-3" />
-                <h3 className="font-heading text-lg text-white tracking-tight mb-2">{t.h}</h3>
-                <p className="text-sm text-white/85 leading-relaxed">{t.body}</p>
+              <Link key={t.h} to={t.to} className="group flex items-start gap-3.5 bg-night-light/40 border border-white/10 rounded-xl p-4 hover:border-pink/40 transition-all">
+                <span className="shrink-0 grid place-items-center w-9 h-9 rounded-lg bg-pink/10 text-pink">
+                  <t.icon size={18} />
+                </span>
+                <div className="min-w-0">
+                  <h3 className="font-heading text-base text-white tracking-tight mb-0.5 group-hover:text-pink transition-colors">{t.h}</h3>
+                  <p className="text-[0.8rem] text-white/80 leading-snug">{t.body}</p>
+                </div>
               </Link>
             ))}
           </div>

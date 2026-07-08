@@ -63,7 +63,7 @@ const ja = {
     events: {
       eyebrow: '2026年カレンダー',
       h: '見逃せない夜',
-      e1Name: 'Kemi SnowCastle 2026', e1When: '1月〜4月', e1Desc: '氷の壁のバー、雪で建てた礼拝堂、氷のグラスでウォッカ。1996年から毎冬再建されています。',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: '1月中旬〜4月', e1Desc: '氷のバー、雪で建てたSnowChapel、SnowHotel。1996年以来、毎冬新しいデザインで再建されます。氷のグラスでウォッカを。通年営業のSnowExperience365がオフシーズンをカバーします。',
       e2Name: '真夏の太陽映画祭', e2When: '2026年6月10〜14日', e2Desc: 'ソダンキュラ、80本以上の映画、木造教会での午前3時の上映は写真の名所です。',
       e3Name: 'Qstockフェスティバル2026', e3When: '2026年7月24〜26日', e3Desc: 'オウル最大のロックフェス。週末で60,000人が訪れます。',
       full: '2026年カレンダー全体を見る →',

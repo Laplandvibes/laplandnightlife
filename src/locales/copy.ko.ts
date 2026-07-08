@@ -67,7 +67,7 @@ const ko = {
       ...en.home.events,
       eyebrow: '2026 캘린더',
       h: '의미 있는 밤들',
-      e1Name: 'Kemi SnowCastle 2026', e1When: '1월 – 4월', e1Desc: '얼음 벽 바, 눈으로 지은 예배당, 얼음잔에 담긴 보드카. 1996년 이래 매 겨울 새로 짓습니다.',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: '1월 중순 – 4월', e1Desc: '얼음 바, 눈으로 지은 SnowChapel, SnowHotel. 1996년 이래 매 겨울 새로운 디자인으로 짓습니다. 얼음잔에 담긴 보드카, 그리고 연중 운영되는 SnowExperience365가 비수기를 채웁니다.',
       e2Name: '백야 영화제', e2When: '2026년 6월 10–14일', e2Desc: '소단퀼레, 80편 이상 상영, 목조 교회에서의 03:00 상영이 바로 그 사진입니다.',
       e3Name: 'Qstock 페스티벌 2026', e3When: '2026년 7월 24–26일', e3Desc: '오울루 최대 록 페스티벌. 주말 동안 6만 명이 찾습니다.',
       full: '2026 전체 캘린더 →',

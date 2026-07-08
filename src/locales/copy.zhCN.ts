@@ -63,7 +63,7 @@ const zhCN = {
     events: {
       eyebrow: '2026 年日历',
       h: '不容错过的夜晚',
-      e1Name: 'Kemi SnowCastle 2026', e1When: '1–4 月', e1Desc: '冰墙酒吧、雪砌礼拜堂、冰杯伏特加。自 1996 年起每年冬天重建。',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: '1月中旬–4月', e1Desc: '冰吧、雪砌的 SnowChapel 礼拜堂与 SnowHotel，自 1996 年起每年冬天以全新设计重建。冰杯伏特加；全年开放的 SnowExperience365 覆盖淡季。',
       e2Name: '午夜阳光电影节', e2When: '2026 年 6 月 10–14 日', e2Desc: '索丹屈莱，80 多部电影,木教堂凌晨 3 点的放映是经典镜头。',
       e3Name: 'Qstock 音乐节 2026', e3When: '2026 年 7 月 24–26 日', e3Desc: '奥卢规模最大的摇滚音乐节。周末共吸引 60,000 名访客。',
       full: '完整 2026 年日历 →',

@@ -67,7 +67,7 @@ const nl = {
       ...en.home.events,
       eyebrow: 'Kalender 2026',
       h: 'De nachten die ertoe doen',
-      e1Name: 'Kemi SnowCastle 2026', e1When: 'Jan – Apr', e1Desc: 'Bar met ijswanden, kapel van sneeuw, wodka in ijsglazen. Elke winter opnieuw gebouwd sinds 1996.',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Half jan – apr', e1Desc: 'IJsbar, een van sneeuw gebouwde SnowChapel en een SnowHotel, elke winter sinds 1996 in een nieuw ontwerp opgebouwd. Wodka in ijsglazen — en het jaarronde SnowExperience365 overbrugt het laagseizoen.',
       e2Name: 'Midnight Sun Film Festival', e2When: '10–14 jun 2026', e2Desc: 'Sodankylä, 80+ films; de vertoning om 03:00 in de houten kerk is dé foto.',
       e3Name: 'Qstock Festival 2026', e3When: '24–26 jul 2026', e3Desc: 'Het grootste rockfestival van Oulu. 60.000 bezoekers in het weekend.',
       full: 'Volledige kalender 2026 →',

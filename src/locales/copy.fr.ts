@@ -67,7 +67,7 @@ const fr = {
       ...en.home.events,
       eyebrow: 'Calendrier 2026',
       h: 'Les nuits qui comptent',
-      e1Name: 'Kemi SnowCastle 2026', e1When: 'Janv. – Avr.', e1Desc: 'Bar aux murs de glace, chapelle bâtie en neige, vodka en verres de glace. Reconstruit chaque hiver depuis 1996.',
+      e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Mi-janv. – avr.', e1Desc: 'Bar de glace, une SnowChapel bâtie en neige et un SnowHotel, reconstruits chaque hiver dans un nouveau design depuis 1996. Vodka en verres de glace — et le SnowExperience365, ouvert toute l\'année, couvre la basse saison.',
       e2Name: 'Festival du film sous le soleil de minuit', e2When: '10–14 juin 2026', e2Desc: 'Sodankylä, 80+ films ; la séance de 3 h à l\'église en bois, c\'est la photo.',
       e3Name: 'Festival Qstock 2026', e3When: '24–26 juil. 2026', e3Desc: 'Le plus grand festival rock d\'Oulu. 60 000 visiteurs sur le week-end.',
       full: 'Calendrier 2026 complet →',
