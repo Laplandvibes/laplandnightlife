@@ -99,7 +99,7 @@ const nl = {
     heroEyebrow: '50+ geverifieerde zalen',
     heroTitle: 'Nachtclubs & live muziek',
     heroSub: 'Van 1 700 plaatsen tot 250 en de rij voor de deur.',
-    heroIntro: 'Laplandse nachtclubs vallen in vier categorieën. Welke welke is, is het verschil tussen een vrijdag in Levi en een vrijdag in Salla.',
+    heroIntro: 'Laplandse nachtclubs vallen in vier categorieën. Welke club bij welke categorie hoort, maakt het verschil tussen een vrijdag in Levi en een vrijdag in Salla.',
     tier1H: 'De megaclub', tier1Where: 'Levi', tier1Body: 'Hullu Poro Areena. 1 700 plaatsen, 10 bars, 2 verdiepingen. De grootste nachtclub van Lapland, zonder discussie. Concertzaal wo–za in het skiseizoen.',
     tier2H: 'De echte-scene clubs', tier2Where: 'Oulu · Rovaniemi', tier2Body: 'Roy Club, Half Moon, 45 Special, Never Grow Old, St Michael. Jaarrond programma, tourende dj\'s, rijen om middernacht. De Rotuaari-strook in Oulu telt 8 zalen binnen 400 meter.',
     tier3H: 'De noordelijkste club', tier3Where: 'Ivalo', tier3Body: 'Club Nord in Hotel Ivalo. Open op vrijdag en zaterdag. De noordelijkste vastelandsclub van Finland, een logistieke curiositeit, een zaterdag waard.',

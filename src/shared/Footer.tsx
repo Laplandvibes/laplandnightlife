@@ -101,6 +101,7 @@ export interface FooterDict {
     tours?: string;
     weddings?: string;
     store?: string;
+    flights?: string;
   };
 }
 
@@ -125,7 +126,7 @@ const DEFAULT_DICT: Required<FooterDict> & {
   travelGuideKicker: 'Lapland Travel Guide',
   about: {
     eyebrow: 'About LaplandVibes',
-    body: 'The definitive guide to Finnish Lapland, from the revontulet to the midnight sun. Curated experiences, insider tips, and everything you need to plan your Arctic adventure.',
+    body: 'The definitive guide to Finnish Lapland, from the revontulet to the midnight sun. Curated experiences, insider tips, and cited sources for planning your Arctic trip.',
     badge: 'Independently maintained · sources cited',
   },
   spottedError: {
@@ -180,6 +181,7 @@ const DEFAULT_DICT: Required<FooterDict> & {
     tours: 'Guided tours & day trips',
     weddings: 'Arctic weddings & elopements',
     store: 'Official Lapland store',
+    flights: 'Flights to Lapland',
   },
 };
 
@@ -211,19 +213,19 @@ const BUILT_IN_SITE_LABELS: Record<string, Record<SiteLabelsKey, string>> = {
 
 // ─── 4 ecosystem sites added to the footer grid (kept in a separate map so the
 // typed BUILT_IN_SITE_LABELS above stays valid without touching all 11 lines) ──
-type ExtLabelsKey = 'luxuryVillas' | 'tours' | 'weddings' | 'store';
+type ExtLabelsKey = 'luxuryVillas' | 'tours' | 'weddings' | 'store' | 'flights';
 const EXT_SITE_LABELS: Record<string, Record<ExtLabelsKey, string>> = {
-  en: { luxuryVillas:'Private villas & luxury lodges', tours:'Guided tours & day trips', weddings:'Arctic weddings & elopements', store:'Official Lapland store' },
-  fi: { luxuryVillas:'Yksityishuvilat & luksusmajat', tours:'Opastetut retket & päiväretket', weddings:'Arktiset häät & vihkimiset', store:'Virallinen Lappi-kauppa' },
-  de: { luxuryVillas:'Private Villen & Luxus-Lodges', tours:'Geführte Touren & Tagesausflüge', weddings:'Arktische Hochzeiten', store:'Offizieller Lappland-Shop' },
-  ja: { luxuryVillas:'プライベートヴィラ・高級ロッジ', tours:'ガイドツアー・日帰り旅行', weddings:'北極ウエディング', store:'公式ラップランドストア' },
-  es: { luxuryVillas:'Villas privadas y lodges de lujo', tours:'Tours guiados y excursiones', weddings:'Bodas árticas', store:'Tienda oficial de Laponia' },
-  'pt-BR': { luxuryVillas:'Vilas privativas e lodges de luxo', tours:'Tours guiados e bate-voltas', weddings:'Casamentos no Ártico', store:'Loja oficial da Lapônia' },
-  'zh-CN': { luxuryVillas:'私人别墅与豪华小屋', tours:'导览游与一日游', weddings:'北极婚礼', store:'拉普兰官方商店' },
-  ko: { luxuryVillas:'프라이빗 빌라 & 럭셔리 로지', tours:'가이드 투어 & 당일 여행', weddings:'북극 웨딩', store:'공식 라플란드 스토어' },
-  fr: { luxuryVillas:'Villas privées & lodges de luxe', tours:'Visites guidées & excursions', weddings:'Mariages arctiques', store:'Boutique officielle Laponie' },
-  it: { luxuryVillas:'Ville private e lodge di lusso', tours:'Tour guidati ed escursioni', weddings:'Matrimoni artici', store:'Negozio ufficiale Lapponia' },
-  nl: { luxuryVillas:"Privévilla's & luxe lodges", tours:'Begeleide tours & dagtrips', weddings:'Arctische bruiloften', store:'Officiële Lapland-winkel' },
+  en: { luxuryVillas:'Private villas & luxury lodges', tours:'Guided tours & day trips', weddings:'Arctic weddings & elopements', store:'Official Lapland store', flights:'Flights to Lapland' },
+  fi: { luxuryVillas:'Yksityishuvilat & luksusmajat', tours:'Opastetut retket & päiväretket', weddings:'Arktiset häät & vihkimiset', store:'Virallinen Lappi-kauppa', flights:'Lennot Lappiin' },
+  de: { luxuryVillas:'Private Villen & Luxus-Lodges', tours:'Geführte Touren & Tagesausflüge', weddings:'Arktische Hochzeiten', store:'Offizieller Lappland-Shop', flights:'Flüge nach Lappland' },
+  ja: { luxuryVillas:'プライベートヴィラ・高級ロッジ', tours:'ガイドツアー・日帰り旅行', weddings:'北極ウエディング', store:'公式ラップランドストア', flights:'ラップランドへの航空券' },
+  es: { luxuryVillas:'Villas privadas y lodges de lujo', tours:'Tours guiados y excursiones', weddings:'Bodas árticas', store:'Tienda oficial de Laponia', flights:'Vuelos a Laponia' },
+  'pt-BR': { luxuryVillas:'Vilas privativas e lodges de luxo', tours:'Tours guiados e bate-voltas', weddings:'Casamentos no Ártico', store:'Loja oficial da Lapônia', flights:'Voos para a Lapônia' },
+  'zh-CN': { luxuryVillas:'私人别墅与豪华小屋', tours:'导览游与一日游', weddings:'北极婚礼', store:'拉普兰官方商店', flights:'飞往拉普兰的航班' },
+  ko: { luxuryVillas:'프라이빗 빌라 & 럭셔리 로지', tours:'가이드 투어 & 당일 여행', weddings:'북극 웨딩', store:'공식 라플란드 스토어', flights:'라플란드행 항공편' },
+  fr: { luxuryVillas:'Villas privées & lodges de luxe', tours:'Visites guidées & excursions', weddings:'Mariages arctiques', store:'Boutique officielle Laponie', flights:'Vols vers la Laponie' },
+  it: { luxuryVillas:'Ville private e lodge di lusso', tours:'Tour guidati ed escursioni', weddings:'Matrimoni artici', store:'Negozio ufficiale Lapponia', flights:'Voli per la Lapponia' },
+  nl: { luxuryVillas:"Privévilla's & luxe lodges", tours:'Begeleide tours & dagtrips', weddings:'Arctische bruiloften', store:'Officiële Lapland-winkel', flights:'Vluchten naar Lapland' },
 };
 
 /** Detect lang from URL path prefix. Returns 'en' if none matches. */
@@ -286,7 +288,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: 'フィンランド・ラップランドの旅行ガイド, オーロラから白夜まで。',
     groups: { stay: '泊まる', eatDrink: '食べる・飲む', do: '体験する', explore: '見る', essentials: '知っておくこと' },
     travelGuideKicker: 'ラップランド旅行ガイド',
-    about: { eyebrow: 'LaplandVibesについて', body: 'フィンランド・ラップランドの決定版ガイド, オーロラから白夜まで。厳選した体験、現地の知恵、そして北極圏の旅を計画するために必要なすべて。', badge: '独立運営 · 出典明記' },
+    about: { eyebrow: 'LaplandVibesについて', body: 'オーロラから白夜まで、フィンランド・ラップランドの決定版ガイド。厳選した体験と現地の知恵、出典を明記した情報で、北極圏の旅の計画を支えます。', badge: '独立運営 · 出典明記' },
     spottedError: { title: '間違いを見つけましたか?', body: '修正が必要な箇所がありましたら教えてください, すぐに修正します。', cta: '報告する →' },
     partner: { title: '提携のご相談', body: '21以上のラップランドサイトで広告・コラボレーション。', cta: 'お問い合わせ →' },
     press: { title: 'プレス・メディア', body: '編集パートナーシップとプレスキット。', cta: 'プレスお問い合わせ →' },
@@ -297,7 +299,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: 'La guía de viajes de la Laponia finlandesa, desde las auroras hasta el sol de medianoche.',
     groups: { stay: 'Dónde dormir', eatDrink: 'Comer y beber', do: 'Hacer', explore: 'Explorar', essentials: 'Esenciales' },
     travelGuideKicker: 'Guía de viaje de Laponia',
-    about: { eyebrow: 'Sobre LaplandVibes', body: 'La guía definitiva de la Laponia finlandesa, desde las auroras hasta el sol de medianoche. Experiencias seleccionadas, consejos locales y todo lo necesario para planear tu aventura ártica.', badge: 'Mantenido de forma independiente · fuentes citadas' },
+    about: { eyebrow: 'Sobre LaplandVibes', body: 'La guía definitiva de la Laponia finlandesa, desde las auroras hasta el sol de medianoche. Experiencias seleccionadas, consejos locales y fuentes citadas para planear tu aventura ártica.', badge: 'Mantenido de forma independiente · fuentes citadas' },
     spottedError: { title: '¿Has visto un error?', body: '¿Algo que arreglar? Dínoslo, lo corregiremos enseguida.', cta: 'Reportar un error →' },
     partner: { title: 'Colabora con nosotros', body: 'Publicidad o colaboración en más de 21 sitios sobre Laponia.', cta: 'Contactar →' },
     press: { title: 'Prensa y medios', body: 'Colaboraciones editoriales y kits de prensa.', cta: 'Consultas de prensa →' },
@@ -308,7 +310,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: 'O guia da Lapônia finlandesa, das auroras boreais ao sol da meia-noite.',
     groups: { stay: 'Onde dormir', eatDrink: 'Comer e beber', do: 'Fazer', explore: 'Explorar', essentials: 'Essenciais' },
     travelGuideKicker: 'Guia de viagem da Lapônia',
-    about: { eyebrow: 'Sobre o LaplandVibes', body: 'O guia definitivo da Lapônia finlandesa, das auroras boreais ao sol da meia-noite. Experiências selecionadas, dicas locais e tudo o que você precisa para planejar sua aventura no Ártico.', badge: 'Mantido de forma independente · fontes à vista' },
+    about: { eyebrow: 'Sobre o LaplandVibes', body: 'O guia definitivo da Lapônia finlandesa, das auroras boreais ao sol da meia-noite. Experiências selecionadas, dicas locais e fontes citadas para planejar sua viagem ao Ártico.', badge: 'Mantido de forma independente · fontes à vista' },
     spottedError: { title: 'Encontrou um erro?', body: 'Viu algo que precisa de correção? Avise, corrigimos imediatamente.', cta: 'Relatar um erro →' },
     partner: { title: 'Faça parceria conosco', body: 'Anuncie ou colabore em mais de 21 sites da Lapônia.', cta: 'Entre em contato →' },
     press: { title: 'Imprensa e mídia', body: 'Parcerias editoriais e kits de imprensa.', cta: 'Consultas de imprensa →' },
@@ -319,7 +321,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: '芬兰拉普兰旅游指南, 从北极光到午夜阳光。',
     groups: { stay: '住', eatDrink: '吃喝', do: '玩', explore: '探索', essentials: '实用信息' },
     travelGuideKicker: '拉普兰旅游指南',
-    about: { eyebrow: '关于 LaplandVibes', body: '芬兰拉普兰的权威指南, 从北极光到午夜阳光。精选体验、本地建议,以及规划北极之旅所需的一切。', badge: '独立运营 · 来源公开' },
+    about: { eyebrow: '关于 LaplandVibes', body: '从北极光到午夜阳光，芬兰拉普兰的权威指南。精选体验、本地建议与注明来源的信息，助您规划北极之旅。', badge: '独立运营 · 来源公开' },
     spottedError: { title: '发现错误了吗?', body: '有需要修正的地方吗?告诉我们, 我们会立即更正。', cta: '报告错误 →' },
     partner: { title: '与我们合作', body: '在 21+ 个拉普兰网站上投放广告或开展合作。', cta: '联系我们 →' },
     press: { title: '媒体与新闻', body: '编辑合作与媒体资源包。', cta: '媒体咨询 →' },
@@ -330,7 +332,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: '핀란드 라플란드 여행 가이드, 오로라부터 백야까지.',
     groups: { stay: '숙박', eatDrink: '음식과 음료', do: '체험', explore: '둘러보기', essentials: '필수 정보' },
     travelGuideKicker: '라플란드 여행 가이드',
-    about: { eyebrow: 'LaplandVibes 소개', body: '핀란드 라플란드의 결정판 가이드, 오로라부터 백야까지. 엄선한 경험, 현지의 조언, 그리고 북극 여행 계획에 필요한 모든 것.', badge: '독립 운영 · 출처 명시' },
+    about: { eyebrow: 'LaplandVibes 소개', body: '오로라부터 백야까지, 핀란드 라플란드의 결정판 가이드. 엄선한 경험과 현지의 조언, 출처를 밝힌 정보로 북극 여행 계획을 돕습니다.', badge: '독립 운영 · 출처 명시' },
     spottedError: { title: '오류를 발견하셨나요?', body: '수정이 필요한 부분이 있나요? 알려주세요, 즉시 수정합니다.', cta: '오류 신고 →' },
     partner: { title: '저희와 협력하세요', body: '21개 이상의 라플란드 사이트에서 광고 또는 협업.', cta: '문의하기 →' },
     press: { title: '언론·미디어', body: '편집 제휴 및 보도 자료.', cta: '언론 문의 →' },
@@ -352,7 +354,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: 'La guida di viaggio della Lapponia finlandese, dalle aurore al sole di mezzanotte.',
     groups: { stay: 'Dove dormire', eatDrink: 'Mangiare e bere', do: 'Da fare', explore: 'Esplorare', essentials: 'Informazioni utili' },
     travelGuideKicker: 'Guida di viaggio Lapponia',
-    about: { eyebrow: 'Su LaplandVibes', body: 'La guida definitiva alla Lapponia finlandese, dalle aurore boreali al sole di mezzanotte. Esperienze selezionate, consigli locali e tutto il necessario per pianificare il Suo viaggio nell\'Artico.', badge: 'Gestita in modo indipendente · fonti citate' },
+    about: { eyebrow: 'Su LaplandVibes', body: 'La guida definitiva alla Lapponia finlandese, dalle aurore boreali al sole di mezzanotte. Esperienze selezionate, consigli locali e fonti citate per pianificare il Suo viaggio nell\'Artico.', badge: 'Gestita in modo indipendente · fonti citate' },
     spottedError: { title: 'Notato un errore?', body: 'C\'è qualcosa da correggere? Ce lo dica, correggeremo subito.', cta: 'Segnala un errore →' },
     partner: { title: 'Collabora con noi', body: 'Pubblicità o collaborazione su oltre 21 siti dedicati alla Lapponia.', cta: 'Mettersi in contatto →' },
     press: { title: 'Stampa e media', body: 'Collaborazioni editoriali e kit stampa.', cta: 'Richieste stampa →' },
@@ -363,7 +365,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     tagline: 'De reisgids voor Fins Lapland, van het noorderlicht tot de middernachtszon.',
     groups: { stay: 'Verblijf', eatDrink: 'Eten & drinken', do: 'Beleven', explore: 'Ontdekken', essentials: 'Praktisch' },
     travelGuideKicker: 'Lapland-reisgids',
-    about: { eyebrow: 'Over LaplandVibes', body: 'De definitieve gids voor Fins Lapland, van het noorderlicht tot de middernachtszon. Geselecteerde ervaringen, lokale tips en alles wat u nodig heeft om uw arctische avontuur te plannen.', badge: 'Onafhankelijk beheerd · bronnen zichtbaar' },
+    about: { eyebrow: 'Over LaplandVibes', body: 'De definitieve gids voor Fins Lapland, van het noorderlicht tot de middernachtszon. Geselecteerde ervaringen, lokale tips en duidelijke bronnen om uw arctische reis te plannen.', badge: 'Onafhankelijk beheerd · bronnen zichtbaar' },
     spottedError: { title: 'Een fout gezien?', body: 'Iets dat aangepast moet worden? Laat het ons weten, we corrigeren het meteen.', cta: 'Fout melden →' },
     partner: { title: 'Word partner', body: 'Adverteer of werk samen op meer dan 21 Lapland-sites.', cta: 'Neem contact op →' },
     press: { title: 'Pers & media', body: 'Redactionele partnerschappen en perskits.', cta: 'Pers-aanvragen →' },
@@ -461,6 +463,7 @@ function mergeDict(d?: FooterDict): typeof DEFAULT_DICT {
       tours: d.siteLabels?.tours ?? autoLabels.tours,
       weddings: d.siteLabels?.weddings ?? autoLabels.weddings,
       store: d.siteLabels?.store ?? autoLabels.store,
+      flights: d.siteLabels?.flights ?? autoLabels.flights,
     },
   };
 }
@@ -507,7 +510,7 @@ function buildSiteGroups(d: typeof DEFAULT_DICT) {
     {
       title: d.groups.do,
       links: [
-        { name: s.activities, url: 'https://laplandactivities.online' },
+        { name: s.activities, url: 'https://laplandactivities.fi' },
         { name: s.tours, url: 'https://laplandtours.online' },
         { name: s.huskySafaris, url: 'https://laplandhuskysafaris.com' },
         { name: s.skiResorts, url: 'https://laplandskiresorts.com' },
@@ -534,6 +537,7 @@ function buildSiteGroups(d: typeof DEFAULT_DICT) {
         { name: s.dealsOffers, url: 'https://laplanddeals.com' },
         { name: s.transport, url: 'https://laplandtransport.com' },
         { name: s.carRental, url: 'https://laplandcarrental.com' },
+        { name: s.flights, url: 'https://laplandflights.fi' },
         { name: s.workInLapland, url: 'https://laplandwork.com' },
       ],
     },
