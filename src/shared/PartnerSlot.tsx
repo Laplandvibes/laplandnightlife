@@ -11,14 +11,17 @@
  *   Oletuspinta: bg-white/5 backdrop-blur-sm border border-white/15
  *   (toimii dark-sivustoilla; light-sivustot ohittavat className:lla).
  *
- * DOM-tunniste: jokainen renderöity slot saa data-partner-slot-attribuutin,
- *   jolla voi varmentaa että tyhjällä datalla DOM-muutoksia ei tapahdu:
- *   document.querySelectorAll('[data-partner-slot]').length === 0
+ * DOM-tunniste: jokainen renderöity slot saa data-partner-slot-attribuutin.
+ *   Tyhjä paikka ILMAN placeholder-propsia ei tuota DOM:ia lainkaan;
+ *   placeholder-propsilla tyhjä paikka renderöi house-adin
+ *   (data-partner-slot="house-ad") joka linkittää LV Media -portaaliin.
  *
  * Affiliate-huomio: kumppanilinkki EI kulje go.laplandvibes.com-Workerin
  *   kautta (ei CJ-attribuutiota → ei noreferrer-kieltoa). Käytetään vain
  *   rel="sponsored noopener".
  */
+
+import { adSlotsCopy, mediaSiteUrl, fireAdvertiseHereClick } from './adSlotsCopy';
 
 export type Partner = {
   name: string;
@@ -31,23 +34,138 @@ export type Partner = {
   badgeLabel?: string;
 };
 
+/**
+ * House-ad-konfiguraatio tyhjälle paikalle. Kun partner === null JA tämä on
+ * annettu, slotti renderöi "Haluatko mainoksesi tähän?" -house-adin joka
+ * linkittää LV Media -portaaliin. Ilman tätä tyhjä paikka ei renderöidy
+ * lainkaan (vanha käytös säilyy).
+ */
+export type SlotPlaceholder = {
+  /** LV Median sivuslug (lv_sites.slug), esim. 'laplandstays' */
+  siteSlug: string;
+  /** GA4-tunniste, esim. 'sponsor_1' */
+  slotId: string;
+  /** Tekstin kohdennus: pääsponsori-paikka vai premium-paikka */
+  level?: 'sponsor' | 'premium';
+  /** Pieni yläkulmalabel, esim. "Pääkumppani" — oletus adSlotsCopy.slotOpen */
+  label?: string;
+};
+
 export type PartnerSlotProps = {
   partner: Partner | null;
   variant: 'card' | 'banner' | 'listing';
   locale?: string;
   className?: string;
+  /** Tyhjän paikan house-ad — ks. SlotPlaceholder */
+  placeholder?: SlotPlaceholder;
+  /** Vaaleat sivustot (christmas/stays/hoteldeals/nature): 'light' säätää house-adin värit */
+  surface?: 'dark' | 'light';
 };
 
 function getBadgeLabel(partner: Partner, locale?: string): string {
   if (partner.badgeLabel) return partner.badgeLabel;
-  // EN: locale === 'en' tai alkaa 'en'
-  if (locale && (locale === 'en' || locale.startsWith('en'))) return 'Partner';
-  return 'Kumppani';
+  return adSlotsCopy(locale).badge;
 }
 
-export default function PartnerSlot({ partner, variant, locale, className }: PartnerSlotProps) {
-  // Tyhjä paikka ei renderöidy lainkaan, ei wrapper-diviä, ei spacing-vaikutusta
-  if (partner === null) return null;
+export default function PartnerSlot({ partner, variant, locale, className, placeholder, surface = 'dark' }: PartnerSlotProps) {
+  // Tyhjä paikka: house-ad jos placeholder annettu, muuten ei DOM:ia lainkaan
+  if (partner === null) {
+    if (!placeholder) return null;
+    const t = adSlotsCopy(locale);
+    const light = surface === 'light';
+    const sub = placeholder.level === 'premium' ? t.premiumOpen : t.sponsorSub;
+    const topLabel = placeholder.label || t.slotOpen;
+
+    // BANNER-variantin house-ad: kompakti vaakarivi (heron alle, ei työnnä sisältöä)
+    if (variant === 'banner') {
+      return (
+        <a
+          data-partner-slot="house-ad-banner"
+          href={mediaSiteUrl(placeholder.siteSlug, locale)}
+          onClick={() => fireAdvertiseHereClick(placeholder.siteSlug, placeholder.slotId)}
+          className={[
+            'group relative flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 w-full',
+            'rounded-2xl border-2 border-dashed px-4 py-3 sm:px-6 sm:py-3.5 transition-colors duration-300',
+            light
+              ? 'border-black/15 bg-black/[0.02] hover:border-[#EC4899]/50'
+              : 'border-white/20 bg-white/[0.02] hover:border-[#EC4899]/50',
+            className,
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          aria-label={`${topLabel}: ${t.wantYourAd}`}
+        >
+          <span className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2.5 min-w-0">
+            <span className="flex items-center gap-2 min-w-0">
+              <span aria-hidden="true" className="shrink-0 inline-block w-1.5 h-1.5 rounded-full bg-[#EC4899]/70" />
+              <span
+                className={[
+                  'text-[10px] font-semibold uppercase tracking-widest truncate',
+                  light ? 'text-gray-500' : 'text-[#F9FAFB]/45',
+                ].join(' ')}
+              >
+                {topLabel}
+              </span>
+            </span>
+            <span
+              className={[
+                'font-heading text-lg sm:text-xl tracking-wide leading-tight',
+                light ? 'text-gray-900' : 'text-[#F9FAFB]',
+              ].join(' ')}
+            >
+              {t.wantYourAd}
+            </span>
+          </span>
+          <span className="shrink-0 text-sm font-semibold text-[#EC4899] group-hover:translate-x-0.5 transition-transform duration-200">
+            {t.bookCta}
+          </span>
+        </a>
+      );
+    }
+
+    return (
+      <a
+        data-partner-slot="house-ad"
+        href={mediaSiteUrl(placeholder.siteSlug, locale)}
+        onClick={() => fireAdvertiseHereClick(placeholder.siteSlug, placeholder.slotId)}
+        className={[
+          'group relative flex h-full flex-col items-center justify-center text-center gap-2.5',
+          'rounded-2xl border-2 border-dashed px-6 py-8 sm:py-10 transition-colors duration-300',
+          light
+            ? 'border-black/15 bg-black/[0.02] hover:border-[#EC4899]/50'
+            : 'border-white/20 bg-white/[0.02] hover:border-[#EC4899]/50',
+          className,
+        ]
+          .filter(Boolean)
+          .join(' ')}
+        aria-label={t.wantYourAd}
+      >
+        <span
+          className={[
+            'inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest',
+            light ? 'text-gray-500' : 'text-[#F9FAFB]/45',
+          ].join(' ')}
+        >
+          <span aria-hidden="true" className="inline-block w-1.5 h-1.5 rounded-full bg-[#EC4899]/70" />
+          {topLabel}
+        </span>
+        <p
+          className={[
+            'font-heading text-2xl sm:text-3xl tracking-wide leading-tight',
+            light ? 'text-gray-900' : 'text-[#F9FAFB]',
+          ].join(' ')}
+        >
+          {t.wantYourAd}
+        </p>
+        <p className={['text-sm leading-snug max-w-xs', light ? 'text-gray-600' : 'text-[#F9FAFB]/60'].join(' ')}>
+          {sub}
+        </p>
+        <span className="mt-1 text-sm font-semibold text-[#EC4899] group-hover:translate-x-0.5 transition-transform duration-200">
+          {t.bookCta}
+        </span>
+      </a>
+    );
+  }
 
   const badge = getBadgeLabel(partner, locale);
 

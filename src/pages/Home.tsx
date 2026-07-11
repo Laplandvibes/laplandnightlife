@@ -9,6 +9,8 @@ import AiraloAd from '../components/AiraloAd';
 import Newsletter from '../components/Newsletter';
 import FAQ from '../components/FAQ';
 import PageSeo from '../components/PageSeo';
+import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
+import { AD_SLOTS } from '../data/adSlots';
 import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { IMG } from '../data/images';
@@ -86,7 +88,15 @@ export default function Home() {
 
       <Hero />
 
+      {/* PÄÄKUMPPANI-banneri heti heron alla — sivun paras mainospaikka,
+          tyhjänä kompakti house-ad → LV Media -portaali */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
+
       <PrimeTime />
+
+      {/* Kumppaniosio heti 1. sisältöosion jälkeen: kakkospääkumppani +
+          6 premium-paikkaa (jaettu malli — pääkumppanit eivät näy vierekkäin) */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} className="border-t border-white/5" />
 
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
