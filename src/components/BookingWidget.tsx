@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Hotel, Plane, Car, Search, MapPin, Calendar, Users } from 'lucide-react';
+import { Hotel, Plane, Car, Search, MapPin, Calendar, Users, ChevronDown } from 'lucide-react';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { buildTripFlightUrl, buildTripFlightHome } from '../lib/tripcom';
 import { useLang } from '../i18n/useLang';
@@ -126,12 +126,15 @@ export default function BookingWidget() {
                 <Users size={10} className="inline mr-1" />
                 {c.guests}
               </label>
-              <select aria-label={c.guests} value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
-                <option value="1">{c.g1}</option>
-                <option value="2">{c.g2}</option>
-                <option value="3">{c.g3}</option>
-                <option value="4">{c.g4}</option>
-              </select>
+              <div className="relative">
+                <select aria-label={c.guests} value={guests} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
+                  <option value="1">{c.g1}</option>
+                  <option value="2">{c.g2}</option>
+                  <option value="3">{c.g3}</option>
+                  <option value="4">{c.g4}</option>
+                </select>
+                <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
+              </div>
             </div>
             <div>
               <label className={labelCls}>
@@ -179,10 +182,13 @@ export default function BookingWidget() {
             </div>
             <div>
               <label className={labelCls}>{c.drivers}</label>
-              <select aria-label={c.drivers} value={guests} onChange={(e) => setGuests(e.target.value)} className={inputCls}>
-                <option value="1">{c.d1}</option>
-                <option value="2">{c.d2}</option>
-              </select>
+              <div className="relative">
+                <select aria-label={c.drivers} value={guests} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
+                  <option value="1">{c.d1}</option>
+                  <option value="2">{c.d2}</option>
+                </select>
+                <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
+              </div>
             </div>
             <div>
               <label className={labelCls}>{c.pickupDate}</label>

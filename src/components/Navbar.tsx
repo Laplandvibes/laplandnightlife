@@ -166,18 +166,21 @@ export default function Navbar() {
           </div>
 
           <div className="xl:hidden ml-auto flex items-center gap-2">
-            <select
-              value={lang}
-              onChange={(e) => switchTo(e.target.value as LangCode)}
-              aria-label={c.langLabel}
-              className="bg-slate-900/85 backdrop-blur-sm border border-white/50 rounded px-2 py-1 text-xs font-semibold uppercase text-white"
-            >
-              {ALL_LANGS.map((l) => (
-                <option key={l.code} value={l.code} className="bg-night text-white">
-                  {l.label}
-                </option>
-              ))}
-            </select>
+            <div className="relative inline-flex items-center">
+              <select
+                value={lang}
+                onChange={(e) => switchTo(e.target.value as LangCode)}
+                aria-label={c.langLabel}
+                className="appearance-none bg-slate-900/85 backdrop-blur-sm border border-white/50 rounded pl-2 pr-6 py-1 text-xs font-semibold uppercase text-white"
+              >
+                {ALL_LANGS.map((l) => (
+                  <option key={l.code} value={l.code} className="bg-night text-white">
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white" />
+            </div>
             <button
               onClick={() => setOpen(!open)}
               className="p-2 text-white hover:text-pink transition-colors"
