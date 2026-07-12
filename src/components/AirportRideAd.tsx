@@ -316,7 +316,7 @@ export default function AirportRideAd({
           </ul>
 
           <div
-            className="ln-rise ln-rise-3 mt-6 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold"
+            className="ln-rise ln-rise-3 mt-6 inline-flex w-fit items-center gap-2 rounded-2xl leading-snug px-3.5 py-1.5 text-sm font-semibold"
             style={{ backgroundColor: 'rgba(0,214,160,0.16)', color: WP_DEEP }}
           >
             <ShieldCheck className="h-4 w-4 shrink-0" aria-hidden="true" />
