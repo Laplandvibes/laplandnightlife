@@ -79,13 +79,31 @@ export default function GygWidget({
   useEffect(() => {
     const w = window as unknown as { GYG?: { trigger?: () => void } };
     if (typeof w.GYG?.trigger === 'function') w.GYG.trigger();
-    // If the SDK hasn't injected an iframe by now, the embed is blocked.
-    const t = setTimeout(() => {
-      const el = ref.current;
-      const loaded = !!el && el.querySelector('iframe') !== null;
-      setBlocked(!loaded);
-    }, 2500);
-    return () => clearTimeout(t);
+    // Poll until the iframe mounts (slow loads mount well after 2.5 s) — a
+    // one-shot check left the fallback stuck on (Vesa 2026-07-12). Fallback
+    // stays only if the embed is truly blocked (ad-block etc.).
+    setBlocked(false);
+    let cancelled = false;
+    let waited = 0;
+    const FIRST_CHECK = 2500;
+    const STEP = 1000;
+    const MAX_WAIT = 12000;
+    const tick = (delay: number): ReturnType<typeof setTimeout> =>
+      setTimeout(() => {
+        if (cancelled) return;
+        waited += delay;
+        if (ref.current?.querySelector('iframe')) {
+          setBlocked(false);
+          return;
+        }
+        setBlocked(true);
+        if (waited < MAX_WAIT) tick(STEP);
+      }, delay);
+    const t = tick(FIRST_CHECK);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
   }, [query, lang]);
 
   return (
@@ -93,7 +111,7 @@ export default function GygWidget({
       {/* Embed target — kept mounted (just hidden when blocked) so the SDK can populate it. */}
       <div
         ref={ref}
-        className={blocked ? 'hidden' : ''}
+        className={blocked ? 'h-0 overflow-hidden' : ''}
         key={`gyg-${lang}-${query}`}
         data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
         data-gyg-locale-code={GYG_LOCALE[lang] ?? 'en-US'}
