@@ -8,7 +8,7 @@ import AffiliateCTA from './AffiliateCTA';
 // to Finnish (the partner's home market), regardless of the page language.
 const GYG_LOCALE: Record<string, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
-  'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL',
+  'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
 
 const SEE_ALL: Record<string, string> = {
@@ -23,6 +23,7 @@ const SEE_ALL: Record<string, string> = {
   fr: 'Voir toutes les expériences sur GetYourGuide',
   it: 'Vedi tutte le esperienze su GetYourGuide',
   nl: 'Bekijk alle ervaringen op GetYourGuide',
+  sv: 'Se alla upplevelser på GetYourGuide',
 };
 
 // Shown only when the embed is blocked (ad-block / tracking-protection) — turns
@@ -39,6 +40,7 @@ const FALLBACK_LEAD: Record<string, string> = {
   fr: 'Prix en temps réel et confirmation immédiate — ouvrez les excursions réservables sur GetYourGuide.',
   it: 'Prezzi in tempo reale e conferma immediata: apri le escursioni prenotabili su GetYourGuide.',
   nl: 'Actuele prijzen en directe bevestiging — open de boekbare tours op GetYourGuide.',
+  sv: 'Aktuella priser och direkt bekräftelse — öppna de bokningsbara turerna på GetYourGuide.',
 };
 
 const SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };

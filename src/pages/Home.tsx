@@ -34,6 +34,7 @@ const CONNECT_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   fr: { eyebrow: 'Avant de partir', h: 'Réglez votre data avant que la nuit commence' },
   it: { eyebrow: 'Prima di partire', h: 'Sistema i dati prima che inizi la notte' },
   nl: { eyebrow: 'Voordat je gaat', h: 'Regel je data voordat de nacht begint' },
+  sv: { eyebrow: 'Innan du åker', h: 'Fixa datan innan natten börjar' },
 };
 
 export default function Home() {

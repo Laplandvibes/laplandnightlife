@@ -38,7 +38,7 @@ function attachAffiliateParams(url: URL, sid: string): void {
 
 // LOCALE: 2026-05-16 — pass user locale to Trip.com so DE/FI users land on the
 // local Trip.com flow (locale=de-DE / fi-FI). EN defaults to en-XX (multi-lang EN).
-export type TripLang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+export type TripLang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 const TRIP_LOCALE: Record<TripLang, string> = {
   en: 'en-XX',
   fi: 'fi-FI',
@@ -51,6 +51,7 @@ const TRIP_LOCALE: Record<TripLang, string> = {
   fr: 'fr-FR',
   it: 'it-IT',
   nl: 'nl-NL',
+  sv: 'sv-SE',
 };
 
 // ─── Flights ────────────────────────────────────────────────────────────

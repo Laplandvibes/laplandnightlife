@@ -37,6 +37,7 @@ const CONTACT_FORM_COPY: Record<string, ContactFormCopy> = {
   fr: { name:'Votre nom', email:'Votre e-mail', subject:'Objet', message:'Message', send:'Envoyer', sending:'Envoi…', successTitle:'Message envoyé !', successBody:'Merci, nous vous répondrons sous 24–48 heures.', errorMsg:'Une erreur est survenue. Réessayez.', close:'Fermer', required:'Veuillez remplir tous les champs avec un e-mail valide.', subj:{ error:'Signalement d\'erreur', partner:'Demande de partenariat', press:'Demande presse', general:'Demande générale' } },
   it: { name:'Il tuo nome', email:'La tua email', subject:'Oggetto', message:'Messaggio', send:'Invia messaggio', sending:'Invio…', successTitle:'Messaggio inviato!', successBody:'Grazie, ti risponderemo entro 24–48 ore.', errorMsg:'Qualcosa è andato storto. Riprova.', close:'Chiudi', required:'Compila tutti i campi con un\'email valida.', subj:{ error:'Segnalazione di errore', partner:'Richiesta di collaborazione', press:'Richiesta stampa', general:'Richiesta generale' } },
   nl: { name:'Uw naam', email:'Uw e-mail', subject:'Onderwerp', message:'Bericht', send:'Bericht versturen', sending:'Versturen…', successTitle:'Bericht verzonden!', successBody:'Bedankt, we reageren binnen 24–48 uur.', errorMsg:'Er ging iets mis. Probeer opnieuw.', close:'Sluiten', required:'Vul alle velden in met een geldig e-mailadres.', subj:{ error:'Foutmelding', partner:'Samenwerkingsverzoek', press:'Persaanvraag', general:'Algemene vraag' } },
+  sv: { name:'Ditt namn', email:'Din e-post', subject:'Ämne', message:'Meddelande', send:'Skicka meddelande', sending:'Skickar…', successTitle:'Meddelandet skickat!', successBody:'Tack, vi återkommer inom 24–48 timmar.', errorMsg:'Något gick fel. Försök igen.', close:'Stäng', required:'Fyll i alla fält med en giltig e-postadress.', subj:{ error:'Felrapport', partner:'Samarbetsförfrågan', press:'Pressförfrågan', general:'Allmän förfrågan' } },
 };
 
 /**
@@ -209,6 +210,7 @@ const BUILT_IN_SITE_LABELS: Record<string, Record<SiteLabelsKey, string>> = {
   fr: { hotelDeals:'100+ offres hôtelières sélectionnées',staysCabins:'Hébergements & Chalets',whereToStay:'Igloos de verre, chalets, tarifs réels',familyFriendly:'Resorts famille + visites au Père Noël',localFood:'Cuisine sami + cueillette',fineDining:'Gastronomie',barsPubs:'Bars & Pubs',activities:'Activités arctiques sélectionnées',huskySafaris:'Safaris huskies de 35+ opérateurs',skiResorts:'8 stations de ski comparées',snowmobileTours:'Safaris en motoneige dès 120 €',spaWellness:'Saunas, spas, bien-être aurores',nightlife:'Vie nocturne',natureParks:'Nature & Parcs',travelGuide:'Guide de voyage',christmas:'Noël en Laponie, Village du Père Noël, aurores',giftsSouvenirs:'Cadeaux & Souvenirs',travelBlog:'Blog voyage',dealsOffers:'Offres',transport:'Transport',carRental:'Location de voiture',workInLapland:'Travailler en Laponie' },
   it: { hotelDeals:'100+ offerte hotel selezionate',staysCabins:'Alloggi e Cottage',whereToStay:'Igloo di vetro, chalet, prezzi reali',familyFriendly:'Resort famiglia + visite a Babbo Natale',localFood:'Cucina sami + raccolta',fineDining:'Alta cucina',barsPubs:'Bar e Pub',activities:'Attività artiche selezionate',huskySafaris:'Safari con i husky da 35+ operatori',skiResorts:'8 stazioni sciistiche a confronto',snowmobileTours:'Safari in motoslitta da 120 €',spaWellness:'Saune, spa, benessere aurora',nightlife:'Vita notturna',natureParks:'Natura e Parchi',travelGuide:'Guida di viaggio',christmas:'Natale in Lapponia, Villaggio di Babbo Natale, aurore',giftsSouvenirs:'Regali e Souvenir',travelBlog:'Blog di viaggio',dealsOffers:'Offerte',transport:'Trasporti',carRental:'Noleggio auto',workInLapland:'Lavorare in Lapponia' },
   nl: { hotelDeals:'100+ zorgvuldig gekozen hotelaanbiedingen',staysCabins:'Verblijven & Hutten',whereToStay:'Glasiglo\'s, cabins, echte prijzen',familyFriendly:'Gezinsresorts + bezoek aan de Kerstman',localFood:'Sami-keuken + plukken',fineDining:'Fine dining',barsPubs:'Bars & Pubs',activities:'Zorgvuldig gekozen Arctische activiteiten',huskySafaris:"Husky-safari's van 35+ operators",skiResorts:'8 skioorden vergeleken',snowmobileTours:'Sneeuwscootersafari\'s vanaf €120',spaWellness:'Sauna\'s, spa\'s, aurora-welzijn',nightlife:'Nachtleven',natureParks:'Natuur & Parken',travelGuide:'Reisgids',christmas:'Kerstmis in Lapland, Kerstmandorp, noorderlicht',giftsSouvenirs:'Cadeaus & Souvenirs',travelBlog:'Reisblog',dealsOffers:'Aanbiedingen',transport:'Vervoer',carRental:'Autoverhuur',workInLapland:'Werken in Lapland' },
+  sv: { hotelDeals:'100+ handplockade hotellerbjudanden',staysCabins:'Boende & stugor',whereToStay:'Glasigloor, stugor, verkliga priser',familyFriendly:'Familjeresorter + besök hos jultomten',localFood:'Samisk mat & bärplockning',fineDining:'Fine dining',barsPubs:'Barer & pubar',activities:'Handplockade Arktis-aktiviteter',huskySafaris:'Hundspannssafarier från 35+ researrangörer',skiResorts:'8 skidorter jämförda',snowmobileTours:'Snöskotersafarier från 120 €',spaWellness:'Bastur, spa och norrskensavkoppling',nightlife:'Nattliv',natureParks:'Natur & parker',travelGuide:'Reseguide',christmas:'Jul i Lappland, jultomtens by, norrsken',giftsSouvenirs:'Presenter & souvenirer',travelBlog:'Reseblogg',dealsOffers:'Erbjudanden',transport:'Transport',carRental:'Biluthyrning',workInLapland:'Jobba i Lappland' },
 };
 
 // ─── 4 ecosystem sites added to the footer grid (kept in a separate map so the
@@ -226,6 +228,7 @@ const EXT_SITE_LABELS: Record<string, Record<ExtLabelsKey, string>> = {
   fr: { luxuryVillas:'Villas privées & lodges de luxe', tours:'Visites guidées & excursions', weddings:'Mariages arctiques', store:'Boutique officielle Laponie', flights:'Vols vers la Laponie' },
   it: { luxuryVillas:'Ville private e lodge di lusso', tours:'Tour guidati ed escursioni', weddings:'Matrimoni artici', store:'Negozio ufficiale Lapponia', flights:'Voli per la Lapponia' },
   nl: { luxuryVillas:"Privévilla's & luxe lodges", tours:'Begeleide tours & dagtrips', weddings:'Arctische bruiloften', store:'Officiële Lapland-winkel', flights:'Vluchten naar Lapland' },
+  sv: { luxuryVillas:'Privata villor & lyxstugor', tours:'Guidade turer & dagsutflykter', weddings:'Arktiska bröllop & spontanbröllop', store:'Officiell Lappland-butik', flights:'Flyg till Lappland' },
 };
 
 /** Detect lang from URL path prefix. Returns 'en' if none matches. */
@@ -238,7 +241,7 @@ function detectLangFromURL(): keyof typeof BUILT_IN_SITE_LABELS {
     br: 'pt-BR', 'pt-br': 'pt-BR', pt: 'pt-BR',
     cn: 'zh-CN', 'zh-cn': 'zh-CN', zh: 'zh-CN',
     kr: 'ko', ko: 'ko',
-    fr: 'fr', it: 'it', nl: 'nl',
+    fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
     en: 'en',
   };
   return map[seg] ?? 'en';
@@ -252,7 +255,7 @@ function detectLangFromURL(): keyof typeof BUILT_IN_SITE_LABELS {
 const LOCALE_PATH_PREFIX: Record<string, string> = {
   en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es',
   'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr',
-  fr: '/fr', it: '/it', nl: '/nl',
+  fr: '/fr', it: '/it', nl: '/nl', sv: '/sv',
 };
 
 // ─── Built-in 11-lang FULL footer dicts ────────────────────────────────────
@@ -371,6 +374,17 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     press: { title: 'Pers & media', body: 'Redactionele partnerschappen en perskits.', cta: 'Pers-aanvragen →' },
     affiliate: 'Deze site bevat affiliate-links. Als u via deze links boekt, kan LaplandVibes een commissie ontvangen zonder extra kosten voor u.',
     legal: { privacy: 'Privacybeleid', cookie: 'Cookiebeleid', terms: 'Gebruiksvoorwaarden', contact: 'Contact' },
+  },
+  sv: {
+    tagline: 'Reseguiden till finska Lappland, från norrsken till midnattssol.',
+    groups: { stay: 'Bo', eatDrink: 'Ät & drick', do: 'Gör', explore: 'Upptäck', essentials: 'Praktiskt' },
+    travelGuideKicker: 'Lapplands reseguide',
+    about: { eyebrow: 'Om LaplandVibes', body: 'Reseguiden till finska Lappland, från norrsken till midnattssol. Handplockade upplevelser, lokal kunskap och tydliga källor för att planera din arktiska resa.', badge: 'Oberoende drivet · källor redovisade' },
+    spottedError: { title: 'Hittade du ett fel?', body: 'Ser du något som behöver rättas till? Berätta för oss, så korrigerar vi det direkt.', cta: 'Rapportera ett fel →' },
+    partner: { title: 'Bli partner med oss', body: 'Annonsera eller samarbeta över 21+ Lappland-sajter.', cta: 'Kontakta oss →' },
+    press: { title: 'Press & media', body: 'Redaktionella samarbeten och pressmaterial.', cta: 'Presskontakt →' },
+    affiliate: 'Denna webbplats innehåller affiliate-länkar. Om du bokar via dessa länkar kan LaplandVibes få en provision utan extra kostnad för dig.',
+    legal: { privacy: 'Integritetspolicy', cookie: 'Cookiepolicy', terms: 'Användarvillkor', contact: 'Kontakt' },
   },
 };
 

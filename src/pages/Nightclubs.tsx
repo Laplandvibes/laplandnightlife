@@ -21,6 +21,7 @@ const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   fr: { eyebrow: 'Aller et retour', h: 'La course jusqu’à la porte, et le retour' },
   it: { eyebrow: 'Andata e ritorno', h: 'La corsa fino alla porta, e ritorno' },
   nl: { eyebrow: 'Heen en terug', h: 'De rit tot de deur, en terug' },
+  sv: { eyebrow: 'Dit och hem', h: 'Skjutsen fram till dörren, och tillbaka' },
 };
 
 const top = [

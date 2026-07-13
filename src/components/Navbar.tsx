@@ -48,10 +48,10 @@ export default function Navbar() {
     };
   }, [langOpen]);
 
-  type LangCode = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+  type LangCode = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
   const URL_PREFIX_OF: Record<LangCode, string> = {
     en: '', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'br', 'zh-CN': 'cn',
-    ko: 'kr', fr: 'fr', it: 'it', nl: 'nl',
+    ko: 'kr', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
   };
   const ALL_LANGS: { code: LangCode; label: string; native: string }[] = [
     { code: 'en', label: 'EN', native: 'English' },
@@ -65,6 +65,7 @@ export default function Navbar() {
     { code: 'fr', label: 'FR', native: 'Français' },
     { code: 'it', label: 'IT', native: 'Italiano' },
     { code: 'nl', label: 'NL', native: 'Nederlands' },
+    { code: 'sv', label: 'SV', native: 'Svenska' },
   ];
 
   const switchTo = (target: LangCode) => {
@@ -72,7 +73,7 @@ export default function Navbar() {
       window.localStorage.setItem('lv_locale_choice', target);
     }
     const path = location.pathname;
-    const bare = path.replace(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl)(?=\/|$)/, '') || '/';
+    const bare = path.replace(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/, '') || '/';
     const prefix = URL_PREFIX_OF[target];
     if (!prefix) {
       navigate(bare);

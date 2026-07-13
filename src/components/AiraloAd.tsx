@@ -101,14 +101,14 @@ export default function AiraloAd({
   const adLabel = pick({
     en: 'Ad', fi: 'Mainos', de: 'Anzeige', ja: '広告', es: 'Anuncio',
     'pt-BR': 'Anúncio', 'zh-CN': '广告', ko: '광고', fr: 'Annonce',
-    it: 'Annuncio', nl: 'Advertentie',
+    it: 'Annuncio', nl: 'Advertentie', sv: 'Annons',
   });
 
   const eyebrow = pick({
     en: 'Travel eSIM', fi: 'Matka-eSIM', de: 'Reise-eSIM', ja: '旅行用eSIM',
     es: 'eSIM de viaje', 'pt-BR': 'eSIM de viagem', 'zh-CN': '旅行 eSIM',
     ko: '여행용 eSIM', fr: 'eSIM de voyage', it: 'eSIM da viaggio',
-    nl: 'Reis-eSIM',
+    nl: 'Reis-eSIM', sv: 'Rese-eSIM',
   });
 
   // Two short human sentences, no em-dash connector. Speaks to the real moment:
@@ -125,6 +125,7 @@ export default function AiraloAd({
     fr: 'Arrivez en Laponie avec déjà de la data sur le téléphone. Airalo est une eSIM que vous installez avant le vol.',
     it: 'Arriva in Lapponia con i dati già sul telefono. Airalo è una eSIM che configuri prima del volo.',
     nl: 'Land in Lapland met data al op je telefoon. Airalo is een eSIM die je vóór de vlucht instelt.',
+    sv: 'Landa i Lappland med data redan i telefonen. Airalo är ett eSIM som du ställer in före flyget.',
   });
 
   const sub = pick({
@@ -139,6 +140,7 @@ export default function AiraloAd({
     fr: 'Pas de changement de SIM, pas de facture d’itinérance, pas de file à la boutique de l’aéroport. Choisissez un forfait Finlande ou Europe, installez-le en deux minutes, et vos cartes, applis de transport et stories marchent dès que vous quittez le mode avion.',
     it: 'Niente cambio SIM, niente bolletta in roaming, niente coda al negozio dell’aeroporto. Scegli un piano Finlandia o Europa, installalo in un paio di minuti, e mappe, app per gli spostamenti e storie funzionano appena togli la modalità aereo.',
     nl: 'Geen simwissel, geen roamingrekening, geen rij in de luchthavenwinkel. Kies een Finland- of Europa-bundel, installeer hem in een paar minuten en je kaarten, rit-apps en stories werken zodra je de vliegtuigstand uitzet.',
+    sv: 'Inget SIM-byte, ingen roamingräkning, ingen kö i butiken på flygplatsen. Välj ett Finlands- eller Europapaket, installera det på ett par minuter, så fungerar dina kartor, taxiappar och stories i samma sekund som du slår av flygplansläget.',
   });
 
   const trust: { icon: typeof Globe; label: string }[] = [
@@ -156,6 +158,7 @@ export default function AiraloAd({
         fr: 'Prêt en quelques minutes, avant le vol',
         it: 'Pronto in pochi minuti, prima di volare',
         nl: 'In minuten klaar, vóór je vlucht',
+        sv: 'Klart på några minuter, före avresa',
       }),
     },
     {
@@ -172,6 +175,7 @@ export default function AiraloAd({
         fr: 'Forfaits Finlande et toute l’Europe',
         it: 'Piani per Finlandia e tutta Europa',
         nl: 'Bundels voor Finland & heel Europa',
+        sv: 'Paket för Finland och hela Europa',
       }),
     },
     {
@@ -188,6 +192,7 @@ export default function AiraloAd({
         fr: 'Gardez votre propre numéro',
         it: 'Mantieni il tuo numero',
         nl: 'Houd je eigen nummer',
+        sv: 'Behåll ditt eget nummer',
       }),
     },
   ];
@@ -196,14 +201,14 @@ export default function AiraloAd({
     en: 'Get an eSIM', fi: 'Hanki eSIM', de: 'eSIM holen', ja: 'eSIM を入手',
     es: 'Consigue una eSIM', 'pt-BR': 'Obter um eSIM', 'zh-CN': '获取 eSIM',
     ko: 'eSIM 받기', fr: 'Obtenir une eSIM', it: 'Ottieni una eSIM',
-    nl: 'Haal een eSIM',
+    nl: 'Haal een eSIM', sv: 'Skaffa ett eSIM',
   });
 
   const poweredBy = pick({
     en: 'Sold by Airalo', fi: 'Myynti: Airalo', de: 'Verkauf durch Airalo',
     ja: '販売：Airalo', es: 'Vendido por Airalo', 'pt-BR': 'Vendido pela Airalo',
     'zh-CN': '由 Airalo 销售', ko: 'Airalo 판매', fr: 'Vendu par Airalo',
-    it: 'Venduto da Airalo', nl: 'Verkocht door Airalo',
+    it: 'Venduto da Airalo', nl: 'Verkocht door Airalo', sv: 'Säljs av Airalo',
   });
 
   // Evergreen offer chip (no %; always true).
@@ -219,6 +224,7 @@ export default function AiraloAd({
     fr: 'Livraison numérique instantanée',
     it: 'Consegna digitale immediata',
     nl: 'Direct digitaal geleverd',
+    sv: 'Direkt digital leverans',
   });
 
   return (

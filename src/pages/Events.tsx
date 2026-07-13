@@ -147,6 +147,7 @@ const EVENTS: Record<Lang, MonthBlock[]> = {
   fr: EVENTS_BASE.en,
   it: EVENTS_BASE.en,
   nl: EVENTS_BASE.en,
+  sv: EVENTS_BASE.en,
 };
 
 export default function Events() {

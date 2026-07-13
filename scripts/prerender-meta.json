@@ -43,6 +43,10 @@
     "nl": {
       "title": "Oulu — Culturele Hoofdstad van Europa 2026.",
       "description": "Culturele Hoofdstad van Europa 2026. 200 000 inwoners, een door studenten gedreven clubscene en de voetgangersstraat Rotuaari, waar de meeste adressen van de…"
+    },
+    "sv": {
+      "title": "Oulu — Europas kulturhuvudstad 2026.",
+      "description": "Europas kulturhuvudstad 2026. 200 000 invånare, en studentdriven klubbscen och gågatan Rotuaari, där de flesta av stadens adresser ligger inom en kort…"
     }
   },
   "/city/rovaniemi": {
@@ -89,6 +93,10 @@
     "nl": {
       "title": "Rovaniemi — De arctische hoofdstad.",
       "description": "De arctische hoofdstad. Twee snelheden in één stad. In het weekend staan toeristen in de rij rond Koskikatu — Roy Club gooit \"de beste feesten van de stad…"
+    },
+    "sv": {
+      "title": "Rovaniemi — Den arktiska huvudstaden.",
+      "description": "Den arktiska huvudstaden. Två hastigheter i en och samma stad. På helgerna köar turister runt Koskikatu — Roy Club håller \"stadens bästa fester sedan 1985\"…"
     }
   },
   "/city/levi": {
@@ -135,6 +143,10 @@
     "nl": {
       "title": "Levi — Het grootste skigebiedsfeest van Finland.",
       "description": "Het grootste skigebiedsfeest van Finland. Hullu Poro Areena is het middelpunt — capaciteit 1 700, twee verdiepingen, tien bars en de grootste dansvloer ten…"
+    },
+    "sv": {
+      "title": "Levi — Finlands största skidortsfest.",
+      "description": "Finlands största skidortsfest. Hullu Poro Areena är mittpunkten — kapacitet 1 700, två våningar, tio barer och det största dansgolvet norr om Helsingfors.…"
     }
   },
   "/city/saariselka": {
@@ -181,6 +193,10 @@
     "nl": {
       "title": "Saariselkä — Wildernis-premium — het iglobar-dorp.",
       "description": "Wildernis-premium — het iglobar-dorp. Saariselkä is geen clubbestemming. Het is een glaziglo-bestemming — en dat is precies de bedoeling. Kakslauttanen…"
+    },
+    "sv": {
+      "title": "Saariselkä — Vildmarkslyx — igloobarbyn.",
+      "description": "Vildmarkslyx — igloobarbyn. Saariselkä är ingen klubbdestination. Det är en glasigloodestination — och det är precis meningen. Kakslauttanen Arctic Resort…"
     }
   },
   "/city/inari": {
@@ -227,6 +243,10 @@
     "nl": {
       "title": "Inari — De culturele hoofdstad van de Sámi.",
       "description": "De culturele hoofdstad van de Sámi. Inari is de culturele zetel van het Sámi-parlement (Sajos) en de thuisbasis van Siida — het museum dat alles uitlegt wat…"
+    },
+    "sv": {
+      "title": "Inari — Samernas kulturella huvudstad.",
+      "description": "Samernas kulturella huvudstad. Inari är sameparlamentets kulturella säte (Sajos) och hemvist för Siida — museet som förklarar allt du inte visste om Sápmi.…"
     }
   },
   "/city/kemi": {
@@ -273,6 +293,10 @@
     "nl": {
       "title": "Kemi — SnowCastle, ijsbreker, Zee-Lapland.",
       "description": "SnowCastle, ijsbreker, Zee-Lapland. Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland — en een stad met één troef: het SnowCastle, elke winter…"
+    },
+    "sv": {
+      "title": "Kemi — SnowCastle, isbrytare, Havslappland.",
+      "description": "SnowCastle, isbrytare, Havslappland. Kemi är porten mellan tåget från Helsingfors och Lappland — och en stad med ett trumfkort: SnowCastle, ombyggt varje…"
     }
   },
   "/city/yllas": {
@@ -319,6 +343,10 @@
     "nl": {
       "title": "Ylläs — Het op een na grootste skigebied van Finland.",
       "description": "Het op een na grootste skigebied van Finland. Ylläs heeft 63 pistes, verdeeld over twee dorpen — Äkäslompolo (noord) en Ylläsjärvi (zuid) — verbonden via de…"
+    },
+    "sv": {
+      "title": "Ylläs — Finlands näst största skidområde.",
+      "description": "Finlands näst största skidområde. Ylläs har 63 nedfarter, fördelade på två byar — Äkäslompolo (norr) och Ylläsjärvi (söder) — sammanbundna via backarna men…"
     }
   },
   "/city/ruka": {
@@ -365,6 +393,10 @@
     "nl": {
       "title": "Ruka — Skiresort in berenland.",
       "description": "Skiresort in berenland. Ruka is technisch Kuusamo, technisch geen Lapland, maar skiërs maakt het niets uit — het is een van de drukste skigebieden van…"
+    },
+    "sv": {
+      "title": "Ruka — Skidort i björnland.",
+      "description": "Skidort i björnland. Ruka är tekniskt sett Kuusamo, tekniskt sett inte Lappland, men för skidåkare spelar det ingen roll — det är ett av Finlands mest…"
     }
   },
   "/city/pyha-luosto": {
@@ -409,6 +441,10 @@
       "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
     },
     "nl": {
+      "title": "Pyhä & Luosto — The amethyst fells.",
+      "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
+    },
+    "sv": {
       "title": "Pyhä & Luosto — The amethyst fells.",
       "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park. Pyhä has the bigger ski area; Luosto has the amethyst mine you can visit at…"
     }
@@ -457,6 +493,10 @@
     "nl": {
       "title": "Sodankylä — Midnight Sun Film Festival.",
       "description": "Midnight Sun Film Festival. Sodankylä is een dorp van 9 000 inwoners aan de rivier de Kemijoki — en één keer per jaar, half juni, wordt het het meest…"
+    },
+    "sv": {
+      "title": "Sodankylä — Midnight Sun Film Festival.",
+      "description": "Midnight Sun Film Festival. Sodankylä är en by med 9 000 invånare vid floden Kemijoki — och en gång om året, i mitten av juni, blir den världens mest…"
     }
   },
   "/city/kittila": {
@@ -503,6 +543,10 @@
     "nl": {
       "title": "Kittilä town — Waar de locals van Levi echt wonen.",
       "description": "Waar de locals van Levi echt wonen. Kittilä is de hoofdplaats van de gemeente — 6 500 inwoners, de luchthaven en de mensen die het 18 km verderop gelegen…"
+    },
+    "sv": {
+      "title": "Kittilä town — Där Levis lokalbor faktiskt bor.",
+      "description": "Där Levis lokalbor faktiskt bor. Kittilä är kommunens centralort — 6 500 invånare, flygplatsen och de människor som håller i gång Levi 18 km bort. Barlivet…"
     }
   },
   "/city/ivalo": {
@@ -549,6 +593,10 @@
     "nl": {
       "title": "Ivalo — De noordelijkste luchthaven met een club.",
       "description": "De noordelijkste luchthaven met een club. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland.…"
+    },
+    "sv": {
+      "title": "Ivalo — Den nordligaste flygplatsen med en klubb.",
+      "description": "Den nordligaste flygplatsen med en klubb. Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000…"
     }
   },
   "/city/muonio": {
@@ -595,6 +643,10 @@
     "nl": {
       "title": "Muonio — De toegangspoort tot het nationaal park.",
       "description": "De toegangspoort tot het nationaal park. Muonio telt 2 300 inwoners en is een van de poorten naar nationaal park Pallas-Yllästunturi (1 020 km², het op één…"
+    },
+    "sv": {
+      "title": "Muonio — Porten till nationalparken.",
+      "description": "Porten till nationalparken. Muonio har 2 300 invånare och är en av portarna till nationalparken Pallas-Yllästunturi (1 020 km², Finlands näst största). Det…"
     }
   },
   "/city/salla": {
@@ -641,6 +693,10 @@
     "nl": {
       "title": "Salla — In the middle of nowhere.",
       "description": "In the middle of nowhere. 3 300 inwoners en één skipiste. De slogan van het dorp is letterlijk \"In the Middle of Nowhere\" — en dat is als compliment bedoeld.…"
+    },
+    "sv": {
+      "title": "Salla — Mitt ute i ingenstans.",
+      "description": "Mitt ute i ingenstans. 3 300 invånare och en enda skidbacke. Byns slogan är bokstavligen \"In the Middle of Nowhere\" — och det är menat som en komplimang.…"
     }
   }
 }

@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const STORAGE_KEY = 'lv_locale_choice';
 
-type Target = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+type Target = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 
 const PREFIX_OF: Record<Target, string> = {
   en: '',
@@ -17,6 +17,7 @@ const PREFIX_OF: Record<Target, string> = {
   fr: 'fr',
   it: 'it',
   nl: 'nl',
+  sv: 'sv',
 };
 
 export default function LocaleAutoRedirect() {
@@ -33,7 +34,7 @@ export default function LocaleAutoRedirect() {
 
     let target: Target = 'en';
 
-    const VALID: Target[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+    const VALID: Target[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
     if (stored && (VALID as string[]).includes(stored)) {
       target = stored as Target;
     } else if (typeof navigator !== 'undefined') {
@@ -48,6 +49,7 @@ export default function LocaleAutoRedirect() {
       else if (lang.startsWith('fr')) target = 'fr';
       else if (lang.startsWith('it')) target = 'it';
       else if (lang.startsWith('nl')) target = 'nl';
+      else if (lang.startsWith('sv')) target = 'sv';
     }
 
     const prefix = PREFIX_OF[target];

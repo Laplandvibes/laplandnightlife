@@ -29,12 +29,12 @@ const OUT = join(ROOT, 'scripts', 'prerender-meta.json');
 
 // Locales whose URL prefix → BCP/lang key in the prerenderer. Keys MUST match
 // the `lang` values in _prerender_routes.mjs FULL_LOCALE_LIST.
-const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 // cities.<file>.ts overlay file suffix per lang.
 const OVERLAY_FILE = {
   fi: 'cities.fi.ts', de: 'cities.de.ts', ja: 'cities.ja.ts', es: 'cities.es.ts',
   'pt-BR': 'cities.pt-BR.ts', 'zh-CN': 'cities.zh-CN.ts', ko: 'cities.ko.ts',
-  fr: 'cities.fr.ts', it: 'cities.it.ts', nl: 'cities.nl.ts',
+  fr: 'cities.fr.ts', it: 'cities.it.ts', nl: 'cities.nl.ts', sv: 'cities.sv.ts',
 };
 
 // ---- generic brace-matched block reader (same approach as _prerender_routes.mjs) ----

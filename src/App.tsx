@@ -91,7 +91,7 @@ function AppLayout() {
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
           {(() => {
-            const LOCALE_PREFIXES = ['', 'fi', 'de', 'ja', 'es', 'br', 'cn', 'kr', 'fr', 'it', 'nl'];
+            const LOCALE_PREFIXES = ['', 'fi', 'de', 'ja', 'es', 'br', 'cn', 'kr', 'fr', 'it', 'nl', 'sv'];
             const ROUTE_DEFS: { path: string; element: React.ReactElement }[] = [
               { path: '', element: <Home /> },
               { path: 'cities', element: <Cities /> },

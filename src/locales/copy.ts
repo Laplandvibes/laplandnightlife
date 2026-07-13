@@ -19,6 +19,7 @@ const loaders: Record<Lang, () => Promise<{ default: CopyShape }>> = {
   fr: () => import('./copy.fr'),
   it: () => import('./copy.it'),
   nl: () => import('./copy.nl'),
+  sv: () => import('./copy.sv'),
 };
 
 export const COPY = { en } as Record<Lang, CopyShape>;
