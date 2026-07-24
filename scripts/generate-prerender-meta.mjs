@@ -142,7 +142,7 @@ for (const slug of slugs) {
     const ov = lang === 'en' ? null : overlays[lang]?.[slug];
     const tagline = (ov && ov.pageTagline) || b.pageTagline;
     const intro = (ov && ov.intro) || b.intro;
-    const title = `${b.name} — ${tagline}`;
+    const title = `${b.name}: ${tagline}`;
     const description = buildDescription(tagline, intro);
     meta[path][lang] = { title, description };
   }

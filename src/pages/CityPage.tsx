@@ -80,7 +80,7 @@ export default function CityPage() {
   return (
     <>
       <PageSeo
-        title={`${city.name} — ${city.pageTagline}`}
+        title={`${city.name}: ${city.pageTagline}`}
         description={description}
         path={path}
         ogImage={`https://laplandnightlife.com${city.img}`}
@@ -92,7 +92,7 @@ export default function CityPage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${city.img})` }}
           role="img"
-          aria-label={`Aurora over a rooftop bar in ${city.name} — Lapland nightlife`}
+          aria-label={`Aurora over a rooftop bar in ${city.name}: Lapland nightlife`}
         />
         {/* Left-weighted scrim darkens the upper-left headline zone over bright
             city photos; top fade + bottom fade keep the rest readable. */}

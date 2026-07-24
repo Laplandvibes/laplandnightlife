@@ -29,18 +29,18 @@ const SEE_ALL: Record<string, string> = {
 // Shown only when the embed is blocked (ad-block / tracking-protection) — turns
 // what was a bare empty box + link into an enticing image panel with a CTA.
 const FALLBACK_LEAD: Record<string, string> = {
-  en: 'Live prices and instant confirmation — open the bookable tours on GetYourGuide.',
-  fi: 'Live-hinnat ja välitön vahvistus — avaa varattavat retket GetYourGuidessa.',
-  de: 'Live-Preise und sofortige Bestätigung — buchbare Touren auf GetYourGuide öffnen.',
-  ja: 'リアルタイムの料金と即時確認 — 予約可能なツアーを GetYourGuide で開く。',
+  en: 'Live prices and instant confirmation: open the bookable tours on GetYourGuide.',
+  fi: 'Live-hinnat ja välitön vahvistus: avaa varattavat retket GetYourGuidessa.',
+  de: 'Live-Preise und sofortige Bestätigung: buchbare Touren auf GetYourGuide öffnen.',
+  ja: 'リアルタイムの料金と即時確認：予約可能なツアーを GetYourGuide で開く。',
   es: 'Precios en tiempo real y confirmación inmediata: abre las excursiones reservables en GetYourGuide.',
-  'pt-BR': 'Preços em tempo real e confirmação imediata — abra os passeios reserváveis no GetYourGuide.',
+  'pt-BR': 'Preços em tempo real e confirmação imediata: abra os passeios reserváveis no GetYourGuide.',
   'zh-CN': '实时价格、即时确认——在 GetYourGuide 打开可预订的行程。',
-  ko: '실시간 가격과 즉시 확정 — GetYourGuide에서 예약 가능한 투어를 확인하세요.',
-  fr: 'Prix en temps réel et confirmation immédiate — ouvrez les excursions réservables sur GetYourGuide.',
+  ko: '실시간 가격과 즉시 확정: GetYourGuide에서 예약 가능한 투어를 확인하세요.',
+  fr: 'Prix en temps réel et confirmation immédiate: ouvrez les excursions réservables sur GetYourGuide.',
   it: 'Prezzi in tempo reale e conferma immediata: apri le escursioni prenotabili su GetYourGuide.',
-  nl: 'Actuele prijzen en directe bevestiging — open de boekbare tours op GetYourGuide.',
-  sv: 'Aktuella priser och direkt bekräftelse — öppna de bokningsbara turerna på GetYourGuide.',
+  nl: 'Actuele prijzen en directe bevestiging: open de boekbare tours op GetYourGuide.',
+  sv: 'Aktuella priser och direkt bekräftelse: öppna de bokningsbara turerna på GetYourGuide.',
 };
 
 const SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };

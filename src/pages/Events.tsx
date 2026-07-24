@@ -30,13 +30,13 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     { monthKey: 'June', items: [
       { name: 'Midnight Sun Window opens', date: 'Jun 6, 2026', city: 'Above Arctic Circle', body: 'Sun stops setting. Continues until July 7.' },
       { name: 'Midnight Sun Film Festival', date: 'Jun 10–14, 2026', city: 'Sodankylä', body: '80+ films. The 03:00 screening at the 17th-century wooden church is the most photographed.' },
-      { name: 'Juhannus / Midsummer', date: 'Jun 19–21, 2026', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out — locals leave.' },
+      { name: 'Juhannus / Midsummer', date: 'Jun 19–21, 2026', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out; locals leave.' },
       { name: 'Air Guitar World Championships qualifier', date: 'Jun, Oulu', city: 'Oulu', body: 'Qualifier for the August Oulu finals. ECoC2026 expanded programme.' },
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock Festival 2026', date: 'Jul 24–26, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 60 000 visitors, three days, Kuusisaari park." },
       { name: 'Jutajaiset Folklore Festival', date: 'Mid-July', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.' },
-      { name: 'Elojazz Festival', date: 'Late July', city: 'Oulu', body: 'Late-July jazz week — outdoor stages around Rotuaari.' },
+      { name: 'Elojazz Festival', date: 'Late July', city: 'Oulu', body: 'Late-July jazz week: outdoor stages around Rotuaari.' },
     ]},
     { monthKey: 'August', items: [
       { name: 'Air Guitar World Championships Final', date: 'Late August', city: 'Oulu', body: 'The actual world finals. 40 countries, packed Rotuaari park, locals from age 8 to 80.' },
@@ -49,7 +49,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'December', items: [
       { name: 'Christmas in Rovaniemi', date: 'Dec 1–24, 2026', city: 'Rovaniemi', body: 'Tourist peak. Bars run extended hours; Roy Club queues are 45 minutes deep on Saturdays.' },
-      { name: "New Year's Eve fireworks", date: 'Dec 31, 2026', city: 'All cities', body: "Public fireworks at midnight — Rovaniemi central square, Oulu's market square, Levi slope." },
+      { name: "New Year's Eve fireworks", date: 'Dec 31, 2026', city: 'All cities', body: "Public fireworks at midnight: Rovaniemi central square, Oulu's market square, Levi slope." },
     ]},
   ],
   fi: [
@@ -71,13 +71,13 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     { monthKey: 'June', items: [
       { name: 'Keskiyön auringon ikkuna avautuu', date: '6.6.2026', city: 'Napapiirin pohjoispuoli', body: 'Aurinko lakkaa laskemasta. Jatkuu 7. heinäkuuta saakka.' },
       { name: 'Keskiyön auringon filmifestivaali', date: '10.–14.6.2026', city: 'Sodankylä', body: '80+ elokuvaa. 03:00-näytös 1600-luvun puukirkossa on kuvatuin.' },
-      { name: 'Juhannus', date: '19.–21.6.2026', city: 'Kaikkialla', body: 'Kokot, sauna, järviuinnit, mökkiviikonloput. Kaupungit tyhjenevät — paikalliset lähtevät.' },
+      { name: 'Juhannus', date: '19.–21.6.2026', city: 'Kaikkialla', body: 'Kokot, sauna, järviuinnit, mökkiviikonloput. Kaupungit tyhjenevät; paikalliset lähtevät.' },
       { name: 'Ilmakitaransoiton MM-karsinta', date: 'Kesäkuu, Oulu', city: 'Oulu', body: 'Karsinta elokuun Oulun finaaleihin. ECoC2026:n laajennettu ohjelma.' },
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock-festivaali 2026', date: '24.–26.7.2026', city: 'Oulu', body: 'Pohjois-Suomen suurin rockfestivaali. 60 000 kävijää, kolme päivää, Kuusisaaren puisto.' },
       { name: 'Jutajaiset-folkloristifestivaali', date: 'Heinäkuun puoliväli', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
-      { name: 'Elojazz-festivaali', date: 'Heinäkuun loppu', city: 'Oulu', body: 'Heinäkuun lopun jazz-viikko — ulkoilmalavat Rotuaarin ympärillä.' },
+      { name: 'Elojazz-festivaali', date: 'Heinäkuun loppu', city: 'Oulu', body: 'Heinäkuun lopun jazz-viikko: ulkoilmalavat Rotuaarin ympärillä.' },
     ]},
     { monthKey: 'August', items: [
       { name: 'Ilmakitaransoiton MM-finaali', date: 'Elokuun loppu', city: 'Oulu', body: 'Varsinaiset MM-finaalit. 40 maata, täysi Rotuaarin puisto, paikalliset 8-vuotiaista 80-vuotiaisiin.' },
@@ -90,7 +90,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'December', items: [
       { name: 'Joulu Rovaniemellä', date: '1.–24.12.2026', city: 'Rovaniemi', body: 'Turistihuippu. Baarit pidentävät aukioloaikoja; Roy Clubin jonot 45 minuutin pituisia lauantaisin.' },
-      { name: 'Uudenvuoden ilotulitukset', date: '31.12.2026', city: 'Kaikki kaupungit', body: 'Julkiset ilotulitukset keskiyöllä — Rovaniemen keskustaaukio, Oulun kauppatori, Levin rinne.' },
+      { name: 'Uudenvuoden ilotulitukset', date: '31.12.2026', city: 'Kaikki kaupungit', body: 'Julkiset ilotulitukset keskiyöllä: Rovaniemen keskustaaukio, Oulun kauppatori, Levin rinne.' },
     ]},
   ],
   de: [
@@ -112,17 +112,17 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     { monthKey: 'June', items: [
       { name: 'Mitternachtssonnen-Fenster beginnt', date: '6. Jun 2026', city: 'Nördlich des Polarkreises', body: 'Die Sonne hört auf unterzugehen. Bis zum 7. Juli.' },
       { name: 'Filmfestival der Mitternachtssonne', date: '10.–14. Jun 2026', city: 'Sodankylä', body: 'Über 80 Filme. Die Vorführung um 03:00 Uhr in der Holzkirche aus dem 17. Jahrhundert ist die meistfotografierte.' },
-      { name: 'Juhannus / Mittsommer', date: '19.–21. Jun 2026', city: 'Überall', body: 'Lagerfeuer, Sauna, Seebaden, Hütten-Wochenenden. Die Städte leeren sich — die Einheimischen fahren raus.' },
+      { name: 'Juhannus / Mittsommer', date: '19.–21. Jun 2026', city: 'Überall', body: 'Lagerfeuer, Sauna, Seebaden, Hütten-Wochenenden. Die Städte leeren sich; die Einheimischen fahren raus.' },
       { name: 'Luftgitarren-WM-Qualifikation', date: 'Juni, Oulu', city: 'Oulu', body: 'Qualifikation für das August-Finale in Oulu. Erweitertes Programm zur Kulturhauptstadt 2026.' },
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock Festival 2026', date: '24.–26. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 60 000 Besucher, drei Tage, Kuusisaari-Park.' },
       { name: 'Jutajaiset Folklorefestival', date: 'Mitte Juli', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
-      { name: 'Elojazz-Festival', date: 'Ende Juli', city: 'Oulu', body: 'Jazzwoche Ende Juli — Open-Air-Bühnen rund um den Rotuaari.' },
+      { name: 'Elojazz-Festival', date: 'Ende Juli', city: 'Oulu', body: 'Jazzwoche Ende Juli: Open-Air-Bühnen rund um den Rotuaari.' },
     ]},
     { monthKey: 'August', items: [
       { name: 'Luftgitarren-WM-Finale', date: 'Ende August', city: 'Oulu', body: 'Das eigentliche Weltfinale. 40 Nationen, voll besetzter Rotuaari-Park, Einheimische zwischen 8 und 80.' },
-      { name: 'Ijahis Idja — Samisches Musikfestival', date: 'Mitte August', city: 'Inari', body: 'Indigenes Musikfestival im Spätsommerlicht. Das, was einem Clubabend in Inari am nächsten kommt.' },
+      { name: 'Ijahis Idja: Samisches Musikfestival', date: 'Mitte August', city: 'Inari', body: 'Indigenes Musikfestival im Spätsommerlicht. Das, was einem Clubabend in Inari am nächsten kommt.' },
       { name: 'Simerock', date: 'Ende August', city: 'Rovaniemi', body: 'Spätsommer-Rockfestival. Lokales Lappland-Publikum, kleiner als Qstock, aber härter.' },
     ]},
     { monthKey: 'November', items: [
@@ -131,7 +131,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'December', items: [
       { name: 'Weihnachten in Rovaniemi', date: '1.–24. Dez 2026', city: 'Rovaniemi', body: 'Touristen-Hochsaison. Bars haben verlängerte Öffnungszeiten; samstags 45-minütige Schlangen vor dem Roy Club.' },
-      { name: 'Silvester-Feuerwerk', date: '31. Dez 2026', city: 'Alle Städte', body: 'Öffentliches Feuerwerk um Mitternacht — Hauptplatz in Rovaniemi, Marktplatz in Oulu, Skihang in Levi.' },
+      { name: 'Silvester-Feuerwerk', date: '31. Dez 2026', city: 'Alle Städte', body: 'Öffentliches Feuerwerk um Mitternacht: Hauptplatz in Rovaniemi, Marktplatz in Oulu, Skihang in Levi.' },
     ]},
   ],
 };

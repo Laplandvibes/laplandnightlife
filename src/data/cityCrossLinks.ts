@@ -30,7 +30,7 @@ export function getCrossLinks(city: City): CrossLink[] {
     links.push({
       site: 'LaplandSkiResorts',
       url: 'https://laplandskiresorts.com',
-      label: `Ski ${city.name} — slopes, lifts, ski schools`,
+      label: `Ski ${city.name}: slopes, lifts, ski schools`,
       why: 'Slope counts, lift-map, ski-school comparisons.',
       accent: ACCENT.ski,
     });
@@ -64,7 +64,7 @@ export function getCrossLinks(city: City): CrossLink[] {
       site: 'LaplandStays',
       url: 'https://laplandstays.com',
       label: `Where to sleep in ${city.name}`,
-      why: 'Hotels, cabins, igloos and wilderness lodges — verified.',
+      why: 'Hotels, cabins, igloos and wilderness lodges. Verified.',
       accent: ACCENT.stay,
     },
     {
@@ -77,7 +77,7 @@ export function getCrossLinks(city: City): CrossLink[] {
     {
       site: 'LaplandBars',
       url: 'https://laplandbars.com',
-      label: `${city.name} bars — cocktails & craft beer`,
+      label: `${city.name} bars: cocktails & craft beer`,
       why: 'The bar scene before the late-night clubs open.',
       accent: ACCENT.food,
     }
@@ -87,7 +87,7 @@ export function getCrossLinks(city: City): CrossLink[] {
 }
 
 /** Adjacent / nearby cities by region + drive time.
- *  Drives the "Nearby in Lapland" section on each city page. */
+ *  Drives the "Nearby in the North" section on each city page. */
 export const NEARBY: Record<string, string[]> = {
   oulu: ['kemi', 'ruka'],
   rovaniemi: ['kemi', 'levi', 'sodankyla', 'pyha-luosto'],

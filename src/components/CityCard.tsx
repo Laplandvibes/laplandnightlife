@@ -22,7 +22,11 @@ export default function CityCard({ city }: { city: City }) {
       <div className="aspect-[4/3] relative overflow-hidden">
         <img
           src={city.img}
-          alt={`${city.name} nightlife — bars and clubs in Finnish Lapland`}
+          alt={city.slug === 'ruka'
+            ? `${city.name} nightlife: bars and clubs in Kuusamo, just south of the Lapland border`
+            : city.slug === 'oulu'
+              ? `${city.name} nightlife: bars and clubs in North Ostrobothnia, gateway to Lapland`
+              : `${city.name} nightlife: bars and clubs in Finnish Lapland`}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />

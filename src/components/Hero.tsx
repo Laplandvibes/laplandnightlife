@@ -24,7 +24,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
         role="img"
-        aria-label={isSummer ? 'A midsummer bonfire on a Lapland lake under the midnight sun' : 'Aurora glowing over a Finnish Lapland nightlife scene — bars and the night sky'}
+        aria-label={isSummer ? 'A midsummer bonfire on a Lapland lake under the midnight sun' : 'Aurora glowing over a Finnish Lapland nightlife scene: bars and the night sky'}
       />
       {/* Center scrim — darkens behind the headline block so white text stays legible
           even over a bright midnight-sun image (Vesa: "liian kirkas, tekstit pitää tulla esiin"). */}

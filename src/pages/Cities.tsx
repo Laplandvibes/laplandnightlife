@@ -29,7 +29,7 @@ export default function Cities() {
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: 'url(/images/hero/cities-rovaniemi-bridge.webp)' }}
           role="img"
-          aria-label={`${c.heroH} — nightlife bars and clubs across Finnish Lapland`}
+          aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-night/60 via-night/80 to-night" />
         <div className="relative max-w-5xl mx-auto text-center">

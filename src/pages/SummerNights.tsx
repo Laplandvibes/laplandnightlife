@@ -70,7 +70,7 @@ export default function SummerNights() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${IMG.summerHero})` }}
             role="img"
-            aria-label="Midnight sun over a Finnish Lapland summer night — open-air bars and festivals"
+            aria-label="Midnight sun over a Finnish Lapland summer night, open-air bars and festivals"
           />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-night to-transparent pointer-events-none" />
 

@@ -172,7 +172,7 @@ const overlay: Record<string, CityOverlay> = {
   },
   ruka: {
     region: '芬兰东北部',
-    blurb: '按滑雪人次计算，芬兰第二大滑雪度假区。',
+    blurb: '按滑雪人次计算，芬兰第二大滑雪度假区，拉普兰以南不远。',
     pageTagline: '熊出没之地的滑雪场。',
     intro: '鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎——它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。淡季村子非常安静；11月到4月则火力全开。',
     venues: {

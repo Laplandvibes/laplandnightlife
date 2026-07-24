@@ -150,7 +150,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'La segunda mayor zona esquiable de Finlandia.',
     pageTagline: 'La segunda mayor zona esquiable de Finlandia.',
-    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos — Äkäslompolo (norte) y Ylläsjärvi (sur) — conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el segundo más grande de Finlandia.',
+    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el segundo más grande de Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'El après más concurrido de Äkäslompolo, junto a las pistas.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cocina', note: 'Pub-restaurante de Äkäslompolo: grifos, comida de pub y deporte.' },
@@ -171,7 +171,7 @@ const overlay: Record<string, CityOverlay> = {
   },
   ruka: {
     region: 'Noreste de Finlandia',
-    blurb: 'La segunda estación de esquí de Finlandia por jornadas de esquiador.',
+    blurb: 'La segunda estación de esquí de Finlandia por jornadas de esquiador, justo al sur de Laponia.',
     pageTagline: 'Estación de esquí en tierra de osos.',
     intro: 'Ruka es técnicamente Kuusamo y técnicamente no es Laponia, pero a los esquiadores les da igual: es una de las estaciones más concurridas de Finlandia y la semana de apertura de noviembre es la más ruidosa. Zone es el après central al pie de las pistas, con Piste y Colorado Bar llevando la noche adelante. Fuera de temporada el pueblo queda muy tranquilo; de noviembre a abril funciona a plena capacidad.',
     venues: {

@@ -43,7 +43,7 @@ export default function PillarHero({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bgImage})`, filter: 'saturate(1.2)' }}
         role="img"
-        aria-label={imageAlt ?? `${title} — Finnish Lapland nightlife`}
+        aria-label={imageAlt ?? `${title}: Finnish Lapland nightlife`}
       />
       {/* Full dark wash + center radial scrim so the centered text stays legible
           even over the brightest pillar images. Sits under the neon accents. */}

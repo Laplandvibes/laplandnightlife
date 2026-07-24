@@ -8,7 +8,7 @@ export default function CookiePolicy() {
     <>
       <PageSeo
         title="Cookie Policy"
-        description="How LaplandNightlife uses cookies — GDPR compliant. Consent default-denied. Operated by Lapeso Oy."
+        description="How LaplandNightlife uses cookies. GDPR compliant. Consent default-denied. Operated by Lapeso Oy."
         path="/cookie-policy"
       />
       <CookieContent siteName="LaplandNightlife" lang={lang} />

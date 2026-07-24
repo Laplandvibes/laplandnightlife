@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <>
       <PageSeo
         title="Privacy Policy"
-        description="How LaplandNightlife handles your data — GDPR compliant. Operated by Lapeso Oy."
+        description="How LaplandNightlife handles your data. GDPR compliant. Operated by Lapeso Oy."
         path="/privacy"
       />
       <PrivacyContent siteName="LaplandNightlife" lang={lang} />

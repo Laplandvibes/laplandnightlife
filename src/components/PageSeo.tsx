@@ -130,7 +130,13 @@ export function citySchema(cityName: string, slug: string, description: string) 
       name: cityName,
       description,
       url: `${ORIGIN}/city/${slug}`,
-      containedInPlace: { '@type': 'Place', name: 'Finnish Lapland' },
+      // Ruka/Kuusamo ja Oulu ovat Pohjois-Pohjanmaata, eivat Lapin maakuntaa - schema ei saa vaittaa toisin.
+      containedInPlace: {
+        '@type': 'Place',
+        name: slug === 'ruka' ? 'Kuusamo, North Ostrobothnia, Finland'
+          : slug === 'oulu' ? 'Oulu, North Ostrobothnia, Finland'
+          : 'Finnish Lapland',
+      },
     },
     {
       '@type': 'BreadcrumbList',
