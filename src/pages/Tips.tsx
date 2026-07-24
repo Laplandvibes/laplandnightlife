@@ -9,7 +9,9 @@ export default function Tips() {
   const lang = useLang();
   const to = useLocalePath();
   const c = COPY[lang].tips;
-  const path = lang === 'en' ? '/tips' : `/${lang}/tips`;
+  // useLocalePath maps pt-BR/zh-CN/ko to /br /cn /kr — raw `/${lang}/…`
+  // produced double-prefixed client-side canonicals on those three locales.
+  const path = to('/tips');
 
   const tips = [
     { h: c.t1H, icon: AlertTriangle, body: c.t1Body, to: to('/nightclubs') },

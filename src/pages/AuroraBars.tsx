@@ -1,16 +1,19 @@
-import { Sparkles } from 'lucide-react';
+import { Sparkles, CalendarDays, Snowflake, ClipboardCheck, BellRing } from 'lucide-react';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
 import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
-import { useLang } from '../i18n/useLang';
+import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function AuroraBars() {
   const lang = useLang();
+  const to = useLocalePath();
   const c = COPY[lang].aurora;
-  const path = lang === 'en' ? '/aurora-bars' : `/${lang}/aurora-bars`;
+  // useLocalePath maps pt-BR/zh-CN/ko to /br /cn /kr — raw `/${lang}/…`
+  // produced double-prefixed client-side canonicals on those three locales.
+  const path = to('/aurora-bars');
 
   const venues = [
     { h: c.v1H, where: c.v1Where, body: c.v1Body, type: c.v1Type },
@@ -60,15 +63,29 @@ export default function AuroraBars() {
         </div>
       </section>
 
+      {/* Icon content cards (skiresorts recipe) — breaks the former list wall.
+          Icons match the copy: season calendar, ice bar, reservations, wake-up. */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">{c.planH}</h2>
-          <ul className="space-y-3 text-sm text-white/75">
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan1L}</strong> {c.plan1}</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan2L}</strong> {c.plan2}</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan3L}</strong> {c.plan3}</li>
-            <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.plan4L}</strong> {c.plan4}</li>
-          </ul>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-3xl text-white tracking-tight mb-8 text-center">{c.planH}</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { icon: CalendarDays, l: c.plan1L, body: c.plan1 },
+              { icon: Snowflake, l: c.plan2L, body: c.plan2 },
+              { icon: ClipboardCheck, l: c.plan3L, body: c.plan3 },
+              { icon: BellRing, l: c.plan4L, body: c.plan4 },
+            ].map((p) => (
+              <div key={p.l} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple/10 border border-purple/30 text-purple-light shrink-0">
+                    <p.icon size={18} strokeWidth={1.8} />
+                  </span>
+                  <h3 className="font-heading text-lg text-white tracking-tight leading-tight">{p.l.replace(/[:：]\s*$/, '')}</h3>
+                </div>
+                <p className="text-sm text-white/75 leading-relaxed">{p.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

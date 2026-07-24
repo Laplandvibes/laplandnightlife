@@ -4,7 +4,7 @@ import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
-import { useLang, type Lang } from '../i18n/useLang';
+import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 type Item = { name: string; date: string; city: string; body: string };
@@ -152,9 +152,11 @@ const EVENTS: Record<Lang, MonthBlock[]> = {
 
 export default function Events() {
   const lang = useLang();
+  const to = useLocalePath();
   const c = COPY[lang].events;
-  const langPrefix = lang === 'en' ? '' : `/${lang === 'pt-BR' ? 'br' : lang === 'zh-CN' ? 'cn' : lang}`;
-  const path = `${langPrefix}/events`;
+  // useLocalePath maps ALL non-EN prefixes correctly — the old inline mapping
+  // handled br/cn but forgot ko→kr, producing a bad client-side canonical.
+  const path = to('/events');
   const data = EVENTS[lang];
 
   return (

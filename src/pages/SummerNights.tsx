@@ -17,7 +17,9 @@ export default function SummerNights() {
   const lang = useLang();
   const to = useLocalePath();
   const c = COPY[lang].summer;
-  const path = lang === 'en' ? '/summer-nights' : `/${lang}/summer-nights`;
+  // useLocalePath maps pt-BR/zh-CN/ko to /br /cn /kr — raw `/${lang}/…`
+  // produced double-prefixed client-side canonicals on those three locales.
+  const path = to('/summer-nights');
 
   const cityScenes = [
     { city: c.cs1City, when: c.cs1When, body: c.cs1Body, img: IMG.summerOulu, to: to('/city/oulu') },
@@ -84,7 +86,9 @@ export default function SummerNights() {
           </div>
         </div>
 
-        <div className="relative bg-night px-4 sm:px-6 lg:px-8 py-14 sm:py-20 border-b border-white/5">
+        {/* overflow-hidden: the 700px blur circle extended the layout viewport
+            to 538px on 375px mobile (zoom-out overflow) without it. */}
+        <div className="relative bg-night px-4 sm:px-6 lg:px-8 py-14 sm:py-20 border-b border-white/5 overflow-hidden">
           <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[700px] h-[200px] bg-amber-300/10 rounded-full blur-[120px] pointer-events-none" />
           <div className="relative max-w-4xl mx-auto text-center">
             <p className="text-[0.65rem] uppercase tracking-[0.32em] text-neon-yellow font-bold mb-4">

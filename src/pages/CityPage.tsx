@@ -75,7 +75,9 @@ export default function CityPage() {
     .filter((cc): cc is NonNullable<typeof cc> => Boolean(cc))
     .map((cc) => localizeCity(cc, lang));
 
-  const path = lang === 'en' ? `/city/${city.slug}` : `/${lang}/city/${city.slug}`;
+  // useLocalePath maps pt-BR/zh-CN/ko to /br /cn /kr — raw `/${lang}/…`
+  // produced double-prefixed client-side canonicals on those three locales.
+  const path = to(`/city/${city.slug}`);
 
   return (
     <>

@@ -83,7 +83,7 @@ export default function Home() {
       <PageSeo
         title={c.seoTitle}
         description={c.seoDesc}
-        path={lang === 'en' ? '/' : `/${lang}`}
+        path={to('/')}
         jsonLd={homeJsonLd}
       />
 

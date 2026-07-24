@@ -3,13 +3,27 @@ import PageBreadcrumb from '../components/PageBreadcrumb';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
 import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
-import { useLang } from '../i18n/useLang';
+import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { UPLIFT } from '../locales/upliftI18n';
 
 export default function Cities() {
   const lang = useLang();
+  const to = useLocalePath();
   const c = COPY[lang].cities;
-  const path = lang === 'en' ? '/cities' : `/${lang}/cities`;
+  const u = UPLIFT[lang];
+  // useLocalePath maps pt-BR/zh-CN/ko to /br /cn /kr — raw `/${lang}/…`
+  // produced double-prefixed client-side canonicals on those three locales.
+  const path = to('/cities');
+
+  // Stat band computed from the CITIES data itself — the numbers can never
+  // drift from what the page below actually lists.
+  const stats = [
+    { v: String(CITIES.length), l: u.cityStats.cities },
+    { v: String(CITIES.reduce((n, city) => n + city.venues.length, 0)), l: u.cityStats.venues },
+    { v: String(CITIES.filter((city) => city.tag === 'Real scene').length), l: u.cityStats.scenes },
+    { v: String(CITIES.filter((city) => city.tag === 'Ski resort').length), l: u.cityStats.ski },
+  ];
 
   return (
     <>
@@ -42,6 +56,21 @@ export default function Cities() {
       </section>
 
       <PageBreadcrumb />
+
+      {/* Stat glass tiles (skiresorts recipe) — values derive from CITIES data. */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-night-light/40">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {stats.map((s) => (
+            <div
+              key={s.l}
+              className="rounded-2xl border border-white/10 bg-night/60 backdrop-blur-md p-4 md:p-5 text-center shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+            >
+              <p className="font-heading text-4xl md:text-5xl text-pink leading-none mb-2">{s.v}</p>
+              <p className="text-xs sm:text-sm text-white/75 leading-snug">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

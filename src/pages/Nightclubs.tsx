@@ -5,8 +5,9 @@ import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
 import AirportRideAd from '../components/AirportRideAd';
 import { IMG } from '../data/images';
-import { useLang, type Lang } from '../i18n/useLang';
+import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { UPLIFT, type OpenKey } from '../locales/upliftI18n';
 
 // Localized lead for the airport-transfer ad (getting to and from the clubs).
 const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
@@ -24,22 +25,36 @@ const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   sv: { eyebrow: 'Dit och hem', h: 'Skjutsen fram till dörren, och tillbaka' },
 };
 
-const top = [
-  { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', open: 'Wed-Sat in season' },
-  { name: 'Roy Club', city: 'Rovaniemi', cap: '-', open: 'Weekends, late' },
-  { name: 'Half Moon Night Club', city: 'Rovaniemi', cap: '-', open: 'Weekends' },
-  { name: '45 Special', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
-  { name: 'St Michael', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
-  { name: 'Never Grow Old', city: 'Oulu', cap: '-', open: 'Wed-Sat' },
-  { name: 'Kaarlenholvi', city: 'Oulu', cap: '-', open: 'Fri-Sat disco' },
-  { name: 'Zone Bar', city: 'Ruka', cap: '-', open: 'Daily in season' },
-  { name: 'Club Nord (Hotel Ivalo)', city: 'Ivalo', cap: '-', open: 'Seasonal' },
+// Opening-hours values live in upliftI18n (were hardcoded EN — leaked on 11 locales).
+const top: { name: string; city: string; cap: string; openKey: OpenKey }[] = [
+  { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', openKey: 'wedSatSeason' },
+  { name: 'Roy Club', city: 'Rovaniemi', cap: '-', openKey: 'weekendsLate' },
+  { name: 'Half Moon Night Club', city: 'Rovaniemi', cap: '-', openKey: 'weekends' },
+  { name: '45 Special', city: 'Oulu', cap: '-', openKey: 'wedSat' },
+  { name: 'St Michael', city: 'Oulu', cap: '-', openKey: 'wedSat' },
+  { name: 'Never Grow Old', city: 'Oulu', cap: '-', openKey: 'wedSat' },
+  { name: 'Kaarlenholvi', city: 'Oulu', cap: '-', openKey: 'friSatDisco' },
+  { name: 'Zone Bar', city: 'Ruka', cap: '-', openKey: 'dailySeason' },
+  { name: 'Club Nord (Hotel Ivalo)', city: 'Ivalo', cap: '-', openKey: 'seasonal' },
 ];
 
 export default function Nightclubs() {
   const lang = useLang();
+  const to = useLocalePath();
   const c = COPY[lang].nightclubs;
-  const path = lang === 'en' ? '/nightclubs' : `/${lang}/nightclubs`;
+  const u = UPLIFT[lang];
+  // useLocalePath maps pt-BR/zh-CN/ko to their real /br /cn /kr prefixes —
+  // raw `/${lang}/…` produced double-prefixed client-side canonicals.
+  const path = to('/nightclubs');
+
+  // Stat tiles — every number already lives in this page's own copy
+  // (tier1Body, heroEyebrow, tier2Body) or the home FAQ (last call 03:30).
+  const stats = [
+    { v: '1 700', l: u.clubStats.capacity },
+    { v: '50+', l: u.clubStats.venues },
+    { v: '8', l: u.clubStats.strip },
+    { v: '03:30', l: u.clubStats.lastCall },
+  ];
 
   const tiers = [
     { h: c.tier1H, where: c.tier1Where, body: c.tier1Body, accent: 'from-pink/30 to-night-light' },
@@ -70,6 +85,22 @@ export default function Nightclubs() {
         accentClass="from-pink/25 via-night/75 to-night"
       />
 
+      {/* Stat glass tiles (skiresorts recipe) — real numbers only, all sourced
+          from copy that already ships on this page. */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-night-light/40">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {stats.map((s) => (
+            <div
+              key={s.l}
+              className="rounded-2xl border border-white/10 bg-night/60 backdrop-blur-md p-4 md:p-5 text-center shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
+            >
+              <p className="font-heading text-4xl md:text-5xl text-pink leading-none mb-2">{s.v}</p>
+              <p className="text-xs sm:text-sm text-white/75 leading-snug">{s.l}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-5">
           {tiers.map((t) => (
@@ -92,8 +123,10 @@ export default function Nightclubs() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.listH}</h2>
-          <div className="bg-night/60 border border-white/10 rounded-2xl overflow-hidden">
-            <table className="w-full text-left text-sm">
+          {/* overflow-x-auto: the 4-column table must scroll inside its card at
+              375 px instead of stretching the page. */}
+          <div className="bg-night/60 border border-white/10 rounded-2xl overflow-hidden overflow-x-auto">
+            <table className="w-full min-w-[560px] text-left text-sm">
               <thead className="bg-night-light/60 text-white/80 text-[0.65rem] uppercase tracking-wider">
                 <tr>
                   <th className="px-5 py-3">{c.tVenue}</th>
@@ -108,7 +141,7 @@ export default function Nightclubs() {
                     <td className="px-5 py-3 font-heading text-lg text-white tracking-tight">{v.name}</td>
                     <td className="px-5 py-3 text-pink">{v.city}</td>
                     <td className="px-5 py-3 text-white/70">{v.cap}</td>
-                    <td className="px-5 py-3 text-white/80">{v.open}</td>
+                    <td className="px-5 py-3 text-white/80">{u.open[v.openKey]}</td>
                   </tr>
                 ))}
               </tbody>
