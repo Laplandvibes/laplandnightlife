@@ -84,39 +84,32 @@ export default function PartnerSlot({ partner, variant, locale, className, place
           href={mediaSiteUrl(placeholder.siteSlug, locale)}
           onClick={() => fireAdvertiseHereClick(placeholder.siteSlug, placeholder.slotId)}
           className={[
-            'group relative flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 w-full',
-            'rounded-2xl border-2 border-dashed px-4 py-3 sm:px-6 sm:py-3.5 transition-colors duration-300',
-            light
-              ? 'border-black/15 bg-black/[0.02] hover:border-[#EC4899]/50'
-              : 'border-white/20 bg-white/[0.02] hover:border-[#EC4899]/50',
+            'group relative flex flex-wrap items-center justify-between gap-x-4 gap-y-2 w-full',
+            // Vaalea lumipinta myyntipaikalle (Vesa 2026-07-24): erottuu sekä
+            // tummilta että vaaleilta sivustoilta, dashed-pinkki = "vapaa paikka".
+            'rounded-2xl border-2 border-dashed px-5 py-4 sm:px-7 sm:py-5 transition-all duration-300',
+            'bg-[#F9FAFB] border-[#EC4899]/45 hover:border-[#EC4899]',
             className,
           ]
             .filter(Boolean)
             .join(' ')}
+          // Tailwind v4 ei emitoi arbitrary shadow-[...] -luokkia tässä repossa,
+          // joten kanoninen pinkki hehku annetaan inline-tyylinä.
+          style={{ boxShadow: light ? '0 8px 24px rgba(236,72,153,0.14)' : '0 12px 40px rgba(236,72,153,0.22)' }}
           aria-label={`${topLabel}: ${t.wantYourAd}`}
         >
-          <span className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2.5 min-w-0">
+          <span className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 min-w-0">
             <span className="flex items-center gap-2 min-w-0">
-              <span aria-hidden="true" className="shrink-0 inline-block w-1.5 h-1.5 rounded-full bg-[#EC4899]/70" />
-              <span
-                className={[
-                  'text-[10px] font-semibold uppercase tracking-widest truncate',
-                  light ? 'text-gray-500' : 'text-[#F9FAFB]/45',
-                ].join(' ')}
-              >
+              <span aria-hidden="true" className="shrink-0 inline-block w-2 h-2 rounded-full bg-[#EC4899]" />
+              <span className="text-[10px] font-semibold uppercase tracking-widest truncate text-[#0F172A]/55">
                 {topLabel}
               </span>
             </span>
-            <span
-              className={[
-                'font-heading text-lg sm:text-xl tracking-wide leading-tight',
-                light ? 'text-gray-900' : 'text-[#F9FAFB]',
-              ].join(' ')}
-            >
+            <span className="font-heading text-xl sm:text-2xl tracking-wide leading-tight text-[#0F172A]">
               {t.wantYourAd}
             </span>
           </span>
-          <span className="shrink-0 text-sm font-semibold text-[#EC4899] group-hover:translate-x-0.5 transition-transform duration-200">
+          <span className="shrink-0 inline-flex items-center rounded-full bg-[#EC4899] px-4 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-[#DB2777] group-hover:translate-x-0.5 transition-all duration-200">
             {t.bookCta}
           </span>
         </a>
@@ -130,37 +123,28 @@ export default function PartnerSlot({ partner, variant, locale, className, place
         onClick={() => fireAdvertiseHereClick(placeholder.siteSlug, placeholder.slotId)}
         className={[
           'group relative flex h-full flex-col items-center justify-center text-center gap-2.5',
-          'rounded-2xl border-2 border-dashed px-6 py-8 sm:py-10 transition-colors duration-300',
-          light
-            ? 'border-black/15 bg-black/[0.02] hover:border-[#EC4899]/50'
-            : 'border-white/20 bg-white/[0.02] hover:border-[#EC4899]/50',
+          // Vaalea lumipinta myyntipaikalle (Vesa 2026-07-24): ks. banner-variantti.
+          'rounded-2xl border-2 border-dashed px-6 py-8 sm:py-10 transition-all duration-300',
+          'bg-[#F9FAFB] border-[#EC4899]/45 hover:border-[#EC4899]',
           className,
         ]
           .filter(Boolean)
           .join(' ')}
+        // Ks. banner-variantti: inline-hehku, koska arbitrary shadow ei emitoidu.
+        style={{ boxShadow: light ? '0 8px 24px rgba(236,72,153,0.14)' : '0 12px 40px rgba(236,72,153,0.22)' }}
         aria-label={t.wantYourAd}
       >
-        <span
-          className={[
-            'inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest',
-            light ? 'text-gray-500' : 'text-[#F9FAFB]/45',
-          ].join(' ')}
-        >
-          <span aria-hidden="true" className="inline-block w-1.5 h-1.5 rounded-full bg-[#EC4899]/70" />
+        <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#0F172A]/55">
+          <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-[#EC4899]" />
           {topLabel}
         </span>
-        <p
-          className={[
-            'font-heading text-2xl sm:text-3xl tracking-wide leading-tight',
-            light ? 'text-gray-900' : 'text-[#F9FAFB]',
-          ].join(' ')}
-        >
+        <p className="font-heading text-2xl sm:text-3xl tracking-wide leading-tight text-[#0F172A]">
           {t.wantYourAd}
         </p>
-        <p className={['text-sm leading-snug max-w-xs', light ? 'text-gray-600' : 'text-[#F9FAFB]/60'].join(' ')}>
+        <p className="text-sm leading-snug max-w-xs text-[#0F172A]/65">
           {sub}
         </p>
-        <span className="mt-1 text-sm font-semibold text-[#EC4899] group-hover:translate-x-0.5 transition-transform duration-200">
+        <span className="mt-1.5 inline-flex items-center rounded-full bg-[#EC4899] px-4 py-2 text-sm font-semibold text-white shadow-sm group-hover:bg-[#DB2777] group-hover:translate-x-0.5 transition-all duration-200">
           {t.bookCta}
         </span>
       </a>

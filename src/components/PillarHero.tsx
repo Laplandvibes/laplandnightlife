@@ -79,13 +79,15 @@ export default function PillarHero({
         } pointer-events-none`}
       />
 
-      <div className="relative w-full max-w-4xl mx-auto text-center">
+      {/* lg:max-w-6xl antaa pitkille FI/DE-yhdyssanoille ("Veranstaltungskalender")
+          tilaa pysyä yhdellä rivillä; leipätekstit pitävät oman max-w-2xl-leveytensä. */}
+      <div className="relative w-full max-w-4xl lg:max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 backdrop-blur-md rounded-full px-4 py-1.5 mb-6">
           <Icon size={14} className={iconColor} />
           <span className="text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW}>{eyebrow}</span>
         </div>
         <h1
-          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95] mb-5 break-words hyphens-auto"
+          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-7xl text-white tracking-tight leading-[0.95] mb-5 break-words hyphens-auto md:hyphens-none text-balance"
           style={SHADOW}
         >
           {title}
