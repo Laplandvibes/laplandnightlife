@@ -246,7 +246,7 @@ export const AD_SLOTS_COPY: Record<AdLocale, AdSlotsCopy> = {
     slotCount: (n) => `${n} 个广告位`,
     slotOpen: '广告位招商中',
     wantYourAd: '想在这里展示您的广告吗？',
-    sponsorSub: '成为主要合作伙伴——本站最显眼的广告位。',
+    sponsorSub: '成为主要合作伙伴：本站最显眼的广告位。',
     premiumOpen: '广告位招商中',
     bookCta: '预订此广告位 →',
     bookShort: '预订 →',
