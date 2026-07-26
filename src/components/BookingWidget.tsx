@@ -30,11 +30,15 @@ export default function BookingWidget() {
     e.preventDefault();
     let href = '';
     if (tab === 'hotels') {
+      // lang decides the hotels locale, and the go/hotels Worker sends fi_FI to
+      // Sembo and everything else to Trip.com — without it this widget sent
+      // Finnish visitors past Sembo (Vesa 2026-07-26).
       href = buildAffiliateHref({
         partner: 'hotels',
         sid: 'hero_hotels_search',
         destination,
         query: { checkin, checkout, adults: guests },
+        lang,
       });
     } else if (tab === 'cars') {
       href = buildAffiliateHref({
@@ -42,6 +46,7 @@ export default function BookingWidget() {
         sid: 'hero_cars_search',
         destination: pickup,
         query: { pickup_date: checkin, dropoff_date: checkout },
+        lang,
       });
     } else {
       const dest = destination.trim().toLowerCase();
