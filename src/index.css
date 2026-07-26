@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-/* CRITICAL: Tailwind v4 must scan ../../shared/ for class names used by
-   the shared Footer/CookieBanner/NewsletterPopup/Legal components. */
-@source "../../shared/**/*.{ts,tsx}";
+/* CRITICAL: Tailwind v4 must scan the in-repo vendored shared/ copy for class
+   names used by the shared Footer/CookieBanner/NewsletterPopup/Legal components.
+   The path is src/shared/ (vendored). Do NOT point this at ../../shared/: that
+   resolves outside this repo to the monorepo copy, which exists only on local
+   dev machines, so local builds shipped ~13.7 kB of CSS that CI never built. */
+@source "./shared/**/*.{ts,tsx}";
 
 @theme {
   /* Per-site personality — Vesa-approved 2026-04-27 */
