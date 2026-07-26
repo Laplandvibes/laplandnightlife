@@ -8,7 +8,7 @@ const WHITE = '#F8FAFC';
 const PINK = '#EC4899';
 
 // ─── Contact form backend ─────────────────────────────────────────────────
-// All 27 sites post the footer contact form to the hub project's
+// All network sites post the footer contact form to the hub project's
 // `send-contact-email` edge function (CORS allows every ecosystem origin;
 // emails route to sales@laplandvibes.com + a confirmation to the sender).
 // The anon/publishable key is public by design. Hardcoded here so spoke sites
@@ -48,6 +48,7 @@ const CONTACT_FORM_COPY: Record<string, ContactFormCopy> = {
 export interface FooterDict {
   networkBadge?: string;
   tagline?: string;
+  getApp?: string;
   groups?: {
     stay?: string;
     eatDrink?: string;
@@ -117,6 +118,7 @@ const DEFAULT_DICT: Required<FooterDict> & {
 } = {
   networkBadge: 'Finnish Lapland Network',
   tagline: 'The definitive digital home for Finnish Lapland travel.',
+  getApp: 'Get the app',
   groups: {
     stay: 'Stay',
     eatDrink: 'Eat & Drink',
@@ -137,7 +139,7 @@ const DEFAULT_DICT: Required<FooterDict> & {
   },
   partner: {
     title: 'Partner With Us',
-    body: 'Advertise or collaborate across 21+ Lapland sites.',
+    body: 'Advertise or collaborate across 25+ Lapland sites.',
     cta: 'Get in Touch →',
   },
   press: {
@@ -156,17 +158,17 @@ const DEFAULT_DICT: Required<FooterDict> & {
     contact: 'Contact',
   },
   siteLabels: {
-    hotelDeals: '100+ hand-picked hotel deals',
+    hotelDeals: 'Hand-picked hotel deals',
     staysCabins: 'Stays & Cabins',
-    whereToStay: 'Glass igloos, cabins, real rates',
+    whereToStay: 'Glass igloos, cabins, lodges',
     familyFriendly: 'Family resorts + Santa visits',
     localFood: 'Sami cuisine + foraging',
     fineDining: 'Fine Dining',
     barsPubs: 'Bars & Pubs',
     activities: 'Hand-picked Arctic activities',
-    huskySafaris: 'Husky safaris from 35+ operators',
-    skiResorts: '8 ski resorts compared',
-    snowmobileTours: 'Snowmobile safaris from €120',
+    huskySafaris: 'Husky safaris, operators compared',
+    skiResorts: 'Ski resorts compared',
+    snowmobileTours: 'Snowmobile safaris & rentals',
     spaWellness: 'Saunas, spas, aurora wellness',
     nightlife: 'Nightlife',
     natureParks: 'Nature & Parks',
@@ -181,7 +183,7 @@ const DEFAULT_DICT: Required<FooterDict> & {
     luxuryVillas: 'Private villas & luxury lodges',
     tours: 'Guided tours & day trips',
     weddings: 'Arctic weddings & elopements',
-    store: 'Official Lapland store',
+    store: 'Lapland boutiques & makers',
     flights: 'Flights to Lapland',
   },
 };
@@ -199,36 +201,36 @@ type SiteLabelsKey =
   | 'carRental' | 'workInLapland';
 
 const BUILT_IN_SITE_LABELS: Record<string, Record<SiteLabelsKey, string>> = {
-  en: { hotelDeals:'100+ hand-picked hotel deals',staysCabins:'Stays & Cabins',whereToStay:'Glass igloos, cabins, real rates',familyFriendly:'Family resorts + Santa visits',localFood:'Sami cuisine + foraging',fineDining:'Fine Dining',barsPubs:'Bars & Pubs',activities:'Hand-picked Arctic activities',huskySafaris:'Husky safaris from 35+ operators',skiResorts:'8 ski resorts compared',snowmobileTours:'Snowmobile safaris from €120',spaWellness:'Saunas, spas, aurora wellness',nightlife:'Nightlife',natureParks:'Nature & Parks',travelGuide:'Travel Guide',christmas:'Christmas in Lapland, Santa Village, Aurora',giftsSouvenirs:'Gifts & Souvenirs',travelBlog:'Travel Blog',dealsOffers:'Deals & Offers',transport:'Transport',carRental:'Car Rental',workInLapland:'Work in Lapland' },
-  fi: { hotelDeals:'100+ käsin valittua hotellitarjousta',staysCabins:'Majoitus & Mökit',whereToStay:'Lasi-iglut, mökit, oikeat hinnat',familyFriendly:'Perheresortit + joulupukin tapaaminen',localFood:'Saamelaisruoka & marjastus',fineDining:'Fine dining',barsPubs:'Baarit & Pubit',activities:'Käsin valitut Arktis-elämykset',huskySafaris:'Huskysafarit 35+ operaattorilta',skiResorts:'8 hiihtokeskusta vertailussa',snowmobileTours:'Moottorikelkkasafarit alk. 120 €',spaWellness:'Saunat, kylpylät, revontuli-hyvinvointi',nightlife:'Yöelämä',natureParks:'Luonto & Puistot',travelGuide:'Matkaopas',christmas:'Joulu Lapissa, Joulupukin pajakylä, revontulet',giftsSouvenirs:'Lahjat & Matkamuistot',travelBlog:'Matkablogi',dealsOffers:'Tarjoukset',transport:'Liikenne',carRental:'Autovuokraus',workInLapland:'Työ Lapissa' },
-  de: { hotelDeals:'100+ handverlesene Hotelangebote',staysCabins:'Unterkünfte & Hütten',whereToStay:'Glasiglus, Hütten, echte Preise',familyFriendly:'Familienresorts + Weihnachtsmann-Besuche',localFood:'Samische Küche & Beerensammeln',fineDining:'Fine Dining',barsPubs:'Bars & Pubs',activities:'Handverlesene Arktis-Aktivitäten',huskySafaris:'Husky-Safaris von 35+ Anbietern',skiResorts:'8 Skigebiete im Vergleich',snowmobileTours:'Schneemobil-Safaris ab 120 €',spaWellness:'Saunas, Spas, Aurora-Wellness',nightlife:'Nachtleben',natureParks:'Natur & Parks',travelGuide:'Reiseführer',christmas:'Weihnachten in Lappland, Weihnachtsmanndorf, Polarlicht',giftsSouvenirs:'Geschenke & Souvenirs',travelBlog:'Reiseblog',dealsOffers:'Angebote',transport:'Transport',carRental:'Mietwagen',workInLapland:'Arbeiten in Lappland' },
-  ja: { hotelDeals:'100軒以上の厳選ホテル特価',staysCabins:'宿泊・コテージ',whereToStay:'ガラスイグルー、コテージ、実際の料金',familyFriendly:'ファミリーリゾート＋サンタ訪問',localFood:'サーミ料理＋ベリー摘み',fineDining:'ファインダイニング',barsPubs:'バー・パブ',activities:'厳選北極アクティビティ',huskySafaris:'35以上の業者のハスキーサファリ',skiResorts:'8つのスキーリゾート比較',snowmobileTours:'スノーモービルサファリ €120〜',spaWellness:'サウナ、スパ、オーロラ・ウェルネス',nightlife:'ナイトライフ',natureParks:'自然と公園',travelGuide:'旅行ガイド',christmas:'ラップランドのクリスマス：サンタ村、オーロラ',giftsSouvenirs:'ギフト・お土産',travelBlog:'旅行ブログ',dealsOffers:'お得な情報',transport:'交通',carRental:'レンタカー',workInLapland:'ラップランドで働く' },
-  es: { hotelDeals:'+100 ofertas de hotel seleccionadas',staysCabins:'Alojamiento y Cabañas',whereToStay:'Iglús de cristal, cabañas, precios reales',familyFriendly:'Resorts familiares + visitas a Papá Noel',localFood:'Cocina sami + recolección',fineDining:'Alta cocina',barsPubs:'Bares y pubs',activities:'Actividades árticas seleccionadas',huskySafaris:'Safaris en husky de +35 operadores',skiResorts:'8 estaciones de esquí comparadas',snowmobileTours:'Safaris en motonieve desde 120 €',spaWellness:'Saunas, spas, bienestar aurora',nightlife:'Vida nocturna',natureParks:'Naturaleza y parques',travelGuide:'Guía de viaje',christmas:'Navidad en Laponia, Aldea de Papá Noel, auroras',giftsSouvenirs:'Regalos y recuerdos',travelBlog:'Blog de viajes',dealsOffers:'Ofertas',transport:'Transporte',carRental:'Alquiler de coches',workInLapland:'Trabajar en Laponia' },
-  'pt-BR': { hotelDeals:'+100 ofertas de hotel selecionadas',staysCabins:'Hospedagens e Chalés',whereToStay:'Iglus de vidro, chalés, preços reais',familyFriendly:'Resorts familiares + visitas ao Papai Noel',localFood:'Culinária sami + colheita',fineDining:'Alta gastronomia',barsPubs:'Bares e pubs',activities:'Atividades árticas selecionadas',huskySafaris:'Safáris com huskies de +35 operadores',skiResorts:'8 estações de esqui comparadas',snowmobileTours:'Safáris de snowmobile a partir de € 120',spaWellness:'Saunas, spas, bem-estar aurora',nightlife:'Vida noturna',natureParks:'Natureza e parques',travelGuide:'Guia de viagem',christmas:'Natal na Lapônia, Vila do Papai Noel, auroras',giftsSouvenirs:'Presentes e Lembranças',travelBlog:'Blog de viagem',dealsOffers:'Ofertas',transport:'Transporte',carRental:'Aluguel de carros',workInLapland:'Trabalhar na Lapônia' },
-  'zh-CN': { hotelDeals:'100+ 精选酒店特惠',staysCabins:'住宿与小木屋',whereToStay:'玻璃穹屋、小木屋、真实价格',familyFriendly:'家庭度假村 + 圣诞老人探访',localFood:'萨米料理 + 采摘野味',fineDining:'高级餐饮',barsPubs:'酒吧',activities:'精选北极活动',huskySafaris:'35+ 运营商哈士奇雪橇游',skiResorts:'8 家滑雪度假村对比',snowmobileTours:'雪地摩托旅程 €120 起',spaWellness:'桑拿、水疗、极光养生',nightlife:'夜生活',natureParks:'自然与公园',travelGuide:'旅行指南',christmas:'拉普兰圣诞：圣诞老人村、极光',giftsSouvenirs:'礼品与纪念品',travelBlog:'旅行博客',dealsOffers:'优惠',transport:'交通',carRental:'租车',workInLapland:'在拉普兰工作' },
-  ko: { hotelDeals:'엄선한 호텔 특가 100+',staysCabins:'숙소 & 오두막',whereToStay:'글래스 이글루, 캐빈, 실제 가격',familyFriendly:'가족 리조트 + 산타 방문',localFood:'사미 요리 + 채집',fineDining:'파인다이닝',barsPubs:'바 & 펍',activities:'엄선한 북극 액티비티',huskySafaris:'35곳 이상 업체의 허스키 사파리',skiResorts:'8개 스키 리조트 비교',snowmobileTours:'스노모빌 사파리 €120부터',spaWellness:'사우나, 스파, 오로라 웰니스',nightlife:'나이트라이프',natureParks:'자연 & 공원',travelGuide:'여행 가이드',christmas:'라플란드 크리스마스, 산타 마을, 오로라',giftsSouvenirs:'기프트 & 기념품',travelBlog:'여행 블로그',dealsOffers:'특가 정보',transport:'교통',carRental:'렌터카',workInLapland:'라플란드에서 일하기' },
-  fr: { hotelDeals:'100+ offres hôtelières sélectionnées',staysCabins:'Hébergements & Chalets',whereToStay:'Igloos de verre, chalets, tarifs réels',familyFriendly:'Resorts famille + visites au Père Noël',localFood:'Cuisine sami + cueillette',fineDining:'Gastronomie',barsPubs:'Bars & Pubs',activities:'Activités arctiques sélectionnées',huskySafaris:'Safaris huskies de 35+ opérateurs',skiResorts:'8 stations de ski comparées',snowmobileTours:'Safaris en motoneige dès 120 €',spaWellness:'Saunas, spas, bien-être aurores',nightlife:'Vie nocturne',natureParks:'Nature & Parcs',travelGuide:'Guide de voyage',christmas:'Noël en Laponie, Village du Père Noël, aurores',giftsSouvenirs:'Cadeaux & Souvenirs',travelBlog:'Blog voyage',dealsOffers:'Offres',transport:'Transport',carRental:'Location de voiture',workInLapland:'Travailler en Laponie' },
-  it: { hotelDeals:'100+ offerte hotel selezionate',staysCabins:'Alloggi e Cottage',whereToStay:'Igloo di vetro, chalet, prezzi reali',familyFriendly:'Resort famiglia + visite a Babbo Natale',localFood:'Cucina sami + raccolta',fineDining:'Alta cucina',barsPubs:'Bar e Pub',activities:'Attività artiche selezionate',huskySafaris:'Safari con i husky da 35+ operatori',skiResorts:'8 stazioni sciistiche a confronto',snowmobileTours:'Safari in motoslitta da 120 €',spaWellness:'Saune, spa, benessere aurora',nightlife:'Vita notturna',natureParks:'Natura e Parchi',travelGuide:'Guida di viaggio',christmas:'Natale in Lapponia, Villaggio di Babbo Natale, aurore',giftsSouvenirs:'Regali e Souvenir',travelBlog:'Blog di viaggio',dealsOffers:'Offerte',transport:'Trasporti',carRental:'Noleggio auto',workInLapland:'Lavorare in Lapponia' },
-  nl: { hotelDeals:'100+ zorgvuldig gekozen hotelaanbiedingen',staysCabins:'Verblijven & Hutten',whereToStay:'Glasiglo\'s, cabins, echte prijzen',familyFriendly:'Gezinsresorts + bezoek aan de Kerstman',localFood:'Sami-keuken + plukken',fineDining:'Fine dining',barsPubs:'Bars & Pubs',activities:'Zorgvuldig gekozen Arctische activiteiten',huskySafaris:"Husky-safari's van 35+ operators",skiResorts:'8 skioorden vergeleken',snowmobileTours:'Sneeuwscootersafari\'s vanaf €120',spaWellness:'Sauna\'s, spa\'s, aurora-welzijn',nightlife:'Nachtleven',natureParks:'Natuur & Parken',travelGuide:'Reisgids',christmas:'Kerstmis in Lapland, Kerstmandorp, noorderlicht',giftsSouvenirs:'Cadeaus & Souvenirs',travelBlog:'Reisblog',dealsOffers:'Aanbiedingen',transport:'Vervoer',carRental:'Autoverhuur',workInLapland:'Werken in Lapland' },
-  sv: { hotelDeals:'100+ handplockade hotellerbjudanden',staysCabins:'Boende & stugor',whereToStay:'Glasigloor, stugor, verkliga priser',familyFriendly:'Familjeresorter + besök hos jultomten',localFood:'Samisk mat & bärplockning',fineDining:'Fine dining',barsPubs:'Barer & pubar',activities:'Handplockade Arktis-aktiviteter',huskySafaris:'Hundspannssafarier från 35+ researrangörer',skiResorts:'8 skidorter jämförda',snowmobileTours:'Snöskotersafarier från 120 €',spaWellness:'Bastur, spa och norrskensavkoppling',nightlife:'Nattliv',natureParks:'Natur & parker',travelGuide:'Reseguide',christmas:'Jul i Lappland, jultomtens by, norrsken',giftsSouvenirs:'Presenter & souvenirer',travelBlog:'Reseblogg',dealsOffers:'Erbjudanden',transport:'Transport',carRental:'Biluthyrning',workInLapland:'Jobba i Lappland' },
+  en: { hotelDeals:'Hand-picked hotel deals',staysCabins:'Stays & Cabins',whereToStay:'Glass igloos, cabins, lodges',familyFriendly:'Family resorts + Santa visits',localFood:'Sami cuisine + foraging',fineDining:'Fine Dining',barsPubs:'Bars & Pubs',activities:'Hand-picked Arctic activities',huskySafaris:'Husky safaris, operators compared',skiResorts:'Ski resorts compared',snowmobileTours:'Snowmobile safaris & rentals',spaWellness:'Saunas, spas, aurora wellness',nightlife:'Nightlife',natureParks:'Nature & Parks',travelGuide:'Travel Guide',christmas:'Christmas in Lapland, Santa Village, Aurora',giftsSouvenirs:'Gifts & Souvenirs',travelBlog:'Travel Blog',dealsOffers:'Deals & Offers',transport:'Transport',carRental:'Car Rental',workInLapland:'Work in Lapland' },
+  fi: { hotelDeals:'Käsin valitut hotellitarjoukset',staysCabins:'Majoitus & Mökit',whereToStay:'Lasi-iglut, mökit, erämaahotellit',familyFriendly:'Perheresortit + joulupukin tapaaminen',localFood:'Saamelaisruoka & marjastus',fineDining:'Fine dining',barsPubs:'Baarit & Pubit',activities:'Käsin valitut Arktis-elämykset',huskySafaris:'Huskysafarit, operaattorit vertailussa',skiResorts:'Hiihtokeskukset vertailussa',snowmobileTours:'Moottorikelkkasafarit & vuokraus',spaWellness:'Saunat, kylpylät, revontuli-hyvinvointi',nightlife:'Yöelämä',natureParks:'Luonto & Puistot',travelGuide:'Matkaopas',christmas:'Joulu Lapissa, Joulupukin pajakylä, revontulet',giftsSouvenirs:'Lahjat & Matkamuistot',travelBlog:'Matkablogi',dealsOffers:'Tarjoukset',transport:'Liikenne',carRental:'Autovuokraus',workInLapland:'Työ Lapissa' },
+  de: { hotelDeals:'Handverlesene Hotelangebote',staysCabins:'Unterkünfte & Hütten',whereToStay:'Glasiglus, Hütten, Lodges',familyFriendly:'Familienresorts + Weihnachtsmann-Besuche',localFood:'Samische Küche & Beerensammeln',fineDining:'Fine Dining',barsPubs:'Bars & Pubs',activities:'Handverlesene Arktis-Aktivitäten',huskySafaris:'Husky-Safaris, Anbieter im Vergleich',skiResorts:'Skigebiete im Vergleich',snowmobileTours:'Schneemobil-Safaris & Vermietung',spaWellness:'Saunas, Spas, Aurora-Wellness',nightlife:'Nachtleben',natureParks:'Natur & Parks',travelGuide:'Reiseführer',christmas:'Weihnachten in Lappland, Weihnachtsmanndorf, Polarlicht',giftsSouvenirs:'Geschenke & Souvenirs',travelBlog:'Reiseblog',dealsOffers:'Angebote',transport:'Transport',carRental:'Mietwagen',workInLapland:'Arbeiten in Lappland' },
+  ja: { hotelDeals:'厳選ホテル特価',staysCabins:'宿泊・コテージ',whereToStay:'ガラスイグルー、コテージ、ロッジ',familyFriendly:'ファミリーリゾート＋サンタ訪問',localFood:'サーミ料理＋ベリー摘み',fineDining:'ファインダイニング',barsPubs:'バー・パブ',activities:'厳選北極アクティビティ',huskySafaris:'ハスキーサファリ、事業者比較',skiResorts:'スキーリゾート比較',snowmobileTours:'スノーモービルサファリ・レンタル',spaWellness:'サウナ、スパ、オーロラ・ウェルネス',nightlife:'ナイトライフ',natureParks:'自然と公園',travelGuide:'旅行ガイド',christmas:'ラップランドのクリスマス：サンタ村、オーロラ',giftsSouvenirs:'ギフト・お土産',travelBlog:'旅行ブログ',dealsOffers:'お得な情報',transport:'交通',carRental:'レンタカー',workInLapland:'ラップランドで働く' },
+  es: { hotelDeals:'Ofertas de hotel seleccionadas',staysCabins:'Alojamiento y Cabañas',whereToStay:'Iglús de cristal, cabañas, lodges',familyFriendly:'Resorts familiares + visitas a Papá Noel',localFood:'Cocina sami + recolección',fineDining:'Alta cocina',barsPubs:'Bares y pubs',activities:'Actividades árticas seleccionadas',huskySafaris:'Safaris en husky, operadores comparados',skiResorts:'Estaciones de esquí comparadas',snowmobileTours:'Safaris en motonieve y alquiler',spaWellness:'Saunas, spas, bienestar aurora',nightlife:'Vida nocturna',natureParks:'Naturaleza y parques',travelGuide:'Guía de viaje',christmas:'Navidad en Laponia, Aldea de Papá Noel, auroras',giftsSouvenirs:'Regalos y recuerdos',travelBlog:'Blog de viajes',dealsOffers:'Ofertas',transport:'Transporte',carRental:'Alquiler de coches',workInLapland:'Trabajar en Laponia' },
+  'pt-BR': { hotelDeals:'Ofertas de hotel selecionadas',staysCabins:'Hospedagens e Chalés',whereToStay:'Iglus de vidro, chalés, lodges',familyFriendly:'Resorts familiares + visitas ao Papai Noel',localFood:'Culinária sami + colheita',fineDining:'Alta gastronomia',barsPubs:'Bares e pubs',activities:'Atividades árticas selecionadas',huskySafaris:'Safáris com huskies, operadores comparados',skiResorts:'Estações de esqui comparadas',snowmobileTours:'Safáris de snowmobile e aluguel',spaWellness:'Saunas, spas, bem-estar aurora',nightlife:'Vida noturna',natureParks:'Natureza e parques',travelGuide:'Guia de viagem',christmas:'Natal na Lapônia, Vila do Papai Noel, auroras',giftsSouvenirs:'Presentes e Lembranças',travelBlog:'Blog de viagem',dealsOffers:'Ofertas',transport:'Transporte',carRental:'Aluguel de carros',workInLapland:'Trabalhar na Lapônia' },
+  'zh-CN': { hotelDeals:'精选酒店特惠',staysCabins:'住宿与小木屋',whereToStay:'玻璃穹屋、小木屋、荒野旅舍',familyFriendly:'家庭度假村 + 圣诞老人探访',localFood:'萨米料理 + 采摘野味',fineDining:'高级餐饮',barsPubs:'酒吧',activities:'精选北极活动',huskySafaris:'哈士奇雪橇游，运营商对比',skiResorts:'滑雪度假村对比',snowmobileTours:'雪地摩托旅程与租赁',spaWellness:'桑拿、水疗、极光养生',nightlife:'夜生活',natureParks:'自然与公园',travelGuide:'旅行指南',christmas:'拉普兰圣诞：圣诞老人村、极光',giftsSouvenirs:'礼品与纪念品',travelBlog:'旅行博客',dealsOffers:'优惠',transport:'交通',carRental:'租车',workInLapland:'在拉普兰工作' },
+  ko: { hotelDeals:'엄선한 호텔 특가',staysCabins:'숙소 & 오두막',whereToStay:'글래스 이글루, 캐빈, 로지',familyFriendly:'가족 리조트 + 산타 방문',localFood:'사미 요리 + 채집',fineDining:'파인다이닝',barsPubs:'바 & 펍',activities:'엄선한 북극 액티비티',huskySafaris:'허스키 사파리, 업체 비교',skiResorts:'스키 리조트 비교',snowmobileTours:'스노모빌 사파리 & 렌털',spaWellness:'사우나, 스파, 오로라 웰니스',nightlife:'나이트라이프',natureParks:'자연 & 공원',travelGuide:'여행 가이드',christmas:'라플란드 크리스마스, 산타 마을, 오로라',giftsSouvenirs:'기프트 & 기념품',travelBlog:'여행 블로그',dealsOffers:'특가 정보',transport:'교통',carRental:'렌터카',workInLapland:'라플란드에서 일하기' },
+  fr: { hotelDeals:'Offres hôtelières sélectionnées',staysCabins:'Hébergements & Chalets',whereToStay:'Igloos de verre, chalets, lodges',familyFriendly:'Resorts famille + visites au Père Noël',localFood:'Cuisine sami + cueillette',fineDining:'Gastronomie',barsPubs:'Bars & Pubs',activities:'Activités arctiques sélectionnées',huskySafaris:'Safaris huskies, opérateurs comparés',skiResorts:'Stations de ski comparées',snowmobileTours:'Safaris en motoneige & location',spaWellness:'Saunas, spas, bien-être aurores',nightlife:'Vie nocturne',natureParks:'Nature & Parcs',travelGuide:'Guide de voyage',christmas:'Noël en Laponie, Village du Père Noël, aurores',giftsSouvenirs:'Cadeaux & Souvenirs',travelBlog:'Blog voyage',dealsOffers:'Offres',transport:'Transport',carRental:'Location de voiture',workInLapland:'Travailler en Laponie' },
+  it: { hotelDeals:'Offerte hotel selezionate',staysCabins:'Alloggi e Cottage',whereToStay:'Igloo di vetro, chalet, lodge',familyFriendly:'Resort famiglia + visite a Babbo Natale',localFood:'Cucina sami + raccolta',fineDining:'Alta cucina',barsPubs:'Bar e Pub',activities:'Attività artiche selezionate',huskySafaris:'Safari con i husky, operatori a confronto',skiResorts:'Stazioni sciistiche a confronto',snowmobileTours:'Safari in motoslitta e noleggio',spaWellness:'Saune, spa, benessere aurora',nightlife:'Vita notturna',natureParks:'Natura e Parchi',travelGuide:'Guida di viaggio',christmas:'Natale in Lapponia, Villaggio di Babbo Natale, aurore',giftsSouvenirs:'Regali e Souvenir',travelBlog:'Blog di viaggio',dealsOffers:'Offerte',transport:'Trasporti',carRental:'Noleggio auto',workInLapland:'Lavorare in Lapponia' },
+  nl: { hotelDeals:'Zorgvuldig gekozen hotelaanbiedingen',staysCabins:'Verblijven & Hutten',whereToStay:'Glasiglo\'s, cabins, lodges',familyFriendly:'Gezinsresorts + bezoek aan de Kerstman',localFood:'Sami-keuken + plukken',fineDining:'Fine dining',barsPubs:'Bars & Pubs',activities:'Zorgvuldig gekozen Arctische activiteiten',huskySafaris:"Husky-safari's, aanbieders vergeleken",skiResorts:'Skioorden vergeleken',snowmobileTours:'Sneeuwscootersafari\'s & verhuur',spaWellness:'Sauna\'s, spa\'s, aurora-welzijn',nightlife:'Nachtleven',natureParks:'Natuur & Parken',travelGuide:'Reisgids',christmas:'Kerstmis in Lapland, Kerstmandorp, noorderlicht',giftsSouvenirs:'Cadeaus & Souvenirs',travelBlog:'Reisblog',dealsOffers:'Aanbiedingen',transport:'Vervoer',carRental:'Autoverhuur',workInLapland:'Werken in Lapland' },
+  sv: { hotelDeals:'Handplockade hotellerbjudanden',staysCabins:'Boende & stugor',whereToStay:'Glasigloor, stugor, vildmarkshotell',familyFriendly:'Familjeresorter + besök hos jultomten',localFood:'Samisk mat & bärplockning',fineDining:'Fine dining',barsPubs:'Barer & pubar',activities:'Handplockade Arktis-aktiviteter',huskySafaris:'Hundspannssafarier, arrangörer jämförda',skiResorts:'Skidorter jämförda',snowmobileTours:'Snöskotersafarier & uthyrning',spaWellness:'Bastur, spa och norrskensavkoppling',nightlife:'Nattliv',natureParks:'Natur & parker',travelGuide:'Reseguide',christmas:'Jul i Lappland, jultomtens by, norrsken',giftsSouvenirs:'Presenter & souvenirer',travelBlog:'Reseblogg',dealsOffers:'Erbjudanden',transport:'Transport',carRental:'Biluthyrning',workInLapland:'Jobba i Lappland' },
 };
 
 // ─── 4 ecosystem sites added to the footer grid (kept in a separate map so the
 // typed BUILT_IN_SITE_LABELS above stays valid without touching all 11 lines) ──
 type ExtLabelsKey = 'luxuryVillas' | 'tours' | 'weddings' | 'store' | 'flights';
 const EXT_SITE_LABELS: Record<string, Record<ExtLabelsKey, string>> = {
-  en: { luxuryVillas:'Private villas & luxury lodges', tours:'Guided tours & day trips', weddings:'Arctic weddings & elopements', store:'Official Lapland store', flights:'Flights to Lapland' },
-  fi: { luxuryVillas:'Yksityishuvilat & luksusmajat', tours:'Opastetut retket & päiväretket', weddings:'Arktiset häät & vihkimiset', store:'Virallinen Lappi-kauppa', flights:'Lennot Lappiin' },
-  de: { luxuryVillas:'Private Villen & Luxus-Lodges', tours:'Geführte Touren & Tagesausflüge', weddings:'Arktische Hochzeiten', store:'Offizieller Lappland-Shop', flights:'Flüge nach Lappland' },
-  ja: { luxuryVillas:'プライベートヴィラ・高級ロッジ', tours:'ガイドツアー・日帰り旅行', weddings:'北極ウエディング', store:'公式ラップランドストア', flights:'ラップランドへの航空券' },
-  es: { luxuryVillas:'Villas privadas y lodges de lujo', tours:'Tours guiados y excursiones', weddings:'Bodas árticas', store:'Tienda oficial de Laponia', flights:'Vuelos a Laponia' },
-  'pt-BR': { luxuryVillas:'Vilas privativas e lodges de luxo', tours:'Tours guiados e bate-voltas', weddings:'Casamentos no Ártico', store:'Loja oficial da Lapônia', flights:'Voos para a Lapônia' },
-  'zh-CN': { luxuryVillas:'私人别墅与豪华小屋', tours:'导览游与一日游', weddings:'北极婚礼', store:'拉普兰官方商店', flights:'飞往拉普兰的航班' },
-  ko: { luxuryVillas:'프라이빗 빌라 & 럭셔리 로지', tours:'가이드 투어 & 당일 여행', weddings:'북극 웨딩', store:'공식 라플란드 스토어', flights:'라플란드행 항공편' },
-  fr: { luxuryVillas:'Villas privées & lodges de luxe', tours:'Visites guidées & excursions', weddings:'Mariages arctiques', store:'Boutique officielle Laponie', flights:'Vols vers la Laponie' },
-  it: { luxuryVillas:'Ville private e lodge di lusso', tours:'Tour guidati ed escursioni', weddings:'Matrimoni artici', store:'Negozio ufficiale Lapponia', flights:'Voli per la Lapponia' },
-  nl: { luxuryVillas:"Privévilla's & luxe lodges", tours:'Begeleide tours & dagtrips', weddings:'Arctische bruiloften', store:'Officiële Lapland-winkel', flights:'Vluchten naar Lapland' },
-  sv: { luxuryVillas:'Privata villor & lyxstugor', tours:'Guidade turer & dagsutflykter', weddings:'Arktiska bröllop & spontanbröllop', store:'Officiell Lappland-butik', flights:'Flyg till Lappland' },
+  en: { luxuryVillas:'Private villas & luxury lodges', tours:'Guided tours & day trips', weddings:'Arctic weddings & elopements', store:'Lapland boutiques & makers', flights:'Flights to Lapland' },
+  fi: { luxuryVillas:'Yksityishuvilat & luksusmajat', tours:'Opastetut retket & päiväretket', weddings:'Arktiset häät & vihkimiset', store:'Lappilaiset puodit & tekijät', flights:'Lennot Lappiin' },
+  de: { luxuryVillas:'Private Villen & Luxus-Lodges', tours:'Geführte Touren & Tagesausflüge', weddings:'Arktische Hochzeiten', store:'Lappland-Boutiquen & Kunsthandwerk', flights:'Flüge nach Lappland' },
+  ja: { luxuryVillas:'プライベートヴィラ・高級ロッジ', tours:'ガイドツアー・日帰り旅行', weddings:'北極ウエディング', store:'ラップランドの店とつくり手', flights:'ラップランドへの航空券' },
+  es: { luxuryVillas:'Villas privadas y lodges de lujo', tours:'Tours guiados y excursiones', weddings:'Bodas árticas', store:'Tiendas y artesanos de Laponia', flights:'Vuelos a Laponia' },
+  'pt-BR': { luxuryVillas:'Vilas privativas e lodges de luxo', tours:'Tours guiados e bate-voltas', weddings:'Casamentos no Ártico', store:'Lojas e artesãos da Lapônia', flights:'Voos para a Lapônia' },
+  'zh-CN': { luxuryVillas:'私人别墅与豪华小屋', tours:'导览游与一日游', weddings:'北极婚礼', store:'拉普兰精品店与手作人', flights:'飞往拉普兰的航班' },
+  ko: { luxuryVillas:'프라이빗 빌라 & 럭셔리 로지', tours:'가이드 투어 & 당일 여행', weddings:'북극 웨딩', store:'라플란드 상점 & 공방', flights:'라플란드행 항공편' },
+  fr: { luxuryVillas:'Villas privées & lodges de luxe', tours:'Visites guidées & excursions', weddings:'Mariages arctiques', store:'Boutiques & artisans de Laponie', flights:'Vols vers la Laponie' },
+  it: { luxuryVillas:'Ville private e lodge di lusso', tours:'Tour guidati ed escursioni', weddings:'Matrimoni artici', store:'Botteghe e artigiani della Lapponia', flights:'Voli per la Lapponia' },
+  nl: { luxuryVillas:"Privévilla's & luxe lodges", tours:'Begeleide tours & dagtrips', weddings:'Arctische bruiloften', store:'Lapland-winkels & makers', flights:'Vluchten naar Lapland' },
+  sv: { luxuryVillas:'Privata villor & lyxstugor', tours:'Guidade turer & dagsutflykter', weddings:'Arktiska bröllop & spontanbröllop', store:'Lapplandsbutiker & hantverkare', flights:'Flyg till Lappland' },
 };
 
 /** Detect lang from URL path prefix. Returns 'en' if none matches. */
@@ -241,7 +243,8 @@ function detectLangFromURL(): keyof typeof BUILT_IN_SITE_LABELS {
     br: 'pt-BR', 'pt-br': 'pt-BR', pt: 'pt-BR',
     cn: 'zh-CN', 'zh-cn': 'zh-CN', zh: 'zh-CN',
     kr: 'ko', ko: 'ko',
-    fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
+    fr: 'fr', it: 'it', nl: 'nl',
+    sv: 'sv',
     en: 'en',
   };
   return map[seg] ?? 'en';
@@ -268,11 +271,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   fi: {
     copyright: '{{year}} #LaplandVibes, Osa #LaplandVibes-verkostoa',
     tagline: 'Suomen Lapin matkaopas, revontulista keskiyön aurinkoon.',
+    getApp: 'Lataa sovellus',
     groups: { stay: 'Majoitu', eatDrink: 'Syö & juo', do: 'Tee', explore: 'Tutustu', essentials: 'Käytännön asiat' },
     travelGuideKicker: 'Lapin matkaopas',
     about: { eyebrow: 'Tietoa LaplandVibes-verkostosta', body: 'Suomen Lapin matkaopas, revontulista keskiyön aurinkoon. Käsin valittuja kohteita, paikallista tietoa ja avoimet lähteet kaiken Arktis-matkasi suunnitteluun.', badge: 'Itsenäisesti ylläpidetty · lähteet näkyvillä' },
     spottedError: { title: 'Huomasitko virheen?', body: 'Näetkö jotain joka pitäisi korjata? Kerro meille, korjaamme heti.', cta: 'Ilmoita virheestä →' },
-    partner: { title: 'Tee yhteistyötä kanssamme', body: 'Mainosta tai tee yhteistyötä yli 21 Lappi-sivuston verkostossa.', cta: 'Ota yhteyttä →' },
+    partner: { title: 'Tee yhteistyötä kanssamme', body: 'Mainosta tai tee yhteistyötä yli 25 Lappi-sivuston verkostossa.', cta: 'Ota yhteyttä →' },
     press: { title: 'Lehdistö & media', body: 'Toimitukselliset yhteistyöt ja mediapaketit.', cta: 'Lehdistökyselyt →' },
     affiliate: 'Tämä sivusto sisältää kumppanilinkkejä. Jos varaat näiden linkkien kautta, LaplandVibes voi saada provision sinulle ilman lisäkustannuksia.',
     legal: { privacy: 'Tietosuojaseloste', cookie: 'Evästekäytäntö', terms: 'Käyttöehdot', contact: 'Yhteystiedot' },
@@ -280,11 +284,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   de: {
     copyright: '{{year}} #LaplandVibes, Teil des #LaplandVibes-Netzwerks',
     tagline: 'Der Reiseführer für Finnisch-Lappland, von den Polarlichtern bis zur Mitternachtssonne.',
+    getApp: 'App holen',
     groups: { stay: 'Übernachten', eatDrink: 'Essen & Trinken', do: 'Erleben', explore: 'Entdecken', essentials: 'Praktisches' },
     travelGuideKicker: 'Lappland-Reiseführer',
     about: { eyebrow: 'Über LaplandVibes', body: 'Der Reiseführer für Finnisch-Lappland, von den Polarlichtern bis zur Mitternachtssonne. Handverlesene Erlebnisse, lokales Wissen und Quellen für Ihre Arktis-Reise.', badge: 'Unabhängig betrieben · Quellen sichtbar' },
     spottedError: { title: 'Einen Fehler entdeckt?', body: 'Etwas, das korrigiert werden muss? Schreiben Sie uns, wir korrigieren es sofort.', cta: 'Fehler melden →' },
-    partner: { title: 'Mit uns kooperieren', body: 'Werben oder kooperieren über 21+ Lappland-Sites.', cta: 'Kontakt aufnehmen →' },
+    partner: { title: 'Mit uns kooperieren', body: 'Werben oder kooperieren über 25+ Lappland-Sites.', cta: 'Kontakt aufnehmen →' },
     press: { title: 'Presse & Medien', body: 'Redaktionelle Kooperationen und Pressekits.', cta: 'Presseanfragen →' },
     affiliate: 'Diese Website enthält Partner-Links. Wenn Sie über diese Links buchen, kann LaplandVibes eine Provision ohne Mehrkosten für Sie erhalten.',
     legal: { privacy: 'Datenschutz', cookie: 'Cookie-Richtlinie', terms: 'Nutzungsbedingungen', contact: 'Kontakt' },
@@ -292,11 +297,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   ja: {
     copyright: '{{year}} #LaplandVibes、#LaplandVibes ネットワークの一員',
     tagline: 'フィンランド・ラップランドの旅行ガイド。オーロラから白夜まで。',
+    getApp: 'アプリを入手',
     groups: { stay: '泊まる', eatDrink: '食べる・飲む', do: '体験する', explore: '見る', essentials: '知っておくこと' },
     travelGuideKicker: 'ラップランド旅行ガイド',
     about: { eyebrow: 'LaplandVibesについて', body: 'オーロラから白夜まで、フィンランド・ラップランドの決定版ガイド。厳選した体験と現地の知恵、出典を明記した情報で、北極圏の旅の計画を支えます。', badge: '独立運営 · 出典明記' },
     spottedError: { title: '間違いを見つけましたか?', body: '修正が必要な箇所がありましたら教えてください。すぐに修正します。', cta: '報告する →' },
-    partner: { title: '提携のご相談', body: '21以上のラップランドサイトで広告・コラボレーション。', cta: 'お問い合わせ →' },
+    partner: { title: '提携のご相談', body: '25以上のラップランドサイトで広告・コラボレーション。', cta: 'お問い合わせ →' },
     press: { title: 'プレス・メディア', body: '編集パートナーシップとプレスキット。', cta: 'プレスお問い合わせ →' },
     affiliate: 'このサイトにはアフィリエイトリンクが含まれます。これらのリンクを通じて予約された場合、LaplandVibesに追加費用なしで手数料が支払われることがあります。',
     legal: { privacy: 'プライバシーポリシー', cookie: 'Cookieポリシー', terms: '利用規約', contact: 'お問い合わせ' },
@@ -304,11 +310,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   es: {
     copyright: '{{year}} #LaplandVibes, parte de la red #LaplandVibes',
     tagline: 'La guía de viajes de la Laponia finlandesa, desde las auroras hasta el sol de medianoche.',
+    getApp: 'Descargar la app',
     groups: { stay: 'Dónde dormir', eatDrink: 'Comer y beber', do: 'Hacer', explore: 'Explorar', essentials: 'Esenciales' },
     travelGuideKicker: 'Guía de viaje de Laponia',
     about: { eyebrow: 'Sobre LaplandVibes', body: 'La guía definitiva de la Laponia finlandesa, desde las auroras hasta el sol de medianoche. Experiencias seleccionadas, consejos locales y fuentes citadas para planear tu aventura ártica.', badge: 'Mantenido de forma independiente · fuentes citadas' },
     spottedError: { title: '¿Has visto un error?', body: '¿Algo que arreglar? Dínoslo, lo corregiremos enseguida.', cta: 'Reportar un error →' },
-    partner: { title: 'Colabora con nosotros', body: 'Publicidad o colaboración en más de 21 sitios sobre Laponia.', cta: 'Contactar →' },
+    partner: { title: 'Colabora con nosotros', body: 'Publicidad o colaboración en más de 25 sitios sobre Laponia.', cta: 'Contactar →' },
     press: { title: 'Prensa y medios', body: 'Colaboraciones editoriales y kits de prensa.', cta: 'Consultas de prensa →' },
     affiliate: 'Este sitio contiene enlaces de afiliación. Si reservas a través de estos enlaces, LaplandVibes puede recibir una comisión sin coste adicional para ti.',
     legal: { privacy: 'Política de privacidad', cookie: 'Política de cookies', terms: 'Términos de uso', contact: 'Contacto' },
@@ -316,11 +323,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   'pt-BR': {
     copyright: '{{year}} #LaplandVibes, parte da rede #LaplandVibes',
     tagline: 'O guia da Lapônia finlandesa, das auroras boreais ao sol da meia-noite.',
+    getApp: 'Baixar o app',
     groups: { stay: 'Onde dormir', eatDrink: 'Comer e beber', do: 'Fazer', explore: 'Explorar', essentials: 'Essenciais' },
     travelGuideKicker: 'Guia de viagem da Lapônia',
     about: { eyebrow: 'Sobre o LaplandVibes', body: 'O guia definitivo da Lapônia finlandesa, das auroras boreais ao sol da meia-noite. Experiências selecionadas, dicas locais e fontes citadas para planejar sua viagem ao Ártico.', badge: 'Mantido de forma independente · fontes à vista' },
     spottedError: { title: 'Encontrou um erro?', body: 'Viu algo que precisa de correção? Avise, corrigimos imediatamente.', cta: 'Relatar um erro →' },
-    partner: { title: 'Faça parceria conosco', body: 'Anuncie ou colabore em mais de 21 sites da Lapônia.', cta: 'Entre em contato →' },
+    partner: { title: 'Faça parceria conosco', body: 'Anuncie ou colabore em mais de 25 sites da Lapônia.', cta: 'Entre em contato →' },
     press: { title: 'Imprensa e mídia', body: 'Parcerias editoriais e kits de imprensa.', cta: 'Consultas de imprensa →' },
     affiliate: 'Este site contém links de afiliados. Se você fizer uma reserva por meio destes links, o LaplandVibes pode receber comissão sem custo adicional para você.',
     legal: { privacy: 'Política de Privacidade', cookie: 'Política de Cookies', terms: 'Termos de Uso', contact: 'Contato' },
@@ -328,11 +336,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   'zh-CN': {
     copyright: '{{year}} #LaplandVibes，#LaplandVibes 网络成员',
     tagline: '芬兰拉普兰旅游指南，从北极光到午夜阳光。',
+    getApp: '获取应用',
     groups: { stay: '住', eatDrink: '吃喝', do: '玩', explore: '探索', essentials: '实用信息' },
     travelGuideKicker: '拉普兰旅游指南',
     about: { eyebrow: '关于 LaplandVibes', body: '从北极光到午夜阳光，芬兰拉普兰的权威指南。精选体验、本地建议与注明来源的信息，助您规划北极之旅。', badge: '独立运营 · 来源公开' },
     spottedError: { title: '发现错误了吗?', body: '有需要修正的地方吗?告诉我们，我们会立即更正。', cta: '报告错误 →' },
-    partner: { title: '与我们合作', body: '在 21+ 个拉普兰网站上投放广告或开展合作。', cta: '联系我们 →' },
+    partner: { title: '与我们合作', body: '在 25+ 个拉普兰网站上投放广告或开展合作。', cta: '联系我们 →' },
     press: { title: '媒体与新闻', body: '编辑合作与媒体资源包。', cta: '媒体咨询 →' },
     affiliate: '本网站包含联盟链接。如果您通过这些链接预订,LaplandVibes 可获得佣金,您无需支付额外费用。',
     legal: { privacy: '隐私政策', cookie: 'Cookie 政策', terms: '使用条款', contact: '联系方式' },
@@ -340,11 +349,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   ko: {
     copyright: '{{year}} #LaplandVibes, #LaplandVibes 네트워크의 일부',
     tagline: '핀란드 라플란드 여행 가이드, 오로라부터 백야까지.',
+    getApp: '앱 받기',
     groups: { stay: '숙박', eatDrink: '음식과 음료', do: '체험', explore: '둘러보기', essentials: '필수 정보' },
     travelGuideKicker: '라플란드 여행 가이드',
     about: { eyebrow: 'LaplandVibes 소개', body: '오로라부터 백야까지, 핀란드 라플란드의 결정판 가이드. 엄선한 경험과 현지의 조언, 출처를 밝힌 정보로 북극 여행 계획을 돕습니다.', badge: '독립 운영 · 출처 명시' },
     spottedError: { title: '오류를 발견하셨나요?', body: '수정이 필요한 부분이 있나요? 알려주세요, 즉시 수정합니다.', cta: '오류 신고 →' },
-    partner: { title: '저희와 협력하세요', body: '21개 이상의 라플란드 사이트에서 광고 또는 협업.', cta: '문의하기 →' },
+    partner: { title: '저희와 협력하세요', body: '25개 이상의 라플란드 사이트에서 광고 또는 협업.', cta: '문의하기 →' },
     press: { title: '언론·미디어', body: '편집 제휴 및 보도 자료.', cta: '언론 문의 →' },
     affiliate: '이 사이트에는 제휴 링크가 포함되어 있습니다. 이러한 링크를 통해 예약하시면 LaplandVibes가 추가 비용 없이 수수료를 받을 수 있습니다.',
     legal: { privacy: '개인정보 처리방침', cookie: '쿠키 정책', terms: '이용 약관', contact: '연락처' },
@@ -352,11 +362,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   fr: {
     copyright: '{{year}} #LaplandVibes, partie du réseau #LaplandVibes',
     tagline: 'Le guide de voyage de la Laponie finlandaise, des aurores boréales au soleil de minuit.',
+    getApp: "Obtenir l'app",
     groups: { stay: 'Où dormir', eatDrink: 'Manger & boire', do: 'À faire', explore: 'Explorer', essentials: 'L\'essentiel' },
     travelGuideKicker: 'Guide de voyage Laponie',
     about: { eyebrow: 'À propos de LaplandVibes', body: 'Le guide de référence pour la Laponie finlandaise, des aurores boréales au soleil de minuit. Expériences sélectionnées, conseils locaux et tout pour préparer votre voyage en Arctique.', badge: 'Géré indépendamment · sources citées' },
     spottedError: { title: 'Repéré une erreur ?', body: 'Quelque chose à corriger ? Dites-le-nous, nous corrigeons immédiatement.', cta: 'Signaler une erreur →' },
-    partner: { title: 'Devenir partenaire', body: 'Publicité ou collaboration sur 21+ sites Laponie.', cta: 'Nous contacter →' },
+    partner: { title: 'Devenir partenaire', body: 'Publicité ou collaboration sur 25+ sites Laponie.', cta: 'Nous contacter →' },
     press: { title: 'Presse & médias', body: 'Partenariats éditoriaux et kits de presse.', cta: 'Demandes presse →' },
     affiliate: 'Ce site contient des liens d\'affiliation. Si vous réservez via ces liens, LaplandVibes peut recevoir une commission sans coût supplémentaire pour vous.',
     legal: { privacy: 'Politique de confidentialité', cookie: 'Politique des cookies', terms: 'Conditions d\'utilisation', contact: 'Contact' },
@@ -364,11 +375,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   it: {
     copyright: '{{year}} #LaplandVibes, parte della rete #LaplandVibes',
     tagline: 'La guida di viaggio della Lapponia finlandese, dalle aurore al sole di mezzanotte.',
+    getApp: "Scarica l'app",
     groups: { stay: 'Dove dormire', eatDrink: 'Mangiare e bere', do: 'Da fare', explore: 'Esplorare', essentials: 'Informazioni utili' },
     travelGuideKicker: 'Guida di viaggio Lapponia',
     about: { eyebrow: 'Su LaplandVibes', body: 'La guida definitiva alla Lapponia finlandese, dalle aurore boreali al sole di mezzanotte. Esperienze selezionate, consigli locali e fonti citate per pianificare il Suo viaggio nell\'Artico.', badge: 'Gestita in modo indipendente · fonti citate' },
     spottedError: { title: 'Notato un errore?', body: 'C\'è qualcosa da correggere? Ce lo dica, correggeremo subito.', cta: 'Segnala un errore →' },
-    partner: { title: 'Collabora con noi', body: 'Pubblicità o collaborazione su oltre 21 siti dedicati alla Lapponia.', cta: 'Mettersi in contatto →' },
+    partner: { title: 'Collabora con noi', body: 'Pubblicità o collaborazione su oltre 25 siti dedicati alla Lapponia.', cta: 'Mettersi in contatto →' },
     press: { title: 'Stampa e media', body: 'Collaborazioni editoriali e kit stampa.', cta: 'Richieste stampa →' },
     affiliate: 'Questo sito contiene link di affiliazione. Se prenoti tramite questi link, LaplandVibes può ricevere una commissione senza alcun costo aggiuntivo per Lei.',
     legal: { privacy: 'Informativa sulla privacy', cookie: 'Politica sui cookie', terms: 'Termini di utilizzo', contact: 'Contatti' },
@@ -376,11 +388,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   nl: {
     copyright: '{{year}} #LaplandVibes, onderdeel van het #LaplandVibes-netwerk',
     tagline: 'De reisgids voor Fins Lapland, van het noorderlicht tot de middernachtszon.',
+    getApp: 'Download de app',
     groups: { stay: 'Verblijf', eatDrink: 'Eten & drinken', do: 'Beleven', explore: 'Ontdekken', essentials: 'Praktisch' },
     travelGuideKicker: 'Lapland-reisgids',
     about: { eyebrow: 'Over LaplandVibes', body: 'De definitieve gids voor Fins Lapland, van het noorderlicht tot de middernachtszon. Geselecteerde ervaringen, lokale tips en duidelijke bronnen om uw arctische reis te plannen.', badge: 'Onafhankelijk beheerd · bronnen zichtbaar' },
     spottedError: { title: 'Een fout gezien?', body: 'Iets dat aangepast moet worden? Laat het ons weten, we corrigeren het meteen.', cta: 'Fout melden →' },
-    partner: { title: 'Word partner', body: 'Adverteer of werk samen op meer dan 21 Lapland-sites.', cta: 'Neem contact op →' },
+    partner: { title: 'Word partner', body: 'Adverteer of werk samen op meer dan 25 Lapland-sites.', cta: 'Neem contact op →' },
     press: { title: 'Pers & media', body: 'Redactionele partnerschappen en perskits.', cta: 'Pers-aanvragen →' },
     affiliate: 'Deze site bevat affiliate-links. Als u via deze links boekt, kan LaplandVibes een commissie ontvangen zonder extra kosten voor u.',
     legal: { privacy: 'Privacybeleid', cookie: 'Cookiebeleid', terms: 'Gebruiksvoorwaarden', contact: 'Contact' },
@@ -388,11 +401,12 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
   sv: {
     copyright: '{{year}} #LaplandVibes, en del av #LaplandVibes-nätverket',
     tagline: 'Reseguiden till finska Lappland, från norrsken till midnattssol.',
+    getApp: 'Hämta appen',
     groups: { stay: 'Bo', eatDrink: 'Ät & drick', do: 'Gör', explore: 'Upptäck', essentials: 'Praktiskt' },
     travelGuideKicker: 'Lapplands reseguide',
     about: { eyebrow: 'Om LaplandVibes', body: 'Reseguiden till finska Lappland, från norrsken till midnattssol. Handplockade upplevelser, lokal kunskap och tydliga källor för att planera din arktiska resa.', badge: 'Oberoende drivet · källor redovisade' },
     spottedError: { title: 'Hittade du ett fel?', body: 'Ser du något som behöver rättas till? Berätta för oss, så korrigerar vi det direkt.', cta: 'Rapportera ett fel →' },
-    partner: { title: 'Bli partner med oss', body: 'Annonsera eller samarbeta över 21+ Lappland-sajter.', cta: 'Kontakta oss →' },
+    partner: { title: 'Bli partner med oss', body: 'Annonsera eller samarbeta över 25+ Lappland-sajter.', cta: 'Kontakta oss →' },
     press: { title: 'Press & media', body: 'Redaktionella samarbeten och pressmaterial.', cta: 'Presskontakt →' },
     affiliate: 'Denna webbplats innehåller affiliate-länkar. Om du bokar via dessa länkar kan LaplandVibes få en provision utan extra kostnad för dig.',
     legal: { privacy: 'Integritetspolicy', cookie: 'Cookiepolicy', terms: 'Användarvillkor', contact: 'Kontakt' },
@@ -424,6 +438,7 @@ function mergeDict(d?: FooterDict): typeof DEFAULT_DICT {
   return {
     networkBadge: d.networkBadge ?? langDefaults.networkBadge ?? DEFAULT_DICT.networkBadge,
     tagline: d.tagline ?? langDefaults.tagline ?? DEFAULT_DICT.tagline,
+    getApp: d.getApp ?? langDefaults.getApp ?? DEFAULT_DICT.getApp,
     groups: {
       stay: d.groups?.stay ?? langDefaults.groups?.stay ?? DEFAULT_DICT.groups.stay,
       eatDrink: d.groups?.eatDrink ?? langDefaults.groups?.eatDrink ?? DEFAULT_DICT.groups.eatDrink,
@@ -828,7 +843,8 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
               >
                 {d.tagline}
               </p>
-              {/* App CTA — network's owned channel into the mobile app. */}
+              {/* App CTA — the network's only owned channel into the mobile app.
+                  Pink pill, phone glyph, deep-links to app.laplandvibes.com. */}
               <a
                 href="https://app.laplandvibes.com"
                 target="_blank"
@@ -839,7 +855,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#EC4899'; }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-                {(d as { getApp?: string }).getApp || 'Get the app'}
+                {d.getApp}
               </a>
             </div>
 
