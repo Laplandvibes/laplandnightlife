@@ -27,6 +27,8 @@ export type Partner = {
   name: string;
   tagline?: string;
   taglineEn?: string;
+  /** Swedish tagline for /sv rails (falls back to taglineEn → tagline). */
+  taglineSv?: string;
   url: string;
   imageSrc?: string;
   /** Lifestyle/mood photo for ad units that show both a photo and the logo. */
@@ -46,7 +48,7 @@ export type SlotPlaceholder = {
   /** GA4-tunniste, esim. 'sponsor_1' */
   slotId: string;
   /** Tekstin kohdennus: pääsponsori-paikka vai premium-paikka */
-  level?: 'sponsor' | 'premium';
+  level?: 'sponsor' | 'premium' | 'card';
   /** Pieni yläkulmalabel, esim. "Pääkumppani" — oletus adSlotsCopy.slotOpen */
   label?: string;
 };
@@ -73,7 +75,10 @@ export default function PartnerSlot({ partner, variant, locale, className, place
     if (!placeholder) return null;
     const t = adSlotsCopy(locale);
     const light = surface === 'light';
-    const sub = placeholder.level === 'premium' ? t.premiumOpen : t.sponsorSub;
+    const sub =
+      placeholder.level === 'premium' ? t.premiumOpen
+      : placeholder.level === 'card' ? t.cardSub
+      : t.sponsorSub;
     const topLabel = placeholder.label || t.slotOpen;
 
     // BANNER-variantin house-ad: kompakti vaakarivi (heron alle, ei työnnä sisältöä)
@@ -93,8 +98,11 @@ export default function PartnerSlot({ partner, variant, locale, className, place
           ]
             .filter(Boolean)
             .join(' ')}
-          // Tailwind v4 ei emitoi arbitrary shadow-[...] -luokkia tässä repossa,
-          // joten kanoninen pinkki hehku annetaan inline-tyylinä.
+          // Pinkki hehku inline-tyylinä, EI arbitrary `shadow-[...]`-luokkana:
+          // Tailwind v4:n source-skannaus ei emitoi shared/-kansiossa esiintyviä
+          // arbitrary-luokkia kaikissa repoissa (todettu 2026-07-26: nightlife
+          // 0 kpl `shadow-[`-selektoria, wellness 7), joten hehku katosi
+          // hiljaa osalta sivustoja. Arvot ovat samat kuin luokkaversiossa.
           style={{ boxShadow: light ? '0 8px 24px rgba(236,72,153,0.14)' : '0 12px 40px rgba(236,72,153,0.22)' }}
           aria-label={`${topLabel}: ${t.wantYourAd}`}
         >
