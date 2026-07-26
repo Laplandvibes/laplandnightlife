@@ -5,13 +5,12 @@ const overlay: Record<string, CityOverlay> = {
     region: '北ポフヤンマー',
     blurb: '欧州文化首都2026、そして北部で唯一、一年を通して本物のクラブシーンが回り続ける街。',
     pageTagline: '欧州文化首都2026。',
-    intro: '人口20万人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。オウルは北部で唯一、平日の夜も本当に賑わう街で、人々は45 Special、Never Grow Old、St Michaelの間を夜遅くまで行き来します。2026年には欧州文化首都プログラムが加わり、エアギター世界選手権、Qstock、Elojazz、冬フェスFrozen Peopleなど1,500のイベントが開催されます。',
+    intro: '人口21万8千人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。オウルは北部で唯一、平日の夜も本当に賑わう街で、人々は45 Special、Kaarlenholvi、St Michaelの間を夜遅くまで行き来します。2026年には欧州文化首都プログラムが加わり、エアギター世界選手権、Qstock、Elojazz、冬フェスFrozen Peopleなど1,500のイベントが開催されます。',
     venues: {
       'St Michael': { type: 'アイリッシュパブ+ライブ', note: 'ロトゥアーリの中心的存在：ツアーアーティストやトリビュートナイトのあるアイリッシュパブ。' },
       "Hemingway's": { type: 'バー', note: 'キルッココ通りのウイスキー&クラフトビールバー：落ち着いた一杯を、深夜まで。' },
       'Kaarlenholvi': { type: 'ナイトバー', note: 'オウルで2番目に古い石造建築のナイトバー。週末のディスコは深夜まで続き、地下にはJumpru Pubも。' },
       '45 Special': { type: 'ナイトクラブ', note: '学生に愛されるクラブ。水〜土、夜遅くまで営業。' },
-      'Never Grow Old': { type: 'ライブ音楽＋クラブ', note: 'インディー／オルタナティブのブッキング。この通りで一番小さいが、最も熱心な常連が集まる。' },
     },
     knowList: [
       'ロトゥアーリ通りは車両通行止め。シーンのほぼすべてが徒歩数分に収まります。',
@@ -20,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'これほど北にありながら、日曜昼のカフェ文化が本当にあるのはオウルだけ。',
     ],
     quickFacts: {
-      'Population': { label: '人口', value: '210 000' },
+      'Population': { label: '人口', value: '218 000' },
       'Closest airport': { label: '最寄り空港', value: 'OUL · 15分' },
       'Last call': { label: 'ラストオーダー', value: '03:30' },
       'Best season': { label: 'ベストシーズン', value: '通年 · 2026 ECoC' },
@@ -30,13 +29,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'ラップランド',
     blurb: '北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。',
     pageTagline: '北極圏の首都。',
-    intro: 'ひとつの街にふたつの速度。週末の観光客はコスキカトゥ周辺に並びます：Roy Clubは「1985年から街一番のパーティー」を掲げ、Half Moonはカラオケとディスコのフロアを回し、Bull Barは最も賑やかなスポーツテラス。地元の人々は歩行者天国沿いに散らばります：カクテルはCafe & Bar 21、ビールはRovaniemen Oluthuone、ウイスキーはOliver\'s Corner。観光客の週末は行列、平日は静かでローカルです。',
+    intro: 'ひとつの街にふたつの速度。週末の観光客はコスキカトゥ周辺に並びます：Roy Clubは「1985年から街一番のパーティー」を掲げ、Bull Barは最も賑やかなスポーツテラス。地元の人々は歩行者天国沿いに散らばります：カクテルはCafe & Bar 21、ビールはRovaniemen Oluthuone、ウイスキーはOliver\'s Corner。観光客の週末は行列、平日は静かでローカルです。',
     venues: {
-      'Half Moon Night Club': { type: 'ナイトクラブ', note: 'カラオケ、ディスコフロア、VIPルームを備えた中心部のクラブ。' },
       'Cafe & Bar 21': { type: 'カクテルバー', note: '中心部にある、地元っ子お気に入りのカクテルバー。' },
       'Rovaniemen Oluthuone': { type: 'ビアパブ', note: '歩行者天国沿いのビアレストラン：大きなテラスと幅広いタップ。' },
       "Oliver's Corner": { type: 'パブ', note: '歩行者天国のパブ。ウイスキーの棚が充実。' },
-      'Kansan Karaoke Pub': { type: 'カラオケパブ', note: 'ビリヤード、ゲーム、夜はカラオケ。これ以上ローカルな場所はありません。' },
+      'Kansan Pubi': { type: 'カラオケパブ', note: 'ビリヤード、ゲーム、夜はカラオケ。これ以上ローカルな場所はありません。' },
       'Roy Club': { type: 'ナイトクラブ', note: '1985年開業。3つのフロアを持つ、街最大のダンスフロア。' },
       'Bull Bar': { type: 'スポーツバー', note: '騒がしく、満員で、プレミアリーグのテラスと深夜の食事あり。' },
       'Kauppayhtiö': { type: 'カフェ＋バー', note: 'ヴィンテージなリビングルーム風の内装。カクテルは夜遅くまで。' },
@@ -86,7 +84,7 @@ const overlay: Record<string, CityOverlay> = {
       'Local Pub Panimo': { type: '村のパブ', note: '地元とクラフトのタップ、パブメニュー、カラオケやライブの夜。村自慢のパブ。' },
       'Hotel Riekonlinna Bar': { type: 'ホテルバー', note: 'ロビーの大きな暖炉。シーズン中は夜のプログラムも。' },
       'Teerenpesä': { type: 'パブ+ナイトクラブ', note: '村のパブ&クラブ複合：サーリセルカで最も遅くまで開くフロア。' },
-      'Kakslauttanen Igloo Bar': { type: 'ガラス天井のバー', note: '世界的に有名な一枚。宿泊客でなくても予約すれば利用可。' },
+      'Igloo Bar': { type: 'ガラス天井のバー', note: '世界的に有名な一枚。宿泊客でなくても予約すれば利用可。' },
     },
     knowList: [
       '独立したクラブはない。ナイトライフはホテル中心。',
@@ -108,8 +106,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。ここの「ナイトライフ」は文化そのもの：1月の先住民映画祭Skábmagovat、8月のサーミ音楽祭Ijahis Idja、そしてほとんどがディナーを出すだけの数軒のバー。クラブを目当てに来てはいけない。冷たい湖の水、ヨイクのコンサート、そして12月には14:00に真っ暗になる空を目当てに来よう。',
     venues: {
       'Hotel Inari Bar': { type: 'ホテルバー', note: '湖を望むレストラン＋バー。01:00まで営業。' },
-      'Sajos Café': { type: '昼間向け', note: 'サーミ議会のカフェ：コーヒーと文化イベント。' },
-      'Tradiska': { type: 'レストラン＋バー', note: 'サーミ料理、小さなバー、親密な雰囲気。' },
+      'Café Čaiju': { type: '昼間向け', note: 'サーミ議会のカフェ：コーヒーと文化イベント。' },
     },
     knowList: [
       'クラブはない。バーのあるホテルが二軒、酒を出すレストランが三軒。',
@@ -176,11 +173,11 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'クマの国のスキーリゾート。',
     intro: 'ルカは正確にはクーサモ、正確にはラップランドではありませんが、スキーヤーは気にしません。フィンランド有数の賑わいを誇るリゾートで、11月のオープニングウィークが最も騒がしい時期です。ゲレンデ下のZoneがアフタースキーの中心で、PisteとColorado Barが夜を引き継ぎます。オフシーズンの村はとても静か。11〜4月はフル稼働です。',
     venues: {
-      'Zone Bar': { type: 'アフタースキー', note: 'ゲレンデの麓：ライブとFIS開幕週パーティーの本拠地。' },
+      'Restaurant Zone': { type: 'アフタースキー', note: 'ゲレンデの麓：ライブとFIS開幕週パーティーの本拠地。' },
       'Piste': { type: 'アフタースキー+バー', note: 'アフタースキーから夜まで途切れず続く村のバー。' },
       'Colorado Bar': { type: 'バー', note: 'スキー村のアメリカンスタイルバー：スポーツ観戦と遅めの一杯。' },
       'Hanki Baari': { type: 'バー', note: 'シンプルで良質：コーヒー、しっかりしたビールの品揃え、そして食事。' },
-      'Hotel Rukahovi': { type: 'ホテルバー', note: '村の大型ホテル：ハイシーズンの週末はライブミュージック。' },
+      'Scandic Rukahovi': { type: 'ホテルバー', note: '村の大型ホテル：ハイシーズンの週末はライブミュージック。' },
     },
     knowList: [
       'ルカは11月末のFISクロスカントリーワールドカップで開幕。その週がピークです。',
@@ -202,7 +199,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: '35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。Pyhäの方がスキーエリアは大きく、Luostoにはオーロラの下、真夜中に訪れられるアメジスト鉱山がある。どちらにもクラブはない。どちらにも暖炉のある夜にふさわしいホテルバーがある：レストラン級の食事ならHotel Pyhätunturi、オーロラを望む窓辺のバーならLuostoのHotel Aurora。ラップランドで最も静かな「スキーの地」であり、それを誇りにしている。',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'ホテルバー', note: 'レストラン＋バー、暖炉、ゲレンデサイド。' },
-      'Hotel Aurora Luosto': { type: 'オーロラ窓のバー', note: '北向きのガラス張りバー：オーロラが出れば起こしてくれるサービスあり。' },
+      'Santa\'s Hotel Aurora': { type: 'オーロラ窓のバー', note: '北向きのガラス張りバー：オーロラが出れば起こしてくれるサービスあり。' },
       'Pyhän Asteli': { type: 'レストラン＋バー', note: '地元民お気に入りのレストラン。Pyhäの村で唯一、夜遅くまで食事ができる。' },
     },
     knowList: [
@@ -264,17 +261,16 @@ const overlay: Record<string, CityOverlay> = {
   },
   ivalo: {
     region: 'Inari自治体',
-    blurb: 'Hotel IvaloのClub NordとHotel Kultahippuのパブ。',
+    blurb: 'Hotel IvaloのロビーバーとHotel Kultahippuのパブ。',
     pageTagline: 'クラブのある最北の空港。',
-    intro: 'Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel IvaloはClub Nordを運営している：金曜と土曜に開く、フィンランド本土で最北のクラブだ。Hotel Kultahippuには村で唯一のまともなパブがある。それ以外はホテルバーと、ビールを売るガソリンスタンドの売店が一軒。',
+    intro: 'Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel Ivaloにはロビーバーとレストラン、ラピン・ウーがあります。 Hotel Kultahippuには村で唯一のまともなパブがある。それ以外はホテルバーと、ビールを売るガソリンスタンドの売店が一軒。',
     venues: {
-      'Club Nord (Hotel Ivalo)': { type: 'ナイトクラブ', note: '金〜土営業。フィンランド本土で最北のクラブ。' },
       'Hotel Kultahippu Pub': { type: 'パブ', note: '毎日営業。地元の仕事終わりの溜まり場。' },
       'Hotel Ivalo Lobby Bar': { type: 'ホテルバー', note: 'より静かで、レストラン併設。' },
     },
     knowList: [
       'フィンランド本土で最北の空港。',
-      'Saariselkäは25分先。Saariselkäの来訪者の多くがClub Nordのために車でやってくる。',
+      'Saariselkäは25分先。Saariselkäの来訪者の多くがホテルのバーのために車でやってくる。',
       'ラストオーダーは平日02:00、週末03:00。',
       'タクシー乗り場はない。ホテルのフロント経由で手配を。',
     ],
@@ -289,9 +285,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '西ラップランド',
     blurb: 'ナイトライフはなし。Pallas-Yllästunturi国立公園が目当て。',
     pageTagline: '国立公園の玄関口。',
-    intro: 'ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第2の広さ）への玄関口のひとつです。クラブはなく、パブ巡りもなく、ほとんどの夜は早めに終わります。Harriniva Wilderness Hotelはサファリ客向けに夜サウナ+ロビーバーのセットを、Hotel Jerisはイェリス湖畔で同じ体験を提供します。正直に言えば、それがムオニオの「シーン」です。',
+    intro: 'ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第2の広さ）への玄関口のひとつです。クラブはなく、パブ巡りもなく、ほとんどの夜は早めに終わります。Harriniva Wilderness Hotelはサファリ客向けに夜サウナ+ロビーバーのセットを、Jeris Lakeside Resortはイェリス湖畔で同じ体験を提供します。正直に言えば、それがムオニオの「シーン」です。',
     venues: {
-      'Hotel Jeris': { type: 'ホテルバー', note: 'イェリス湖畔のホテル：夜はレストランとバーで。' },
+      'Jeris Lakeside Resort': { type: 'ホテルバー', note: 'イェリス湖畔のホテル：夜はレストランとバーで。' },
       'Harriniva Wilderness Hotel': { type: 'ホテルバー', note: 'サウナ＋バー、客のほとんどはサファリ参加者。' },
     },
     knowList: [
@@ -313,8 +309,7 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: '何もないど真ん中。',
     intro: '人口3,300人、スキー場はひとつ。町のスローガンは文字どおり「In the Middle of Nowhere」、しかも褒め言葉のつもりです。遅くまで開いているバーはHotel Revontuliのみ。ゲレンデ側にはシーズン中にパブが1〜2軒加わります。冬以外は：静寂。ユーモアを効かせた「Salla 2032」冬季大会キャンペーンで町は有名になりましたが、シーン自体は変わっていません。クラブ目当てでは来ないでください。',
     venues: {
-      'Koptapubi': { type: 'ゲレンデパブ', note: '山の東側にある居心地のよいパブ：シーズン中の立ち寄りどころ。' },
-      'Hotel Revontuli Bar': { type: 'ホテルバー', note: '唯一の夜遅くまで開く会場。レストラン＋バー。' },
+      'Holiday Club Salla': { type: 'ホテルバー', note: '唯一の夜遅くまで開く会場。レストラン＋バー。' },
       'Salla Wilderness Park': { type: '昼間の会場', note: '公園の来訪者向けのランチと昼間のカフェ。' },
     },
     knowList: [

@@ -14,7 +14,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.' },
-      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club + Half Moon sell out. The non-rally crowd treat it as Friday.' },
+      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club sells out. The non-rally crowd treat it as Friday.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Sami Week / Sámi Soveeknaki', date: 'Early Feb', city: 'Rovaniemi', body: 'Reindeer races, Sámi music, joik concerts, evening cultural events.' },
@@ -34,7 +34,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Air Guitar World Championships qualifier', date: 'Jun, Oulu', city: 'Oulu', body: 'Qualifier for the August Oulu finals. ECoC2026 expanded programme.' },
     ]},
     { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: 'Jul 24–26, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 60 000 visitors, three days, Kuusisaari park." },
+      { name: 'Qstock Festival 2026', date: 'Jul 24–25, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 40 000 visitors, two days, Kuusisaari park." },
       { name: 'Jutajaiset Folklore Festival', date: 'Mid-July', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.' },
       { name: 'Elojazz Festival', date: 'Late July', city: 'Oulu', body: 'Late-July jazz week: outdoor stages around Rotuaari.' },
     ]},
@@ -45,7 +45,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpine Ski World Cup', date: 'Mid-November', city: 'Levi', body: 'World Cup weekend. Hullu Poro Areena hosts after-parties; book accommodation a year ahead.' },
-      { name: 'Ruka FIS Cross-Country Opening', date: 'Late November', city: 'Ruka', body: 'World-cup season opener. Zone Bar at the slope base is the after-party home.' },
+      { name: 'Ruka FIS Cross-Country Opening', date: 'Late November', city: 'Ruka', body: 'World-cup season opener. Restaurant Zone at the slope base is the after-party home.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Christmas in Rovaniemi', date: 'Dec 1–24, 2026', city: 'Rovaniemi', body: 'Tourist peak. Bars run extended hours; Roy Club queues are 45 minutes deep on Saturdays.' },
@@ -55,7 +55,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   fi: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat-alkuperäiskansojen filmifestivaali', date: 'Tammikuun loppu 2026', city: 'Inari', body: 'Alkuperäiskansojen filmifestivaali Sajoksessa. Joikukonsertit, pimeän ajan näytökset, saamelaisateriaohjelmat.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24.1.2026', city: 'Rovaniemi', body: 'Kaksi päivää. Roy Club ja Half Moon myydään loppuun. Muutkin kuin rallikansa pitävät tätä perjantai-iltana.' },
+      { name: 'Arctic Lapland Rally', date: '23.–24.1.2026', city: 'Rovaniemi', body: 'Kaksi päivää. Roy Club myydään loppuun. Muutkin kuin rallikansa pitävät tätä perjantai-iltana.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Saamelaisten viikko / Sámi Soveeknaki', date: 'Helmikuun alku', city: 'Rovaniemi', body: 'Poroajot, saamelaismusiikkia, joikukonsertit, iltakulttuuritapahtumat.' },
@@ -75,7 +75,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Ilmakitaransoiton MM-karsinta', date: 'Kesäkuu, Oulu', city: 'Oulu', body: 'Karsinta elokuun Oulun finaaleihin. ECoC2026:n laajennettu ohjelma.' },
     ]},
     { monthKey: 'July', items: [
-      { name: 'Qstock-festivaali 2026', date: '24.–26.7.2026', city: 'Oulu', body: 'Pohjois-Suomen suurin rockfestivaali. 60 000 kävijää, kolme päivää, Kuusisaaren puisto.' },
+      { name: 'Qstock-festivaali 2026', date: '24.–25.7.2026', city: 'Oulu', body: 'Pohjois-Suomen suurin rockfestivaali. 40 000 kävijää, kaksi päivää, Kuusisaaren puisto.' },
       { name: 'Jutajaiset-folkloristifestivaali', date: 'Heinäkuun puoliväli', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
       { name: 'Elojazz-festivaali', date: 'Heinäkuun loppu', city: 'Oulu', body: 'Heinäkuun lopun jazz-viikko: ulkoilmalavat Rotuaarin ympärillä.' },
     ]},
@@ -86,7 +86,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpine Ski World Cup', date: 'Marraskuun puoliväli', city: 'Levi', body: 'Maailmancup-viikonloppu. Hullu Poro Areena isännöi jatkot; varaa majoitus vuotta etukäteen.' },
-      { name: 'Rukan FIS-maastohiihdon avaus', date: 'Marraskuun loppu', city: 'Ruka', body: 'Maailmancup-kauden avaus. Zone Bar rinteen juurella on jatkojen koti.' },
+      { name: 'Rukan FIS-maastohiihdon avaus', date: 'Marraskuun loppu', city: 'Ruka', body: 'Maailmancup-kauden avaus. Restaurant Zone rinteen juurella on jatkojen koti.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Joulu Rovaniemellä', date: '1.–24.12.2026', city: 'Rovaniemi', body: 'Turistihuippu. Baarit pidentävät aukioloaikoja; Roy Clubin jonot 45 minuutin pituisia lauantaisin.' },
@@ -96,7 +96,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   de: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat – Indigenes Filmfestival', date: 'Ende Januar 2026', city: 'Inari', body: 'Indigenes Filmfestival im Sajos. Joik-Konzerte, Vorführungen in der Dunkelzeit, samische Diner-Programme.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Roy Club + Half Moon sind ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
+      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Das Roy Club ist ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Samische Woche / Sámi Soveeknaki', date: 'Anfang Februar', city: 'Rovaniemi', body: 'Rentierrennen, samische Musik, Joik-Konzerte, abendliche Kulturveranstaltungen.' },
@@ -116,7 +116,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Luftgitarren-WM-Qualifikation', date: 'Juni, Oulu', city: 'Oulu', body: 'Qualifikation für das August-Finale in Oulu. Erweitertes Programm zur Kulturhauptstadt 2026.' },
     ]},
     { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: '24.–26. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 60 000 Besucher, drei Tage, Kuusisaari-Park.' },
+      { name: 'Qstock Festival 2026', date: '24.–25. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 40 000 Besucher, zwei Tage, Kuusisaari-Park.' },
       { name: 'Jutajaiset Folklorefestival', date: 'Mitte Juli', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
       { name: 'Elojazz-Festival', date: 'Ende Juli', city: 'Oulu', body: 'Jazzwoche Ende Juli: Open-Air-Bühnen rund um den Rotuaari.' },
     ]},
@@ -127,7 +127,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpiner Ski-Weltcup', date: 'Mitte November', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
-      { name: 'Ruka FIS Langlauf-Auftakt', date: 'Ende November', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Die Zone Bar an der Talstation ist das Aftershow-Zuhause.' },
+      { name: 'Ruka FIS Langlauf-Auftakt', date: 'Ende November', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Die Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Weihnachten in Rovaniemi', date: '1.–24. Dez 2026', city: 'Rovaniemi', body: 'Touristen-Hochsaison. Bars haben verlängerte Öffnungszeiten; samstags 45-minütige Schlangen vor dem Roy Club.' },

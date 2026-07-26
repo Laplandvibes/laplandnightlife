@@ -5,13 +5,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Norra Österbotten',
     blurb: 'Europas kulturhuvudstad 2026, och den enda äkta klubbscenen i norr som går året runt.',
     pageTagline: 'Europas kulturhuvudstad 2026.',
-    intro: '200 000 invånare, en studentdriven klubbscen och gågatan Rotuaari, där de flesta av stadens adresser ligger inom en kort promenad. Oulu är den enda nordliga staden där vardagskvällar faktiskt lever: publiken rör sig till sent mellan 45 Special, Never Grow Old och St Michael. 2026 tillkommer programmet som Europas kulturhuvudstad: 1 500 evenemang, däribland Air Guitar World Championships, Qstock, Elojazz och vinterfestivalen Frozen People.',
+    intro: '218 000 invånare, en studentdriven klubbscen och gågatan Rotuaari, där de flesta av stadens adresser ligger inom en kort promenad. Oulu är den enda nordliga staden där vardagskvällar faktiskt lever: publiken rör sig till sent mellan 45 Special, Kaarlenholvi och St Michael. 2026 tillkommer programmet som Europas kulturhuvudstad: 1 500 evenemang, däribland Air Guitar World Championships, Qstock, Elojazz och vinterfestivalen Frozen People.',
     venues: {
       'St Michael': { type: 'Irländsk pub + live', note: 'Ankaret på Rotuaari: irländsk pub med turnerande akter och tributkvällar.' },
       "Hemingway's": { type: 'Bar', note: 'Whisky- och craftölbar vid Kirkkokatu: den lugnare ölen, öppet till sent.' },
       'Kaarlenholvi': { type: 'Nattbar', note: 'Nattbar i Oulus näst äldsta stenhus; helgdiscot går till sent, med Jumpru Pub en trappa ner.' },
       '45 Special': { type: 'Nattklubb', note: 'Studenternas favoritklubb. Öppet ons–lör, till sent.' },
-      'Never Grow Old': { type: 'Livemusik + klubb', note: 'Indie/alternativa bokningar. Minst på stråket, men den mest trogna publiken.' },
     },
     knowList: [
       'Rotuaari är bilfritt; nästan hela scenen ligger inom en kort promenad.',
@@ -20,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu är den enda staden så här långt norrut med en äkta cafékultur på söndagar.',
     ],
     quickFacts: {
-      'Population': { label: 'Invånare', value: '210 000' },
+      'Population': { label: 'Invånare', value: '218 000' },
       'Closest airport': { label: 'Närmaste flygplats', value: 'OUL · 15 min' },
       'Last call': { label: 'Sista beställning', value: '03:30' },
       'Best season': { label: 'Bästa säsong', value: 'Året runt · kulturhuvudstad 2026' },
@@ -30,13 +29,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lappland',
     blurb: 'Den arktiska huvudstaden, delad mellan turisthelger och vardagskvällar för lokalbor.',
     pageTagline: 'Den arktiska huvudstaden.',
-    intro: 'Två hastigheter i en och samma stad. På helgerna köar turister runt Koskikatu: Roy Club håller "stadens bästa fester sedan 1985", Half Moon kör karaoke- och discogolv, och Bull Bar är den högljuddaste sportterrassen. Lokalborna sprider ut sig längs gågatan: Cafe & Bar 21 för cocktails, Rovaniemen Oluthuone för öl, Oliver\'s Corner för whisky. Turisthelger betyder köer; vardagar är det lugnt och lokalt.',
+    intro: 'Två hastigheter i en och samma stad. På helgerna köar turister runt Koskikatu: Roy Club håller "stadens bästa fester sedan 1985", och Bull Bar är den högljuddaste sportterrassen. Lokalborna sprider ut sig längs gågatan: Cafe & Bar 21 för cocktails, Rovaniemen Oluthuone för öl, Oliver\'s Corner för whisky. Turisthelger betyder köer; vardagar är det lugnt och lokalt.',
     venues: {
-      'Half Moon Night Club': { type: 'Nattklubb', note: 'Klubb i centrum med karaoke, discogolv och VIP-rum.' },
       'Cafe & Bar 21': { type: 'Cocktailbar', note: 'Lokalbornas favoritcocktailbar, mitt i centrum.' },
       'Rovaniemen Oluthuone': { type: 'Ölhak', note: 'Ölrestaurang vid gågatan: stor uteservering, brett utbud på tapp.' },
       "Oliver's Corner": { type: 'Pub', note: 'Pub vid gågatan med en omfattande whiskyhylla.' },
-      'Kansan Karaoke Pub': { type: 'Karaokepub', note: 'Biljardbord, spel och karaoke på kvällarna. Mer lokalt blir det inte.' },
+      'Kansan Pubi': { type: 'Karaokepub', note: 'Biljardbord, spel och karaoke på kvällarna. Mer lokalt blir det inte.' },
       'Roy Club': { type: 'Nattklubb', note: 'Öppet sedan 1985. Tre salar, stadens största dansgolv.' },
       'Bull Bar': { type: 'Sportbar', note: 'Högljutt, fullt, Premier League-terrass, mat till sent.' },
       'Kauppayhtiö': { type: 'Café + bar', note: 'Vintagekänsla som ett vardagsrum; cocktails till sent.' },
@@ -86,7 +84,7 @@ const overlay: Record<string, CityOverlay> = {
       'Local Pub Panimo': { type: 'Byapub', note: 'Lokal och craft på tapp, pubmeny, karaoke och livekvällar. Byns egen pub.' },
       'Hotel Riekonlinna Bar': { type: 'Hotellbar', note: 'Stor öppen spis i lobbyn; kvällsprogram under säsongen.' },
       'Teerenpesä': { type: 'Pub + nattklubb', note: 'Byns pub-och-klubb-kombination: golvet som stänger sist i Saariselkä.' },
-      'Kakslauttanen Igloo Bar': { type: 'Bar med glastak', note: 'Världsberömd bild. Öppen för icke-gäster med bokning.' },
+      'Igloo Bar': { type: 'Bar med glastak', note: 'Världsberömd bild. Öppen för icke-gäster med bokning.' },
     },
     knowList: [
       'Inga fristående klubbar: nattlivet kretsar kring hotellen.',
@@ -108,8 +106,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Inari är sameparlamentets kulturella säte (Sajos) och hemvist för Siida, museet som förklarar allt du inte visste om Sápmi. "Nattlivet" här är kulturellt: urfolksfilmfestivalen Skábmagovat i januari, den samiska musikfestivalen Ijahis Idja i augusti, och en handfull barer som mest serverar middagar. Kom inte hit för klubbar. Kom för kallt sjövatten, jojkkonserter och en himmel som blir svart klockan 14:00 i december.',
     venues: {
       'Hotel Inari Bar': { type: 'Hotellbar', note: 'Restaurang + bar med utsikt över sjön, öppet till 01:00.' },
-      'Sajos Café': { type: 'Dagtid', note: 'Sameparlamentets café: kaffe + kulturevenemang.' },
-      'Tradiska': { type: 'Restaurang + bar', note: 'Samiskt kök, liten bar, intimt.' },
+      'Café Čaiju': { type: 'Dagtid', note: 'Sameparlamentets café: kaffe + kulturevenemang.' },
     },
     knowList: [
       'Inga klubbar. Två hotell med bar, tre restauranger som serverar alkohol.',
@@ -151,7 +148,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Finlands näst största skidområde.',
     pageTagline: 'Finlands näst största skidområde.',
-    intro: 'Ylläs har 63 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après, Taiga Pub & Kitchen och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands näst största.',
+    intro: 'Ylläs har 63 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après, Taiga Pub & Kitchen och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands tredje största.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'Äkäslompolos livligaste après-ställe, vid backarna.' },
       'Taiga Pub & Kitchen': { type: 'Pub + kök', note: 'Pubrestaurang i Äkäslompolo: tapp, pubmat, sport.' },
@@ -176,11 +173,11 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Skidort i björnland.',
     intro: 'Ruka är tekniskt sett Kuusamo, tekniskt sett inte Lappland, men för skidåkare spelar det ingen roll; det är ett av Finlands mest välbesökta skidområden och öppningsveckan i november är den högljuddaste. Zone är det centrala après-stället vid backens fot, med Piste och Colorado Bar som bär kvällen vidare. Utanför säsongen är byn mycket tyst; från november till april går den för fullt.',
     venues: {
-      'Zone Bar': { type: 'Après ski', note: 'Vid backens fot: liveakter och hem för FIS-öppningsfesten.' },
+      'Restaurant Zone': { type: 'Après ski', note: 'Vid backens fot: liveakter och hem för FIS-öppningsfesten.' },
       'Piste': { type: 'Après + bar', note: 'Byns bar som fortsätter från après till långt in på kvällen.' },
       'Colorado Bar': { type: 'Bar', note: 'Amerikanskt anstruken bar i skidbyn: sport och sena drinkar.' },
       'Hanki Baari': { type: 'Bar', note: 'Enkelt och bra: kaffe, ett hyggligt ölurval och mat.' },
-      'Hotel Rukahovi': { type: 'Hotellbar', note: 'Det stora byhotellet: livemusik på helgerna under högsäsong.' },
+      'Scandic Rukahovi': { type: 'Hotellbar', note: 'Det stora byhotellet: livemusik på helgerna under högsäsong.' },
     },
     knowList: [
       'Ruka öppnar i slutet av november med FIS-världscupen i längdskidor; den veckan är toppen.',
@@ -202,7 +199,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Två små fjäll, 35 km isär, tillsammans en nationalpark. Pyhä har det större skidområdet; Luosto har ametistgruvan som du kan besöka vid midnatt under norrskenet. Ingen av dem har klubbar. Båda har hotellbarer värda en kväll vid brasan: Hotel Pyhätunturi för middag på restaurangnivå, Hotel Aurora i Luosto för baren med norrskensfönster. Lapplands lugnaste "skiddestination", och stolt över det.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Hotellbar', note: 'Restaurang + bar, öppen spis, vid backen.' },
-      'Hotel Aurora Luosto': { type: 'Bar med norrskensfönster', note: 'Bar med glasvägg mot norr: väckningstjänst när norrskenet är aktivt.' },
+      'Santa\'s Hotel Aurora': { type: 'Bar med norrskensfönster', note: 'Bar med glasvägg mot norr: väckningstjänst när norrskenet är aktivt.' },
       'Pyhän Asteli': { type: 'Restaurang + bar', note: 'Omtyckt av lokalbor; den enda sena middagen i byn Pyhä.' },
     },
     knowList: [
@@ -264,17 +261,16 @@ const overlay: Record<string, CityOverlay> = {
   },
   ivalo: {
     region: 'Inari kommun',
-    blurb: 'Hotel Ivalos Club Nord + Hotel Kultahippus pub.',
+    blurb: 'Hotel Ivalos lobbybar + Hotel Kultahippus pub.',
     pageTagline: 'Den nordligaste flygplatsen med en klubb.',
-    intro: 'Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000 invånare. Hotel Ivalo driver Club Nord, den nordligaste klubben på finska fastlandet, öppen fredag och lördag. Hotel Kultahippu har byns enda äkta pub. I övrigt finns hotellbarer och en enda bensinmackskiosk som säljer öl.',
+    intro: 'Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000 invånare.Hotel Ivalo har en lobbybar och restaurangen Lapin Yö. Hotel Kultahippu har byns enda äkta pub. I övrigt finns hotellbarer och en enda bensinmackskiosk som säljer öl.',
     venues: {
-      'Club Nord (Hotel Ivalo)': { type: 'Nattklubb', note: 'Öppet fre–lör. Den nordligaste klubben på finska fastlandet.' },
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Öppet dagligen. Det lokala stället för en öl efter jobbet.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotellbar', note: 'Lugnare, kopplad till restaurangen.' },
     },
     knowList: [
       'Nordligaste flygplatsen på finska fastlandet.',
-      'Saariselkä ligger 25 minuter bort; många besökare från Saariselkä kör in för Club Nord.',
+      'Saariselkä ligger 25 minuter bort; många besökare från Saariselkä kör in för hotellbarerna.',
       'Sista beställning 02:00 på vardagar, 03:00 på helgen.',
       'Ingen taxistation: boka via hotellreceptionen.',
     ],
@@ -289,9 +285,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Västra Lappland',
     blurb: 'Inget nattliv. Nationalparken Pallas-Yllästunturi är dragningen.',
     pageTagline: 'Porten till nationalparken.',
-    intro: 'Muonio har 2 300 invånare och är en av portarna till nationalparken Pallas-Yllästunturi (1 020 km², Finlands näst största). Det finns ingen klubb, ingen krogrunda, och de flesta kvällar tar slut tidigt. Harriniva Wilderness Hotel kör en kombination av kvällsbastu + lobbybar för safarigäster, och Hotel Jeris gör samma sak vid sjön Jerisjärvi. Det är, helt ärligt, Muonios "scen".',
+    intro: 'Muonio har 2 300 invånare och är en av portarna till nationalparken Pallas-Yllästunturi (1 020 km², Finlands tredje största). Det finns ingen klubb, ingen krogrunda, och de flesta kvällar tar slut tidigt. Harriniva Wilderness Hotel kör en kombination av kvällsbastu + lobbybar för safarigäster, och Jeris Lakeside Resort gör samma sak vid sjön Jerisjärvi. Det är, helt ärligt, Muonios "scen".',
     venues: {
-      'Hotel Jeris': { type: 'Hotellbar', note: 'Hotell vid sjön Jerisjärvi: restaurang och bar för kvällen.' },
+      'Jeris Lakeside Resort': { type: 'Hotellbar', note: 'Hotell vid sjön Jerisjärvi: restaurang och bar för kvällen.' },
       'Harriniva Wilderness Hotel': { type: 'Hotellbar', note: 'Bastu + bar, mest safarigäster.' },
     },
     knowList: [
@@ -313,8 +309,7 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Mitt ute i ingenstans.',
     intro: '3 300 invånare och en enda skidbacke. Byns slogan är bokstavligen "In the Middle of Nowhere", och det är menat som en komplimang. Hotel Revontuli har den enda baren som håller öppet sent; på backsidan tillkommer en pub eller två under säsongen. Utanför vintern: tystnad. Den skämtsamma kampanjen "Salla 2032" för vinter-OS satte byn på kartan, men scenen själv förändrades inte. Kom inte för klubbarna.',
     venues: {
-      'Koptapubi': { type: 'Backpub', note: 'Mysig pub på fjällets östsida: säsongens stopp.' },
-      'Hotel Revontuli Bar': { type: 'Hotellbar', note: 'Det enda stället till sent på kvällen. Restaurang + bar.' },
+      'Holiday Club Salla': { type: 'Hotellbar', note: 'Det enda stället till sent på kvällen. Restaurang + bar.' },
       'Salla Wilderness Park': { type: 'Dagställe', note: 'Lunch + dagcafé för besökare till parken.' },
     },
     knowList: [

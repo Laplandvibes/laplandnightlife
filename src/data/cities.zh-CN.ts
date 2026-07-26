@@ -5,13 +5,12 @@ const overlay: Record<string, CityOverlay> = {
     region: '北博滕区',
     blurb: '2026 年欧洲文化之都，也是北方唯一一座全年都有真正夜店场景的城市。',
     pageTagline: '2026 年欧洲文化之都。',
-    intro: '20万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。奥卢是北部唯一工作日夜晚也真正热闹的城市，人群在 45 Special、Never Grow Old 和 St Michael 之间流连到深夜。2026年还有欧洲文化之都项目加持：1500场活动，包括空气吉他世界锦标赛、Qstock、Elojazz 和冬季音乐节 Frozen People。',
+    intro: '21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。奥卢是北部唯一工作日夜晚也真正热闹的城市，人群在 45 Special、Kaarlenholvi 和 St Michael 之间流连到深夜。2026年还有欧洲文化之都项目加持：1500场活动，包括空气吉他世界锦标赛、Qstock、Elojazz 和冬季音乐节 Frozen People。',
     venues: {
       'St Michael': { type: '爱尔兰酒吧+现场演出', note: '罗图阿里的定盘星，有巡演乐队和致敬之夜的爱尔兰酒吧。' },
       "Hemingway's": { type: '酒吧', note: 'Kirkkokatu 街上的威士忌与精酿啤酒吧，安静的一杯，营业到深夜。' },
       'Kaarlenholvi': { type: '夜店酒吧', note: '位于奥卢第二古老石头建筑里的夜店酒吧；周末迪斯科营业到深夜，楼下是 Jumpru Pub。' },
       '45 Special': { type: '夜店', note: '学生最爱的夜店。周三至周六营业，开到很晚。' },
-      'Never Grow Old': { type: '现场音乐 + 夜店', note: '独立 / 另类风格的演出排期。是这条街上最小的一家，却拥有最忠实的人群。' },
     },
     knowList: [
       '罗图阿里禁止车辆通行，几乎整个夜生活圈都在一小段步行内。',
@@ -20,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       '在这么北的地方，只有奥卢有真正的周日白天咖啡馆文化。',
     ],
     quickFacts: {
-      'Population': { label: '人口', value: '21 万' },
+      'Population': { label: '人口', value: '21.8 万' },
       'Closest airport': { label: '最近机场', value: 'OUL · 15 分钟' },
       'Last call': { label: '最后点单', value: '03:30' },
       'Best season': { label: '最佳季节', value: '全年 · 2026 欧洲文化之都' },
@@ -30,13 +29,12 @@ const overlay: Record<string, CityOverlay> = {
     region: '拉普兰',
     blurb: '北极之都，在游客云集的周末和只属于本地人的工作日之间一分为二。',
     pageTagline: '北极之都。',
-    intro: '一座城，两种节奏。周末游客在科斯基卡图（Koskikatu）一带排队，Roy Club 自称"自1985年起全城最棒的派对"，Half Moon 开着卡拉OK和迪斯科舞池，Bull Bar 是最喧闹的体育露台。本地人则散布在步行街沿线，鸡尾酒去 Cafe & Bar 21，啤酒去 Rovaniemen Oluthuone，威士忌去 Oliver\'s Corner。旅游旺季的周末要排队；工作日则安静而本地。',
+    intro: '一座城，两种节奏。周末游客在科斯基卡图（Koskikatu）一带排队，Roy Club 自称"自1985年起全城最棒的派对"，Bull Bar 是最喧闹的体育露台。本地人则散布在步行街沿线，鸡尾酒去 Cafe & Bar 21，啤酒去 Rovaniemen Oluthuone，威士忌去 Oliver\'s Corner。旅游旺季的周末要排队；工作日则安静而本地。',
     venues: {
-      'Half Moon Night Club': { type: '夜店', note: '市中心俱乐部，有卡拉OK、迪斯科舞池和VIP包间。' },
       'Cafe & Bar 21': { type: '鸡尾酒吧', note: '市中心本地人最爱的鸡尾酒吧。' },
       'Rovaniemen Oluthuone': { type: '啤酒馆', note: '步行街上的啤酒餐厅，大院子，酒头选择丰富。' },
       "Oliver's Corner": { type: '酒馆', note: '步行街上的酒馆，威士忌藏量可观。' },
-      'Kansan Karaoke Pub': { type: '卡拉OK酒馆', note: '台球、游戏，晚上有卡拉OK，本地味十足。' },
+      'Kansan Pubi': { type: '卡拉OK酒馆', note: '台球、游戏，晚上有卡拉OK，本地味十足。' },
       'Roy Club': { type: '夜店', note: '1985 年开业至今。三个厅，全城最大的舞池。' },
       'Bull Bar': { type: '体育酒吧', note: '吵闹、人挤人、转播英超的露台，还有深夜餐食。' },
       'Kauppayhtiö': { type: '咖啡馆 + 酒吧', note: '复古客厅风；鸡尾酒供应到深夜。' },
@@ -86,7 +84,7 @@ const overlay: Record<string, CityOverlay> = {
       'Local Pub Panimo': { type: '村酒馆', note: '本地和精酿酒头、酒馆菜单、卡拉OK和现场演出之夜，村里自己的酒馆。' },
       'Hotel Riekonlinna Bar': { type: '酒店酒吧', note: '大堂有大壁炉；旺季有晚间活动。' },
       'Teerenpesä': { type: '酒馆+夜店', note: '村里的酒馆夜店二合一，萨利色尔卡关门最晚的舞池。' },
-      'Kakslauttanen Igloo Bar': { type: '玻璃顶酒吧', note: '世界闻名的打卡照。非住客凭预约也可进入。' },
+      'Igloo Bar': { type: '玻璃顶酒吧', note: '世界闻名的打卡照。非住客凭预约也可进入。' },
     },
     knowList: [
       '没有独立夜店，夜生活都依托于酒店。',
@@ -108,8 +106,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Inari 是萨米议会的文化所在地（Sajos），也是 Siida 的家，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。这里的“夜生活”是文化性的：1 月的 Skábmagovat 原住民电影节、8 月的 Ijahis Idja 萨米音乐节，再加上几家主要供应正餐的酒吧。别为蹦迪而来。为冰冷的湖水、约伊克（joik）演唱会，以及 12 月里 14:00 就黑透的天空而来。',
     venues: {
       'Hotel Inari Bar': { type: '酒店酒吧', note: '湖景餐厅 + 酒吧，营业至 01:00。' },
-      'Sajos Café': { type: '日间', note: '萨米议会咖啡馆，咖啡 + 文化活动。' },
-      'Tradiska': { type: '餐厅 + 酒吧', note: '萨米料理，小酒吧，氛围私密。' },
+      'Café Čaiju': { type: '日间', note: '萨米议会咖啡馆，咖啡 + 文化活动。' },
     },
     knowList: [
       '没有夜店。两家带酒吧的酒店，三家供应酒类的餐厅。',
@@ -176,11 +173,11 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: '熊出没之地的滑雪场。',
     intro: '鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。淡季村子非常安静；11月到4月则火力全开。',
     venues: {
-      'Zone Bar': { type: '滑雪后', note: '就在雪道脚下，现场演出与FIS开板周派对的大本营。' },
+      'Restaurant Zone': { type: '滑雪后', note: '就在雪道脚下，现场演出与FIS开板周派对的大本营。' },
       'Piste': { type: '滑雪后+酒吧', note: '从滑雪后一路营业到深夜的雪村酒吧。' },
       'Colorado Bar': { type: '酒吧', note: '雪村里的美式酒吧，看比赛、喝夜酒。' },
       'Hanki Baari': { type: '酒吧', note: '简单而实在：咖啡、像样的啤酒选择和食物。' },
-      'Hotel Rukahovi': { type: '酒店酒吧', note: '村里的大酒店，旺季周末有现场音乐。' },
+      'Scandic Rukahovi': { type: '酒店酒吧', note: '村里的大酒店，旺季周末有现场音乐。' },
     },
     knowList: [
       '鲁卡随11月底的FIS越野滑雪世界杯开板，那一周是巅峰。',
@@ -202,7 +199,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: '两座相距 35 公里的小山峰，共享一座国家公园。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。两边都没有夜店。两边都有值得守着壁炉过夜的酒店酒吧，Hotel Pyhätunturi 提供餐厅级的餐饮，Luosto 的 Hotel Aurora 则有面朝极光窗的酒吧。这是拉普兰最安静的“滑雪目的地”，而且引以为傲。',
     venues: {
       'Hotel Pyhätunturi Bar': { type: '酒店酒吧', note: '餐厅 + 酒吧、壁炉，紧邻雪道。' },
-      'Hotel Aurora Luosto': { type: '极光窗酒吧', note: '面朝北方的玻璃墙酒吧，极光活跃时提供叫醒服务。' },
+      'Santa\'s Hotel Aurora': { type: '极光窗酒吧', note: '面朝北方的玻璃墙酒吧，极光活跃时提供叫醒服务。' },
       'Pyhän Asteli': { type: '餐厅 + 酒吧', note: '本地人最爱的餐厅；Pyhä 村里唯一供应深夜餐饮的地方。' },
     },
     knowList: [
@@ -264,17 +261,16 @@ const overlay: Record<string, CityOverlay> = {
   },
   ivalo: {
     region: 'Inari 市镇',
-    blurb: 'Hotel Ivalo 的 Club Nord + Hotel Kultahippu 酒馆。',
+    blurb: 'Hotel Ivalo 的大堂酒吧 + Hotel Kultahippu 酒馆。',
     pageTagline: '最北的、带夜店的机场。',
-    intro: 'Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 经营着 Club Nord，芬兰大陆最北的夜店，周五、周六营业。Hotel Kultahippu 拥有村里唯一一家像样的酒馆。除此之外，就是酒店酒吧和一家卖啤酒的加油站小卖部了。',
+    intro: 'Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 设有大堂酒吧和 Lapin Yö 餐厅。 Hotel Kultahippu 拥有村里唯一一家像样的酒馆。除此之外，就是酒店酒吧和一家卖啤酒的加油站小卖部了。',
     venues: {
-      'Club Nord (Hotel Ivalo)': { type: '夜店', note: '周五至周六营业。芬兰大陆最北的夜店。' },
       'Hotel Kultahippu Pub': { type: '酒馆', note: '每日营业。本地人下班后的去处。' },
       'Hotel Ivalo Lobby Bar': { type: '酒店酒吧', note: '更安静，与餐厅相连。' },
     },
     knowList: [
       '芬兰大陆最北的机场。',
-      'Saariselkä 在 25 分钟车程之外，许多 Saariselkä 的访客会开车进城去 Club Nord。',
+      'Saariselkä 在 25 分钟车程之外，许多 Saariselkä 的访客会开车进城去酒店酒吧。',
       '工作日最后点单 02:00，周末 03:00。',
       '没有出租车候客点，请通过酒店前台预订。',
     ],
@@ -289,9 +285,9 @@ const overlay: Record<string, CityOverlay> = {
     region: '西拉普兰',
     blurb: '没有夜生活。Pallas-Yllästunturi 国家公园才是卖点。',
     pageTagline: '国家公园门户。',
-    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第二大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Hotel Jeris 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
+    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第二大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
     venues: {
-      'Hotel Jeris': { type: '酒店酒吧', note: '耶里斯湖畔的酒店，晚上有餐厅和酒吧。' },
+      'Jeris Lakeside Resort': { type: '酒店酒吧', note: '耶里斯湖畔的酒店，晚上有餐厅和酒吧。' },
       'Harriniva Wilderness Hotel': { type: '酒店酒吧', note: '桑拿 + 酒吧，主要是雪橇团的客人。' },
     },
     knowList: [
@@ -313,8 +309,7 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: '位于天涯海角。',
     intro: '3300名居民，一条雪道。镇子的口号就是字面意义上的"In the Middle of Nowhere"（在无人之境），而且他们当作夸奖来说。营业到深夜的酒吧只有 Hotel Revontuli；雪道一侧旺季会多开一两家酒馆。冬季之外：一片寂静。带着自嘲意味的"Salla 2032"冬季运动会申办营销让小镇出了名，但实际场景没有变。别为夜店而来。',
     venues: {
-      'Koptapubi': { type: '雪道酒馆', note: '山体东侧的温馨酒馆，雪季的落脚点。' },
-      'Hotel Revontuli Bar': { type: '酒店酒吧', note: '唯一一家深夜营业的场所。餐厅 + 酒吧。' },
+      'Holiday Club Salla': { type: '酒店酒吧', note: '唯一一家深夜营业的场所。餐厅 + 酒吧。' },
       'Salla Wilderness Park': { type: '日间场所', note: '为公园访客提供午餐 + 日间咖啡馆。' },
     },
     knowList: [

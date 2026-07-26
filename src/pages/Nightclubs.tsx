@@ -29,13 +29,10 @@ const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
 const top: { name: string; city: string; cap: string; openKey: OpenKey }[] = [
   { name: 'Hullu Poro Areena', city: 'Levi', cap: '1 700', openKey: 'wedSatSeason' },
   { name: 'Roy Club', city: 'Rovaniemi', cap: '-', openKey: 'weekendsLate' },
-  { name: 'Half Moon Night Club', city: 'Rovaniemi', cap: '-', openKey: 'weekends' },
   { name: '45 Special', city: 'Oulu', cap: '-', openKey: 'wedSat' },
   { name: 'St Michael', city: 'Oulu', cap: '-', openKey: 'wedSat' },
-  { name: 'Never Grow Old', city: 'Oulu', cap: '-', openKey: 'wedSat' },
   { name: 'Kaarlenholvi', city: 'Oulu', cap: '-', openKey: 'friSatDisco' },
-  { name: 'Zone Bar', city: 'Ruka', cap: '-', openKey: 'dailySeason' },
-  { name: 'Club Nord (Hotel Ivalo)', city: 'Ivalo', cap: '-', openKey: 'seasonal' },
+  { name: 'Restaurant Zone', city: 'Ruka', cap: '-', openKey: 'dailySeason' },
 ];
 
 export default function Nightclubs() {
@@ -51,7 +48,7 @@ export default function Nightclubs() {
   // (tier1Body, heroEyebrow, tier2Body) or the home FAQ (last call 03:30).
   const stats = [
     { v: '1 700', l: u.clubStats.capacity },
-    { v: '50+', l: u.clubStats.venues },
+    { v: '40+', l: u.clubStats.venues },
     { v: '8', l: u.clubStats.strip },
     { v: '03:30', l: u.clubStats.lastCall },
   ];

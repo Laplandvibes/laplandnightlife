@@ -4,13 +4,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Ostrobotnia del Norte',
     blurb: 'Capital Europea de la Cultura 2026, y la única escena de clubes que funciona de verdad todo el año en el norte.',
     pageTagline: 'Capital Europea de la Cultura 2026.',
-    intro: '200 000 habitantes, una escena de clubes impulsada por estudiantes y la calle peatonal Rotuaari, que concentra la mayoría de los locales de la ciudad a un corto paseo. Oulu es la única ciudad del norte donde los días de semana funcionan de verdad: la gente se mueve entre 45 Special, Never Grow Old y St Michael hasta tarde. En 2026 se suma el programa de Capital Europea de la Cultura: 1 500 eventos, incluidos el Mundial de Air Guitar, Qstock, Elojazz y el festival de invierno Frozen People.',
+    intro: '218 000 habitantes, una escena de clubes impulsada por estudiantes y la calle peatonal Rotuaari, que concentra la mayoría de los locales de la ciudad a un corto paseo. Oulu es la única ciudad del norte donde los días de semana funcionan de verdad: la gente se mueve entre 45 Special, Kaarlenholvi y St Michael hasta tarde. En 2026 se suma el programa de Capital Europea de la Cultura: 1 500 eventos, incluidos el Mundial de Air Guitar, Qstock, Elojazz y el festival de invierno Frozen People.',
     venues: {
       'St Michael': { type: 'Pub irlandés + directo', note: 'El ancla de Rotuaari: pub irlandés con giras y noches de tributo.' },
       "Hemingway's": { type: 'Bar', note: 'Bar de whisky y cerveza artesanal en Kirkkokatu: la pinta tranquila, abierto hasta tarde.' },
       'Kaarlenholvi': { type: 'Bar nocturno', note: 'Bar nocturno en el segundo edificio de piedra más antiguo de Oulu; la disco de fin de semana dura hasta tarde, con el Jumpru Pub abajo.' },
       '45 Special': { type: 'Discoteca', note: 'El club favorito de los estudiantes. Abierto de miércoles a sábado, hasta tarde.' },
-      'Never Grow Old': { type: 'Música en vivo + club', note: 'Programación indie / alternativa. El más pequeño de la calle, pero con el público más fiel.' },
     },
     knowList: [
       'Rotuaari está cerrada al tráfico: casi toda la escena cabe en un paseo corto.',
@@ -19,7 +18,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu es la única ciudad tan al norte con una auténtica escena dominical de cafés.',
     ],
     quickFacts: {
-      'Population': { label: 'Población', value: '210 000' },
+      'Population': { label: 'Población', value: '218 000' },
       'Closest airport': { label: 'Aeropuerto más cercano', value: 'OUL · 15 min' },
       'Last call': { label: 'Último servicio', value: '03:30' },
       'Best season': { label: 'Mejor temporada', value: 'Todo el año · Capital de la Cultura 2026' },
@@ -29,13 +28,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia',
     blurb: 'La capital ártica: dividida entre los fines de semana turísticos y los días de diario solo para locales.',
     pageTagline: 'La capital ártica.',
-    intro: 'Dos velocidades en una misma ciudad. Los turistas de fin de semana hacen cola en torno a Koskikatu: el Roy Club organiza "las mejores fiestas de la ciudad desde 1985", el Half Moon mueve pistas de karaoke y disco, y el Bull Bar es la terraza deportiva más ruidosa. Los locales se reparten por la calle peatonal: Cafe & Bar 21 para cócteles, Rovaniemen Oluthuone para cerveza y Oliver\'s Corner para whisky. Los fines de semana turísticos hay colas; entre semana todo es tranquilo y local.',
+    intro: 'Dos velocidades en una misma ciudad. Los turistas de fin de semana hacen cola en torno a Koskikatu: el Roy Club organiza "las mejores fiestas de la ciudad desde 1985" y el Bull Bar es la terraza deportiva más ruidosa. Los locales se reparten por la calle peatonal: Cafe & Bar 21 para cócteles, Rovaniemen Oluthuone para cerveza y Oliver\'s Corner para whisky. Los fines de semana turísticos hay colas; entre semana todo es tranquilo y local.',
     venues: {
-      'Half Moon Night Club': { type: 'Discoteca', note: 'Club céntrico con karaoke, pistas de disco y salas VIP.' },
       'Cafe & Bar 21': { type: 'Coctelería', note: 'La coctelería favorita de los locales en pleno centro.' },
       'Rovaniemen Oluthuone': { type: 'Cervecería', note: 'Restaurante cervecero en la calle peatonal: gran terraza y amplia selección de grifos.' },
       "Oliver's Corner": { type: 'Pub', note: 'Pub de la calle peatonal con una estantería de whiskies muy completa.' },
-      'Kansan Karaoke Pub': { type: 'Pub de karaoke', note: 'Billares, juegos y karaoke por las noches: lo más local que hay.' },
+      'Kansan Pubi': { type: 'Pub de karaoke', note: 'Billares, juegos y karaoke por las noches: lo más local que hay.' },
       'Roy Club': { type: 'Discoteca', note: 'Abierto desde 1985. Tres salas: la pista más grande de la ciudad.' },
       'Bull Bar': { type: 'Bar deportivo', note: 'Ruidoso, lleno, terraza de Premier League y comida hasta tarde.' },
       'Kauppayhtiö': { type: 'Café + bar', note: 'Estética de salón vintage; cócteles hasta tarde.' },
@@ -85,7 +83,7 @@ const overlay: Record<string, CityOverlay> = {
       'Local Pub Panimo': { type: 'Pub del pueblo', note: 'Grifos locales y artesanales, menú de pub, karaoke y noches en directo: el pub propio del pueblo.' },
       'Hotel Riekonlinna Bar': { type: 'Bar de hotel', note: 'Gran chimenea en el lobby; programa nocturno en temporada.' },
       'Teerenpesä': { type: 'Pub + discoteca', note: 'El combo pub-discoteca del pueblo: la pista que más tarde cierra en Saariselkä.' },
-      'Kakslauttanen Igloo Bar': { type: 'Bar de techo de cristal', note: 'La foto mundialmente famosa. Abierto a no alojados con reserva.' },
+      'Igloo Bar': { type: 'Bar de techo de cristal', note: 'La foto mundialmente famosa. Abierto a no alojados con reserva.' },
     },
     knowList: [
       'No hay clubes independientes: la vida nocturna gira en torno a los hoteles.',
@@ -107,8 +105,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Inari es la sede cultural del parlamento sami (Sajos) y alberga Siida, el museo que te explica todo lo que no sabías sobre Sápmi. Aquí la "vida nocturna" es cultural: el festival de cine indígena Skábmagovat en enero, el festival de música sami Ijahis Idja en agosto y un puñado de bares que en su mayoría sirven cenas. No vengas por los clubes. Ven por el agua fría del lago, los conciertos de joik y un cielo que se vuelve negro a las 14:00 en diciembre.',
     venues: {
       'Hotel Inari Bar': { type: 'Bar de hotel', note: 'Restaurante y bar con vistas al lago, abierto hasta la 01:00.' },
-      'Sajos Café': { type: 'De día', note: 'Café del parlamento sami: café y eventos culturales.' },
-      'Tradiska': { type: 'Restaurante + bar', note: 'Cocina sami, bar pequeño, ambiente íntimo.' },
+      'Café Čaiju': { type: 'De día', note: 'Café del parlamento sami: café y eventos culturales.' },
     },
     knowList: [
       'No hay clubes. Dos hoteles con bar, tres restaurantes con licencia de alcohol.',
@@ -150,7 +147,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'La segunda mayor zona esquiable de Finlandia.',
     pageTagline: 'La segunda mayor zona esquiable de Finlandia.',
-    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el segundo más grande de Finlandia.',
+    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el tercero más grande de Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'El après más concurrido de Äkäslompolo, junto a las pistas.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cocina', note: 'Pub-restaurante de Äkäslompolo: grifos, comida de pub y deporte.' },
@@ -175,11 +172,11 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Estación de esquí en tierra de osos.',
     intro: 'Ruka es técnicamente Kuusamo y técnicamente no es Laponia, pero a los esquiadores les da igual: es una de las estaciones más concurridas de Finlandia y la semana de apertura de noviembre es la más ruidosa. Zone es el après central al pie de las pistas, con Piste y Colorado Bar llevando la noche adelante. Fuera de temporada el pueblo queda muy tranquilo; de noviembre a abril funciona a plena capacidad.',
     venues: {
-      'Zone Bar': { type: 'Après-ski', note: 'Al pie de las pistas: actuaciones en directo y la casa de la fiesta de apertura FIS.' },
+      'Restaurant Zone': { type: 'Après-ski', note: 'Al pie de las pistas: actuaciones en directo y la casa de la fiesta de apertura FIS.' },
       'Piste': { type: 'Après + bar', note: 'Bar del pueblo de esquí que encadena el après con la noche.' },
       'Colorado Bar': { type: 'Bar', note: 'Bar de estilo americano en el pueblo: deporte y copas hasta tarde.' },
       'Hanki Baari': { type: 'Bar', note: 'Sencillo y bueno: café, buena selección de cervezas y comida.' },
-      'Hotel Rukahovi': { type: 'Bar de hotel', note: 'El gran hotel del pueblo: música en directo los fines de semana de temporada alta.' },
+      'Scandic Rukahovi': { type: 'Bar de hotel', note: 'El gran hotel del pueblo: música en directo los fines de semana de temporada alta.' },
     },
     knowList: [
       'Ruka abre con la Copa del Mundo FIS de esquí de fondo a finales de noviembre: esa semana es el pico.',
@@ -201,7 +198,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Dos pequeños montes, a 35 km uno del otro, que comparten un parque nacional. Pyhä tiene la mayor zona esquiable; Luosto tiene la mina de amatista que puedes visitar a medianoche bajo la aurora. Ninguno tiene clubes. Ambos tienen bares de hotel que merecen una velada junto a la chimenea: el Hotel Pyhätunturi para una cena a la altura de un restaurante, y el Hotel Aurora de Luosto para el bar con ventanal a la aurora. El "destino de esquí" más tranquilo de Laponia, y orgulloso de serlo.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Bar de hotel', note: 'Restaurante y bar, chimenea, al pie de la pista.' },
-      'Hotel Aurora Luosto': { type: 'Bar con ventanal a la aurora', note: 'Bar con paredes de cristal orientado al norte; servicio de despertador si la aurora está activa.' },
+      'Santa\'s Hotel Aurora': { type: 'Bar con ventanal a la aurora', note: 'Bar con paredes de cristal orientado al norte; servicio de despertador si la aurora está activa.' },
       'Pyhän Asteli': { type: 'Restaurante + bar', note: 'Restaurante favorito local; la única cena tardía del pueblo de Pyhä.' },
     },
     knowList: [
@@ -263,17 +260,16 @@ const overlay: Record<string, CityOverlay> = {
   },
   ivalo: {
     region: 'Municipio de Inari',
-    blurb: 'El Club Nord del Hotel Ivalo y el pub del Hotel Kultahippu.',
+    blurb: 'El bar del vestíbulo del Hotel Ivalo y el pub del Hotel Kultahippu.',
     pageTagline: 'El aeropuerto más al norte con un club.',
-    intro: 'Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra Natal Sami. El pueblo en sí tiene 4 000 habitantes. El Hotel Ivalo gestiona el Club Nord, el club más al norte de la Finlandia continental, abierto viernes y sábado. El Hotel Kultahippu tiene el único pub de verdad del pueblo. Más allá de eso, bares de hotel y un quiosco de gasolinera que vende cerveza.',
+    intro: 'Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra Natal Sami. El pueblo en sí tiene 4 000 habitantes. El Hotel Ivalo tiene un bar en el vestíbulo y el restaurante Lapin Yö. El Hotel Kultahippu tiene el único pub de verdad del pueblo. Más allá de eso, bares de hotel y un quiosco de gasolinera que vende cerveza.',
     venues: {
-      'Club Nord (Hotel Ivalo)': { type: 'Discoteca', note: 'Abierto viernes y sábado. El club más al norte de la Finlandia continental.' },
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Abierto a diario. El rincón local de después del trabajo.' },
       'Hotel Ivalo Lobby Bar': { type: 'Bar de hotel', note: 'Más tranquilo, junto al restaurante.' },
     },
     knowList: [
       'El aeropuerto más al norte de la Finlandia continental.',
-      'Saariselkä está a 25 minutos: muchos visitantes de Saariselkä se acercan al Club Nord.',
+      'Saariselkä está a 25 minutos: muchos visitantes de Saariselkä se acercan a los bares de hotel.',
       'Último servicio a las 02:00 entre semana y a las 03:00 los fines de semana.',
       'No hay parada de taxis: reserva en la recepción del hotel.',
     ],
@@ -288,9 +284,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia Occidental',
     blurb: 'Sin vida nocturna. El reclamo es el parque nacional de Pallas-Yllästunturi.',
     pageTagline: 'La puerta al parque nacional.',
-    intro: 'Muonio tiene 2 300 habitantes y es una de las puertas del Parque Nacional Pallas-Yllästunturi (1 020 km², el segundo más grande de Finlandia). No hay club, no hay ruta de pubs y la mayoría de las noches terminan pronto. El Harriniva Wilderness Hotel ofrece la combinación de sauna nocturna + bar de lobby para sus huéspedes de safari, y el Hotel Jeris hace lo mismo junto al lago Jerisjärvi. Esa es la "escena" de Muonio, honestamente.',
+    intro: 'Muonio tiene 2 300 habitantes y es una de las puertas del Parque Nacional Pallas-Yllästunturi (1 020 km², el tercero más grande de Finlandia). No hay club, no hay ruta de pubs y la mayoría de las noches terminan pronto. El Harriniva Wilderness Hotel ofrece la combinación de sauna nocturna + bar de lobby para sus huéspedes de safari, y el Jeris Lakeside Resort hace lo mismo junto al lago Jerisjärvi. Esa es la "escena" de Muonio, honestamente.',
     venues: {
-      'Hotel Jeris': { type: 'Bar de hotel', note: 'Hotel a orillas del Jerisjärvi: restaurante y bar para la noche.' },
+      'Jeris Lakeside Resort': { type: 'Bar de hotel', note: 'Hotel a orillas del Jerisjärvi: restaurante y bar para la noche.' },
       'Harriniva Wilderness Hotel': { type: 'Bar de hotel', note: 'Sauna y bar, sobre todo para huéspedes de safari.' },
     },
     knowList: [
@@ -312,8 +308,7 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'En medio de la nada.',
     intro: '3 300 habitantes y una pista de esquí. El lema del pueblo es literalmente "In the Middle of Nowhere", y lo dicen como un cumplido. El Hotel Revontuli tiene el único bar que cierra tarde; en la zona de pistas se suma algún pub en temporada. Fuera del invierno: silencio. La irónica campaña "Salla 2032" de los Juegos de Invierno puso el pueblo en el mapa, pero la escena real no cambió. No venga por los clubes.',
     venues: {
-      'Koptapubi': { type: 'Pub de pista', note: 'Pub acogedor en la cara este del monte: la parada de la temporada.' },
-      'Hotel Revontuli Bar': { type: 'Bar de hotel', note: 'El único local que abre hasta tarde. Restaurante y bar.' },
+      'Holiday Club Salla': { type: 'Bar de hotel', note: 'El único local que abre hasta tarde. Restaurante y bar.' },
       'Salla Wilderness Park': { type: 'Local de día', note: 'Almuerzo y café diurno para los visitantes del parque.' },
     },
     knowList: [

@@ -5,13 +5,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Pohjois-Pohjanmaa',
     blurb: 'Euroopan kulttuuripääkaupunki 2026 ja pohjoisen ainoa aidosti ympärivuotinen klubikulttuuri.',
     pageTagline: 'Euroopan kulttuuripääkaupunki 2026.',
-    intro: '200 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä. Oulu on pohjoisen ainoa kaupunki, jossa arki-illat oikeasti elävät. Porukka kiertää 45 Specialin, Never Grow Oldin ja St Michaelin väliä myöhään. Vuonna 2026 päälle tulee Euroopan kulttuuripääkaupunkiohjelma: 1 500 tapahtumaa, mukana ilmakitaransoiton MM-kisat, Qstock, Elojazz ja Frozen People -talvifestivaali.',
+    intro: '218 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä. Oulu on pohjoisen ainoa kaupunki, jossa arki-illat oikeasti elävät. Porukka kiertää 45 Specialin, Kaarlenholviin ja St Michaelin väliä myöhään. Vuonna 2026 päälle tulee Euroopan kulttuuripääkaupunkiohjelma: 1 500 tapahtumaa, mukana ilmakitaransoiton MM-kisat, Qstock, Elojazz ja Frozen People -talvifestivaali.',
     venues: {
       'St Michael': { type: 'Irkkupubi + livemusiikki', note: 'Rotuaarin kiintopiste: irlantilaispubi, jossa kiertue-esiintyjiä ja tribuutti-iltoja.' },
       "Hemingway's": { type: 'Baari', note: 'Viski- ja pienpanimobaari Kirkkokadulla: rauhallisempi tuoppi, auki myöhään.' },
       'Kaarlenholvi': { type: 'Yöbaari', note: 'Yöbaari Oulun toiseksi vanhimmassa kivitalossa; viikonlopun disko jatkuu pikkutunneille, Jumpru Pub alakerrassa.' },
       '45 Special': { type: 'Yökerho', note: 'Opiskelijoiden suosikkiklubi. Auki ke–la, myöhään.' },
-      'Never Grow Old': { type: 'Livemusiikki + klubi', note: 'Indie- ja vaihtoehtokeikat. Kadun pienin paikka mutta uskollisin yleisö.' },
     },
     knowList: [
       'Rotuaari on suljettu autoliikenteeltä. Lähes koko skene on yhden lyhyen kävelyn sisällä.',
@@ -20,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu on ainoa näin pohjoinen kaupunki, jossa on aito sunnuntain päiväkahvilaskene.',
     ],
     quickFacts: {
-      'Population': { label: 'Asukasluku', value: '210 000' },
+      'Population': { label: 'Asukasluku', value: '218 000' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'OUL · 15 min' },
       'Last call': { label: 'Anniskelu loppuu', value: '03:30' },
       'Best season': { label: 'Paras kausi', value: 'Ympäri vuoden · 2026 kulttuuripääkaupunki' },
@@ -30,13 +29,12 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lappi',
     blurb: 'Arktinen pääkaupunki: jakautuu turistien viikonloppuihin ja paikallisten arkipäiviin.',
     pageTagline: 'Arktinen pääkaupunki.',
-    intro: 'Kaksi rytmiä samassa kaupungissa. Viikonlopputuristit jonottavat Koskikadun tuntumassa: Roy Club on järjestänyt "kaupungin parhaat bileet vuodesta 1985", Half Moon pyörittää karaoke- ja diskolattioita ja Bull Bar on äänekkäin urheiluterassi. Paikalliset levittäytyvät kävelykadulle: Cafe & Bar 21 cocktaileihin, Rovaniemen Oluthuone oluelle ja Oliver\'s Corner viskille. Turistiviikonloppuina jonotetaan; arkisin kaupunki on hiljainen ja paikallinen.',
+    intro: 'Kaksi rytmiä samassa kaupungissa. Viikonlopputuristit jonottavat Koskikadun tuntumassa: Roy Club on järjestänyt "kaupungin parhaat bileet vuodesta 1985" ja Bull Bar on äänekkäin urheiluterassi. Paikalliset levittäytyvät kävelykadulle: Cafe & Bar 21 cocktaileihin, Rovaniemen Oluthuone oluelle ja Oliver\'s Corner viskille. Turistiviikonloppuina jonotetaan; arkisin kaupunki on hiljainen ja paikallinen.',
     venues: {
-      'Half Moon Night Club': { type: 'Yökerho', note: 'Keskustan klubi, jossa karaokea, diskolattioita ja VIP-tiloja.' },
       'Cafe & Bar 21': { type: 'Cocktailbaari', note: 'Paikallisten suosikkicocktailbaari ydinkeskustassa.' },
       'Rovaniemen Oluthuone': { type: 'Olutravintola', note: 'Olutravintola kävelykadulla: iso terassi ja leveä hanavalikoima.' },
       "Oliver's Corner": { type: 'Pubi', note: 'Kävelykadun pubi, jonka viskihylly on kaupungin kattavin.' },
-      'Kansan Karaoke Pub': { type: 'Karaokepubi', note: 'Biljardia, pelejä ja karaokea iltaisin. Niin paikallista kuin olla voi.' },
+      'Kansan Pubi': { type: 'Karaokepubi', note: 'Biljardia, pelejä ja karaokea iltaisin. Niin paikallista kuin olla voi.' },
       'Roy Club': { type: 'Yökerho', note: 'Auki vuodesta 1985. Kolme salia, kaupungin suurin tanssilattia.' },
       'Bull Bar': { type: 'Urheilubaari', note: 'Äänekäs, täysi, Valioliiga-terassi, myöhäistä ruokaa.' },
       'Kauppayhtiö': { type: 'Kahvila + baari', note: 'Vintage-olohuoneen estetiikkaa; cocktaileja myöhään.' },
@@ -86,7 +84,7 @@ const overlay: Record<string, CityOverlay> = {
       'Local Pub Panimo': { type: 'Kyläpubi', note: 'Paikallisia ja pienpanimohanoja, pubiruokaa, karaokea ja live-iltoja. Kylän oma pubi.' },
       'Hotel Riekonlinna Bar': { type: 'Hotellibaari', note: 'Iso aulatakka; iltaohjelmaa sesongissa.' },
       'Teerenpesä': { type: 'Pubi + yökerho', note: 'Kylän pubi–yökerho-yhdistelmä: Saariselän myöhäisimpään auki oleva lattia.' },
-      'Kakslauttanen Igloo Bar': { type: 'Lasikattobaari', note: 'Maailmankuulu valokuva. Avoinna myös ulkopuolisille varauksella.' },
+      'Igloo Bar': { type: 'Lasikattobaari', note: 'Maailmankuulu valokuva. Avoinna myös ulkopuolisille varauksella.' },
     },
     knowList: [
       'Ei erillisiä klubeja: yöelämä on hotellien varassa.',
@@ -108,8 +106,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Inari on saamelaiskäräjien (Sajos) kulttuurinen kotipaikka ja Siidan koti, museon, joka selittää kaiken, mitä et tiennyt Saamenmaasta. \'Yöelämä\' on täällä kulttuuria: Skábmagovat-alkuperäiskansaelokuvafestivaali tammikuussa, Ijahis Idja -saamelaismusiikkifestivaali elokuussa ja kourallinen baareja, jotka pääosin tarjoilevat illallisia. Älä tule klubien takia. Tule kylmän järviveden, joikukonserttien ja taivaan takia, joka pimenee joulukuussa klo 14:00.',
     venues: {
       'Hotel Inari Bar': { type: 'Hotellibaari', note: 'Järvinäkymäravintola ja -baari, auki klo 01:00 asti.' },
-      'Sajos Café': { type: 'Päiväpaikka', note: 'Saamelaiskäräjien kahvila: kahvia ja kulttuuritapahtumia.' },
-      'Tradiska': { type: 'Ravintola + baari', note: 'Saamelaiskeittiötä, pieni baari, intiimi tunnelma.' },
+      'Café Čaiju': { type: 'Päiväpaikka', note: 'Saamelaiskäräjien kahvila: kahvia ja kulttuuritapahtumia.' },
     },
     knowList: [
       'Ei klubeja. Kaksi hotellia baareineen, kolme alkoholia tarjoilevaa ravintolaa.',
@@ -151,7 +148,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Suomen toiseksi suurin hiihtoalue.',
     pageTagline: 'Suomen toiseksi suurin hiihtoalue.',
-    intro: 'Ylläksellä on 63 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen toiseksi suurin.',
+    intro: 'Ylläksellä on 63 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin.',
     venues: {
       'Sport Resort Ylläs': { type: 'After ski + baari', note: 'Äkäslompolon vilkkain after ski -paikka rinteiden juurella.' },
       'Taiga Pub & Kitchen': { type: 'Pubi + keittiö', note: 'Äkäslompolon pubiravintola: hanat, pubiruokaa ja urheilua.' },
@@ -176,11 +173,11 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Karhumaan hiihtokeskus.',
     intro: 'Ruka on virallisesti Kuusamoa eikä virallisesti Lappia, mutta laskettelijoita se ei haittaa: kyseessä on yksi Suomen vilkkaimmista keskuksista, ja marraskuun avausviikko on äänekkäin. Zone on rinteen juurella after skin keskipiste, ja Piste sekä Colorado Bar jatkavat siitä iltaan. Sesongin ulkopuolella kylä on hyvin hiljainen; marras–huhtikuussa mennään täysillä.',
     venues: {
-      'Zone Bar': { type: 'After ski', note: 'Rinteen juurella: live-esiintyjiä ja FIS-avausviikon bileiden koti.' },
+      'Restaurant Zone': { type: 'After ski', note: 'Rinteen juurella: live-esiintyjiä ja FIS-avausviikon bileiden koti.' },
       'Piste': { type: 'After ski + baari', note: 'Rinnekylän baari, joka jatkaa after skistä pitkälle iltaan.' },
       'Colorado Bar': { type: 'Baari', note: 'Amerikkalaishenkinen baari hiihtokylässä: urheilua ja myöhäisiä juomia.' },
       'Hanki Baari': { type: 'Baari', note: 'Yksinkertaisen hyvä: kahvia, kunnon olutvalikoima ja ruokaa.' },
-      'Hotel Rukahovi': { type: 'Hotellibaari', note: 'Kylän iso hotelli: livemusiikkia viikonloppuisin huippusesongissa.' },
+      'Scandic Rukahovi': { type: 'Hotellibaari', note: 'Kylän iso hotelli: livemusiikkia viikonloppuisin huippusesongissa.' },
     },
     knowList: [
       'Ruka avautuu FIS:n maastohiihdon maailmancupiin marraskuun lopulla. Se viikko on huippu.',
@@ -202,7 +199,7 @@ const overlay: Record<string, CityOverlay> = {
     intro: 'Kaksi pientä tunturia, 35 km erillään, jakavat saman kansallispuiston. Pyhällä on suurempi hiihtoalue; Luostolla on ametistikaivos, jolla voi vierailla keskiyöllä revontulien alla. Kummallakaan ei ole klubeja. Molemmilla on hotellibaareja, jotka kannattavat takkaillan: Hotel Pyhätunturi ravintolatason ruokailuun, Hotel Aurora Luostolla revontuli-ikkunabaariin. Lapin hiljaisin \'hiihtokohde\', ja se on siitä ylpeä.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Hotellibaari', note: 'Ravintola + baari, takka, rinteen vieressä.' },
-      'Hotel Aurora Luosto': { type: 'Revontuli-ikkunabaari', note: 'Lasiseinäinen baari pohjoiseen: herätyspalvelu, jos revontulet ovat aktiiviset.' },
+      'Santa\'s Hotel Aurora': { type: 'Revontuli-ikkunabaari', note: 'Lasiseinäinen baari pohjoiseen: herätyspalvelu, jos revontulet ovat aktiiviset.' },
       'Pyhän Asteli': { type: 'Ravintola + baari', note: 'Paikallisten suosima ravintola; Pyhän kylän ainoa myöhäisillan ruokailu.' },
     },
     knowList: [
@@ -264,17 +261,16 @@ const overlay: Record<string, CityOverlay> = {
   },
   ivalo: {
     region: 'Inarin kunta',
-    blurb: 'Hotel Ivalon Club Nord + Hotel Kultahipun pubi.',
+    blurb: 'Hotel Ivalon aulabaari + Hotel Kultahipun pubi.',
     pageTagline: 'Pohjoisin lentoasema, jolla on klubi.',
-    intro: 'Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on 4 000 asukasta. Hotel Ivalo pyörittää Club Nordia, Manner-Suomen pohjoisinta klubia, joka on auki perjantaina ja lauantaina. Hotel Kultahipulla on kylän ainoa kunnon pubi. Sen lisäksi hotellibaareja ja yksi huoltoaseman kioski, joka myy olutta.',
+    intro: 'Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on 4 000 asukasta.Hotel Ivalossa on aulabaari ja Lapin Yö -ravintola. Hotel Kultahipulla on kylän ainoa kunnon pubi. Sen lisäksi hotellibaareja ja yksi huoltoaseman kioski, joka myy olutta.',
     venues: {
-      'Club Nord (Hotel Ivalo)': { type: 'Yökerho', note: 'Auki pe–la. Manner-Suomen pohjoisin klubi.' },
       'Hotel Kultahippu Pub': { type: 'Pubi', note: 'Auki päivittäin. Paikallisten työn jälkeinen paikka.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotellibaari', note: 'Rauhallisempi, ravintolan yhteydessä.' },
     },
     knowList: [
       'Manner-Suomen pohjoisin lentoasema.',
-      'Saariselkä on 25 minuutin päässä. Moni Saariselän vieras ajaa Ivaloon Club Nordia varten.',
+      'Saariselkä on 25 minuutin päässä. Moni Saariselän vieras ajaa Ivaloon hotellibaareja varten.',
       'Anniskelu loppuu arkisin 02:00, viikonloppuisin 03:00.',
       'Ei taksitolppaa: varaa hotellin vastaanoton kautta.',
     ],
@@ -289,9 +285,9 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Länsi-Lappi',
     blurb: 'Ei yöelämää. Pallas-Yllästunturin kansallispuisto on vetonaula.',
     pageTagline: 'Portti kansallispuistoon.',
-    intro: 'Muoniossa on 2 300 asukasta, ja se on yksi Pallas-Yllästunturin kansallispuiston (1 020 km², Suomen toiseksi suurin) porteista. Klubia ei ole, pubikierrosta ei ole, ja useimmat illat päättyvät aikaisin. Harriniva Wilderness Hotel pyörittää iltasauna + aulabaari -yhdistelmää safarivieraille, ja Hotel Jeris tekee saman Jerisjärven rannalla. Se on Muonion "skene", ihan rehellisesti.',
+    intro: 'Muoniossa on 2 300 asukasta, ja se on yksi Pallas-Yllästunturin kansallispuiston (1 020 km², Suomen kolmanneksi suurin) porteista. Klubia ei ole, pubikierrosta ei ole, ja useimmat illat päättyvät aikaisin. Harriniva Wilderness Hotel pyörittää iltasauna + aulabaari -yhdistelmää safarivieraille, ja Jeris Lakeside Resort tekee saman Jerisjärven rannalla. Se on Muonion "skene", ihan rehellisesti.',
     venues: {
-      'Hotel Jeris': { type: 'Hotellibaari', note: 'Järvenrantahotelli Jerisjärvellä: ravintola ja baari illaksi.' },
+      'Jeris Lakeside Resort': { type: 'Hotellibaari', note: 'Järvenrantahotelli Jerisjärvellä: ravintola ja baari illaksi.' },
       'Harriniva Wilderness Hotel': { type: 'Hotellibaari', note: 'Sauna + baari, pääosin safarivieraita.' },
     },
     knowList: [
@@ -313,8 +309,7 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'Keskellä ei-mitään.',
     intro: '3 300 asukasta ja yksi laskettelurinne. Kunnan tunnuslause on kirjaimellisesti "Erämaassa" (In the Middle of Nowhere), ja se on tarkoitettu kehuksi. Hotel Revontulissa on ainoa myöhään auki oleva baari; rinteen puolella aukeaa sesongissa pubi tai pari. Talven ulkopuolella: hiljaisuutta. Pilke silmäkulmassa tehty "Salla 2032" -talvikisakampanja nosti kylän kartalle, mutta itse skene ei muuttunut. Älä tule klubien takia.',
     venues: {
-      'Koptapubi': { type: 'Rinnepubi', note: 'Kodikas pubi tunturin itäpuolella, sesongin pysähdyspaikka.' },
-      'Hotel Revontuli Bar': { type: 'Hotellibaari', note: 'Ainoa myöhäisillan menopaikka. Ravintola + baari.' },
+      'Holiday Club Salla': { type: 'Hotellibaari', note: 'Ainoa myöhäisillan menopaikka. Ravintola + baari.' },
       'Salla Wilderness Park': { type: 'Päiväpaikka', note: 'Lounas + päiväkahvila puiston vierailijoille.' },
     },
     knowList: [
