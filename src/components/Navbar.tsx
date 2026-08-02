@@ -135,7 +135,11 @@ export default function Navbar() {
     }`}>
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-16 gap-4">
-          <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+          {/* Not `shrink-0`: the menu button is the last item in this row, so any
+              overflow evicted it off a `fixed` bar — invisible to horizontal
+              scroll, fatal to navigation on a 375px phone. The wordmark yields
+              first now. */}
+          <div className="flex items-center gap-2 sm:gap-5 min-w-0">
             <EcosystemMenu lang={lang} currentDomain="laplandnightlife.com" />
             <Link
               to={to('/')}
@@ -166,7 +170,7 @@ export default function Navbar() {
             <LangDropdown />
           </div>
 
-          <div className="xl:hidden ml-auto flex items-center gap-2">
+          <div className="xl:hidden ml-auto flex items-center gap-2 shrink-0">
             <div className="relative inline-flex items-center">
               <select
                 value={lang}
@@ -184,8 +188,9 @@ export default function Navbar() {
             </div>
             <button
               onClick={() => setOpen(!open)}
-              className="p-2 text-white hover:text-pink transition-colors"
+              className="shrink-0 flex h-11 w-11 items-center justify-center text-white hover:text-pink transition-colors"
               aria-label={c.menu}
+              aria-expanded={open}
             >
               {open ? <X size={24} /> : <Menu size={24} />}
             </button>
