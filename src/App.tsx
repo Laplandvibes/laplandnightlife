@@ -22,6 +22,7 @@ import { useHtmlLang, useLocalePath, useLang } from './i18n/useLang';
 import { COPY, loadCopy, isCopyLoaded } from './locales/copy';
 import { isCityOverlayLoaded, loadCityOverlays } from './data/cityI18n';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
+import { AppPromoNudge } from './components/AppPromo';
 
 /**
  * Non-EN copy + city overlays live in per-language lazy chunks (see
@@ -134,6 +135,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppLayout />
-    </BrowserRouter>
+    {/* App promo: engagement-triggered, never on arrival. */}
+      <AppPromoNudge />
+      </BrowserRouter>
   );
 }

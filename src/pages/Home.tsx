@@ -15,7 +15,8 @@ import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
-import { COPY } from '../locales/copy';
+import { COPY } from '../locales/copy';
+import { AppPromoHero } from '../components/AppPromo';
 
 // Text-shadow for copy that sits over a photo (same recipe as PrimeTime).
 const OVERLAY_SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
@@ -249,6 +250,9 @@ export default function Home() {
       <FAQ />
 
       <Newsletter />
+    {/* App launch block. Bottom of the page on purpose: the site's own hero is
+        what the search result promised, and this does not get to interrupt it. */}
+    <AppPromoHero />
     </>
   );
 }
