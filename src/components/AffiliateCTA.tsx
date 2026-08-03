@@ -47,23 +47,19 @@ const CARS_LANG: Record<_Lang, string> = {
   es: "es", "pt-BR": "pt", "zh-CN": "zh",
   ko: "ko", fr: "fr", it: "it", nl: "nl", sv: "sv",
 };
-const GYG_DOMAIN: Record<_Lang, string> = {
-  en: "https://www.getyourguide.com",
-  fi: "https://www.getyourguide.com",
-  de: "https://www.getyourguide.de",
-  ja: "https://www.getyourguide.com",
-  es: "https://www.getyourguide.es",
-  "pt-BR": "https://www.getyourguide.com.br",
-  "zh-CN": "https://www.getyourguide.com",
-  ko: "https://www.getyourguide.com",
-  fr: "https://www.getyourguide.fr",
-  it: "https://www.getyourguide.it",
-  nl: "https://www.getyourguide.nl",
-  sv: "https://www.getyourguide.com",
+/**
+ * Worker `?language=` codes (same table as shared/gyg/picks.ts). The Worker's
+ * handleGyg turns the code into GetYourGuide's `<lang>-<country>/` PATH prefix
+ * — the only localisation GYG honours. 🔴 A raw `?language=xx` appended to a
+ * getyourguide.com URL does NOTHING (measured in a real browser 2026-08-02),
+ * so never "simplify" back to passing it to GYG directly. `en` is GYG's
+ * default and needs no param; `de` needs a code here even though the old raw
+ * links didn't send one — they used the getyourguide.de domain instead.
+ */
+const GYG_WORKER_LANG: Record<_Lang, string | undefined> = {
+  en: undefined, fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-br',
+  'zh-CN': 'zh', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
 };
-
-const GYG_PARTNER_ID = 'VRMKD7N';
-const SITE_ID = 'laplandnightlife';
 
 export function buildAffiliateHref({
   partner,
@@ -73,12 +69,16 @@ export function buildAffiliateHref({
   lang = "en",
 }: Pick<AffiliateCTAProps, 'partner' | 'sid' | 'destination' | 'query'> & { lang?: _Lang }): string {
   if (partner === 'activities') {
+    // Reitittää Workerin kautta 2026-08-03 alkaen. Worker hoitaa slugin,
+    // /s?q=-haun JA kielen polkuprefiksin (raaka ?language= on GYG:llä no-op,
+    // ja vanha getyourguide.de-domain-taulu jätti muut kielet englanniksi).
+    // Suora linkitys menettäisi D1-klikkilokin ja veisi partner_id:n bundleen.
+    const params = new URLSearchParams({ sid });
+    const gygLang = GYG_WORKER_LANG[lang];
+    if (gygLang) params.set('language', gygLang);
     const path = (destination ?? '').replace(/^\/+/, '').replace(/\/+$/, '');
-    const url = new URL(path ? `${GYG_DOMAIN[lang]}/${path}/` : `${GYG_DOMAIN[lang]}/`);
-    url.searchParams.set('partner_id', GYG_PARTNER_ID);
-    url.searchParams.set('cmp', `lv_${SITE_ID}_${sid}`);
-    if (query) for (const [k, v] of Object.entries(query)) if (v) url.searchParams.set(k, v);
-    return url.toString();
+    if (query) for (const [k, v] of Object.entries(query)) if (v) params.set(k, v);
+    return `${REDIRECT_HOST}/go/activities${path ? `/${path}` : ''}?${params.toString()}`;
   }
   const params = new URLSearchParams({ sid, ...(query || {}) });
   // 🔴 cars käyttää pickup_location=IATA, EI ss:ää. Mitattu 2026-08-03:
