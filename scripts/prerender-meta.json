@@ -1,4 +1,154 @@
 {
+  "/privacy": {
+    "en": {
+      "title": "Privacy Policy | LaplandNightlife",
+      "description": "How LaplandNightlife handles your data. GDPR compliant. Operated by Lapeso Oy."
+    },
+    "fi": {
+      "title": "Tietosuojaseloste | LaplandNightlife",
+      "description": "Näin LaplandNightlife käsittelee tietojasi. GDPR-yhteensopiva. Ylläpitäjänä Lapeso Oy."
+    },
+    "de": {
+      "title": "Datenschutzerklärung | LaplandNightlife",
+      "description": "So verarbeitet LaplandNightlife Ihre Daten. DSGVO-konform. Betrieben von Lapeso Oy."
+    },
+    "ja": {
+      "title": "プライバシーポリシー | LaplandNightlife",
+      "description": "LaplandNightlifeの個人データの取り扱いについて。GDPR準拠。運営はLapeso Oy。"
+    },
+    "es": {
+      "title": "Política de privacidad | LaplandNightlife",
+      "description": "Cómo trata sus datos LaplandNightlife. Conforme al RGPD. Operado por Lapeso Oy."
+    },
+    "pt-BR": {
+      "title": "Política de privacidade | LaplandNightlife",
+      "description": "Como o LaplandNightlife trata seus dados. Em conformidade com o GDPR. Operado pela Lapeso Oy."
+    },
+    "zh-CN": {
+      "title": "隐私政策 | LaplandNightlife",
+      "description": "LaplandNightlife 如何处理您的数据。符合 GDPR。由 Lapeso Oy 运营。"
+    },
+    "ko": {
+      "title": "개인정보 처리방침 | LaplandNightlife",
+      "description": "LaplandNightlife의 데이터 처리 방식. GDPR 준수. 운영사 Lapeso Oy."
+    },
+    "fr": {
+      "title": "Politique de confidentialité | LaplandNightlife",
+      "description": "Comment LaplandNightlife traite vos données. Conforme au RGPD. Exploité par Lapeso Oy."
+    },
+    "it": {
+      "title": "Informativa sulla privacy | LaplandNightlife",
+      "description": "Come LaplandNightlife tratta i tuoi dati. Conforme al GDPR. Gestito da Lapeso Oy."
+    },
+    "nl": {
+      "title": "Privacybeleid | LaplandNightlife",
+      "description": "Hoe LaplandNightlife met uw gegevens omgaat. AVG-conform. Beheerd door Lapeso Oy."
+    },
+    "sv": {
+      "title": "Integritetspolicy | LaplandNightlife",
+      "description": "Så hanterar LaplandNightlife dina uppgifter. GDPR-kompatibel. Drivs av Lapeso Oy."
+    }
+  },
+  "/terms": {
+    "en": {
+      "title": "Terms of Service | LaplandNightlife",
+      "description": "Terms of service for LaplandNightlife. Editorial standards, affiliate disclosure, content licensing. Operated by Lapeso Oy."
+    },
+    "fi": {
+      "title": "Käyttöehdot | LaplandNightlife",
+      "description": "LaplandNightlifen käyttöehdot. Toimitukselliset periaatteet, affiliate-ilmoitus, sisällön lisensointi. Ylläpitäjänä Lapeso Oy."
+    },
+    "de": {
+      "title": "Nutzungsbedingungen | LaplandNightlife",
+      "description": "Nutzungsbedingungen für LaplandNightlife. Redaktionelle Standards, Affiliate-Offenlegung, Inhaltslizenzen. Betrieben von Lapeso Oy."
+    },
+    "ja": {
+      "title": "利用規約 | LaplandNightlife",
+      "description": "LaplandNightlifeの利用規約。編集基準、アフィリエイト開示、コンテンツのライセンスについて。運営はLapeso Oy。"
+    },
+    "es": {
+      "title": "Términos de servicio | LaplandNightlife",
+      "description": "Términos de servicio de LaplandNightlife. Normas editoriales, divulgación de afiliados, licencias de contenido. Operado por Lapeso Oy."
+    },
+    "pt-BR": {
+      "title": "Termos de serviço | LaplandNightlife",
+      "description": "Termos de serviço do LaplandNightlife. Padrões editoriais, divulgação de afiliados, licenciamento de conteúdo. Operado pela Lapeso Oy."
+    },
+    "zh-CN": {
+      "title": "服务条款 | LaplandNightlife",
+      "description": "LaplandNightlife 服务条款：编辑标准、联盟营销披露、内容许可。由 Lapeso Oy 运营。"
+    },
+    "ko": {
+      "title": "이용약관 | LaplandNightlife",
+      "description": "LaplandNightlife 이용약관. 편집 기준, 제휴 고지, 콘텐츠 라이선스 안내. 운영사 Lapeso Oy."
+    },
+    "fr": {
+      "title": "Conditions d'utilisation | LaplandNightlife",
+      "description": "Conditions d'utilisation de LaplandNightlife. Normes éditoriales, divulgation d'affiliation, licences de contenu. Exploité par Lapeso Oy."
+    },
+    "it": {
+      "title": "Termini di servizio | LaplandNightlife",
+      "description": "Termini di servizio di LaplandNightlife. Standard editoriali, divulgazione di affiliazione, licenze dei contenuti. Gestito da Lapeso Oy."
+    },
+    "nl": {
+      "title": "Gebruiksvoorwaarden | LaplandNightlife",
+      "description": "Gebruiksvoorwaarden van LaplandNightlife. Redactionele normen, affiliate-vermelding, contentlicenties. Beheerd door Lapeso Oy."
+    },
+    "sv": {
+      "title": "Användarvillkor | LaplandNightlife",
+      "description": "Användarvillkor för LaplandNightlife. Redaktionella riktlinjer, affiliate-information, innehållslicenser. Drivs av Lapeso Oy."
+    }
+  },
+  "/cookie-policy": {
+    "en": {
+      "title": "Cookie Policy | LaplandNightlife",
+      "description": "How LaplandNightlife uses cookies. GDPR compliant. Consent default-denied. Operated by Lapeso Oy."
+    },
+    "fi": {
+      "title": "Evästekäytäntö | LaplandNightlife",
+      "description": "Näin LaplandNightlife käyttää evästeitä. GDPR-yhteensopiva. Suostumus oletuksena estetty. Ylläpitäjänä Lapeso Oy."
+    },
+    "de": {
+      "title": "Cookie-Richtlinie | LaplandNightlife",
+      "description": "So verwendet LaplandNightlife Cookies. DSGVO-konform. Einwilligung standardmäßig verweigert. Betrieben von Lapeso Oy."
+    },
+    "ja": {
+      "title": "クッキーポリシー | LaplandNightlife",
+      "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLapeso Oy。"
+    },
+    "es": {
+      "title": "Política de cookies | LaplandNightlife",
+      "description": "Cómo usa cookies LaplandNightlife. Conforme al RGPD. Consentimiento denegado por defecto. Operado por Lapeso Oy."
+    },
+    "pt-BR": {
+      "title": "Política de cookies | LaplandNightlife",
+      "description": "Como o LaplandNightlife usa cookies. Em conformidade com o GDPR. Consentimento negado por padrão. Operado pela Lapeso Oy."
+    },
+    "zh-CN": {
+      "title": "Cookie 政策 | LaplandNightlife",
+      "description": "LaplandNightlife 如何使用 Cookie。符合 GDPR。同意默认关闭。由 Lapeso Oy 运营。"
+    },
+    "ko": {
+      "title": "쿠키 정책 | LaplandNightlife",
+      "description": "LaplandNightlife의 쿠키 사용 안내. GDPR 준수. 동의는 기본 차단. 운영사 Lapeso Oy."
+    },
+    "fr": {
+      "title": "Politique de cookies | LaplandNightlife",
+      "description": "Comment LaplandNightlife utilise les cookies. Conforme au RGPD. Consentement refusé par défaut. Exploité par Lapeso Oy."
+    },
+    "it": {
+      "title": "Informativa sui cookie | LaplandNightlife",
+      "description": "Come LaplandNightlife usa i cookie. Conforme al GDPR. Consenso negato di default. Gestito da Lapeso Oy."
+    },
+    "nl": {
+      "title": "Cookiebeleid | LaplandNightlife",
+      "description": "Hoe LaplandNightlife cookies gebruikt. AVG-conform. Toestemming standaard geweigerd. Beheerd door Lapeso Oy."
+    },
+    "sv": {
+      "title": "Cookiepolicy | LaplandNightlife",
+      "description": "Så använder LaplandNightlife cookies. GDPR-kompatibel. Samtycke nekas som standard. Drivs av Lapeso Oy."
+    }
+  },
   "/city/oulu": {
     "en": {
       "title": "Oulu: European Capital of Culture 2026.",

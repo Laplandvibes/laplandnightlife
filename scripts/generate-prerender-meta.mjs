@@ -13,7 +13,15 @@
 // localizeCity (cityI18n.ts) replaces pageTagline/intro field-by-field from the
 // overlay, English fallback when a field/lang is absent. We replicate that here
 // so prerender === runtime. Static content pages are handled by copyKey in
-// routes.json; this generator only emits /city/:slug entries.
+// routes.json.
+//
+// Legal pages (/privacy /terms /cookie-policy) are emitted here too (2026-08-03;
+// before that they fell back to the EN routes.json fallbackTitle in all 11 non-EN
+// locales — the "no-meta: <lang> /privacy" build lines). Their per-locale meta
+// lives in src/locales/seo-meta.json, the SAME file the page components read at
+// runtime via getPageSeo (src/lib/pageSeo.ts), so prerender === runtime with no
+// drift. seo-meta.json holds the SHORT title; the " | LaplandNightlife" brand
+// suffix is appended here to match what PageSeo.tsx renders on the client.
 //
 // Idempotent. Run from the site root (after or before vite build):
 //   node scripts/generate-prerender-meta.mjs
@@ -134,6 +142,31 @@ for (const [lang, file] of Object.entries(OVERLAY_FILE)) overlays[lang] = parseO
 
 const slugs = Object.keys(base);
 const meta = {};
+
+// ---- static legal pages from src/locales/seo-meta.json (shared with runtime) ----
+// 🔴 THIS MAP IS A META SOURCE IN ITS OWN RIGHT. Adding/renaming a legal page
+// means editing seo-meta.json, this map AND scripts/routes.json. Miss this one
+// and the route still prerenders — it just silently falls back to the EN
+// fallbackTitle in all 11 other locales. The build prints
+// "no-meta: <lang> <route>" when that happens; that line is the gate.
+const STATIC_ROUTE_OF_KEY = {
+  privacy: '/privacy',
+  terms: '/terms',
+  'cookie-policy': '/cookie-policy',
+};
+const seoMeta = JSON.parse(readFileSync(join(ROOT, 'src', 'locales', 'seo-meta.json'), 'utf-8'));
+for (const [key, path] of Object.entries(STATIC_ROUTE_OF_KEY)) {
+  const byLang = seoMeta[key];
+  if (!byLang) {
+    console.warn(`[gen-meta] WARN: seo-meta.json has no '${key}' — ${path} will ship EN fallback meta`);
+    continue;
+  }
+  meta[path] = {};
+  for (const lang of LANGS) {
+    const e = byLang[lang] || byLang.en;
+    meta[path][lang] = { title: `${e.title} | LaplandNightlife`, description: e.description };
+  }
+}
 for (const slug of slugs) {
   const b = base[slug];
   const path = `/city/${slug}`;
@@ -153,6 +186,22 @@ const langsCovered = new Set();
 for (const p of Object.keys(meta)) for (const l of Object.keys(meta[p])) langsCovered.add(l);
 console.log(
   `[gen-meta] wrote ${OUT.replace(ROOT + '\\', '').replace(ROOT + '/', '')}: ` +
-    `${slugs.length} cities × ${LANGS.length} locales (${[...langsCovered].length} langs covered)`
+    `${Object.keys(STATIC_ROUTE_OF_KEY).length} legal + ${slugs.length} cities × ${LANGS.length} locales ` +
+    `(${[...langsCovered].length} langs covered)`
 );
-if (slugs.length !== 14) console.warn(`[gen-meta] WARN: expected 14 cities, parsed ${slugs.length}`);
+// Drift check against routes.json, the authoritative list of prerendered city
+// routes — not a hardcoded count (an `expected 14 cities` would go stale the
+// moment the list changed). Both directions matter: a route whose slug we
+// failed to parse ships EN-fallback meta; a parsed city without a route never
+// gets prerendered at all.
+const routesJson = JSON.parse(readFileSync(join(ROOT, 'scripts', 'routes.json'), 'utf-8'));
+const cityRouteSlugs = routesJson
+  .map((r) => r.path)
+  .filter((p) => p.startsWith('/city/'))
+  .map((p) => p.slice('/city/'.length));
+for (const slug of cityRouteSlugs) {
+  if (!base[slug]) console.warn(`[gen-meta] WARN: routes.json lists /city/${slug} but no city parsed from src/data — route will prerender with EN fallback meta`);
+}
+for (const slug of slugs) {
+  if (!cityRouteSlugs.includes(slug)) console.warn(`[gen-meta] WARN: city '${slug}' parsed from src/data has no /city/ route in routes.json — page will not be prerendered`);
+}
