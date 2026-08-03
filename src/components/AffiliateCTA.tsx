@@ -81,7 +81,14 @@ export function buildAffiliateHref({
     return url.toString();
   }
   const params = new URLSearchParams({ sid, ...(query || {}) });
-  if (destination) params.set('ss', anchorHotelsSs(partner, destination));
+  // 🔴 cars käyttää pickup_location=IATA, EI ss:ää. Mitattu 2026-08-03:
+  // Worker rakentaa pickup_locationista EB-tulossivun (plc=61909 jne.),
+  // mutta ss=IATA valui EB:n ?location=-TEKSTIHAKUUN, jonka EB pudottaa
+  // tyhjäksi etusivuksi (sama vikaluokka kuin ENF→Enfidha 25.7.).
+  if (destination) {
+    if (partner === "cars") params.set('pickup_location', destination);
+    else params.set('ss', anchorHotelsSs(partner, destination));
+  }
   if (partner === "hotels" || partner === "hotels-seasonal" || partner === "hotels-budget") {
     params.set("locale", HOTELS_LOCALE[lang]);
   } else if (partner === "cars") {
