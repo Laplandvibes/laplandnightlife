@@ -68,7 +68,7 @@ export default function CityPage() {
 
   const description = `${city.pageTagline} ${city.intro.slice(0, 120)}`;
   const quickFacts = localizeQuickFacts(city.slug, lang);
-  const crossLinks = getCrossLinks(city);
+  const crossLinks = getCrossLinks(city, lang);
   const nearbySlugs = NEARBY[city.slug] ?? [];
   const nearbyCities = nearbySlugs
     .map((s) => CITIES.find((cc) => cc.slug === s))
