@@ -1,16 +1,14 @@
 import CookieContent from '../shared/Legal/CookieContent';
 import { useLang } from '../i18n/useLang';
 import PageSeo from '../components/PageSeo';
+import { getPageSeo } from '../lib/pageSeo';
 
 export default function CookiePolicy() {
   const lang = useLang();
+  const seo = getPageSeo('cookie-policy', lang);
   return (
     <>
-      <PageSeo
-        title="Cookie Policy"
-        description="How LaplandNightlife uses cookies. GDPR compliant. Consent default-denied. Operated by Lapeso Oy."
-        path="/cookie-policy"
-      />
+      <PageSeo title={seo.title} description={seo.description} path="/cookie-policy" />
       <CookieContent siteName="LaplandNightlife" lang={lang} />
     </>
   );
