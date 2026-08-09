@@ -103,7 +103,7 @@ export default function Newsletter() {
               <p className="text-base font-medium">{c.done}</p>
             </div>
           ) : (
-            <FounderByline tone="pink" />
+            <><FounderByline tone="pink" />
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
               <label className="sr-only" htmlFor="newsletter-email">Email</label>
               <input
@@ -124,7 +124,7 @@ export default function Newsletter() {
                 {status === 'loading' ? c.sending : c.btn}
                 <ArrowRight className="w-4 h-4" />
               </button>
-            </form>
+            </form></>
           )}
 
           {error && (
