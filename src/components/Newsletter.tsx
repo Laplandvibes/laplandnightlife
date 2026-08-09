@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle2, Bell, Sparkles, Music, Sun, AlertCircle } fro
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import FounderByline from '../shared/FounderByline';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
@@ -102,6 +103,7 @@ export default function Newsletter() {
               <p className="text-base font-medium">{c.done}</p>
             </div>
           ) : (
+            <FounderByline tone="pink" />
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
               <label className="sr-only" htmlFor="newsletter-email">Email</label>
               <input
