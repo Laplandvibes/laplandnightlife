@@ -28,14 +28,16 @@ export default function SummerNights() {
   ];
 
   const events = [
-    { h: c.e1H, when: c.e1When, body: c.e1Body, icon: Sun, img: IMG.summerHero, badge: c.e1Badge },
-    { h: c.e2H, when: c.e2When, body: c.e2Body, icon: Film, img: IMG.summerSodankyla, badge: c.e2Badge },
+    // Jokaisella tapahtumalla oma kuva. Aiemmin nämä lainasivat cityScenesin ja
+    // localListin kuvia, jolloin sama kuva näkyi kahdesti samalla sivulla.
+    { h: c.e1H, when: c.e1When, body: c.e1Body, icon: Sun, img: IMG.eventMidnightSun, badge: c.e1Badge },
+    { h: c.e2H, when: c.e2When, body: c.e2Body, icon: Film, img: IMG.eventFilmFestival, badge: c.e2Badge },
     { h: c.e3H, when: c.e3When, body: c.e3Body, icon: Flame, img: IMG.summerJuhannus, badge: c.e3Badge },
     { h: c.e4H, when: c.e4When, body: c.e4Body, icon: Music, img: IMG.summerAirGuitar, badge: c.e4Badge },
-    { h: c.e5H, when: c.e5When, body: c.e5Body, icon: Music, img: IMG.summerOulu, badge: c.e5Badge },
-    { h: c.e6H, when: c.e6When, body: c.e6Body, icon: Music, img: IMG.summerJazz, badge: c.e6Badge },
-    { h: c.e7H, when: c.e7When, body: c.e7Body, icon: Music, img: IMG.summerNordkapp, badge: c.e7Badge },
-    { h: c.e8H, when: c.e8When, body: c.e8Body, icon: Music, img: IMG.summerRovaniemi, badge: c.e8Badge },
+    { h: c.e5H, when: c.e5When, body: c.e5Body, icon: Music, img: IMG.eventRockFestival, badge: c.e5Badge },
+    { h: c.e6H, when: c.e6When, body: c.e6Body, icon: Music, img: IMG.eventJazz, badge: c.e6Badge },
+    { h: c.e7H, when: c.e7When, body: c.e7Body, icon: Music, img: IMG.eventSamiMusic, badge: c.e7Badge },
+    { h: c.e8H, when: c.e8When, body: c.e8Body, icon: Music, img: IMG.eventCityRock, badge: c.e8Badge },
   ];
 
   const timeline = [

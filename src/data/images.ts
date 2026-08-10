@@ -45,6 +45,16 @@ export const IMG = {
   // Summer Nights pillar — bespoke set. Warm peach-gold palette, midnight-sun
   // window. These override the generic pillarSummer hero on /summer-nights.
   summerHero: '/images/drive/summerHero.webp',
+  // Tapahtumakorttien omat kuvat. Ennen 2026-08-10 tapahtumat lainasivat
+  // kaupunkikohtausten ja paikallislistan kuvia, jolloin kuusi kuvaa esiintyi
+  // kahdesti samalla sivulla (Vesa: verkoston kuva-auditti). Nämä renderöityvät
+  // CSS-taustakuvina, minkä takia <img>-pohjainen mittari ei nähnyt niitä.
+  eventMidnightSun: '/images/drive/eventMidnightSun.webp',
+  eventFilmFestival: '/images/drive/eventFilmFestival.webp',
+  eventRockFestival: '/images/drive/eventRockFestival.webp',
+  eventJazz: '/images/drive/eventJazz.webp',
+  eventSamiMusic: '/images/drive/eventSamiMusic.webp',
+  eventCityRock: '/images/drive/eventCityRock.webp',
   summerSodankyla: '/images/drive/summerSodankyla.webp',
   summerJuhannus: '/images/drive/summerJuhannus.webp',
   summerSwim: '/images/drive/summerSwim.webp',
