@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import React, { useEffect, useReducer, lazy, Suspense } from 'react';
+import React, { useEffect, useReducer, lazy, Suspense, type ReactNode } from 'react';
 import Navbar from './components/Navbar';
 import SharedFooter from './shared/Footer';
 import SharedCookieBanner from './shared/CookieBanner';
@@ -30,6 +30,23 @@ import { AppPromoNudge } from './components/AppPromo';
  * the active language are registered, so every consumer keeps reading
  * synchronously. EN is bundled eagerly — English visitors never wait.
  */
+/**
+ * 🔴 The app layout's landmark, EXCEPT on /terms.
+ *
+ * shared/Legal/TermsContent opens its own <main>; nesting it inside this one is
+ * invalid HTML and gives a screen reader two "main" regions. Its siblings
+ * PrivacyContent/CookieContent open a <div>, so only /terms is affected.
+ * Measured from the rendered DOM 2026-08-13 (12 network sites) -- the raw HTML
+ * has zero <main> elements, so this is invisible to grep.
+ *
+ * Do NOT "simplify" this back to a plain <main>.
+ */
+function MainOrDiv({ children }: { children?: ReactNode }) {
+  const { pathname } = useLocation();
+  const Tag = /(^|\/)terms\/?$/.test(pathname) ? 'div' : 'main';
+  return <Tag>{children}</Tag>;
+}
+
 function CopyGate({ children }: { children: React.ReactNode }) {
   const lang = useLang();
   const [, bump] = useReducer((x: number) => x + 1, 0);
@@ -88,7 +105,7 @@ function AppLayout() {
       <LocaleSync />
       <CopyGate>
       <Navbar />
-      <main>
+      <MainOrDiv>
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
           {(() => {
@@ -122,7 +139,7 @@ function AppLayout() {
           })()}
         </Routes>
         </Suspense>
-      </main>
+      </MainOrDiv>
       <FooterWithLocale />
       </CopyGate>
       <SharedCookieBanner consentKey="laplandnightlife_cookie_consent" lang={lang} />
