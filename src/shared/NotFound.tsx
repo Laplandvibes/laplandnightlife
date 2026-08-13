@@ -128,6 +128,15 @@ export interface NotFoundProps {
   /** CTA/accent colour override for design-variant sites (default vibe-pink). */
   accentHex?: string
   className?: string
+  /**
+   * Does this component own the page's <main> landmark?
+   *
+   * Default true: ~10 network sites have no layout-level <main> and this is
+   * their only landmark on the 404 route. Sites whose app layout already
+   * renders a <main> pass false, otherwise the 404 ships two nested landmarks
+   * (measured from the rendered DOM 2026-08-13; invisible to grep).
+   */
+  landmark?: boolean
 }
 
 export default function NotFound({
@@ -138,26 +147,50 @@ export default function NotFound({
   variant = 'dark',
   accentHex = '#EC4899',
   className = '',
+  landmark = true,
 }: NotFoundProps) {
   const c = COPY[normalize(lang)]
   const dark = variant === 'dark'
 
   // Tab title + robots noindex, without depending on the site's head library.
+  //
+  // 2026-08-13: index.html ships a static <meta name="robots" content="index,
+  // follow, …"> on 19 of 27 sites, and the SPA fallback serves that shell with
+  // HTTP 200 for EVERY unknown path — so a nonexistent URL arrives advertising
+  // itself as indexable. Appending a second robots meta left two contradictory
+  // tags in the head; Google resolves that in favour of the most restrictive
+  // one, so noindex did win, but only after JS ran. Rewrite the existing tag in
+  // place instead of adding a rival, and restore its previous value on unmount
+  // so a client-side route change back to a real page keeps its own directives.
   useEffect(() => {
     const prevTitle = document.title
     document.title = `404: ${siteName}`
-    const meta = document.createElement('meta')
-    meta.setAttribute('name', 'robots')
+
+    const existing = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]')
+    const prevContent = existing ? existing.getAttribute('content') : null
+    const meta = existing ?? document.createElement('meta')
+    if (!existing) {
+      meta.setAttribute('name', 'robots')
+      document.head.appendChild(meta)
+    }
     meta.setAttribute('content', 'noindex')
-    document.head.appendChild(meta)
+
     return () => {
       document.title = prevTitle
-      meta.remove()
+      if (!existing) {
+        meta.remove()
+      } else if (prevContent === null) {
+        existing.removeAttribute('content')
+      } else {
+        existing.setAttribute('content', prevContent)
+      }
     }
   }, [siteName])
 
+  const Root = landmark ? 'main' : 'div'
+
   return (
-    <main
+    <Root
       className={`min-h-screen flex items-center justify-center px-4 sm:px-6 ${
         dark ? 'text-snow' : 'text-slate-900'
       } ${className}`}
@@ -195,6 +228,6 @@ export default function NotFound({
           ))}
         </div>
       </div>
-    </main>
+    </Root>
   )
 }
