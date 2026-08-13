@@ -1065,7 +1065,18 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
               </div>
             </div>
 
-            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* 🔴 Kortit PINOTAAN, ei kolmea saraketta (2026-08-13).
+                `sm:grid-cols-3` katkaisi SELAINIKKUNAN leveydellä (640 px), mutta tämä
+                ruudukko asuu kiinteänlevyisessä palstassa (`lg:col-span-3` viiden sarakkeen
+                ruudukossa) joka on vain 618 px leveä 1440 px:n ikkunassa — ja kapeimmillaan
+                532 px juuri `lg`:n kohdalla. Kolme saraketta jätti leipätekstille 151 px eli
+                15–20 merkkiä riville (luettava on 45–75). Viewport-katkaisukohta ei voi
+                korjata tätä, koska palsta ei seuraa ikkunan leveyttä. Pinottuna teksti saa
+                koko kortin leveyden. `@container` on vain painikkeen leveyttä varten:
+                Tailwind v3:lla (laplandvisit) se ei käänny, jolloin painike jää `w-full`
+                — turvallinen fallback, ei koskaan ahdasta tekstiä. Älä palauta
+                `sm:grid-cols-3`:a. */}
+            <div className="lg:col-span-3 @container grid grid-cols-1 gap-4">
 
               {/* Spotted an Error */}
               <div
@@ -1084,7 +1095,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                   <button
                     type="button"
                     onClick={() => setContactKind('error')}
-                    className="inline-flex items-center justify-center w-full px-3 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap"
+                    className="inline-flex items-center justify-center w-full @md:w-auto @md:self-start px-3 @md:px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap"
                     style={{ background: PINK_FILL, border: `2px solid ${PINK_FILL}`, color: '#FFFFFF' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL_HOVER; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL_HOVER; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL; }}
@@ -1111,7 +1122,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                   <button
                     type="button"
                     onClick={() => setContactKind('partner')}
-                    className="inline-flex items-center justify-center w-full px-3 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap"
+                    className="inline-flex items-center justify-center w-full @md:w-auto @md:self-start px-3 @md:px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap"
                     style={{ background: PINK_FILL, border: `2px solid ${PINK_FILL}`, color: '#FFFFFF' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL_HOVER; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL_HOVER; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL; }}
@@ -1142,7 +1153,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                       on byte-identtinen verkoston jokaisella sivustolla. */}
                   <a
                     href="https://laplandvibes.com/press"
-                    className="inline-flex items-center justify-center w-full px-3 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap no-underline"
+                    className="inline-flex items-center justify-center w-full @md:w-auto @md:self-start px-3 @md:px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap no-underline"
                     style={{ background: PINK_FILL, border: `2px solid ${PINK_FILL}`, color: '#FFFFFF' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL_HOVER; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL_HOVER; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL; }}
