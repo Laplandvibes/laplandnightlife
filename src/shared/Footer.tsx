@@ -947,10 +947,16 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                 <ul className="space-y-0 sm:space-y-3.5">
                   {group.links.map((link) => (
                     <li key={link.name}>
+                      {/* 🔴 EI noreferreria (Vesa 2026-08-10). Nama ovat verkoston OMIA
+                          sivustoja. noreferrer riisuu Referer-otsakkeen, jolloin 29
+                          sivuston keskinainen liikenne nakyy jokaisen GA4:ssa "direct"ina
+                          eika "referral"ina — emme nae oman verkostomme sisaista
+                          virtausta lainkaan. noopener sailyy (turvahyoty); noreferrer ei
+                          anna mitaan lisaa omille domaineille. */}
                       <a
                         href={link.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                         /* min-w matters as much as min-h here: the link is
                            inline-flex, so its hit box is exactly as wide as the
                            label — and short locale labels ("Offres", "Erbjudanden")
@@ -1129,16 +1135,20 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                   <p className="text-sm font-normal leading-relaxed mb-5 flex-1" style={{ color: '#374151' }}>
                     {d.press.body}
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => setContactKind('press')}
-                    className="inline-flex items-center justify-center w-full px-3 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap"
+                  {/* 🔴 Lehdistökortti vie lehdistösivulle, ei yhteydenottolomakkeeseen
+                      (2026-08-11). Toimittaja haluaa ensin tietää keitä olemme; lomake on
+                      väärä ensimmäinen askel ja mediapaketti oli sen takana näkymättömissä.
+                      URL on ABSOLUUTTINEN, koska /press on vain hubissa ja tämä alatunniste
+                      on byte-identtinen verkoston jokaisella sivustolla. */}
+                  <a
+                    href="https://laplandvibes.com/press"
+                    className="inline-flex items-center justify-center w-full px-3 py-2.5 rounded-full text-xs font-semibold transition-all duration-200 min-h-[44px] shadow-sm cursor-pointer whitespace-nowrap no-underline"
                     style={{ background: PINK_FILL, border: `2px solid ${PINK_FILL}`, color: '#FFFFFF' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL_HOVER; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL_HOVER; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = PINK_FILL; (e.currentTarget as HTMLElement).style.borderColor = PINK_FILL; }}
                   >
                     {d.press.cta.replace(/\s*[→›»➔]\s*$/, '')}
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -1219,10 +1229,14 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                   &copy; {d.copyright.replace('{{year}}', String(new Date().getFullYear())).replace(/^\s*©\s*/, '')}
                 </p>
                 <span aria-hidden="true" className="hidden sm:inline" style={{ color: 'rgba(0,47,108,0.35)' }}>·</span>
+                {/* Sama peruste kuin ekosysteemiruudukossa: yrityspaketit.fi on Vesan
+                    oma toinen yritys, ja noreferrer estaa sita nakemasta etta liikenne
+                    tulee LV-verkostosta. `sponsored` sailyy — se on maksettu/vastavuoroinen
+                    krediitti, ei toimituksellinen linkki. */}
                 <a
                   href={websiteByHref}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="noopener sponsored"
                   className="transition-colors duration-200 inline-flex items-center min-h-[44px] min-w-[44px] sm:min-w-0 justify-center"
                   style={{ color: BLUE }}
                   onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#EC4899')}
