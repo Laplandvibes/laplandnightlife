@@ -1,0 +1,24 @@
+# LaplandNightlife
+
+> The honest guide to Finnish Lapland nightlife. 14 cities, 50+ verified nightclubs, aurora bars, live music and 2026 Oulu European Capital of Culture events.
+
+## Main pages
+
+- [Home](https://laplandnightlife.com/): Bars and nightclubs in Finnish Lapland
+- [Cities](https://laplandnightlife.com/cities): Nightlife by city
+- [Nightclubs](https://laplandnightlife.com/nightclubs): Nightclubs in Lapland
+- [Aurora Bars](https://laplandnightlife.com/aurora-bars): Northern lights with a drink
+- [Events](https://laplandnightlife.com/events): Nightlife events and festivals
+- [Photography](https://laplandnightlife.com/photography): Night photography in Lapland
+- [Summer Nights](https://laplandnightlife.com/summer-nights): Midnight sun summer nights
+- [Tips](https://laplandnightlife.com/tips): Going out in Lapland — tips and etiquette
+
+## Languages
+
+English (default, no prefix), Finnish (/fi/), Swedish (/sv/), German (/de/), French (/fr/), Spanish (/es/), Italian (/it/), Dutch (/nl/), Brazilian Portuguese (/br/), Japanese (/ja/), Korean (/kr/), Simplified Chinese (/cn/)
+
+## Network
+
+- [LaplandVibes hub](https://laplandvibes.com/): This site is part of the LaplandVibes network
+- [Sitemap](https://laplandnightlife.com/sitemap.xml)
+- Contact: info@laplandnightlife.com
