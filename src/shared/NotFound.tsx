@@ -131,10 +131,12 @@ export interface NotFoundProps {
   /**
    * Does this component own the page's <main> landmark?
    *
-   * Default true: ~10 network sites have no layout-level <main> and this is
-   * their only landmark on the 404 route. Sites whose app layout already
-   * renders a <main> pass false, otherwise the 404 ships two nested landmarks
-   * (measured from the rendered DOM 2026-08-13; invisible to grep).
+   * Default true, because ~10 network sites have no layout-level <main> at all
+   * and this is their only landmark on the 404 route. Sites whose app layout
+   * already renders a <main> must pass false, otherwise the 404 page ships two
+   * nested landmarks: invalid HTML, and a screen reader announces two "main"
+   * regions. Measured from the rendered DOM 2026-08-13 -- 12 sites were in that
+   * state. Raw HTML has zero <main> elements, so this is invisible to grep.
    */
   landmark?: boolean
 }
