@@ -761,7 +761,10 @@ if (args.crawlableBody) {
 
 for (const route of routes) {
   const routePath = route.path;
-  const ogImage = route.ogImage || DEFAULT_OG;
+  // Route-level OG image; a locale-specific `ogImageByLang` entry (routes.json)
+  // wins inside the locale loop — needed by shared routes whose locales carry
+  // different page-unique heroes (e.g. /northern-lights/where-to-see: nl + pt-BR).
+  const routeOgImage = route.ogImage || DEFAULT_OG;
 
   // EN fallback (always populated): try EN meta first, else derive from path.
   const enLoc = LOCALE_LIST.find((l) => l.lang === 'en') || LOCALE_LIST[0];
@@ -781,6 +784,9 @@ for (const route of routes) {
     // (copy readers, fallbackTitleByLang, shell title map) — routes that end up
     // on the EN fallback are the only ones worth reporting in the debug log.
     const localizedTitle = resolved.localizedTitle;
+
+    // Per-locale hero/OG override (see routeOgImage note above).
+    const ogImage = (route.ogImageByLang && route.ogImageByLang[loc.lang]) || routeOgImage;
 
     const cleanPath = routePath === '/' ? '' : routePath;
     // Canonical/hreflang MUST use the trailing-slash form, because the prerendered
