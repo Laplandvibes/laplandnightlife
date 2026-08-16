@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowRight, CheckCircle2, Bell, Sparkles, Music, Sun, AlertCircle } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
-import { useLang, useLocalePath } from '../i18n/useLang';
+import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import FounderByline from '../shared/FounderByline';
 
@@ -9,10 +9,63 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
 const SOURCE = 'laplandnightlife';
 
+// Marketing consent + 18+ confirmation, one entry per Lang in useLang.ts.
+const CONSENT: Record<Lang, { consent: string; privacy: string }> = {
+  en: {
+    consent: 'Yes, send the LaplandVibes newsletter (travel tips, seasonal updates and offers) to this email address. I confirm I am 18 or over.',
+    privacy: 'Privacy Policy',
+  },
+  fi: {
+    consent: 'LaplandVibes saa lähettää minulle uutiskirjettä (matkailuvinkkejä, sesonkitietoa ja tarjouksia) antamaani sähköpostiosoitteeseen. Olen täyttänyt 18 vuotta.',
+    privacy: 'Tietosuojaseloste',
+  },
+  de: {
+    consent: 'Ja, LaplandVibes darf mir den Newsletter mit Reisetipps, Saisoninfos und Angeboten an diese E-Mail-Adresse senden. Ich bin mindestens 18 Jahre alt.',
+    privacy: 'Datenschutzerklärung',
+  },
+  ja: {
+    consent: '入力したメールアドレス宛に、LaplandVibesがニュースレター（旅のヒント、シーズン情報、キャンペーン情報）を送ることに同意します。私は18歳以上です。',
+    privacy: 'プライバシーポリシー',
+  },
+  es: {
+    consent: 'Acepto recibir en mi correo el boletín de LaplandVibes (consejos de viaje, información de temporada y ofertas) y confirmo que tengo al menos 18 años.',
+    privacy: 'Política de privacidad',
+  },
+  'pt-BR': {
+    consent: 'Aceito receber a newsletter da LaplandVibes no e-mail informado, com dicas de viagem, informações de temporada e ofertas. Tenho 18 anos ou mais.',
+    privacy: 'Política de Privacidade',
+  },
+  'zh-CN': {
+    consent: '我同意 LaplandVibes 向我填写的邮箱发送订阅邮件，内容包括拉普兰旅行建议、季节资讯和优惠信息，并确认本人已年满18周岁。',
+    privacy: '隐私政策',
+  },
+  ko: {
+    consent: '입력한 이메일 주소로 LaplandVibes가 보내는 여행 팁·시즌 정보·프로모션 소식 뉴스레터 수신에 동의하며, 만 18세 이상임을 확인합니다.',
+    privacy: '개인정보처리방침',
+  },
+  fr: {
+    consent: 'J\'accepte de recevoir la newsletter LaplandVibes (conseils voyage, infos saisonnières, offres) à cette adresse e-mail et je confirme avoir 18 ans ou plus.',
+    privacy: 'Politique de confidentialité',
+  },
+  it: {
+    consent: 'Sì, desidero ricevere la newsletter di LaplandVibes (consigli di viaggio, novità stagionali e offerte) all\'indirizzo indicato. Ho almeno 18 anni.',
+    privacy: 'Informativa sulla privacy',
+  },
+  nl: {
+    consent: 'Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen. Ik ben 18 jaar of ouder.',
+    privacy: 'Privacyverklaring',
+  },
+  sv: {
+    consent: 'Ja, jag vill ha nyhetsbrevet från LaplandVibes med restips, säsongsinfo och erbjudanden till min e-postadress. Jag är minst 18 år.',
+    privacy: 'Integritetspolicy',
+  },
+};
+
 export default function Newsletter() {
   const lang = useLang();
   const to = useLocalePath();
   const c = COPY[lang].newsletter;
+  const cc = CONSENT[lang] ?? CONSENT.en;
 
   const benefits: { icon: typeof Bell; title: string; body: string }[] = [
     { icon: Bell,      title: c.b1H, body: c.b1Body },
@@ -22,12 +75,13 @@ export default function Newsletter() {
   ];
 
   const [email, setEmail] = useState('');
+  const [consented, setConsented] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!email || status === 'loading') return;
+    if (!email || !consented || status === 'loading') return;
 
     setStatus('loading');
     setError(null);
@@ -41,7 +95,13 @@ export default function Newsletter() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
         },
-        body: JSON.stringify({ email, source: SOURCE }),
+        body: JSON.stringify({
+          email,
+          source: SOURCE,
+          consent: true,
+          ageConfirmed: true,
+          consentText: cc.consent,
+        }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -63,7 +123,7 @@ export default function Newsletter() {
     <section
       id="newsletter"
       className="py-16 sm:py-20 px-4 sm:px-6"
-      style={{ background: 'linear-gradient(135deg, #EC4899 0%, #DB2777 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #4C1D95 0%, #7E22CE 35%, #BE185D 70%, #DB2777 100%)' }}
     >
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto">
@@ -104,7 +164,7 @@ export default function Newsletter() {
             </div>
           ) : (
             <><FounderByline tone="pink" />
-            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <label className="sr-only" htmlFor="newsletter-email">Email</label>
               <input
                 id="newsletter-email"
@@ -124,6 +184,26 @@ export default function Newsletter() {
                 {status === 'loading' ? c.sending : c.btn}
                 <ArrowRight className="w-4 h-4" />
               </button>
+              <label className="w-full flex items-start gap-2.5 text-left cursor-pointer text-white/90 text-xs leading-relaxed">
+                <input
+                  type="checkbox"
+                  checked={consented}
+                  onChange={(e) => setConsented(e.target.checked)}
+                  required
+                  className="mt-0.5 w-4 h-4 shrink-0 cursor-pointer rounded border border-white/50 accent-white focus:outline-none focus:ring-2 focus:ring-white/70"
+                />
+                <span>
+                  {cc.consent}{' '}
+                  <a
+                    href={to('/privacy')}
+                    target="_blank"
+                    rel="noopener"
+                    className="underline hover:text-white"
+                  >
+                    {cc.privacy}
+                  </a>
+                </span>
+              </label>
             </form></>
           )}
 
