@@ -3,7 +3,10 @@
     "path": "/",
     "copyKey": "home",
     "fallbackTitle": "LaplandNightlife: Bars & Nightclubs in Finnish Lapland",
-    "fallbackDescription": "Where to go out after dark in Lapland: cocktail bars, ice bars, nightclubs, aurora-watching bars, live music and seasonal events across Finnish Lapland."
+    "fallbackDescription": "Where to go out after dark in Lapland: cocktail bars, ice bars, nightclubs, aurora-watching bars, live music and seasonal events across Finnish Lapland.",
+    "harvestFiles": [
+      "src/pages/Home.tsx"
+    ]
   },
   {
     "path": "/cities",
@@ -13,7 +16,10 @@
   {
     "path": "/nightclubs",
     "copyKey": "nightclubs",
-    "fallbackTitle": "Nightclubs in Lapland | LaplandNightlife"
+    "fallbackTitle": "Nightclubs in Lapland | LaplandNightlife",
+    "harvestFiles": [
+      "src/pages/Nightclubs.tsx"
+    ]
   },
   {
     "path": "/aurora-bars",
