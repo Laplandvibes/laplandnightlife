@@ -1,12 +1,23 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { ArrowRight, CheckCircle2, Bell, Sparkles, Music, Sun, AlertCircle } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import FounderByline from '../shared/FounderByline';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
+
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../lib/supabase';
+
 const SOURCE = 'laplandnightlife';
 
 // Marketing consent + 18+ confirmation, one entry per Lang in useLang.ts.
@@ -78,13 +89,41 @@ export default function Newsletter() {
   const [consented, setConsented] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
+  // [LV-FUNNEL] view = osio vieritetty näkyviin (kerran), start = 1. fokus,
+  // blocked kerran per submit-yritys (natiivi invalid laukeaa per kenttä).
+  const funnelData = { surface: 'inline', lang };
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const startTracked = useRef(false);
+  const blockedTracked = useRef(false);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('nl_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('nl_start', funnelData);
+  };
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!email || !consented || status === 'loading') return;
+    if (!email || !consented || status === 'loading') {
+      if (status !== 'loading') track('nl_blocked', { ...funnelData, reason: !email ? 'email' : 'consent' });
+      return;
+    }
 
     setStatus('loading');
     setError(null);
+    track('nl_submit', funnelData);
     try {
       if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
         throw new Error(c.errFallback);
@@ -109,8 +148,10 @@ export default function Newsletter() {
       }
       trackNewsletterSignup(data?.alreadySubscribed ? `${SOURCE}-already` : SOURCE);
       setStatus('done');
+      track('nl_success', data?.alreadySubscribed ? { ...funnelData, already: true } : funnelData);
     } catch (err) {
       setStatus('error');
+      track('nl_error', funnelData);
       setError(
         err instanceof Error
           ? `${c.errPrefix} (${err.message}).`
@@ -122,6 +163,7 @@ export default function Newsletter() {
   return (
     <section
       id="newsletter"
+      ref={sectionRef}
       className="py-16 sm:py-20 px-4 sm:px-6"
       style={{ background: 'linear-gradient(135deg, #4C1D95 0%, #7E22CE 35%, #BE185D 70%, #DB2777 100%)' }}
     >
@@ -164,12 +206,25 @@ export default function Newsletter() {
             </div>
           ) : (
             <><FounderByline tone="pink" />
-            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <form
+              onSubmit={onSubmit}
+              // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
+              // onSubmitia — invalid-capture kertoo MIKÄ kenttä pysäytti.
+              onInvalidCapture={(e) => {
+                if (blockedTracked.current) return;
+                blockedTracked.current = true;
+                window.setTimeout(() => { blockedTracked.current = false; }, 400);
+                const el = e.target as HTMLInputElement;
+                track('nl_blocked', { ...funnelData, reason: el.type === 'checkbox' ? 'consent' : 'email' });
+              }}
+              className="flex flex-col sm:flex-row sm:flex-wrap gap-3"
+            >
               <label className="sr-only" htmlFor="newsletter-email">Email</label>
               <input
                 id="newsletter-email"
                 type="email"
                 value={email}
+                onFocus={trackStart}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={c.placeholder}
                 required
@@ -188,6 +243,7 @@ export default function Newsletter() {
                 <input
                   type="checkbox"
                   checked={consented}
+                  onFocus={trackStart}
                   onChange={(e) => setConsented(e.target.checked)}
                   required
                   className="mt-0.5 w-4 h-4 shrink-0 cursor-pointer rounded border border-white/50 accent-white focus:outline-none focus:ring-2 focus:ring-white/70"

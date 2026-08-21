@@ -96,8 +96,6 @@
          duplicate the per-route one. -->
 
     <!-- DNS warmup for hot third parties -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://go.laplandvibes.com" />
     <link rel="preconnect" href="https://widget.getyourguide.com" />
 
@@ -217,7 +215,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <!-- Umami Cloud — cookieless analytics, no consent gate needed (writes nothing to the browser) -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="2e3875fb-d798-44f1-8867-13c83ccffb4c"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="2e3875fb-d798-44f1-8867-13c83ccffb4c" data-domains="laplandnightlife.com,www.laplandnightlife.com"></script>
+      <!-- Self-hosted fonts (2026-08-16). Preload is required: without it the
+         browser cannot discover the faces until the bundled CSS has parsed,
+         which guarantees a visible pass in the fallback sans on every cold
+         load. crossorigin is required even same-origin — fonts are fetched in
+         CORS mode and a preload without it downloads the file twice. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/v20-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/v22-V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2" />
   </head>
   <body>
     <div id="root"></div>

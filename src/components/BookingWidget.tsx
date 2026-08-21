@@ -1,9 +1,20 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { Hotel, Plane, Car, Search, MapPin, Calendar, Users, ChevronDown } from 'lucide-react';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { buildTripFlightUrl, buildTripFlightHome } from '../lib/tripcom';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 type Tab = 'hotels' | 'flights' | 'cars';
 
@@ -25,6 +36,33 @@ export default function BookingWidget() {
   const [checkout, setCheckout] = useState(PLUS(18));
   const [origin, setOrigin] = useState('LON');
   const [pickup, setPickup] = useState('RVN');
+  // [LV-FUNNEL] view = widget vieritetty näkyviin (kerran), start = 1. fokus,
+  // blocked kerran per submit-yritys. 🔴 "Submit" on uloslähtö kumppanille
+  // (window.open affiliate-Workeriin/Trip.comiin) ILMAN fetchiä: palvelin-
+  // vahvistusta ei ole, joten success/error-eventtejä ei voi rehellisesti
+  // lähettää — suppilo päättyy submitiin. data.tab kertoo aktiivisen paneelin.
+  const funnelData = { lang };
+  const widgetRef = useRef<HTMLFormElement | null>(null);
+  const startTracked = useRef(false);
+  const blockedTracked = useRef(false);
+  useEffect(() => {
+    const el = widgetRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('booking_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('booking_start', funnelData);
+  };
 
   function submit(e: FormEvent) {
     e.preventDefault();
@@ -73,6 +111,8 @@ export default function BookingWidget() {
         href = buildTripFlightHome('hero_flight_search_generic', lang);
       }
     }
+    // [LV-FUNNEL] submit = uloslähtö juuri ennen window.openia.
+    track('booking_submit', { ...funnelData, tab });
     window.open(href, '_blank', 'noopener');
   }
 
@@ -90,7 +130,18 @@ export default function BookingWidget() {
 
   return (
     <form
+      ref={widgetRef}
       onSubmit={submit}
+      // [LV-FUNNEL] Kentillä ei nyt ole native-rajoitteita, mutta jos niitä
+      // lisätään, invalid-capture kirjaa pysäytyksen (kentillä ei nameja,
+      // joten syy on kenttätyyppi).
+      onInvalidCapture={(e) => {
+        if (blockedTracked.current) return;
+        blockedTracked.current = true;
+        window.setTimeout(() => { blockedTracked.current = false; }, 400);
+        const el = e.target as HTMLInputElement;
+        track('booking_blocked', { ...funnelData, tab, reason: el.type === 'date' ? 'dates' : 'field' });
+      }}
       className="bg-night/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_20px_60px_-20px_rgba(124,58,237,0.4)] overflow-hidden w-full"
     >
       <div className="flex border-b border-white/10">
@@ -121,6 +172,7 @@ export default function BookingWidget() {
               <input
                 aria-label={c.destination}
                 value={destination}
+                onFocus={trackStart}
                 onChange={(e) => setDestination(e.target.value)}
                 className={inputCls}
                 placeholder={c.placeholderDest}
@@ -132,7 +184,7 @@ export default function BookingWidget() {
                 {c.guests}
               </label>
               <div className="relative">
-                <select aria-label={c.guests} value={guests} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
+                <select aria-label={c.guests} value={guests} onFocus={trackStart} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
                   <option value="1">{c.g1}</option>
                   <option value="2">{c.g2}</option>
                   <option value="3">{c.g3}</option>
@@ -146,14 +198,14 @@ export default function BookingWidget() {
                 <Calendar size={10} className="inline mr-1" />
                 {c.checkin}
               </label>
-              <input aria-label={c.checkin} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <input aria-label={c.checkin} type="date" value={checkin} onFocus={trackStart} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
               <label className={labelCls}>
                 <Calendar size={10} className="inline mr-1" />
                 {c.checkout}
               </label>
-              <input aria-label={c.checkout} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <input aria-label={c.checkout} type="date" value={checkout} onFocus={trackStart} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
@@ -162,19 +214,19 @@ export default function BookingWidget() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className={labelCls}>{c.from}</label>
-              <input aria-label={c.from} value={origin} onChange={(e) => setOrigin(e.target.value.toUpperCase())} className={inputCls} maxLength={3} />
+              <input aria-label={c.from} value={origin} onFocus={trackStart} onChange={(e) => setOrigin(e.target.value.toUpperCase())} className={inputCls} maxLength={3} />
             </div>
             <div>
               <label className={labelCls}>{c.to}</label>
-              <input aria-label={c.to} value={destination} onChange={(e) => setDestination(e.target.value)} className={inputCls} placeholder={c.placeholderTo} />
+              <input aria-label={c.to} value={destination} onFocus={trackStart} onChange={(e) => setDestination(e.target.value)} className={inputCls} placeholder={c.placeholderTo} />
             </div>
             <div>
               <label className={labelCls}>{c.depart}</label>
-              <input aria-label={c.depart} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <input aria-label={c.depart} type="date" value={checkin} onFocus={trackStart} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
               <label className={labelCls}>{c.return}</label>
-              <input aria-label={c.return} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <input aria-label={c.return} type="date" value={checkout} onFocus={trackStart} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
@@ -183,12 +235,12 @@ export default function BookingWidget() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className={labelCls}>{c.pickup}</label>
-              <input aria-label={c.pickup} value={pickup} onChange={(e) => setPickup(e.target.value.toUpperCase())} className={inputCls} maxLength={3} placeholder={c.placeholderPickup} />
+              <input aria-label={c.pickup} value={pickup} onFocus={trackStart} onChange={(e) => setPickup(e.target.value.toUpperCase())} className={inputCls} maxLength={3} placeholder={c.placeholderPickup} />
             </div>
             <div>
               <label className={labelCls}>{c.drivers}</label>
               <div className="relative">
-                <select aria-label={c.drivers} value={guests} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
+                <select aria-label={c.drivers} value={guests} onFocus={trackStart} onChange={(e) => setGuests(e.target.value)} className={`${inputCls} appearance-none pr-9 sm:pr-10`}>
                   <option value="1">{c.d1}</option>
                   <option value="2">{c.d2}</option>
                 </select>
@@ -197,11 +249,11 @@ export default function BookingWidget() {
             </div>
             <div>
               <label className={labelCls}>{c.pickupDate}</label>
-              <input aria-label={c.pickupDate} type="date" value={checkin} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
+              <input aria-label={c.pickupDate} type="date" value={checkin} onFocus={trackStart} onChange={(e) => setCheckin(e.target.value)} className={inputCls} />
             </div>
             <div>
               <label className={labelCls}>{c.dropoff}</label>
-              <input aria-label={c.dropoff} type="date" value={checkout} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
+              <input aria-label={c.dropoff} type="date" value={checkout} onFocus={trackStart} onChange={(e) => setCheckout(e.target.value)} className={inputCls} />
             </div>
           </div>
         )}
