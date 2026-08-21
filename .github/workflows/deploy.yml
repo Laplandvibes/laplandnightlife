@@ -21,7 +21,16 @@ jobs:
 
       - run: npm ci
 
+      # This job builds from a clean clone, so .env (gitignored) is absent and
+      # Vite would compile import.meta.env.VITE_* to undefined. That killed
+      # newsletter signups in production until 2026-08-21. src/lib/supabase.ts
+      # now carries public fallbacks, so the build is correct with or without
+      # these secrets; setting them simply keeps the env path authoritative.
+      # Unset secrets arrive as empty strings, which the fallback also covers.
       - run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
