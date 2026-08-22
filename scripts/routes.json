@@ -69,58 +69,114 @@
   },
   {
     "path": "/city/oulu",
-    "fallbackTitle": "Oulu Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Oulu Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "oulu"
+    }
   },
   {
     "path": "/city/rovaniemi",
-    "fallbackTitle": "Rovaniemi Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Rovaniemi Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "rovaniemi"
+    }
   },
   {
     "path": "/city/levi",
-    "fallbackTitle": "Levi Nightlife & Après-Ski Bars | LaplandNightlife"
+    "fallbackTitle": "Levi Nightlife & Après-Ski Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "levi"
+    }
   },
   {
     "path": "/city/saariselka",
-    "fallbackTitle": "Saariselkä Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Saariselkä Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "saariselka"
+    }
   },
   {
     "path": "/city/inari",
-    "fallbackTitle": "Inari Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Inari Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "inari"
+    }
   },
   {
     "path": "/city/kemi",
-    "fallbackTitle": "Kemi Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Kemi Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "kemi"
+    }
   },
   {
     "path": "/city/yllas",
-    "fallbackTitle": "Ylläs Nightlife & Après-Ski Bars | LaplandNightlife"
+    "fallbackTitle": "Ylläs Nightlife & Après-Ski Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "yllas"
+    }
   },
   {
     "path": "/city/ruka",
-    "fallbackTitle": "Ruka Nightlife & Après-Ski Bars | LaplandNightlife"
+    "fallbackTitle": "Ruka Nightlife & Après-Ski Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "ruka"
+    }
   },
   {
     "path": "/city/pyha-luosto",
-    "fallbackTitle": "Pyhä-Luosto Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Pyhä-Luosto Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "pyha-luosto"
+    }
   },
   {
     "path": "/city/sodankyla",
-    "fallbackTitle": "Sodankylä Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Sodankylä Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "sodankyla"
+    }
   },
   {
     "path": "/city/kittila",
-    "fallbackTitle": "Kittilä Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Kittilä Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "kittila"
+    }
   },
   {
     "path": "/city/ivalo",
-    "fallbackTitle": "Ivalo Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Ivalo Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "ivalo"
+    }
   },
   {
     "path": "/city/muonio",
-    "fallbackTitle": "Muonio Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Muonio Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "muonio"
+    }
   },
   {
     "path": "/city/salla",
-    "fallbackTitle": "Salla Nightlife & Bars | LaplandNightlife"
+    "fallbackTitle": "Salla Nightlife & Bars | LaplandNightlife",
+    "harvestRecord": {
+      "file": "src/data/cities.{lang}.ts",
+      "key": "salla"
+    }
   }
 ]
