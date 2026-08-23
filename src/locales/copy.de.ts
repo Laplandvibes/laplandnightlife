@@ -83,6 +83,10 @@ const de = {
       heroH: 'Alle 14 Städte',
       heroBody: 'Vom 8-Club-Boulevard Rotuaari in Oulu bis zu Sallas 3 300 Einwohnern und einer einzigen Skipiste. Jede Stadt in und um Lappland mit Nachtleben-Anspruch, ehrlich eingeordnet.',
       explore: 'Entdecken',
+      leadH: 'Wie diese Liste zu lesen ist',
+      leadP1: 'Vierzehn Orte, fünf Arten von Abend. Zwei haben eine Clubszene, die das ganze Jahr läuft. Drei sind Skiorte, in denen die Saison alles entscheidet. Drei sind kulturelle Ankerpunkte, zwei sind Wildnisziele, deren Abend um eine Hotelbar statt um einen Club herum gebaut ist, und vier sind Kleinstädte mit einer Kneipe und ohne Allüren.',
+      leadP2: 'Sortiert wird danach, was tatsächlich geöffnet hat, nicht danach, wie groß der Ort ist. Ein Ziel mit vielen Betten, aber einem DJ-Termin pro Woche steht hinter einer Stadt, deren Bar an jedem Freitag des Jahres aufmacht – auf die zweite lässt sich planen.',
+      leadP3: 'Wo ein Ort kein Nachtleben hat, das den Namen verdient, steht genau das auf seiner Seite. Deshalb stehen hier alle vierzehn und nicht die acht, mit denen sich besser argumentieren ließe.',
     },
     nightclubs: {
       seoTitle: 'Nachtclubs & Live-Musik, Lappland und der Norden',

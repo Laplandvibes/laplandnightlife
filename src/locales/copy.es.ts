@@ -59,6 +59,10 @@ const es = {
       h: 'Vida nocturna por ciudad',
       body: 'Ocho ciudades que conocer. Otras seis para saltar o para encontrar a propósito.',
       all: 'Ver las 14 ciudades →',
+      leadH: 'Cómo leer esta lista',
+      leadP1: 'Catorce localidades, cinco tipos de noche. Dos tienen una escena de clubes que funciona todo el año. Tres son estaciones de esquí donde la temporada lo decide todo. Tres son referentes culturales, dos son destinos de naturaleza cuya noche gira en torno al bar del hotel y no a un club, y cuatro son pueblos pequeños con un pub y ninguna pretensión.',
+      leadP2: 'El orden sigue lo que de verdad está abierto, no el tamaño de la estación. Un destino con muchas camas pero una sesión de DJ por semana queda por detrás de un pueblo cuyo bar abre todos los viernes del año: sobre el segundo se puede planificar.',
+      leadP3: 'Donde una localidad no tiene vida nocturna digna de ese nombre, su página lo dice. Por eso están las catorce y no las ocho que darían un argumento mejor.',
     },
     events: {
       eyebrow: 'Calendario 2026',

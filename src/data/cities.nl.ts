@@ -218,7 +218,7 @@ const overlay: Record<string, CityOverlay> = {
   sodankyla: {
     region: 'Centraal-Lapland',
     blurb: 'Midnight Sun Film Festival: ze draaien films om 03:00 in vol daglicht.',
-    pageTagline: 'Midnight Sun Film Festival.',
+    pageTagline: 'Thuisbasis van het Midnight Sun Film Festival.',
     intro: 'Sodankylä is een dorp van 9 000 inwoners aan de rivier de Kemijoki, en één keer per jaar, half juni, wordt het het meest surrealistische filmfestival ter wereld. Het Midnight Sun Film Festival duurt vier dagen met vertoningen rond de klok; niemand slaapt, want de zon gaat niet onder. Buiten de festivalweek bestaat de scene uit een hotelbar en een paar lokale pubs. Kom voor het festival, of voor de stilte.',
     venues: {
       'Hotel Sodankylä Bar': { type: 'Hotelbar', note: 'De hotelbar in het centrum: open tot 01:00.' },
@@ -305,8 +305,8 @@ const overlay: Record<string, CityOverlay> = {
   },
   salla: {
     region: 'Oost-Lapland',
-    blurb: 'Midden in the middle of nowhere. Het rustigste skiresort van Finland.',
-    pageTagline: 'In the middle of nowhere.',
+    blurb: 'Middenin het niets. Het rustigste skiresort van Finland.',
+    pageTagline: 'Middenin het niets.',
     intro: '3 300 inwoners en één skipiste. De slogan van het dorp is letterlijk "In the Middle of Nowhere", en dat is als compliment bedoeld. Hotel Revontuli heeft de enige bar die laat doorgaat; aan de pistekant komt er in het seizoen een pub of twee bij. Buiten de winter: stilte. De knipogende "Salla 2032"-campagne voor de Winterspelen zette het dorp op de kaart, maar de scene zelf veranderde niet. Kom niet voor de clubs.',
     venues: {
       'Holiday Club Salla': { type: 'Hotelbar', note: 'De enige locatie tot \'s avonds laat. Restaurant + bar.' },

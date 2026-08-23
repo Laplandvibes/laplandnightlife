@@ -82,6 +82,10 @@ const en = {
       heroH: 'All 14 Cities',
       heroBody: "From Oulu's 8-club Rotuaari strip to Salla's 3 300 residents and one ski slope. Every town in and around Lapland with a nightlife claim, ranked honestly.",
       explore: 'Explore',
+      leadH: 'How to read this list',
+      leadP1: 'Fourteen towns, five kinds of night. Two have a club scene that runs all year. Three are ski resorts where the season decides everything. Three are cultural anchors, two are wilderness destinations built around a hotel bar rather than a club, and four are small towns with one pub and no pretence.',
+      leadP2: 'The order follows what is actually open, not how big the resort is. A destination with plenty of beds but one DJ slot a week sits behind a town whose bar opens every Friday of the year, because you can plan around the second one.',
+      leadP3: 'Where a town has no nightlife worth the word, its page says so. That is why all fourteen are here rather than the eight that would make a better argument.',
     },
     nightclubs: {
       seoTitle: 'Nightclubs & Live Music, Lapland and the North',

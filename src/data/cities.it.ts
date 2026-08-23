@@ -218,7 +218,7 @@ const overlay: Record<string, CityOverlay> = {
   sodankyla: {
     region: 'Lapponia Centrale',
     blurb: 'Midnight Sun Film Festival: proiettano film alle 03:00 in pieno giorno.',
-    pageTagline: 'Midnight Sun Film Festival.',
+    pageTagline: 'La città del Midnight Sun Film Festival.',
     intro: 'Sodankylä è un villaggio di 9 000 abitanti sul fiume Kemijoki, e una volta all\'anno, a metà giugno, diventa il festival di cinema più surreale del mondo. Il Midnight Sun Film Festival dura quattro giorni con proiezioni a tutte le ore: nessuno dorme, perché il sole non tramonta. Fuori dalla settimana del festival la scena è un bar d\'hotel e un paio di pub locali. Venite per il festival, o per il silenzio.',
     venues: {
       'Hotel Sodankylä Bar': { type: 'Bar d\'hotel', note: 'Il bar dell\'hotel in centro, aperto fino all\'01:00.' },

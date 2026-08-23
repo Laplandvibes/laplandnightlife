@@ -108,7 +108,12 @@ function parseOverlay(file) {
   try { src = readFileSync(join(DATA, file), 'utf-8'); } catch { return {}; }
   const out = {};
   // Top-level overlay keys are `slug: {` inside the default export object.
-  const re = /(?:^|[\s,{])([a-z0-9-]+)\s*:\s*\{/g;
+  // 🔴 The quotes are NOT optional to the regex: a slug containing a hyphen has
+  // to be written `'pyha-luosto': {`, and an unquoted-only pattern skipped it in
+  // every overlay at once — so all eleven localized /city/pyha-luosto pages
+  // silently served the ENGLISH title and description while their body copy
+  // (read by the shared harvester, which does allow quotes) was localized.
+  const re = /(?:^|[\s,{])['"]?([a-z0-9-]+)['"]?\s*:\s*\{/g;
   let m;
   while ((m = re.exec(src)) !== null) {
     const slug = m[1];

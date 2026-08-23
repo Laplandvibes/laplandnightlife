@@ -62,6 +62,10 @@ const sv = {
       h: 'Nattliv stad för stad',
       body: 'Åtta städer att känna till. Sex till att hoppa över, eller söka upp med flit.',
       all: 'Se alla 14 städer →',
+      leadH: 'Så läser du listan',
+      leadP1: 'Fjorton orter, fem sorters kväll. Två har en klubbscen som går året runt. Tre är skidorter där säsongen avgör allt. Tre är kulturstäder, två är vildmarksmål där kvällen byggs kring hotellbaren i stället för klubben, och fyra är småstäder med en pub och inga later.',
+      leadP2: 'Ordningen följer vad som faktiskt är öppet, inte hur stor orten är. Ett mål med gott om bäddar men ett DJ-pass i veckan hamnar efter en stad vars bar öppnar årets alla fredagar — den senare går att planera efter.',
+      leadP3: 'Där en ort saknar nattliv värt namnet står det på dess sida. Det är därför alla fjorton finns här och inte de åtta som hade gett ett bättre argument.',
     },
     events: {
       ...en.home.events,

@@ -83,6 +83,10 @@ const fi = {
       heroH: 'Kaikki 14 kaupunkia',
       heroBody: 'Oulun 8-klubin Rotuaarista Sallan 3 300 asukkaaseen ja yhteen rinteeseen. Jokainen Lapin ja lähipohjoisen kaupunki, jolla on jokin yöelämä, rehellisesti arvioitu.',
       explore: 'Tutustu',
+      leadH: 'Miten tätä listaa luetaan',
+      leadP1: 'Neljätoista kaupunkia, viisi erilaista iltaa. Kahdessa on klubikulttuuria ympäri vuoden. Kolme on hiihtokeskuksia, joissa kausi ratkaisee kaiken. Kolme on kulttuurikaupunkeja, kaksi erämaakohteita, joiden ilta rakentuu hotellibaarin eikä klubin ympärille, ja neljä on pikkukaupunkeja, joissa on yksi pubi eikä mitään esitettävää.',
+      leadP2: 'Järjestys perustuu siihen mikä on oikeasti auki, ei siihen kuinka iso keskus on. Kohde jossa on runsaasti vuodepaikkoja mutta yksi DJ-vuoro viikossa jää sen kaupungin taakse, jonka baari aukeaa vuoden jokaisena perjantaina — jälkimmäisen varaan voi suunnitella.',
+      leadP3: 'Jos kaupungissa ei ole yöelämää sanan varsinaisessa merkityksessä, sen sivulla lukee niin. Juuri siksi tässä ovat kaikki neljätoista eivätkä ne kahdeksan, joista saisi paremman tarinan.',
     },
     nightclubs: {
       seoTitle: 'Yökerhot ja live-musiikki, Lappi ja pohjoinen',

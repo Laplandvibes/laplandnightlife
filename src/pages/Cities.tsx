@@ -57,6 +57,17 @@ export default function Cities() {
 
       <PageBreadcrumb />
 
+      {/* The grid alone never said what the five tags mean, or why a village of
+          3 300 shares a list with Oulu. Same block the prerender harvests. */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-5">{c.leadH}</h2>
+          <p className="text-white/75 leading-relaxed mb-4">{c.leadP1}</p>
+          <p className="text-white/75 leading-relaxed mb-4">{c.leadP2}</p>
+          <p className="text-white/75 leading-relaxed">{c.leadP3}</p>
+        </div>
+      </section>
+
       {/* Stat glass tiles (skiresorts recipe) — values derive from CITIES data. */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-night-light/40">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
