@@ -153,6 +153,9 @@ const zhCN = {
     ctaH: '围绕日期规划行程',
     ctaBody: '音乐节周末提前数月售罄。酒店在前 4–6 周达到 60–80 % 入住率。',
     ctaBtn: '按日期搜索酒店 →',
+    ticketsH: '门票在哪里买',
+    ticketsBody: '芬兰的场馆演出和音乐节开票大多走全国性票务平台。Ticketmaster Finland 是其中主要的一家——比如 Qstock 的门票只在那里出售。网站是芬兰语,但购买流程就是标准的 Ticketmaster,按活动名称搜索即可。小型音乐节常常自售,先查活动官网。',
+    ticketsCta: '打开 Ticketmaster Finland',
   },
   photo: {
     seoTitle: '芬兰拉普兰夜间摄影，参数、场地、许可',

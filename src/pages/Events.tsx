@@ -200,6 +200,25 @@ export default function Events() {
               </div>
             </div>
           ))}
+
+          {/* Ticketmaster FI — Vesa's documented exception (CLAUDE.md 2026-08-17):
+              TP provides ONLY a ready-made front-page link for this programme, so
+              no per-event deep link is possible. Reader-service, not a revenue
+              play (0,40 €/online sale) — which is why this is one modest block,
+              not a CTA on every event card. Qstock exclusivity verified from
+              qstock.fi's own ticket-info page 2026-08-23. */}
+          <div className="bg-night-light/40 border border-white/10 rounded-xl p-6 sm:p-7">
+            <h2 className="font-heading text-2xl text-white tracking-tight mb-2">{c.ticketsH}</h2>
+            <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-3xl">{c.ticketsBody}</p>
+            <a
+              href="https://go.laplandvibes.com/go/ticketmaster?sid=events_tickets_fi"
+              target="_blank"
+              rel="sponsored nofollow noopener"
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-pink hover:text-white transition-colors"
+            >
+              {c.ticketsCta} →
+            </a>
+          </div>
         </div>
       </section>
 

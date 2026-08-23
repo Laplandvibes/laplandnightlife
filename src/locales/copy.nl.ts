@@ -162,6 +162,9 @@ const nl = {
     ctaH: 'Plan de reis rond de datum',
     ctaBody: 'Festivalweekends zijn maanden vooraf uitverkocht. Hotels zitten 4–6 weken vooraf op 60–80 %.',
     ctaBtn: 'Hotels zoeken op datum →',
+    ticketsH: 'Waar je de tickets koopt',
+    ticketsBody: 'De kaartverkoop van Finse arena\'s en festivals loopt grotendeels via landelijke ticketkantoren. Ticketmaster Finland is een van de belangrijkste — Qstock verkoopt zijn tickets bijvoorbeeld alleen daar. De site is Fins, maar de flow is standaard Ticketmaster; zoek op de naam van het event. Kleinere festivals verkopen vaak direct: check eerst de eigen pagina van het event.',
+    ticketsCta: 'Open Ticketmaster Finland',
   },
   photo: {
     ...en.photo,

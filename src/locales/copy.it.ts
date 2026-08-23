@@ -162,6 +162,9 @@ const it = {
     ctaH: 'Pianifica il viaggio sulla data',
     ctaBody: 'I weekend di festival si esauriscono con mesi di anticipo. Gli hotel arrivano al 60–80 % a 4–6 settimane dall\'evento.',
     ctaBtn: 'Cerca hotel per data →',
+    ticketsH: 'Dove si comprano i biglietti',
+    ticketsBody: 'Le vendite di biglietti per arene e festival in Finlandia passano in gran parte da biglietterie nazionali. Ticketmaster Finlandia è tra le principali — il Qstock, per esempio, vende i biglietti solo lì. Il sito è in finlandese, ma il flusso è il classico Ticketmaster; cerca il nome dell\'evento. I festival più piccoli spesso vendono in proprio: controlla prima la pagina dell\'evento.',
+    ticketsCta: 'Apri Ticketmaster Finlandia',
   },
   photo: {
     ...en.photo,

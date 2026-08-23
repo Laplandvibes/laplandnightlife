@@ -151,6 +151,9 @@ const fi = {
       ctaH: 'Suunnittele matka päivämäärän ympärille',
       ctaBody: 'Festivaaliviikonloput myydään loppuun kuukausia etukäteen. Hotellit menevät 60–80 % täyteen 4–6 viikkoa ennen.',
       ctaBtn: 'Etsi hotelleja päivämäärän mukaan →',
+      ticketsH: 'Mistä liput ostetaan',
+      ticketsBody: 'Suomen areena- ja festivaalilippujen myynti kulkee pitkälti valtakunnallisten lippukauppojen kautta. Ticketmaster Suomi on niistä keskeisimpiä — esimerkiksi Qstockin liput myy vain se. Haku toimii tapahtuman nimellä. Pienemmät festivaalit myyvät usein suoraan, joten tarkista ensin tapahtuman oma sivu.',
+      ticketsCta: 'Avaa Ticketmaster Suomi',
     },
     photo: {
       seoTitle: 'Yövalokuvaus Suomen Lapissa, asetukset, paikat, luvat',

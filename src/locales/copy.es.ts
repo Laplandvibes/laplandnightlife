@@ -153,6 +153,9 @@ const es = {
     ctaH: 'Planifique el viaje en torno a la fecha',
     ctaBody: 'Los fines de semana de festival se agotan meses antes. Los hoteles llegan al 60–80 % de ocupación 4–6 semanas antes.',
     ctaBtn: 'Buscar hoteles por fecha →',
+    ticketsH: 'Dónde se compran las entradas',
+    ticketsBody: 'La venta de entradas para arenas y festivales en Finlandia pasa en gran parte por taquillas nacionales. Ticketmaster Finlandia es una de las principales: Qstock, por ejemplo, vende sus entradas solo ahí. El sitio está en finés, pero el proceso es el estándar de Ticketmaster; busca por el nombre del evento. Los festivales pequeños suelen vender directo: revisa primero la página del evento.',
+    ticketsCta: 'Abrir Ticketmaster Finlandia',
   },
   photo: {
     seoTitle: 'Fotografía nocturna en Laponia, Ajustes y locales',
