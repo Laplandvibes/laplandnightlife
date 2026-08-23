@@ -13,8 +13,8 @@ const fi = {
       menu: 'Valikko',
     },
     home: {
-      seoTitle: 'LaplandNightlife, Lapin yöelämä ja keskiyön aurinko',
-      seoDesc: 'Toimituksellinen opas Lapin yöelämään. 14 pohjoista kaupunkia, yli 50 yökerhoa, revontulibaarit, live-musiikki ja Oulun 2026 kulttuuripääkaupungin tapahtumat.',
+      seoTitle: 'Lapin yöelämä: baarit, klubit ja keskiyön aurinko',
+      seoDesc: 'Hullu Poron 1 700 hengen tanssilattialta Saariselän lasikattoiseen iglubaariin: baarit, klubit ja tapahtumat 14 pohjoisen kaupungissa.',
       faq1Q: 'Missä on Lapin suurin yökerho?',
       faq1A: 'Hullu Poro Areena Levillä: 1 700 hengen kapasiteetti, 10 baaria, 2 kerrosta. Avoinna ke–la hiihtokaudella.',
       faq2Q: 'Voiko revontulia katsella Lapissa baarista käsin?',
@@ -77,8 +77,8 @@ const fi = {
       },
     },
     cities: {
-      seoTitle: 'Kaikki 14 yöelämäkaupunkia, Lappi ja pohjoinen',
-      seoDesc: 'Oulun 8-klubin Rotuaarista Sallan 3 300 asukkaaseen. Jokainen Lapin ja lähipohjoisen kaupunki, jolla on jonkinlainen yöelämä, rehellisesti arvioitu, lähteet näkyvillä.',
+      seoTitle: 'Kaikki 14 kaupunkia: yöelämä Lapissa ja pohjoisessa',
+      seoDesc: 'Neljätoista kaupunkia, viisi erilaista iltaa: Oulun kahdeksan baarin Rotuaarista Sallan yhteen rinteeseen. Jokainen paikkakunta rehellisesti arvioituna.',
       heroEyebrow: 'Kohteet',
       heroH: 'Kaikki 14 kaupunkia',
       heroBody: 'Oulun 8-klubin Rotuaarista Sallan 3 300 asukkaaseen ja yhteen rinteeseen. Jokainen Lapin ja lähipohjoisen kaupunki, jolla on jokin yöelämä, rehellisesti arvioitu.',
@@ -89,8 +89,8 @@ const fi = {
       leadP3: 'Jos kaupungissa ei ole yöelämää sanan varsinaisessa merkityksessä, sen sivulla lukee niin. Juuri siksi tässä ovat kaikki neljätoista eivätkä ne kahdeksan, joista saisi paremman tarinan.',
     },
     nightclubs: {
-      seoTitle: 'Yökerhot ja live-musiikki, Lappi ja pohjoinen',
-      seoDesc: 'Yli 40 käsin valittua yökerhoa ja live-musiikkipaikkaa Lapissa ja lähipohjoisessa. Hullu Poro Areena (1 700 hlö), Roy Club ja Oulun Rotuaari.',
+      seoTitle: 'Yökerhot ja live-musiikki Lapissa ja pohjoisessa',
+      seoDesc: 'Neljä tasoa pohjoisen iltaan: Hullu Poro Areenan 1 700 hengen lattia Levillä, Oulun ja Rovaniemen klubikierrokset sekä tunturikylien hotellibaarit.',
       heroEyebrow: '40+ käsin valittua paikkaa',
       heroTitle: 'Yökerhot ja live-musiikki',
       heroSub: '1 700 hengestä 250 henkeen ja jono ovella.',
@@ -109,7 +109,7 @@ const fi = {
       ctaBtn: 'Selaa klubikorttelin hotelleja →',
     },
     aurora: {
-      seoTitle: 'Revontuli- ja jääbaarit, Suomen Lappi',
+      seoTitle: 'Revontuli- ja jääbaarit Suomen Lapissa',
       seoDesc: 'Lasikattoiset iglubaarit, revontuli-ikkunaiset cocktail-huoneet ja LumiLinnan jääbaari. Kuusi käsin valittua revontulijuomakohdetta Saariselältä Kemiin.',
       heroEyebrow: '6 käsin valittua paikkaa',
       heroTitle: 'Revontuli- ja jääbaarit',
@@ -134,8 +134,8 @@ const fi = {
       ctaBtn: 'Selaa revontulimajoitusta →',
     },
     events: {
-      seoTitle: 'Tapahtumakalenteri 2026, Lappi ja pohjoinen',
-      seoDesc: '20 keskeistä 2026-yöelämätapahtumaa Lapissa ja lähipohjoisessa. Oulu Euroopan kulttuuripääkaupunki, Keskiyön auringon filmifestivaali, FIS-maailmancup, Qstock, Air Guitar.',
+      seoTitle: 'Tapahtumakalenteri: Lappi ja pohjoinen',
+      seoDesc: 'Kuukausi kuukaudelta Oulun kulttuuripääkaupunkivuoden läpi: Keskiyön auringon filmifestivaali, Qstock, ilmakitaran MM, FIS-viikonloput ja mistä liput saa.',
       heroEyebrow: '20 keskeistä viikonloppua',
       heroTitle: 'Tapahtumakalenteri 2026',
       heroSub: 'Kaksikymmentä keskeistä viikonloppua. Yksi Euroopan kulttuuripääkaupunki.',
@@ -156,7 +156,7 @@ const fi = {
       ticketsCta: 'Avaa Ticketmaster Suomi',
     },
     photo: {
-      seoTitle: 'Yövalokuvaus Suomen Lapissa, asetukset, paikat, luvat',
+      seoTitle: 'Yövalokuvaus Suomen Lapissa',
       seoDesc: 'Kuinka kuvata Lappia pimeällä. Revontulten asetukset, iglubaarin sekavalo, klubikuvaus, keskiyön aurinko. Paikat, jotka antavat kuvausluvan.',
       heroEyebrow: 'Asetukset · paikat · etiketti',
       heroTitle: 'Yövalokuvaus',
@@ -184,8 +184,8 @@ const fi = {
       gygBody: 'Ammattioppaita kameroineen ja jalustoineen sekä lämmin keitto. Useimmat retket sisältävät kuvaoikeudet ja paikan päällä tehtävät editoinnit.',
     },
     summer: {
-      seoTitle: 'Lapin kesäyöt, keskiyön auringon ikkuna 2026',
-      seoDesc: '32 päivää katkeamatonta päivänvaloa: 6.6.–7.7. Keskiyön auringon filmifestivaali, Qstock, Elojazz, Air Guitar, juhannuskokot. Lapin kesäskene huipussaan.',
+      seoTitle: 'Lapin kesäyöt ja keskiyön aurinko',
+      seoDesc: '32 päivää ilman auringonlaskua: järvisaunat keskiyöllä, terassit auki kolmeen päivänvalossa ja kahdeksan festivaalia Sodankylän elokuvaviikosta Qstockiin.',
       badge: '6.6.–7.7.2026 · 32 päivää',
       pillar: 'Pilari 05 / Kesäyöt',
       h1: 'Se toinen Lappi.',
@@ -237,8 +237,8 @@ const fi = {
       stayBtn: 'Selaa kesämajoitusta →',
     },
     tips: {
-      seoTitle: 'Vinkit ja paikalliset säännöt, Lapin yöelämä',
-      seoDesc: 'Seitsemän asiaa, joita kukaan ei kerro Lapin yöelämästä, viimeinen tilaus, taksinumerot, salmiakkishotit, sekä neljä Suomen alkoholilakia.',
+      seoTitle: 'Vinkit ja paikalliset säännöt Lapin iltaan',
+      seoDesc: 'Seitsemän tapaa, jotka erottavat paikallisen turistista: viimeinen tilaus 03:30, tallennettava taksinumero, salmiakkishotin rituaali ja neljä Suomen lakia.',
       heroEyebrow: 'Toimituksen poiminta',
       heroTitle: 'Asioita, joita kukaan ei kerro.',
       heroSub: 'Seitsemän tapaa, jotka erottavat paikalliset turisteista, sekä neljä lakia, jotka muuttavat hyvän illan ongelmaksi.',

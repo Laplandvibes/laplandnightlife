@@ -18,8 +18,8 @@ const fr = {
   },
   home: {
     ...en.home,
-    seoTitle: 'Vie nocturne Laponie 2026, bars, clubs, pubs aurore',
-    seoDesc: 'Vie nocturne en Laponie 2026, 14 villes du Nord, 40+ clubs vérifiés, bars aurore, bars de glace, live, vrais prix. Hullu Poro Areena, Igloo Bar Kakslauttanen.',
+    seoTitle: 'Nuits de Laponie : bars, clubs et soleil de minuit',
+    seoDesc: "De la salle de 1 700 places du Hullu Poro à l'igloo-bar au toit de verre de Saariselkä : bars, clubs et événements dans 14 villes du Nord finlandais.",
     faq1Q: 'Où se trouve la plus grande discothèque de Laponie finlandaise ?',
     faq1A: 'Hullu Poro Areena à Levi : 1 700 places, 10 bars, 2 étages. Ouvert mer.–sam. en saison de ski.',
     faq2Q: 'Peut-on voir les aurores depuis un bar en Laponie ?',
@@ -89,8 +89,8 @@ const fr = {
   },
   cities: {
     ...en.cities,
-    seoTitle: 'Les 14 villes de la nuit, Laponie et alentours',
-    seoDesc: 'De la rue aux 8 clubs de Rotuaari à Oulu aux 3 300 habitants de Salla. Chaque ville de Laponie finlandaise et de ses environs revendiquant une vie nocturne, classée honnêtement.',
+    seoTitle: 'Les 14 villes : la nuit en Laponie et alentours',
+    seoDesc: "Quatorze villes, cinq genres de nuit : de la rue Rotuaari d'Oulu et ses huit adresses à l'unique piste de Salla. Chaque ville, classée honnêtement.",
     heroEyebrow: 'Destinations',
     heroH: 'Les 14 villes',
     heroBody: 'De la rue de 8 clubs de Rotuaari à Oulu aux 3 300 habitants de Salla et sa piste de ski. Chaque ville de Laponie et de ses environs à prétention nocturne, classée honnêtement.',
@@ -98,8 +98,8 @@ const fr = {
   },
   nightclubs: {
     ...en.nightclubs,
-    seoTitle: 'Discothèques & concerts live, Laponie et alentours',
-    seoDesc: '40+ discothèques et salles de concert en Laponie et alentours. Hullu Poro Areena (1 700 places), Roy Club et la rue de Rotuaari à Oulu.',
+    seoTitle: 'Discothèques et concerts en Laponie et alentours',
+    seoDesc: "Quatre niveaux de sortie dans le Nord : la salle de 1 700 places du Hullu Poro Areena à Levi, les circuits d'Oulu et Rovaniemi et les bars d'hôtel.",
     heroEyebrow: '40+ adresses vérifiées',
     heroTitle: 'Discothèques & concerts',
     heroSub: 'De 1 700 places à 250 et la file à l\'entrée.',
@@ -119,7 +119,7 @@ const fr = {
   },
   aurora: {
     ...en.aurora,
-    seoTitle: 'Bars aurores & bars de glace, Laponie finlandaise',
+    seoTitle: 'Bars aurores et bars de glace en Laponie',
     seoDesc: 'Bars iglous au toit en verre, salons à cocktails avec fenêtre aurores, et le bar de glace du SnowCastle. Six adresses vérifiées de Saariselkä à Kemi.',
     heroEyebrow: '6 adresses vérifiées',
     heroTitle: 'Bars aurores & bars de glace',
@@ -145,8 +145,8 @@ const fr = {
   },
   events: {
     ...en.events,
-    seoTitle: 'Calendrier des événements 2026, Nuits laponnes',
-    seoDesc: '20 week-ends phares en Laponie finlandaise en 2026. Oulu Capitale européenne de la culture, Festival du film sous le soleil de minuit, Coupe du monde FIS.',
+    seoTitle: 'Calendrier des événements : Laponie et alentours',
+    seoDesc: "Mois par mois dans l'année d'Oulu capitale de la culture : Festival du film du soleil de minuit, Qstock, mondiaux d'air guitar, week-ends FIS et billets.",
     heroEyebrow: '20 week-ends phares',
     heroTitle: 'Calendrier 2026',
     heroSub: 'Vingt week-ends phares. Une Capitale européenne de la culture.',
@@ -168,7 +168,7 @@ const fr = {
   },
   photo: {
     ...en.photo,
-    seoTitle: 'Photographie de nuit en Laponie, Réglages et lieux',
+    seoTitle: 'Photographie de nuit en Laponie finlandaise',
     seoDesc: 'Comment shooter la Laponie après la tombée du jour. Réglages aurores, lumière mixte dans un bar iglou, photo de club et soleil de minuit.',
     heroEyebrow: 'Réglages · lieux · étiquette',
     heroTitle: 'Photographie nocturne',
@@ -197,8 +197,8 @@ const fr = {
   },
   summer: {
     ...en.summer,
-    seoTitle: 'Nuits d\'été en Laponie, Soleil de minuit 2026',
-    seoDesc: '32 jours de lumière ininterrompue : du 6 juin au 7 juillet. Festival du film sous le soleil de minuit, Qstock, Elojazz, Air Guitar, feux de la Saint-Jean.',
+    seoTitle: 'Nuits d\'été et soleil de minuit en Laponie',
+    seoDesc: '32 jours sans coucher de soleil : saunas au bord du lac à minuit, terrasses ouvertes à 03:00 en plein jour et huit festivals, de Sodankylä à Qstock.',
     badge: '6 juin – 7 juillet 2026 · 32 jours',
     pillar: 'Pillar 05 / Nuits d\'été',
     h1: 'L\'autre Laponie.',
@@ -251,8 +251,8 @@ const fr = {
   },
   tips: {
     ...en.tips,
-    seoTitle: 'Conseils & règles locales, Nuits laponnes',
-    seoDesc: 'Sept choses que personne ne raconte sur les nuits laponnes, dernière commande, numéros de taxi, shots de salmiakki, plus les lois finlandaises sur l\'alcool.',
+    seoTitle: 'Conseils et règles locales pour sortir en Laponie',
+    seoDesc: 'Sept habitudes qui séparent les locaux des touristes : dernière commande à 03:30, le numéro de taxi, le rite du salmiakki et quatre lois finlandaises.',
     heroEyebrow: 'Le carnet de la rédac',
     heroTitle: 'Les choses que personne ne dit.',
     heroSub: 'Les sept habitudes qui séparent les locaux des touristes, plus les quatre lois qui transforment une bonne soirée en problème.',

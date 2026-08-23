@@ -13,8 +13,8 @@ const de = {
       menu: 'Menü',
     },
     home: {
-      seoTitle: 'LaplandNightlife, Lapplands Nachtleben & Mitternachtssonne',
-      seoDesc: 'Redaktioneller Guide zum Nachtleben in Finnisch-Lappland. 14 Städte im Norden, über 50 Nachtclubs, Polarlicht-Bars, Live-Musik und Oulus Kulturhauptstadt-Events 2026.',
+      seoTitle: 'Lapplands Nachtleben: Bars, Clubs & Mitternachtssonne',
+      seoDesc: 'Von Hullu Poros Tanzfläche für 1 700 Gäste bis zur Iglu-Bar mit Glasdach in Saariselkä: Bars, Clubs und Events in 14 Städten des finnischen Nordens.',
       faq1Q: 'Wo befindet sich der größte Nachtclub in Finnisch-Lappland?',
       faq1A: 'Das Hullu Poro Areena in Levi: 1 700 Plätze, 10 Bars, 2 Etagen. Geöffnet Mi–Sa in der Skisaison.',
       faq2Q: 'Kann man die Polarlichter aus einer Bar in Lappland sehen?',
@@ -77,8 +77,8 @@ const de = {
       },
     },
     cities: {
-      seoTitle: 'Alle 14 Nachtleben-Städte, Lappland und der Norden',
-      seoDesc: 'Vom 8-Club-Boulevard Rotuaari in Oulu bis zu Sallas 3 300 Einwohnern. Jede Stadt in und um Finnisch-Lappland mit Nachtleben-Anspruch, ehrlich eingeordnet.',
+      seoTitle: 'Alle 14 Städte: Nachtleben in Lappland & im Norden',
+      seoDesc: 'Vierzehn Orte, fünf Arten von Nacht: vom Rotuaari-Boulevard mit acht Adressen in Oulu bis zu Sallas einziger Piste. Jeder Ort ehrlich eingeordnet.',
       heroEyebrow: 'Reiseziele',
       heroH: 'Alle 14 Städte',
       heroBody: 'Vom 8-Club-Boulevard Rotuaari in Oulu bis zu Sallas 3 300 Einwohnern und einer einzigen Skipiste. Jede Stadt in und um Lappland mit Nachtleben-Anspruch, ehrlich eingeordnet.',
@@ -89,8 +89,8 @@ const de = {
       leadP3: 'Wo ein Ort kein Nachtleben hat, das den Namen verdient, steht genau das auf seiner Seite. Deshalb stehen hier alle vierzehn und nicht die acht, mit denen sich besser argumentieren ließe.',
     },
     nightclubs: {
-      seoTitle: 'Nachtclubs & Live-Musik, Lappland und der Norden',
-      seoDesc: 'Über 40 Nachtclubs und Live-Musik-Venues in und um Finnisch-Lappland. Hullu Poro Areena (1 700 Plätze), Roy Club und der Rotuaari-Boulevard in Oulu.',
+      seoTitle: 'Nachtclubs & Live-Musik in Lappland & im Norden',
+      seoDesc: 'Vier Stufen des Ausgehens im Norden: die Hullu Poro Areena mit 1 700 Plätzen in Levi, die Club-Runden von Oulu und Rovaniemi und die Hotelbar-Resorts.',
       heroEyebrow: '40+ handverlesene Locations',
       heroTitle: 'Nachtclubs & Live-Musik',
       heroSub: 'Von 1 700 Plätzen bis 250 und die Schlange an der Tür.',
@@ -109,7 +109,7 @@ const de = {
       ctaBtn: 'Hotels im Clubviertel ansehen →',
     },
     aurora: {
-      seoTitle: 'Polarlicht-Bars & Eisbars, Finnisch-Lappland',
+      seoTitle: 'Polarlicht-Bars & Eisbars in Finnisch-Lappland',
       seoDesc: 'Iglu-Bars mit Glasdach, Cocktailräume mit Polarlicht-Fenster und die Eisbar des SnowCastle. Sechs handverlesene Polarlicht-Lokale von Saariselkä bis Kemi.',
       heroEyebrow: '6 handverlesene Locations',
       heroTitle: 'Polarlicht- & Eisbars',
@@ -134,8 +134,8 @@ const de = {
       ctaBtn: 'Polarlicht-Unterkünfte ansehen →',
     },
     events: {
-      seoTitle: 'Veranstaltungskalender 2026, Lappland und der Norden',
-      seoDesc: '20 prägende Nachtleben-Veranstaltungen 2026 in und um Finnisch-Lappland. Oulu, Kulturhauptstadt Europas, Filmfestival der Mitternachtssonne, FIS-Weltcup, Qstock.',
+      seoTitle: 'Veranstaltungskalender: Lappland & der Norden',
+      seoDesc: 'Monat für Monat durch Oulus Kulturhauptstadt-Jahr: Filmfestival der Mitternachtssonne, Qstock, Luftgitarren-WM, FIS-Weltcup-Wochenenden und Ticket-Infos.',
       heroEyebrow: '20 prägende Wochenenden',
       heroTitle: 'Veranstaltungskalender 2026',
       heroSub: 'Zwanzig prägende Wochenenden. Eine Kulturhauptstadt Europas.',
@@ -156,7 +156,7 @@ const de = {
       ticketsCta: 'Ticketmaster Finnland öffnen',
     },
     photo: {
-      seoTitle: 'Nachtfotografie in Finnisch-Lappland, Tipps & Locations',
+      seoTitle: 'Nachtfotografie in Finnisch-Lappland',
       seoDesc: 'So fotografieren Sie Lappland nach Einbruch der Dunkelheit. Polarlicht-Einstellungen, Iglu-Bar-Mischlicht, Clubfotografie und Mitternachtssonne.',
       heroEyebrow: 'Einstellungen · Locations · Etikette',
       heroTitle: 'Nachtfotografie',
@@ -184,8 +184,8 @@ const de = {
       gygBody: 'Profi-Guides mit Kameras + Stativen + warmer Suppe. Die meisten Touren beinhalten Bildrechte und Vor-Ort-Bearbeitung.',
     },
     summer: {
-      seoTitle: 'Sommernächte in Finnisch-Lappland, Mitternachtssonne 2026',
-      seoDesc: '32 Tage ununterbrochenes Tageslicht: 6. Juni – 7. Juli. Filmfestival der Mitternachtssonne, Qstock, Elojazz, Luftgitarre, Juhannus-Lagerfeuer.',
+      seoTitle: 'Sommernächte & Mitternachtssonne in Lappland',
+      seoDesc: '32 Tage ohne Sonnenuntergang: Seesaunas um Mitternacht, Terrassen bis 03:00 Uhr bei Tageslicht und acht Festivals von Sodankyläs Filmwoche bis Qstock.',
       badge: '6. Jun – 7. Jul 2026 · 32 Tage',
       pillar: 'Säule 05 / Sommernächte',
       h1: 'Das andere Lappland.',
@@ -237,8 +237,8 @@ const de = {
       stayBtn: 'Sommer-Unterkünfte ansehen →',
     },
     tips: {
-      seoTitle: 'Tipps & lokale Regeln, Lapplands Nachtleben',
-      seoDesc: 'Sieben Dinge, die Ihnen niemand über Lapplands Nachtleben verrät, letzte Bestellung, Taxinummern, Salmiakki-Shots, plus die vier finnischen Alkoholgesetze.',
+      seoTitle: 'Tipps & lokale Regeln für Lapplands Nächte',
+      seoDesc: 'Sieben Gewohnheiten, die Einheimische von Touristen trennen: letzte Bestellung um 03:30, die Taxinummer, der Salmiakki-Shot und vier finnische Gesetze.',
       heroEyebrow: 'Redaktionelle Hinweise',
       heroTitle: 'Dinge, die Ihnen niemand sagt.',
       heroSub: 'Die sieben Gewohnheiten, die Einheimische von Touristen unterscheiden, plus die vier Gesetze, die aus einem guten Abend ein Problem machen.',
