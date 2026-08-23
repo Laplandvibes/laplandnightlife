@@ -3,7 +3,6 @@ import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo'
 import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
-import AirportRideAd from '../components/AirportRideAd';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -153,7 +152,6 @@ export default function Nightclubs() {
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{RIDE_LEAD[lang].eyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight" style={{ textWrap: 'balance' }}>{RIDE_LEAD[lang].h}</h2>
           </div>
-          <AirportRideAd sid="nightclubs_airport_ride" />
         </div>
       </section>
 
