@@ -56,7 +56,7 @@ export const CITY_QUICK_FACTS: Record<string, { label: string; value: string }[]
     { label: 'Population', value: '6 800' },
     { label: 'Closest airport', value: 'IVL · 40 min' },
     { label: 'Last call', value: '01:00' },
-    { label: 'Best season', value: 'Late Aug (Ijahis Idja) · Jan (Skábmagovat)' },
+    { label: 'Best season', value: 'Mid-Aug (Ijahis Idja) · Jan (Skábmagovat)' },
   ],
   kemi: [
     { label: 'Population', value: '20 800' },

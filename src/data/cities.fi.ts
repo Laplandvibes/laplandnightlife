@@ -118,7 +118,7 @@ const overlay: Record<string, CityOverlay> = {
       'Population': { label: 'Asukasluku', value: '6 800' },
       'Closest airport': { label: 'Lähin lentoasema', value: 'IVL · 40 min' },
       'Last call': { label: 'Anniskelu loppuu', value: '01:00' },
-      'Best season': { label: 'Paras kausi', value: 'Elokuun loppu (Ijahis Idja) · tammikuu (Skábmagovat)' },
+      'Best season': { label: 'Paras kausi', value: 'Elokuun puoliväli (Ijahis Idja) · tammikuu (Skábmagovat)' },
     },
   },
   kemi: {

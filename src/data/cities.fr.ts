@@ -118,7 +118,7 @@ const overlay: Record<string, CityOverlay> = {
       'Population': { label: 'Population', value: '6 800' },
       'Closest airport': { label: 'Aéroport le plus proche', value: 'IVL · 40 min' },
       'Last call': { label: 'Dernier service', value: '01:00' },
-      'Best season': { label: 'Meilleure saison', value: 'Fin août (Ijahis Idja) · Jan (Skábmagovat)' },
+      'Best season': { label: 'Meilleure saison', value: 'Mi-août (Ijahis Idja) · Jan (Skábmagovat)' },
     },
   },
   kemi: {

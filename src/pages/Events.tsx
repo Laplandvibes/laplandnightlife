@@ -10,14 +10,24 @@ import { COPY } from '../locales/copy';
 type Item = { name: string; date: string; city: string; body: string };
 type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] };
 
-/* Qstock attendance = 40 000 over two days (2026 edition, sold out). Source is the
-   operator's own post-festival report, 26.7.2026: "Tapahtuma keräsi yhteensä
-   40 000 kävijää kahden päivän aikana."
+/* Every date here comes from the organiser's own site — no "Late August" guesses.
+   Until 2026-08-24 the vague ones were wrong by up to three months: Jutajaiset sat
+   in the July block but runs in October, and Simerock was billed "Late August"
+   when it had already happened on 7–8 August.
+     Qstock      24–25 Jul  qstock.fi (attendance below)
+     Elojazz     30 Jul–2 Aug  elojazz.com "Vuonna 2026 Elojazz järjestetään 30.7.–2.8.2026."
+     Simerock    7–8 Aug    simerock.com "Rovaniemen Simerock, Rovaniemellä 7.-8.8. 2026"
+     Ijahis Idja 14–15 Aug  ijahisidja.fi
+     Air Guitar  28–29 Aug  airguitarworldchampionships.com (event runs 26–29 Aug)
+     Jutajaiset  22–25 Oct  jutajaiset.nuorisoseurat.fi "järjestetään Rovaniemellä 22.–25.10.2026"
+   Qstock attendance = 40 000 over two days (2026 edition, sold out), from the
+   operator's post-festival report 26.7.2026: "Tapahtuma keräsi yhteensä 40 000
+   kävijää kahden päivän aikana."
    https://qstock.fi/uutiset/kiitos-40-000-kertaa-loppuunmyyty-qstock-sujui-mallikkaasti/
    Third-party write-ups quote other totals for other years; take the figure from
-   qstock.fi for the edition being described. The same number and duration must hold
-   in copy.*.ts home.events.e3Desc and summer.e5Body across all 12 languages — ja/zh
-   carried 60 000 and fi carried "kolmen päivän" until 2026-08-24. */
+   qstock.fi for the edition being described. Dates and the attendance figure must
+   stay in sync with copy.*.ts summer.e4–e8When/e8Body and home.events.e3Desc
+   across all 12 languages. */
 const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [
@@ -43,13 +53,15 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock Festival 2026', date: 'Jul 24–25, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 40 000 visitors, two days, Kuusisaari park." },
-      { name: 'Jutajaiset Folklore Festival', date: 'Mid-July', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.' },
-      { name: 'Elojazz Festival', date: 'Late July', city: 'Oulu', body: 'Late-July jazz week: outdoor stages around Rotuaari.' },
+      { name: 'Elojazz Festival', date: 'Jul 30 – Aug 2, 2026', city: 'Oulu', body: 'Four-day jazz week: outdoor stages around Rotuaari, main concerts at Tarkastamo.' },
     ]},
     { monthKey: 'August', items: [
-      { name: 'Air Guitar World Championships Final', date: 'Late August', city: 'Oulu', body: 'The actual world finals. 40 countries, packed Rotuaari park, locals from age 8 to 80.' },
-      { name: 'Ijahis Idja Sámi Music Festival', date: 'Mid-August', city: 'Inari', body: 'Indigenous music festival under the late-summer light. The closest thing to a club night Inari has.' },
-      { name: 'Simerock', date: 'Late August', city: 'Rovaniemi', body: 'End-of-summer rock festival. Local Lapland crowd, smaller than Qstock but heavier.' },
+      { name: 'Simerock', date: 'Aug 7–8, 2026', city: 'Rovaniemi', body: 'Early-August rock festival at Ounaspaviljonki. Local Lapland crowd, smaller than Qstock but heavier.' },
+      { name: 'Ijahis Idja Sámi Music Festival', date: 'Aug 14–15, 2026', city: 'Inari', body: 'Indigenous music festival at Sajos. The closest thing to a club night Inari has.' },
+      { name: 'Air Guitar World Championships Final', date: 'Aug 28–29, 2026', city: 'Oulu', body: 'The actual world finals at Pokkinen park. 40 countries, locals from age 8 to 80.' },
+    ]},
+    { monthKey: 'October', items: [
+      { name: 'Jutajaiset Folklore Festival', date: 'Oct 22–25, 2026', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.' },
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpine Ski World Cup', date: 'Mid-November', city: 'Levi', body: 'World Cup weekend. Hullu Poro Areena hosts after-parties; book accommodation a year ahead.' },
@@ -84,13 +96,15 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock-festivaali 2026', date: '24.–25.7.2026', city: 'Oulu', body: 'Pohjois-Suomen suurin rockfestivaali. 40 000 kävijää, kaksi päivää, Kuusisaaren puisto.' },
-      { name: 'Jutajaiset-folkloristifestivaali', date: 'Heinäkuun puoliväli', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
-      { name: 'Elojazz-festivaali', date: 'Heinäkuun loppu', city: 'Oulu', body: 'Heinäkuun lopun jazz-viikko: ulkoilmalavat Rotuaarin ympärillä.' },
+      { name: 'Elojazz-festivaali', date: '30.7.–2.8.2026', city: 'Oulu', body: 'Nelipäiväinen jazz-viikko: ulkoilmalavat Rotuaarin ympärillä, pääkonsertit Tarkastamolla.' },
     ]},
     { monthKey: 'August', items: [
-      { name: 'Ilmakitaransoiton MM-finaali', date: 'Elokuun loppu', city: 'Oulu', body: 'Varsinaiset MM-finaalit. 40 maata, täysi Rotuaarin puisto, paikalliset 8-vuotiaista 80-vuotiaisiin.' },
-      { name: 'Ijahis Idja -saamelaismusiikkifestivaali', date: 'Elokuun puoliväli', city: 'Inari', body: 'Alkuperäiskansojen musiikkifestivaali loppukesän valossa. Lähimpänä klubi-iltaa, mitä Inarissa tarjotaan.' },
-      { name: 'Simerock', date: 'Elokuun loppu', city: 'Rovaniemi', body: 'Loppukesän rockfestivaali. Paikallinen Lappi-yleisö, Qstockia pienempi mutta raskaampi.' },
+      { name: 'Simerock', date: '7.–8.8.2026', city: 'Rovaniemi', body: 'Elokuun alun rockfestivaali Ounaspaviljongilla. Paikallinen Lappi-yleisö, Qstockia pienempi mutta raskaampi.' },
+      { name: 'Ijahis Idja -saamelaismusiikkifestivaali', date: '14.–15.8.2026', city: 'Inari', body: 'Alkuperäiskansojen musiikkifestivaali Sajoksessa. Lähimpänä klubi-iltaa, mitä Inarissa tarjotaan.' },
+      { name: 'Ilmakitaransoiton MM-finaali', date: '28.–29.8.2026', city: 'Oulu', body: 'Varsinaiset MM-finaalit Pokkisen puistossa. 40 maata, paikalliset 8-vuotiaista 80-vuotiaisiin.' },
+    ]},
+    { monthKey: 'October', items: [
+      { name: 'Jutajaiset-folkloristifestivaali', date: '22.–25.10.2026', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpine Ski World Cup', date: 'Marraskuun puoliväli', city: 'Levi', body: 'Maailmancup-viikonloppu. Hullu Poro Areena isännöi jatkot; varaa majoitus vuotta etukäteen.' },
@@ -125,13 +139,15 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock Festival 2026', date: '24.–25. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 40 000 Besucher, zwei Tage, Kuusisaari-Park.' },
-      { name: 'Jutajaiset Folklorefestival', date: 'Mitte Juli', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
-      { name: 'Elojazz-Festival', date: 'Ende Juli', city: 'Oulu', body: 'Jazzwoche Ende Juli: Open-Air-Bühnen rund um den Rotuaari.' },
+      { name: 'Elojazz-Festival', date: '30. Jul – 2. Aug 2026', city: 'Oulu', body: 'Viertägige Jazzwoche: Open-Air-Bühnen rund um den Rotuaari, Hauptkonzerte im Tarkastamo.' },
     ]},
     { monthKey: 'August', items: [
-      { name: 'Luftgitarren-WM-Finale', date: 'Ende August', city: 'Oulu', body: 'Das eigentliche Weltfinale. 40 Nationen, voll besetzter Rotuaari-Park, Einheimische zwischen 8 und 80.' },
-      { name: 'Ijahis Idja: Samisches Musikfestival', date: 'Mitte August', city: 'Inari', body: 'Indigenes Musikfestival im Spätsommerlicht. Das, was einem Clubabend in Inari am nächsten kommt.' },
-      { name: 'Simerock', date: 'Ende August', city: 'Rovaniemi', body: 'Spätsommer-Rockfestival. Lokales Lappland-Publikum, kleiner als Qstock, aber härter.' },
+      { name: 'Simerock', date: '7.–8. Aug 2026', city: 'Rovaniemi', body: 'Rockfestival Anfang August im Ounaspaviljonki. Lokales Lappland-Publikum, kleiner als Qstock, aber härter.' },
+      { name: 'Ijahis Idja: Samisches Musikfestival', date: '14.–15. Aug 2026', city: 'Inari', body: 'Indigenes Musikfestival im Sajos. Das, was einem Clubabend in Inari am nächsten kommt.' },
+      { name: 'Luftgitarren-WM-Finale', date: '28.–29. Aug 2026', city: 'Oulu', body: 'Das eigentliche Weltfinale im Pokkinen-Park. 40 Nationen, Einheimische zwischen 8 und 80.' },
+    ]},
+    { monthKey: 'October', items: [
+      { name: 'Jutajaiset Folklorefestival', date: '22.–25. Okt 2026', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
     ]},
     { monthKey: 'November', items: [
       { name: 'Levi FIS Alpiner Ski-Weltcup', date: 'Mitte November', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
