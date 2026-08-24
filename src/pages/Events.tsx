@@ -10,6 +10,14 @@ import { COPY } from '../locales/copy';
 type Item = { name: string; date: string; city: string; body: string };
 type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] };
 
+/* Qstock attendance = 40 000 over two days (2026 edition, sold out). Source is the
+   operator's own post-festival report, 26.7.2026: "Tapahtuma keräsi yhteensä
+   40 000 kävijää kahden päivän aikana."
+   https://qstock.fi/uutiset/kiitos-40-000-kertaa-loppuunmyyty-qstock-sujui-mallikkaasti/
+   Third-party write-ups quote other totals for other years; take the figure from
+   qstock.fi for the edition being described. The same number and duration must hold
+   in copy.*.ts home.events.e3Desc and summer.e5Body across all 12 languages — ja/zh
+   carried 60 000 and fi carried "kolmen päivän" until 2026-08-24. */
 const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [

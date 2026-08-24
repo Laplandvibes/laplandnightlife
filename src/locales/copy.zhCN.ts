@@ -69,7 +69,7 @@ const zhCN = {
       h: '不容错过的夜晚',
       e1Name: 'Kemi SnowCastle Winter Park', e1When: '1月中旬–4月', e1Desc: '冰吧、雪砌的 SnowChapel 礼拜堂与 SnowHotel，自 1996 年起每年冬天以全新设计重建。冰杯伏特加；全年开放的 SnowExperience365 覆盖淡季。',
       e2Name: '午夜阳光电影节', e2When: '2026 年 6 月 10–14 日', e2Desc: '索丹屈莱，80 多部电影,木教堂凌晨 3 点的放映是经典镜头。',
-      e3Name: 'Qstock 音乐节 2026', e3When: '2026 年 7 月 24–25 日', e3Desc: '奥卢规模最大的摇滚音乐节。周末共吸引 60,000 名访客。',
+      e3Name: 'Qstock 音乐节 2026', e3When: '2026 年 7 月 24–25 日', e3Desc: '奥卢规模最大的摇滚音乐节。周末共吸引 40,000 名访客。',
       full: '完整 2026 年日历 →',
     },
     tips: {
@@ -217,7 +217,7 @@ const zhCN = {
     e2H: '午夜阳光电影节', e2When: '2026 年 6 月 10–14 日', e2Body: '索丹屈莱放映 80 多部电影。木教堂凌晨 3 点的放映几近神话。志愿者队伍是体验的一半。', e2Badge: '文化',
     e3H: 'Juhannus / 仲夏节', e3When: '2026 年 6 月 19–21 日', e3Body: '湖边篝火。午夜桑拿。18 °C 的湖中泳。城市清空，本地人前往小屋。', e3Badge: '国家',
     e4H: '空气吉他世锦赛', e4When: '8 月下旬', e4Body: '决赛在奥卢。40 国选手、免费户外舞台、人挤人的 Rotuaari。世界上最荒诞的严肃运动。', e4Badge: '奥卢',
-    e5H: 'Qstock 音乐节', e5When: '2026 年 7 月 24–25 日', e5Body: '北芬兰规模最大的摇滚音乐节。两天 60,000 人。Kuusisaari 公园。', e5Badge: '摇滚',
+    e5H: 'Qstock 音乐节', e5When: '2026 年 7 月 24–25 日', e5Body: '北芬兰规模最大的摇滚音乐节。两天 40,000 人。Kuusisaari 公园。', e5Badge: '摇滚',
     e6H: 'Elojazz', e6When: '7 月下旬', e6Body: '7 月下旬爵士周，奥卢 Rotuaari 周边的户外舞台。主舞台艺人在金色光线中演出至凌晨 2 点。', e6Badge: '爵士',
     e7H: 'Ijahis Idja', e7When: '8 月中旬', e7Body: '伊纳里的萨米音乐节,沐浴在夏末光线中。原住民艺人,通宵 joik 演唱。', e7Badge: '萨米',
     e8H: 'Simerock', e8When: '8 月下旬', e8Body: '罗瓦涅米的夏末摇滚音乐节。本地观众,阵容比 Qstock 更重型。为整季收尾。', e8Badge: '摇滚',

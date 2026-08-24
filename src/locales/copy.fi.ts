@@ -215,7 +215,7 @@ const fi = {
       e2H: 'Keskiyön auringon filmifestivaali', e2When: '10.–14.6.2026', e2Body: '80+ elokuvaa Sodankylässä. 03:00-näytös puukirkossa on legendaarinen. Vapaaehtoisjoukko on puolet kokemuksesta.', e2Badge: 'KULTTUURI',
       e3H: 'Juhannus', e3When: '19.–21.6.2026', e3Body: 'Kokot järvenrannoilla. Sauna keskiyöllä. Järviuinnit 18 °C:ssa. Kaupungit tyhjenevät, paikalliset lähtevät mökeille.', e3Badge: 'KANSALLINEN',
       e4H: 'Air Guitar World Championships', e4When: 'Elokuun loppu', e4Body: 'Oulun finaalit. 40 kansallisuutta, ilmainen ulkoilmalava, täysi Rotuaari. Maailman absurdein vakavasti otettava urheilu.', e4Badge: 'OULU',
-      e5H: 'Qstock-festivaali', e5When: '24.–25.7.2026', e5Body: 'Pohjois-Suomen suurin rockfestivaali. 40 000 kävijää kolmen päivän aikana. Kuusisaaren puisto.', e5Badge: 'ROCK',
+      e5H: 'Qstock-festivaali', e5When: '24.–25.7.2026', e5Body: 'Pohjois-Suomen suurin rockfestivaali. 40 000 kävijää kahden päivän aikana. Kuusisaaren puisto.', e5Badge: 'ROCK',
       e6H: 'Elojazz', e6When: 'Heinäkuun loppu', e6Body: 'Heinäkuun lopun jazz-viikko, ulkoilmalavat Oulun Rotuaarilla. Pääesiintyjät soittavat 02:00 saakka kultaisessa valossa.', e6Badge: 'JAZZ',
       e7H: 'Ijahis Idja', e7When: 'Elokuun puoliväli', e7Body: 'Inarin saamelaismusiikkifestivaali loppukesän valossa. Alkuperäiskansojen taiteilijoita, koko yön joikusessioita.', e7Badge: 'SAAMI',
       e8H: 'Simerock', e8When: 'Elokuun loppu', e8Body: 'Rovaniemen loppukesän rockfestivaali. Paikallinen yleisö, raskaampi ohjelma kuin Qstockilla. Päättää kauden.', e8Badge: 'ROCK',

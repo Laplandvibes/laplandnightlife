@@ -228,7 +228,7 @@ const ko = {
     e2H: '백야 영화제', e2When: '2026년 6월 10–14일', e2Body: 'Sodankylä에서 80편 이상. 목조 교회에서의 03:00 상영은 전설적입니다. 자원봉사 크루로 일하는 것도 체험의 절반입니다.', e2Badge: '문화',
     e3H: 'Juhannus / 하지절', e3When: '2026년 6월 19–21일', e3Body: '호숫가 모닥불. 자정의 사우나. 18°C의 호수에서 멱감기. 도시는 비고, 현지인들은 오두막으로 떠납니다.', e3Badge: '국경일',
     e4H: '에어 기타 세계 선수권', e4When: '8월 말', e4Body: 'Oulu 결승. 40개국, 무료 야외 무대, 인파로 가득한 Rotuaari. 세상에서 가장 우스꽝스럽게 진지한 스포츠.', e4Badge: '오울루',
-    e5H: 'Qstock 페스티벌', e5When: '2026년 7월 24–25일', e5Body: '북부 라플란드 최대 록 페스티벌. 이틀간 4만 명. Kuusisaari 공원.', e5Badge: '록',
+    e5H: 'Qstock 페스티벌', e5When: '2026년 7월 24–25일', e5Body: '북부 핀란드 최대 록 페스티벌. 이틀간 4만 명. Kuusisaari 공원.', e5Badge: '록',
     e6H: 'Elojazz', e6When: '7월 말', e6Body: '7월 말 재즈 주간, Oulu Rotuaari 주변 야외 무대. 헤드라이너는 황금빛 속에서 02:00까지 공연합니다.', e6Badge: '재즈',
     e7H: 'Ijahis Idja', e7When: '8월 중순', e7Body: 'Inari의 사미 음악 페스티벌, 늦여름 빛 아래. 원주민 아티스트들과 밤새 이어지는 요이크(joik) 세션.', e7Badge: '사미',
     e8H: 'Simerock', e8When: '8월 말', e8Body: 'Rovaniemi의 여름 마감 록 페스티벌. 현지 관객, Qstock보다 묵직한 라인업. 시즌을 닫습니다.', e8Badge: '록',
