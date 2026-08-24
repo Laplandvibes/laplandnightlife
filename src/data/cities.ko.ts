@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Inari 지자체',
     blurb: 'Hotel Ivalo의 로비 바 + Hotel Kultahippu 펍.',
-    pageTagline: '클럽이 있는 최북단 공항.',
+    pageTagline: '최북단 공항, 밤은 호텔 바뿐.',
     intro: 'Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문이다. 마을 자체는 인구 4,000명.Hotel Ivalo에는 로비 바와 라핀 위 레스토랑이 있습니다. Hotel Kultahippu에는 마을 유일의 제대로 된 펍이 있다. 그 외엔 호텔 바들과 맥주를 파는 주유소 키오스크 하나가 전부다.',
     venues: {
       'Hotel Kultahippu Pub': { type: '펍', note: '매일 영업. 현지인의 퇴근 후 장소.' },

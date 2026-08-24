@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import { heroHomeSeasonal, isSummerSeason } from '../data/images';
+import { VENUE_COUNT } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -68,7 +69,7 @@ export default function Hero() {
           className="text-center text-xs text-white uppercase tracking-[0.22em] font-bold"
           style={SHADOW}
         >
-          {c.meta}
+          {c.meta(String(VENUE_COUNT))}
         </div>
 
         <a

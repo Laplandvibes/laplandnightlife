@@ -4,6 +4,7 @@ import PillarHero from '../components/PillarHero';
 import GygWidget from '../components/GygWidget';
 import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
+import { VENUE_COUNT } from '../data/cities';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { UPLIFT, type OpenKey } from '../locales/upliftI18n';
@@ -43,11 +44,12 @@ export default function Nightclubs() {
   // raw `/${lang}/…` produced double-prefixed client-side canonicals.
   const path = to('/nightclubs');
 
-  // Stat tiles — every number already lives in this page's own copy
-  // (tier1Body, heroEyebrow, tier2Body) or the home FAQ (last call 03:30).
+  // Stat tiles — 1 700 / 8 / 03:30 live in this page's own copy (tier1Body,
+  // tier2Body, home FAQ); the venue count is computed from CITIES so it can
+  // never drift from the data (same recipe as the Cities stat band).
   const stats = [
     { v: '1 700', l: u.clubStats.capacity },
-    { v: '40+', l: u.clubStats.venues },
+    { v: String(VENUE_COUNT), l: u.clubStats.venues },
     { v: '8', l: u.clubStats.strip },
     { v: '03:30', l: u.clubStats.lastCall },
   ];

@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Comune di Inari',
     blurb: 'Il lobby bar dell\'Hotel Ivalo + il pub dell\'Hotel Kultahippu.',
-    pageTagline: 'L\'aeroporto più a nord con un club.',
+    pageTagline: 'L\'aeroporto più a nord, solo bar d\'albergo.',
     intro: 'Ivalo è l\'aeroporto più a nord della Finlandia e la porta d\'accesso a Inari, Saariselkä e alla Terra dei Sámi. La cittadina conta 4.000 persone. L\'Hotel Ivalo ha un lobby bar e il ristorante Lapin Yö. L\'Hotel Kultahippu ha l\'unico vero pub del villaggio. Oltre a questo, bar d\'hotel e un chiosco di una stazione di servizio che vende birra.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Aperto tutti i giorni. Il punto di ritrovo locale del dopo-lavoro.' },

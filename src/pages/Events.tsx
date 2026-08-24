@@ -150,6 +150,11 @@ const EVENTS: Record<Lang, MonthBlock[]> = {
   sv: EVENTS_BASE.en,
 };
 
+// Real count of events on this page, derived from the EN source list so the
+// hero eyebrow can never drift from the calendar below (was a hardcoded "20"
+// while the list held 21).
+const EVENT_COUNT = EVENTS_BASE.en.reduce((n, m) => n + m.items.length, 0);
+
 export default function Events() {
   const lang = useLang();
   const to = useLocalePath();
@@ -173,7 +178,7 @@ export default function Events() {
 
       <PillarHero
         icon={Calendar}
-        eyebrow={c.heroEyebrow}
+        eyebrow={c.heroEyebrow(String(EVENT_COUNT))}
         title={c.heroTitle}
         subtitle={c.heroSub}
         intro={c.heroIntro}

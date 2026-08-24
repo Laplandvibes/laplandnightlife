@@ -1,5 +1,6 @@
 import { Hotel, Plane, Car } from 'lucide-react';
 import BookingWidget from './BookingWidget';
+import { VENUE_COUNT } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -26,7 +27,7 @@ export default function BookingSection() {
 
         <div className="mt-10 grid sm:grid-cols-3 gap-3 text-center">
           {[
-            { icon: Hotel, h: c.s1H, body: c.s1Body },
+            { icon: Hotel, h: c.s1H(String(VENUE_COUNT)), body: c.s1Body },
             { icon: Plane, h: c.s2H, body: c.s2Body },
             { icon: Car, h: c.s3H, body: c.s3Body },
           ].map((s) => (

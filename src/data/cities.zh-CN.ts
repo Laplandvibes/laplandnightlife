@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Inari 市镇',
     blurb: 'Hotel Ivalo 的大堂酒吧 + Hotel Kultahippu 酒馆。',
-    pageTagline: '最北的、带夜店的机场。',
+    pageTagline: '最北的机场，夜生活只有酒店酒吧。',
     intro: 'Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 设有大堂酒吧和 Lapin Yö 餐厅。 Hotel Kultahippu 拥有村里唯一一家像样的酒馆。除此之外，就是酒店酒吧和一家卖啤酒的加油站小卖部了。',
     venues: {
       'Hotel Kultahippu Pub': { type: '酒馆', note: '每日营业。本地人下班后的去处。' },

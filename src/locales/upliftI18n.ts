@@ -37,7 +37,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Biggest club capacity, Levi',
-      venues: 'Verified venues',
+      venues: 'Venues listed across 14 cities',
       strip: 'Venues on the 400 m Rotuaari strip',
       lastCall: 'Last call in peak season',
     },
@@ -60,7 +60,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Suurimman klubin kapasiteetti, Levi',
-      venues: 'Vahvistettua paikkaa',
+      venues: 'Listattua paikkaa 14 kaupungissa',
       strip: 'Baaria Rotuaarin 400 metrillä',
       lastCall: 'Viimeinen anniskelu huippusesongissa',
     },
@@ -83,7 +83,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Kapazität des größten Clubs, Levi',
-      venues: 'Verifizierte Locations',
+      venues: 'Gelistete Locations in 14 Städten',
       strip: 'Locations auf 400 m Rotuaari',
       lastCall: 'Letzte Runde in der Hochsaison',
     },
@@ -106,7 +106,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: '最大クラブの収容人数（レヴィ）',
-      venues: '確認済みベニュー',
+      venues: '14都市の掲載ベニュー',
       strip: 'ロトゥアーリ400mのベニュー数',
       lastCall: 'ピークシーズンのラストオーダー',
     },
@@ -129,7 +129,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Aforo del club más grande, Levi',
-      venues: 'Locales verificados',
+      venues: 'Locales listados en 14 ciudades',
       strip: 'Locales en los 400 m de Rotuaari',
       lastCall: 'Última ronda en temporada alta',
     },
@@ -152,7 +152,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Capacidade do maior clube, Levi',
-      venues: 'Locais verificados',
+      venues: 'Locais listados em 14 cidades',
       strip: 'Locais nos 400 m da Rotuaari',
       lastCall: 'Última rodada na alta temporada',
     },
@@ -175,7 +175,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: '最大夜店容量（莱维）',
-      venues: '经核实的场所',
+      venues: '14 座城市的收录场所',
       strip: '罗图阿里400米内的场所',
       lastCall: '旺季最后点单时间',
     },
@@ -198,7 +198,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: '최대 클럽 수용 인원, 레비',
-      venues: '검증된 베뉴',
+      venues: '14개 도시의 등재 베뉴',
       strip: '로투아리 400m 구간의 베뉴',
       lastCall: '성수기 라스트 콜',
     },
@@ -221,7 +221,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Capacité du plus grand club, Levi',
-      venues: 'Lieux vérifiés',
+      venues: 'Adresses répertoriées dans 14 villes',
       strip: 'Lieux sur les 400 m de Rotuaari',
       lastCall: 'Dernière commande en haute saison',
     },
@@ -244,7 +244,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Capienza del club più grande, Levi',
-      venues: 'Locali verificati',
+      venues: 'Locali elencati in 14 città',
       strip: 'Locali sui 400 m di Rotuaari',
       lastCall: 'Ultimo giro in alta stagione',
     },
@@ -267,7 +267,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Capaciteit grootste club, Levi',
-      venues: 'Geverifieerde locaties',
+      venues: 'Vermelde locaties in 14 steden',
       strip: 'Locaties op 400 m Rotuaari',
       lastCall: 'Laatste ronde in het hoogseizoen',
     },
@@ -290,7 +290,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     },
     clubStats: {
       capacity: 'Största klubbens kapacitet, Levi',
-      venues: 'Verifierade ställen',
+      venues: 'Listade ställen i 14 städer',
       strip: 'Ställen längs Rotuaaris 400 meter',
       lastCall: 'Sista beställning under högsäsong',
     },

@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Gemeente Inari',
     blurb: 'De lobbybar van Hotel Ivalo + de pub van Hotel Kultahippu.',
-    pageTagline: 'De noordelijkste luchthaven met een club.',
+    pageTagline: 'De noordelijkste luchthaven, alleen hotelbars.',
     intro: 'Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland. De plaats zelf telt 4.000 inwoners. Hotel Ivalo heeft een lobbybar en het restaurant Lapin Yö. Hotel Kultahippu heeft de enige echte pub van het dorp. Verder zijn er hotelbars en één tankstationkiosk die bier verkoopt.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Dagelijks open. De lokale borrelplek na het werk.' },

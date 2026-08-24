@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Inarin kunta',
     blurb: 'Hotel Ivalon aulabaari + Hotel Kultahipun pubi.',
-    pageTagline: 'Pohjoisin lentoasema, jolla on klubi.',
+    pageTagline: 'Pohjoisin lentoasema, yöelämä hotellibaareissa.',
     intro: 'Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on 4 000 asukasta.Hotel Ivalossa on aulabaari ja Lapin Yö -ravintola. Hotel Kultahipulla on kylän ainoa kunnon pubi. Sen lisäksi hotellibaareja ja yksi huoltoaseman kioski, joka myy olutta.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pubi', note: 'Auki päivittäin. Paikallisten työn jälkeinen paikka.' },

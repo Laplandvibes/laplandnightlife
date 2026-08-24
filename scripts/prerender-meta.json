@@ -701,52 +701,52 @@
   },
   "/city/ivalo": {
     "en": {
-      "title": "Ivalo: The northernmost airport with a club.",
-      "description": "The northernmost airport with a club. Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland. Town itself is…"
+      "title": "Ivalo: The northernmost airport, hotel bars only.",
+      "description": "The northernmost airport, hotel bars only. Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland. Town…"
     },
     "fi": {
-      "title": "Ivalo: Pohjoisin lentoasema, jolla on klubi.",
-      "description": "Pohjoisin lentoasema, jolla on klubi. Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on…"
+      "title": "Ivalo: Pohjoisin lentoasema, yöelämä hotellibaareissa.",
+      "description": "Pohjoisin lentoasema, yöelämä hotellibaareissa. Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse…"
     },
     "de": {
-      "title": "Ivalo: Der nördlichste Flughafen mit einem Club.",
-      "description": "Der nördlichste Flughafen mit einem Club. Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die…"
+      "title": "Ivalo: Der nördlichste Flughafen, nur Hotelbars.",
+      "description": "Der nördlichste Flughafen, nur Hotelbars. Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die…"
     },
     "ja": {
-      "title": "Ivalo: クラブのある最北の空港。",
-      "description": "クラブのある最北の空港。 Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel Ivaloにはロビーバーとレストラン、ラピン・ウーがあります。 Hotel…"
+      "title": "Ivalo: 最北の空港。夜はホテルバーだけ。",
+      "description": "最北の空港。夜はホテルバーだけ。 Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel Ivaloにはロビーバーとレストラン、ラピン・ウーがあります。 Hotel…"
     },
     "es": {
-      "title": "Ivalo: El aeropuerto más al norte con un club.",
-      "description": "El aeropuerto más al norte con un club. Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra Natal Sami.…"
+      "title": "Ivalo: El aeropuerto más al norte, solo bares de hotel.",
+      "description": "El aeropuerto más al norte, solo bares de hotel. Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra…"
     },
     "pt-BR": {
-      "title": "Ivalo: O aeroporto mais ao norte com uma balada.",
-      "description": "O aeroporto mais ao norte com uma balada. Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi. A…"
+      "title": "Ivalo: O aeroporto mais ao norte, só bares de hotel.",
+      "description": "O aeroporto mais ao norte, só bares de hotel. Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal…"
     },
     "zh-CN": {
-      "title": "Ivalo: 最北的、带夜店的机场。",
-      "description": "最北的、带夜店的机场。 Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 设有大堂酒吧和 Lapin Yö 餐厅。 Hotel Kultahippu…"
+      "title": "Ivalo: 最北的机场，夜生活只有酒店酒吧。",
+      "description": "最北的机场，夜生活只有酒店酒吧。 Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。小镇本身只有 4 000 人。Hotel Ivalo 设有大堂酒吧和 Lapin Yö 餐厅。 Hotel Kultahippu…"
     },
     "ko": {
-      "title": "Ivalo: 클럽이 있는 최북단 공항.",
-      "description": "클럽이 있는 최북단 공항. Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문이다. 마을 자체는 인구 4,000명.Hotel Ivalo에는 로비 바와 라핀 위 레스토랑이 있습니다. Hotel Kultahippu에는 마을 유일의 제대로 된…"
+      "title": "Ivalo: 최북단 공항, 밤은 호텔 바뿐.",
+      "description": "최북단 공항, 밤은 호텔 바뿐. Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문이다. 마을 자체는 인구 4,000명.Hotel Ivalo에는 로비 바와 라핀 위 레스토랑이 있습니다. Hotel Kultahippu에는 마을 유일의 제대로…"
     },
     "fr": {
-      "title": "Ivalo: L'aéroport le plus au nord à avoir un club.",
-      "description": "L'aéroport le plus au nord à avoir un club. Ivalo est l'aéroport le plus au nord de Finlande et la porte d'entrée vers Inari, Saariselkä et le Pays sámi. La…"
+      "title": "Ivalo: L'aéroport le plus au nord, bars d'hôtel seulement.",
+      "description": "L'aéroport le plus au nord, bars d'hôtel seulement. Ivalo est l'aéroport le plus au nord de Finlande et la porte d'entrée vers Inari, Saariselkä et le Pays…"
     },
     "it": {
-      "title": "Ivalo: L'aeroporto più a nord con un club.",
-      "description": "L'aeroporto più a nord con un club. Ivalo è l'aeroporto più a nord della Finlandia e la porta d'accesso a Inari, Saariselkä e alla Terra dei Sámi. La…"
+      "title": "Ivalo: L'aeroporto più a nord, solo bar d'albergo.",
+      "description": "L'aeroporto più a nord, solo bar d'albergo. Ivalo è l'aeroporto più a nord della Finlandia e la porta d'accesso a Inari, Saariselkä e alla Terra dei Sámi. La…"
     },
     "nl": {
-      "title": "Ivalo: De noordelijkste luchthaven met een club.",
-      "description": "De noordelijkste luchthaven met een club. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland.…"
+      "title": "Ivalo: De noordelijkste luchthaven, alleen hotelbars.",
+      "description": "De noordelijkste luchthaven, alleen hotelbars. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het…"
     },
     "sv": {
-      "title": "Ivalo: Den nordligaste flygplatsen med en klubb.",
-      "description": "Den nordligaste flygplatsen med en klubb. Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000…"
+      "title": "Ivalo: Den nordligaste flygplatsen, bara hotellbarer.",
+      "description": "Den nordligaste flygplatsen, bara hotellbarer. Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000…"
     }
   },
   "/city/muonio": {

@@ -262,7 +262,7 @@ const overlay: Record<string, CityOverlay> = {
   ivalo: {
     region: 'Inari自治体',
     blurb: 'Hotel IvaloのロビーバーとHotel Kultahippuのパブ。',
-    pageTagline: 'クラブのある最北の空港。',
+    pageTagline: '最北の空港。夜はホテルバーだけ。',
     intro: 'Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel Ivaloにはロビーバーとレストラン、ラピン・ウーがあります。 Hotel Kultahippuには村で唯一のまともなパブがある。それ以外はホテルバーと、ビールを売るガソリンスタンドの売店が一軒。',
     venues: {
       'Hotel Kultahippu Pub': { type: 'パブ', note: '毎日営業。地元の仕事終わりの溜まり場。' },

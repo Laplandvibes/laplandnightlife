@@ -369,7 +369,7 @@ export const CITIES: City[] = [
     region: 'Inari municipality',
     blurb: 'Hotel Ivalo\'s lobby bar + Hotel Kultahippu pub.',
     img: '/images/card/city-ivalo.webp',
-    pageTagline: 'The northernmost airport with a club.',
+    pageTagline: 'The northernmost airport, hotel bars only.',
     intro: 'Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland. Town itself is 4 000 people. Hotel Ivalo has a lobby bar and the Lapin Yö restaurant. Hotel Kultahippu has the only proper pub in the village. Beyond that, hotel bars and one petrol-station kiosk that sells beer.',
     venues: [
       { name: 'Hotel Kultahippu Pub', type: 'Pub', note: 'Open daily. The local after-work spot.' },
@@ -428,3 +428,8 @@ export const CITIES: City[] = [
 ];
 
 export const CITY_BY_SLUG = Object.fromEntries(CITIES.map((c) => [c.slug, c]));
+
+/** Venues listed across all 14 city pages — computed from the data so no
+ *  surface (home hero meta, nightclubs stat tile, booking stat card) can
+ *  ever drift from what the site actually lists. */
+export const VENUE_COUNT = CITIES.reduce((n, c) => n + c.venues.length, 0);

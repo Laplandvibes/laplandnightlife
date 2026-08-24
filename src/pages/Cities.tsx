@@ -1,7 +1,7 @@
 import CityCard from '../components/CityCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
-import { CITIES } from '../data/cities';
+import { CITIES, VENUE_COUNT } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -20,7 +20,7 @@ export default function Cities() {
   // drift from what the page below actually lists.
   const stats = [
     { v: String(CITIES.length), l: u.cityStats.cities },
-    { v: String(CITIES.reduce((n, city) => n + city.venues.length, 0)), l: u.cityStats.venues },
+    { v: String(VENUE_COUNT), l: u.cityStats.venues },
     { v: String(CITIES.filter((city) => city.tag === 'Real scene').length), l: u.cityStats.scenes },
     { v: String(CITIES.filter((city) => city.tag === 'Ski resort').length), l: u.cityStats.ski },
   ];
