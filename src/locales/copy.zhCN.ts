@@ -156,6 +156,8 @@ const zhCN = {
     ticketsH: '门票在哪里买',
     ticketsBody: '芬兰的场馆演出和音乐节开票大多走全国性票务平台。Ticketmaster Finland 是其中主要的一家——比如 Qstock 的门票只在那里出售。网站是芬兰语,但购买流程就是标准的 Ticketmaster,按活动名称搜索即可。小型音乐节常常自售,先查活动官网。',
     ticketsCta: '打开 Ticketmaster Finland',
+    pastLabel: '已结束',
+    nextUp: '接下来',
   },
   photo: {
     seoTitle: '芬兰拉普兰夜间摄影',

@@ -153,6 +153,8 @@ const en = {
       ticketsH: 'Where the tickets are',
       ticketsBody: 'Finnish arena and festival on-sales run largely through national ticket outlets. Ticketmaster Finland is one of the main ones — Qstock, for example, sells its tickets only there. The site is in Finnish, but the flow is standard Ticketmaster; search by event name. Smaller festivals often sell direct, so check the event\'s own page first.',
       ticketsCta: 'Open Ticketmaster Finland',
+      pastLabel: 'Past',
+      nextUp: 'Next up',
     },
     photo: {
       seoTitle: 'Night Photography in Finnish Lapland',

@@ -156,6 +156,8 @@ const ja = {
     ticketsH: 'チケットはどこで買う?',
     ticketsBody: 'フィンランドのアリーナ公演やフェスの先行販売は、主に全国規模のチケットサイトで行われます。Ticketmaster Finlandはその代表格で、例えばQstockのチケットはここでしか買えません。サイトはフィンランド語ですが、流れは通常のTicketmasterと同じで、イベント名で検索できます。小さなフェスは直販も多いので、まずイベント公式ページを確認してください。',
     ticketsCta: 'Ticketmaster Finlandを開く',
+    pastLabel: '終了',
+    nextUp: '次の予定',
   },
   photo: {
     seoTitle: 'フィンランド・ラップランドの夜間撮影',

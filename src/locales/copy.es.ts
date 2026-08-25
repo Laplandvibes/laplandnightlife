@@ -156,6 +156,8 @@ const es = {
     ticketsH: 'Dónde se compran las entradas',
     ticketsBody: 'La venta de entradas para arenas y festivales en Finlandia pasa en gran parte por taquillas nacionales. Ticketmaster Finlandia es una de las principales: Qstock, por ejemplo, vende sus entradas solo ahí. El sitio está en finés, pero el proceso es el estándar de Ticketmaster; busca por el nombre del evento. Los festivales pequeños suelen vender directo: revisa primero la página del evento.',
     ticketsCta: 'Abrir Ticketmaster Finlandia',
+    pastLabel: 'Pasado',
+    nextUp: 'A continuación',
   },
   photo: {
     seoTitle: 'Fotografía nocturna en la Laponia finlandesa',

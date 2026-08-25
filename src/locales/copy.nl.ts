@@ -165,6 +165,8 @@ const nl = {
     ticketsH: 'Waar je de tickets koopt',
     ticketsBody: 'De kaartverkoop van Finse arena\'s en festivals loopt grotendeels via landelijke ticketkantoren. Ticketmaster Finland is een van de belangrijkste — Qstock verkoopt zijn tickets bijvoorbeeld alleen daar. De site is Fins, maar de flow is standaard Ticketmaster; zoek op de naam van het event. Kleinere festivals verkopen vaak direct: check eerst de eigen pagina van het event.',
     ticketsCta: 'Open Ticketmaster Finland',
+    pastLabel: 'Voorbij',
+    nextUp: 'Hierna',
   },
   photo: {
     ...en.photo,

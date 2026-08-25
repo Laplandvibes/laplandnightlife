@@ -165,6 +165,8 @@ const ko = {
     ticketsH: '티켓은 어디서 사나',
     ticketsBody: '핀란드의 아레나 공연과 페스티벌 티켓 판매는 대부분 전국 단위 티켓 사이트를 통합니다. Ticketmaster Finland가 대표적이며, 예를 들어 Qstock 티켓은 그곳에서만 팝니다. 사이트는 핀란드어지만 구매 과정은 일반 Ticketmaster와 같고, 행사 이름으로 검색하면 됩니다. 소규모 페스티벌은 직접 판매도 많으니 행사 공식 페이지를 먼저 확인하세요.',
     ticketsCta: 'Ticketmaster Finland 열기',
+    pastLabel: '종료',
+    nextUp: '다음 일정',
   },
   photo: {
     ...en.photo,

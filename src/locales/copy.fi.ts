@@ -154,6 +154,8 @@ const fi = {
       ticketsH: 'Mistä liput ostetaan',
       ticketsBody: 'Suomen areena- ja festivaalilippujen myynti kulkee pitkälti valtakunnallisten lippukauppojen kautta. Ticketmaster Suomi on niistä keskeisimpiä — esimerkiksi Qstockin liput myy vain se. Haku toimii tapahtuman nimellä. Pienemmät festivaalit myyvät usein suoraan, joten tarkista ensin tapahtuman oma sivu.',
       ticketsCta: 'Avaa Ticketmaster Suomi',
+      pastLabel: 'Pidetty',
+      nextUp: 'Seuraavaksi',
     },
     photo: {
       seoTitle: 'Yövalokuvaus Suomen Lapissa',

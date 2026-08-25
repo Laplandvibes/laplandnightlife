@@ -165,6 +165,8 @@ const sv = {
     ticketsH: 'Var biljetterna säljs',
     ticketsBody: 'Biljettsläppen för finska arenor och festivaler går till stor del via rikstäckande biljettbolag. Ticketmaster Finland är ett av de viktigaste — Qstock säljer till exempel sina biljetter bara där. Sajten är på finska, men flödet är standard-Ticketmaster; sök på evenemangets namn. Mindre festivaler säljer ofta direkt: kolla först evenemangets egen sida.',
     ticketsCta: 'Öppna Ticketmaster Finland',
+    pastLabel: 'Genomfört',
+    nextUp: 'Härnäst',
   },
   photo: {
     ...en.photo,

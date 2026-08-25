@@ -154,6 +154,8 @@ const de = {
       ticketsH: 'Wo es die Tickets gibt',
       ticketsBody: 'Finnische Arena- und Festival-Vorverkäufe laufen größtenteils über landesweite Ticketportale. Ticketmaster Finnland ist eines der wichtigsten — Qstock etwa verkauft seine Tickets nur dort. Die Seite ist auf Finnisch, der Ablauf aber Standard-Ticketmaster; einfach den Eventnamen suchen. Kleinere Festivals verkaufen oft direkt — prüfen Sie zuerst die Seite des Events.',
       ticketsCta: 'Ticketmaster Finnland öffnen',
+      pastLabel: 'Vorbei',
+      nextUp: 'Als Nächstes',
     },
     photo: {
       seoTitle: 'Nachtfotografie in Finnisch-Lappland',

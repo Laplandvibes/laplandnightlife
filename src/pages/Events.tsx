@@ -7,7 +7,13 @@ import { IMG } from '../data/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
-type Item = { name: string; date: string; city: string; body: string };
+/* endsBy = the day after which this event is definitely over, ISO. For events with an
+   exact date it is the last day; for the ones the organiser only scopes to part of a
+   month ("Late Jan") it is that month's last day — an honest upper bound, not a guess
+   at the actual day. It lives ONLY on the EN list and is read by index for every other
+   language (see pastFlags), so twelve locales can never disagree about what has
+   already happened. `date` is translated prose and is not machine-readable. */
+type Item = { name: string; date: string; city: string; body: string; endsBy?: string };
 type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] };
 
 /* Every date here comes from the organiser's own site — no "Late August" guesses.
@@ -31,45 +37,45 @@ type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] 
 const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [
-      { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.' },
-      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club sells out. The non-rally crowd treat it as Friday.' },
+      { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.', endsBy: '2026-01-31' },
+      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club sells out. The non-rally crowd treat it as Friday.', endsBy: '2026-01-24' },
     ]},
     { monthKey: 'February', items: [
-      { name: 'Sami Week / Sámi Soveeknaki', date: 'Early Feb', city: 'Rovaniemi', body: 'Reindeer races, Sámi music, joik concerts, evening cultural events.' },
-      { name: 'Frozen People Festival', date: 'Feb 21, 2026', city: 'Oulu', body: 'European Capital of Culture winter electronic festival. Outdoor + indoor stages, –20 °C.' },
+      { name: 'Sami Week / Sámi Soveeknaki', date: 'Early Feb', city: 'Rovaniemi', body: 'Reindeer races, Sámi music, joik concerts, evening cultural events.', endsBy: '2026-02-28' },
+      { name: 'Frozen People Festival', date: 'Feb 21, 2026', city: 'Oulu', body: 'European Capital of Culture winter electronic festival. Outdoor + indoor stages, –20 °C.', endsBy: '2026-02-21' },
     ]},
     { monthKey: 'March', items: [
-      { name: 'Peak Levi Concert Weeks', date: 'Mid-Feb – Mid-Apr', city: 'Levi', body: 'Hullu Poro Areena hosts Finnish touring acts every Wed–Sat. Tickets sell out a week ahead.' },
+      { name: 'Peak Levi Concert Weeks', date: 'Mid-Feb – Mid-Apr', city: 'Levi', body: 'Hullu Poro Areena hosts Finnish touring acts every Wed–Sat. Tickets sell out a week ahead.', endsBy: '2026-04-30' },
     ]},
     { monthKey: 'April', items: [
-      { name: 'Yllas Soikoon Music Festival', date: 'Mid-April', city: 'Ylläs', body: 'End-of-season ski-festival. DJ sets on the slopes, outdoor concerts, spring sun.' },
-      { name: 'SnowCastle final weeks', date: 'Through Apr', city: 'Kemi', body: 'Last chance for the ice bar before April thaw. Vodka shots in ice glasses.' },
+      { name: 'Yllas Soikoon Music Festival', date: 'Mid-April', city: 'Ylläs', body: 'End-of-season ski-festival. DJ sets on the slopes, outdoor concerts, spring sun.', endsBy: '2026-04-30' },
+      { name: 'SnowCastle final weeks', date: 'Through Apr', city: 'Kemi', body: 'Last chance for the ice bar before April thaw. Vodka shots in ice glasses.', endsBy: '2026-04-30' },
     ]},
     { monthKey: 'June', items: [
-      { name: 'Midnight Sun Window opens', date: 'Jun 6, 2026', city: 'Above Arctic Circle', body: 'Sun stops setting. Continues until July 7.' },
-      { name: 'Midnight Sun Film Festival', date: 'Jun 10–14, 2026', city: 'Sodankylä', body: '80+ films. The 03:00 screening at the 17th-century wooden church is the most photographed.' },
-      { name: 'Juhannus / Midsummer', date: 'Jun 19–21, 2026', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out; locals leave.' },
-      { name: 'Air Guitar World Championships qualifier', date: 'Jun, Oulu', city: 'Oulu', body: 'Qualifier for the August Oulu finals. ECoC2026 expanded programme.' },
+      { name: 'Midnight Sun Window opens', date: 'Jun 6, 2026', city: 'Above Arctic Circle', body: 'Sun stops setting. Continues until July 7.', endsBy: '2026-07-07' },
+      { name: 'Midnight Sun Film Festival', date: 'Jun 10–14, 2026', city: 'Sodankylä', body: '80+ films. The 03:00 screening at the 17th-century wooden church is the most photographed.', endsBy: '2026-06-14' },
+      { name: 'Juhannus / Midsummer', date: 'Jun 19–21, 2026', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out; locals leave.', endsBy: '2026-06-21' },
+      { name: 'Air Guitar World Championships qualifier', date: 'Jun, Oulu', city: 'Oulu', body: 'Qualifier for the August Oulu finals. ECoC2026 expanded programme.', endsBy: '2026-06-30' },
     ]},
     { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: 'Jul 24–25, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 40 000 visitors, two days, Kuusisaari park." },
-      { name: 'Elojazz Festival', date: 'Jul 30 – Aug 2, 2026', city: 'Oulu', body: 'Four-day jazz week: outdoor stages around Rotuaari, main concerts at Tarkastamo.' },
+      { name: 'Qstock Festival 2026', date: 'Jul 24–25, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 40 000 visitors, two days, Kuusisaari park.", endsBy: '2026-07-25' },
+      { name: 'Elojazz Festival', date: 'Jul 30 – Aug 2, 2026', city: 'Oulu', body: 'Four-day jazz week: outdoor stages around Rotuaari, main concerts at Tarkastamo.', endsBy: '2026-08-02' },
     ]},
     { monthKey: 'August', items: [
-      { name: 'Simerock', date: 'Aug 7–8, 2026', city: 'Rovaniemi', body: 'Early-August rock festival at Ounaspaviljonki. Local Lapland crowd, smaller than Qstock but heavier.' },
-      { name: 'Ijahis Idja Sámi Music Festival', date: 'Aug 14–15, 2026', city: 'Inari', body: 'Indigenous music festival at Sajos. The closest thing to a club night Inari has.' },
-      { name: 'Air Guitar World Championships Final', date: 'Aug 28–29, 2026', city: 'Oulu', body: 'The actual world finals at Pokkinen park. 40 countries, locals from age 8 to 80.' },
+      { name: 'Simerock', date: 'Aug 7–8, 2026', city: 'Rovaniemi', body: 'Early-August rock festival at Ounaspaviljonki. Local Lapland crowd, smaller than Qstock but heavier.', endsBy: '2026-08-08' },
+      { name: 'Ijahis Idja Sámi Music Festival', date: 'Aug 14–15, 2026', city: 'Inari', body: 'Indigenous music festival at Sajos. The closest thing to a club night Inari has.', endsBy: '2026-08-15' },
+      { name: 'Air Guitar World Championships Final', date: 'Aug 28–29, 2026', city: 'Oulu', body: 'The actual world finals at Pokkinen park. 40 countries, locals from age 8 to 80.', endsBy: '2026-08-29' },
     ]},
     { monthKey: 'October', items: [
-      { name: 'Jutajaiset Folklore Festival', date: 'Oct 22–25, 2026', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.' },
+      { name: 'Jutajaiset Folklore Festival', date: 'Oct 22–25, 2026', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.', endsBy: '2026-10-25' },
     ]},
     { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpine Ski World Cup', date: 'Mid-November', city: 'Levi', body: 'World Cup weekend. Hullu Poro Areena hosts after-parties; book accommodation a year ahead.' },
-      { name: 'Ruka FIS Cross-Country Opening', date: 'Late November', city: 'Ruka', body: 'World-cup season opener. Restaurant Zone at the slope base is the after-party home.' },
+      { name: 'Levi FIS Alpine Ski World Cup', date: 'Nov 14–15, 2026', city: 'Levi', body: 'World Cup weekend. Hullu Poro Areena hosts after-parties; book accommodation a year ahead.', endsBy: '2026-11-15' },
+      { name: 'Ruka FIS Cross-Country Opening', date: 'Nov 27–29, 2026', city: 'Ruka', body: 'World-cup season opener. Restaurant Zone at the slope base is the after-party home.', endsBy: '2026-11-29' },
     ]},
     { monthKey: 'December', items: [
-      { name: 'Christmas in Rovaniemi', date: 'Dec 1–24, 2026', city: 'Rovaniemi', body: 'Tourist peak. Bars run extended hours; Roy Club queues are 45 minutes deep on Saturdays.' },
-      { name: "New Year's Eve fireworks", date: 'Dec 31, 2026', city: 'All cities', body: "Public fireworks at midnight: Rovaniemi central square, Oulu's market square, Levi slope." },
+      { name: 'Christmas in Rovaniemi', date: 'Dec 1–24, 2026', city: 'Rovaniemi', body: 'Tourist peak. Bars run extended hours; Roy Club queues are 45 minutes deep on Saturdays.', endsBy: '2026-12-24' },
+      { name: "New Year's Eve fireworks", date: 'Dec 31, 2026', city: 'All cities', body: "Public fireworks at midnight: Rovaniemi central square, Oulu's market square, Levi slope.", endsBy: '2026-12-31' },
     ]},
   ],
   fi: [
@@ -107,8 +113,8 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Jutajaiset-folkloristifestivaali', date: '22.–25.10.2026', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
     ]},
     { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpine Ski World Cup', date: 'Marraskuun puoliväli', city: 'Levi', body: 'Maailmancup-viikonloppu. Hullu Poro Areena isännöi jatkot; varaa majoitus vuotta etukäteen.' },
-      { name: 'Rukan FIS-maastohiihdon avaus', date: 'Marraskuun loppu', city: 'Ruka', body: 'Maailmancup-kauden avaus. Restaurant Zone rinteen juurella on jatkojen koti.' },
+      { name: 'Levi FIS Alpine Ski World Cup', date: '14.–15.11.2026', city: 'Levi', body: 'Maailmancup-viikonloppu. Hullu Poro Areena isännöi jatkot; varaa majoitus vuotta etukäteen.' },
+      { name: 'Rukan FIS-maastohiihdon avaus', date: '27.–29.11.2026', city: 'Ruka', body: 'Maailmancup-kauden avaus. Restaurant Zone rinteen juurella on jatkojen koti.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Joulu Rovaniemellä', date: '1.–24.12.2026', city: 'Rovaniemi', body: 'Turistihuippu. Baarit pidentävät aukioloaikoja; Roy Clubin jonot 45 minuutin pituisia lauantaisin.' },
@@ -150,8 +156,8 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Jutajaiset Folklorefestival', date: '22.–25. Okt 2026', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
     ]},
     { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpiner Ski-Weltcup', date: 'Mitte November', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
-      { name: 'Ruka FIS Langlauf-Auftakt', date: 'Ende November', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Die Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
+      { name: 'Levi FIS Alpiner Ski-Weltcup', date: '14.–15. Nov 2026', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
+      { name: 'Ruka FIS Langlauf-Auftakt', date: '27.–29. Nov 2026', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Die Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Weihnachten in Rovaniemi', date: '1.–24. Dez 2026', city: 'Rovaniemi', body: 'Touristen-Hochsaison. Bars haben verlängerte Öffnungszeiten; samstags 45-minütige Schlangen vor dem Roy Club.' },
@@ -179,6 +185,25 @@ const EVENTS: Record<Lang, MonthBlock[]> = {
 // while the list held 21).
 const EVENT_COUNT = EVENTS_BASE.en.reduce((n, m) => n + m.items.length, 0);
 
+/* Local calendar day as YYYY-MM-DD. Deliberately the READER's clock, not build time:
+   a static page stamped at deploy would call August events "past" for the rest of the
+   year and go stale the moment it shipped. toISOString() is wrong here — it converts
+   to UTC, so before 02:00 Finnish time it reports yesterday. */
+function todayLocalIso(d: Date): string {
+  const p = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+/* Which entries are over, keyed by [month index][item index] against the EN list.
+   The fi/de lists are parallel to it — same months, same events, same order — so the
+   index is the join key. If that ever stops being true the lengths diverge and we fall
+   back to "not past", which shows a real event rather than mislabelling a live one. */
+function pastFlags(today: string): boolean[][] {
+  return EVENTS_BASE.en.map((m) =>
+    m.items.map((e) => !!e.endsBy && e.endsBy < today),
+  );
+}
+
 export default function Events() {
   const lang = useLang();
   const to = useLocalePath();
@@ -187,6 +212,18 @@ export default function Events() {
   // handled br/cn but forgot ko→kr, producing a bad client-side canonical.
   const path = to('/events');
   const data = EVENTS[lang];
+
+  const today = todayLocalIso(new Date());
+  const past = pastFlags(today);
+  // First entry that has not finished yet — the one a reader can still act on.
+  const next = (() => {
+    for (let mi = 0; mi < EVENTS_BASE.en.length; mi++) {
+      for (let ii = 0; ii < EVENTS_BASE.en[mi].items.length; ii++) {
+        if (!past[mi]?.[ii]) return data[mi]?.items[ii];
+      }
+    }
+    return undefined;
+  })();
 
   return (
     <>
@@ -212,20 +249,45 @@ export default function Events() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-12">
-          {data.map((m) => (
+          {next && (
+            <p className="text-sm text-white/70">
+              <span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mr-2">{c.nextUp}</span>
+              <span className="text-white font-semibold">{next.name}</span>
+              <span className="text-white/50"> · {next.date} · {next.city}</span>
+            </p>
+          )}
+
+          {data.map((m, mi) => (
             <div key={m.monthKey}>
               <div className="flex items-center gap-3 mb-5 border-b border-white/10 pb-3">
                 <h2 className="font-heading text-3xl text-white tracking-tight">{c.months[m.monthKey]}</h2>
                 <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">2026</span>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
-                {m.items.map((e) => (
-                  <div key={e.name} className="bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all">
-                    <p className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mb-1">{e.date} · {e.city}</p>
-                    <h3 className="font-heading text-xl text-white tracking-tight mb-2">{e.name}</h3>
-                    <p className="text-sm text-white/70 leading-relaxed">{e.body}</p>
-                  </div>
-                ))}
+                {m.items.map((e, ii) => {
+                  const isPast = past[mi]?.[ii] ?? false;
+                  return (
+                    <div
+                      key={e.name}
+                      className={
+                        isPast
+                          ? 'bg-night-light/20 border border-white/5 rounded-xl p-5 opacity-60'
+                          : 'bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all'
+                      }
+                    >
+                      <p className={`text-[0.65rem] uppercase tracking-[0.18em] font-bold mb-1 ${isPast ? 'text-white/45' : 'text-pink'}`}>
+                        {e.date} · {e.city}
+                        {isPast && (
+                          <span className="ml-2 border border-white/20 rounded px-1.5 py-0.5 text-white/55 tracking-normal">
+                            {c.pastLabel}
+                          </span>
+                        )}
+                      </p>
+                      <h3 className={`font-heading text-xl tracking-tight mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
+                      <p className={`text-sm leading-relaxed ${isPast ? 'text-white/50' : 'text-white/70'}`}>{e.body}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

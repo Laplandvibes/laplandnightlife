@@ -165,6 +165,8 @@ const fr = {
     ticketsH: 'Où s\'achètent les billets',
     ticketsBody: 'Les mises en vente des salles et festivals finlandais passent surtout par des billetteries nationales. Ticketmaster Finlande est l\'une des principales — Qstock, par exemple, ne vend ses billets que là. Le site est en finnois, mais le parcours est le Ticketmaster classique ; cherchez le nom de l\'événement. Les petits festivals vendent souvent en direct : vérifiez d\'abord la page de l\'événement.',
     ticketsCta: 'Ouvrir Ticketmaster Finlande',
+    pastLabel: 'Passé',
+    nextUp: 'À venir',
   },
   photo: {
     ...en.photo,

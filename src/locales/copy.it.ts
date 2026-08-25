@@ -165,6 +165,8 @@ const it = {
     ticketsH: 'Dove si comprano i biglietti',
     ticketsBody: 'Le vendite di biglietti per arene e festival in Finlandia passano in gran parte da biglietterie nazionali. Ticketmaster Finlandia è tra le principali — il Qstock, per esempio, vende i biglietti solo lì. Il sito è in finlandese, ma il flusso è il classico Ticketmaster; cerca il nome dell\'evento. I festival più piccoli spesso vendono in proprio: controlla prima la pagina dell\'evento.',
     ticketsCta: 'Apri Ticketmaster Finlandia',
+    pastLabel: 'Concluso',
+    nextUp: 'Prossimo',
   },
   photo: {
     ...en.photo,
