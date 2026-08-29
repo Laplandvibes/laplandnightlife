@@ -180,7 +180,9 @@ for (const slug of slugs) {
     const ov = lang === 'en' ? null : overlays[lang]?.[slug];
     const tagline = (ov && ov.pageTagline) || b.pageTagline;
     const intro = (ov && ov.intro) || b.intro;
-    const title = `${b.name}: ${tagline}`;
+    // Overlay saa yliajaa myös nimen (fi: "Kittilän kirkonkylä", ei "Kittilä town").
+    const name = (ov && ov.name) || b.name;
+    const title = `${name}: ${tagline}`;
     const description = buildDescription(tagline, intro);
     meta[path][lang] = { title, description };
   }

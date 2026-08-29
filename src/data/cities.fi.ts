@@ -239,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilän kirkonkylä',
     region: 'Kittilän kunta',
     blurb: 'Missä paikalliset oikeasti asuvat (Levi on pääosin turisteja).',
     pageTagline: 'Missä Levin paikalliset oikeasti asuvat.',
