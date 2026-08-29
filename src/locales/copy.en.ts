@@ -60,7 +60,7 @@ const en = {
       events: {
         eyebrow: '2026 Calendar',
         h: 'The Nights That Matter',
-        e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Mid-Jan – Apr', e1Desc: 'Ice bar, a snow-built SnowChapel and a SnowHotel, rebuilt to a new design every winter since 1996. Vodka in ice glasses, and the year-round SnowExperience365 covers the off-season.',
+        e1Name: 'Kemi SnowCastle Winter Park', e1When: 'Mid-Jan – Apr', e1Desc: 'A snow park built to a new design every winter, carrying on the SnowCastle tradition that began in 1996. Vodka in ice glasses at the ice bar, and the year-round SnowExperience365 snow world covers the off-season.',
         e2Name: 'Midnight Sun Film Festival', e2When: 'Jun 10–14, 2026', e2Desc: 'Sodankylä, 80+ films, the 03:00 screening at the wooden church is the photo.',
         e3Name: 'Qstock Festival 2026', e3When: 'Jul 24–25, 2026', e3Desc: "Oulu's biggest rock festival. 40 000 visitors over two days.",
         full: 'Full 2026 calendar →',
@@ -116,7 +116,7 @@ const en = {
       heroIntro: 'Two categories. Aurora bars: glass roofs, north-facing windows, wake-up services. Ice bars: walls at –5 °C, vodka in ice glasses, snow-built every winter.',
       v1H: 'Igloo Bar', v1Where: 'Saariselkä', v1Body: "The world's most-photographed bar. Glass-roof igloo, vodka cocktails, ceiling is the aurora when active. Open to non-guests with reservation.", v1Type: 'Glass-roof bar',
       v2H: 'Santa\'s Hotel Aurora', v2Where: 'Luosto', v2Body: 'Aurora-window bar facing north. Wake-up service when activity peaks. The quiet pick, fewer Instagram tripods than Kakslauttanen.', v2Type: 'Aurora-window bar',
-      v3H: 'SnowCastle Ice Bar', v3Where: 'Kemi', v3Body: 'Walls at –5 °C, bar built from ice, vodka served in ice glasses. Open Jan–Apr. The Kemi SnowCastle is rebuilt every winter since 1996.', v3Type: 'Ice bar',
+      v3H: 'SnowCastle Ice Bar', v3Where: 'Kemi', v3Body: 'Walls at –5 °C, a bar built from ice, drinks served in ice glasses, inside the year-round SnowExperience365 snow world at the Kemi SnowCastle Area.', v3Type: 'Ice bar',
       v4H: 'Arctic Snow Hotel Ice Bar', v4Where: 'Sinettä (Rovaniemi)', v4Body: 'Snow-built ice bar 25 minutes from Rovaniemi. Reindeer-fur seating, ice glasses, the Lonely Planet shot.', v4Type: 'Ice bar',
       v5H: 'Nova Skyland Hotel Aurora Lounge', v5Where: 'Rovaniemi', v5Body: 'Sky-bar with a north-facing terrace. Aurora-alert service for guests; cocktails until 01:00.', v5Type: 'Aurora terrace',
       v6H: 'Hotel Riekonlinna Aurora Lobby', v6Where: 'Saariselkä', v6Body: 'Big lobby fireplace, north-facing window wall, local DJ on Friday nights in season.', v6Type: 'Aurora lobby bar',

@@ -238,7 +238,7 @@ export const CITIES: City[] = [
     blurb: 'SnowCastle, Sampo Icebreaker, and Hotel Merihovi\'s stacked restaurant complex.',
     img: '/images/card/city-kemi.webp',
     pageTagline: 'SnowCastle, icebreaker, sea Lapland.',
-    intro: 'Kemi is the gateway between Helsinki rail and Lapland, and a town with one trick: the SnowCastle, rebuilt every winter since 1996, with a chapel, hotel, and an ice-walled bar. Sampo Icebreaker cruises from December run nightly tours that double as bar venues. The mainland nightlife is small: Hotel Merihovi runs a layered complex (lobby bar, sports terrace, restaurant) and that\'s most of it. Industrial port town that punches above its weight in winter.',
+    intro: 'Kemi is the gateway between Helsinki rail and Lapland, and a town with one trick: the SnowCastle Area, building something from snow every winter since 1996. Today that means a winter snow park and the year-round SnowExperience365 indoor snow world with its ice-walled bar; the full castle with chapel and hotel is no longer built. Sampo Icebreaker cruises from December run nightly tours that double as bar venues. The mainland nightlife is small: Hotel Merihovi runs a layered complex (lobby bar, sports terrace, restaurant) and that\'s most of it. Industrial port town that punches above its weight in winter.',
     venues: [
       { name: 'SnowCastle Ice Bar', type: 'Ice bar', note: 'Open Jan–Apr. Drinks in ice glasses, walls at –5°C.' },
       { name: 'Hotel Merihovi', type: 'Hotel complex', note: 'Lobby bar + sports terrace + restaurant.' },
