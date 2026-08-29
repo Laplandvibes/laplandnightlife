@@ -123,7 +123,8 @@ function parseOverlay(file) {
     if (!block) continue;
     const pageTagline = field(block, 'pageTagline');
     const intro = field(block, 'intro');
-    if ((pageTagline || intro) && !out[slug]) out[slug] = { pageTagline, intro };
+    const name = field(block, 'name'); // overlayn lokalisoitu näyttönimi (valinnainen)
+    if ((pageTagline || intro) && !out[slug]) out[slug] = { name, pageTagline, intro };
   }
   return out;
 }
