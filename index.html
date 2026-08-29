@@ -68,8 +68,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicons / app icons -->
-    <!-- Default title — overridden per route by PageSeo. Kept here as fallback for crawlers
-         that don't render JS and to avoid an empty <title> in the SPA shell. -->
+    <!-- Default title, overridden per route by PageSeo. Kept here as a fallback for crawlers
+         that do not render JS, and so the SPA shell is never served without one.
+         Never write the literal title-tag sequence in this comment: a naive title parser
+         reads the first match in the document and would report the comment instead of the
+         real title below. Measured and fixed 2026-08-30. -->
     <title>LaplandNightlife: Finnish Lapland After Dark & Midnight Sun</title>
     <meta name="author" content="LaplandVibes editorial team" />
 
