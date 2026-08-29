@@ -210,7 +210,7 @@
     },
     "de": {
       "title": "Rovaniemi: Die arktische Hauptstadt.",
-      "description": "Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt. Wochenendtouristen stehen rund um die Koskikatu an: das Roy Club feiert \"die besten Partys…"
+      "description": "Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt. Wochenendtouristen stehen rund um die Koskikatu an: der Roy Club veranstaltet „die besten…"
     },
     "ja": {
       "title": "Rovaniemi: 北極圏の首都。",
@@ -309,8 +309,8 @@
       "description": "Erämaaluksus: iglubaarien kylä. Saariselkä ei ole klubikohde. Se on lasi-iglukohde, ja juuri siinä on pointti. Kakslauttanen Arctic Resortilla on maailman…"
     },
     "de": {
-      "title": "Saariselkä: Wilderness-Premium: das Dorf der Iglu-Bar.",
-      "description": "Wilderness-Premium: das Dorf der Iglu-Bar. Saariselkä ist kein Ziel für Clubs. Es ist ein Ziel für Glas-Iglus, und genau darum geht es. Das Kakslauttanen…"
+      "title": "Saariselkä: Wildnis-Luxus: das Dorf der Iglu-Bar.",
+      "description": "Wildnis-Luxus: das Dorf der Iglu-Bar. Saariselkä ist kein Ziel für Clubs. Es ist ein Ziel für Glas-Iglus, und genau darum geht es. Das Kakslauttanen Arctic…"
     },
     "ja": {
       "title": "Saariselkä: ウィルダネス・プレミアム：イグルーバーの村。",
@@ -402,101 +402,101 @@
   "/city/kemi": {
     "en": {
       "title": "Kemi: SnowCastle, icebreaker, sea Lapland.",
-      "description": "SnowCastle, icebreaker, sea Lapland. Kemi is the gateway between Helsinki rail and Lapland, and a town with one trick: the SnowCastle, rebuilt every winter…"
+      "description": "SnowCastle, icebreaker, sea Lapland. Kemi is the gateway between Helsinki rail and Lapland, and a town with one trick: the SnowCastle Area, building…"
     },
     "fi": {
       "title": "Kemi: LumiLinna, jäänmurtaja, Meri-Lappi.",
-      "description": "LumiLinna, jäänmurtaja, Meri-Lappi. Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinna, joka on rakennettu…"
+      "description": "LumiLinna, jäänmurtaja, Meri-Lappi. Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinnan alue, jolle on…"
     },
     "de": {
       "title": "Kemi: SnowCastle, Eisbrecher, Meereslappland.",
-      "description": "SnowCastle, Eisbrecher, Meereslappland. Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland, und eine Stadt mit einem Trick: dem SnowCastle, das…"
+      "description": "SnowCastle, Eisbrecher, Meereslappland. Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland, und eine Stadt mit einem Trick: dem SnowCastle-Areal…"
     },
     "ja": {
       "title": "Kemi: SnowCastle、砕氷船、海のラップランド。",
-      "description": "SnowCastle、砕氷船、海のラップランド。 Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来毎冬建て直されるSnowCastle。礼拝堂、ホテル、そして氷の壁に囲まれたバーがある。12月から運航するSampo砕氷船は、バー会場を兼ねたツアーを毎晩催す。…"
+      "description": "SnowCastle、砕氷船、海のラップランド。 Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来、毎冬なにかを雪で建て続けているSnowCastleエリア。現在は冬の雪パークと、通年営業の屋内雪ワールドSnowExperience365にある氷の壁のバーが…"
     },
     "es": {
       "title": "Kemi: SnowCastle, rompehielos, Laponia del mar.",
-      "description": "SnowCastle, rompehielos, Laponia del mar. Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: el SnowCastle…"
+      "description": "SnowCastle, rompehielos, Laponia del mar. Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: la zona del SnowCastle…"
     },
     "pt-BR": {
       "title": "Kemi: SnowCastle, quebra-gelo, Lapônia do mar.",
-      "description": "SnowCastle, quebra-gelo, Lapônia do mar. Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia, e uma cidade com um truque só: o SnowCastle…"
+      "description": "SnowCastle, quebra-gelo, Lapônia do mar. Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia, e uma cidade com um truque só: a área do…"
     },
     "zh-CN": {
       "title": "Kemi: 雪堡、破冰船、海拉普兰。",
-      "description": "雪堡、破冰船、海拉普兰。 Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡（SnowCastle），自 1996 年起年年重建，内有礼拜堂、酒店和一间冰墙环绕的酒吧。Sampo 破冰船从 12 月起每晚出航，航程本身也兼作酒吧场地。陆地上的夜生活规模很小：Hotel Merihovi…"
+      "description": "雪堡、破冰船、海拉普兰。 Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。如今是一座冬季雪公园，加上全年开放的室内雪世界 SnowExperience365…"
     },
     "ko": {
       "title": "Kemi: SnowCastle, 쇄빙선, 바다 라플란드.",
-      "description": "SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 다시 짓는 SnowCastle. 예배당, 호텔, 그리고 얼음 벽으로 둘러싸인 바를 갖췄다. 12월부터 운항하는 Sampo…"
+      "description": "SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역. 지금은 겨울 스노우 파크와, 얼음 벽 바를 갖춘 연중 운영 실내 눈 세계…"
     },
     "fr": {
       "title": "Kemi: SnowCastle, brise-glace, Laponie maritime.",
-      "description": "SnowCastle, brise-glace, Laponie maritime. Kemi est la porte d'entrée entre le rail d'Helsinki et la Laponie, une ville avec un seul tour de magie : le…"
+      "description": "SnowCastle, brise-glace, Laponie maritime. Kemi est la porte d'entrée entre le rail d'Helsinki et la Laponie, une ville avec un seul tour de magie : le site…"
     },
     "it": {
       "title": "Kemi: SnowCastle, rompighiaccio, Lapponia del mare.",
-      "description": "SnowCastle, rompighiaccio, Lapponia del mare. Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, e una cittadina con un asso nella manica: lo…"
+      "description": "SnowCastle, rompighiaccio, Lapponia del mare. Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, e una cittadina con un asso nella manica: l'area…"
     },
     "nl": {
       "title": "Kemi: SnowCastle, ijsbreker, Zee-Lapland.",
-      "description": "SnowCastle, ijsbreker, Zee-Lapland. Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland, en een stad met één troef: het SnowCastle, elke winter…"
+      "description": "SnowCastle, ijsbreker, Zee-Lapland. Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland, en een stad met één troef: het SnowCastle-terrein, waar…"
     },
     "sv": {
       "title": "Kemi: SnowCastle, isbrytare, Havslappland.",
-      "description": "SnowCastle, isbrytare, Havslappland. Kemi är porten mellan tåget från Helsingfors och Lappland, och en stad med ett trumfkort: SnowCastle, ombyggt varje…"
+      "description": "SnowCastle, isbrytare, Havslappland. Kemi är porten mellan tåget från Helsingfors och Lappland, och en stad med ett trumfkort: SnowCastle-området, där något…"
     }
   },
   "/city/yllas": {
     "en": {
-      "title": "Ylläs: Finland's second-biggest ski area.",
-      "description": "Finland's second-biggest ski area. Ylläs has 63 slopes split between two villages, Äkäslompolo (north) and Ylläsjärvi (south), connected by ski runs but…"
+      "title": "Ylläs: One of Finland's biggest ski areas.",
+      "description": "One of Finland's biggest ski areas. Ylläs has 62 slopes split between two villages, Äkäslompolo (north) and Ylläsjärvi (south), connected by ski runs but…"
     },
     "fi": {
-      "title": "Ylläs: Suomen toiseksi suurin hiihtoalue.",
-      "description": "Suomen toiseksi suurin hiihtoalue. Ylläksellä on 63 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet…"
+      "title": "Ylläs: Yksi Suomen suurimmista hiihtoalueista.",
+      "description": "Yksi Suomen suurimmista hiihtoalueista. Ylläksellä on 62 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät…"
     },
     "de": {
-      "title": "Ylläs: Finnlands zweitgrößtes Skigebiet.",
-      "description": "Finnlands zweitgrößtes Skigebiet. Ylläs hat 63 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber…"
+      "title": "Ylläs: Eines der größten Skigebiete Finnlands.",
+      "description": "Eines der größten Skigebiete Finnlands. Ylläs hat 62 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten…"
     },
     "ja": {
-      "title": "Ylläs: フィンランドで2番目に大きいスキーエリア。",
-      "description": "フィンランドで2番目に大きいスキーエリア。 ユッラスには63本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。ゲレンデでつながっていますが、車では20分の距離。夜が賑やかなのはアカスロンポロ側で、アフタースキーはSport Resort Ylläs、その後はTaiga…"
+      "title": "Ylläs: フィンランド有数の大きさのスキーエリア。",
+      "description": "フィンランド有数の大きさのスキーエリア。 ユッラスには62本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。ゲレンデでつながっていますが、車では20分の距離。夜が賑やかなのはアカスロンポロ側で、アフタースキーはSport Resort Ylläs、その後はTaiga…"
     },
     "es": {
-      "title": "Ylläs: La segunda mayor zona esquiable de Finlandia.",
-      "description": "La segunda mayor zona esquiable de Finlandia. Ylläs tiene 63 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por…"
+      "title": "Ylläs: Una de las mayores zonas esquiables de Finlandia.",
+      "description": "Una de las mayores zonas esquiables de Finlandia. Ylläs tiene 62 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por…"
     },
     "pt-BR": {
-      "title": "Ylläs: A segunda maior área de esqui da Finlândia.",
-      "description": "A segunda maior área de esqui da Finlândia. Ylläs tem 63 pistas divididas entre dois vilarejos, Äkäslompolo (norte) e Ylläsjärvi (sul), conectados pelas…"
+      "title": "Ylläs: Uma das maiores áreas de esqui da Finlândia.",
+      "description": "Uma das maiores áreas de esqui da Finlândia. Ylläs tem 62 pistas divididas entre dois vilarejos, Äkäslompolo (norte) e Ylläsjärvi (sul), conectados pelas…"
     },
     "zh-CN": {
-      "title": "Ylläs: 芬兰第二大滑雪区。",
-      "description": "芬兰第二大滑雪区。 于拉斯有63条雪道，分属两个村子，北边的埃卡斯洛姆波洛（Äkäslompolo）和南边的于拉斯亚尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是埃卡斯洛姆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和…"
+      "title": "Ylläs: 芬兰规模最大的滑雪区之一。",
+      "description": "芬兰规模最大的滑雪区之一。 于拉斯有62条雪道，分属两个村子，北边的埃卡斯洛姆波洛（Äkäslompolo）和南边的于拉斯亚尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是埃卡斯洛姆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和…"
     },
     "ko": {
-      "title": "Ylläs: 핀란드에서 두 번째로 큰 스키 구역.",
-      "description": "핀란드에서 두 번째로 큰 스키 구역. 윌라스에는 63개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스얘르비(남), 에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은…"
+      "title": "Ylläs: 핀란드에서 손꼽히는 규모의 스키 구역.",
+      "description": "핀란드에서 손꼽히는 규모의 스키 구역. 윌라스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스얘르비(남), 에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은…"
     },
     "fr": {
-      "title": "Ylläs: Le deuxième plus grand domaine skiable de Finlande.",
-      "description": "Le deuxième plus grand domaine skiable de Finlande. Ylläs compte 63 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par…"
+      "title": "Ylläs: L'un des plus grands domaines skiables de Finlande.",
+      "description": "L'un des plus grands domaines skiables de Finlande. Ylläs compte 62 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par…"
     },
     "it": {
-      "title": "Ylläs: La seconda area sciistica più grande della Finlandia.",
-      "description": "La seconda area sciistica più grande della Finlandia. Ylläs ha 63 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste…"
+      "title": "Ylläs: Una delle aree sciistiche più grandi della Finlandia.",
+      "description": "Una delle aree sciistiche più grandi della Finlandia. Ylläs ha 62 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste…"
     },
     "nl": {
-      "title": "Ylläs: Het op een na grootste skigebied van Finland.",
-      "description": "Het op een na grootste skigebied van Finland. Ylläs heeft 63 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de…"
+      "title": "Ylläs: Een van de grootste skigebieden van Finland.",
+      "description": "Een van de grootste skigebieden van Finland. Ylläs heeft 62 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de…"
     },
     "sv": {
-      "title": "Ylläs: Finlands näst största skidområde.",
-      "description": "Finlands näst största skidområde. Ylläs har 63 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men…"
+      "title": "Ylläs: Ett av Finlands största skidområden.",
+      "description": "Ett av Finlands största skidområden. Ylläs har 62 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men…"
     }
   },
   "/city/ruka": {
@@ -764,7 +764,7 @@
     },
     "ja": {
       "title": "Muonio: 国立公園の玄関口。",
-      "description": "国立公園の玄関口。 ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第2の広さ）への玄関口のひとつです。クラブはなく、パブ巡りもなく、ほとんどの夜は早めに終わります。Harriniva Wilderness…"
+      "description": "国立公園の玄関口。 ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第3の広さ）への玄関口のひとつです。クラブはなく、パブ巡りもなく、ほとんどの夜は早めに終わります。Harriniva Wilderness…"
     },
     "es": {
       "title": "Muonio: La puerta al parque nacional.",
@@ -776,11 +776,11 @@
     },
     "zh-CN": {
       "title": "Muonio: 国家公园门户。",
-      "description": "国家公园门户。 穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第二大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort…"
+      "description": "国家公园门户。 穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第三大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort…"
     },
     "ko": {
       "title": "Muonio: 국립공원의 관문.",
-      "description": "국립공원의 관문. 무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 2위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁…"
+      "description": "국립공원의 관문. 무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁…"
     },
     "fr": {
       "title": "Muonio: La porte d'entrée du parc national.",
@@ -810,7 +810,7 @@
     },
     "de": {
       "title": "Salla: Mitten im Nirgendwo.",
-      "description": "Mitten im Nirgendwo. 3 300 Einwohner und eine Skipiste. Der Slogan des Ortes lautet wörtlich \"In the Middle of Nowhere\", und er ist als Kompliment gemeint.…"
+      "description": "Mitten im Nirgendwo. 3 300 Einwohner und eine Skipiste. Der Slogan des Ortes lautet wörtlich „In the Middle of Nowhere“, und er ist als Kompliment gemeint.…"
     },
     "ja": {
       "title": "Salla: 何もないど真ん中。",

@@ -19,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu è l\'unica città così a nord con una vera scena domenicale di caffè.',
     ],
     quickFacts: {
-      'Population': { label: 'Popolazione', value: '210.000' },
+      'Population': { label: 'Popolazione', value: '218.000' },
       'Closest airport': { label: 'Aeroporto più vicino', value: 'OUL · 15 min' },
       'Last call': { label: 'Ultimo giro', value: '03:30' },
       'Best season': { label: 'Stagione migliore', value: 'Tutto l\'anno · ECoC 2026' },
@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lapponia del Mare',
     blurb: 'SnowCastle, il rompighiaccio Sampo e il complesso di ristoranti su più livelli dell\'Hotel Merihovi.',
     pageTagline: 'SnowCastle, rompighiaccio, Lapponia del mare.',
-    intro: 'Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, e una cittadina con un asso nella manica: lo SnowCastle, ricostruito ogni inverno dal 1996, con cappella, hotel e un bar dalle pareti di ghiaccio. Le crociere del rompighiaccio Sampo da dicembre offrono tour serali che fanno anche da bar. La vita notturna sulla terraferma è piccola: l\'Hotel Merihovi gestisce un complesso a più livelli (lobby bar, terrazza sportiva, ristorante) ed è praticamente tutto. Cittadina portuale industriale che in inverno conta più del previsto.',
+    intro: 'Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, e una cittadina con un asso nella manica: l\'area dello SnowCastle, dove ogni inverno dal 1996 si costruisce qualcosa con la neve. Oggi significa un parco di neve invernale e il mondo di neve al coperto SnowExperience365, aperto tutto l\'anno, con il suo bar dalle pareti di ghiaccio; il castello completo, con cappella e hotel, non viene più costruito. Le crociere del rompighiaccio Sampo da dicembre offrono tour serali che fanno anche da bar. La vita notturna sulla terraferma è piccola: l\'Hotel Merihovi gestisce un complesso a più livelli (lobby bar, terrazza sportiva, ristorante) ed è praticamente tutto. Cittadina portuale industriale che in inverno conta più del previsto.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Ice bar', note: 'Aperto da gennaio ad aprile. Drink in bicchieri di ghiaccio, pareti a –5 °C.' },
       'Sampo Icebreaker': { type: 'Bar di bordo', note: 'Crociere in stagione; il bar funziona per tutto il viaggio.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'La seconda area sciistica più grande della Finlandia.',
-    pageTagline: 'La seconda area sciistica più grande della Finlandia.',
-    intro: 'Ylläs ha 63 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste ma separati da 20 minuti di auto. Äkäslompolo ha la scena serale più vivace: Sport Resort Ylläs per l\'après, Taiga Pub & Kitchen e Ravintola Otso per il resto della serata. Nessun mega-club. Più tranquillo, più adulto, più coppie rispetto a Levi. Il Parco nazionale Pallas-Yllästunturi è il terzo più grande della Finlandia.',
+    blurb: 'Una delle aree sciistiche più grandi della Finlandia.',
+    pageTagline: 'Una delle aree sciistiche più grandi della Finlandia.',
+    intro: 'Ylläs ha 62 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste ma separati da 20 minuti di auto. Äkäslompolo ha la scena serale più vivace: Sport Resort Ylläs per l\'après, Taiga Pub & Kitchen e Ravintola Otso per il resto della serata. Nessun mega-club. Più tranquillo, più adulto, più coppie rispetto a Levi. Il Parco nazionale Pallas-Yllästunturi è il terzo più grande della Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'Il punto après più frequentato di Äkäslompolo, ai piedi delle piste.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cucina', note: 'Pub-ristorante di Äkäslompolo: spine, cucina da pub, sport.' },

@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Meri-Lappi',
     blurb: 'LumiLinna, jäänmurtaja Sampo ja Hotel Merihovin monikerroksinen ravintolakokonaisuus.',
     pageTagline: 'LumiLinna, jäänmurtaja, Meri-Lappi.',
-    intro: 'Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinna, joka on rakennettu uudelleen joka talvi vuodesta 1996, kappeleineen, hotelleineen ja jääseinäisine baareineen. Jäänmurtaja Sampon risteilyt pyörivät joulukuusta lähtien öisin ja toimivat samalla baaripaikkoina. Mantereen yöelämä on pientä: Hotel Merihovi pyörittää monikerroksista kokonaisuutta (aulabaari, urheiluterassi, ravintola) ja siinä se pääosin onkin. Teollinen satamakaupunki, joka lyö talvella yli oman painonsa.',
+    intro: 'Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinnan alue, jolle on rakennettu jotain lumesta joka talvi vuodesta 1996. Nykyään se tarkoittaa talvista lumipuistoa ja ympärivuotista SnowExperience365-lumimaailmaa jääseinäisine baareineen; koko linnaa kappeleineen ja hotelleineen ei enää rakenneta. Jäänmurtaja Sampon risteilyt pyörivät joulukuusta lähtien öisin ja toimivat samalla baaripaikkoina. Mantereen yöelämä on pientä: Hotel Merihovi pyörittää monikerroksista kokonaisuutta (aulabaari, urheiluterassi, ravintola) ja siinä se pääosin onkin. Teollinen satamakaupunki, joka lyö talvella yli oman painonsa.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Jääbaari', note: 'Auki tammi–huhtikuussa. Juomat jäälaseista, seinät –5 °C:ssa.' },
       'Sampo Icebreaker': { type: 'Laivabaari', note: 'Risteilyt sesongissa; baari palvelee koko matkan.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'Suomen toiseksi suurin hiihtoalue.',
-    pageTagline: 'Suomen toiseksi suurin hiihtoalue.',
-    intro: 'Ylläksellä on 63 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin.',
+    blurb: 'Yksi Suomen suurimmista hiihtoalueista.',
+    pageTagline: 'Yksi Suomen suurimmista hiihtoalueista.',
+    intro: 'Ylläksellä on 62 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin.',
     venues: {
       'Sport Resort Ylläs': { type: 'After ski + baari', note: 'Äkäslompolon vilkkain after ski -paikka rinteiden juurella.' },
       'Taiga Pub & Kitchen': { type: 'Pubi + keittiö', note: 'Äkäslompolon pubiravintola: hanat, pubiruokaa ja urheilua.' },

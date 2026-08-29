@@ -123,8 +123,8 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
   ],
   de: [
     { monthKey: 'January', items: [
-      { name: 'Skábmagovat – Indigenes Filmfestival', date: 'Ende Januar 2026', city: 'Inari', body: 'Indigenes Filmfestival im Sajos. Joik-Konzerte, Vorführungen in der Dunkelzeit, samische Diner-Programme.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Das Roy Club ist ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
+      { name: 'Skábmagovat – Indigenes Filmfestival', date: 'Ende Januar 2026', city: 'Inari', body: 'Indigenes Filmfestival im Sajos. Joik-Konzerte, Vorführungen in der Dunkelzeit, samische Dinner-Programme.' },
+      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Der Roy Club ist ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
     ]},
     { monthKey: 'February', items: [
       { name: 'Samische Woche / Sámi Soveeknaki', date: 'Anfang Februar', city: 'Rovaniemi', body: 'Rentierrennen, samische Musik, Joik-Konzerte, abendliche Kulturveranstaltungen.' },
@@ -134,14 +134,14 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Levi-Spitzen-Konzertwochen', date: 'Mitte Feb – Mitte Apr', city: 'Levi', body: 'Hullu Poro Areena empfängt finnische Tourneeacts jeden Mi–Sa. Tickets sind eine Woche im Voraus ausverkauft.' },
     ]},
     { monthKey: 'April', items: [
-      { name: 'Yllas Soikoon Musikfestival', date: 'Mitte April', city: 'Ylläs', body: 'Saisonabschluss-Skifestival. DJ-Sets an den Pisten, Open-Air-Konzerte, Frühlingssonne.' },
+      { name: 'Ylläs Soikoon Musikfestival', date: 'Mitte April', city: 'Ylläs', body: 'Saisonabschluss-Skifestival. DJ-Sets an den Pisten, Open-Air-Konzerte, Frühlingssonne.' },
       { name: 'SnowCastle letzte Wochen', date: 'Durchgehend April', city: 'Kemi', body: 'Letzte Chance auf die Eisbar vor dem April-Tauwetter. Wodka-Shots in Eisgläsern.' },
     ]},
     { monthKey: 'June', items: [
       { name: 'Mitternachtssonnen-Fenster beginnt', date: '6. Jun 2026', city: 'Nördlich des Polarkreises', body: 'Die Sonne hört auf unterzugehen. Bis zum 7. Juli.' },
       { name: 'Filmfestival der Mitternachtssonne', date: '10.–14. Jun 2026', city: 'Sodankylä', body: 'Über 80 Filme. Die Vorführung um 03:00 Uhr in der Holzkirche aus dem 17. Jahrhundert ist die meistfotografierte.' },
       { name: 'Juhannus / Mittsommer', date: '19.–21. Jun 2026', city: 'Überall', body: 'Lagerfeuer, Sauna, Seebaden, Hütten-Wochenenden. Die Städte leeren sich; die Einheimischen fahren raus.' },
-      { name: 'Luftgitarren-WM-Qualifikation', date: 'Juni, Oulu', city: 'Oulu', body: 'Qualifikation für das August-Finale in Oulu. Erweitertes Programm zur Kulturhauptstadt 2026.' },
+      { name: 'Luftgitarren-WM-Qualifikation', date: 'Juni 2026', city: 'Oulu', body: 'Qualifikation für das August-Finale in Oulu. Erweitertes Programm zur Kulturhauptstadt 2026.' },
     ]},
     { monthKey: 'July', items: [
       { name: 'Qstock Festival 2026', date: '24.–25. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 40 000 Besucher, zwei Tage, Kuusisaari-Park.' },
@@ -156,8 +156,8 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Jutajaiset Folklorefestival', date: '22.–25. Okt 2026', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
     ]},
     { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpiner Ski-Weltcup', date: '14.–15. Nov 2026', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
-      { name: 'Ruka FIS Langlauf-Auftakt', date: '27.–29. Nov 2026', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Die Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
+      { name: 'FIS Ski-Weltcup alpin in Levi', date: '14.–15. Nov 2026', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
+      { name: 'FIS Langlauf-Weltcup-Auftakt in Ruka', date: '27.–29. Nov 2026', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Das Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
     ]},
     { monthKey: 'December', items: [
       { name: 'Weihnachten in Rovaniemi', date: '1.–24. Dez 2026', city: 'Rovaniemi', body: 'Touristen-Hochsaison. Bars haben verlängerte Öffnungszeiten; samstags 45-minütige Schlangen vor dem Roy Club.' },

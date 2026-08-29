@@ -124,7 +124,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponia del Mar',
     blurb: 'El SnowCastle, el rompehielos Sampo y el escalonado complejo de restaurantes del Hotel Merihovi.',
     pageTagline: 'SnowCastle, rompehielos, Laponia del mar.',
-    intro: 'Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: el SnowCastle, reconstruido cada invierno desde 1996, con capilla, hotel y un bar de paredes de hielo. El rompehielos Sampo navega desde diciembre con travesías nocturnas que también hacen de bar. La vida nocturna en tierra firme es pequeña: el Hotel Merihovi gestiona un complejo en varios niveles (bar del hall, terraza deportiva, restaurante) y eso es casi todo. Un pueblo portuario industrial que rinde por encima de su tamaño en invierno.',
+    intro: 'Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: la zona del SnowCastle, donde cada invierno desde 1996 se construye algo con nieve. Hoy son un parque de nieve invernal y el mundo de nieve cubierto SnowExperience365, abierto todo el año, con su bar de paredes de hielo; el castillo completo, con capilla y hotel, ya no se construye. El rompehielos Sampo navega desde diciembre con travesías nocturnas que también hacen de bar. La vida nocturna en tierra firme es pequeña: el Hotel Merihovi gestiona un complejo en varios niveles (bar del hall, terraza deportiva, restaurante) y eso es casi todo. Un pueblo portuario industrial que rinde por encima de su tamaño en invierno.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Bar de hielo', note: 'Abierto de enero a abril. Bebidas en vasos de hielo, paredes a –5 °C.' },
       'Sampo Icebreaker': { type: 'Bar a bordo', note: 'Cruceros en temporada; el bar funciona todo el trayecto.' },
@@ -145,9 +145,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'La segunda mayor zona esquiable de Finlandia.',
-    pageTagline: 'La segunda mayor zona esquiable de Finlandia.',
-    intro: 'Ylläs tiene 63 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el tercero más grande de Finlandia.',
+    blurb: 'Una de las mayores zonas esquiables de Finlandia.',
+    pageTagline: 'Una de las mayores zonas esquiables de Finlandia.',
+    intro: 'Ylläs tiene 62 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por pistas de esquí pero separados por 20 minutos en coche. Äkäslompolo tiene la escena nocturna más animada: Sport Resort Ylläs para el après, Taiga Pub & Kitchen y Ravintola Otso para el resto de la noche. No hay megaclub. Más tranquilo, más adulto y con más parejas que Levi. El Parque Nacional Pallas-Yllästunturi es el tercero más grande de Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'El après más concurrido de Äkäslompolo, junto a las pistas.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cocina', note: 'Pub-restaurante de Äkäslompolo: grifos, comida de pub y deporte.' },

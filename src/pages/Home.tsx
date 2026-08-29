@@ -26,7 +26,7 @@ const OVERLAY_SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgb
 const CONNECT_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   en: { eyebrow: 'Before you go', h: 'Sort your data before the night starts' },
   fi: { eyebrow: 'Ennen lähtöä', h: 'Hoida netti kuntoon ennen kuin ilta alkaa' },
-  de: { eyebrow: 'Vor der Reise', h: 'Regle deine Daten, bevor die Nacht beginnt' },
+  de: { eyebrow: 'Vor der Reise', h: 'Regeln Sie Ihre Datenverbindung, bevor die Nacht beginnt' },
   ja: { eyebrow: '出発前に', h: '夜が始まる前に、データの準備を' },
   es: { eyebrow: 'Antes de salir', h: 'Resuelve tus datos antes de que empiece la noche' },
   'pt-BR': { eyebrow: 'Antes de ir', h: 'Resolva sua internet antes de a noite começar' },

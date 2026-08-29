@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Laponie maritime',
     blurb: 'Le SnowCastle, le brise-glace Sampo et le complexe de restaurants empilés de l\'Hotel Merihovi.',
     pageTagline: 'SnowCastle, brise-glace, Laponie maritime.',
-    intro: 'Kemi est la porte d\'entrée entre le rail d\'Helsinki et la Laponie, une ville avec un seul tour de magie : le SnowCastle, reconstruit chaque hiver depuis 1996, avec sa chapelle, son hôtel et un bar aux murs de glace. Les croisières du brise-glace Sampo, à partir de décembre, proposent des sorties nocturnes qui font aussi office de bars. La vie nocturne sur le continent est modeste : l\'Hotel Merihovi gère un complexe à plusieurs niveaux (bar du hall, terrasse sport, restaurant) et c\'est à peu près tout. Une ville portuaire industrielle qui joue au-dessus de sa catégorie en hiver.',
+    intro: 'Kemi est la porte d\'entrée entre le rail d\'Helsinki et la Laponie, une ville avec un seul tour de magie : le site du SnowCastle, où l\'on bâtit quelque chose en neige chaque hiver depuis 1996. Aujourd\'hui, ce sont un parc de neige hivernal et le monde de neige couvert SnowExperience365, ouvert toute l\'année, avec son bar aux murs de glace ; le château complet, avec chapelle et hôtel, n\'est plus construit. Les croisières du brise-glace Sampo, à partir de décembre, proposent des sorties nocturnes qui font aussi office de bars. La vie nocturne sur le continent est modeste : l\'Hotel Merihovi gère un complexe à plusieurs niveaux (bar du hall, terrasse sport, restaurant) et c\'est à peu près tout. Une ville portuaire industrielle qui joue au-dessus de sa catégorie en hiver.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Bar de glace', note: 'Ouvert de janvier à avril. Boissons dans des verres de glace, murs à –5 °C.' },
       'Sampo Icebreaker': { type: 'Bar à bord', note: 'Croisières en saison ; le bar fonctionne pendant tout le trajet.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'Le deuxième plus grand domaine skiable de Finlande.',
-    pageTagline: 'Le deuxième plus grand domaine skiable de Finlande.',
-    intro: 'Ylläs compte 63 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par les pistes mais séparés par 20 minutes de route. Äkäslompolo a la scène du soir la plus animée : Sport Resort Ylläs pour l\'après-ski, Taiga Pub & Kitchen et Ravintola Otso pour la suite. Pas de méga-club. Plus calme, plus adulte, plus de couples qu\'à Levi. Le parc national Pallas-Yllästunturi est le troisième plus grand de Finlande.',
+    blurb: 'L\'un des plus grands domaines skiables de Finlande.',
+    pageTagline: 'L\'un des plus grands domaines skiables de Finlande.',
+    intro: 'Ylläs compte 62 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par les pistes mais séparés par 20 minutes de route. Äkäslompolo a la scène du soir la plus animée : Sport Resort Ylläs pour l\'après-ski, Taiga Pub & Kitchen et Ravintola Otso pour la suite. Pas de méga-club. Plus calme, plus adulte, plus de couples qu\'à Levi. Le parc national Pallas-Yllästunturi est le troisième plus grand de Finlande.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après-ski + bar', note: 'Le spot d\'après-ski le plus fréquenté d\'Äkäslompolo, au pied des pistes.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cuisine', note: 'Pub-restaurant d\'Äkäslompolo: pressions, cuisine de pub, sport.' },

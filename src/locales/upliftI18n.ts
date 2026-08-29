@@ -91,7 +91,7 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
       cities: 'Städte, ehrlich bewertet',
       venues: 'Gelistete Locations',
       scenes: 'Ganzjährige Clubszenen',
-      ski: 'Skiresort-Partyszenen',
+      ski: 'Skigebiets-Partyszenen',
     },
   },
   ja: {

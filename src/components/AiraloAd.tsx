@@ -116,7 +116,7 @@ export default function AiraloAd({
   const headline = pick({
     en: 'Land in Lapland with data already on your phone. Airalo is an eSIM you set up before the flight.',
     fi: 'Saavu Lappiin niin, että netti on jo puhelimessa. Airalo on eSIM, jonka asennat valmiiksi ennen lentoa.',
-    de: 'Komm in Lappland an, mit Daten schon auf dem Handy. Airalo ist eine eSIM, die du vor dem Flug einrichtest.',
+    de: 'Kommen Sie in Lappland an, mit Daten schon auf dem Handy. Airalo ist eine eSIM, die Sie vor dem Flug einrichten.',
     ja: 'ラップランドに着いた瞬間から、スマホでネットを。Airalo はフライト前に設定しておける eSIM です。',
     es: 'Llega a Laponia con datos ya en el móvil. Airalo es una eSIM que configuras antes del vuelo.',
     'pt-BR': 'Chegue à Lapônia com internet já no celular. A Airalo é um eSIM que você configura antes do voo.',
@@ -131,7 +131,7 @@ export default function AiraloAd({
   const sub = pick({
     en: 'No SIM swap, no roaming bill, no shop queue at the airport. Pick a Finland or Europe plan, install it in a couple of minutes, and your maps, ride apps and stories work the second you switch your phone off airplane mode.',
     fi: 'Ei SIM-kortin vaihtoa, ei roaming-laskua, ei jonoa lentokentän liikkeessä. Valitse Suomi- tai Eurooppa-paketti, asenna se parissa minuutissa, ja kartat, kyytisovellukset ja tarinat toimivat heti kun otat lentokonetilan pois.',
-    de: 'Kein SIM-Wechsel, keine Roaming-Rechnung, keine Schlange im Flughafen-Shop. Wähle einen Finnland- oder Europa-Tarif, richte ihn in zwei Minuten ein, und Karten, Fahrdienste und Storys laufen, sobald du den Flugmodus ausschaltest.',
+    de: 'Kein SIM-Wechsel, keine Roaming-Rechnung, keine Schlange im Flughafen-Shop. Wählen Sie einen Finnland- oder Europa-Tarif, richten Sie ihn in zwei Minuten ein, und Karten, Fahrdienste und Storys laufen, sobald Sie den Flugmodus ausschalten.',
     ja: 'SIM の差し替えも、ローミング料金も、空港ショップの行列もなし。フィンランドまたはヨーロッパのプランを選んで数分で設定すれば、機内モードを解除した瞬間から地図も配車アプリもストーリーも使えます。',
     es: 'Sin cambiar de SIM, sin factura de roaming, sin colas en la tienda del aeropuerto. Elige un plan de Finlandia o de Europa, instálalo en un par de minutos y tus mapas, apps de transporte e historias funcionan en cuanto quitas el modo avión.',
     'pt-BR': 'Sem troca de SIM, sem conta de roaming, sem fila na loja do aeroporto. Escolha um plano da Finlândia ou da Europa, instale em dois minutos e seus mapas, apps de transporte e stories funcionam assim que você sai do modo avião.',
@@ -183,7 +183,7 @@ export default function AiraloAd({
       label: pick({
         en: 'Keep your own number',
         fi: 'Pidät oman numerosi',
-        de: 'Behalte deine eigene Nummer',
+        de: 'Behalten Sie Ihre eigene Nummer',
         ja: '自分の番号はそのまま',
         es: 'Conserva tu propio número',
         'pt-BR': 'Mantenha seu próprio número',

@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: '海拉普兰',
     blurb: '雪堡（SnowCastle）、Sampo 破冰船，以及 Hotel Merihovi 层层叠叠的餐厅综合体。',
     pageTagline: '雪堡、破冰船、海拉普兰。',
-    intro: 'Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡（SnowCastle），自 1996 年起年年重建，内有礼拜堂、酒店和一间冰墙环绕的酒吧。Sampo 破冰船从 12 月起每晚出航，航程本身也兼作酒吧场地。陆地上的夜生活规模很小：Hotel Merihovi 经营着一个多层综合体（大堂吧、体育露台、餐厅），差不多就这些了。一座工业港口小城，冬天却打出了远超身量的拳。',
+    intro: 'Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。如今是一座冬季雪公园，加上全年开放的室内雪世界 SnowExperience365 及其冰墙酒吧；带礼拜堂和酒店的完整城堡已不再建造。Sampo 破冰船从 12 月起每晚出航，航程本身也兼作酒吧场地。陆地上的夜生活规模很小：Hotel Merihovi 经营着一个多层综合体（大堂吧、体育露台、餐厅），差不多就这些了。一座工业港口小城，冬天却打出了远超身量的拳。',
     venues: {
       'SnowCastle Ice Bar': { type: '冰吧', note: '1–4月开放。用冰杯喝酒，墙体保持–5°C。' },
       'Sampo Icebreaker': { type: '船上酒吧', note: '旺季航行；酒吧全程营业。' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: '芬兰第二大滑雪区。',
-    pageTagline: '芬兰第二大滑雪区。',
-    intro: '于拉斯有63条雪道，分属两个村子，北边的埃卡斯洛姆波洛（Äkäslompolo）和南边的于拉斯亚尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是埃卡斯洛姆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯图里国立公园是芬兰第二大国家公园。',
+    blurb: '芬兰规模最大的滑雪区之一。',
+    pageTagline: '芬兰规模最大的滑雪区之一。',
+    intro: '于拉斯有62条雪道，分属两个村子，北边的埃卡斯洛姆波洛（Äkäslompolo）和南边的于拉斯亚尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是埃卡斯洛姆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯图里国立公园是芬兰第三大国家公园。',
     venues: {
       'Sport Resort Ylläs': { type: '滑雪后+酒吧', note: '雪道旁，埃卡斯洛姆波洛人气最旺的滑雪后据点。' },
       'Taiga Pub & Kitchen': { type: '酒馆+厨房', note: '埃卡斯洛姆波洛的酒馆餐厅，酒头、酒馆菜、看比赛。' },
@@ -285,7 +285,7 @@ const overlay: Record<string, CityOverlay> = {
     region: '西拉普兰',
     blurb: '没有夜生活。Pallas-Yllästunturi 国家公园才是卖点。',
     pageTagline: '国家公园门户。',
-    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第二大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
+    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第三大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
     venues: {
       'Jeris Lakeside Resort': { type: '酒店酒吧', note: '耶里斯湖畔的酒店，晚上有餐厅和酒吧。' },
       'Harriniva Wilderness Hotel': { type: '酒店酒吧', note: '桑拿 + 酒吧，主要是雪橇团的客人。' },

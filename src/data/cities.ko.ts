@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: '바다 라플란드',
     blurb: 'SnowCastle, Sampo 쇄빙선, 그리고 Hotel Merihovi의 층층이 쌓인 레스토랑 복합관.',
     pageTagline: 'SnowCastle, 쇄빙선, 바다 라플란드.',
-    intro: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 다시 짓는 SnowCastle. 예배당, 호텔, 그리고 얼음 벽으로 둘러싸인 바를 갖췄다. 12월부터 운항하는 Sampo 쇄빙선은 밤마다 투어를 도는데, 그 자체가 바 역할도 한다. 본토 나이트라이프는 작다: Hotel Merihovi가 층층의 복합관(로비 바, 스포츠 테라스, 레스토랑)을 운영하고, 사실상 그게 전부다. 겨울이면 체급 이상으로 한 방 먹이는 산업 항구 도시.',
+    intro: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역. 지금은 겨울 스노우 파크와, 얼음 벽 바를 갖춘 연중 운영 실내 눈 세계 SnowExperience365가 중심이다. 예배당과 호텔까지 갖춘 성 전체는 더 이상 짓지 않는다. 12월부터 운항하는 Sampo 쇄빙선은 밤마다 투어를 도는데, 그 자체가 바 역할도 한다. 본토 나이트라이프는 작다: Hotel Merihovi가 층층의 복합관(로비 바, 스포츠 테라스, 레스토랑)을 운영하고, 사실상 그게 전부다. 겨울이면 체급 이상으로 한 방 먹이는 산업 항구 도시.',
     venues: {
       'SnowCastle Ice Bar': { type: '아이스 바', note: '1–4월 영업. 얼음 잔에 담긴 음료, 벽은 –5°C.' },
       'Sampo Icebreaker': { type: '선상 바', note: '시즌 중 운항; 바는 항해 내내 운영됩니다.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: '핀란드에서 두 번째로 큰 스키 구역.',
-    pageTagline: '핀란드에서 두 번째로 큰 스키 구역.',
-    intro: '윌라스에는 63개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스얘르비(남), 에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Taiga Pub & Kitchen과 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 두 번째로 큽니다.',
+    blurb: '핀란드에서 손꼽히는 규모의 스키 구역.',
+    pageTagline: '핀란드에서 손꼽히는 규모의 스키 구역.',
+    intro: '윌라스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스얘르비(남), 에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Taiga Pub & Kitchen과 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 세 번째로 큽니다.',
     venues: {
       'Sport Resort Ylläs': { type: '아프레 + 바', note: '슬로프 옆, 애캐슬롬폴로에서 가장 붐비는 아프레 스폿.' },
       'Taiga Pub & Kitchen': { type: '펍 + 키친', note: '애캐슬롬폴로의 펍 레스토랑: 탭, 펍 푸드, 스포츠.' },
@@ -285,7 +285,7 @@ const overlay: Record<string, CityOverlay> = {
     region: '라플란드 서부',
     blurb: '나이트라이프 없음. 매력은 Pallas-Yllästunturi 국립공원.',
     pageTagline: '국립공원의 관문.',
-    intro: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 2위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁 사우나+로비 바 콤보를 운영하고, Jeris Lakeside Resort는 예리스얘르비 호숫가에서 같은 경험을 제공합니다. 솔직히 그것이 무오니오의 \'신\'입니다.',
+    intro: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁 사우나+로비 바 콤보를 운영하고, Jeris Lakeside Resort는 예리스얘르비 호숫가에서 같은 경험을 제공합니다. 솔직히 그것이 무오니오의 \'신\'입니다.',
     venues: {
       'Jeris Lakeside Resort': { type: '호텔 바', note: '예리스얘르비 호숫가 호텔: 저녁을 위한 레스토랑과 바.' },
       'Harriniva Wilderness Hotel': { type: '호텔 바', note: '사우나 + 바, 대부분 사파리 손님.' },

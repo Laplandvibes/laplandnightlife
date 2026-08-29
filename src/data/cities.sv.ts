@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Havslappland',
     blurb: 'SnowCastle, isbrytaren Sampo och Hotel Merihovis restaurangkomplex i flera plan.',
     pageTagline: 'SnowCastle, isbrytare, Havslappland.',
-    intro: 'Kemi är porten mellan tåget från Helsingfors och Lappland, och en stad med ett trumfkort: SnowCastle, ombyggt varje vinter sedan 1996, med ett kapell, ett hotell och en bar med väggar av is. Isbrytaren Sampo går från december och gör nattliga turer som också fungerar som barlokal. Nattlivet på fastlandet är litet: Hotel Merihovi driver ett komplex i flera plan (lobbybar, sportterrass, restaurang) och där tar det ungefär slut. En industriell hamnstad som slår över sin viktklass på vintern.',
+    intro: 'Kemi är porten mellan tåget från Helsingfors och Lappland, och en stad med ett trumfkort: SnowCastle-området, där något har byggts av snö varje vinter sedan 1996. I dag är det en vinterlig snöpark och den året runt öppna inomhussnövärlden SnowExperience365 med sin bar med väggar av is; hela slottet med kapell och hotell byggs inte längre. Isbrytaren Sampo går från december och gör nattliga turer som också fungerar som barlokal. Nattlivet på fastlandet är litet: Hotel Merihovi driver ett komplex i flera plan (lobbybar, sportterrass, restaurang) och där tar det ungefär slut. En industriell hamnstad som slår över sin viktklass på vintern.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Isbar', note: 'Öppet jan–apr. Drinkar ur isglas, väggar på −5 °C.' },
       'Sampo Icebreaker': { type: 'Bar ombord', note: 'Turer under säsongen; baren är i gång hela resan.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'Finlands näst största skidområde.',
-    pageTagline: 'Finlands näst största skidområde.',
-    intro: 'Ylläs har 63 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après, Taiga Pub & Kitchen och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands tredje största.',
+    blurb: 'Ett av Finlands största skidområden.',
+    pageTagline: 'Ett av Finlands största skidområden.',
+    intro: 'Ylläs har 62 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après, Taiga Pub & Kitchen och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands tredje största.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'Äkäslompolos livligaste après-ställe, vid backarna.' },
       'Taiga Pub & Kitchen': { type: 'Pub + kök', note: 'Pubrestaurang i Äkäslompolo: tapp, pubmat, sport.' },

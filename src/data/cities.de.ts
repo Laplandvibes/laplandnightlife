@@ -19,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu ist die einzige Stadt so weit im Norden mit einer echten Sonntags-Cafészene.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '210.000' },
+      'Population': { label: 'Einwohner', value: '218 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'OUL · 15 Min.' },
       'Last call': { label: 'Letzte Runde', value: '03:30' },
       'Best season': { label: 'Beste Saison', value: 'Ganzjährig · Kulturhauptstadt 2026' },
@@ -29,7 +29,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lappland',
     blurb: 'Die arktische Hauptstadt, gespalten zwischen Touristenwochenenden und Werktagen, die nur den Einheimischen gehören.',
     pageTagline: 'Die arktische Hauptstadt.',
-    intro: 'Zwei Geschwindigkeiten in einer Stadt. Wochenendtouristen stehen rund um die Koskikatu an: das Roy Club feiert "die besten Partys der Stadt seit 1985" und die Bull Bar ist die lauteste Sportterrasse. Die Einheimischen verteilen sich entlang der Fußgängerzone: Cafe & Bar 21 für Cocktails, Rovaniemen Oluthuone fürs Bier, Oliver\'s Corner für Whisky. Touristenwochenenden heißen Schlangen; unter der Woche ist es ruhig und lokal.',
+    intro: 'Zwei Geschwindigkeiten in einer Stadt. Wochenendtouristen stehen rund um die Koskikatu an: der Roy Club veranstaltet „die besten Partys der Stadt seit 1985“ und die Bull Bar ist die lauteste Sportterrasse. Die Einheimischen verteilen sich entlang der Fußgängerzone: Cafe & Bar 21 für Cocktails, Rovaniemen Oluthuone fürs Bier, Oliver\'s Corner für Whisky. Touristenwochenenden heißen Schlangen; unter der Woche ist es ruhig und lokal.',
     venues: {
       'Cafe & Bar 21': { type: 'Cocktailbar', note: 'Die Lieblings-Cocktailbar der Einheimischen im Stadtzentrum.' },
       'Rovaniemen Oluthuone': { type: 'Bierlokal', note: 'Bierrestaurant an der Fußgängerzone: großer Garten, breite Zapfauswahl.' },
@@ -43,10 +43,10 @@ const overlay: Record<string, CityOverlay> = {
       'Koskikatu und die Fußgängerzone tragen fast die ganze Szene. Alles ist zu Fuß erreichbar.',
       'Letzte Bestellung um 03:00; Clubs schließen im Winter um 03:30, in der Hochsaison manchmal 04:00.',
       'Kein Uber: die lokale Taxinummer 0100 84 84 speichern.',
-      'Die Aurora-Saison gipfelt Okt–März: erst die Vorhersage checken, dann die Dancefloor-Nacht planen.',
+      'Die Polarlichtsaison hat ihren Höhepunkt von Oktober bis März: erst die Vorhersage prüfen, dann die Clubnacht planen.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '64.000' },
+      'Population': { label: 'Einwohner', value: '64 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'RVN · 10 Min.' },
       'Last call': { label: 'Letzte Runde', value: '03:00' },
       'Best season': { label: 'Beste Saison', value: 'Sep–März (Polarlicht) · Dez (Weihnachtsmann)' },
@@ -54,12 +54,12 @@ const overlay: Record<string, CityOverlay> = {
   },
   levi: {
     region: 'Gemeinde Kittilä',
-    blurb: 'Hullu Poro Areena: 1.700 Plätze, 10 Bars, 2 Etagen. Der größte Nachtclub Lapplands.',
+    blurb: 'Hullu Poro Areena: 1 700 Plätze, 10 Bars, 2 Etagen. Der größte Nachtclub Lapplands.',
     pageTagline: 'Die größte Skigebiets-Party Finnlands.',
     intro: 'Die Hullu Poro Areena ist das Herzstück: 1 700 Plätze, zwei Etagen, zehn Bars und die größte Tanzfläche nördlich von Helsinki. Drumherum: das Ihku, die legendäre Après-Ski-Hütte, in der Skischuhe auf der Tanzfläche erwünscht sind, und die Panorama Sky Bar im Hotel Levi Panorama für den Aussichtsdrink. Im November bringt der FIS-Weltcup eine 10-tägige Party. Februar–April heißt Junggesellenabschiede, Skischulen und volle Wochenenden. Außerhalb der Saison macht ein Großteil des Dorfes früh in der Woche dicht.',
     venues: {
       'Panorama Sky Bar': { type: 'Aussichtsbar', note: 'Bar im Hotel Levi Panorama oberhalb der Gondel: Drinks mit Fjellblick.' },
-      'Hullu Poro Areena': { type: 'Mega-Nachtclub', note: '1.700 Plätze, 10 Bars, 2 Etagen. Konzert-Location von Mittwoch bis Samstag.' },
+      'Hullu Poro Areena': { type: 'Mega-Nachtclub', note: '1 700 Plätze, 10 Bars, 2 Etagen. Konzert-Location von Mittwoch bis Samstag.' },
       'Ihku': { type: 'Après-Ski', note: 'Holzhütte am Hangfuß. Skischuhe auf der Tanzfläche.' },
     },
     knowList: [
@@ -69,7 +69,7 @@ const overlay: Record<string, CityOverlay> = {
       'Die Skischuh-Regel variiert je nach Adresse. Das Ihku sagt bekanntlich ja.',
     ],
     quickFacts: {
-      'Beds in resort': { label: 'Betten im Resort', value: '24.000' },
+      'Beds in resort': { label: 'Betten im Resort', value: '24 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KTT · 18 km' },
       'Last call': { label: 'Letzte Runde', value: '03:30' },
       'Best season': { label: 'Beste Saison', value: 'Nov–Apr (Schnee + Hullu Poro)' },
@@ -78,7 +78,7 @@ const overlay: Record<string, CityOverlay> = {
   saariselka: {
     region: 'Gemeinde Inari',
     blurb: 'Glas-Iglus, die Igloo Bar von Kakslauttanen und ein einziger echter Pub, das Local Pub Panimo.',
-    pageTagline: 'Wilderness-Premium: das Dorf der Iglu-Bar.',
+    pageTagline: 'Wildnis-Luxus: das Dorf der Iglu-Bar.',
     intro: 'Saariselkä ist kein Ziel für Clubs. Es ist ein Ziel für Glas-Iglus, und genau darum geht es. Das Kakslauttanen Arctic Resort hat die meistfotografierte Bar der Welt (ein Glas-Iglu, dessen Decke das Polarlicht ist). Das Dorf selbst besteht aus einer Hauptstraße, zwei Restaurants, in denen sich das Essen lohnt, und dem Local Pub Panimo, einer Mikrobrauerei mit der zuverlässigsten Craft-Bier-Auswahl Lapplands. Nach Einbruch der Dunkelheit spielt sich alles in den Resorts ab, nicht im Dorf.',
     venues: {
       'Local Pub Panimo': { type: 'Dorfpub', note: 'Lokale und Craft-Zapfhähne, Pub-Menü, Karaoke und Live-Abende. Der eigene Pub des Dorfes.' },
@@ -89,11 +89,11 @@ const overlay: Record<string, CityOverlay> = {
     knowList: [
       'Keine eigenständigen Clubs: das Nachtleben spielt sich in den Hotels ab.',
       'Für die Igloo Bar ist eine Reservierung nötig, wenn man nicht im Kakslauttanen wohnt.',
-      'Die Straße vom Flughafen (Ivalo) dauert 25 Minuten; buche Transfers, wenn du trinkst.',
+      'Die Straße vom Flughafen (Ivalo) dauert 25 Minuten; buchen Sie einen Transfer, wenn Sie trinken.',
       'Eine Polarlicht-Prognose-App ist unverzichtbar: das Personal weckt die Gäste um 02:00, wenn es aktiv ist.',
     ],
     quickFacts: {
-      'Beds in village': { label: 'Betten im Dorf', value: '7.500' },
+      'Beds in village': { label: 'Betten im Dorf', value: '7 500' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'IVL · 25 Min.' },
       'Last call': { label: 'Letzte Runde', value: '01:30 (Hotels)' },
       'Best season': { label: 'Beste Saison', value: 'Sep–März (Polarlicht)' },
@@ -103,7 +103,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Gemeinde Inari',
     blurb: 'Kulturelle Hauptstadt der Samen: Sajos, Siida, der Inarisee und die Wildniskirche von Pielpajärvi.',
     pageTagline: 'Die kulturelle Hauptstadt der Samen.',
-    intro: 'Inari ist der kulturelle Sitz des samischen Parlaments (Sajos) und Heimat des Siida, des Museums, das alles erklärt, was man über Sápmi nicht wusste. Das „Nachtleben“ ist hier kulturell: das indigene Filmfestival Skábmagovat im Januar, das samische Musikfestival Ijahis Idja im August und eine Handvoll Bars, die meist Abendessen servieren. Komm nicht wegen der Clubs. Komm wegen kaltem Seewasser, Joik-Konzerten und einem Himmel, der im Dezember um 14:00 schwarz wird.',
+    intro: 'Inari ist der kulturelle Sitz des samischen Parlaments (Sajos) und Heimat des Siida, des Museums, das alles erklärt, was man über Sápmi nicht wusste. Das „Nachtleben“ ist hier kulturell: das indigene Filmfestival Skábmagovat im Januar, das samische Musikfestival Ijahis Idja im August und eine Handvoll Bars, die meist Abendessen servieren. Kommen Sie nicht wegen der Clubs. Kommen Sie wegen des kalten Seewassers, der Joik-Konzerte und eines Himmels, der im Dezember um 14:00 Uhr schwarz wird.',
     venues: {
       'Hotel Inari Bar': { type: 'Hotelbar', note: 'Restaurant + Bar mit Seeblick, bis 01:00 geöffnet.' },
       'Café Čaiju': { type: 'Tagsüber', note: 'Café des samischen Parlaments: Kaffee + kulturelle Veranstaltungen.' },
@@ -112,10 +112,10 @@ const overlay: Record<string, CityOverlay> = {
       'Keine Clubs. Zwei Hotels mit Bars, drei Restaurants mit Alkoholausschank.',
       'Das indigene Filmfestival Skábmagovat läuft Ende Januar. Die Unterkünfte sind dann ausgebucht.',
       'Das Festival Ijahis Idja Mitte August: das, was einer „Szene“ in Inari am nächsten kommt.',
-      'Sajos und Siida sind kulturelle Pflichtbesuche, bevor du irgendwo trinkst.',
+      'Sajos und Siida sind kulturelle Pflichtbesuche, bevor Sie irgendwo etwas trinken.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '6.800' },
+      'Population': { label: 'Einwohner', value: '6 800' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'IVL · 40 Min.' },
       'Last call': { label: 'Letzte Runde', value: '01:00' },
       'Best season': { label: 'Beste Saison', value: 'Mitte Aug (Ijahis Idja) · Jan (Skábmagovat)' },
@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Meereslappland',
     blurb: 'SnowCastle, der Eisbrecher Sampo und der gestapelte Restaurantkomplex des Hotel Merihovi.',
     pageTagline: 'SnowCastle, Eisbrecher, Meereslappland.',
-    intro: 'Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland, und eine Stadt mit einem Trick: dem SnowCastle, das seit 1996 jeden Winter neu gebaut wird, mit einer Kapelle, einem Hotel und einer Bar mit Wänden aus Eis. Der Eisbrecher Sampo bietet ab Dezember nächtliche Touren, die zugleich als Bar-Location dienen. Das Nachtleben an Land ist klein: Das Hotel Merihovi betreibt einen mehrschichtigen Komplex (Lobbybar, Sportterrasse, Restaurant) und das war es im Wesentlichen. Eine industrielle Hafenstadt, die im Winter über ihrem Gewicht boxt.',
+    intro: 'Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland, und eine Stadt mit einem Trick: dem SnowCastle-Areal, auf dem seit 1996 jeden Winter etwas aus Schnee gebaut wird. Heute heißt das: ein winterlicher Schneepark und die ganzjährige Schneewelt SnowExperience365 mit ihrer Bar aus Eiswänden. Die komplette Burg mit Kapelle und Hotel wird nicht mehr gebaut. Der Eisbrecher Sampo bietet ab Dezember nächtliche Touren, die zugleich als Bar-Location dienen. Das Nachtleben an Land ist klein: Das Hotel Merihovi betreibt einen mehrschichtigen Komplex (Lobbybar, Sportterrasse, Restaurant) und das war es im Wesentlichen. Eine industrielle Hafenstadt, die im Winter über ihrem Gewicht boxt.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Eisbar', note: 'Geöffnet Jan–Apr. Drinks aus Eisgläsern, Wände bei –5 °C.' },
       'Sampo Icebreaker': { type: 'Bordbar', note: 'Fahrten in der Saison; die Bar läuft die ganze Tour.' },
@@ -138,7 +138,7 @@ const overlay: Record<string, CityOverlay> = {
       'Zug aus Helsinki: 8 Std. ohne Umsteigen.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '20.800' },
+      'Population': { label: 'Einwohner', value: '20 800' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KEM · 5 Min. · oder Bahn aus Helsinki' },
       'Last call': { label: 'Letzte Runde', value: '02:00' },
       'Best season': { label: 'Beste Saison', value: 'Jan–Apr (SnowCastle + Eisbrecher)' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'Finnlands zweitgrößtes Skigebiet.',
-    pageTagline: 'Finnlands zweitgrößtes Skigebiet.',
-    intro: 'Ylläs hat 63 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind. Äkäslompolo hat das lebhaftere Abendleben: Sport Resort Ylläs fürs Après, Taiga Pub & Kitchen und Ravintola Otso für den Rest des Abends. Kein Mega-Club. Ruhiger, älter, mehr Paare als Levi. Der Nationalpark Pallas-Yllästunturi ist der drittgrößte Finnlands.',
+    blurb: 'Eines der größten Skigebiete Finnlands.',
+    pageTagline: 'Eines der größten Skigebiete Finnlands.',
+    intro: 'Ylläs hat 62 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind. Äkäslompolo hat das lebhaftere Abendleben: Sport Resort Ylläs fürs Après, Taiga Pub & Kitchen und Ravintola Otso für den Rest des Abends. Kein Mega-Club. Ruhiger, älter, mehr Paare als Levi. Der Nationalpark Pallas-Yllästunturi ist der drittgrößte Finnlands.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + Bar', note: 'Äkäslompolos belebtester Après-Spot an den Pisten.' },
       'Taiga Pub & Kitchen': { type: 'Pub + Küche', note: 'Pub-Restaurant in Äkäslompolo: Zapfhähne, Pub-Essen, Sport.' },
@@ -161,7 +161,7 @@ const overlay: Record<string, CityOverlay> = {
       'Der Nationalpark umfasst 1 020 km². Die Stille ist die eigentliche Attraktion.',
     ],
     quickFacts: {
-      'Beds in resort': { label: 'Betten im Resort', value: '23.000' },
+      'Beds in resort': { label: 'Betten im Resort', value: '23 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KTT · 50 Min.' },
       'Last call': { label: 'Letzte Runde', value: '02:00' },
       'Best season': { label: 'Beste Saison', value: 'Nov–Apr (Skifahren) · März (längere Tage)' },
@@ -169,7 +169,7 @@ const overlay: Record<string, CityOverlay> = {
   },
   ruka: {
     region: 'Nordostfinnland',
-    blurb: 'Finnlands zweitgrößtes Skigebiet nach Skitagen, knapp südlich der Grenze Lapplands.',
+    blurb: 'Finnlands zweitgrößter Skiort nach Skitagen, knapp südlich der Grenze Lapplands.',
     pageTagline: 'Skigebiet im Bärenland.',
     intro: 'Ruka gehört offiziell zu Kuusamo und offiziell nicht zu Lappland, aber das ist Skifahrern egal: es ist eines der meistbesuchten Skigebiete Finnlands, und die Eröffnungswoche im November ist die lauteste. Zone ist das zentrale Après-Ski-Lokal am Pistenfuß, Piste und Colorado Bar tragen den Abend weiter. Außerhalb der Saison ist das Dorf sehr ruhig; von November bis April läuft es auf voller Tiefe.',
     venues: {
@@ -186,7 +186,7 @@ const overlay: Record<string, CityOverlay> = {
       'Offiziell nicht Lappland, aber alle behandeln es so.',
     ],
     quickFacts: {
-      'Beds in resort': { label: 'Betten im Resort', value: '15.000' },
+      'Beds in resort': { label: 'Betten im Resort', value: '15 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KAO · 30 Min.' },
       'Last call': { label: 'Letzte Runde', value: '03:00 (in der Saison)' },
       'Best season': { label: 'Beste Saison', value: 'Ende Nov (FIS-Eröffnung) · Dez–Apr' },
@@ -209,7 +209,7 @@ const overlay: Record<string, CityOverlay> = {
       'Letzte Runde gegen 01:00 in beiden Dörfern.',
     ],
     quickFacts: {
-      'Beds in two villages': { label: 'Betten in zwei Dörfern', value: '5.000' },
+      'Beds in two villages': { label: 'Betten in zwei Dörfern', value: '5 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'RVN · 1 Std. 30 · oder KTT · 2 Std. 30' },
       'Last call': { label: 'Letzte Runde', value: '01:00' },
       'Best season': { label: 'Beste Saison', value: 'Dez–Apr (Skifahren) · Sep–März (Polarlicht)' },
@@ -219,7 +219,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Mittellappland',
     blurb: 'Midnight Sun Film Festival: hier werden Filme um 03:00 bei vollem Tageslicht gezeigt.',
     pageTagline: 'Heimat des Midnight Sun Film Festival.',
-    intro: 'Sodankylä ist ein 9 000-Einwohner-Dorf am Fluss Kemijoki, und einmal im Jahr, Mitte Juni, wird es zum surrealsten Filmfestival der Welt. Das Midnight Sun Film Festival läuft vier Tage mit Vorführungen rund um die Uhr. Niemand schläft, denn die Sonne geht nicht unter. Außerhalb der Festivalwoche besteht die Szene aus einer Hotelbar und ein paar lokalen Pubs. Komm fürs Festival oder für die Stille.',
+    intro: 'Sodankylä ist ein 9 000-Einwohner-Dorf am Fluss Kemijoki, und einmal im Jahr, Mitte Juni, wird es zum surrealsten Filmfestival der Welt. Das Midnight Sun Film Festival läuft vier Tage mit Vorführungen rund um die Uhr. Niemand schläft, denn die Sonne geht nicht unter. Außerhalb der Festivalwoche besteht die Szene aus einer Hotelbar und ein paar lokalen Pubs. Kommen Sie für das Festival oder für die Stille.',
     venues: {
       'Hotel Sodankylä Bar': { type: 'Hotelbar', note: 'Hotelbar im Zentrum, geöffnet bis 01:00.' },
       'Piitsi Pub': { type: 'Pub', note: 'Terrasse am Ufer des Kitinen; im Sommer wechselnde Live-Acts.' },
@@ -232,7 +232,7 @@ const overlay: Record<string, CityOverlay> = {
       'Letzte Bestellung fast das ganze Jahr um 01:00; in der Festivalwoche später.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '8.600' },
+      'Population': { label: 'Einwohner', value: '8 600' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'RVN · 1 Std. 45' },
       'Last call': { label: 'Letzte Runde', value: '01:00 / 04:00 im Festival' },
       'Best season': { label: 'Beste Saison', value: 'Mitte Juni (Midnight Sun Film Festival)' },
@@ -253,7 +253,7 @@ const overlay: Record<string, CityOverlay> = {
       'Die Preise sind auf Dorfniveau, deutlich unter den Pistenbars von Levi.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '6.500' },
+      'Population': { label: 'Einwohner', value: '6 500' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KTT · 5 Min.' },
       'Last call': { label: 'Letzte Runde', value: '02:00' },
       'Best season': { label: 'Beste Saison', value: 'Ganzjährig (Levi-Personalszene)' },
@@ -263,7 +263,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Gemeinde Inari',
     blurb: 'Die Lobbybar des Hotel Ivalo + der Pub des Hotel Kultahippu.',
     pageTagline: 'Der nördlichste Flughafen, nur Hotelbars.',
-    intro: 'Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die Stadt selbst hat 4.000 Einwohner. Das Hotel Ivalo hat eine Lobbybar und das Restaurant Lapin Yö. Das Hotel Kultahippu hat den einzigen richtigen Pub im Dorf. Darüber hinaus: Hotelbars und ein Tankstellenkiosk, der Bier verkauft.',
+    intro: 'Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die Stadt selbst hat 4 000 Einwohner. Das Hotel Ivalo hat eine Lobbybar und das Restaurant Lapin Yö. Das Hotel Kultahippu hat den einzigen richtigen Pub im Dorf. Darüber hinaus: Hotelbars und ein Tankstellenkiosk, der Bier verkauft.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Täglich geöffnet. Der Feierabend-Treff der Einheimischen.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotelbar', note: 'Ruhiger, mit angeschlossenem Restaurant.' },
@@ -275,7 +275,7 @@ const overlay: Record<string, CityOverlay> = {
       'Kein Taxistand: über die Hotelrezeption buchen.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '4.000' },
+      'Population': { label: 'Einwohner', value: '4 000' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'IVL · 5 Min.' },
       'Last call': { label: 'Letzte Runde', value: '02:00 / 03:00 am Wochenende' },
       'Best season': { label: 'Beste Saison', value: 'Sep–März (Polarlicht) · Aug (Festivals)' },
@@ -285,19 +285,19 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Westlappland',
     blurb: 'Kein Nachtleben. Der Pallas-Yllästunturi-Nationalpark ist die Attraktion.',
     pageTagline: 'Das Tor zum Nationalpark.',
-    intro: 'Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands). Es gibt keinen Club, keinen Pub-Crawl, und die meisten Abende enden früh. Das Harriniva Wilderness Hotel bietet Safari-Gästen die Kombi Abendsauna + Lobbybar, und das Jeris Lakeside Resort macht dasselbe am See Jerisjärvi. Das ist die "Szene" von Muonio, ganz ehrlich.',
+    intro: 'Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands). Es gibt keinen Club, keinen Pub-Crawl, und die meisten Abende enden früh. Das Harriniva Wilderness Hotel bietet Safari-Gästen die Kombi Abendsauna + Lobbybar, und das Jeris Lakeside Resort macht dasselbe am See Jerisjärvi. Das ist die „Szene“ von Muonio, ganz ehrlich.',
     venues: {
       'Jeris Lakeside Resort': { type: 'Hotelbar', note: 'Seehotel am Jerisjärvi: Restaurant und Bar für den Abend.' },
       'Harriniva Wilderness Hotel': { type: 'Hotelbar', note: 'Sauna + Bar, überwiegend Safari-Gäste.' },
     },
     knowList: [
-      'Keine Nightlife-Szene: der Nationalpark ist der Grund zu kommen.',
+      'Keine Ausgehszene: der Nationalpark ist der Grund zu kommen.',
       'Die Abende enden wochentags früh; in der Ferienzeit etwas später.',
       'Nächster Flughafen: Kittilä (KTT), 80 km.',
-      'Die Aurora-Beobachtung ist hier hervorragend, gerade weil es keine Lichtverschmutzung gibt.',
+      'Die Polarlichtbeobachtung ist hier hervorragend, gerade weil es kaum Lichtverschmutzung gibt.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '2.300' },
+      'Population': { label: 'Einwohner', value: '2 300' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KTT · 1 Std. 15' },
       'Last call': { label: 'Letzte Runde', value: '23:00 / 01:00 am Wochenende' },
       'Best season': { label: 'Beste Saison', value: 'Sep–März (Polarlicht · geringe Lichtverschmutzung)' },
@@ -307,7 +307,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Ostlappland',
     blurb: 'Mitten im Nirgendwo. Finnlands ruhigstes Skigebiet.',
     pageTagline: 'Mitten im Nirgendwo.',
-    intro: '3 300 Einwohner und eine Skipiste. Der Slogan des Ortes lautet wörtlich "In the Middle of Nowhere", und er ist als Kompliment gemeint. Das Hotel Revontuli hat die einzige Bar, die lange offen ist; auf der Pistenseite kommt in der Saison der eine oder andere Pub dazu. Außerhalb des Winters: Stille. Die augenzwinkernde "Salla 2032"-Winterspiele-Kampagne brachte den Ort auf die Landkarte. Die Szene selbst blieb gleich. Nicht wegen der Clubs kommen.',
+    intro: '3 300 Einwohner und eine Skipiste. Der Slogan des Ortes lautet wörtlich „In the Middle of Nowhere“, und er ist als Kompliment gemeint. Das Hotel Revontuli hat die einzige Bar, die lange offen ist; auf der Pistenseite kommt in der Saison der eine oder andere Pub dazu. Außerhalb des Winters: Stille. Die augenzwinkernde „Salla 2032“-Winterspiele-Kampagne brachte den Ort auf die Landkarte. Die Szene selbst blieb gleich. Kommen Sie nicht wegen der Clubs.',
     venues: {
       'Holiday Club Salla': { type: 'Hotelbar', note: 'Die einzige spätabendliche Location. Restaurant + Bar.' },
       'Salla Wilderness Park': { type: 'Tages-Location', note: 'Mittagessen + Tagescafé für Parkbesucher.' },
@@ -316,10 +316,10 @@ const overlay: Record<string, CityOverlay> = {
       'Nächster Flughafen: Kuusamo (KAO), 90 km.',
       'Die russische Grenze liegt wenige Kilometer östlich. Der Übergang ist geschlossen; die Wildnis ist der Punkt.',
       'Letzte Bestellung in der Saison um 01:00, sonst früher.',
-      'Die "Salla 2032"-Bewerbung war eine augenzwinkernde Klimakampagne. Sie passt zum Humor des Ortes.',
+      'Die „Salla 2032“-Bewerbung war eine augenzwinkernde Klimakampagne. Sie passt zum Humor des Ortes.',
     ],
     quickFacts: {
-      'Population': { label: 'Einwohner', value: '3.300' },
+      'Population': { label: 'Einwohner', value: '3 300' },
       'Closest airport': { label: 'Nächster Flughafen', value: 'KAO · 1 Std. 30' },
       'Last call': { label: 'Letzte Runde', value: '23:00 / 01:00 in der Saison' },
       'Best season': { label: 'Beste Saison', value: 'Dez–Apr (Skifahren · Olympia-Bewerbung 2032)' },

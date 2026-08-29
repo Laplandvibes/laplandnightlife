@@ -19,7 +19,7 @@ const overlay: Record<string, CityOverlay> = {
       'Oulu is de enige stad zo noordelijk met een echte zondagse caféscene.',
     ],
     quickFacts: {
-      'Population': { label: 'Inwoners', value: '210.000' },
+      'Population': { label: 'Inwoners', value: '218.000' },
       'Closest airport': { label: 'Dichtstbijzijnde luchthaven', value: 'OUL · 15 min' },
       'Last call': { label: 'Laatste ronde', value: '03:30' },
       'Best season': { label: 'Beste seizoen', value: 'Hele jaar · CHvE 2026' },
@@ -125,7 +125,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Zee-Lapland',
     blurb: 'SnowCastle, ijsbreker Sampo en het gelaagde restaurantcomplex van Hotel Merihovi.',
     pageTagline: 'SnowCastle, ijsbreker, Zee-Lapland.',
-    intro: 'Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland, en een stad met één troef: het SnowCastle, elke winter opnieuw opgebouwd sinds 1996, met een kapel, een hotel en een bar met ijzen wanden. Ijsbreker Sampo vaart vanaf december en doet nachtelijke tochten die ook als barlocatie dienen. Het nachtleven op het vasteland is klein: Hotel Merihovi runt een gelaagd complex (lobbybar, sportterras, restaurant) en daar blijft het zo\'n beetje bij. Industriële havenstad die in de winter boven haar gewicht bokst.',
+    intro: 'Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland, en een stad met één troef: het SnowCastle-terrein, waar sinds 1996 elke winter iets van sneeuw wordt gebouwd. Vandaag is dat een winters sneeuwpark en de overdekte sneeuwwereld SnowExperience365, het hele jaar open, met een bar met ijzen wanden; het volledige kasteel met kapel en hotel wordt niet meer gebouwd. Ijsbreker Sampo vaart vanaf december en doet nachtelijke tochten die ook als barlocatie dienen. Het nachtleven op het vasteland is klein: Hotel Merihovi runt een gelaagd complex (lobbybar, sportterras, restaurant) en daar blijft het zo\'n beetje bij. Industriële havenstad die in de winter boven haar gewicht bokst.',
     venues: {
       'SnowCastle Ice Bar': { type: 'IJsbar', note: 'Open jan–apr. Drankjes uit ijsglazen, muren op –5 °C.' },
       'Sampo Icebreaker': { type: 'Boordbar', note: 'Vaarten in het seizoen; de bar draait de hele tocht.' },
@@ -146,9 +146,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   yllas: {
     region: 'Kolari / Muonio',
-    blurb: 'Het op een na grootste skigebied van Finland.',
-    pageTagline: 'Het op een na grootste skigebied van Finland.',
-    intro: 'Ylläs heeft 63 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de pistes maar gescheiden door 20 minuten rijden. Äkäslompolo heeft de levendigste avondscene: Sport Resort Ylläs voor après, Taiga Pub & Kitchen en Ravintola Otso voor de rest van de avond. Geen megaclub. Rustiger, ouder, meer stellen dan Levi. Nationaal park Pallas-Yllästunturi is het op twee na grootste van Finland.',
+    blurb: 'Een van de grootste skigebieden van Finland.',
+    pageTagline: 'Een van de grootste skigebieden van Finland.',
+    intro: 'Ylläs heeft 62 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de pistes maar gescheiden door 20 minuten rijden. Äkäslompolo heeft de levendigste avondscene: Sport Resort Ylläs voor après, Taiga Pub & Kitchen en Ravintola Otso voor de rest van de avond. Geen megaclub. Rustiger, ouder, meer stellen dan Levi. Nationaal park Pallas-Yllästunturi is het op twee na grootste van Finland.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'De drukste après-plek van Äkäslompolo, aan de pistes.' },
       'Taiga Pub & Kitchen': { type: 'Pub + keuken', note: 'Pub-restaurant in Äkäslompolo: tap, pubfood, sport.' },
