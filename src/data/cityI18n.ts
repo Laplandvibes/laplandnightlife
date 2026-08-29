@@ -11,6 +11,8 @@ import type { Lang } from '../i18n/useLang';
 /** Translatable fields of a city. venues/quickFacts are keyed by their English
  *  value (venue name / fact label) so array order can never drift. */
 export interface CityOverlay {
+  /** Lokalisoitu näyttönimi, kun EN-nimi ei kelpaa kohdekielessä (fi: "Kittilän kirkonkylä"). */
+  name?: string;
   tag?: string;
   region?: string;
   blurb?: string;
