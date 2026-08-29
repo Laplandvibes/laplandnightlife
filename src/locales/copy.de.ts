@@ -152,7 +152,7 @@ const de = {
       ctaBody: 'Festival-Wochenenden sind oft Monate im Voraus ausgebucht. Hotels erreichen 60–80 % Auslastung 4–6 Wochen vorher.',
       ctaBtn: 'Hotels nach Datum suchen →',
       ticketsH: 'Wo es die Tickets gibt',
-      ticketsBody: 'Finnische Arena- und Festival-Vorverkäufe laufen größtenteils über landesweite Ticketportale. Ticketmaster Finnland ist eines der wichtigsten — Qstock etwa verkauft seine Tickets nur dort. Die Seite ist auf Finnisch, der Ablauf aber Standard-Ticketmaster; einfach den Eventnamen suchen. Kleinere Festivals verkaufen oft direkt — prüfen Sie zuerst die Seite des Events.',
+      ticketsBody: 'Finnische Arena- und Festival-Vorverkäufe laufen größtenteils über landesweite Ticketportale. Ticketmaster Finnland ist eines der wichtigsten, Qstock etwa verkauft seine Tickets nur dort. Die Seite ist auf Finnisch, der Ablauf aber Standard-Ticketmaster; einfach den Eventnamen suchen. Kleinere Festivals verkaufen oft direkt, prüfen Sie zuerst die Seite des Events.',
       ticketsCta: 'Ticketmaster Finnland öffnen',
       pastLabel: 'Vorbei',
       nextUp: 'Als Nächstes',

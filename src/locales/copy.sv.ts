@@ -64,7 +64,7 @@ const sv = {
       all: 'Se alla 14 städer →',
       leadH: 'Så läser du listan',
       leadP1: 'Fjorton orter, fem sorters kväll. Två har en klubbscen som går året runt. Tre är skidorter där säsongen avgör allt. Tre är kulturstäder, två är vildmarksmål där kvällen byggs kring hotellbaren i stället för klubben, och fyra är småstäder med en pub och inga later.',
-      leadP2: 'Ordningen följer vad som faktiskt är öppet, inte hur stor orten är. Ett mål med gott om bäddar men ett DJ-pass i veckan hamnar efter en stad vars bar öppnar årets alla fredagar — den senare går att planera efter.',
+      leadP2: 'Ordningen följer vad som faktiskt är öppet, inte hur stor orten är. Ett mål med gott om bäddar men ett DJ-pass i veckan hamnar efter en stad vars bar öppnar årets alla fredagar, den senare går att planera efter.',
       leadP3: 'Där en ort saknar nattliv värt namnet står det på dess sida. Det är därför alla fjorton finns här och inte de åtta som hade gett ett bättre argument.',
     },
     events: {
@@ -163,7 +163,7 @@ const sv = {
     ctaBody: 'Festivalhelger blir slutsålda månader i förväg. Hotell når 60–80 % beläggning 4–6 veckor innan.',
     ctaBtn: 'Sök hotell efter datum →',
     ticketsH: 'Var biljetterna säljs',
-    ticketsBody: 'Biljettsläppen för finska arenor och festivaler går till stor del via rikstäckande biljettbolag. Ticketmaster Finland är ett av de viktigaste — Qstock säljer till exempel sina biljetter bara där. Sajten är på finska, men flödet är standard-Ticketmaster; sök på evenemangets namn. Mindre festivaler säljer ofta direkt: kolla först evenemangets egen sida.',
+    ticketsBody: 'Biljettsläppen för finska arenor och festivaler går till stor del via rikstäckande biljettbolag. Ticketmaster Finland är ett av de viktigaste, Qstock säljer till exempel sina biljetter bara där. Sajten är på finska, men flödet är standard-Ticketmaster; sök på evenemangets namn. Mindre festivaler säljer ofta direkt: kolla först evenemangets egen sida.',
     ticketsCta: 'Öppna Ticketmaster Finland',
     pastLabel: 'Genomfört',
     nextUp: 'Härnäst',

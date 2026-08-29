@@ -64,7 +64,7 @@ const nl = {
       all: 'Bekijk alle 14 steden →',
       leadH: 'Hoe u deze lijst leest',
       leadP1: 'Veertien plaatsen, vijf soorten avond. Twee hebben een clubscene die het hele jaar draait. Drie zijn wintersportplaatsen waar het seizoen alles bepaalt. Drie zijn culturele ankers, twee zijn wildernisbestemmingen waar de avond om een hotelbar draait in plaats van om een club, en vier zijn kleine plaatsen met één café en geen pretenties.',
-      leadP2: 'De volgorde volgt wat er werkelijk open is, niet hoe groot de plaats is. Een bestemming met veel bedden maar één dj-avond per week komt achter een stadje waarvan de bar elke vrijdag van het jaar opengaat — op dat laatste valt te plannen.',
+      leadP2: 'De volgorde volgt wat er werkelijk open is, niet hoe groot de plaats is. Een bestemming met veel bedden maar één dj-avond per week komt achter een stadje waarvan de bar elke vrijdag van het jaar opengaat, op dat laatste valt te plannen.',
       leadP3: 'Waar een plaats geen nachtleven heeft dat die naam verdient, staat dat op haar pagina. Daarom staan alle veertien hier en niet de acht die een beter verhaal zouden opleveren.',
     },
     events: {
@@ -163,7 +163,7 @@ const nl = {
     ctaBody: 'Festivalweekends zijn maanden vooraf uitverkocht. Hotels zitten 4–6 weken vooraf op 60–80 %.',
     ctaBtn: 'Hotels zoeken op datum →',
     ticketsH: 'Waar je de tickets koopt',
-    ticketsBody: 'De kaartverkoop van Finse arena\'s en festivals loopt grotendeels via landelijke ticketkantoren. Ticketmaster Finland is een van de belangrijkste — Qstock verkoopt zijn tickets bijvoorbeeld alleen daar. De site is Fins, maar de flow is standaard Ticketmaster; zoek op de naam van het event. Kleinere festivals verkopen vaak direct: check eerst de eigen pagina van het event.',
+    ticketsBody: 'De kaartverkoop van Finse arena\'s en festivals loopt grotendeels via landelijke ticketkantoren. Ticketmaster Finland is een van de belangrijkste, Qstock verkoopt zijn tickets bijvoorbeeld alleen daar. De site is Fins, maar de flow is standaard Ticketmaster; zoek op de naam van het event. Kleinere festivals verkopen vaak direct: check eerst de eigen pagina van het event.',
     ticketsCta: 'Open Ticketmaster Finland',
     pastLabel: 'Voorbij',
     nextUp: 'Hierna',

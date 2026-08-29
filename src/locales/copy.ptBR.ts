@@ -154,7 +154,7 @@ const ptBR = {
     ctaBody: 'Fins de semana de festival esgotam meses antes. Hotéis chegam a 60–80 % de ocupação 4–6 semanas antes.',
     ctaBtn: 'Buscar hotéis por data →',
     ticketsH: 'Onde comprar os ingressos',
-    ticketsBody: 'A venda de ingressos de arenas e festivais na Finlândia passa em grande parte por bilheterias nacionais. A Ticketmaster Finlândia é uma das principais — o Qstock, por exemplo, vende ingressos só por lá. O site é em finlandês, mas o fluxo é o padrão da Ticketmaster; busque pelo nome do evento. Festivais menores costumam vender direto: confira antes a página do evento.',
+    ticketsBody: 'A venda de ingressos de arenas e festivais na Finlândia passa em grande parte por bilheterias nacionais. A Ticketmaster Finlândia é uma das principais, o Qstock, por exemplo, vende ingressos só por lá. O site é em finlandês, mas o fluxo é o padrão da Ticketmaster; busque pelo nome do evento. Festivais menores costumam vender direto: confira antes a página do evento.',
     ticketsCta: 'Abrir a Ticketmaster Finlândia',
     pastLabel: 'Encerrado',
     nextUp: 'A seguir',

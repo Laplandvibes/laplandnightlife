@@ -263,7 +263,7 @@
       "candidates": [
         "Newer Grow Old @ Hallituskatu 17, 90100 Oulu [CLOSED_PERMANENTLY]"
       ],
-      "reason": "\"Newer Grow Old\" name mismatch (dice 0.82 but chain sibling — adds \"newer\")"
+      "reason": "\"Newer Grow Old\" name mismatch (dice 0.82 but chain sibling, adds \"newer\")"
     },
     {
       "key": "oulu/Kaarlenholvi",
@@ -283,7 +283,7 @@
       "candidates": [
         "Half Moon @ Koskikatu 25, 96200 Rovaniemi [CLOSED_PERMANENTLY]"
       ],
-      "reason": "\"Half Moon\" is missing the identifying word \"club\" — likely a sibling property or the parent hotel"
+      "reason": "\"Half Moon\" is missing the identifying word \"club\": likely a sibling property or the parent hotel"
     },
     {
       "key": "rovaniemi/Kansan Karaoke Pub",
@@ -307,7 +307,7 @@
         "Levi Summit @ Tunturitie 205, 99130 Kittilä",
         "Levi Panorama View @ Kittilä, Tunturitie 205, 99130 Levi"
       ],
-      "reason": "\"Restaurant Panorama\" name mismatch (dice 0.50) | \"Hotel Levi Panorama\" name mismatch (dice 0.48) | \"Panorama Sky Bar\" wrong place — address \"Al. Jerozolimskie 65/79, 00-697 Warszawa, Poland\" has none of [levi, sirkka, kittila, kongas] | \"Levi Summit\" name mismatch (dice 0.00) | \"Levi Panorama View\" name mismatch (dice 0.52)"
+      "reason": "\"Restaurant Panorama\" name mismatch (dice 0.50) | \"Hotel Levi Panorama\" name mismatch (dice 0.48) | \"Panorama Sky Bar\" wrong place, address \"Al. Jerozolimskie 65/79, 00-697 Warszawa, Poland\" has none of [levi, sirkka, kittila, kongas] | \"Levi Summit\" name mismatch (dice 0.00) | \"Levi Panorama View\" name mismatch (dice 0.52)"
     },
     {
       "key": "saariselka/Kakslauttanen Igloo Bar",
@@ -392,7 +392,7 @@
       "candidates": [
         "Icebreaker Sampo check-in @ Lumilinnankatu 15A, 94100 Kemi"
       ],
-      "reason": "\"Icebreaker Sampo check-in\" name mismatch (dice 0.74 but chain sibling — adds \"check\")"
+      "reason": "\"Icebreaker Sampo check-in\" name mismatch (dice 0.74 but chain sibling, adds \"check\")"
     },
     {
       "key": "yllas/Sport Resort Ylläs",
@@ -442,7 +442,7 @@
       "candidates": [
         "Hotel Pyhätunturi @ Kultakeronkatu 21, 98530 Pelkosenniemi"
       ],
-      "reason": "\"Hotel Pyhätunturi\" is missing the identifying word \"bar\" — likely a sibling property or the parent hotel"
+      "reason": "\"Hotel Pyhätunturi\" is missing the identifying word \"bar\": likely a sibling property or the parent hotel"
     },
     {
       "key": "pyha-luosto/Hotel Aurora Luosto",
@@ -473,7 +473,7 @@
       "candidates": [
         "Hotelli Sodankylä @ Unarintie 15, 99600 Sodankylä"
       ],
-      "reason": "\"Hotelli Sodankylä\" name mismatch (dice 0.77 but chain sibling — adds \"hotelli\")"
+      "reason": "\"Hotelli Sodankylä\" name mismatch (dice 0.77 but chain sibling, adds \"hotelli\")"
     },
     {
       "key": "kittila/Hotel Kittilä Bar",
@@ -483,7 +483,7 @@
       "candidates": [
         "hotel Kittilä @ Valtatie 49, 99100 Kittilä"
       ],
-      "reason": "\"hotel Kittilä\" is missing the identifying word \"bar\" — likely a sibling property or the parent hotel"
+      "reason": "\"hotel Kittilä\" is missing the identifying word \"bar\": likely a sibling property or the parent hotel"
     },
     {
       "key": "ivalo/Club Nord (Hotel Ivalo)",
@@ -503,7 +503,7 @@
       "candidates": [
         "hotel Kultahippu @ Petsamontie 1, 99800 Inari"
       ],
-      "reason": "\"hotel Kultahippu\" is missing the identifying word \"pub\" — likely a sibling property or the parent hotel"
+      "reason": "\"hotel Kultahippu\" is missing the identifying word \"pub\": likely a sibling property or the parent hotel"
     },
     {
       "key": "ivalo/Hotel Ivalo Lobby Bar",
