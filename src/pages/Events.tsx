@@ -96,7 +96,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
     ]},
     { monthKey: 'June', items: [
       { name: 'Keskiyön auringon ikkuna avautuu', date: '6.6.2026', city: 'Napapiirin pohjoispuoli', body: 'Aurinko lakkaa laskemasta. Jatkuu 7. heinäkuuta saakka.' },
-      { name: 'Keskiyön auringon filmifestivaali', date: '10.–14.6.2026', city: 'Sodankylä', body: '80+ elokuvaa. 03:00-näytös 1600-luvun puukirkossa on kuvatuin.' },
+      { name: 'Keskiyön auringon filmifestivaali', date: '10.–14.6.2026', city: 'Sodankylä', body: 'Yli 80 elokuvaa. 03:00-näytös 1600-luvun puukirkossa on kuvatuin.' },
       { name: 'Juhannus', date: '19.–21.6.2026', city: 'Kaikkialla', body: 'Kokot, sauna, järviuinnit, mökkiviikonloput. Kaupungit tyhjenevät; paikalliset lähtevät.' },
       { name: 'Ilmakitaransoiton MM-karsinta', date: 'Kesäkuu, Oulu', city: 'Oulu', body: 'Karsinta elokuun Oulun finaaleihin. ECoC2026:n laajennettu ohjelma.' },
     ]},

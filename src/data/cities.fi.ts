@@ -5,7 +5,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Pohjois-Pohjanmaa',
     blurb: 'Euroopan kulttuuripääkaupunki 2026 ja pohjoisen ainoa aidosti ympärivuotinen klubikulttuuri.',
     pageTagline: 'Euroopan kulttuuripääkaupunki 2026.',
-    intro: '218 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä. Oulu on pohjoisen ainoa kaupunki, jossa arki-illat oikeasti elävät. Porukka kiertää 45 Specialin, Kaarlenholviin ja St Michaelin väliä myöhään. Vuonna 2026 päälle tulee Euroopan kulttuuripääkaupunkiohjelma: 1 500 tapahtumaa, mukana ilmakitaransoiton MM-kisat, Qstock, Elojazz ja Frozen People -talvifestivaali.',
+    intro: '218 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä. Oulu on pohjoisen ainoa kaupunki, jossa arki-illat oikeasti elävät. Porukka kiertää 45 Specialin, Kaarlenholvin ja St Michaelin väliä myöhään. Vuonna 2026 päälle tulee Euroopan kulttuuripääkaupunkiohjelma: 1 500 tapahtumaa, mukana ilmakitaransoiton MM-kisat, Qstock, Elojazz ja Frozen People -talvifestivaali.',
     venues: {
       'St Michael': { type: 'Irkkupubi + livemusiikki', note: 'Rotuaarin kiintopiste: irlantilaispubi, jossa kiertue-esiintyjiä ja tribuutti-iltoja.' },
       "Hemingway's": { type: 'Baari', note: 'Viski- ja pienpanimobaari Kirkkokadulla: rauhallisempi tuoppi, auki myöhään.' },
@@ -14,7 +14,7 @@ const overlay: Record<string, CityOverlay> = {
     },
     knowList: [
       'Rotuaari on suljettu autoliikenteeltä. Lähes koko skene on yhden lyhyen kävelyn sisällä.',
-      'Kulttuuripääkaupunkiohjelma pyörii tammi–joulukuun 2026: varaa majoitus ajoissa.',
+      'Kulttuuripääkaupunkiohjelma pyörii tammi–joulukuussa 2026: varaa majoitus ajoissa.',
       'Anniskelu päättyy keskustassa 03:30; ovet menevät kiinni 04:00.',
       'Oulu on ainoa näin pohjoinen kaupunki, jossa on aito sunnuntain päiväkahvilaskene.',
     ],
@@ -43,7 +43,7 @@ const overlay: Record<string, CityOverlay> = {
       'Koskikatu ja kävelykatu kattavat lähes koko skenen. Kaikki on kävelymatkan päässä.',
       'Anniskelu päättyy 03:00; klubit sulkevat talvella 03:30, sesongissa joskus 04:00.',
       'Uberia ei ole. Tallenna paikallistaksin numero 0100 84 84.',
-      'Revontulikausi huipentuu loka–maaliskuussa. Tsekkaa ennuste ennen kuin lyöt illan lukkoon tanssilattialle.',
+      'Revontulikausi huipentuu loka–maaliskuussa. Tsekkaa ennuste ennen kuin lyöt tanssilattiaillan lukkoon.',
     ],
     quickFacts: {
       'Population': { label: 'Asukasluku', value: '64 000' },
@@ -66,7 +66,7 @@ const overlay: Record<string, CityOverlay> = {
       'Levi hiljenee laskettelukauden ulkopuolella. Tarkista aukiolopäivät ennen isoa iltaa.',
       'FIS-maailmancup marraskuun puolivälissä myydään loppuun vuotta etukäteen.',
       'Anniskelu päättyy sesongissa 03:30; osa paikoista jatkaa myöhempään maailmancup-viikolla.',
-      'Monolinja vaihtelee paikoittain. Ihku sanoo kuuluisasti kyllä.',
+      'Monolinja vaihtelee paikan mukaan. Ihku sanoo tunnetusti kyllä.',
     ],
     quickFacts: {
       'Beds in resort': { label: 'Vuodepaikkoja keskuksessa', value: '24 000' },
@@ -78,7 +78,7 @@ const overlay: Record<string, CityOverlay> = {
   saariselka: {
     region: 'Inarin kunta',
     blurb: 'Lasi-iglut, Kakslauttasen Igloo Bar ja yksi aito pubi: Local Pub Panimo.',
-    pageTagline: 'Erämaan premium: iglubaarien kylä.',
+    pageTagline: 'Erämaaluksus: iglubaarien kylä.',
     intro: 'Saariselkä ei ole klubikohde. Se on lasi-iglukohde, ja juuri siinä on pointti. Kakslauttanen Arctic Resortilla on maailman valokuvatuin baari (lasi-iglu, jonka kattona ovat revontulet). Itse kylä on yksi pääkatu, kaksi syömisen arvoista ravintolaa ja Local Pub Panimo, pienpanimo, jolla on Lapin luotettavin pienpanimo-oluen hanalista. Pimeän tultua tapahtumat ovat keskuksissa, eivät kylässä.',
     venues: {
       'Local Pub Panimo': { type: 'Kyläpubi', note: 'Paikallisia ja pienpanimohanoja, pubiruokaa, karaokea ja live-iltoja. Kylän oma pubi.' },
@@ -103,7 +103,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Inarin kunta',
     blurb: 'Saamelaiskulttuurin pääkaupunki: Sajos, Siida, Inarijärvi ja Pielpajärven erämaakirkko.',
     pageTagline: 'Saamelaiskulttuurin pääkaupunki.',
-    intro: 'Inari on saamelaiskäräjien (Sajos) kulttuurinen kotipaikka ja Siidan koti, museon, joka selittää kaiken, mitä et tiennyt Saamenmaasta. \'Yöelämä\' on täällä kulttuuria: Skábmagovat-alkuperäiskansaelokuvafestivaali tammikuussa, Ijahis Idja -saamelaismusiikkifestivaali elokuussa ja kourallinen baareja, jotka pääosin tarjoilevat illallisia. Älä tule klubien takia. Tule kylmän järviveden, joikukonserttien ja taivaan takia, joka pimenee joulukuussa klo 14:00.',
+    intro: 'Inari on saamelaiskäräjien (Sajos) kulttuurinen kotipaikka, ja täällä on myös Siida, museo, joka selittää kaiken, mitä et tiennyt Saamenmaasta. \'Yöelämä\' on täällä kulttuuria: Skábmagovat-alkuperäiskansaelokuvafestivaali tammikuussa, Ijahis Idja -saamelaismusiikkifestivaali elokuussa ja kourallinen baareja, jotka pääosin tarjoilevat illallisia. Älä tule klubien takia. Tule kylmän järviveden, joikukonserttien ja sen taivaan takia, joka pimenee joulukuussa klo 14:00.',
     venues: {
       'Hotel Inari Bar': { type: 'Hotellibaari', note: 'Järvinäkymäravintola ja -baari, auki klo 01:00 asti.' },
       'Café Čaiju': { type: 'Päiväpaikka', note: 'Saamelaiskäräjien kahvila: kahvia ja kulttuuritapahtumia.' },
@@ -127,14 +127,14 @@ const overlay: Record<string, CityOverlay> = {
     pageTagline: 'LumiLinna, jäänmurtaja, Meri-Lappi.',
     intro: 'Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinna, joka on rakennettu uudelleen joka talvi vuodesta 1996, kappeleineen, hotelleineen ja jääseinäisine baareineen. Jäänmurtaja Sampon risteilyt pyörivät joulukuusta lähtien öisin ja toimivat samalla baaripaikkoina. Mantereen yöelämä on pientä: Hotel Merihovi pyörittää monikerroksista kokonaisuutta (aulabaari, urheiluterassi, ravintola) ja siinä se pääosin onkin. Teollinen satamakaupunki, joka lyö talvella yli oman painonsa.',
     venues: {
-      'SnowCastle Ice Bar': { type: 'Jääbaari', note: 'Auki tammi–huhtikuun. Juomat jäälaseista, seinät –5 °C:ssa.' },
+      'SnowCastle Ice Bar': { type: 'Jääbaari', note: 'Auki tammi–huhtikuussa. Juomat jäälaseista, seinät –5 °C:ssa.' },
       'Sampo Icebreaker': { type: 'Laivabaari', note: 'Risteilyt sesongissa; baari palvelee koko matkan.' },
       'Hotel Merihovi': { type: 'Hotellikokonaisuus', note: 'Aulabaari + urheiluterassi + ravintola.' },
     },
     knowList: [
       'Suurin osa tapahtumista on LumiLinnassa tammikuusta huhtikuuhun.',
       'Jäänmurtaja Sampo vaatii varauksen 2–3 päivää etukäteen sesongin huipulla.',
-      'Anniskelu loppuu kaupungissa 02:00; LumiLinnan baari sulkee aiemmin (yleensä 24:00).',
+      'Anniskelu loppuu kaupungissa 02:00; LumiLinnan baari menee kiinni aiemmin (yleensä 24:00).',
       'Juna Helsingistä: 8 h suoraan.',
     ],
     quickFacts: {
@@ -196,7 +196,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Pelkosenniemi / Sodankylä',
     blurb: 'Ametistia, tuntureita ja Lapin hiljaisinta hiihtoa.',
     pageTagline: 'Ametistituntureilla.',
-    intro: 'Kaksi pientä tunturia, 35 km erillään, jakavat saman kansallispuiston. Pyhällä on suurempi hiihtoalue; Luostolla on ametistikaivos, jolla voi vierailla keskiyöllä revontulien alla. Kummallakaan ei ole klubeja. Molemmilla on hotellibaareja, jotka kannattavat takkaillan: Hotel Pyhätunturi ravintolatason ruokailuun, Hotel Aurora Luostolla revontuli-ikkunabaariin. Lapin hiljaisin \'hiihtokohde\', ja se on siitä ylpeä.',
+    intro: 'Kaksi pientä tunturia 35 km:n päässä toisistaan jakavat saman kansallispuiston. Pyhällä on suurempi hiihtoalue; Luostolla on ametistikaivos, jolla voi vierailla keskiyöllä revontulien alla. Kummallakaan ei ole klubeja. Molemmilla on takkaillan arvoisia hotellibaareja: Hotel Pyhätunturi ravintolatason ruokailuun, Hotel Aurora Luostolla revontuli-ikkunabaariin. Lapin hiljaisin \'hiihtokohde\', ja se on siitä ylpeä.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Hotellibaari', note: 'Ravintola + baari, takka, rinteen vieressä.' },
       'Santa\'s Hotel Aurora': { type: 'Revontuli-ikkunabaari', note: 'Lasiseinäinen baari pohjoiseen: herätyspalvelu, jos revontulet ovat aktiiviset.' },
@@ -263,7 +263,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Inarin kunta',
     blurb: 'Hotel Ivalon aulabaari + Hotel Kultahipun pubi.',
     pageTagline: 'Pohjoisin lentoasema, yöelämä hotellibaareissa.',
-    intro: 'Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on 4 000 asukasta.Hotel Ivalossa on aulabaari ja Lapin Yö -ravintola. Hotel Kultahipulla on kylän ainoa kunnon pubi. Sen lisäksi hotellibaareja ja yksi huoltoaseman kioski, joka myy olutta.',
+    intro: 'Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle. Itse kylässä on 4 000 asukasta. Hotel Ivalossa on aulabaari ja Lapin Yö -ravintola. Hotel Kultahipulla on kylän ainoa kunnon pubi. Sen lisäksi hotellibaareja ja yksi huoltoaseman kioski, joka myy olutta.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pubi', note: 'Auki päivittäin. Paikallisten työn jälkeinen paikka.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotellibaari', note: 'Rauhallisempi, ravintolan yhteydessä.' },
