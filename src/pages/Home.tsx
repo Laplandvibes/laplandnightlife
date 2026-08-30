@@ -15,7 +15,8 @@ import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
-import { COPY } from '../locales/copy';
+import { COPY } from '../locales/copy';
+
 import { AppPromoHero } from '../components/AppPromo';
 
 // Text-shadow for copy that sits over a photo (same recipe as PrimeTime).
@@ -34,7 +35,7 @@ const CONNECT_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   ko: { eyebrow: '떠나기 전에', h: '밤이 시작되기 전에 데이터부터 챙기세요' },
   fr: { eyebrow: 'Avant de partir', h: 'Réglez votre data avant que la nuit commence' },
   it: { eyebrow: 'Prima di partire', h: 'Sistemi la connessione dati prima che inizi la notte' },
-  nl: { eyebrow: 'Voordat je gaat', h: 'Regel je data voordat de nacht begint' },
+  nl: { eyebrow: 'Voordat u gaat', h: 'Regel je data voordat de nacht begint' },
   sv: { eyebrow: 'Innan du åker', h: 'Fixa datan innan natten börjar' },
 };
 
