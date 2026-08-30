@@ -62,10 +62,6 @@ const nl = {
       h: 'Uitgaan per stad',
       body: 'Acht steden om te kennen. Zes om over te slaan of juist bewust op te zoeken.',
       all: 'Bekijk alle 14 steden →',
-      leadH: 'Hoe u deze lijst leest',
-      leadP1: 'Veertien plaatsen, vijf soorten avond. Twee hebben een clubscene die het hele jaar draait. Drie zijn wintersportplaatsen waar het seizoen alles bepaalt. Drie zijn culturele ankers, twee zijn wildernisbestemmingen waar de avond om een hotelbar draait in plaats van om een club, en vier zijn kleine plaatsen met één café en geen pretenties.',
-      leadP2: 'De volgorde volgt wat er werkelijk open is, niet hoe groot de plaats is. Een bestemming met veel bedden maar één dj-avond per week komt achter een stadje waarvan de bar elke vrijdag van het jaar opengaat, op dat laatste valt te plannen.',
-      leadP3: 'Waar een plaats geen nachtleven heeft dat die naam verdient, staat dat op haar pagina. Daarom staan alle veertien hier en niet de acht die een beter verhaal zouden opleveren.',
     },
     events: {
       ...en.home.events,
@@ -95,6 +91,10 @@ const nl = {
     heroH: 'Alle 14 steden',
     heroBody: 'Van de 8-club Rotuaari-straat in Oulu tot Salla met 3.300 inwoners en één skipiste. Elke stad in en rond Lapland met een aanspraak op nachtleven, eerlijk gerangschikt.',
     explore: 'Ontdekken',
+    leadH: 'Hoe u deze lijst leest',
+    leadP1: 'Veertien plaatsen, vijf soorten avond. Twee hebben een clubscene die het hele jaar draait. Drie zijn wintersportplaatsen waar het seizoen alles bepaalt. Drie zijn culturele ankers, twee zijn wildernisbestemmingen waar de avond om een hotelbar draait in plaats van om een club, en vier zijn kleine plaatsen met één café en geen pretenties.',
+    leadP2: 'De volgorde volgt wat er werkelijk open is, niet hoe groot de plaats is. Een bestemming met veel bedden maar één dj-avond per week komt achter een stadje waarvan de bar elke vrijdag van het jaar opengaat, op dat laatste valt te plannen.',
+    leadP3: 'Waar een plaats geen nachtleven heeft dat die naam verdient, staat dat op haar pagina. Daarom staan alle veertien hier en niet de acht die een beter verhaal zouden opleveren.',
   },
   nightclubs: {
     ...en.nightclubs,

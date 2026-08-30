@@ -62,10 +62,6 @@ const fr = {
       h: 'Sortir, ville par ville',
       body: 'Huit villes à connaître. Six à zapper ou à chercher exprès.',
       all: 'Voir les 14 villes →',
-      leadH: 'Comment lire cette liste',
-      leadP1: 'Quatorze villes, cinq types de soirée. Deux ont une scène club qui tourne toute l’année. Trois sont des stations de ski où la saison décide de tout. Trois sont des pôles culturels, deux sont des destinations sauvages dont la soirée s’organise autour d’un bar d’hôtel plutôt que d’un club, et quatre sont de petites villes avec un pub et aucune prétention.',
-      leadP2: 'Le classement suit ce qui est réellement ouvert, pas la taille de la station. Une destination pleine de lits mais avec un créneau DJ par semaine passe derrière une ville dont le bar ouvre tous les vendredis de l’année : sur la seconde, on peut planifier.',
-      leadP3: 'Là où une ville n’a pas de vie nocturne digne de ce nom, sa page le dit. C’est la raison pour laquelle les quatorze sont ici, et non les huit qui feraient un meilleur argument.',
     },
     events: {
       ...en.home.events,
@@ -95,6 +91,10 @@ const fr = {
     heroH: 'Les 14 villes',
     heroBody: 'De la rue de 8 clubs de Rotuaari à Oulu aux 3 300 habitants de Salla et sa piste de ski. Chaque ville de Laponie et de ses environs à prétention nocturne, classée honnêtement.',
     explore: 'Découvrir',
+    leadH: 'Comment lire cette liste',
+    leadP1: 'Quatorze villes, cinq types de soirée. Deux ont une scène club qui tourne toute l’année. Trois sont des stations de ski où la saison décide de tout. Trois sont des pôles culturels, deux sont des destinations sauvages dont la soirée s’organise autour d’un bar d’hôtel plutôt que d’un club, et quatre sont de petites villes avec un pub et aucune prétention.',
+    leadP2: 'Le classement suit ce qui est réellement ouvert, pas la taille de la station. Une destination pleine de lits mais avec un créneau DJ par semaine passe derrière une ville dont le bar ouvre tous les vendredis de l’année : sur la seconde, on peut planifier.',
+    leadP3: 'Là où une ville n’a pas de vie nocturne digne de ce nom, sa page le dit. C’est la raison pour laquelle les quatorze sont ici, et non les huit qui feraient un meilleur argument.',
   },
   nightclubs: {
     ...en.nightclubs,

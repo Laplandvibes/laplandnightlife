@@ -59,10 +59,6 @@ const ptBR = {
       h: 'Vida noturna por cidade',
       body: 'Oito cidades para conhecer. Mais seis para pular ou para encontrar de propósito.',
       all: 'Ver todas as 14 cidades →',
-      leadH: 'Como ler esta lista',
-      leadP1: 'Quatorze cidades, cinco tipos de noite. Duas têm cena de clubes o ano inteiro. Três são estações de esqui em que a temporada decide tudo. Três são polos culturais, duas são destinos de natureza cuja noite gira em torno do bar do hotel e não de um clube, e quatro são cidades pequenas com um pub e nenhuma pretensão.',
-      leadP2: 'A ordem segue o que está de fato aberto, não o tamanho da estação. Um destino com muitas camas mas uma noite de DJ por semana fica atrás de uma cidade cujo bar abre todas as sextas do ano: dá para planejar em cima do segundo.',
-      leadP3: 'Onde uma cidade não tem vida noturna que mereça o nome, a página dela diz isso. É por isso que as quatorze estão aqui, e não as oito que renderiam um argumento melhor.',
     },
     events: {
       eyebrow: 'Calendário 2026',
@@ -89,6 +85,10 @@ const ptBR = {
     heroH: 'Todas as 14 cidades',
     heroBody: 'Do Rotuaari de Oulu com 8 baladas aos 3.300 habitantes e uma pista de esqui de Salla. Toda cidade da Lapônia e arredores que reivindica vida noturna, classificada honestamente.',
     explore: 'Explorar',
+    leadH: 'Como ler esta lista',
+    leadP1: 'Quatorze cidades, cinco tipos de noite. Duas têm cena de clubes o ano inteiro. Três são estações de esqui em que a temporada decide tudo. Três são polos culturais, duas são destinos de natureza cuja noite gira em torno do bar do hotel e não de um clube, e quatro são cidades pequenas com um pub e nenhuma pretensão.',
+    leadP2: 'A ordem segue o que está de fato aberto, não o tamanho da estação. Um destino com muitas camas mas uma noite de DJ por semana fica atrás de uma cidade cujo bar abre todas as sextas do ano: dá para planejar em cima do segundo.',
+    leadP3: 'Onde uma cidade não tem vida noturna que mereça o nome, a página dela diz isso. É por isso que as quatorze estão aqui, e não as oito que renderiam um argumento melhor.',
   },
   nightclubs: {
     seoTitle: 'Casas noturnas e música ao vivo na Lapônia',

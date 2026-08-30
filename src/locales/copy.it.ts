@@ -62,10 +62,6 @@ const it = {
       h: 'Vita notturna città per città',
       body: 'Otto città da conoscere. Sei da saltare o da cercare apposta.',
       all: 'Vedi tutte le 14 città →',
-      leadH: 'Come leggere questa lista',
-      leadP1: 'Quattordici località, cinque tipi di serata. Due hanno una scena di club che gira tutto l\'anno. Tre sono stazioni sciistiche dove la stagione decide tutto. Tre sono poli culturali, due sono mete di natura in cui la serata ruota attorno al bar dell\'hotel e non a un club, e quattro sono paesi piccoli con un pub e nessuna pretesa.',
-      leadP2: 'L\'ordine segue quello che è davvero aperto, non quanto è grande la località. Una meta con molti posti letto ma una serata DJ a settimana sta dietro a un paese il cui bar apre tutti i venerdì dell\'anno: sul secondo si può programmare.',
-      leadP3: 'Dove una località non ha una vita notturna degna del nome, la sua pagina lo dice. È per questo che ci sono tutte e quattordici e non le otto che reggerebbero un discorso migliore.',
     },
     events: {
       ...en.home.events,
@@ -95,6 +91,10 @@ const it = {
     heroH: 'Tutte le 14 città',
     heroBody: 'Dalla via di 8 club di Rotuaari a Oulu ai 3.300 abitanti di Salla con la sua pista da sci. Ogni paese della Lapponia e dintorni con una rivendicazione di vita notturna, classificato onestamente.',
     explore: 'Esplori',
+    leadH: 'Come leggere questa lista',
+    leadP1: 'Quattordici località, cinque tipi di serata. Due hanno una scena di club che gira tutto l\'anno. Tre sono stazioni sciistiche dove la stagione decide tutto. Tre sono poli culturali, due sono mete di natura in cui la serata ruota attorno al bar dell\'hotel e non a un club, e quattro sono paesi piccoli con un pub e nessuna pretesa.',
+    leadP2: 'L\'ordine segue quello che è davvero aperto, non quanto è grande la località. Una meta con molti posti letto ma una serata DJ a settimana sta dietro a un paese il cui bar apre tutti i venerdì dell\'anno: sul secondo si può programmare.',
+    leadP3: 'Dove una località non ha una vita notturna degna del nome, la sua pagina lo dice. È per questo che ci sono tutte e quattordici e non le otto che reggerebbero un discorso migliore.',
   },
   nightclubs: {
     ...en.nightclubs,
