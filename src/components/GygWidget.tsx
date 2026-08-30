@@ -38,7 +38,7 @@ const FALLBACK_LEAD: Record<string, string> = {
   'zh-CN': '实时价格、即时确认，在 GetYourGuide 打开可预订的行程。',
   ko: '실시간 가격과 즉시 확정: GetYourGuide에서 예약 가능한 투어를 확인하세요.',
   fr: 'Prix en temps réel et confirmation immédiate: ouvrez les excursions réservables sur GetYourGuide.',
-  it: 'Prezzi in tempo reale e conferma immediata: apri le escursioni prenotabili su GetYourGuide.',
+  it: 'Prezzi in tempo reale e conferma immediata: apra le escursioni prenotabili su GetYourGuide.',
   nl: 'Actuele prijzen en directe bevestiging: open de boekbare tours op GetYourGuide.',
   sv: 'Aktuella priser och direkt bekräftelse: öppna de bokningsbara turerna på GetYourGuide.',
 };

@@ -5,7 +5,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Ostrobotnia Settentrionale',
     blurb: 'Capitale Europea della Cultura 2026, e l\'unica vera scena clubbing attiva tutto l\'anno nel nord.',
     pageTagline: 'Capitale Europea della Cultura 2026.',
-    intro: '218 000 abitanti, una scena club trainata dagli studenti e la via pedonale Rotuaari, che raccoglie la maggior parte dei locali della città in una breve passeggiata. Oulu è l\'unica città del Nord dove le serate infrasettimanali girano davvero: la gente si sposta tra 45 Special, Kaarlenholvi e St Michael fino a tardi. Nel 2026 si aggiunge il programma di Capitale europea della cultura: 1 500 eventi, tra cui i Mondiali di Air Guitar, Qstock, Elojazz e il festival invernale Frozen People.',
+    intro: '218.000 abitanti, una scena club trainata dagli studenti e la via pedonale Rotuaari, che raccoglie la maggior parte dei locali della città in una breve passeggiata. Oulu è l\'unica città del Nord dove le serate infrasettimanali girano davvero: la gente si sposta tra 45 Special, Kaarlenholvi e St Michael fino a tardi. Nel 2026 si aggiunge il programma di Capitale europea della cultura: 1.500 eventi, tra cui i Mondiali di Air Guitar, Qstock, Elojazz e il festival invernale Frozen People.',
     venues: {
       'St Michael': { type: 'Pub irlandese + live', note: 'L\'àncora di Rotuaari: pub irlandese con artisti in tour e serate tribute.' },
       "Hemingway's": { type: 'Bar', note: 'Bar di whisky e birre artigianali su Kirkkokatu: la pinta tranquilla, aperto fino a tardi.' },
@@ -14,7 +14,7 @@ const overlay: Record<string, CityOverlay> = {
     },
     knowList: [
       'Rotuaari è chiusa al traffico. Quasi tutta la scena sta in una breve passeggiata.',
-      'Il programma della Capitale europea della cultura va da gennaio a dicembre 2026: prenotate l\'alloggio per tempo.',
+      'Il programma della Capitale europea della cultura va da gennaio a dicembre 2026: prenoti l\'alloggio per tempo.',
       'Ultimo giro alle 03:30 in centro; le porte chiudono alle 04:00.',
       'Oulu è l\'unica città così a nord con una vera scena domenicale di caffè.',
     ],
@@ -42,8 +42,8 @@ const overlay: Record<string, CityOverlay> = {
     knowList: [
       'Koskikatu e la via pedonale reggono quasi tutta la scena. Tutto è raggiungibile a piedi.',
       'Ultimo giro alle 03:00; i club chiudono alle 03:30 d\'inverno, a volte alle 04:00 in alta stagione.',
-      'Niente Uber. Salvate il numero del taxi locale 0100 84 84.',
-      'La stagione delle aurore culmina da ottobre a marzo. Controllate la previsione prima di impegnare la serata in pista.',
+      'Niente Uber. Salvi il numero del taxi locale 0100 84 84.',
+      'La stagione delle aurore culmina da ottobre a marzo. Controlli la previsione prima di impegnare la serata in pista.',
     ],
     quickFacts: {
       'Population': { label: 'Popolazione', value: '64.000' },
@@ -56,14 +56,14 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Comune di Kittilä',
     blurb: 'Hullu Poro Areena: 1.700 posti, 10 bar, 2 piani. La discoteca più grande della Lapponia.',
     pageTagline: 'La festa da stazione sciistica più grande della Finlandia.',
-    intro: 'L\'Hullu Poro Areena è il fulcro: capienza 1 700, due piani, dieci bar e la pista da ballo più grande a nord di Helsinki. Attorno: l\'Ihku, la leggendaria baita après-ski dove gli scarponi sono benvenuti in pista, e il Panorama Sky Bar dell\'Hotel Levi Panorama per il drink con vista. A novembre la Coppa del Mondo FIS porta dieci giorni di festa. Da febbraio ad aprile: addii al celibato, scuole di sci e weekend a pieno regime. Fuori stagione, buona parte del villaggio rallenta già a inizio settimana.',
+    intro: 'L\'Hullu Poro Areena è il fulcro: capienza 1.700, due piani, dieci bar e la pista da ballo più grande a nord di Helsinki. Attorno: l\'Ihku, la leggendaria baita après-ski dove gli scarponi sono benvenuti in pista, e il Panorama Sky Bar dell\'Hotel Levi Panorama per il drink con vista. A novembre la Coppa del Mondo FIS porta dieci giorni di festa. Da febbraio ad aprile: addii al celibato, scuole di sci e weekend a pieno regime. Fuori stagione, buona parte del villaggio rallenta già a inizio settimana.',
     venues: {
-      'Panorama Sky Bar': { type: 'Bar panoramico', note: 'Il bar dell\'Hotel Levi Panorama sopra la cabinovia: drink con vista sui tunturi.' },
+      'Panorama Sky Bar': { type: 'Bar panoramico', note: 'Il bar dell\'Hotel Levi Panorama sopra la cabinovia: drink con vista sui fjäll.' },
       'Hullu Poro Areena': { type: 'Mega-discoteca', note: '1.700 posti, 10 bar, 2 piani. Sala concerti mer–sab.' },
       'Ihku': { type: 'Après-ski', note: 'Baita in legno ai piedi della pista. Scarponi da sci sulla pista da ballo.' },
     },
     knowList: [
-      'Levi si spegne fuori dalla stagione sciistica. Controllate i giorni di apertura prima di una grande serata.',
+      'Levi si spegne fuori dalla stagione sciistica. Controlli i giorni di apertura prima di una grande serata.',
       'La Coppa del Mondo FIS di metà novembre va esaurita con un anno di anticipo.',
       'Ultimo giro alle 03:30 in stagione; alcuni locali allungano nella settimana di Coppa.',
       'La politica sugli scarponi varia da locale a locale. L\'Ihku, notoriamente, dice di sì.',
@@ -89,7 +89,7 @@ const overlay: Record<string, CityOverlay> = {
     knowList: [
       'Nessun club indipendente: la vita notturna ruota attorno agli hotel.',
       'L\'Igloo Bar richiede la prenotazione se non si alloggia al Kakslauttanen.',
-      'La strada dall\'aeroporto (Ivalo) è di 25 minuti; prenota i transfer se bevi.',
+      'La strada dall\'aeroporto (Ivalo) è di 25 minuti; prenoti i transfer se beve.',
       'L\'app delle previsioni dell\'aurora è indispensabile: lo staff sveglia gli ospiti alle 02:00 se è attiva.',
     ],
     quickFacts: {
@@ -103,7 +103,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Comune di Inari',
     blurb: 'Capitale culturale Sámi: Sajos, Siida, il lago Inari e la chiesa selvaggia di Pielpajärvi.',
     pageTagline: 'La capitale culturale Sámi.',
-    intro: 'Inari è la sede culturale del parlamento Sámi (Sajos) e ospita il Siida, il museo che ti spiega tutto ciò che non sapevi sulla Sápmi. Qui la "vita notturna" è culturale: il festival di cinema indigeno Skábmagovat a gennaio, il festival di musica Sámi Ijahis Idja ad agosto e una manciata di bar che servono soprattutto cene. Non venire per i club. Vieni per l\'acqua gelida del lago, i concerti di joik e un cielo che a dicembre diventa nero alle 14:00.',
+    intro: 'Inari è la sede culturale del parlamento Sámi (Sajos) e ospita il Siida, il museo che Le spiega tutto quello che c’è da sapere sulla Sápmi. Qui la "vita notturna" è culturale: il festival di cinema indigeno Skábmagovat a gennaio, il festival di musica Sámi Ijahis Idja ad agosto e una manciata di bar che servono soprattutto cene. Non venga per i club. Venga per l\'acqua gelida del lago, i concerti di joik e un cielo che a dicembre diventa nero alle 14:00.',
     venues: {
       'Hotel Inari Bar': { type: 'Bar d\'hotel', note: 'Ristorante e bar con vista sul lago, aperto fino all\'01:00.' },
       'Café Čaiju': { type: 'Diurno', note: 'Caffè del parlamento Sámi: caffè ed eventi culturali.' },
@@ -155,10 +155,10 @@ const overlay: Record<string, CityOverlay> = {
       'Ravintola Otso': { type: 'Ristorante + bar', note: 'Il preferito del villaggio, con sale sia ad Äkäslompolo che a Ylläsjärvi: cena tardi e drink.' },
     },
     knowList: [
-      'Äkäs e Ylläsjärvi distano 20 minuti di strada. Organizzate il taxi in anticipo.',
+      'Äkäs e Ylläsjärvi distano 20 minuti di strada. Organizzi il taxi in anticipo.',
       'Ultimo giro verso le 02:00, prima che a Levi.',
       'Niente club. Solo bar.',
-      'Il Parco nazionale copre 1 020 km². Il silenzio è la vera attrazione.',
+      'Il Parco nazionale copre 1.020 km². Il silenzio è la vera attrazione.',
     ],
     quickFacts: {
       'Beds in resort': { label: 'Posti letto nel resort', value: '23.000' },
@@ -194,9 +194,9 @@ const overlay: Record<string, CityOverlay> = {
   },
   'pyha-luosto': {
     region: 'Pelkosenniemi / Sodankylä',
-    blurb: 'Ametista, fells e lo sci più tranquillo della Lapponia.',
-    pageTagline: 'I fells dell\'ametista.',
-    intro: 'Due piccoli fells, a 35 km l\'uno dall\'altro, che condividono un parco nazionale. Pyhä ha l\'area sciistica più grande; Luosto ha la miniera di ametista che si può visitare a mezzanotte sotto l\'aurora. Nessuno dei due ha club. Entrambi hanno bar d\'hotel che valgono una serata davanti al camino: l\'Hotel Pyhätunturi per una cucina da ristorante, l\'Hotel Aurora a Luosto per il bar con vetrata sull\'aurora. La "meta sciistica" più tranquilla della Lapponia, e ne va fiera.',
+    blurb: 'Ametista, fjäll e lo sci più tranquillo della Lapponia.',
+    pageTagline: 'I fjäll dell\'ametista.',
+    intro: 'Due piccoli fjäll, a 35 km l\'uno dall\'altro, che condividono un parco nazionale. Pyhä ha l\'area sciistica più grande; Luosto ha la miniera di ametista che si può visitare a mezzanotte sotto l\'aurora. Nessuno dei due ha club. Entrambi hanno bar d\'hotel che valgono una serata davanti al camino: l\'Hotel Pyhätunturi per una cucina da ristorante, l\'Hotel Aurora a Luosto per il bar con vetrata sull\'aurora. La "meta sciistica" più tranquilla della Lapponia, e ne va fiera.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Bar d\'hotel', note: 'Ristorante e bar, camino, ai piedi della pista.' },
       'Santa\'s Hotel Aurora': { type: 'Bar con vetrata sull\'aurora', note: 'Bar con pareti di vetro rivolte a nord: servizio sveglia se l\'aurora è attiva.' },
@@ -204,7 +204,7 @@ const overlay: Record<string, CityOverlay> = {
     },
     knowList: [
       'Nessuna discoteca in tutta Pyhä-Luosto.',
-      'La miniera di ametista propone tour notturni sotto l\'aurora. Prenota in anticipo.',
+      'La miniera di ametista propone tour notturni sotto l\'aurora. Prenoti in anticipo.',
       'Il parco nazionale di Pyhä-Luosto è l\'attrazione silenziosa.',
       'Ultimo giro intorno all\'01:00 in entrambi i villaggi.',
     ],
@@ -219,14 +219,14 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lapponia Centrale',
     blurb: 'Midnight Sun Film Festival: proiettano film alle 03:00 in pieno giorno.',
     pageTagline: 'La città del Midnight Sun Film Festival.',
-    intro: 'Sodankylä è un villaggio di 9 000 abitanti sul fiume Kemijoki, e una volta all\'anno, a metà giugno, diventa il festival di cinema più surreale del mondo. Il Midnight Sun Film Festival dura quattro giorni con proiezioni a tutte le ore: nessuno dorme, perché il sole non tramonta. Fuori dalla settimana del festival la scena è un bar d\'hotel e un paio di pub locali. Venite per il festival, o per il silenzio.',
+    intro: 'Sodankylä è un villaggio di 9.000 abitanti sul fiume Kemijoki, e una volta all\'anno, a metà giugno, diventa il festival di cinema più surreale del mondo. Il Midnight Sun Film Festival dura quattro giorni con proiezioni a tutte le ore: nessuno dorme, perché il sole non tramonta. Fuori dalla settimana del festival la scena è un bar d\'hotel e un paio di pub locali. Venga per il festival, o per il silenzio.',
     venues: {
       'Hotel Sodankylä Bar': { type: 'Bar d\'hotel', note: 'Il bar dell\'hotel in centro, aperto fino all\'01:00.' },
       'Piitsi Pub': { type: 'Pub', note: 'Dehors sulla riva del Kitinen; artisti dal vivo d\'estate.' },
       'Olohuone Tähti': { type: 'Caffè + pub', note: 'Caffè-bar in stile salotto in centro, il ritrovo dei locali.' },
     },
     knowList: [
-      'Il Midnight Sun Film Festival è a metà giugno. Prenotate l\'alloggio con sei mesi di anticipo.',
+      'Il Midnight Sun Film Festival è a metà giugno. Prenoti l\'alloggio con sei mesi di anticipo.',
       'Fuori dalla settimana del festival la vita da bar è tranquilla, soprattutto in hotel.',
       'La chiesa in legno del Seicento è tra le più antiche della Finlandia.',
       'Ultimo giro alle 01:00 quasi tutto l\'anno; più tardi nella settimana del festival.',
@@ -242,7 +242,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Comune di Kittilä',
     blurb: 'Dove vivono davvero i locali (Levi è soprattutto turisti).',
     pageTagline: 'Dove vivono davvero i locali di Levi.',
-    intro: 'Kittilä è il capoluogo del comune: 6 500 abitanti, l\'aeroporto e le persone che mandano avanti Levi, a 18 km. La vita da bar è piccola e locale: un bar d\'hotel e un paio di pub di paese, nessun programma turistico. La maggior parte dei visitatori tira dritto. Se cercate una serata tranquilla da cittadina finlandese senza i prezzi resort di Levi, è qui.',
+    intro: 'Kittilä è il capoluogo del comune: 6.500 abitanti, l\'aeroporto e le persone che mandano avanti Levi, a 18 km. La vita da bar è piccola e locale: un bar d\'hotel e un paio di pub di paese, nessun programma turistico. La maggior parte dei visitatori tira dritto. Se cerca una serata tranquilla da cittadina finlandese senza i prezzi resort di Levi, è qui.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Bar d\'hotel', note: 'L\'opzione affidabile del paese, più tranquilla ed economica di Levi.' },
     },
@@ -272,7 +272,7 @@ const overlay: Record<string, CityOverlay> = {
       'L\'aeroporto più a nord della Finlandia continentale.',
       'Saariselkä è a 25 minuti. Molti visitatori di Saariselkä vengono qui per i bar degli hotel.',
       'Ultimo giro alle 02:00 nei giorni feriali, alle 03:00 nei weekend.',
-      'Niente posteggio dei taxi. Prenota tramite la reception dell\'hotel.',
+      'Niente posteggio dei taxi. Prenoti tramite la reception dell\'hotel.',
     ],
     quickFacts: {
       'Population': { label: 'Popolazione', value: '4.000' },
@@ -285,7 +285,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lapponia Occidentale',
     blurb: 'Niente vita notturna. L\'attrazione è il parco nazionale di Pallas-Yllästunturi.',
     pageTagline: 'La porta del parco nazionale.',
-    intro: 'Muonio ha 2 300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1 020 km², il terzo della Finlandia). Non c\'è un club, non c\'è un giro di pub, e la maggior parte delle serate finisce presto. L\'Harriniva Wilderness Hotel propone ai suoi ospiti dei safari la combinazione sauna serale + bar della lobby, e l\'Jeris Lakeside Resort fa lo stesso sul lago Jerisjärvi. Questa, onestamente, è la "scena" di Muonio.',
+    intro: 'Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia). Non c\'è un club, non c\'è un giro di pub, e la maggior parte delle serate finisce presto. L\'Harriniva Wilderness Hotel propone agli ospiti dei suoi safari la combinazione sauna serale + lobby bar, e il Jeris Lakeside Resort fa lo stesso sul lago Jerisjärvi. Questa, onestamente, è la "scena" di Muonio.',
     venues: {
       'Jeris Lakeside Resort': { type: 'Bar d\'hotel', note: 'Hotel in riva al Jerisjärvi: ristorante e bar per la serata.' },
       'Harriniva Wilderness Hotel': { type: 'Bar d\'hotel', note: 'Sauna e bar, soprattutto ospiti dei safari.' },
@@ -307,7 +307,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Lapponia Orientale',
     blurb: 'In mezzo al nulla. La stazione sciistica più tranquilla della Finlandia.',
     pageTagline: 'In mezzo al nulla.',
-    intro: '3 300 abitanti e una pista da sci. Lo slogan del paese è letteralmente "In the Middle of Nowhere", ed è inteso come un complimento. L\'Hotel Revontuli ha l\'unico bar aperto fino a tardi; sul versante delle piste si aggiunge qualche pub in stagione. Fuori dall\'inverno: silenzio. L\'ironica campagna "Salla 2032" per i Giochi invernali ha messo il paese sulla mappa, ma la scena vera non è cambiata. Non venite per i club.',
+    intro: '3.300 abitanti e una pista da sci. Lo slogan del paese è letteralmente "In the Middle of Nowhere", ed è inteso come un complimento. L\'Hotel Revontuli ha l\'unico bar aperto fino a tardi; sul versante delle piste si aggiunge qualche pub in stagione. Fuori dall\'inverno: silenzio. L\'ironica campagna "Salla 2032" per i Giochi invernali ha messo il paese sulla mappa, ma la scena vera non è cambiata. Non venga per i club.',
     venues: {
       'Holiday Club Salla': { type: 'Bar d\'hotel', note: 'L\'unico locale a tarda sera. Ristorante e bar.' },
       'Salla Wilderness Park': { type: 'Locale diurno', note: 'Pranzo e caffè diurno per i visitatori del parco.' },

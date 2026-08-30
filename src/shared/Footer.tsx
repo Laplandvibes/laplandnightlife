@@ -716,6 +716,22 @@ interface SharedFooterProps {
    */
   extraLegalLinks?: { to: string; label: string }[];
   /**
+   * Per-site slugs for the three canonical legal pages. Defaults are the
+   * network standard and 26/27 sites need nothing here.
+   *
+   * 🔴 laplandskiresorts serves its privacy policy at `/privacy-policy` — its
+   * canonical, sitemap and hreflang set have carried that slug since launch and
+   * `/privacy` has never existed there. The hardcoded `/privacy` link therefore
+   * pointed at a real 404 in the footer of every page on that site (found by
+   * e2e/check-links.mjs 2026-08-22). The same split already exists in
+   * shared/NewsletterPopup (`privacyHref`), which is why this is a prop and not
+   * a per-site fork of the Footer.
+   *
+   * Pass the slug WITHOUT locale prefix and WITHOUT trailing slash; the Footer
+   * adds both, so the link stays canonical and Cloudflare never answers 308.
+   */
+  legalPaths?: { privacy?: string; cookie?: string; terms?: string };
+  /**
    * Destination for the "Website by …" credit link. Defaults to yrityspaketit.fi;
    * pass e.g. "https://www.zatap.fi" on sites whose `websiteBy` label names Zatap,
    * so the label and the link target match.
@@ -730,7 +746,7 @@ interface SharedFooterProps {
 
 // In-page contact form modal. Replaces the old mailto: links (which opened the
 // OS "choose an app" dialog). Posts to the hub send-contact-email edge function.
-function ContactModal({ kind, title, c, onClose }: { kind: ContactKind; title: string; c: ContactFormCopy; onClose: () => void }) {
+function ContactModal({ kind, title, c, lang, onClose }: { kind: ContactKind; title: string; c: ContactFormCopy; lang: string; onClose: () => void }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState(c.subj[kind]);
@@ -781,6 +797,10 @@ function ContactModal({ kind, title, c, onClose }: { kind: ContactKind; title: s
           email: email.trim(),
           subject: subject.trim(),
           message: `${message.trim()}\n\n, sent from ${host}`,
+          // [LV 2026-08-22] Lukijan kieli => send-contact-email lahettaa
+          // automaattivastauksen samalla kielella. Ilman kenttaa funktio
+          // palaa entiseen FI+EN-muotoon, joten kentan puuttuminen ei riko.
+          lang,
           website, // honeypot
         }),
       });
@@ -1361,6 +1381,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
           kind={contactKind}
           title={contactTitle[contactKind]}
           c={contactCopy}
+          lang={lang}
           onClose={() => setContactKind(null)}
         />
       )}

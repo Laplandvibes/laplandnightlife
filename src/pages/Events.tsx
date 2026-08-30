@@ -34,7 +34,7 @@ type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] 
    qstock.fi for the edition being described. Dates and the attendance figure must
    stay in sync with copy.*.ts summer.e4–e8When/e8Body and home.events.e3Desc
    across all 12 languages. */
-const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
+const EVENTS_BASE: Record<'en' | 'fi' | 'de' | 'it', MonthBlock[]> = {
   en: [
     { monthKey: 'January', items: [
       { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.', endsBy: '2026-01-31' },
@@ -164,6 +164,49 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de', MonthBlock[]> = {
       { name: 'Silvester-Feuerwerk', date: '31. Dez 2026', city: 'Alle Städte', body: 'Öffentliches Feuerwerk um Mitternacht: Hauptplatz in Rovaniemi, Marktplatz in Oulu, Skihang in Levi.' },
     ]},
   ],
+  it: [
+    { monthKey: 'January', items: [
+      { name: 'Skábmagovat, festival del cinema indigeno', date: 'Fine gen 2026', city: 'Inari', body: 'Festival del cinema indigeno dentro il Sajos. Concerti di joik, proiezioni nel periodo buio, programmi di cena sámi.' },
+      { name: 'Arctic Lapland Rally', date: '23–24 gen 2026', city: 'Rovaniemi', body: 'Due giorni. Il Roy Club va esaurito. Anche chi non segue il rally lo tratta come un venerdì sera.' },
+    ]},
+    { monthKey: 'February', items: [
+      { name: 'Settimana sámi / Sámi Soveeknaki', date: 'Inizio feb', city: 'Rovaniemi', body: 'Corse di renne, musica sámi, concerti di joik, eventi culturali serali.' },
+      { name: 'Frozen People Festival', date: '21 feb 2026', city: 'Oulu', body: 'Festival invernale di musica elettronica della Capitale europea della cultura. Palchi all\'aperto e al chiuso, −20 °C.' },
+    ]},
+    { monthKey: 'March', items: [
+      { name: 'Settimane dei concerti di punta a Levi', date: 'Metà feb – metà apr', city: 'Levi', body: 'L\'Hullu Poro Areena ospita artisti finlandesi in tour ogni mer–sab. I biglietti si esauriscono con una settimana di anticipo.' },
+    ]},
+    { monthKey: 'April', items: [
+      { name: 'Ylläs Soikoon, festival musicale', date: 'Metà aprile', city: 'Ylläs', body: 'Festival sciistico di fine stagione. Set DJ sulle piste, concerti all\'aperto, sole di primavera.' },
+      { name: 'Ultime settimane dello SnowCastle', date: 'Per tutto apr', city: 'Kemi', body: 'Ultima occasione per il bar di ghiaccio prima del disgelo di aprile. Shot di vodka in bicchieri di ghiaccio.' },
+    ]},
+    { monthKey: 'June', items: [
+      { name: 'Si apre la finestra del sole di mezzanotte', date: '6 giu 2026', city: 'A nord del Circolo Polare Artico', body: 'Il sole smette di tramontare. Continua fino al 7 luglio.' },
+      { name: 'Festival del cinema del sole di mezzanotte', date: '10–14 giu 2026', city: 'Sodankylä', body: 'Oltre 80 film. La proiezione delle 03:00 nella chiesa di legno del XVII secolo è la più fotografata.' },
+      { name: 'Juhannus / Mezza estate', date: '19–21 giu 2026', city: 'Ovunque', body: 'Falò, sauna, bagni nel lago, weekend in baita. Le città si svuotano; i locali partono.' },
+      { name: 'Qualificazione ai Campionati mondiali di air guitar', date: 'Giugno, Oulu', city: 'Oulu', body: 'Qualificazione per le finali di agosto a Oulu. Programma ampliato ECoC2026.' },
+    ]},
+    { monthKey: 'July', items: [
+      { name: 'Festival Qstock 2026', date: '24–25 lug 2026', city: 'Oulu', body: 'Il più grande festival rock del nord della Finlandia. 40.000 visitatori, due giorni, parco Kuusisaari.' },
+      { name: 'Festival Elojazz', date: '30 lug – 2 ago 2026', city: 'Oulu', body: 'Quattro giorni di jazz: palchi all\'aperto attorno alla Rotuaari, concerti principali al Tarkastamo.' },
+    ]},
+    { monthKey: 'August', items: [
+      { name: 'Simerock', date: '7–8 ago 2026', city: 'Rovaniemi', body: 'Festival rock di inizio agosto all\'Ounaspaviljonki. Pubblico locale della Lapponia, più piccolo di Qstock ma più pesante.' },
+      { name: 'Ijahis Idja, festival di musica sámi', date: '14–15 ago 2026', city: 'Inari', body: 'Festival di musica indigena al Sajos. La cosa più vicina a una serata in club che Inari abbia.' },
+      { name: 'Finale dei Campionati mondiali di air guitar', date: '28–29 ago 2026', city: 'Oulu', body: 'Le vere finali mondiali nel parco Pokkinen. 40 nazioni, locali dagli 8 agli 80 anni.' },
+    ]},
+    { monthKey: 'October', items: [
+      { name: 'Festival folkloristico Jutajaiset', date: '22–25 ott 2026', city: 'Rovaniemi', body: 'Festival folkloristico internazionale. Sfilate, spettacoli, concerti serali.' },
+    ]},
+    { monthKey: 'November', items: [
+      { name: 'Coppa del Mondo FIS di sci alpino a Levi', date: '14–15 nov 2026', city: 'Levi', body: 'Weekend di Coppa del Mondo. L\'Hullu Poro Areena ospita gli after party; prenoti l\'alloggio con un anno di anticipo.' },
+      { name: 'Apertura FIS di sci di fondo a Ruka', date: '27–29 nov 2026', city: 'Ruka', body: 'Apertura della stagione di Coppa del Mondo. Il Restaurant Zone ai piedi della pista è la casa degli after party.' },
+    ]},
+    { monthKey: 'December', items: [
+      { name: 'Natale a Rovaniemi', date: '1–24 dic 2026', city: 'Rovaniemi', body: 'Picco turistico. I bar allungano gli orari; il sabato la coda al Roy Club è di 45 minuti.' },
+      { name: 'Fuochi d\'artificio di Capodanno', date: '31 dic 2026', city: 'Tutte le città', body: 'Fuochi pubblici a mezzanotte: piazza centrale di Rovaniemi, piazza del mercato di Oulu, pista di Levi.' },
+    ]},
+  ],
 };
 
 // JA Phase 2B: reuse EN events under /ja until native polish.
@@ -175,7 +218,6 @@ const EVENTS: Record<Lang, MonthBlock[]> = {
   'zh-CN': EVENTS_BASE.en,
   ko: EVENTS_BASE.en,
   fr: EVENTS_BASE.en,
-  it: EVENTS_BASE.en,
   nl: EVENTS_BASE.en,
   sv: EVENTS_BASE.en,
 };

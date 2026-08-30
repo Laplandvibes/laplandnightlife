@@ -123,7 +123,7 @@ export default function AiraloAd({
     'zh-CN': '落地拉普兰,手机就已经有网。Airalo 是出发前就能装好的 eSIM。',
     ko: '라플란드에 도착하는 순간 바로 데이터를. Airalo는 비행 전에 미리 설정해 두는 eSIM입니다.',
     fr: 'Arrivez en Laponie avec déjà de la data sur le téléphone. Airalo est une eSIM que vous installez avant le vol.',
-    it: 'Arriva in Lapponia con i dati già sul telefono. Airalo è una eSIM che configuri prima del volo.',
+    it: 'Arrivi in Lapponia con i dati già sul telefono. Airalo è un’eSIM da configurare prima del volo.',
     nl: 'Land in Lapland met data al op je telefoon. Airalo is een eSIM die je vóór de vlucht instelt.',
     sv: 'Landa i Lappland med data redan i telefonen. Airalo är ett eSIM som du ställer in före flyget.',
   });
@@ -138,7 +138,7 @@ export default function AiraloAd({
     'zh-CN': '不用换卡、不用付漫游费、不用在机场排队。选一个芬兰或欧洲套餐,几分钟装好,一关掉飞行模式,地图、打车软件和动态就都能用。',
     ko: 'SIM 교체도, 로밍 요금도, 공항 매장 줄도 없습니다. 핀란드 또는 유럽 요금제를 골라 몇 분이면 설치되고, 비행기 모드를 끄는 순간 지도와 차량 호출 앱, 스토리가 바로 작동합니다.',
     fr: 'Pas de changement de SIM, pas de facture d’itinérance, pas de file à la boutique de l’aéroport. Choisissez un forfait Finlande ou Europe, installez-le en deux minutes, et vos cartes, applis de transport et stories marchent dès que vous quittez le mode avion.',
-    it: 'Niente cambio SIM, niente bolletta in roaming, niente coda al negozio dell’aeroporto. Scegli un piano Finlandia o Europa, installalo in un paio di minuti, e mappe, app per gli spostamenti e storie funzionano appena togli la modalità aereo.',
+    it: 'Niente cambio SIM, niente costi di roaming, niente coda al negozio dell’aeroporto. Scelga un piano Finlandia o Europa, lo installi in un paio di minuti: mappe, app per gli spostamenti e storie funzionano appena toglie la modalità aereo.',
     nl: 'Geen simwissel, geen roamingrekening, geen rij in de luchthavenwinkel. Kies een Finland- of Europa-bundel, installeer hem in een paar minuten en je kaarten, rit-apps en stories werken zodra je de vliegtuigstand uitzet.',
     sv: 'Inget SIM-byte, ingen roamingräkning, ingen kö i butiken på flygplatsen. Välj ett Finlands- eller Europapaket, installera det på ett par minuter, så fungerar dina kartor, taxiappar och stories i samma sekund som du slår av flygplansläget.',
   });
@@ -190,7 +190,7 @@ export default function AiraloAd({
         'zh-CN': '保留你原来的号码',
         ko: '기존 번호 그대로 사용',
         fr: 'Gardez votre propre numéro',
-        it: 'Mantieni il tuo numero',
+        it: 'Mantenga il Suo numero',
         nl: 'Houd je eigen nummer',
         sv: 'Behåll ditt eget nummer',
       }),
