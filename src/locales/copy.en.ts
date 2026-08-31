@@ -151,7 +151,7 @@ const en = {
       ctaBody: 'Festival weekends sell out months ahead. Hotels go 60–80 % capacity 4–6 weeks before.',
       ctaBtn: 'Search hotels by date →',
       ticketsH: 'Where the tickets are',
-      ticketsBody: 'Finnish arena and festival on-sales run largely through national ticket outlets. Ticketmaster Finland is one of the main ones, Qstock, for example, sells its tickets only there. The site is in Finnish, but the flow is standard Ticketmaster; search by event name. Smaller festivals often sell direct, so check the event\'s own page first.',
+      ticketsBody: 'Finnish arena and festival on-sales run largely through national ticket outlets. Ticketmaster Finland is one of the main ones; Qstock, for example, sells its tickets only there. The site is in Finnish, but the flow is standard Ticketmaster; search by event name. Smaller festivals often sell direct, so check the event\'s own page first.',
       ticketsCta: 'Open Ticketmaster Finland',
       pastLabel: 'Past',
       nextUp: 'Next up',
@@ -234,7 +234,7 @@ const en = {
       photoBody: 'The midnight-sun shot only works inside this 32-day window. Settings, locations, and the wooden church.',
       photoBtn: 'Read the photography guide →',
       stayH: 'Stay during the midnight sun.',
-      stayBody: 'Cabins by lakes. Hotels with terraces facing north. Festival accommodation in Sodankylä or Oulu, book 6–8 weeks ahead, the locals do.',
+      stayBody: 'Cabins by lakes. Hotels with terraces facing north. Festival accommodation in Sodankylä or Oulu, book 6–8 weeks ahead; the locals do.',
       stayBtn: 'Browse summer stays →',
     },
     tips: {
