@@ -239,7 +239,7 @@ const nl = {
     l1H: 'Sauna om middernacht', l1Body: 'Bij een meer, naakt, zonder ironie. De temperatuurschok is het hele punt.',
     l2H: 'Buitenterras tot 03:00', l2Body: 'De zon blijft hoog, de bar dus ook. Neem een zonnebril mee voor een biertje om 1 uur \'s nachts.',
     l3H: 'Fietsen door de archipel van Oulu', l3Body: 'Bruggen verbinden 12 eilanden binnen de stad, vlak, verlicht, de hele nacht.',
-    l4H: 'Om 02:00 naar de Noordkaap rijden', l4Body: '4 uur vanaf Inari. Zon op het stuur. Geen verkeer.',
+    l4H: 'Om 02:00 naar de Noordkaap rijden', l4Body: 'Ongeveer zes uur vanaf Inari. Zon op het stuur. Geen verkeer.',
     l5H: 'Zwemmen in een meer van 18 °C', l5Body: 'Ja, het meer wordt in juli echt zo warm, zelfs hier boven. Die ene duik is het ritueel.',
     photoH: 'De 03:00-foto die niemand namaakt.',
     photoBody: 'Het middernachtzon-shot werkt alleen binnen dit venster van 32 dagen. Instellingen, locaties en die houten kerk.',

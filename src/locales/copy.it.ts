@@ -239,7 +239,7 @@ const it = {
     l1H: 'Sauna a mezzanotte', l1Body: 'In riva a un lago, nudi, senza ironia. Lo shock termico è il punto.',
     l2H: 'Terrazza all\'aperto fino alle 03:00', l2Body: 'Il sole resta alto, il bar pure. Porti gli occhiali da sole per la birra dell\'una.',
     l3H: 'In bici per l\'arcipelago di Oulu', l3Body: 'Dodici isole collegate da ponti dentro la città: percorso piatto, illuminato, aperto tutta la notte.',
-    l4H: 'Guidi fino a Capo Nord alle 02:00', l4Body: '4 ore da Inari. Sole sul volante. Nessun traffico.',
+    l4H: 'Guidi fino a Capo Nord alle 02:00', l4Body: 'Circa sei ore da Inari. Sole sul volante. Nessun traffico.',
     l5H: 'Bagno nel lago a 18 °C', l5Body: 'Sì, a luglio l\'acqua ci arriva davvero, anche quassù. Il tuffo è il rito.',
     photoH: 'La foto delle 03:00 che nessuno trucca.',
     photoBody: 'Lo scatto al sole di mezzanotte funziona solo dentro questa finestra di 32 giorni. Impostazioni, location, e quella chiesa di legno.',

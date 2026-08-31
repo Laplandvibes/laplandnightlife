@@ -239,7 +239,7 @@ const fr = {
     l1H: 'Sauna à minuit', l1Body: 'Au bord d\'un lac, nu, sans ironie. Le choc thermique est tout l\'intérêt.',
     l2H: 'Terrasse jusqu\'à 3 h', l2Body: 'Le soleil reste levé, le bar aussi. Prévoyez des lunettes de soleil pour une bière à 1 h du matin.',
     l3H: 'Vélo dans l\'archipel d\'Oulu', l3Body: 'Des ponts relient 12 îles à l\'intérieur de la ville, plat, éclairé, toute la nuit.',
-    l4H: 'Route vers le Cap Nord à 2 h', l4Body: '4 heures depuis Inari. Soleil sur le volant. Aucun trafic.',
+    l4H: 'Route vers le Cap Nord à 2 h', l4Body: 'Environ six heures depuis Inari. Soleil sur le volant. Aucun trafic.',
     l5H: 'Baignade dans un lac à 18 °C', l5Body: 'Oui, le lac chauffe vraiment en juillet, même ici. Le plongeon, c\'est le rite.',
     photoH: 'La photo de 3 h que personne ne truque.',
     photoBody: 'Le cliché soleil de minuit n\'est possible que dans cette fenêtre de 32 jours. Réglages, lieux et l\'église en bois.',

@@ -228,7 +228,7 @@ const ptBR = {
     l1H: 'Sauna à meia-noite', l1Body: 'Junto a um lago, pelado, sem ironia. O choque térmico é o ponto.',
     l2H: 'Terraço ao ar livre até 03:00', l2Body: 'O sol fica acordado, o bar também. Leve óculos de sol para uma cerveja às 01:00.',
     l3H: 'Pedalar pelo arquipélago de Oulu', l3Body: 'Pontes ligam 12 ilhas dentro da cidade, plano, iluminado, a noite toda.',
-    l4H: 'Dirigir até Nordkapp às 02:00', l4Body: '4 h de Inari. Sol sobre o volante. Sem trânsito.',
+    l4H: 'Dirigir até Nordkapp às 02:00', l4Body: 'Cerca de seis horas de Inari. Sol sobre o volante. Sem trânsito.',
     l5H: 'Banho de lago a 18 °C', l5Body: 'Sim, em julho aqui em cima esquenta isso. O mergulho é o rito.',
     gygEyebrow: 'Reservável agora',
     gygH: 'Atividades de verão à meia-noite',

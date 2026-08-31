@@ -226,7 +226,7 @@ const de = {
       l1H: 'Sauna um Mitternacht', l1Body: 'An einem See, nackt, ohne Ironie. Der Temperaturschock ist der Sinn der Sache.',
       l2H: 'Außenterrasse bis 03:00 Uhr', l2Body: 'Die Sonne bleibt oben, die Bar auch. Sonnenbrille für das Bier um 1 Uhr morgens mitnehmen.',
       l3H: 'Mit dem Rad durch den Oulu-Archipel', l3Body: 'Brücken verbinden 12 Inseln innerhalb der Stadt, flach, beleuchtet, die ganze Nacht.',
-      l4H: 'Um 02:00 Uhr nach Nordkapp fahren', l4Body: '4 Stunden von Inari. Sonne über dem Lenkrad. Kein Verkehr.',
+      l4H: 'Um 02:00 Uhr nach Nordkapp fahren', l4Body: 'Rund sechs Stunden von Inari. Sonne über dem Lenkrad. Kein Verkehr.',
       l5H: 'Schwimmen im 18 °C warmen See', l5Body: 'Ja, im Juli wird er auch hier oben so warm. Der Sprung ins Wasser ist das Ritual.',
       gygEyebrow: 'Jetzt buchbar',
       gygH: 'Sommer-Aktivitäten um Mitternacht',

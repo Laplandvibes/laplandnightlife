@@ -225,7 +225,7 @@ const en = {
       l1H: 'Sauna at midnight', l1Body: 'By a lake, naked, without irony. The temperature shock is the point.',
       l2H: 'Outdoor terrace until 03:00', l2Body: 'The sun stays up, so does the bar. Bring sunglasses for a 1 AM beer.',
       l3H: 'Cycle the Oulu archipelago', l3Body: 'Bridges connect 12 islands inside the city, flat, lit, all night.',
-      l4H: 'Drive to Nordkapp at 02:00', l4Body: '4 hours from Inari. Sun on the steering wheel. No traffic.',
+      l4H: 'Drive to Nordkapp at 02:00', l4Body: 'About six hours from Inari. Sun on the steering wheel. No traffic.',
       l5H: 'Lake swim at 18 °C', l5Body: 'Yes, it gets that warm in July, even up here. The dip is the rite.',
       gygEyebrow: 'Bookable now',
       gygH: 'Summer activities at midnight',

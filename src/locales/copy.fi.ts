@@ -226,7 +226,7 @@ const fi = {
       l1H: 'Sauna keskiyöllä', l1Body: 'Järven rannalla, alasti, ilman ironiaa. Lämpötilashokki on pointti.',
       l2H: 'Ulkoterassi 03:00 saakka', l2Body: 'Aurinko pysyy ylhäällä, baari samoin. Ota aurinkolasit mukaan aamuyhden oluelle.',
       l3H: 'Pyöräile Oulun saaristossa', l3Body: 'Sillat yhdistävät 12 saarta kaupungin sisällä, tasaista, valaistua, koko yön.',
-      l4H: 'Aja Nordkappiin kello 02:00', l4Body: '4 tuntia Inarista. Aurinko ratin yllä. Ei liikennettä.',
+      l4H: 'Aja Nordkappiin kello 02:00', l4Body: 'Noin kuusi tuntia Inarista. Aurinko ratin yllä. Ei liikennettä.',
       l5H: 'Järviuinti 18 °C:ssa', l5Body: 'Kyllä, niin lämpimäksi järvi lämpenee heinäkuussa, jopa täällä. Pulahdus on rituaali.',
       gygEyebrow: 'Varattavissa nyt',
       gygH: 'Kesäaktiviteetit keskiyöllä',

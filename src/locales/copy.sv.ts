@@ -239,7 +239,7 @@ const sv = {
     l1H: 'Bastu vid midnatt', l1Body: 'Vid en sjö, naken, utan ironi. Temperaturchocken är hela poängen.',
     l2H: 'Uteterrass till 03:00', l2Body: 'Solen står kvar, det gör baren också. Ta med solglasögon till en öl klockan ett på natten.',
     l3H: 'Cykla genom Oulus skärgård', l3Body: 'Broar förbinder 12 öar inne i staden, platt, upplyst, hela natten.',
-    l4H: 'Kör till Nordkapp klockan 02:00', l4Body: '4 timmar från Inari. Sol på ratten. Ingen trafik.',
+    l4H: 'Kör till Nordkapp klockan 02:00', l4Body: 'Cirka sex timmar från Inari. Sol på ratten. Ingen trafik.',
     l5H: 'Sjöbad i 18 °C', l5Body: 'Ja, sjön blir faktiskt så varm i juli, till och med här uppe. Doppet är riten.',
     gygEyebrow: 'Bokningsbart nu',
     gygH: 'Sommaraktiviteter vid midnatt',

@@ -228,7 +228,7 @@ const es = {
     l1H: 'Sauna a medianoche', l1Body: 'Junto a un lago, desnudos, sin ironía. El choque térmico es el sentido.',
     l2H: 'Terraza al aire libre hasta las 03:00', l2Body: 'El sol sigue arriba, el bar también. Gafas de sol para una cerveza a la 01:00.',
     l3H: 'Pedalear por el archipiélago de Oulu', l3Body: 'Los puentes conectan 12 islas dentro de la ciudad, llanas, iluminadas, toda la noche.',
-    l4H: 'Conducir a Nordkapp a las 02:00', l4Body: '4 h desde Inari. Sol sobre el volante. Sin tráfico.',
+    l4H: 'Conducir a Nordkapp a las 02:00', l4Body: 'Unas seis horas desde Inari. Sol sobre el volante. Sin tráfico.',
     l5H: 'Baño en lago a 18 °C', l5Body: 'Sí, en julio aquí arriba se templa así. El chapuzón es el rito.',
     gygEyebrow: 'Reservable ahora',
     gygH: 'Actividades de verano a medianoche',
