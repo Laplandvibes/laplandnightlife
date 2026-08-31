@@ -257,7 +257,7 @@ const en = {
       readEyebrow: 'Read this once',
       readH: 'Finland is strict. Very strict.',
       r1H: 'All recreational drugs are illegal, even cannabis.', r1Body: "Finland is strict on this. Possession of any recreational drug is a crime, and police don't differentiate. Don't carry, don't buy, don't risk it, fines start at 100s of euros, deportation is possible for non-residents.",
-      r2H: 'BAC limit is 0.5 ‰, roughly half a beer.', r2Body: 'About half a pint of lager will put an average adult over the limit. Police set up checkpoints leaving ski resorts on weekend mornings.',
+      r2H: 'BAC limit is 0.5 ‰, roughly two beers.', r2Body: 'About two pints of lager will put an average adult over the limit. Police set up checkpoints leaving ski resorts on weekend mornings.',
       r3H: 'If it moves, the limit applies.', r3Body: 'The same 0.5 ‰ limit applies to snowmobiles, e-scooters and electric bikes, not just cars. A drunk snowmobile crash on resort property is a criminal offence, not a resort matter.',
       r4H: 'The street is not a terrace.', r4Body: 'Drinking alcohol in public spaces is prohibited under the Public Order Act, but parks and comparable public areas are exempt as long as you are not obstructing or disturbing anyone. Police enforce the rest loosely, but they do enforce, especially in Rovaniemi centre and around Levi resort.',
       footer: 'Editorial standards + advertising disclosures:',

@@ -272,7 +272,7 @@ const sv = {
     readEyebrow: 'Läs det här en gång',
     readH: 'Finland är strängt. Mycket strängt.',
     r1H: 'Alla rekreationsdroger är olagliga, även cannabis.', r1Body: 'Finland är strängt på den punkten. Innehav av vilken rekreationsdrog som helst är ett brott, och polisen gör ingen skillnad. Bär inget, köp inget, ta inga risker, böterna börjar på hundratals euro, och för icke-bosatta är utvisning möjlig.',
-    r2H: 'Promillegränsen är 0,5 ‰, ungefär en halv öl.', r2Body: 'En halv stor stark räcker för att en genomsnittlig vuxen ska hamna över gränsen. Polisen sätter upp kontroller vid utfarten från skidorter på helgmorgnar.',
+    r2H: 'Promillegränsen är 0,5 ‰, ungefär två öl.', r2Body: 'Två stora starka räcker för att en genomsnittlig vuxen ska hamna över gränsen. Polisen sätter upp kontroller vid utfarten från skidorter på helgmorgnar.',
     r3H: 'Rör det sig gäller gränsen.', r3Body: 'Samma gräns på 0,5 ‰ gäller snöskotrar, elsparkcyklar och elcyklar, inte bara bilar. En berusad snöskoterkrock på en orts område är ett brott, inte en intern ortsfråga.',
     r4H: 'Gatan är ingen terrass.', r4Body: 'Att dricka alkohol på allmän plats är förbjudet enligt ordningslagen, men parker och jämförbara allmänna områden är undantagna så länge du inte hindrar eller stör någon. I övrigt tillämpar polisen det milt, men de tillämpar det, särskilt i centrala Rovaniemi och kring Levi-orten.',
     footer: 'Redaktionella riktlinjer + annonsmärkning:',

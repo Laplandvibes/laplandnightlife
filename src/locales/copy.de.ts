@@ -258,7 +258,7 @@ const de = {
       readEyebrow: 'Einmal lesen',
       readH: 'Finnland ist streng. Sehr streng.',
       r1H: 'Alle Freizeitdrogen sind illegal, auch Cannabis.', r1Body: 'Finnland ist hier streng. Der Besitz jeglicher Freizeitdroge ist eine Straftat, und die Polizei macht keinen Unterschied. Nicht mitnehmen, nicht kaufen, kein Risiko eingehen, die Bußgelder beginnen bei mehreren hundert Euro, für Touristen ist eine Ausweisung möglich.',
-      r2H: 'Promillegrenze 0,5, etwa ein halbes Bier.', r2Body: 'Etwa ein halbes Pint Lager bringt einen durchschnittlichen Erwachsenen über die Grenze. Die Polizei richtet an den Wochenendmorgen Kontrollen an den Ausfahrten der Skigebiete ein.',
+      r2H: 'Promillegrenze 0,5, etwa zwei Bier.', r2Body: 'Etwa zwei Pints Lager bringen einen durchschnittlichen Erwachsenen über die Grenze. Die Polizei richtet an den Wochenendmorgen Kontrollen an den Ausfahrten der Skigebiete ein.',
       r3H: 'Was sich bewegt, fällt unter die Regel.', r3Body: 'Die gleiche Grenze von 0,5 ‰ gilt für Schneemobile, E-Scooter und E-Bikes, nicht nur für Autos. Ein betrunkener Schneemobilunfall auf einem Skigebietsgelände ist eine Straftat, keine interne Angelegenheit des Skigebiets.',
       r4H: 'Die Straße ist keine Terrasse.', r4Body: 'Alkoholkonsum im öffentlichen Raum ist nach dem Ordnungsgesetz verboten, Parks und vergleichbare öffentliche Flächen sind jedoch ausgenommen, solange Sie niemanden behindern oder stören. Den Rest setzt die Polizei locker durch, aber sie setzt ihn durch, besonders im Zentrum von Rovaniemi und rund um das Skigebiet Levi.',
       footer: 'Redaktionelle Standards + Werbe-Offenlegungen:',

@@ -272,7 +272,7 @@ const it = {
     readEyebrow: 'Da leggere una volta',
     readH: 'La Finlandia è severa. Molto.',
     r1H: 'Tutte le droghe ricreative sono illegali, anche la cannabis.', r1Body: 'La Finlandia è inflessibile su questo. Il possesso di qualsiasi droga ricreativa è reato, e la polizia non fa distinzioni. Non ne porti, non ne compri, non rischi: le multe partono da centinaia di euro, e per i non residenti è possibile l\'espulsione.',
-    r2H: 'Il limite alcolemico è 0,5 ‰, circa mezza birra.', r2Body: 'Circa mezza pinta di lager basta a portare un adulto medio oltre il limite. La polizia monta posti di blocco all\'uscita dalle stazioni sciistiche nei weekend mattutini.',
+    r2H: 'Il limite alcolemico è 0,5 ‰, circa due birre.', r2Body: 'Circa due pinte di lager bastano a portare un adulto medio oltre il limite. La polizia monta posti di blocco all\'uscita dalle stazioni sciistiche nei weekend mattutini.',
     r3H: 'Se si muove, il limite vale.', r3Body: 'Lo stesso limite di 0,5 ‰ vale per motoslitte, monopattini elettrici e biciclette elettriche, non solo le auto. Un incidente in motoslitta da ubriaco sul terreno della stazione è un reato penale, non una questione interna della stazione.',
     r4H: 'La strada non è una terrazza.', r4Body: 'Bere alcol negli spazi pubblici è vietato dalla legge sull\'ordine pubblico, ma parchi e aree pubbliche assimilabili sono esclusi purché non si intralci né si disturbi nessuno. Per il resto la polizia applica la regola con flessibilità, ma la applica, soprattutto nel centro di Rovaniemi e attorno alla stazione di Levi.',
     footer: 'Standard editoriali + dichiarazioni pubblicitarie:',

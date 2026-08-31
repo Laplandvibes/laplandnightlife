@@ -272,7 +272,7 @@ const nl = {
     readEyebrow: 'Lees dit één keer',
     readH: 'Finland is streng. Heel streng.',
     r1H: 'Alle recreatieve drugs zijn illegaal, zelfs cannabis.', r1Body: 'Finland is hierin streng. Bezit van welke recreatieve drug dan ook is een misdrijf, en de politie maakt geen onderscheid. Draag niets bij u, koop niets, neem geen risico, boetes beginnen bij honderden euro\'s, en voor niet-ingezetenen is uitzetting mogelijk.',
-    r2H: 'De promillegrens is 0,5 ‰, ongeveer een half biertje.', r2Body: 'Een half pintje pils brengt een gemiddelde volwassene al over de grens. De politie zet in de weekendochtenden controleposten op bij het verlaten van skigebieden.',
+    r2H: 'De promillegrens is 0,5 ‰, ongeveer twee biertjes.', r2Body: 'Twee pintjes pils brengen een gemiddelde volwassene al over de grens. De politie zet in de weekendochtenden controleposten op bij het verlaten van skigebieden.',
     r3H: 'Als het beweegt, geldt de grens.', r3Body: 'Dezelfde 0,5 ‰-grens geldt voor sneeuwscooters, e-steps en e-bikes, niet alleen auto\'s. Een dronken sneeuwscooter-ongeval op het terrein van een resort is een strafbaar feit, geen interne resortkwestie.',
     r4H: 'De straat is geen terras.', r4Body: 'Alcohol drinken in de openbare ruimte is verboden op grond van de Wet op de openbare orde, maar parken en vergelijkbare openbare ruimtes zijn uitgezonderd zolang u niemand hindert of stoort. De rest handhaaft de politie soepel, maar ze handhaaft wel, vooral in het centrum van Rovaniemi en rond het resort van Levi.',
     footer: 'Redactionele standaarden + reclame-uitingen:',

@@ -258,7 +258,7 @@ const fi = {
       readEyebrow: 'Lue tämä kerran',
       readH: 'Suomi on tiukka. Hyvin tiukka.',
       r1H: 'Kaikki huumeet ovat laittomia, myös kannabis.', r1Body: 'Suomi on tiukka tässä. Minkä tahansa huumeen hallussapito on rikos, eikä poliisi tee eroa. Älä kanna, älä osta, älä ota riskiä, sakot alkavat sadoista euroista, ulkomaalaisille karkotus on mahdollista.',
-      r2H: 'Promilleraja on 0,5, noin puoli olutta.', r2Body: 'Noin puoli tuoppia lageria nostaa keskimääräisen aikuisen rajan yli. Poliisi pystyttää tarkastuspisteitä hiihtokeskusten ulkopuolelle viikonloppuaamuisin.',
+      r2H: 'Promilleraja on 0,5, noin kaksi olutta.', r2Body: 'Noin kaksi tuoppia lageria nostaa keskimääräisen aikuisen rajan yli. Poliisi pystyttää tarkastuspisteitä hiihtokeskusten ulkopuolelle viikonloppuaamuisin.',
       r3H: 'Jos se liikkuu, raja pätee.', r3Body: 'Sama 0,5 ‰ raja koskee moottorikelkkoja, sähköpotkulautoja ja sähköpolkupyöriä, ei vain autoja. Päihtyneen moottorikelkkakolari rinnealueella on rikos, ei rinnekeskuksen sisäinen asia.',
       r4H: 'Katu ei ole terassi.', r4Body: 'Alkoholin nauttiminen yleisillä paikoilla on järjestyslaissa kielletty, mutta puistot ja niihin verrattavat yleiset alueet on rajattu kiellon ulkopuolelle, kunhan et haittaa tai häiritse muita. Muuta poliisi valvoo löyhästi, mutta valvoo, varsinkin Rovaniemen keskustassa ja Levin alueella.',
       footer: 'Toimitukselliset standardit + mainontalausekkeet:',

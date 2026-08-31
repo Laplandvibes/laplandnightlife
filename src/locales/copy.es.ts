@@ -260,7 +260,7 @@ const es = {
     readEyebrow: 'Léalo una vez',
     readH: 'Finlandia es estricta. Muy estricta.',
     r1H: 'Toda droga recreativa es ilegal, también el cannabis.', r1Body: 'Finlandia es estricta en esto. La posesión de cualquier droga recreativa es delito y la policía no diferencia. No la lleve, no la compre, no se arriesgue, las multas empiezan en cientos de euros y la expulsión es posible para no residentes.',
-    r2H: 'Tasa máxima 0,5 ‰, aprox. media cerveza.', r2Body: 'Media pinta de lager pasa a la mayoría de adultos del límite. La policía monta controles a la salida de las estaciones los fines de semana.',
+    r2H: 'Tasa máxima 0,5 ‰, aprox. dos cervezas.', r2Body: 'Dos pintas de lager pasan a la mayoría de adultos del límite. La policía monta controles a la salida de las estaciones los fines de semana.',
     r3H: 'Si se mueve, aplica el límite.', r3Body: 'El mismo 0,5 ‰ aplica a motonieves, patinetes eléctricos y bicicletas eléctricas, no solo a coches. Un accidente borracho en motonieve dentro de una estación es delito penal, no un asunto interno de la estación.',
     r4H: 'La calle no es una terraza.', r4Body: 'Beber alcohol en espacios públicos está prohibido por la Ley de Orden Público, pero los parques y zonas públicas equivalentes quedan exceptuados mientras no estorbes ni molestes a nadie. El resto la policía lo aplica con flexibilidad, pero lo aplica, especialmente en el centro de Rovaniemi y en torno a Levi.',
     footer: 'Estándares editoriales y divulgaciones publicitarias:',
