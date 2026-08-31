@@ -148,14 +148,14 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '芬兰规模最大的滑雪区之一。',
     pageTagline: '芬兰规模最大的滑雪区之一。',
-    intro: '于拉斯有62条雪道，分属两个村子，北边的埃卡斯洛姆波洛（Äkäslompolo）和南边的于拉斯亚尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是埃卡斯洛姆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯图里国立公园是芬兰第三大国家公园。',
+    intro: '于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是阿卡斯隆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯通图里国家公园是芬兰第三大国家公园。',
     venues: {
-      'Sport Resort Ylläs': { type: '滑雪后+酒吧', note: '雪道旁，埃卡斯洛姆波洛人气最旺的滑雪后据点。' },
-      'Taiga Pub & Kitchen': { type: '酒馆+厨房', note: '埃卡斯洛姆波洛的酒馆餐厅，酒头、酒馆菜、看比赛。' },
-      'Ravintola Otso': { type: '餐厅+酒吧', note: '村民最爱，在埃卡斯洛姆波洛和于拉斯亚尔维都有门店，晚餐和小酌都合适。' },
+      'Sport Resort Ylläs': { type: '滑雪后+酒吧', note: '雪道旁，阿卡斯隆波洛人气最旺的滑雪后据点。' },
+      'Taiga Pub & Kitchen': { type: '酒馆+厨房', note: '阿卡斯隆波洛的酒馆餐厅，酒头、酒馆菜、看比赛。' },
+      'Ravintola Otso': { type: '餐厅+酒吧', note: '村民最爱，在阿卡斯隆波洛和于拉斯耶尔维都有门店，晚餐和小酌都合适。' },
     },
     knowList: [
-      '埃卡斯和于拉斯亚尔维之间车程20分钟，出租车要提前安排。',
+      '阿卡斯和于拉斯耶尔维之间车程20分钟，出租车要提前安排。',
       '最后点单约2:00，比莱维早。',
       '没有夜店，只有酒吧。',
       '国家公园面积1020平方公里，真正的卖点是寂静。',
@@ -285,7 +285,7 @@ const overlay: Record<string, CityOverlay> = {
     region: '西拉普兰',
     blurb: '没有夜生活。Pallas-Yllästunturi 国家公园才是卖点。',
     pageTagline: '国家公园门户。',
-    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯图里国立公园（1020平方公里，芬兰第三大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
+    intro: '穆奥尼奥有2300名居民，是帕拉斯-于拉斯通图里国家公园（1020平方公里，芬兰第三大）的门户之一。没有夜店，没有酒吧巡游，大多数夜晚早早结束。Harriniva Wilderness Hotel 为参加萨法里的客人提供晚间桑拿+大堂酒吧的组合，Jeris Lakeside Resort 在耶里斯湖畔提供同样的体验。老实说，这就是穆奥尼奥的"夜生活"。',
     venues: {
       'Jeris Lakeside Resort': { type: '酒店酒吧', note: '耶里斯湖畔的酒店，晚上有餐厅和酒吧。' },
       'Harriniva Wilderness Hotel': { type: '酒店酒吧', note: '桑拿 + 酒吧，主要是雪橇团的客人。' },

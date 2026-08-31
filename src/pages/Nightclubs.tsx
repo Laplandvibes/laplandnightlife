@@ -17,7 +17,7 @@ const RIDE_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   ja: { eyebrow: '行きも帰りも', h: '入口までの足、そして帰りの足' },
   es: { eyebrow: 'Ida y vuelta', h: 'El viaje hasta la puerta, y de vuelta' },
   'pt-BR': { eyebrow: 'Ida e volta', h: 'A corrida até a porta, e de volta' },
-  'zh-CN': { eyebrow: '往返接送', h: '送到门口的车,以及回程' },
+  'zh-CN': { eyebrow: '往返接送', h: '送到门口的车，以及回程' },
   ko: { eyebrow: '갈 때와 올 때', h: '문 앞까지, 그리고 돌아오는 길' },
   fr: { eyebrow: 'Aller et retour', h: 'La course jusqu’à la porte, et le retour' },
   it: { eyebrow: 'Andata e ritorno', h: 'La corsa fino alla porta, e ritorno' },
