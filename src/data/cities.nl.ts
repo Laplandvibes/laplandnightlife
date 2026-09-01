@@ -43,7 +43,7 @@ const overlay: Record<string, CityOverlay> = {
       'Koskikatu en de voetgangersstraat dragen vrijwel de hele scene. Alles is te belopen.',
       'Laatste ronde om 03:00; clubs sluiten om 03:30 in de winter, soms 04:00 in het hoogseizoen.',
       'Geen Uber. Bewaar het lokale taxinummer 0100 84 84.',
-      'Het noorderlichtseizoen piekt okt–maart. Check de voorspelling voordat je de avond aan de dansvloer geeft.',
+      'Het noorderlichtseizoen piekt okt–maart. Check de voorspelling voordat u de avond aan de dansvloer geeft.',
     ],
     quickFacts: {
       'Population': { label: 'Inwoners', value: '64.000' },
@@ -63,7 +63,7 @@ const overlay: Record<string, CityOverlay> = {
       'Ihku': { type: 'Après-ski', note: 'Houten hut aan de voet van de piste. Skischoenen welkom op de dansvloer.' },
     },
     knowList: [
-      'Levi valt stil buiten het skiseizoen. Check de openingsdagen voordat je een grote avond plant.',
+      'Levi valt stil buiten het skiseizoen. Check de openingsdagen voordat u een grote avond plant.',
       'De FIS-wereldbeker van half november is een jaar van tevoren uitverkocht.',
       'Laatste ronde om 03:30 in het seizoen; sommige zaken gaan langer door in de wereldbekerweek.',
       'Het skischoenenbeleid verschilt per zaak. Ihku zegt beroemd genoeg ja.',
@@ -79,7 +79,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Gemeente Inari',
     blurb: 'Glazen iglo\'s, de Igloo Bar van Kakslauttanen en één echte pub: Local Pub Panimo.',
     pageTagline: 'Wildernis-premium: het iglobar-dorp.',
-    intro: 'Saariselkä is geen clubbestemming. Het is een glaziglo-bestemming, en dat is precies de bedoeling. Kakslauttanen Arctic Resort heeft \'s werelds meest gefotografeerde bar (een glazen iglo waar het plafond de aurora is). Het dorp zelf is één hoofdstraat, twee restaurants waar je echt moet eten, en Local Pub Panimo, een microbrouwerij met de betrouwbaarste craftlijst op de tap van heel Lapland. Na het donker speelt het zich af bij de resorts, niet in het dorp.',
+    intro: 'Saariselkä is geen clubbestemming. Het is een glaziglo-bestemming, en dat is precies de bedoeling. Kakslauttanen Arctic Resort heeft \'s werelds meest gefotografeerde bar (een glazen iglo waar het plafond de aurora is). Het dorp zelf is één hoofdstraat, twee restaurants waar u echt moet eten, en Local Pub Panimo, een microbrouwerij met de betrouwbaarste craftlijst op de tap van heel Lapland. Na het donker speelt het zich af bij de resorts, niet in het dorp.',
     venues: {
       'Local Pub Panimo': { type: 'Dorpspub', note: 'Lokale en craft-tap, pubmenu, karaoke en live-avonden. De eigen pub van het dorp.' },
       'Hotel Riekonlinna Bar': { type: 'Hotelbar', note: 'Grote open haard in de lobby; avondprogramma in het seizoen.' },
@@ -88,8 +88,8 @@ const overlay: Record<string, CityOverlay> = {
     },
     knowList: [
       'Geen losse clubs: het nachtleven draait om de hotels.',
-      'Voor de Igloo Bar is een reservering nodig als je niet bij Kakslauttanen verblijft.',
-      'De weg vanaf de luchthaven (Ivalo) duurt 25 minuten; boek een transfer als je drinkt.',
+      'Voor de Igloo Bar is een reservering nodig als u niet bij Kakslauttanen verblijft.',
+      'De weg vanaf de luchthaven (Ivalo) duurt 25 minuten; boek een transfer als u drinkt.',
       'Een aurora-app is onmisbaar. Het personeel wekt gasten om 02:00 als ze actief is.',
     ],
     quickFacts: {
@@ -103,7 +103,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Gemeente Inari',
     blurb: 'Culturele hoofdstad van de Sámi: Sajos, Siida, het Inarimeer en de wilderniskerk van Pielpajärvi.',
     pageTagline: 'De culturele hoofdstad van de Sámi.',
-    intro: 'Inari is de culturele zetel van het Sámi-parlement (Sajos) en de thuisbasis van Siida, het museum dat alles uitlegt wat je niet wist over Sápmi. Het "nachtleven" is hier cultureel: het inheemse filmfestival Skábmagovat in januari, het Sámi-muziekfestival Ijahis Idja in augustus, en een handvol bars die vooral diners serveren. Kom hier niet voor clubs. Kom voor koud meerwater, joik-concerten en een hemel die in december om 14:00 zwart wordt.',
+    intro: 'Inari is de culturele zetel van het Sámi-parlement (Sajos) en de thuisbasis van Siida, het museum dat alles uitlegt wat u niet wist over Sápmi. Het "nachtleven" is hier cultureel: het inheemse filmfestival Skábmagovat in januari, het Sámi-muziekfestival Ijahis Idja in augustus, en een handvol bars die vooral diners serveren. Kom hier niet voor clubs. Kom voor koud meerwater, joik-concerten en een hemel die in december om 14:00 zwart wordt.',
     venues: {
       'Hotel Inari Bar': { type: 'Hotelbar', note: 'Restaurant + bar met uitzicht op het meer, open tot 01:00.' },
       'Café Čaiju': { type: 'Overdag', note: 'Café van het Sámi-parlement: koffie + culturele evenementen.' },
@@ -112,7 +112,7 @@ const overlay: Record<string, CityOverlay> = {
       'Geen clubs. Twee hotels met een bar, drie restaurants die alcohol schenken.',
       'Het inheemse filmfestival Skábmagovat loopt eind januari; overnachtingen raken uitverkocht.',
       'Festival Ijahis Idja half augustus: het dichtst bij een "scene" dat Inari heeft.',
-      'Sajos en Siida zijn verplichte culturele bezoeken voordat je ergens gaat drinken.',
+      'Sajos en Siida zijn verplichte culturele bezoeken voordat u ergens gaat drinken.',
     ],
     quickFacts: {
       'Population': { label: 'Inwoners', value: '6.800' },
@@ -133,7 +133,7 @@ const overlay: Record<string, CityOverlay> = {
     },
     knowList: [
       'Het meeste speelt zich af in het SnowCastle van januari tot april.',
-      'Voor ijsbreker Sampo moet je in het hoogseizoen 2–3 dagen vooraf boeken.',
+      'Voor ijsbreker Sampo moet u in het hoogseizoen 2–3 dagen vooraf boeken.',
       'Laatste ronde 02:00 in de stad; de bar van het SnowCastle sluit eerder (meestal om 24:00).',
       'Trein vanuit Helsinki: 8 uur rechtstreeks.',
     ],
@@ -196,7 +196,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Pelkosenniemi / Sodankylä',
     blurb: 'Amethist, fjellen en de rustigste ski-ervaring van Lapland.',
     pageTagline: 'De amethistfjellen.',
-    intro: 'Twee kleine fjellen, 35 km uit elkaar, samen één nationaal park. Pyhä heeft het grotere skigebied; Luosto heeft de amethistmijn die je om middernacht onder de aurora kunt bezoeken. Geen van beide heeft clubs. Beide hebben hotelbars die een avond bij de open haard waard zijn: Hotel Pyhätunturi voor dineren op restaurantniveau, Hotel Aurora in Luosto voor de bar met aurora-raam. De rustigste "skibestemming" van Lapland, en trots daarop.',
+    intro: 'Twee kleine fjellen, 35 km uit elkaar, samen één nationaal park. Pyhä heeft het grotere skigebied; Luosto heeft de amethistmijn die u om middernacht onder de aurora kunt bezoeken. Geen van beide heeft clubs. Beide hebben hotelbars die een avond bij de open haard waard zijn: Hotel Pyhätunturi voor dineren op restaurantniveau, Hotel Aurora in Luosto voor de bar met aurora-raam. De rustigste "skibestemming" van Lapland, en trots daarop.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Hotelbar', note: 'Restaurant + bar, open haard, aan de piste.' },
       'Santa\'s Hotel Aurora': { type: 'Bar met aurora-raam', note: 'Bar met glazen wand op het noorden: wekservice als de aurora actief is.' },
@@ -242,7 +242,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Gemeente Kittilä',
     blurb: 'Waar de locals echt wonen (Levi is vooral toeristen).',
     pageTagline: 'Waar de locals van Levi echt wonen.',
-    intro: 'Kittilä is de hoofdplaats van de gemeente: 6 500 inwoners, de luchthaven en de mensen die het 18 km verderop gelegen Levi draaiende houden. Het barleven is klein en lokaal: een hotelbar en een paar dorpspubs, geen toeristenprogramma. De meeste bezoekers rijden er zo doorheen. Wil je een rustige Finse kleinstadsavond zonder de resortprijzen van Levi, dan is dit de plek.',
+    intro: 'Kittilä is de hoofdplaats van de gemeente: 6 500 inwoners, de luchthaven en de mensen die het 18 km verderop gelegen Levi draaiende houden. Het barleven is klein en lokaal: een hotelbar en een paar dorpspubs, geen toeristenprogramma. De meeste bezoekers rijden er zo doorheen. Wilt u een rustige Finse kleinstadsavond zonder de resortprijzen van Levi, dan is dit de plek.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Hotelbar', note: 'De betrouwbare optie in het dorp, rustiger en goedkoper dan Levi.' },
     },
