@@ -134,6 +134,18 @@ function parseOverlay(file) {
 function buildDescription(tagline, intro) {
   let base = `${tagline} ${intro}`.replace(/\s+/g, ' ').trim();
   if ([...base].length <= 160) return base;
+  // 🔴 Ellipsi tuloslistalla kertoo lukijalle etta teksti loppui kesken.
+  // Mitattu 1.9.2026 metaportilla: 14 hollanninkielista kuvausta paattyi
+  // ellipsiin talla sivustolla, ja hollannin CTR on verkoston heikoin.
+  // Kokonainen ajatus voittaa pidemman katkennaneen: kokeile ensin
+  // tagline + rungon ENSIMMAINEN VIRKE, sitten pelkka virke.
+  const virke = (String(intro).match(/^[^.!?]*[.!?]/) || [])[0];
+  if (virke) {
+    const lyhyt = `${tagline} ${virke.trim()}`.replace(/\s+/g, ' ').trim();
+    if ([...lyhyt].length <= 160) return lyhyt;
+    const yksin = virke.trim();
+    if ([...yksin].length >= 50 && [...yksin].length <= 160) return yksin;
+  }
   // trim to <=158 chars at the last space, then add ellipsis.
   const chars = [...base];
   let cut = chars.slice(0, 158).join('');
