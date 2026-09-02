@@ -29,7 +29,7 @@ const CONNECT_LEAD: Record<Lang, { eyebrow: string; h: string }> = {
   fi: { eyebrow: 'Ennen lähtöä', h: 'Hoida netti kuntoon ennen kuin ilta alkaa' },
   de: { eyebrow: 'Vor der Reise', h: 'Regeln Sie Ihre Datenverbindung, bevor die Nacht beginnt' },
   ja: { eyebrow: '出発前に', h: '夜が始まる前に、データの準備を' },
-  es: { eyebrow: 'Antes de salir', h: 'Resuelve tus datos antes de que empiece la noche' },
+  es: { eyebrow: 'Antes de salir', h: 'Resuelva sus datos antes de que empiece la noche' },
   'pt-BR': { eyebrow: 'Antes de ir', h: 'Resolva sua internet antes de a noite começar' },
   'zh-CN': { eyebrow: '出发之前', h: '夜生活开始前，先把流量准备好' },
   ko: { eyebrow: '떠나기 전에', h: '밤이 시작되기 전에 데이터부터 챙기세요' },
