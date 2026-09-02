@@ -18,7 +18,7 @@ const DISCLOSURE: Record<Lang, string> = {
   fi: 'Tämä sivu sisältää kumppanilinkkejä. Jos varaat tai ostat niiden kautta, LaplandVibes voi saada provision. Sinulle se ei maksa mitään ylimääräistä.',
   de: 'Diese Seite enthält Partner-Links. Wenn Sie darüber buchen oder kaufen, kann LaplandVibes eine Provision ohne Mehrkosten für Sie erhalten.',
   ja: 'このページにはアフィリエイトリンクが含まれます。リンク経由で予約・購入された場合、追加費用なしでLaplandVibesに手数料が支払われることがあります。',
-  es: 'Esta página contiene enlaces de afiliación. Si reservas o compras a través de ellos, LaplandVibes puede recibir una comisión sin coste adicional para ti.',
+  es: 'Esta página contiene enlaces de afiliación. Si reserva o compra a través de ellos, LaplandVibes puede recibir una comisión sin coste adicional para usted.',
   'pt-BR':
     'Esta página contém links de afiliados. Se você reservar ou comprar por meio deles, a LaplandVibes pode receber comissão sem custo adicional para você.',
   'zh-CN':
