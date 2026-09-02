@@ -239,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilä (kyrkby)',
     region: 'Kittilä kommun',
     blurb: 'Där lokalborna faktiskt bor (Levi är mest turister).',
     pageTagline: 'Där Levis lokalbor faktiskt bor.',
@@ -263,7 +264,7 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Inari kommun',
     blurb: 'Hotel Ivalos lobbybar + Hotel Kultahippus pub.',
     pageTagline: 'Den nordligaste flygplatsen, bara hotellbarer.',
-    intro: 'Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000 invånare.Hotel Ivalo har en lobbybar och restaurangen Lapin Yö. Hotel Kultahippu har byns enda äkta pub. I övrigt finns hotellbarer och en enda bensinmackskiosk som säljer öl.',
+    intro: 'Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland. Själva orten har 4 000 invånare. Hotel Ivalo har en lobbybar och restaurangen Lapin Yö. Hotel Kultahippu har byns enda äkta pub. I övrigt finns hotellbarer och en enda bensinmackskiosk som säljer öl.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Öppet dagligen. Det lokala stället för en öl efter jobbet.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotellbar', note: 'Lugnare, kopplad till restaurangen.' },
