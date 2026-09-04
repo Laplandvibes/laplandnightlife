@@ -19,7 +19,7 @@ const picks: PartnerSnapshot = {
   "products": [
     {
       "sku": "54854307610998",
-      "name": "Makia Fiskari t-paita - Miehet -",
+      "name": "Makia Fiskari t-paita - Miehet - Valkoinen",
       "shelf": "212",
       "category": "212",
       "brand": "Makia",
@@ -30,7 +30,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "54816685359478",
-      "name": "Makia Sophie Trousers - Naiset -",
+      "name": "Makia Sophie Trousers - Naiset - Sininen",
       "shelf": "204",
       "category": "204",
       "brand": "Makia",
@@ -41,7 +41,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "55660153176438",
-      "name": "Makia Process paitatakki - Miehet -",
+      "name": "Makia Process paitatakki - Miehet - Sininen",
       "shelf": "5598",
       "category": "5598",
       "brand": "Makia",
@@ -52,7 +52,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "54816682049910",
-      "name": "Makia Laila Dress - Naiset -",
+      "name": "Makia Laila Dress - Naiset - Harmaa",
       "shelf": "2271",
       "category": "2271",
       "brand": "Makia",
