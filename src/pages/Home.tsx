@@ -1,3 +1,6 @@
+import ProductRail, { type RailLang } from '../shared/ads/ProductRail'
+import makiaRail from '../shared/ads/rails/makia'
+import makiaPicks from '../shared/ads/data/makiaPicks'
 import { Link } from 'react-router-dom';
 import { Music, AlertTriangle, Phone, Calendar, ArrowRight } from 'lucide-react';
 import Hero from '../components/Hero';
@@ -106,6 +109,10 @@ export default function Home() {
       {/* Kumppaniosio heti 1. sisältöosion jälkeen: kakkospääkumppani +
           6 premium-paikkaa (jaettu malli — pääkumppanit eivät näy vierekkäin) */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} className="border-t border-white/5" />
+      {/* Oikea tuoterivi tyhjän house-ad-kortin tilalle (Vesa 4.9.). */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <ProductRail partner={makiaRail} snapshot={makiaPicks} lang={lang as RailLang} sid="home_helsinki_wear" variant="dark" />
+      </div>
 
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
