@@ -77,7 +77,7 @@ const overlay: Record<string, CityOverlay> = {
   saariselka: {
     region: 'Municipio de Inari',
     blurb: 'Iglús de cristal, el Igloo Bar de Kakslauttanen y un único pub de verdad: Local Pub Panimo.',
-    pageTagline: 'Lujo en plena naturaleza: el pueblo de los bares-iglú.',
+    pageTagline: 'Lujo en plena naturaleza: el pueblo de los bares iglú.',
     intro: 'Saariselkä no es un destino de clubes. Es un destino de iglús de cristal, y de eso se trata. El Kakslauttanen Arctic Resort tiene el bar más fotografiado del mundo (un iglú de cristal donde el techo es la aurora). El pueblo en sí es una calle principal, dos restaurantes que merecen la pena y Local Pub Panimo: una microcervecería con la carta de cerveza artesanal de barril más fiable de Laponia. Al caer la noche, la acción está en los resorts, no en el pueblo.',
     venues: {
       'Local Pub Panimo': { type: 'Pub del pueblo', note: 'Grifos locales y artesanales, menú de pub, karaoke y noches en directo: el pub propio del pueblo.' },
@@ -238,6 +238,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilä (pueblo)',
     region: 'Municipio de Kittilä',
     blurb: 'Donde viven de verdad los locales (Levi es sobre todo turistas).',
     pageTagline: 'Donde viven de verdad los locales de Levi.',

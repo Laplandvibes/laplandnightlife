@@ -22,7 +22,7 @@ const fr = {
     seoDesc: "De la salle de 1 700 places du Hullu Poro à l'igloo-bar au toit de verre de Saariselkä : bars, clubs et événements dans 14 villes du Nord finlandais.",
     faq1Q: 'Où se trouve la plus grande discothèque de Laponie finlandaise ?',
     faq1A: 'Hullu Poro Areena à Levi : 1 700 places, 10 bars, 2 étages. Ouvert mer.–sam. en saison de ski.',
-    faq2Q: 'Peut-on voir les aurores depuis un bar en Laponie ?',
+    faq2Q: 'Peut-on voir les aurores boréales depuis un bar en Laponie ?',
     faq2A: 'Oui, l\'Igloo Bar de Kakslauttanen à Saariselkä a un toit en verre pour observer les aurores, et l\'Hotel Aurora Luosto tient un bar à fenêtre aurore avec service de réveil quand les lumières dansent.',
     faq3Q: 'Jusqu\'à quelle heure les bars restent-ils ouverts en Laponie ?',
     faq3A: 'La dernière commande est à 3 h 30 dans les centres-villes et les stations de ski en haute saison. Les petites villes ferment plus tôt en général à 1 h ou 2 h.',
@@ -119,7 +119,7 @@ const fr = {
   },
   aurora: {
     ...en.aurora,
-    seoTitle: 'Bars aurores et bars de glace en Laponie',
+    seoTitle: 'Bars à aurores boréales et bars de glace en Laponie',
     seoDesc: 'Bars igloos au toit en verre, salons à cocktails avec fenêtre aurores, et le bar de glace du SnowCastle. Six adresses vérifiées de Saariselkä à Kemi.',
     heroEyebrow: '6 adresses vérifiées',
     heroTitle: 'Bars aurores & bars de glace',

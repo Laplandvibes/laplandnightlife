@@ -2,6 +2,7 @@ import type { CityOverlay } from './cityI18n';
 
 const overlay: Record<string, CityOverlay> = {
   oulu: {
+    name: 'オウル',
     region: '北ポフヤンマー',
     blurb: '欧州文化首都2026、そして北部で唯一、一年を通して本物のクラブシーンが回り続ける街。',
     pageTagline: '欧州文化首都2026。',
@@ -26,6 +27,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   rovaniemi: {
+    name: 'ロヴァニエミ',
     region: 'ラップランド',
     blurb: '北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。',
     pageTagline: '北極圏の首都。',
@@ -53,6 +55,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   levi: {
+    name: 'レヴィ',
     region: 'Kittilä自治体',
     blurb: 'Hullu Poro Areena：収容1 700人、バー10軒、2フロア。ラップランド最大のナイトクラブ。',
     pageTagline: 'フィンランド最大のスキーリゾート・パーティー。',
@@ -76,6 +79,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   saariselka: {
+    name: 'サーリセルカ',
     region: 'Inari自治体',
     blurb: 'ガラスのイグルー、KakslauttanenのIgloo Bar、そして本物のパブが1軒：Local Pub Panimo。',
     pageTagline: 'ウィルダネス・プレミアム：イグルーバーの村。',
@@ -100,6 +104,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   inari: {
+    name: 'イナリ',
     region: 'Inari自治体',
     blurb: 'サーミ文化の中心地：Sajos、Siida、Inari湖、そしてPielpajärviの原野教会。',
     pageTagline: 'サーミ文化の首都。',
@@ -122,6 +127,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kemi: {
+    name: 'ケミ',
     region: '海ラップランド',
     blurb: 'SnowCastle、Sampo砕氷船、そしてHotel Merihoviの重層的なレストラン複合施設。',
     pageTagline: 'SnowCastle、砕氷船、海のラップランド。',
@@ -145,6 +151,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   yllas: {
+    name: 'ユッラス',
     region: 'Kolari／Muonio',
     blurb: 'フィンランド有数の大きさのスキーエリア。',
     pageTagline: 'フィンランド有数の大きさのスキーエリア。',
@@ -168,6 +175,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   ruka: {
+    name: 'ルカ',
     region: 'フィンランド北東部',
     blurb: 'スキーヤー日数でフィンランド第2のスキーリゾート。ラップランドのすぐ南。',
     pageTagline: 'クマの国のスキーリゾート。',
@@ -193,6 +201,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   'pyha-luosto': {
+    name: 'ピュハ＆ルオスト',
     region: 'Pelkosenniemi／Sodankylä',
     blurb: 'アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。',
     pageTagline: 'アメジストのフェル。',
@@ -216,6 +225,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   sodankyla: {
+    name: 'ソダンキュラ',
     region: '中央ラップランド',
     blurb: '真夜中の太陽映画祭：真昼の明るさの中、03:00に映画を上映する。',
     pageTagline: '真夜中の太陽映画祭。',
@@ -239,6 +249,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'キッティラの町',
     region: 'Kittilä自治体',
     blurb: '地元民が実際に暮らす場所（Leviはほぼ観光客だ）。',
     pageTagline: 'Leviの地元民が実際に暮らす場所。',
@@ -260,6 +271,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   ivalo: {
+    name: 'イヴァロ',
     region: 'Inari自治体',
     blurb: 'Hotel IvaloのロビーバーとHotel Kultahippuのパブ。',
     pageTagline: '最北の空港。夜はホテルバーだけ。',
@@ -282,6 +294,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   muonio: {
+    name: 'ムオニオ',
     region: '西ラップランド',
     blurb: 'ナイトライフはなし。Pallas-Yllästunturi国立公園が目当て。',
     pageTagline: '国立公園の玄関口。',
@@ -304,6 +317,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   salla: {
+    name: 'サッラ',
     region: '東ラップランド',
     blurb: '何もないど真ん中。フィンランドで最も静かなスキーリゾート。',
     pageTagline: '何もないど真ん中。',

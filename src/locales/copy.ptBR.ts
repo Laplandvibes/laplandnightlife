@@ -20,7 +20,7 @@ const ptBR = {
     faq1Q: 'Onde fica a maior casa noturna da Lapônia finlandesa?',
     faq1A: 'Hullu Poro Areena em Levi: capacidade 1.700, 10 bares, 2 andares. Abre de quarta a sábado na temporada de esqui.',
     faq2Q: 'Dá para ver a aurora de um bar na Lapônia?',
-    faq2A: 'Sim o bar iglu de Kakslauttanen, em Saariselkä, tem teto de vidro para observar a aurora, e o Hotel Aurora Luosto tem bar com janela voltada para a aurora e serviço de aviso quando há atividade.',
+    faq2A: 'Sim, o bar iglu de Kakslauttanen, em Saariselkä, tem teto de vidro para observar a aurora, e o Hotel Aurora Luosto tem bar com janela voltada para a aurora e serviço de aviso quando há atividade.',
     faq3Q: 'Até que horas os bares ficam abertos na Lapônia?',
     faq3A: 'A última rodada é às 03:30 nos centros urbanos e nas áreas de estações de esqui na alta temporada. Cidades menores fecham antes, normalmente 01:00 ou 02:00.',
     faq4Q: 'Existe vida noturna na Lapônia no verão?',
@@ -43,10 +43,10 @@ const ptBR = {
     tours: {
       eyebrow: 'Reservável agora · disponibilidade ao vivo',
       h: 'Tours de hoje à noite e amanhã',
-      body: 'Caça à aurora, jantares no iglu, safáris de snowmobile. Preços reais, confirmação imediata, nada entre você e o guia.',
+      body: 'Caça à aurora, jantares no iglu, safáris de moto de neve. Preços reais, confirmação imediata, nada entre você e o guia.',
     },
     scenes: {
-      h: 'Não existe uma única "vida noturna lapã".',
+      h: 'Não existe uma única "vida noturna lapona".',
       body: 'Cinco cenas distintas dentro de uma mesma região. Saber qual é qual é a diferença entre uma boa noite e uma passagem desperdiçada.',
       c1Tag: 'Cinco cenas · uma região', c1H: 'Cena real', c1Body: '8 baladas · 1 rua', c1Desc: 'Rotuaari de Oulu, Koskikatu de Rovaniemi',
       c2Tag: 'Festa de estação de esqui', c2H: 'Levi', c2Body: 'Hullu Poro · cap. 1.700', c2Desc: 'A maior casa noturna da Lapônia',

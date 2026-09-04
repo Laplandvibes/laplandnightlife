@@ -2,6 +2,7 @@ import type { CityOverlay } from './cityI18n';
 
 const overlay: Record<string, CityOverlay> = {
   oulu: {
+    name: '奥卢',
     region: '北博滕区',
     blurb: '2026 年欧洲文化之都，也是北方唯一一座全年都有真正夜店场景的城市。',
     pageTagline: '2026 年欧洲文化之都。',
@@ -26,6 +27,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   rovaniemi: {
+    name: '罗瓦涅米',
     region: '拉普兰',
     blurb: '北极之都，在游客云集的周末和只属于本地人的工作日之间一分为二。',
     pageTagline: '北极之都。',
@@ -53,6 +55,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   levi: {
+    name: '莱维',
     region: 'Kittilä 市镇',
     blurb: 'Hullu Poro Areena：1 700 人容量、10 个吧台、2 层楼，拉普兰最大的夜店。',
     pageTagline: '芬兰最盛大的滑雪场派对。',
@@ -76,6 +79,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   saariselka: {
+    name: '萨利色尔卡',
     region: 'Inari 市镇',
     blurb: '玻璃冰屋、Kakslauttanen 的 Igloo Bar，外加一家真正的酒馆，Local Pub Panimo。',
     pageTagline: '荒野高端，玻璃冰屋酒吧之村。',
@@ -100,6 +104,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   inari: {
+    name: '伊纳里',
     region: 'Inari 市镇',
     blurb: '萨米文化之都，Sajos、Siida、Inari 湖与 Pielpajärvi 荒野教堂。',
     pageTagline: '萨米文化之都。',
@@ -122,6 +127,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kemi: {
+    name: '凯米',
     region: '海拉普兰',
     blurb: '雪堡（SnowCastle）、Sampo 破冰船，以及 Hotel Merihovi 层层叠叠的餐厅综合体。',
     pageTagline: '雪堡、破冰船、海拉普兰。',
@@ -145,6 +151,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   yllas: {
+    name: '于莱斯',
     region: 'Kolari / Muonio',
     blurb: '芬兰规模最大的滑雪区之一。',
     pageTagline: '芬兰规模最大的滑雪区之一。',
@@ -168,6 +175,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   ruka: {
+    name: '鲁卡',
     region: '芬兰东北部',
     blurb: '按滑雪人次计算，芬兰第二大滑雪度假区，拉普兰以南不远。',
     pageTagline: '熊出没之地的滑雪场。',
@@ -193,6 +201,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   'pyha-luosto': {
+    name: '皮哈-卢奥斯托',
     region: 'Pelkosenniemi / Sodankylä',
     blurb: '紫水晶、群峰，以及拉普兰最安静的滑雪。',
     pageTagline: '紫水晶之峰。',
@@ -216,6 +225,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   sodankyla: {
+    name: '索丹屈莱',
     region: '中拉普兰',
     blurb: '午夜阳光电影节，他们在大白天的 03:00 放映电影。',
     pageTagline: '午夜阳光电影节。',
@@ -239,6 +249,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: '基蒂莱镇',
     region: 'Kittilä 市镇',
     blurb: '本地人真正生活的地方（Levi 多半是游客）。',
     pageTagline: 'Levi 的本地人真正生活的地方。',
@@ -260,6 +271,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   ivalo: {
+    name: '伊瓦洛',
     region: 'Inari 市镇',
     blurb: 'Hotel Ivalo 的大堂酒吧 + Hotel Kultahippu 酒馆。',
     pageTagline: '最北的机场，夜生活只有酒店酒吧。',
@@ -282,6 +294,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   muonio: {
+    name: '穆奥尼奥',
     region: '西拉普兰',
     blurb: '没有夜生活。Pallas-Yllästunturi 国家公园才是卖点。',
     pageTagline: '国家公园门户。',
@@ -304,6 +317,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   salla: {
+    name: '萨拉',
     region: '东拉普兰',
     blurb: '位于天涯海角。芬兰最安静的滑雪度假区。',
     pageTagline: '位于天涯海角。',

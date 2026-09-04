@@ -239,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilä (Ortskern)',
     region: 'Gemeinde Kittilä',
     blurb: 'Wo die Einheimischen wirklich wohnen (Levi ist überwiegend Touristen).',
     pageTagline: 'Wo die Einheimischen von Levi wirklich wohnen.',

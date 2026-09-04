@@ -239,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilä (paese)',
     region: 'Comune di Kittilä',
     blurb: 'Dove vivono davvero i locali (Levi è soprattutto turisti).',
     pageTagline: 'Dove vivono davvero i locali di Levi.',

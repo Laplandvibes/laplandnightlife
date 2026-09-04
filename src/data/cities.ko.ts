@@ -239,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     },
   },
   kittila: {
+    name: 'Kittilä 마을',
     region: 'Kittilä 지자체',
     blurb: '현지인이 실제로 사는 곳 (Levi는 거의 관광객 차지).',
     pageTagline: 'Levi 현지인이 실제로 사는 곳.',
