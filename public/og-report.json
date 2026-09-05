@@ -1,0 +1,86 @@
+{
+  "version": "20260905",
+  "domain": "laplandnightlife.com",
+  "brand": "NIGHTLIFE",
+  "tagline": "Where Finland's North goes out",
+  "generated": "2026-09-05T21:51:04.121Z",
+  "staticFallbackSeason": "summer",
+  "seasons": {
+    "summer": {
+      "heroUrl": "https://laplandnightlife.com/images/drive/summerJuhannus.webp",
+      "heroAlt": null,
+      "heroSha": "779405018adc7cd0",
+      "bytes": 111544,
+      "sha256": "9fe3e96f5b1fad758ece16ba2fc9da7f09aff03483c9b8ed23093d4954eba1a8",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 17977,
+      "inkBox": [
+        363,
+        493,
+        834,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 76.9,
+      "centerSq": 84.8,
+      "photoRegion": 91.1,
+      "photoRegionRef": 91.1,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 437,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    },
+    "winter": {
+      "heroUrl": "https://laplandnightlife.com/images/hero/aurora-bars-neon.webp",
+      "heroAlt": null,
+      "heroSha": "6e5afba2f68d39df",
+      "bytes": 135080,
+      "sha256": "0f215bcc1a9abfda34e0f11181a8cab0bae8234682fe5d3d59ad8d18462838f9",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 17977,
+      "inkBox": [
+        363,
+        493,
+        834,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 70,
+      "centerSq": 81.6,
+      "photoRegion": 81.7,
+      "photoRegionRef": 81.7,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 437,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    }
+  }
+}
