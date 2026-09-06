@@ -55,7 +55,7 @@ const overlay: Record<string, CityOverlay> = {
   levi: {
     region: 'Comune di Kittilä',
     blurb: 'Hullu Poro Areena: 1.700 posti, 10 bar, 2 piani. La discoteca più grande della Lapponia.',
-    pageTagline: 'La festa da stazione sciistica più grande della Finlandia.',
+    pageTagline: 'La festa da sci più grande della Finlandia',
     intro: 'L\'Hullu Poro Areena è il fulcro: capienza 1.700, due piani, dieci bar e la pista da ballo più grande a nord di Helsinki. Attorno: l\'Ihku, la leggendaria baita après-ski dove gli scarponi sono benvenuti in pista, e il Panorama Sky Bar dell\'Hotel Levi Panorama per il drink con vista. A novembre la Coppa del Mondo FIS porta dieci giorni di festa. Da febbraio ad aprile: addii al celibato, scuole di sci e weekend a pieno regime. Fuori stagione, buona parte del villaggio rallenta già a inizio settimana.',
     venues: {
       'Panorama Sky Bar': { type: 'Bar panoramico', note: 'Il bar dell\'Hotel Levi Panorama sopra la cabinovia: drink con vista sui fjäll.' },

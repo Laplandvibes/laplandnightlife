@@ -242,7 +242,7 @@ const overlay: Record<string, CityOverlay> = {
     name: 'Kittilä (Ortskern)',
     region: 'Gemeinde Kittilä',
     blurb: 'Wo die Einheimischen wirklich wohnen (Levi ist überwiegend Touristen).',
-    pageTagline: 'Wo die Einheimischen von Levi wirklich wohnen.',
+    pageTagline: 'Wo Levis Einheimische wirklich wohnen',
     intro: 'Kittilä ist der Hauptort der Gemeinde: 6 500 Einwohner, der Flughafen und die Menschen, die das 18 km entfernte Levi am Laufen halten. Das Barleben ist klein und lokal: eine Hotelbar und ein paar Dorfpubs, kein Touristenprogramm. Die meisten fahren direkt durch. Wer einen ruhigen finnischen Kleinstadtabend ohne Levi-Resortpreise will, ist hier richtig.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Hotelbar', note: 'Die verlässliche Adresse im Ort, ruhiger und günstiger als Levi.' },

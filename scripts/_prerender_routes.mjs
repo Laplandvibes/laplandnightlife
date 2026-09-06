@@ -527,6 +527,50 @@ function resolveRouteMeta(loc, route) {
  * Safe to call twice for the same route/locale: every reader returns a FRESH
  * object literal, so nothing here mutates shared state between passes.
  */
+
+// [LV-DESC-MIN 2026-09-06] OpenSEO's full crawl of 9 798 pages flagged 1 650
+// "meta description too short" (under ~70 characters, CJK under ~40) — legal
+// pages shipped stubs like "LaplandDeals: Terms." while the same build
+// harvested 300–800 words of the page's own text into the crawlable block.
+// Extend a stub with the page's OWN opening sentences (same locale, same
+// harvest the block shows), never above 160, never mid-word. A description
+// that is already long enough, or a page with nothing harvested, is untouched.
+function ensureDescriptionLength(desc, paragraphs, lang) {
+  const cjk = /^(ja|ko|zh|kr|cn)/.test(String(lang || ''));
+  const MIN = cjk ? 40 : 70;
+  const MAX = 160;
+  const d = String(desc || '').trim();
+  // Over 160: Google cuts the rest, and 409 built pages shipped longer ones on 2026-09-06
+  // (copies without the 2026-09-04 clampDescription). Cut at the last sentence end at or
+  // after 90 characters, else at the last word boundary — never mid-word, no ellipsis.
+  if (d.length > MAX) {
+    const head = d.slice(0, MAX);
+    const lastEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '), head.lastIndexOf('。'));
+    if (lastEnd >= 90) return head.slice(0, lastEnd + 1).trim();
+    return (cjk ? head : head.replace(/\s+\S*$/, '')).replace(/[,;:\s]+$/, '');
+  }
+  if (d.length >= MIN || !Array.isArray(paragraphs) || !paragraphs.length) return desc;
+  const text = paragraphs.map((t) => String(t).replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ');
+  const sentences = (cjk ? text.split(/(?<=[。！？])/) : text.split(/(?<=[.!?])\s+/))
+    .map((s) => s.trim())
+    .filter((s) => s && s.length > 3);
+  let out = d;
+  for (const s of sentences) {
+    if (out.includes(s) || s.includes(out)) continue;
+    const joiner = !out ? '' : (/[.!?。！？]$/.test(out) ? ' ' : '. ');
+    const candidate = out + joiner + s;
+    if (candidate.length > MAX) {
+      if (out.length >= MIN) break;
+      const cut = cjk ? candidate.slice(0, MAX) : candidate.slice(0, MAX).replace(/\s+\S*$/, '');
+      if (cut.length >= MIN) out = cut.replace(/[,;:\s]+$/, '');
+      break;
+    }
+    out = candidate;
+    if (out.length >= MIN) break;
+  }
+  return out.length > d.length ? out : desc;
+}
+
 function resolveLocaleMeta(route, loc, enMeta) {
   let meta = resolveRouteMeta(loc, route);
   let localizedTitle = !!(meta && meta.title);
@@ -1206,7 +1250,7 @@ const BRAND_ALTS = [SITE_NAME, SITE_HOST, SITE_HOST.replace(/\.[a-z]+$/, '')]
   .map(reEsc)
   .join('|');
 const SITE_NAME_SUFFIX_RE = new RegExp(
-  `\\s*[|\\u2014\\u2013\\u00B7•-]\\s*(?:${BRAND_ALTS})(?:\\.(?:com|fi|online|blog))?\\s*$`,
+  `\\s*[|\\u2014\\u2013\\u00B7•-]\\s*#?(?:${BRAND_ALTS})(?:\\.(?:com|fi|online|blog))?\\s*$`,
   'i'
 );
 function shortenTitle(t) {
@@ -1215,7 +1259,23 @@ function shortenTitle(t) {
   return short.length >= 25 && short.length < t.length ? short : t;
 }
 
+// [LV-DESC-CLAMP 2026-09-04] Google shows ~155–160 characters of a meta description and
+// cuts the rest; 556 of 9 200 built pages shipped longer ones (stays 244, visit 241).
+// Cut at the last sentence end at or after 90 characters, else at the last word
+// boundary, never mid-word and never with an ellipsis. Titles are NOT clamped here:
+// article titles are content and Google truncates them on its own.
+function clampDescription(d, max = 160) {
+  if (!d || typeof d !== 'string') return d;
+  const s = d.replace(/\s+/g, ' ').trim();
+  if ([...s].length <= max) return s;
+  const head = [...s].slice(0, max).join('');
+  const sentenceEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '), head.endsWith('.') ? head.length - 1 : -1);
+  if (sentenceEnd >= 90) return head.slice(0, sentenceEnd + 1).trim();
+  const cut = head.lastIndexOf(' ');
+  return (cut > 60 ? head.slice(0, cut) : head).replace(/[\s,;:–—\-(]+$/u, '').trim();
+}
 function injectShell({ shell, bcp47, og, canonical, title, description, hreflangs, ogImage, faq, lang, internalLinks, paragraphs }) {
+  description = clampDescription(description);
   let html = shell;
   title = shortenTitle(title);
 
@@ -1494,6 +1554,8 @@ for (const route of routes) {
 
     // Localized page copy for the crawlable block (same-locale only, fail-open).
     const paragraphs = args.crawlableBody ? harvestRouteText(loc, route, meta) : null;
+    // [LV-DESC-MIN 2026-09-06] see ensureDescriptionLength().
+    meta.description = ensureDescriptionLength(meta.description, paragraphs, loc.lang);
     if (paragraphs && paragraphs.length) harvestStats.with++; else harvestStats.without++;
     harvestStats.words += (paragraphs || []).reduce((a, t) => a + t.split(/\s+/).length, 0);
 

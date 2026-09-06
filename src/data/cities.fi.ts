@@ -242,7 +242,7 @@ const overlay: Record<string, CityOverlay> = {
     name: 'Kittilän kirkonkylä',
     region: 'Kittilän kunta',
     blurb: 'Missä paikalliset oikeasti asuvat (Levi on pääosin turisteja).',
-    pageTagline: 'Missä Levin paikalliset oikeasti asuvat.',
+    pageTagline: 'Missä Levin paikalliset oikeasti asuvat',
     intro: 'Kittilä on kuntakeskus: 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä. Baarielämä on pientä ja paikallista: hotellibaari ja pari kylän pubia, ei turistiohjelmaa. Useimmat ajavat suoraan ohi. Jos haluat rauhallisen suomalaisen pikkukaupunki-illan ilman Levin resort-hintoja, tämä on se paikka.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Hotellibaari', note: 'Kaupungin luottopaikka, hiljaisempi ja edullisempi kuin Levi.' },

@@ -117,7 +117,7 @@
       "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLaPeso Oy。"
     },
     "es": {
-      "title": "Política de cookies | LaplandNightlife",
+      "title": "Política de cookies y consentimiento | LaplandNightlife",
       "description": "Cómo usa cookies LaplandNightlife. Conforme al RGPD. Consentimiento denegado por defecto. Operado por LaPeso Oy."
     },
     "pt-BR": {
@@ -287,8 +287,8 @@
       "description": "Le Hullu Poro Areena est la pièce maîtresse : 1 700 places, deux étages, dix bars et la plus grande piste de danse au nord d'Helsinki."
     },
     "it": {
-      "title": "Levi: La festa da stazione sciistica più grande della Finlandia.",
-      "description": "La festa da stazione sciistica più grande della Finlandia. L'Hullu Poro Areena è il fulcro: capienza 1."
+      "title": "Levi: La festa da sci più grande della Finlandia",
+      "description": "La festa da sci più grande della Finlandia L'Hullu Poro Areena è il fulcro: capienza 1."
     },
     "nl": {
       "title": "Levi: Het grootste skigebiedsfeest van Finland.",
@@ -317,8 +317,8 @@
       "description": "ウィルダネス・プレミアム：イグルーバーの村。 Saariselkäはクラブの街ではない。ガラスのイグルーの地であり、それこそが本質だ。Kakslauttanen Arctic Resortには世界で最も写真に撮られるバーがある（天井がオーロラになるガラスのイグルー）。村そのものはメインストリートが一本、食べる価値の…"
     },
     "es": {
-      "title": "Saariselkä: Lujo en plena naturaleza: el pueblo de los bares iglú.",
-      "description": "Lujo en plena naturaleza: el pueblo de los bares iglú. Saariselkä no es un destino de clubes."
+      "title": "Saariselkä: Lujo en la naturaleza y bares iglú",
+      "description": "Lujo en la naturaleza y bares iglú Saariselkä no es un destino de clubes."
     },
     "pt-BR": {
       "title": "Saariselkä: Luxo na natureza: a vila dos bares-iglu.",
@@ -655,11 +655,11 @@
       "description": "Where Levi locals actually live. Kittilä is the municipal seat: 6 500 residents, the airport, and the people who staff Levi 18 km away."
     },
     "fi": {
-      "title": "Kittilän kirkonkylä: Missä Levin paikalliset oikeasti asuvat.",
-      "description": "Missä Levin paikalliset oikeasti asuvat. Kittilä on kuntakeskus: 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä."
+      "title": "Kittilän kirkonkylä: Missä Levin paikalliset oikeasti asuvat",
+      "description": "Missä Levin paikalliset oikeasti asuvat Kittilä on kuntakeskus: 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä."
     },
     "de": {
-      "title": "Kittilä (Ortskern): Wo die Einheimischen von Levi wirklich wohnen.",
+      "title": "Kittilä (Ortskern): Wo Levis Einheimische wirklich wohnen",
       "description": "Kittilä ist der Hauptort der Gemeinde: 6 500 Einwohner, der Flughafen und die Menschen, die das 18 km entfernte Levi am Laufen halten."
     },
     "ja": {
