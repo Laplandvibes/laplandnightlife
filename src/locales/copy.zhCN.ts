@@ -160,7 +160,7 @@ const zhCN = {
     nextUp: '接下来',
   },
   photo: {
-    seoTitle: '芬兰拉普兰夜间摄影',
+    seoTitle: '芬兰拉普兰夜间摄影指南：极光与夜生活拍摄',
     seoDesc: '极光、夜店灯光、冰屋吧与午夜阳光的相机参数。从莱维到凯米六处经过验证的拍摄地，以及先问再拍的礼仪。',
     heroEyebrow: '参数 · 场地 · 礼节',
     heroTitle: '夜间摄影',
