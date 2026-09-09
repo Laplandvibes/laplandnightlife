@@ -345,7 +345,7 @@ export default function Events() {
           {data.map((m, mi) => (
             <div key={m.monthKey}>
               <div className="flex items-center gap-3 mb-5 border-b border-white/10 pb-3">
-                <h2 className="font-heading text-3xl text-white tracking-tight">{c.months[m.monthKey]}</h2>
+                <h2 className="font-heading text-3xl text-white tracking-wide">{c.months[m.monthKey]}</h2>
                 <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">2026</span>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -368,7 +368,7 @@ export default function Events() {
                           </span>
                         )}
                       </p>
-                      <h3 className={`font-heading text-xl tracking-tight mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
+                      <h3 className={`font-heading text-xl tracking-wide mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
                       <p className={`text-sm leading-relaxed ${isPast ? 'text-white/50' : 'text-white/70'}`}>{e.body}</p>
                     </div>
                   );
@@ -384,7 +384,7 @@ export default function Events() {
               not a CTA on every event card. Qstock exclusivity verified from
               qstock.fi's own ticket-info page 2026-08-23. */}
           <div className="bg-night-light/40 border border-white/10 rounded-xl p-6 sm:p-7">
-            <h2 className="font-heading text-2xl text-white tracking-tight mb-2">{c.ticketsH}</h2>
+            <h2 className="font-heading text-2xl text-white tracking-wide mb-2">{c.ticketsH}</h2>
             <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-3xl">{c.ticketsBody}</p>
             <a
               href="https://go.laplandvibes.com/go/ticketmaster?sid=events_tickets_fi"
@@ -402,7 +402,7 @@ export default function Events() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland festivals tours 2026" campaign="events_pillar" count={6} />
@@ -411,7 +411,7 @@ export default function Events() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.ctaH}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
           <p className="text-white/65 mb-6">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="events_cta" destination="Lapland" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}

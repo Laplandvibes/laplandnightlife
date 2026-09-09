@@ -54,7 +54,7 @@ export default function AuroraBars() {
               <div className="absolute -top-20 -right-10 w-40 h-40 bg-purple/20 rounded-full blur-[60px]" />
               <div className="relative">
                 <p className="text-[0.6rem] uppercase tracking-[0.2em] text-purple-light font-bold mb-2">{v.type}</p>
-                <h2 className="font-heading text-xl text-white tracking-tight mb-1">{v.h}</h2>
+                <h2 className="font-heading text-xl text-white tracking-wide mb-1">{v.h}</h2>
                 <p className="text-pink text-xs uppercase tracking-wider font-semibold mb-3">{v.where}</p>
                 <p className="text-sm text-white/70 leading-relaxed">{v.body}</p>
               </div>
@@ -67,7 +67,7 @@ export default function AuroraBars() {
           Icons match the copy: season calendar, ice bar, reservations, wake-up. */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-8 text-center">{c.planH}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-8 text-center">{c.planH}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { icon: CalendarDays, l: c.plan1L, body: c.plan1 },
@@ -80,7 +80,7 @@ export default function AuroraBars() {
                   <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-purple/10 border border-purple/30 text-purple-light shrink-0">
                     <p.icon size={18} strokeWidth={1.8} />
                   </span>
-                  <h3 className="font-heading text-lg text-white tracking-tight leading-tight">{p.l.replace(/[:：]\s*$/, '')}</h3>
+                  <h3 className="font-heading text-lg text-white tracking-wide leading-tight">{p.l.replace(/[:：]\s*$/, '')}</h3>
                 </div>
                 <p className="text-sm text-white/75 leading-relaxed">{p.body}</p>
               </div>
@@ -93,7 +93,7 @@ export default function AuroraBars() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-purple-light font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland aurora hunt igloo" campaign="aurora_pillar" count={6} />
@@ -102,7 +102,7 @@ export default function AuroraBars() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.ctaH}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
           <p className="text-white/65 mb-6">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="aurora_bars_cta" destination="Saariselkä" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}

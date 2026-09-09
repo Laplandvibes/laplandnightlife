@@ -87,7 +87,7 @@ export default function PillarHero({
           <span className="text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW}>{eyebrow}</span>
         </div>
         <h1
-          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-7xl text-white tracking-tight leading-[0.95] mb-5 break-words hyphens-auto md:hyphens-none text-balance"
+          className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-7xl text-white tracking-wide leading-[0.95] mb-5 break-words hyphens-auto md:hyphens-none text-balance"
           style={SHADOW}
         >
           {title}

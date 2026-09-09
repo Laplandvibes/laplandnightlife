@@ -96,7 +96,7 @@ export default function SummerNights() {
             <p className="text-[0.65rem] uppercase tracking-[0.32em] text-neon-yellow font-bold mb-4">
               {c.pillar}
             </p>
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95] mb-6">
+            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-wide leading-[0.95] mb-6">
               {c.h1}
             </h1>
             <p className="text-white/90 text-lg sm:text-xl md:text-2xl leading-snug font-light max-w-2xl mx-auto">
@@ -129,7 +129,7 @@ export default function SummerNights() {
                 key={s.v}
                 className="bg-night-light/40 border border-neon-yellow/20 hover:border-neon-yellow/50 rounded-2xl p-5 sm:p-6 text-center transition-colors"
               >
-                <p className="font-heading text-4xl sm:text-5xl text-neon-yellow tracking-tight leading-none mb-2 drop-shadow-[0_0_24px_rgba(250,204,21,0.5)]">
+                <p className="font-heading text-4xl sm:text-5xl text-neon-yellow tracking-wide leading-none mb-2 drop-shadow-[0_0_24px_rgba(250,204,21,0.5)]">
                   {s.v}
                 </p>
                 <p className="text-xs sm:text-sm text-white/75 leading-snug">{s.l}</p>
@@ -144,7 +144,7 @@ export default function SummerNights() {
         <div className="relative max-w-5xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3">{c.timeEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
               {c.timeH}
             </h2>
           </div>
@@ -153,9 +153,9 @@ export default function SummerNights() {
               <li key={t.time} className="relative">
                 <span className="absolute -left-[2.1rem] sm:-left-[2.6rem] top-1 w-4 h-4 rounded-full bg-neon-yellow shadow-[0_0_18px_rgba(250,204,21,0.7)]" />
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
-                  <p className="font-heading text-2xl sm:text-3xl text-neon-yellow tracking-tight w-24 shrink-0">{t.time}</p>
+                  <p className="font-heading text-2xl sm:text-3xl text-neon-yellow tracking-wide w-24 shrink-0">{t.time}</p>
                   <div>
-                    <h3 className="font-heading text-xl text-white tracking-tight mb-1">{t.label}</h3>
+                    <h3 className="font-heading text-xl text-white tracking-wide mb-1">{t.label}</h3>
                     <p className="text-sm sm:text-base text-white/70 leading-relaxed">{t.body}</p>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export default function SummerNights() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.csEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
               {c.csH}
             </h2>
           </div>
@@ -190,7 +190,7 @@ export default function SummerNights() {
                   <p className="text-[0.65rem] uppercase tracking-[0.22em] text-neon-yellow font-bold mb-2" style={SHADOW}>
                     {s.when}
                   </p>
-                  <h3 className="font-heading text-3xl text-white tracking-tight mb-3 group-hover:text-neon-yellow transition-colors" style={SHADOW}>
+                  <h3 className="font-heading text-3xl text-white tracking-wide mb-3 group-hover:text-neon-yellow transition-colors" style={SHADOW}>
                     {s.city}
                   </h3>
                   <p className="text-sm text-white/85 leading-relaxed mb-3" style={SHADOW}>{s.body}</p>
@@ -208,7 +208,7 @@ export default function SummerNights() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.evEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
               {c.evH}
             </h2>
             <p className="text-white/65 max-w-2xl mx-auto mt-3">
@@ -238,7 +238,7 @@ export default function SummerNights() {
                   </div>
                   <div className="mt-auto">
                     <p className="text-[0.65rem] uppercase tracking-[0.2em] text-neon-yellow font-bold mb-2" style={SHADOW}>{e.when}</p>
-                    <h3 className="font-heading text-xl text-white tracking-tight mb-2 leading-tight" style={SHADOW}>{e.h}</h3>
+                    <h3 className="font-heading text-xl text-white tracking-wide mb-2 leading-tight" style={SHADOW}>{e.h}</h3>
                     <p className="text-xs sm:text-sm text-white/85 leading-relaxed line-clamp-3" style={SHADOW}>{e.body}</p>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export default function SummerNights() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.localEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
               {c.localH}
             </h2>
           </div>
@@ -274,7 +274,7 @@ export default function SummerNights() {
                     <l.icon size={22} className="text-neon-yellow mt-2 drop-shadow-[0_0_18px_rgba(250,204,21,0.6)]" strokeWidth={1.6} />
                   </div>
                   <div className="mt-auto">
-                    <h3 className="font-heading text-xl text-white tracking-tight mb-2" style={SHADOW}>{l.h}</h3>
+                    <h3 className="font-heading text-xl text-white tracking-wide mb-2" style={SHADOW}>{l.h}</h3>
                     <p className="text-sm text-white/85 leading-relaxed" style={SHADOW}>{l.body}</p>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export default function SummerNights() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
               {c.gygH}
             </h2>
             <p className="text-white/65 max-w-xl mx-auto">
@@ -310,7 +310,7 @@ export default function SummerNights() {
         <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-5">
           <div className="bg-night-light/50 border border-white/10 rounded-2xl p-7 flex flex-col">
             <Camera className="text-neon-yellow mb-3" size={26} />
-            <h3 className="font-heading text-2xl text-white tracking-tight mb-3">
+            <h3 className="font-heading text-2xl text-white tracking-wide mb-3">
               {c.photoH}
             </h3>
             <p className="text-white/85 mb-5 flex-1">
@@ -325,7 +325,7 @@ export default function SummerNights() {
           </div>
           <div className="bg-gradient-to-br from-pink/15 to-purple/10 border border-pink/20 rounded-2xl p-7 flex flex-col">
             <Sun className="text-neon-yellow mb-3" size={26} />
-            <h3 className="font-heading text-2xl text-white tracking-tight mb-3">
+            <h3 className="font-heading text-2xl text-white tracking-wide mb-3">
               {c.stayH}
             </h3>
             <p className="text-white/85 mb-5 flex-1">

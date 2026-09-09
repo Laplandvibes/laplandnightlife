@@ -17,7 +17,7 @@ export default function BookingSection() {
       <div className="relative max-w-3xl mx-auto">
         <div className="text-center mb-8">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.eyebrow}</p>
-          <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight mb-3">{c.h}</h2>
+          <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.h}</h2>
           <p className="text-white/85 max-w-xl mx-auto">
             {c.body}
           </p>
@@ -33,7 +33,7 @@ export default function BookingSection() {
           ].map((s) => (
             <div key={s.h} className="bg-night-light/40 border border-white/10 rounded-xl p-4">
               <s.icon size={18} className="text-purple-light mx-auto mb-2" />
-              <p className="font-heading text-base text-white tracking-tight">{s.h}</p>
+              <p className="font-heading text-base text-white tracking-wide">{s.h}</p>
               <p className="text-xs text-white/80 mt-1">{s.body}</p>
             </div>
           ))}

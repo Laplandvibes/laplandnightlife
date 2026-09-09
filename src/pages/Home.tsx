@@ -118,7 +118,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.tours.eyebrow}</p>
-            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight mb-3">{c.tours.h}</h2>
+            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.tours.h}</h2>
             <p className="text-white/85 max-w-xl mx-auto">{c.tours.body}</p>
           </div>
           <GygWidget query="Rovaniemi nightlife aurora" campaign="home_tours_top" count={6} />
@@ -127,7 +127,7 @@ export default function Home() {
 
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-heading text-4xl sm:text-5xl text-white mb-4 tracking-tight">
+          <h2 className="font-heading text-4xl sm:text-5xl text-white mb-4 tracking-wide">
             {c.scenes.h}
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-10 sm:mb-12">
@@ -147,7 +147,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
                 <div className="relative mt-auto p-5">
                   <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>{sc.tag}</p>
-                  <h3 className="font-heading text-2xl text-white tracking-tight mb-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
+                  <h3 className="font-heading text-2xl text-white tracking-wide mb-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
                   <p className="text-sm text-white font-semibold mb-0.5" style={OVERLAY_SHADOW}>{sc.body}</p>
                   <p className="text-xs text-white/75 mb-3 leading-snug" style={OVERLAY_SHADOW}>{sc.desc}</p>
                   <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
@@ -166,7 +166,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 sm:mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{connect.eyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-balance">{connect.h}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide text-balance">{connect.h}</h2>
           </div>
           <AiraloAd sid="home_connectivity" />
         </div>
@@ -176,7 +176,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.cities.eyebrow}</p>
-            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight mb-3">{c.cities.h}</h2>
+            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.cities.h}</h2>
             <p className="text-white/85 max-w-2xl mx-auto">{c.cities.body}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -195,7 +195,7 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.events.eyebrow}</p>
-            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight">{c.events.h}</h2>
+            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide">{c.events.h}</h2>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
             {events.map((e) => (
@@ -220,7 +220,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="relative mt-auto p-6 pt-0">
-                  <h3 className="font-heading text-2xl text-white tracking-tight mb-2 group-hover:text-pink transition-colors" style={OVERLAY_SHADOW}>{e.name}</h3>
+                  <h3 className="font-heading text-2xl text-white tracking-wide mb-2 group-hover:text-pink transition-colors" style={OVERLAY_SHADOW}>{e.name}</h3>
                   <p className="text-sm text-white/90 leading-relaxed line-clamp-4" style={OVERLAY_SHADOW}>{e.desc}</p>
                 </div>
               </Link>
@@ -238,7 +238,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.tips.eyebrow}</p>
-            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight">{c.tips.h}</h2>
+            <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide">{c.tips.h}</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-3">
             {tips.map((t) => (
@@ -247,7 +247,7 @@ export default function Home() {
                   <t.icon size={18} />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="font-heading text-base text-white tracking-tight mb-0.5 group-hover:text-pink transition-colors">{t.h}</h3>
+                  <h3 className="font-heading text-base text-white tracking-wide mb-0.5 group-hover:text-pink transition-colors">{t.h}</h3>
                   <p className="text-[0.8rem] text-white/80 leading-snug">{t.body}</p>
                 </div>
               </Link>

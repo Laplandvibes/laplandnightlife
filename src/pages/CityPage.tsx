@@ -118,7 +118,7 @@ export default function CityPage() {
             {city.tag} · {city.region}
           </p>
           <h1
-            className="font-heading text-5xl sm:text-7xl md:text-8xl text-white tracking-tight leading-[0.95] mb-4"
+            className="font-heading text-5xl sm:text-7xl md:text-8xl text-white tracking-wide leading-[0.95] mb-4"
             style={SHADOW}
           >
             {city.name}
@@ -145,7 +145,7 @@ export default function CityPage() {
                 <p className="text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mb-1">
                   {f.label}
                 </p>
-                <p className="font-heading text-base sm:text-lg text-white tracking-tight leading-tight">
+                <p className="font-heading text-base sm:text-lg text-white tracking-wide leading-tight">
                   {f.value}
                 </p>
               </div>
@@ -164,7 +164,7 @@ export default function CityPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.verifiedEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
               {c.verifiedH(city.name)}
             </h2>
           </div>
@@ -176,7 +176,7 @@ export default function CityPage() {
               >
                 <p className="text-[0.6rem] uppercase tracking-[0.2em] text-pink font-bold mb-1">{v.type}</p>
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3 className="font-heading text-xl text-white tracking-tight">{v.name}</h3>
+                  <h3 className="font-heading text-xl text-white tracking-wide">{v.name}</h3>
                   <span className="shrink-0 mt-0.5">
                     <VenueRating name={v.name} citySlug={city.slug} lang={lang} />
                   </span>
@@ -192,7 +192,7 @@ export default function CityPage() {
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="text-neon-yellow" size={20} />
-            <h2 className="font-heading text-3xl text-white tracking-tight">{c.intel}</h2>
+            <h2 className="font-heading text-3xl text-white tracking-wide">{c.intel}</h2>
           </div>
           <ul className="space-y-3">
             {city.knowList.map((k, i) => (
@@ -209,7 +209,7 @@ export default function CityPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
               {c.gygH(city.name)}
             </h2>
             <p className="text-white/65 max-w-xl mx-auto">
@@ -224,7 +224,7 @@ export default function CityPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.deeperEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
               {c.deeperH(city.name)}
             </h2>
           </div>
@@ -236,7 +236,7 @@ export default function CityPage() {
                 className="group bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/40 hover:-translate-y-0.5 transition-all"
               >
                 <p.icon size={22} className="text-pink mb-3" strokeWidth={1.6} />
-                <p className="font-heading text-lg text-white tracking-tight mb-1.5 group-hover:text-pink transition-colors">
+                <p className="font-heading text-lg text-white tracking-wide mb-1.5 group-hover:text-pink transition-colors">
                   {p.label}
                 </p>
                 <p className="text-xs text-white/80 leading-relaxed mb-3">{p.why}</p>
@@ -258,7 +258,7 @@ export default function CityPage() {
           <div className="relative max-w-5xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3 drop-shadow-[0_0_16px_rgba(250,204,21,0.45)]">{c.sisterEyebrow}</p>
-              <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">
+              <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
                 {c.sisterH(city.name)}
               </h2>
               <p className="text-white/80 max-w-xl mx-auto">
@@ -297,7 +297,7 @@ export default function CityPage() {
                       <ExternalLink size={13} style={{ color: l.accent }} />
                     </div>
                     <p className="relative text-[0.6rem] uppercase tracking-[0.18em] font-bold mb-1.5" style={{ color: l.accent }}>{l.site}</p>
-                    <p className="relative font-heading text-base text-white tracking-tight mb-2 leading-snug">
+                    <p className="relative font-heading text-base text-white tracking-wide mb-2 leading-snug">
                       {l.label}
                     </p>
                     <p className="relative text-xs text-white/80 leading-relaxed">{l.why}</p>
@@ -314,7 +314,7 @@ export default function CityPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
               <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.nearbyEyebrow}</p>
-              <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
+              <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
                 {c.nearbyH(city.name)}
               </h2>
             </div>
@@ -335,7 +335,7 @@ export default function CityPage() {
                     <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
                       {cc.tag}
                     </p>
-                    <h3 className="font-heading text-xl text-white tracking-tight mb-1" style={SHADOW}>
+                    <h3 className="font-heading text-xl text-white tracking-wide mb-1" style={SHADOW}>
                       {cc.name}
                     </h3>
                     <p className="text-xs text-white/80 line-clamp-2" style={SHADOW}>{cc.blurb}</p>
@@ -350,7 +350,7 @@ export default function CityPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
           <MapPin className="text-pink mx-auto mb-3" size={26} />
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.stayH(city.name)}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.stayH(city.name)}</h2>
           <p className="text-white/65 mb-6 max-w-xl mx-auto">
             {c.stayBody}
           </p>

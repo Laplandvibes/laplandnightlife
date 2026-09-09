@@ -38,7 +38,7 @@ export default function CityCard({ city }: { city: City }) {
         </div>
         <div className="absolute bottom-4 left-4 right-4">
           <p className="text-[0.7rem] uppercase tracking-[0.2em] text-white/85 mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{city.region}</p>
-          <h3 className="font-heading text-2xl text-white tracking-tight leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{city.name}</h3>
+          <h3 className="font-heading text-2xl text-white tracking-wide leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{city.name}</h3>
         </div>
       </div>
       <div className="p-5">

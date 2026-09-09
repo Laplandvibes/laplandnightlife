@@ -62,7 +62,7 @@ export default function Hero() {
         </span>
 
         <h1
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tight mb-7 break-words"
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-wide mb-7 break-words"
           style={SHADOW}
         >
           {c.h1Line1}<br />{c.h1Line2}

@@ -110,7 +110,7 @@ export default function Nightclubs() {
               <div className="absolute inset-0 bg-gradient-to-t from-night-light to-transparent" />
               <div className="relative p-6">
                 <p className="text-[0.65rem] uppercase tracking-[0.2em] text-pink font-bold mb-2">{t.where}</p>
-                <h2 className="font-heading text-2xl text-white tracking-tight mb-2">{t.h}</h2>
+                <h2 className="font-heading text-2xl text-white tracking-wide mb-2">{t.h}</h2>
                 <p className="text-sm text-white/80 leading-relaxed">{t.body}</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function Nightclubs() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.listH}</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide text-center mb-10">{c.listH}</h2>
           {/* overflow-x-auto: the 4-column table must scroll inside its card at
               375 px instead of stretching the page. */}
           <div className="bg-night/60 border border-white/10 rounded-2xl overflow-hidden overflow-x-auto">
@@ -136,7 +136,7 @@ export default function Nightclubs() {
               <tbody>
                 {top.map((v, i) => (
                   <tr key={v.name} className={i % 2 === 0 ? 'bg-night/30' : ''}>
-                    <td className="px-5 py-3 font-heading text-lg text-white tracking-tight">{v.name}</td>
+                    <td className="px-5 py-3 font-heading text-lg text-white tracking-wide">{v.name}</td>
                     <td className="px-5 py-3 text-pink">{v.city}</td>
                     <td className="px-5 py-3 text-white/70">{v.cap}</td>
                     <td className="px-5 py-3 text-white/80">{u.open[v.openKey]}</td>
@@ -152,7 +152,7 @@ export default function Nightclubs() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{RIDE_LEAD[lang].eyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight" style={{ textWrap: 'balance' }}>{RIDE_LEAD[lang].h}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide" style={{ textWrap: 'balance' }}>{RIDE_LEAD[lang].h}</h2>
           </div>
         </div>
       </section>
@@ -161,7 +161,7 @@ export default function Nightclubs() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Rovaniemi Levi tours nightlife" campaign="nightclubs_pillar" count={6} />
@@ -170,7 +170,7 @@ export default function Nightclubs() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-3">{c.ctaH}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
           <p className="text-white/65 mb-6">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="nightclubs_cta" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}

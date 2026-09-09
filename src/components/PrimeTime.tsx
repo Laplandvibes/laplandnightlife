@@ -36,7 +36,7 @@ export default function PrimeTime() {
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.eyebrow}</p>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white tracking-tight">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white tracking-wide">
             {c.h}
           </h2>
         </div>
@@ -71,7 +71,7 @@ export default function PrimeTime() {
 
                 <div className="mt-auto">
                   <p className="text-[0.7rem] uppercase tracking-[0.2em] text-pink font-bold mb-2" style={SHADOW}>{card.when}</p>
-                  <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-tight leading-tight mb-3" style={SHADOW}>{card.h}</h3>
+                  <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide leading-tight mb-3" style={SHADOW}>{card.h}</h3>
                   <p className="text-sm text-white leading-relaxed mb-5 line-clamp-3 font-medium" style={SHADOW}>{card.body}</p>
 
                   <div className="pt-3 border-t border-white/20 flex items-center justify-between">

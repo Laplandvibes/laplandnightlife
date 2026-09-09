@@ -47,7 +47,7 @@ export default function Tips() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.sevenEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
               {c.sevenH}
             </h2>
           </div>
@@ -59,7 +59,7 @@ export default function Tips() {
                 className="group flex flex-col bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/40 hover:-translate-y-0.5 transition-all"
               >
                 <t.icon size={22} className="text-pink mb-3" />
-                <h3 className="font-heading text-lg text-white tracking-tight mb-2">{t.h}</h3>
+                <h3 className="font-heading text-lg text-white tracking-wide mb-2">{t.h}</h3>
                 <p className="text-sm text-white/70 leading-relaxed mb-3">{t.body}</p>
                 <span className="mt-auto pt-2 text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold">
                   {c.more}
@@ -74,14 +74,14 @@ export default function Tips() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3">{c.readEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
               {c.readH}
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {rules.map((r) => (
               <div key={r.h} className="bg-night-light/60 border border-neon-yellow/20 rounded-xl p-5">
-                <h3 className="font-heading text-lg text-white tracking-tight mb-2">{r.h}</h3>
+                <h3 className="font-heading text-lg text-white tracking-wide mb-2">{r.h}</h3>
                 <p className="text-sm text-white/75 leading-relaxed">{r.body}</p>
               </div>
             ))}

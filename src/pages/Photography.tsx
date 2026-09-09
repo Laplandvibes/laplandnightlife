@@ -55,7 +55,7 @@ export default function Photography() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.cheatH}</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide text-center mb-10">{c.cheatH}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {settings.map((s) => (
               <div key={s.h} className="bg-night-light/40 border border-white/10 rounded-xl p-6 hover:border-pink/30 transition-colors">
@@ -63,7 +63,7 @@ export default function Photography() {
                   <span className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-pink/10 border border-pink/30 text-pink shrink-0">
                     <s.icon size={18} strokeWidth={1.8} />
                   </span>
-                  <h3 className="font-heading text-2xl text-white tracking-tight">{s.h}</h3>
+                  <h3 className="font-heading text-2xl text-white tracking-wide">{s.h}</h3>
                 </div>
                 <p className="text-sm text-white/70 leading-relaxed">{s.body}</p>
               </div>
@@ -74,12 +74,12 @@ export default function Photography() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight text-center mb-10">{c.venuesH}</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide text-center mb-10">{c.venuesH}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {venues.map((v) => (
               <div key={v.h} className="bg-night-light/60 border border-white/10 rounded-xl p-5 hover:border-purple/30 transition-colors">
                 <p className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mb-1">{v.city}</p>
-                <h3 className="font-heading text-xl text-white tracking-tight mb-2">{v.h}</h3>
+                <h3 className="font-heading text-xl text-white tracking-wide mb-2">{v.h}</h3>
                 <p className="text-sm text-white/70 leading-relaxed">{v.shot}</p>
               </div>
             ))}
@@ -89,7 +89,7 @@ export default function Photography() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl text-white tracking-tight mb-6 text-center">{c.ethicsH}</h2>
+          <h2 className="font-heading text-3xl text-white tracking-wide mb-6 text-center">{c.ethicsH}</h2>
           <ul className="space-y-3 text-sm text-white/75">
             <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e1L}</strong> {c.e1}</li>
             <li className="bg-night-light/50 border border-white/10 rounded-lg p-4"><strong className="text-pink">{c.e2L}</strong> {c.e2}</li>
@@ -103,7 +103,7 @@ export default function Photography() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-tight mb-2">{c.gygH}</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland photography aurora tour" campaign="photography_pillar" count={6} />

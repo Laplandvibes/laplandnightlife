@@ -41,7 +41,7 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.faqEyebrow}</p>
-          <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-tight">{c.faqH}</h2>
+          <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide">{c.faqH}</h2>
         </div>
         <div className="space-y-3">
           {items.map((faq, index) => {
