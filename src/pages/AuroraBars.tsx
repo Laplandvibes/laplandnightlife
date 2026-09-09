@@ -44,7 +44,7 @@ export default function AuroraBars() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarAuroraBars}
-        accentClass="from-purple/30 via-night/70 to-night"
+        accentVia="via-purple/25"
       />
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">

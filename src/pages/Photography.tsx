@@ -50,7 +50,7 @@ export default function Photography() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarPhotography}
-        accentClass="from-aurora-blue/20 via-night/80 to-night"
+        accentVia="via-aurora-blue/25"
       />
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">

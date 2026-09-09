@@ -69,7 +69,7 @@ export default function Events() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarEvents}
-        accentClass="from-pink/25 via-night/75 to-night"
+        accentVia="via-pink/25"
       />
 
       {/* 🔴 Lipunmyynti sivun YLAOSAAN (Vesa 9.9.: "sivun ylaosaan tottakai").

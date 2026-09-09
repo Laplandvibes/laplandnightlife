@@ -80,7 +80,7 @@ export default function Nightclubs() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarNightclubs}
-        accentClass="from-pink/25 via-night/75 to-night"
+        accentVia="via-pink/25"
       />
 
       {/* Stat glass tiles (skiresorts recipe) — real numbers only, all sourced

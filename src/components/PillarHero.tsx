@@ -10,8 +10,23 @@ interface PillarHeroProps {
   subtitle: string;
   intro: string;
   bgImage?: string;
-  /** Optional accent gradient. Defaults to a subtle bottom-only vignette. */
-  accentClass?: string;
+  /**
+   * Sivukohtainen sävy alareunan vinjettiin, esim. `'via-purple/25'`.
+   *
+   * 🔴🔴 **Tässä annetaan VAIN keskipysäkki, ei koko liukuväriä** — ja se on
+   * korjaus, ei tyyliseikka. Aiemmin tämä oli `accentClass` johon sivut
+   * kirjoittivat koko gradientin (`from-aurora-blue/20 via-night/80 to-night`).
+   * Suunta on `to-t`, joten `to-` on kaistan **yläreunassa** — ja `to-night`
+   * on `rgb(15,23,42)` ilman alfaa eli **täysin peittävä**. Kaista on 40 %
+   * korkea, joten kuva loppui suoraan viivaan 60 %:n kohdalla:
+   * mitattu 9.9.2026 /fi/photography, luminanssi putosi **48,1 yksikköä
+   * yhdellä pikselirivillä** (naapuririvien tavallinen ero muualla: 1,81).
+   * Vesa: *"mitkä nämä rajaukset on jokaisen hero kuvan alareunassa?"*
+   *
+   * Nyt komponentti kirjoittaa itse `from-night … to-transparent`, joten
+   * kutsuja ei voi enää sijoittaa peittävää pysäkkiä kuvan keskelle.
+   */
+  accentVia?: string;
   /**
    * Accessible description of the background image. Defaults to a descriptive
    * label built from the (already-localized) page title so the primary visual
@@ -34,7 +49,7 @@ export default function PillarHero({
   subtitle,
   intro,
   bgImage = '/images/hero/aurora-bars-neon.webp',
-  accentClass,
+  accentVia,
   imageAlt,
 }: PillarHeroProps) {
   return (
@@ -74,11 +89,15 @@ export default function PillarHero({
         style={{ background: 'radial-gradient(ellipse, rgba(6,182,212,0.5) 0%, transparent 70%)' }}
         aria-hidden="true"
       />
-      {/* Thin bottom vignette only — keep the image visible. */}
+      {/* Alareunan vinjetti: umpinainen vasta sivun alareunassa, läpinäkyvä
+          kaistan omassa yläreunassa. Sama kuvio kuin CityPage.tsx:ssä — se on
+          tämän sivuston toimiva ennakkotapaus. `to-transparent` on pakollinen:
+          mikä tahansa muu ylin pysäkki piirtää vaakaviivan kuvan poikki. */}
       <div
-        className={`absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t ${
-          accentClass ?? 'from-night to-transparent'
-        } pointer-events-none`}
+        aria-hidden="true"
+        className={`absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night ${
+          accentVia ?? 'via-night/45'
+        } to-transparent pointer-events-none`}
       />
 
       {/* lg:max-w-6xl antaa pitkille FI/DE-yhdyssanoille ("Veranstaltungskalender")
