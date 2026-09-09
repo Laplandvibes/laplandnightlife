@@ -17,6 +17,8 @@ import { AD_SLOTS } from '../data/adSlots';
 import { CITIES } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { IMG } from '../data/images';
+import { upcomingEvents } from '../data/events';
+import { eventImage } from '../data/eventImages';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -63,11 +65,13 @@ export default function Home() {
 
   const homeCities = CITIES.slice(0, 8).map((c) => localizeCity(c, lang));
 
-  const events = [
-    { name: c.events.e1Name, when: c.events.e1When, desc: c.events.e1Desc, img: IMG.iceCastle },
-    { name: c.events.e2Name, when: c.events.e2When, desc: c.events.e2Desc, img: IMG.primeFilm },
-    { name: c.events.e3Name, when: c.events.e3When, desc: c.events.e3Desc, img: IMG.pillarEvents },
-  ];
+  /* Sama kalenterilahde kuin PrimeTimessa, mutta kolme SEURAAVAA (skip = 3),
+     jotta etusivu ei toista itseaan. Kovakoodatut e1/e2/e3-kentat olivat
+     syyskuussa 2/3 menneita eivatka voineet vanheta itsestaan. Avaimet jaavat
+     copy.ts:aan kunnes on varmaa etta 2027-kalenteri on olemassa. */
+  const events = upcomingEvents(lang, 3, 3).map((e) => ({
+    name: e.name, when: e.date, desc: e.body, img: eventImage(e.enName),
+  }));
 
   const tips = [
     { h: c.tips.t1H, icon: AlertTriangle, body: c.tips.t1Body, to: to('/tips') },
@@ -190,6 +194,7 @@ export default function Home() {
         </div>
       </section>
 
+      {events.length >= 2 && (
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5 overflow-hidden">
         <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-pink/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
@@ -233,6 +238,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
 
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
