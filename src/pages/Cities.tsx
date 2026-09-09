@@ -1,6 +1,7 @@
 import CityCard from '../components/CityCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
+import IllustrationMark from '../components/IllustrationMark';
 import { CITIES, VENUE_COUNT } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { useLang, useLocalePath } from '../i18n/useLang';
@@ -46,6 +47,7 @@ export default function Cities() {
           aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-night/55 via-night/35 to-night" />
+        <IllustrationMark />
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide mb-5">{c.heroH}</h1>

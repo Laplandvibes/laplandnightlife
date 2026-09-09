@@ -4,6 +4,7 @@ import { upcomingEvents } from '../data/events';
 import { eventImage } from '../data/eventImages';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import IllustrationMark from './IllustrationMark';
 
 const SHADOW = {
   textShadow:
@@ -60,6 +61,7 @@ export default function PrimeTime() {
                   date floats on the bare image and vanishes on bright shots
                   like the sunset card (Vesa 2026-07-07). */}
               <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent pointer-events-none" />
+              {eventImage(card.enName) && <IllustrationMark />}
 
               <div className="relative p-7 min-h-[440px] flex flex-col">
                 <div className="flex items-start justify-between mb-6">

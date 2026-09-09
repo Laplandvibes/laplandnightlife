@@ -6,6 +6,7 @@ import PageBreadcrumb from '../components/PageBreadcrumb';
 import AffiliateCTA from '../components/AffiliateCTA';
 import GygWidget from '../components/GygWidget';
 import VenueRating from '../components/VenueRating';
+import IllustrationMark from '../components/IllustrationMark';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
 import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
@@ -102,6 +103,7 @@ export default function CityPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/25 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/35 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/55 to-transparent pointer-events-none" />
+        <IllustrationMark />
 
         <div className="relative w-full max-w-5xl mx-auto">
           <Link

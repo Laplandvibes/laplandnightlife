@@ -1,5 +1,6 @@
 import type { LucideIcon } from 'lucide-react';
 import PageBreadcrumb from './PageBreadcrumb';
+import IllustrationMark from './IllustrationMark';
 
 interface PillarHeroProps {
   icon: LucideIcon;
@@ -48,6 +49,7 @@ export default function PillarHero({
       {/* Full dark wash + center radial scrim so the centered text stays legible
           even over the brightest pillar images. Sits under the neon accents. */}
       <div className="absolute inset-0 bg-night/35 pointer-events-none" aria-hidden="true" />
+      <IllustrationMark />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

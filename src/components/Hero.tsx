@@ -3,6 +3,7 @@ import { heroHomeSeasonal, isSummerSeason } from '../data/images';
 import { VENUE_COUNT } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import IllustrationMark from './IllustrationMark';
 
 const SHADOW = {
   textShadow:
@@ -37,6 +38,7 @@ export default function Hero() {
       />
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-night/80 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-night to-transparent pointer-events-none" />
+      <IllustrationMark />
 
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span
