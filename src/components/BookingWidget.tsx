@@ -123,8 +123,12 @@ export default function BookingWidget() {
         : 'text-white/80 border-b-2 border-transparent hover:text-white'
     }`;
 
+  // 🔴 `[color-scheme:dark]` on PAKKO type="date"-kentassa: ilman sita selain
+  // piirtaa natiivin kalenteri-ikonin TUMMANA tummalle taustalle, jolloin se on
+  // kaytannossa nakymaton (Vesa 9.9.: "kalenteri-ikonit varsinkin"). Se ei ole
+  // Tailwind-vari vaan selaimen oma UI-kerros — luokka `text-white` ei yllä siihen.
   const inputCls =
-    'w-full bg-night-light/60 backdrop-blur-sm text-white border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/40 transition-colors';
+    'w-full bg-night-light/60 backdrop-blur-sm text-white [color-scheme:dark] border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-pink/50 focus:border-pink/40 transition-colors';
   const labelCls =
     'block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/75 mb-1.5';
 

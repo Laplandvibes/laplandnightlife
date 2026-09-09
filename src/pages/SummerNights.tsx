@@ -299,7 +299,9 @@ export default function SummerNights() {
               anchor. Generic words (Lapland/summer/activities) dilute the match
               and GYG falls back to destination bestsellers = winter tours
               (Vesa 2026-07-07; same failure class as the Ivalo city-page fix). */}
-          <GygWidget query="midnight sun Rovaniemi" campaign="summer_pillar" count={6} />
+          {/* 🔴 GygWidgetin oletusvarakuva on pillarAuroraBars = TALVINEN revontuli-iglu.
+              Kesäsivulla se on kausiristiriita (Vesa 9.9.: "kesäsivulla talvinen kuva?"). */}
+          <GygWidget query="midnight sun Rovaniemi" campaign="summer_pillar" count={6} fallbackImage={IMG.summerHero} />
         </div>
       </section>
 

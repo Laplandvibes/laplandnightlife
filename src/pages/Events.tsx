@@ -21,6 +21,22 @@ export default function Events() {
 
   const today = todayLocalIso(new Date());
   const past = pastFlags(today);
+
+  /* 🔴🔴 TULEVAT ENSIN (Vesa 2026-09-09: *"tapahtumataulu pitää tottakai olla
+     ylösalaisin, seuraavaksi tuleva ylimpänä. nyt joutuu scrollaa jo menneet
+     tapahtumat ennen kuin näkee uudet"*).
+
+     Kalenteri oli tammikuusta joulukuuhun, joten syyskuussa lukija joutui
+     ohittamaan yhdeksän kuukautta mennyttä ennen ensimmäistä asiaa johon voi
+     ostaa lipun. Kuukausijärjestys EI ole sama asia kuin hyödyllinen järjestys.
+
+     Kuukaudet, joissa on vähintään yksi tuleva tapahtuma, nousevat ylös omassa
+     aikajärjestyksessään; kokonaan menneet jäävät alle. Alkuperäinen indeksi
+     kulkee mukana, koska `past` on indeksoitu sillä. */
+  const ordered = data
+    .map((m, mi) => ({ m, mi, upcoming: m.items.some((_, ii) => !past[mi]?.[ii]) }))
+    .sort((a, b) => (a.upcoming === b.upcoming ? a.mi - b.mi : a.upcoming ? -1 : 1));
+  const firstPast = ordered.findIndex((x) => !x.upcoming);
   // First entry that has not finished yet — the one a reader can still act on.
   const next = (() => {
     for (let mi = 0; mi < EVENTS_BASE.en.length; mi++) {
@@ -63,8 +79,17 @@ export default function Events() {
             </p>
           )}
 
-          {data.map((m, mi) => (
+          {ordered.map(({ m, mi }, oi) => (
             <div key={m.monthKey}>
+              {oi === firstPast && firstPast > 0 && (
+                <div className="flex items-center gap-4 mb-8 mt-4">
+                  <span className="h-px flex-1 bg-white/10" />
+                  <span className="text-[0.65rem] uppercase tracking-[0.25em] text-white/40 font-bold">
+                    {c.pastLabel}
+                  </span>
+                  <span className="h-px flex-1 bg-white/10" />
+                </div>
+              )}
               <div className="flex items-center gap-3 mb-5 border-b border-white/10 pb-3">
                 <h2 className="font-heading text-3xl text-white tracking-wide">{c.months[m.monthKey]}</h2>
                 <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">2026</span>

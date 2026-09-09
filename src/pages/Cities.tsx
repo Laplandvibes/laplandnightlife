@@ -38,14 +38,14 @@ export default function Cities() {
         ]}
       />
 
-      <section className="relative pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative min-h-[52svh] flex items-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/images/hero/cities-rovaniemi-bridge.webp)' }}
           role="img"
           aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/30 via-night/50 to-night" />
+        <div className="absolute inset-0 bg-gradient-to-b from-night/55 via-night/35 to-night" />
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide mb-5">{c.heroH}</h1>
