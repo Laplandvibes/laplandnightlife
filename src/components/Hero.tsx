@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-night to-transparent pointer-events-none" />
       <IllustrationMark />
 
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 w-full max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span
           className="inline-block bg-pink/25 border border-pink/60 text-white text-xs uppercase tracking-[0.25em] font-bold px-4 py-1.5 rounded-full mb-7 backdrop-blur-md"
           style={SHADOW}
@@ -48,11 +48,18 @@ export default function Hero() {
           {c.badge}
         </span>
 
+        {/* 🔴 Kova <br /> pakotti kaksi rivia myos tyopoydalla, jossa tilaa on
+            (Vesa 2026-09-09: *"eiko tuo Lapland Nightlife sopisi samalle riville
+            tietokonenakymassa?"*). Kovaa lg:hidden-katkoa EI voi kayttaa, koska
+            otsikko ei ole sama kaikilla kielilla: es "Vida nocturna en Laponia"
+            ja ja "ラップランドの…" ovat pidempia kuin "Lapland Nightlife".
+            ⇒ tavallinen valilyonti + text-balance: mahtuu yhdelle riville kun
+            tilaa on, jakautuu tasan kun ei. */}
         <h1
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-wide mb-7 break-words"
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-wide mb-7 break-words [text-wrap:balance]"
           style={SHADOW}
         >
-          {c.h1Line1}<br />{c.h1Line2}
+          {c.h1Line1} {c.h1Line2}
         </h1>
 
         <p
