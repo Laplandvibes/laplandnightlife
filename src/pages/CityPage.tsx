@@ -10,7 +10,7 @@ import IllustrationMark from '../components/IllustrationMark';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
 import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
-import { useLang, useLocalePath } from '../i18n/useLang';
+import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 const SHADOW = {
@@ -39,6 +39,25 @@ const GYG_CITY_Q: Record<string, string> = {
   'pyha-luosto': 'Pyhä Luosto',
   kittila: 'Levi Kittilä',
   ruka: 'Ruka Kuusamo',
+};
+
+
+/** 🔴 Nappi nimeää sen mitä lukija SAA, ei kumppania. Vesa 2026-09-09:
+ *  *"täällä mainostetaan GetYourGuidea eikä jotain palvelua jota asiakas saa"*.
+ *  Kirjoitettu kunkin kielen omasta rakenteesta, ei suomen käännöksenä. */
+const TONIGHT_CTA: Record<Lang, (n: string) => string> = {
+  en: (n) => `See what is bookable in ${n} tonight`,
+  fi: (n) => `Katso mitä ${n} tarjoaa tänä iltana`,
+  de: (n) => `Sehen Sie, was heute Abend in ${n} buchbar ist`,
+  ja: (n) => `${n}の今夜予約できる体験を見る`,
+  es: (n) => `Vea qué se puede reservar esta noche en ${n}`,
+  'pt-BR': (n) => `Veja o que dá para reservar hoje à noite em ${n}`,
+  'zh-CN': (n) => `看看${n}今晚可预订的体验`,
+  ko: (n) => `오늘 밤 ${n}에서 예약 가능한 체험 보기`,
+  fr: (n) => `Voyez ce qui est réservable ce soir à ${n}`,
+  it: (n) => `Scopra cosa si può prenotare stasera a ${n}`,
+  nl: (n) => `Bekijk wat vanavond te boeken is in ${n}`,
+  sv: (n) => `Se vad som går att boka i ${n} i kväll`,
 };
 
 export default function CityPage() {
@@ -153,72 +172,103 @@ export default function CityPage() {
               </div>
             ))}
           </div>
+          {/* 🔴 Ensimmäisellä ruudulla ei ollut mitään toiminnallista: hero + neljä
+              lukua. Tässä on ainoa varattava asia näkyvissä ennen kuin lukija on
+              vierittänyt riviäkään — mitattu ennen: ensimmäinen retkilinkki oli
+              2 897 px:ssä. */}
+          <div className="max-w-5xl mx-auto mt-6 text-center">
+            <AffiliateCTA
+              partner="activities"
+              sid={`city_${city.slug}_top_tours`}
+              destination={GYG_CITY_Q[city.slug] ?? city.name}
+              className="inline-flex items-center gap-2 border border-pink/50 hover:border-pink hover:bg-pink/10 text-white font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all"
+            >
+              {TONIGHT_CTA[lang](city.name)} <ArrowRight size={14} />
+            </AffiliateCTA>
+          </div>
         </section>
       )}
 
+      {/* Ingressi omana leveytenään: konteksti ennen mitään myyntiä. */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto">
           <p className="text-white/85 text-base sm:text-lg leading-relaxed">{city.intro}</p>
         </div>
       </section>
 
+      {/* 🔴🔴 RETKET SISÄLLÖN RINNALLE (Vesa 2026-09-09: *"eikö kaupunkisivulla
+          kannattaisi olla sivuun kiinnitetty tuo GetYourGuide widget … nyt se on
+          sivun alaosissa ja ei kukaan sinne klikkaa"*).
+
+          Mitattu ennen: /city/ivalo oli 6 339 px korkea ja ensimmäinen GYG-linkki
+          oli **2 897 px:ssä** eli 3,2 ruudun vierityksen päässä. Verkoston
+          affiliate-konversioita oli 7, joista nightlifesta 0.
+
+          Työpöydällä retket ovat `sticky`-sivupalstassa ja kulkevat mukana koko
+          sisällön ajan. 🔴 Mobiilissa EI kiinnitetä: alalaidassa on jo
+          appimainospalkki, ja kaksi kiinnitettyä palkkia päällekkäin on huono.
+          Siellä retket vain nousevat virrassa ylemmäs (`order-1`), heti
+          ingressin jälkeen. */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.verifiedEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
-              {c.verifiedH(city.name)}
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {city.venues.map((v) => (
-              <div
-                key={v.name}
-                className="bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all"
-              >
-                <p className="text-[0.6rem] uppercase tracking-[0.2em] text-pink font-bold mb-1">{v.type}</p>
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <h3 className="font-heading text-xl text-white tracking-wide">{v.name}</h3>
-                  <span className="shrink-0 mt-0.5">
-                    <VenueRating name={v.name} citySlug={city.slug} lang={lang} />
-                  </span>
-                </div>
-                <p className="text-sm text-white/70 leading-relaxed">{v.note}</p>
+        <div className="max-w-6xl mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:items-start">
+          <aside className="order-1 lg:order-2 mb-12 lg:mb-0 lg:sticky lg:top-24">
+            {/* 🔴 Yksi raami, ei kaksi. GygWidget piirtaa oman laatikkonsa, joten
+                se saa `bare`-lipun paneelin sisalla — kaksi sisakkaista reunusta
+                nayttaa loysalta (Vesa 9.9.: *"raamit paremmiksi, firm ote"*). */}
+            <div className="overflow-hidden rounded-2xl border border-white/15 bg-night-light/60 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.85)] ring-1 ring-inset ring-white/5">
+              <div className="border-b border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent px-5 py-4">
+                <p className="text-[0.6rem] uppercase tracking-[0.25em] text-pink font-bold mb-1.5">{c.gygEyebrow}</p>
+                <h2 className="font-heading text-xl sm:text-2xl text-white tracking-wide leading-tight">{c.gygH(city.name)}</h2>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <div className="px-5 pt-4 pb-5">
+                <p className="text-sm text-white/65 leading-relaxed mb-4">{c.gygBody}</p>
+                <GygWidget query={GYG_CITY_Q[city.slug] ?? city.name} campaign={`city_${city.slug}`} count={4} bare />
+              </div>
+            </div>
+          </aside>
 
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-night-light/30 border-t border-white/5">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <AlertTriangle className="text-neon-yellow" size={20} />
-            <h2 className="font-heading text-3xl text-white tracking-wide">{c.intel}</h2>
-          </div>
-          <ul className="space-y-3">
-            {city.knowList.map((k, i) => (
-              <li key={i} className="flex gap-3 bg-night-light/40 border border-white/10 rounded-lg p-4">
-                <span className="text-pink font-heading text-xl leading-none">·</span>
-                <span className="text-sm text-white/80 leading-relaxed">{k}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+          <div className="order-2 lg:order-1 flex flex-col gap-12">
+            <div>
+              <div className="mb-8">
+                <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.verifiedEyebrow}</p>
+                <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
+                  {c.verifiedH(city.name)}
+                </h2>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {city.venues.map((v) => (
+                  <div
+                    key={v.name}
+                    className="bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all"
+                  >
+                    <p className="text-[0.6rem] uppercase tracking-[0.2em] text-pink font-bold mb-1">{v.type}</p>
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <h3 className="font-heading text-xl text-white tracking-wide">{v.name}</h3>
+                      <span className="shrink-0 mt-0.5">
+                        <VenueRating name={v.name} citySlug={city.slug} lang={lang} />
+                      </span>
+                    </div>
+                    <p className="text-sm text-white/70 leading-relaxed">{v.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
-            <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
-              {c.gygH(city.name)}
-            </h2>
-            <p className="text-white/65 max-w-xl mx-auto">
-              {c.gygBody}
-            </p>
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <AlertTriangle className="text-neon-yellow" size={20} />
+                <h2 className="font-heading text-3xl text-white tracking-wide">{c.intel}</h2>
+              </div>
+              <ul className="space-y-3">
+                {city.knowList.map((k, i) => (
+                  <li key={i} className="flex gap-3 bg-night-light/40 border border-white/10 rounded-lg p-4">
+                    <span className="text-pink font-heading text-xl leading-none">·</span>
+                    <span className="text-sm text-white/80 leading-relaxed">{k}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <GygWidget query={GYG_CITY_Q[city.slug] ?? city.name} campaign={`city_${city.slug}`} count={6} />
         </div>
       </section>
 

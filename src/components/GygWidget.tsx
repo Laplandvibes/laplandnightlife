@@ -56,6 +56,9 @@ interface GygWidgetProps {
   currency?: string;
   /** Background image for the ad-block fallback panel (on-theme per placement). */
   fallbackImage?: string;
+  /** true = alysta oma laatikko pois; widget on jo raamitetussa paneelissa.
+   *  Ilman tata syntyy KAKSI raamia sisakkain ja ote nayttaa loysalta. */
+  bare?: boolean;
 }
 
 /**
@@ -73,6 +76,7 @@ export default function GygWidget({
   campaign = 'laplandnightlife',
   currency = 'EUR',
   fallbackImage = '/images/drive/pillarAuroraBars.webp',
+  bare = false,
 }: GygWidgetProps) {
   const ref = useRef<HTMLDivElement>(null);
   const lang = useLang();
@@ -109,7 +113,7 @@ export default function GygWidget({
   }, [query, lang]);
 
   return (
-    <div className={blocked ? '' : 'bg-night-light/40 border border-white/10 rounded-2xl p-4 sm:p-6'}>
+    <div className={blocked || bare ? '' : 'bg-night-light/40 border border-white/10 rounded-2xl p-4 sm:p-6'}>
       {/* Embed target — kept mounted (just hidden when blocked) so the SDK can populate it. */}
       <div
         ref={ref}
