@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Yksi Suomen suurimmista hiihtoalueista.',
     pageTagline: 'Yksi Suomen suurimmista hiihtoalueista.',
-    intro: 'Ylläksellä on 62 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin, Taiga Pub & Kitchen ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin.',
+    intro: 'Ylläksellä on 62 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka. Äkäslompolossa on vilkkaampi iltaelämä: Sport Resort Ylläs after skiihin ja Ravintola Otso loppuillaksi. Megaklubia ei ole. Hiljaisempi, aikuisempi ja pariskuntavetoisempi kuin Levi. Pallas-Yllästunturin kansallispuisto on Suomen kolmanneksi suurin.',
     venues: {
       'Sport Resort Ylläs': { type: 'After ski + baari', note: 'Äkäslompolon vilkkain after ski -paikka rinteiden juurella.' },
-      'Taiga Pub & Kitchen': { type: 'Pubi + keittiö', note: 'Äkäslompolon pubiravintola: hanat, pubiruokaa ja urheilua.' },
+      'Taiga Pub & Kitchen': { type: 'Pubi + keittiö', note: 'Ylläsjärven pubiravintola: hanat, pubiruokaa ja urheilua.' },
       'Ravintola Otso': { type: 'Ravintola + baari', note: 'Kylän suosikki, salit sekä Äkäslompolossa että Ylläsjärvellä: myöhäinen illallinen ja juomat.' },
     },
     knowList: [

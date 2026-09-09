@@ -260,10 +260,10 @@ export const CITIES: City[] = [
     blurb: 'One of Finland\'s biggest ski areas.',
     img: '/images/card/city-yllas.webp',
     pageTagline: 'One of Finland\'s biggest ski areas.',
-    intro: 'Ylläs has 62 slopes split between two villages, Äkäslompolo (north) and Ylläsjärvi (south), connected by ski runs but separated by a 20-minute drive. Äkäslompolo has the livelier evening scene: Sport Resort Ylläs for après, Taiga Pub & Kitchen and Restaurant Otso for the rest of the night. No mega-club. Quieter, older, more couples than Levi. Pallas-Yllästunturi National Park is the third-biggest in Finland.',
+    intro: 'Ylläs has 62 slopes split between two villages, Äkäslompolo (north) and Ylläsjärvi (south), connected by ski runs but separated by a 20-minute drive. Äkäslompolo has the livelier evening scene: Sport Resort Ylläs for après and Restaurant Otso for the rest of the night. No mega-club. Quieter, older, more couples than Levi. Pallas-Yllästunturi National Park is the third-biggest in Finland.',
     venues: [
       { name: 'Sport Resort Ylläs', type: 'Après + bar', note: 'Äkäslompolo\'s busiest après spot at the slopes.' },
-      { name: 'Taiga Pub & Kitchen', type: 'Pub + kitchen', note: 'Äkäslompolo pub-restaurant: taps, pub food, sports.' },
+      { name: 'Taiga Pub & Kitchen', type: 'Pub + kitchen', note: 'Ylläsjärvi pub-restaurant: taps, pub food, sports.' },
       { name: 'Ravintola Otso', type: 'Restaurant + bar', note: 'Village favourite with rooms in both Äkäslompolo and Ylläsjärvi: late dinner and drinks.' },
     ],
     knowList: [

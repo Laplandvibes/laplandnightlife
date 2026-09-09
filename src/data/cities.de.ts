@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Eines der größten Skigebiete Finnlands.',
     pageTagline: 'Eines der größten Skigebiete Finnlands.',
-    intro: 'Ylläs hat 62 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind. Äkäslompolo hat das lebhaftere Abendleben: Sport Resort Ylläs fürs Après, Taiga Pub & Kitchen und Ravintola Otso für den Rest des Abends. Kein Mega-Club. Ruhiger, älter, mehr Paare als Levi. Der Nationalpark Pallas-Yllästunturi ist der drittgrößte Finnlands.',
+    intro: 'Ylläs hat 62 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind. Äkäslompolo hat das lebhaftere Abendleben: Sport Resort Ylläs fürs Après und Ravintola Otso für den Rest des Abends. Kein Mega-Club. Ruhiger, älter, mehr Paare als Levi. Der Nationalpark Pallas-Yllästunturi ist der drittgrößte Finnlands.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + Bar', note: 'Äkäslompolos belebtester Après-Spot an den Pisten.' },
-      'Taiga Pub & Kitchen': { type: 'Pub + Küche', note: 'Pub-Restaurant in Äkäslompolo: Zapfhähne, Pub-Essen, Sport.' },
+      'Taiga Pub & Kitchen': { type: 'Pub + Küche', note: 'Pub-Restaurant in Ylläsjärvi: Zapfhähne, Pub-Essen, Sport.' },
       'Ravintola Otso': { type: 'Restaurant + Bar', note: 'Dorffavorit mit Häusern in Äkäslompolo und Ylläsjärvi: spätes Abendessen und Drinks.' },
     },
     knowList: [

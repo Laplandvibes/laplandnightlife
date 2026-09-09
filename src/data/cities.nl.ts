@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Een van de grootste skigebieden van Finland.',
     pageTagline: 'Een van de grootste skigebieden van Finland.',
-    intro: 'Ylläs heeft 62 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de pistes maar gescheiden door 20 minuten rijden. Äkäslompolo heeft de levendigste avondscene: Sport Resort Ylläs voor après, Taiga Pub & Kitchen en Ravintola Otso voor de rest van de avond. Geen megaclub. Rustiger, ouder, meer stellen dan Levi. Nationaal park Pallas-Yllästunturi is het op twee na grootste van Finland.',
+    intro: 'Ylläs heeft 62 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de pistes maar gescheiden door 20 minuten rijden. Äkäslompolo heeft de levendigste avondscene: Sport Resort Ylläs voor après en Ravintola Otso voor de rest van de avond. Geen megaclub. Rustiger, ouder, meer stellen dan Levi. Nationaal park Pallas-Yllästunturi is het op twee na grootste van Finland.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'De drukste après-plek van Äkäslompolo, aan de pistes.' },
-      'Taiga Pub & Kitchen': { type: 'Pub + keuken', note: 'Pub-restaurant in Äkäslompolo: tap, pubfood, sport.' },
+      'Taiga Pub & Kitchen': { type: 'Pub + keuken', note: 'Pub-restaurant in Ylläsjärvi: tap, pubfood, sport.' },
       'Ravintola Otso': { type: 'Restaurant + bar', note: 'De dorpsfavoriet, met zalen in zowel Äkäslompolo als Ylläsjärvi: laat diner en drankjes.' },
     },
     knowList: [

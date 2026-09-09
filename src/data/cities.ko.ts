@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '핀란드에서 손꼽히는 규모의 스키 구역.',
     pageTagline: '핀란드에서 손꼽히는 규모의 스키 구역.',
-    intro: '윌래스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스야르비(남)에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Taiga Pub & Kitchen과 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 세 번째로 큽니다.',
+    intro: '윌래스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스야르비(남)에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 세 번째로 큽니다.',
     venues: {
       'Sport Resort Ylläs': { type: '아프레 + 바', note: '슬로프 옆, 애캐슬롬폴로에서 가장 붐비는 아프레 스폿.' },
-      'Taiga Pub & Kitchen': { type: '펍 + 키친', note: '애캐슬롬폴로의 펍 레스토랑: 탭, 펍 푸드, 스포츠.' },
+      'Taiga Pub & Kitchen': { type: '펍 + 키친', note: '윌래스야르비의 펍 레스토랑: 탭, 펍 푸드, 스포츠.' },
       'Ravintola Otso': { type: '레스토랑 + 바', note: '애캐슬롬폴로와 윌래스야르비 양쪽에 매장을 둔 마을의 인기 식당: 늦은 저녁과 한 잔.' },
     },
     knowList: [

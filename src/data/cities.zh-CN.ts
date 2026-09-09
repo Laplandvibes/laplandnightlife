@@ -155,10 +155,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: '芬兰规模最大的滑雪区之一。',
     pageTagline: '芬兰规模最大的滑雪区之一。',
-    intro: '于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是阿卡斯隆波洛：滑雪后去 Sport Resort Ylläs，之后有 Taiga Pub & Kitchen 和 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯通图里国家公园是芬兰第三大国家公园。',
+    intro: '于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是阿卡斯隆波洛：滑雪后去 Sport Resort Ylläs，之后有 Ravintola Otso 撑起后半夜。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯通图里国家公园是芬兰第三大国家公园。',
     venues: {
       'Sport Resort Ylläs': { type: '滑雪后+酒吧', note: '雪道旁，阿卡斯隆波洛人气最旺的滑雪后据点。' },
-      'Taiga Pub & Kitchen': { type: '酒馆+厨房', note: '阿卡斯隆波洛的酒馆餐厅，酒头、酒馆菜、看比赛。' },
+      'Taiga Pub & Kitchen': { type: '酒馆+厨房', note: '于拉斯耶尔维的酒馆餐厅，酒头、酒馆菜、看比赛。' },
       'Ravintola Otso': { type: '餐厅+酒吧', note: '村民最爱，在阿卡斯隆波洛和于拉斯耶尔维都有门店，晚餐和小酌都合适。' },
     },
     knowList: [

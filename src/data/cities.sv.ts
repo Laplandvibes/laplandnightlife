@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Ett av Finlands största skidområden.',
     pageTagline: 'Ett av Finlands största skidområden.',
-    intro: 'Ylläs har 62 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après, Taiga Pub & Kitchen och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands tredje största.',
+    intro: 'Ylläs har 62 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg. Äkäslompolo har den livligaste kvällsscenen: Sport Resort Ylläs för après och Ravintola Otso för resten av kvällen. Ingen megaklubb. Lugnare, äldre, fler par än Levi. Nationalparken Pallas-Yllästunturi är Finlands tredje största.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'Äkäslompolos livligaste après-ställe, vid backarna.' },
-      'Taiga Pub & Kitchen': { type: 'Pub + kök', note: 'Pubrestaurang i Äkäslompolo: tapp, pubmat, sport.' },
+      'Taiga Pub & Kitchen': { type: 'Pub + kök', note: 'Pubrestaurang i Ylläsjärvi: tapp, pubmat, sport.' },
       'Ravintola Otso': { type: 'Restaurang + bar', note: 'Byfavoriten, med salar i både Äkäslompolo och Ylläsjärvi: sen middag och drinkar.' },
     },
     knowList: [

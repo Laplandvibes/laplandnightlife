@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Uma das maiores áreas de esqui da Finlândia.',
     pageTagline: 'Uma das maiores áreas de esqui da Finlândia.',
-    intro: 'Ylläs tem 62 pistas divididas entre dois vilarejos, Äkäslompolo (norte) e Ylläsjärvi (sul), conectados pelas pistas, mas separados por 20 minutos de carro. Äkäslompolo tem a cena noturna mais animada: Sport Resort Ylläs para o après, Taiga Pub & Kitchen e Ravintola Otso para o resto da noite. Sem megaclube. Mais calmo, mais adulto, mais casais que Levi. O Parque Nacional Pallas-Yllästunturi é o terceiro maior da Finlândia.',
+    intro: 'Ylläs tem 62 pistas divididas entre dois vilarejos, Äkäslompolo (norte) e Ylläsjärvi (sul), conectados pelas pistas, mas separados por 20 minutos de carro. Äkäslompolo tem a cena noturna mais animada: Sport Resort Ylläs para o après e Ravintola Otso para o resto da noite. Sem megaclube. Mais calmo, mais adulto, mais casais que Levi. O Parque Nacional Pallas-Yllästunturi é o terceiro maior da Finlândia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'O ponto de après mais movimentado de Äkäslompolo, junto às pistas.' },
-      'Taiga Pub & Kitchen': { type: 'Pub + cozinha', note: 'Pub-restaurante de Äkäslompolo: torneiras, comida de pub, esporte.' },
+      'Taiga Pub & Kitchen': { type: 'Pub + cozinha', note: 'Pub-restaurante de Ylläsjärvi: torneiras, comida de pub, esporte.' },
       'Ravintola Otso': { type: 'Restaurante + bar', note: 'O favorito do vilarejo, com salões em Äkäslompolo e Ylläsjärvi: jantar tardio e drinques.' },
     },
     knowList: [

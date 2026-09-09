@@ -148,10 +148,10 @@ const overlay: Record<string, CityOverlay> = {
     region: 'Kolari / Muonio',
     blurb: 'Una delle aree sciistiche più grandi della Finlandia.',
     pageTagline: 'Una delle aree sciistiche più grandi della Finlandia.',
-    intro: 'Ylläs ha 62 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste ma separati da 20 minuti di auto. Äkäslompolo ha la scena serale più vivace: Sport Resort Ylläs per l\'après, Taiga Pub & Kitchen e Ravintola Otso per il resto della serata. Nessun mega-club. Più tranquillo, più adulto, più coppie rispetto a Levi. Il Parco nazionale Pallas-Yllästunturi è il terzo più grande della Finlandia.',
+    intro: 'Ylläs ha 62 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste ma separati da 20 minuti di auto. Äkäslompolo ha la scena serale più vivace: Sport Resort Ylläs per l\'après e Ravintola Otso per il resto della serata. Nessun mega-club. Più tranquillo, più adulto, più coppie rispetto a Levi. Il Parco nazionale Pallas-Yllästunturi è il terzo più grande della Finlandia.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après + bar', note: 'Il punto après più frequentato di Äkäslompolo, ai piedi delle piste.' },
-      'Taiga Pub & Kitchen': { type: 'Pub + cucina', note: 'Pub-ristorante di Äkäslompolo: spine, cucina da pub, sport.' },
+      'Taiga Pub & Kitchen': { type: 'Pub + cucina', note: 'Pub-ristorante di Ylläsjärvi: spine, cucina da pub, sport.' },
       'Ravintola Otso': { type: 'Ristorante + bar', note: 'Il preferito del villaggio, con sale sia ad Äkäslompolo che a Ylläsjärvi: cena tardi e drink.' },
     },
     knowList: [
