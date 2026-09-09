@@ -46,10 +46,15 @@ export default function PrimeTime() {
               to={to('/events')}
               className="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)] flex flex-col"
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                style={{ backgroundImage: `url(${eventImage(card.enName)})` }}
-              />
+              {eventImage(card.enName) ? (
+                <div
+                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                  style={{ backgroundImage: `url(${eventImage(card.enName)!})` }}
+                />
+              ) : (
+                /* Ei kuvaa talle tapahtumalle: tumma pohja, ei lainattua valokuvaa. */
+                <div className="absolute inset-0 bg-gradient-to-br from-night-light via-night to-night" />
+              )}
               {/* Scrim must reach the date eyebrow (~120px from card top =
                   ~70% up), not just the bottom 3/5 — otherwise the small pink
                   date floats on the bare image and vanishes on bright shots
@@ -68,9 +73,12 @@ export default function PrimeTime() {
                 </div>
 
                 <div className="mt-auto">
-                  <p className="text-[0.7rem] uppercase tracking-[0.2em] text-pink font-bold mb-2" style={SHADOW}>{card.date}</p>
-                  <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide leading-tight mb-3" style={SHADOW}>{card.name}</h3>
-                  <p className="text-sm text-white leading-relaxed mb-5 line-clamp-3 font-medium" style={SHADOW}>{card.body}</p>
+                  <p className="text-sm sm:text-base font-heading tracking-wide text-white mb-2" style={SHADOW}>{card.date}</p>
+                  {/* Kiintea rivimaara: ilman clampia otsikon 1 vs. 2 riviä siirsi
+                      koko tekstilohkon eri korkeudelle naapurikorttiin nahden
+                      (Vesa 9.9.: "tekstit ihan eri korkeudella"). */}
+                  <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide leading-tight mb-3 line-clamp-2 min-h-[2.4em]" style={SHADOW}>{card.name}</h3>
+                  <p className="text-sm text-white leading-relaxed mb-5 line-clamp-3 min-h-[3.9em] font-medium" style={SHADOW}>{card.body}</p>
 
                   <div className="pt-3 border-t border-white/20 flex items-center justify-between">
                     <span className="text-xs uppercase tracking-[0.18em] text-pink font-bold" style={SHADOW}>{COPY[lang].home.events.full}</span>

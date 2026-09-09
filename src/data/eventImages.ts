@@ -33,7 +33,19 @@ export const EVENT_IMG: Record<string, string> = {
   'Midnight Sun Window closes': IMG.eventMidnightSun,
 };
 
-/** Neutraali varakuva: tapahtumapinta ilman väitettä yksittäisestä tapahtumasta. */
-export const EVENT_IMG_FALLBACK = IMG.pillarEvents;
-
-export const eventImage = (enName: string) => EVENT_IMG[enName] ?? EVENT_IMG_FALLBACK;
+/** 🔴🔴 EI VARAVALOKUVAA (Vesa 2026-09-09: *"sama kuva kaikissa?"*).
+ *
+ *  Ensimmäinen versio palautti yhden neutraalin tapahtumakuvan kaikille joilta
+ *  kuva puuttuu. Koska seuraavat kolme tapahtumaa ovat KAIKKI talvitapahtumia
+ *  joilta kuva puuttuu, etusivulle tuli **kolme identtistä konserttilava-kuvaa**
+ *  vierekkäin — ja ne väittivät kolmen eri tapahtuman näyttävän samalta
+ *  rock-festivaalilta. Jutajaiset on folkloristifestivaali ja Levi FIS on
+ *  laskettelukilpailu.
+ *
+ *  ⇒ `null` = tälle tapahtumalle EI ole kuvaa. Kortti renderöi silloin
+ *  tummanpuhuvan taustan eikä lainaa toisen tapahtuman valokuvaa. Puuttuva kuva
+ *  näyttää puuttuvalta; väärä kuva näyttää väitteeltä.
+ *
+ *  Oikea korjaus on generoida talvitapahtumille omat kuvat — se on maksullista
+ *  työtä ja odottaa Vesan hyväksyntää kustannukselle. */
+export const eventImage = (enName: string): string | null => EVENT_IMG[enName] ?? null;

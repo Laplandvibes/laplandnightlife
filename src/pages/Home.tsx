@@ -151,9 +151,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
                 <div className="relative mt-auto p-5">
                   <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>{sc.tag}</p>
-                  <h3 className="font-heading text-2xl text-white tracking-wide mb-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
-                  <p className="text-sm text-white font-semibold mb-0.5" style={OVERLAY_SHADOW}>{sc.body}</p>
-                  <p className="text-xs text-white/75 mb-3 leading-snug" style={OVERLAY_SHADOW}>{sc.desc}</p>
+                  {/* Tasakorkeat lohkot: eri pituinen copy siirsi tekstin alun eri
+                      korkeudelle joka kortissa (Vesa 9.9.). */}
+                  <h3 className="font-heading text-2xl text-white tracking-wide mb-1 line-clamp-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
+                  <p className="text-sm text-white font-semibold mb-0.5 line-clamp-1" style={OVERLAY_SHADOW}>{sc.body}</p>
+                  <p className="text-xs text-white/75 mb-3 leading-snug line-clamp-2 min-h-[2.4em]" style={OVERLAY_SHADOW}>{sc.desc}</p>
                   <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
                     {c.scenes.go} <ArrowRight size={12} />
                   </span>
@@ -209,10 +211,14 @@ export default function Home() {
                 to={to('/events')}
                 className="group relative flex flex-col min-h-[320px] overflow-hidden rounded-2xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)]"
               >
-                <div
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                  style={{ backgroundImage: `url(${e.img})` }}
-                />
+                {e.img ? (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
+                    style={{ backgroundImage: `url(${e.img})` }}
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-night-light via-night to-night" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent pointer-events-none" />
                 {/* Date as a top pill (own dark backing) so it stays legible on any
                     image regardless of how tall the body copy below runs. */}
