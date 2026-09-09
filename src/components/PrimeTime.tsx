@@ -56,7 +56,7 @@ export default function PrimeTime() {
                   ~70% up), not just the bottom 3/5 — otherwise the small pink
                   date floats on the bare image and vanishes on bright shots
                   like the sunset card (Vesa 2026-07-07). */}
-              <div className="absolute inset-0 bg-gradient-to-t from-night from-5% via-night/85 via-[65%] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent pointer-events-none" />
 
               <div className="relative p-7 min-h-[440px] flex flex-col">
                 <div className="flex items-start justify-between mb-6">

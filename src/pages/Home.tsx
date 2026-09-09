@@ -144,7 +144,7 @@ export default function Home() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${sc.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night from-8% via-night/85 via-[58%] to-night/25 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
                 <div className="relative mt-auto p-5">
                   <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>{sc.tag}</p>
                   <h3 className="font-heading text-2xl text-white tracking-tight mb-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
@@ -208,7 +208,7 @@ export default function Home() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${e.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night from-5% via-night/80 via-[60%] to-night/20 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent pointer-events-none" />
                 {/* Date as a top pill (own dark backing) so it stays legible on any
                     image regardless of how tall the body copy below runs. */}
                 <div className="relative p-5">

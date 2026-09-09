@@ -184,7 +184,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${s.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/80 to-night/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
                 <div className="relative p-6 flex flex-col justify-end w-full">
                   <p className="text-[0.65rem] uppercase tracking-[0.22em] text-neon-yellow font-bold mb-2" style={SHADOW}>
@@ -225,7 +225,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${e.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/85 to-night/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent" />
                 <div className="relative p-5 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-4">
                     <e.icon size={26} className="text-neon-yellow drop-shadow-[0_0_18px_rgba(250,204,21,0.6)]" strokeWidth={1.5} />
@@ -266,7 +266,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${l.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/75 to-night/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/15 via-transparent to-transparent" />
                 <div className="relative p-5 flex flex-col w-full">
                   <div className="flex items-start gap-3 mb-3">

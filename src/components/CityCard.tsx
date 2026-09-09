@@ -30,7 +30,7 @@ export default function CityCard({ city }: { city: City }) {
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-night via-night/75 to-night/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
         <div className="absolute top-4 left-4 flex flex-col gap-2">
           <span className={`text-[0.6rem] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full border ${tagColor[city.tag]}`}>
             {city.tag}

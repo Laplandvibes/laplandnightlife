@@ -45,7 +45,7 @@ export default function Cities() {
           role="img"
           aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/60 via-night/80 to-night" />
+        <div className="absolute inset-0 bg-gradient-to-b from-night/30 via-night/50 to-night" />
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-tight mb-5">{c.heroH}</h1>

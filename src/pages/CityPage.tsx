@@ -99,9 +99,9 @@ export default function CityPage() {
         />
         {/* Left-weighted scrim darkens the upper-left headline zone over bright
             city photos; top fade + bottom fade keep the rest readable. */}
-        <div className="absolute inset-0 bg-gradient-to-r from-night/85 via-night/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/70 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/60 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/25 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/35 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/55 to-transparent pointer-events-none" />
 
         <div className="relative w-full max-w-5xl mx-auto">
           <Link
@@ -330,7 +330,7 @@ export default function CityPage() {
                     style={{ backgroundImage: `url(${cc.img})` }}
                     aria-hidden="true"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
                   <div className="relative p-4 min-h-[160px] flex flex-col justify-end">
                     <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
                       {cc.tag}

@@ -130,7 +130,7 @@ export default function GygWidget({
       {blocked ? (
         <div className="relative flex items-end overflow-hidden rounded-2xl border border-white/10 min-h-[240px]">
           <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${fallbackImage})` }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-night from-5% via-night/80 via-[55%] to-night/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent pointer-events-none" />
           <div className="relative w-full p-6 sm:p-8">
             <p className="text-sm text-white/90 leading-relaxed max-w-md mb-5" style={SHADOW}>
               {FALLBACK_LEAD[lang] ?? FALLBACK_LEAD.en}
