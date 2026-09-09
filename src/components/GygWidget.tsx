@@ -113,7 +113,7 @@ export default function GygWidget({
   }, [query, lang]);
 
   return (
-    <div className={blocked || bare ? '' : 'bg-night-light/40 border border-white/10 rounded-2xl p-4 sm:p-6'}>
+    <div className={blocked || bare ? '' : 'bg-night-light/40 border border-cream/25 rounded-2xl p-4 sm:p-6'}>
       {/* Embed target — kept mounted (just hidden when blocked) so the SDK can populate it. */}
       <div
         ref={ref}

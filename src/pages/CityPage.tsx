@@ -215,8 +215,8 @@ export default function CityPage() {
             {/* 🔴 Yksi raami, ei kaksi. GygWidget piirtaa oman laatikkonsa, joten
                 se saa `bare`-lipun paneelin sisalla — kaksi sisakkaista reunusta
                 nayttaa loysalta (Vesa 9.9.: *"raamit paremmiksi, firm ote"*). */}
-            <div className="overflow-hidden rounded-2xl border border-white/15 bg-night-light/60 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.85)] ring-1 ring-inset ring-white/5">
-              <div className="border-b border-white/10 bg-gradient-to-b from-white/[0.06] to-transparent px-5 py-4">
+            <div className="overflow-hidden rounded-2xl border border-cream/30 bg-night-light/60 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.85)] ring-1 ring-inset ring-cream/10">
+              <div className="border-b border-cream/20 bg-gradient-to-b from-cream/[0.06] to-transparent px-5 py-4">
                 <p className="text-[0.6rem] uppercase tracking-[0.25em] text-pink font-bold mb-1.5">{c.gygEyebrow}</p>
                 <h2 className="font-heading text-xl sm:text-2xl text-white tracking-wide leading-tight">{c.gygH(city.name)}</h2>
               </div>

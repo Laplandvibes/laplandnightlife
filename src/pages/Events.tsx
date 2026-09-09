@@ -8,6 +8,7 @@ import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { eventImage } from '../data/eventImages';
 import IllustrationMark from '../components/IllustrationMark';
+import TicketmasterCard from '../components/TicketmasterCard';
 import {
   EVENTS, EVENTS_BASE, EVENT_COUNT, todayLocalIso, pastFlags,
 } from '../data/events';
@@ -70,6 +71,15 @@ export default function Events() {
         bgImage={IMG.pillarEvents}
         accentClass="from-pink/25 via-night/75 to-night"
       />
+
+      {/* 🔴 Lipunmyynti sivun YLAOSAAN (Vesa 9.9.: "sivun ylaosaan tottakai").
+          Se oli kalenterin ALAPUOLELLA tekstilohkona, eli lukija loysi sen vasta
+          selattuaan kaikki kuukaudet lapi. */}
+      <section className="px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="max-w-5xl mx-auto">
+          <TicketmasterCard sid="events_tickets_top" />
+        </div>
+      </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-12">

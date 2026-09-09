@@ -80,6 +80,11 @@
   --color-night: #0F172A;
   --color-night-light: #1E293B;
   --color-night-lighter: #334155;
+  /* Kermanvaalea tehosteväri raameille (Vesa 2026-09-09: "kyllä tänne sopisi
+     tehosteväriksi kerman vaalea reunuksille jotenkin"). Käytetään VAIN
+     reunuksissa ja hiusviivoissa — ei tekstissä eikä pintana, jottei sivusto
+     lakkaa olemasta deep-night. */
+  --color-cream: #EFE6D2;
   --color-pink: #EC4899;
   --color-pink-dark: #BE185D;
   --color-purple: #7C3AED;
