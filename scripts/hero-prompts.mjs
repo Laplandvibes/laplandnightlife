@@ -133,7 +133,10 @@ export const SURFACES = [
     scene: 'A wide view along a frozen Lapland river at night with a lit road bridge crossing it, the town lights of both banks strung out low on either side and a faint aurora over the far end. The bridge pylon is the vertical anchor. This image stands for "fourteen towns" — it must read as a region seen whole, not one venue.' },
 
   { key: 'pillar-aurora-bars', kind: 'hero', out: 'images/drive/pillarAuroraBars.webp',
-    scene: 'The inside of a glass-roofed bar at night looking up and out: a heavy timber bar counter with two glasses on it in the near foreground, and through the whole curved glass roof above, a bright green aurora band across a black sky. Warm low lamplight inside, snow piled on the outside edges of the glass. The roof beam is the vertical anchor.' },
+    /* 🔴 1. yritys kuvasi pelkkää lasikattoa ylhäältä: Vesa 9.9. *"todella epäselvä
+       mitä tässä koitetaan esittää"*. Kuvassa pitää näkyä BAARI, ei vain ikkuna —
+       tiski, pullot ja lasit etualalla, revontuli lasin takana taustana. */
+    scene: 'A bar counter inside a glass-roofed lodge in Lapland at night, photographed from just behind the counter at eye level. In the near foreground: a thick timber bar top, two filled glasses catching warm lamplight, and a row of backlit bottles on a low shelf. Behind and above the counter the wall and roof are glass, and through them a bright green aurora band arcs across a black sky over snow-laden spruce. Warm amber light inside, cold blue-green light outside — the two meet on the timber. The upright of the bar shelving is the vertical anchor. It must read immediately as a bar you could order a drink at, with the aurora as the ceiling.' },
 
   { key: 'pillar-nightclubs', kind: 'hero', indoor: true, out: 'images/drive/pillarNightclubs.webp',
     /* 🔴 1. yritys antoi avoimen ulkokatoksen, ei yökerhoa — "timber ski-resort
@@ -158,6 +161,25 @@ export const SURFACES = [
 
   { key: 'venue-street-bar', kind: 'hero', out: 'images/card/venue-street-bar.webp',
     scene: 'A single bar on the ground floor of an old timber town building at night in Lapland, seen from across the snowy street: one big warm window with plain unlettered glass, the interior deep and amber, a shovelled path to the door and snow banked either side. The door lamp is the vertical anchor. One lit window in an otherwise dark street.' },
+  /* ── 5 puuttuvaa talvitapahtumakuvaa (Vesa 9.9.: "puuttuu kuvat?").
+        Nämä ovat kalenterin seuraavat tapahtumat eikä yhdelläkään ollut kuvaa,
+        joten etusivulle tuli kolme tummaa tyhjää korttia. Avain = EN-nimi,
+        jolla `data/eventImages.ts` hakee ne. ───────────────────────────── */
+  { key: 'event-jutajaiset', kind: 'card', out: 'images/drive/eventJutajaiset.webp',
+    scene: 'An indoor folk-dance festival evening in Rovaniemi: a wooden stage in a hall, empty except for a row of traditional Finnish and Sámi folk costumes on stands — red and blue felt, embroidered bands, silver brooches — lit warm from a single overhead lantern. Musical instruments rest against a chair: a kantele and a fiddle. Rows of empty wooden chairs face the stage in shadow.',
+    indoor: true },
+
+  { key: 'event-levi-fis', kind: 'card', out: 'images/drive/eventLeviFis.webp',
+    scene: 'A floodlit alpine slalom course at Levi at night, seen from beside the piste: a line of red and blue slalom gates runs down hard injected race snow, banner-less safety netting along the side, the snow surface scarred by edges. Sharp floodlight from a mast at the left throws long gate shadows across the piste. The mast is the vertical anchor. The fell top disappears into ice fog above.' },
+
+  { key: 'event-ruka-fis', kind: 'card', out: 'images/drive/eventRukaFis.webp',
+    scene: 'A cross-country ski stadium at Ruka at night: parallel machine-set classic tracks run away from the camera into a floodlit corridor cut through black spruce forest, the snow blue-white under the lights and untouched between the tracks. A timing gantry frame stands over the start line as the vertical anchor. Steam of cold air, no crowd.' },
+
+  { key: 'event-christmas', kind: 'card', out: 'images/drive/eventChristmas.webp',
+    scene: 'A Rovaniemi street in December at night, dressed for Christmas: strings of warm white lights spanning between the buildings above a snow-packed street, a decorated spruce standing at a small square with a heap of snow at its foot, warm shop windows either side. The lit spruce is the vertical anchor. Reindeer-drawn sleigh tracks and boot prints crossing the snow.' },
+
+  { key: 'event-new-year', kind: 'card', out: 'images/drive/eventNewYear.webp',
+    scene: 'Fireworks over a snow-covered Lapland town square at midnight on New Year Eve, seen from a distance across the snow: two bursts of white and gold high in a black sky, their light reflecting off the snowfield and off the roofs below, a church tower silhouetted as the vertical anchor. Small dark figures far away at the edge of the square, seen only as silhouettes.' },
 ];
 
 export const HERO_COUNT = SURFACES.filter((s) => s.kind === 'hero').length;

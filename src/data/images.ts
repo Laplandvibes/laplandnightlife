@@ -66,6 +66,13 @@ export const IMG = {
   // kaupunkikohtausten ja paikallislistan kuvia, jolloin kuusi kuvaa esiintyi
   // kahdesti samalla sivulla (Vesa: verkoston kuva-auditti). Nämä renderöityvät
   // CSS-taustakuvina, minkä takia <img>-pohjainen mittari ei nähnyt niitä.
+  // Talvitapahtumien omat kuvat (9.9.2026). Naita ei ollut lainkaan, joten
+  // etusivulle tuli tummia tyhjia kortteja.
+  eventJutajaiset: '/images/drive/eventJutajaiset.webp',
+  eventLeviFis: '/images/drive/eventLeviFis.webp',
+  eventRukaFis: '/images/drive/eventRukaFis.webp',
+  eventChristmas: '/images/drive/eventChristmas.webp',
+  eventNewYear: '/images/drive/eventNewYear.webp',
   eventMidnightSun: '/images/drive/eventMidnightSun.webp',
   eventFilmFestival: '/images/drive/eventFilmFestival.webp',
   eventRockFestival: '/images/drive/eventRockFestival.webp',

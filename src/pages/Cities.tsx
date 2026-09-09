@@ -46,7 +46,16 @@ export default function Cities() {
           role="img"
           aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/55 via-night/35 to-night" />
+        {/* 🔴 Ylikorjasin taman 9.9.: poistin opacity-30:n jolloin kuva tuli nakyviin
+            mutta TEKSTI katosi (Vesa: "eihan tekstit erotu hero osiosta ollenkaan").
+            Koko kuvan tummentaminen palauttaisi alkuperaisen vian. Sen sijaan teksti
+            saa oman vyohykkeen: sama opetus kuin jakokuvatyossa 6.9. — scrim haviaa
+            valokuvalle, teksti tarvitsee oman pohjan. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-night/50 via-night/25 to-night" />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(8,10,22,0.82) 0%, rgba(8,10,22,0.55) 45%, rgba(8,10,22,0.15) 75%, transparent 92%)' }}
+        />
         <IllustrationMark />
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>

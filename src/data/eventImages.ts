@@ -31,6 +31,12 @@ export const EVENT_IMG: Record<string, string> = {
   'Air Guitar World Championships qualifier': IMG.summerAirGuitar,
   'Air Guitar World Championships Final': IMG.summerAirGuitar,
   'Midnight Sun Window closes': IMG.eventMidnightSun,
+  // Talvitapahtumat, generoitu 9.9.2026 (Vesa: "enko tapahtumiin pyytanyt kuvia").
+  'Jutajaiset Folklore Festival': IMG.eventJutajaiset,
+  'Levi FIS Alpine Ski World Cup': IMG.eventLeviFis,
+  'Ruka FIS Cross-Country Opening': IMG.eventRukaFis,
+  'Christmas in Rovaniemi': IMG.eventChristmas,
+  "New Year's Eve fireworks": IMG.eventNewYear,
 };
 
 /** 🔴🔴 EI VARAVALOKUVAA (Vesa 2026-09-09: *"sama kuva kaikissa?"*).

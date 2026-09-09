@@ -6,6 +6,8 @@ import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { eventImage } from '../data/eventImages';
+import IllustrationMark from '../components/IllustrationMark';
 import {
   EVENTS, EVENTS_BASE, EVENT_COUNT, todayLocalIso, pastFlags,
 } from '../data/events';
@@ -97,15 +99,33 @@ export default function Events() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {m.items.map((e, ii) => {
                   const isPast = past[mi]?.[ii] ?? false;
+                  /* 🔴 Kuva haetaan EN-nimella indeksilla, ei kaannetylla nimella:
+                     `EVENTS_BASE.en` on kuvakartan ainoa vakaa avain (12 lokaalia
+                     ei voi olla eri mielta siita mika kuva kuuluu tapahtumaan). */
+                  const img = eventImage(EVENTS_BASE.en[mi]?.items[ii]?.name ?? '');
                   return (
                     <div
                       key={e.name}
                       className={
-                        isPast
-                          ? 'bg-night-light/20 border border-white/5 rounded-xl p-5 opacity-60'
-                          : 'bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all'
+                        'overflow-hidden rounded-xl border transition-all ' +
+                        (isPast
+                          ? 'bg-night-light/20 border-white/5 opacity-60'
+                          : 'bg-night-light/40 border-white/10 hover:border-pink/30 hover:-translate-y-0.5')
                       }
                     >
+                      {img && (
+                        <div className="relative h-36 sm:h-40">
+                          <div
+                            className="absolute inset-0 bg-cover bg-center"
+                            style={{ backgroundImage: `url(${img})` }}
+                            role="img"
+                            aria-label={e.name}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-night-light/90 via-night-light/20 to-transparent" />
+                          <IllustrationMark />
+                        </div>
+                      )}
+                      <div className="p-5">
                       <p className={`text-[0.65rem] uppercase tracking-[0.18em] font-bold mb-1 ${isPast ? 'text-white/45' : 'text-pink'}`}>
                         {e.date} · {e.city}
                         {isPast && (
@@ -116,6 +136,7 @@ export default function Events() {
                       </p>
                       <h3 className={`font-heading text-xl tracking-wide mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
                       <p className={`text-sm leading-relaxed ${isPast ? 'text-white/50' : 'text-white/70'}`}>{e.body}</p>
+                      </div>
                     </div>
                   );
                 })}
