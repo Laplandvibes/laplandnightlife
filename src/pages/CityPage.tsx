@@ -5,6 +5,7 @@ import PageSeo, { citySchema } from '../components/PageSeo';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import AffiliateCTA from '../components/AffiliateCTA';
 import GygWidget from '../components/GygWidget';
+import VenueRating from '../components/VenueRating';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
 import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
@@ -174,7 +175,12 @@ export default function CityPage() {
                 className="bg-night-light/40 border border-white/10 rounded-xl p-5 hover:border-pink/30 hover:-translate-y-0.5 transition-all"
               >
                 <p className="text-[0.6rem] uppercase tracking-[0.2em] text-pink font-bold mb-1">{v.type}</p>
-                <h3 className="font-heading text-xl text-white tracking-tight mb-2">{v.name}</h3>
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h3 className="font-heading text-xl text-white tracking-tight">{v.name}</h3>
+                  <span className="shrink-0 mt-0.5">
+                    <VenueRating name={v.name} citySlug={city.slug} lang={lang} />
+                  </span>
+                </div>
                 <p className="text-sm text-white/70 leading-relaxed">{v.note}</p>
               </div>
             ))}
