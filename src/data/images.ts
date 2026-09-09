@@ -12,9 +12,26 @@
  * Drives the home hero so the site shows midnight-sun summer nightlife in
  * summer and the aurora/neon winter scene the rest of the year.
  */
+/**
+ * 🔴🔴 KESÄ ON TÄÄLLÄ TOUKO–HEINÄKUU, EI TOUKO–SYYSKUU (korjattu 2026-09-09).
+ *
+ * Verkoston yleinen `seasonal()` käyttää touko–syyskuuta. Se on oikein
+ * sivustolle joka myy maisemaa, mutta **väärin sivustolle joka myy yötä**:
+ * keskiyön auringon ikkuna on sivuston OMAN datan mukaan 6.6.–7.7. ja
+ * kaupunkien pikafaktoissa revontulikausi on syys–maalis. Touko–syys-rajalla
+ * etusivu myi 8.9. juhannuskokkoja ja väitti ettei aurinko käy horisontin alla.
+ * Vesa 9.9.: *"en pidä yhtään tästä hero-osion h2-teksteistä, jotenkin ei sovi"*
+ * — teksti ei sopinut KUVAAN, ja molemmat olivat väärän kauden puolella.
+ *
+ * 🟢 Tämä EI riko `gate:og`ia: portti vertaa vain `functions/og.jpg.js`:ää
+ * kanoniseen malliin (`scripts/og/audit.mjs:49`), ei tätä tiedostoa.
+ * 🔴 Sivuvaikutus: elo–syyskuussa jakokortti näyttää yhä kesää vaikka sivu on
+ * talvinen. Se on pienempi virhe kuin sivu joka valehtelee, ja korjaantuu vasta
+ * jos OG-malliin lisätään kolmas kausi koko verkostoon.
+ */
 export const isSummerSeason = () => {
   const m = new Date().getMonth() + 1;
-  return m >= 5 && m <= 9;
+  return m >= 5 && m <= 7;
 };
 
 export const IMG = {

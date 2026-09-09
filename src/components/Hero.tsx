@@ -14,27 +14,12 @@ export default function Hero() {
   const c = COPY[lang].home.hero;
   const heroImage = heroHomeSeasonal();
   const isSummer = isSummerSeason();
-  // 🔴🔴 KESÄTEKSTI POIS 2026-09-09 (Vesa: hero "jotenkin tosi outo" 8.9.).
-  //
-  // `isSummerSeason()` on touko–SYYSKUU, joten 8.9. hero väitti "32 päivää
-  // aurinko ei käy horisontin alla" ja mainosti juhannuskokkoja. Sivuston OMA
-  // data on eri mieltä: keskiyön auringon ikkuna on 6.6.–7.7. ja kaupunkien
-  // pikafaktoissa revontulikausi on syys–maalis. Väite oli siis mitattavasti
-  // väärä kuudella viikolla vuodessa.
-  //
-  // Ikkunaa EI kavennettu, koska sama touko–syys-raja on `/og.jpg`-Functionissa
-  // ja `gate:og` vaatii kausifunktion tavulleen samaksi 27 sivustolla ⇒ yhden
-  // sivuston säätö rikkoisi verkostoportin ja irrottaisi jakokortin etusivusta.
-  //
-  // Sen sijaan noudatetaan 8.9. wellness-sääntöä: **H1 saa vaihtua kaudittain,
-  // ingressin pitää olla tosi molempina kausina.** Vesan 2026-04-27 hyväksymä
-  // ympärivuotinen copy nimeää molemmat kaudet itse ("Taivas hehkuu vihreänä …
-  // Aurinko unohtaa laskea"), joten se kelpaa sellaisenaan ympäri vuoden.
-  // `taglineSummer`/`subSummer` jäävät locale-tiedostoihin: jos kausiraja
-  // joskus korjataan verkostotasolla oikeaksi (kesä = touko–heinä), ne voi
-  // ottaa takaisin käyttöön ilman 12 kielen uudelleenkirjoitusta.
-  const tagline = c.tagline;
-  const sub = c.sub;
+  /* Kausiteksti takaisin kayttoon 9.9.2026, kun kausiraja korjattiin
+     touko–heinakuuksi (`data/images.ts`). Aiemmin se oli pois paalta koska
+     touko–SYYSkuun ikkuna sai heron vaittamaan keskiyon aurinkoa syyskuussa;
+     nyt ikkuna on tosi, joten teksti saa seurata kuvaa. */
+  const tagline = isSummer ? c.taglineSummer ?? c.tagline : c.tagline;
+  const sub = isSummer ? c.subSummer ?? c.sub : c.sub;
 
   return (
     <section className="relative min-h-[100svh] pt-24 pb-20 flex items-center overflow-hidden">
