@@ -217,7 +217,7 @@ const overlay: Record<string, CityOverlay> = {
   },
   sodankyla: {
     region: 'Keski-Lappi',
-    blurb: 'Sodankylän elokuvajuhlat: elokuvia näytetään klo 03:00 täydessä päivänvalossa.',
+    blurb: 'Sodankylän elokuvajuhlat: elokuvia katsotaan kello kolme yöllä, kun aurinko paistaa.',
     pageTagline: 'Sodankylän elokuvajuhlat.',
     intro: 'Sodankylä on 9 000 asukkaan kylä Kemijoen varrella, ja kerran vuodessa, kesäkuun puolivälissä, siitä tulee maailman surrealistisin elokuvafestivaali. Sodankylän elokuvajuhlat kestävät neljä päivää ja näytöksiä on kellon ympäri. Kukaan ei nuku, koska aurinko ei laske. Festivaaliviikon ulkopuolella skene on hotellibaari ja pari paikallista pubia. Tule festivaaleille, tai tule hiljaisuuden takia.',
     venues: {
