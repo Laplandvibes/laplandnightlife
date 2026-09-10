@@ -65,7 +65,7 @@ export default function Hero() {
         <p
           /* Vesa 9.9.: "suhteessa kuvaan tekstit on hyvin pienella". Hero on
              100svh ja kuva 2560 px; entinen text-xl/3xl hukkui siihen. */
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white italic mb-8 max-w-3xl mx-auto leading-[1.15] font-medium"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white italic mb-8 max-w-3xl xl:max-w-5xl mx-auto leading-[1.15] font-medium"
           style={SHADOW}
         >
           {tagline}
