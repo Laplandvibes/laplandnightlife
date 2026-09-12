@@ -29,8 +29,8 @@ const de = {
       faqH: 'Die Fragen, die alle stellen.',
       hero: {
         badge: '#LaplandNightlife',
-        h1Line1: 'Lapland',
-        h1Line2: 'Nightlife',
+        h1Line1: 'Lappland',
+        h1Line2: 'bei Nacht',
         tagline: 'Der Himmel leuchtet grün. Die Bars bleiben offen. Die Sonne vergisst unterzugehen.',
         sub: 'Finnisch-Lappland hat einen Superclub mit 1 700 Plätzen direkt am Skihang, eine Holzkirche aus dem 17. Jahrhundert, in der um 03:00 Uhr bei vollem Tageslicht Filme gezeigt werden, und eine Iglu-Bar mit Glasdach, deren Decke das Polarlicht ist.',
         taglineSummer: 'Die Sonne geht nie unter. Die Terrassen bleiben voll. Die Party läuft bis in einen hellen Morgen um drei.',

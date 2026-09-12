@@ -29,8 +29,8 @@ const fi = {
       faqH: 'Kysymykset, jotka kaikki kysyvät.',
       hero: {
         badge: '#LaplandNightlife',
-        h1Line1: 'Lapland',
-        h1Line2: 'Nightlife',
+        h1Line1: 'Lapin',
+        h1Line2: 'yöelämä',
         tagline: 'Revontulet palavat taivaalla. Baarit ovat auki aamuun. Kesällä aurinko ei laske lainkaan.',
         sub: 'Levin rinteessä on 1 700 hengen yökerho. Sodankylän 1600-luvun puukirkossa katsotaan elokuvia kolmelta yöllä, kun aurinko paistaa. Lasi-iglubaarissa revontulet näkyvät suoraan katon läpi.',
         taglineSummer: 'Aurinko ei laske. Terassit ovat täynnä. Ilta venyy kolmeen aamuyöllä, eikä missään vaiheessa pimene.',
