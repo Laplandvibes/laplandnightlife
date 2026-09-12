@@ -204,7 +204,10 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.events.eyebrow}</p>
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide">{c.events.h}</h2>
           </div>
-          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Sarakemaara seuraa tapahtumien maaraa: osio nakyy jo kahdella
+              tapahtumalla, ja kiintea kolmen sarakkeen ruudukko jatti silloin
+              245-389 px tyhjaa oikealle (verkoston asetteluportti 12.9.2026). */}
+          <div className={`grid gap-4 ${events.length >= 3 ? 'sm:grid-cols-1 md:grid-cols-3' : 'sm:grid-cols-1 md:grid-cols-2'}`}>
             {events.map((e) => (
               <Link
                 key={e.name}
