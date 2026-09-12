@@ -56,7 +56,7 @@ export default function Hero() {
             ⇒ tavallinen valilyonti + text-balance: mahtuu yhdelle riville kun
             tilaa on, jakautuu tasan kun ei. */}
         <h1
-          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-wide mb-7 break-words [text-wrap:balance]"
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-wide mb-7 break-words [text-wrap:balance] xl:text-[clamp(96px,1.5vw_+_76.8px,115.2px)]"
           style={SHADOW}
         >
           {c.h1Line1} {c.h1Line2}
