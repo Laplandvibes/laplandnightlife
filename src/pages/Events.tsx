@@ -167,7 +167,7 @@ export default function Events() {
               href="https://go.laplandvibes.com/go/ticketmaster?sid=events_tickets_fi"
               target="_blank"
               rel="sponsored nofollow noopener"
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-pink hover:text-white transition-colors"
+              className="lv-tap inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-pink hover:text-white transition-colors"
             >
               {c.ticketsCta} →
             </a>

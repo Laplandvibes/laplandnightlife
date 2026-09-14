@@ -18,6 +18,7 @@ mirror. To vendor a new one: `cp ../shared/<file> src/shared/<file>` and commit.
 - Footer.tsx
 - FounderByline.tsx
 - HomeAdSlots.tsx
+- JobNetworkBanner.tsx
 - Legal/CookieContent.tsx
 - Legal/PrivacyContent.tsx
 - Legal/TermsContent.tsx

@@ -56,7 +56,7 @@ export default function Navbar() {
             <EcosystemMenu lang={lang} currentDomain="laplandnightlife.com" />
             <Link
               to={to('/')}
-              className="no-underline flex items-center"
+              className="no-underline flex items-center min-h-11"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <Logo />

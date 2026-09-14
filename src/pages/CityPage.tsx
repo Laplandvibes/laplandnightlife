@@ -127,7 +127,7 @@ export default function CityPage() {
         <div className="relative w-full max-w-5xl mx-auto">
           <Link
             to={to('/cities')}
-            className="inline-flex items-center gap-2 text-white hover:text-pink mb-5 text-xs sm:text-sm uppercase tracking-wider font-bold"
+            className="lv-tap inline-flex items-center gap-2 text-white hover:text-pink mb-5 text-xs sm:text-sm uppercase tracking-wider font-bold"
             style={SHADOW}
           >
             <ArrowLeft size={14} /> {c.back}

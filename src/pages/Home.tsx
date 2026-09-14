@@ -189,7 +189,7 @@ export default function Home() {
             {homeCities.map((city) => <CityCard key={city.slug} city={city} />)}
           </div>
           <div className="text-center mt-10">
-            <Link to={to('/cities')} className="inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
+            <Link to={to('/cities')} className="lv-tap inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
               {c.cities.all}
             </Link>
           </div>
@@ -241,7 +241,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to={to('/events')} className="inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
+            <Link to={to('/events')} className="lv-tap inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
               {c.events.full}
             </Link>
           </div>
@@ -269,7 +269,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link to={to('/tips')} className="inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
+            <Link to={to('/tips')} className="lv-tap inline-flex items-center gap-2 text-pink hover:text-pink-dark font-semibold uppercase tracking-wider text-sm">
               {c.tips.all}
             </Link>
           </div>

@@ -79,7 +79,7 @@ export default function FAQ() {
                         <Link
                           key={key}
                           to={to(FAQ_ROUTE[key])}
-                          className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-pink hover:text-pink-dark transition-colors"
+                          className="lv-tap inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-pink hover:text-pink-dark transition-colors"
                         >
                           {nav[key]} <ArrowRight size={14} className="shrink-0" />
                         </Link>
