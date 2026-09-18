@@ -7,6 +7,9 @@ import { COPY } from '../locales/copy';
 import EcosystemMenu from '../shared/EcosystemMenu';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 
+/** Sama sivu loppukauttaviivasta riippumatta: sisääntulo on `/x/`, linkki voi olla `/x` (18.9.2026). */
+const samePath = (a: string, b: string) => a.replace(/\/+$/, '') === b.replace(/\/+$/, '');
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -71,7 +74,7 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={`font-body font-medium text-xs uppercase tracking-[0.15em] leading-none whitespace-nowrap transition-colors duration-200 no-underline ${
-                  location.pathname === link.to ? 'text-pink' : 'text-white/90 hover:text-pink'
+                  samePath(location.pathname, link.to) ? 'text-pink' : 'text-white/90 hover:text-pink'
                 }`}
               >
                 {link.label}
@@ -107,7 +110,7 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={`block font-body font-medium text-sm uppercase tracking-[0.15em] py-2 no-underline ${
-                  location.pathname === link.to ? 'text-pink' : 'text-white/90 hover:text-pink'
+                  samePath(location.pathname, link.to) ? 'text-pink' : 'text-white/90 hover:text-pink'
                 }`}
               >
                 {link.label}

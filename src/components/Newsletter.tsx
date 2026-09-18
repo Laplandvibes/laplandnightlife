@@ -251,7 +251,7 @@ export default function Newsletter() {
                 <span>
                   {cc.consent}{' '}
                   <a
-                    href={to('/privacy')}
+                    href={to('/privacy/')}
                     target="_blank"
                     rel="noopener"
                     className="underline hover:text-white"
@@ -272,7 +272,7 @@ export default function Newsletter() {
 
           <p className="text-white/75 text-xs mt-5">
             {c.footer}{' '}
-            <a href={to('/privacy')} className="underline hover:text-white">{c.privacy}</a>.
+            <a href={to('/privacy/')} className="underline hover:text-white">{c.privacy}</a>.
           </p>
         </div>
       </div>
