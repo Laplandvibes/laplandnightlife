@@ -264,7 +264,7 @@ export default function BookingWidget() {
 
         <button
           type="submit"
-          className="mt-5 w-full bg-pink hover:bg-pink-dark text-white font-bold py-3.5 sm:py-4 rounded-xl transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 sm:gap-2.5 hover:shadow-xl hover:shadow-pink/30 hover:-translate-y-0.5 active:translate-y-0"
+          className="mt-5 w-full bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-3.5 sm:py-4 rounded-xl transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 sm:gap-2.5 hover:shadow-xl hover:shadow-pink/30 hover:-translate-y-0.5 active:translate-y-0"
         >
           <Search size={16} className="shrink-0 sm:hidden" />
           <Search size={18} className="shrink-0 hidden sm:inline-block" />

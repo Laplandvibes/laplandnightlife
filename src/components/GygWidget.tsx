@@ -144,7 +144,7 @@ export default function GygWidget({
               sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_fallback`}
               destination="s"
               query={{ q: query }}
-              className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-colors"
+              className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-colors"
             >
               {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={14} />
             </AffiliateCTA>

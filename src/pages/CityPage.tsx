@@ -410,7 +410,7 @@ export default function CityPage() {
             partner="hotels"
             sid={`city_${city.slug}_cta`}
             destination={city.name}
-            className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink/30"
+            className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink/30"
           >
             {c.stayBtn(city.name)}
           </AffiliateCTA>

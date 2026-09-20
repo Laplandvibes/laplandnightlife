@@ -172,7 +172,7 @@ export default function Nightclubs() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
           <p className="text-white/65 mb-6">{c.ctaBody}</p>
-          <AffiliateCTA partner="hotels" sid="nightclubs_cta" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-pink hover:bg-pink-dark text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
+          <AffiliateCTA partner="hotels" sid="nightclubs_cta" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}
           </AffiliateCTA>
         </div>
