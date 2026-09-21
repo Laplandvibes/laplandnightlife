@@ -1,12 +1,13 @@
 {
-  "version": "20260905",
+  "version": "20260921",
   "domain": "laplandnightlife.com",
   "brand": "NIGHTLIFE",
   "tagline": "Where Finland's North goes out",
-  "generated": "2026-09-21T08:31:06.436Z",
+  "generated": "2026-09-21T11:35:29.498Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
+      "tagline": "Where Finland's North goes out",
       "heroUrl": "https://laplandnightlife.com/images/drive/summerJuhannus.webp?v=2a375582",
       "heroAlt": null,
       "heroSha": "2a375582ba440ce7",
@@ -45,6 +46,7 @@
       "errors": []
     },
     "winter": {
+      "tagline": "Where Finland's North goes out",
       "heroUrl": "https://laplandnightlife.com/images/hero/aurora-bars-neon.webp?v=524a5ed5",
       "heroAlt": null,
       "heroSha": "524a5ed599b50c96",
