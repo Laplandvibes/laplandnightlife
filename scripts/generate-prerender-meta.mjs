@@ -182,7 +182,7 @@ for (const [key, path] of Object.entries(STATIC_ROUTE_OF_KEY)) {
   meta[path] = {};
   for (const lang of LANGS) {
     const e = byLang[lang] || byLang.en;
-    meta[path][lang] = { title: `${e.title} | LaplandNightlife`, description: e.description };
+    meta[path][lang] = { title: `${e.title}`, description: e.description };
   }
 }
 for (const slug of slugs) {

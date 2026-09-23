@@ -11,7 +11,7 @@
   {
     "path": "/cities",
     "copyKey": "cities",
-    "fallbackTitle": "Nightlife by City | LaplandNightlife",
+    "fallbackTitle": "Nightlife by City",
     "ogImage": "/og/cities.jpg",
     "ogCard": {
       "hero": "/images/hero/cities-rovaniemi-bridge.webp",
@@ -21,7 +21,7 @@
   {
     "path": "/nightclubs",
     "copyKey": "nightclubs",
-    "fallbackTitle": "Nightclubs in Lapland | LaplandNightlife",
+    "fallbackTitle": "Nightclubs in Lapland",
     "harvestFiles": [
       "src/pages/Nightclubs.tsx"
     ],
@@ -34,7 +34,7 @@
   {
     "path": "/aurora-bars",
     "copyKey": "aurora",
-    "fallbackTitle": "Aurora Bars: Northern Lights with a Drink | LaplandNightlife",
+    "fallbackTitle": "Aurora Bars: Northern Lights with a Drink",
     "ogImage": "/og/aurora-bars.jpg",
     "ogCard": {
       "hero": "/images/drive/pillarAuroraBars.webp",
@@ -44,7 +44,7 @@
   {
     "path": "/events",
     "copyKey": "events",
-    "fallbackTitle": "Nightlife Events & Festivals | LaplandNightlife",
+    "fallbackTitle": "Nightlife Events & Festivals",
     "ogImage": "/og/events.jpg",
     "ogCard": {
       "hero": "/images/drive/pillarEvents.webp",
@@ -54,42 +54,42 @@
   {
     "path": "/photography",
     "copyKey": "photo",
-    "fallbackTitle": "Night Photography in Lapland | LaplandNightlife"
+    "fallbackTitle": "Night Photography in Lapland"
   },
   {
     "path": "/summer-nights",
     "copyKey": "summer",
-    "fallbackTitle": "Midnight Sun Summer Nights | LaplandNightlife"
+    "fallbackTitle": "Midnight Sun Summer Nights"
   },
   {
     "path": "/tips",
     "copyKey": "tips",
-    "fallbackTitle": "Going Out in Lapland: Tips & Etiquette | LaplandNightlife"
+    "fallbackTitle": "Going Out in Lapland: Tips & Etiquette"
   },
   {
     "path": "/privacy",
-    "fallbackTitle": "Privacy Policy | LaplandNightlife",
+    "fallbackTitle": "Privacy Policy",
     "harvestFiles": [
       "src/shared/Legal/PrivacyContent.tsx"
     ]
   },
   {
     "path": "/terms",
-    "fallbackTitle": "Terms of Use | LaplandNightlife",
+    "fallbackTitle": "Terms of Use",
     "harvestFiles": [
       "src/shared/Legal/TermsContent.tsx"
     ]
   },
   {
     "path": "/cookie-policy",
-    "fallbackTitle": "Cookie Policy | LaplandNightlife",
+    "fallbackTitle": "Cookie Policy",
     "harvestFiles": [
       "src/shared/Legal/CookieContent.tsx"
     ]
   },
   {
     "path": "/city/oulu",
-    "fallbackTitle": "Oulu Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Oulu Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "oulu",
@@ -99,7 +99,7 @@
   },
   {
     "path": "/city/rovaniemi",
-    "fallbackTitle": "Rovaniemi Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Rovaniemi Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "rovaniemi",
@@ -109,7 +109,7 @@
   },
   {
     "path": "/city/levi",
-    "fallbackTitle": "Levi Nightlife & Après-Ski Bars | LaplandNightlife",
+    "fallbackTitle": "Levi Nightlife & Après-Ski Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "levi",
@@ -119,7 +119,7 @@
   },
   {
     "path": "/city/saariselka",
-    "fallbackTitle": "Saariselkä Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Saariselkä Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "saariselka",
@@ -129,7 +129,7 @@
   },
   {
     "path": "/city/inari",
-    "fallbackTitle": "Inari Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Inari Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "inari",
@@ -139,7 +139,7 @@
   },
   {
     "path": "/city/kemi",
-    "fallbackTitle": "Kemi Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Kemi Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "kemi",
@@ -149,7 +149,7 @@
   },
   {
     "path": "/city/yllas",
-    "fallbackTitle": "Ylläs Nightlife & Après-Ski Bars | LaplandNightlife",
+    "fallbackTitle": "Ylläs Nightlife & Après-Ski Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "yllas",
@@ -159,7 +159,7 @@
   },
   {
     "path": "/city/ruka",
-    "fallbackTitle": "Ruka Nightlife & Après-Ski Bars | LaplandNightlife",
+    "fallbackTitle": "Ruka Nightlife & Après-Ski Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "ruka",
@@ -169,7 +169,7 @@
   },
   {
     "path": "/city/pyha-luosto",
-    "fallbackTitle": "Pyhä-Luosto Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Pyhä-Luosto Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "pyha-luosto",
@@ -179,7 +179,7 @@
   },
   {
     "path": "/city/sodankyla",
-    "fallbackTitle": "Sodankylä Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Sodankylä Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "sodankyla",
@@ -189,7 +189,7 @@
   },
   {
     "path": "/city/kittila",
-    "fallbackTitle": "Kittilä Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Kittilä Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "kittila",
@@ -199,7 +199,7 @@
   },
   {
     "path": "/city/ivalo",
-    "fallbackTitle": "Ivalo Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Ivalo Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "ivalo",
@@ -209,7 +209,7 @@
   },
   {
     "path": "/city/muonio",
-    "fallbackTitle": "Muonio Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Muonio Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "muonio",
@@ -219,7 +219,7 @@
   },
   {
     "path": "/city/salla",
-    "fallbackTitle": "Salla Nightlife & Bars | LaplandNightlife",
+    "fallbackTitle": "Salla Nightlife & Bars",
     "harvestRecord": {
       "file": "src/data/cities.{lang}.ts",
       "key": "salla",

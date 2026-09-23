@@ -1,5 +1,5 @@
 {
-  "_readme": "Legal-page SEO meta, 12 locales. Read at RUNTIME by src/lib/pageSeo.ts (getPageSeo) and at BUILD by scripts/generate-prerender-meta.mjs, so prerendered shells match the client render per locale. Titles are the SHORT form (no brand): PageSeo.tsx appends ' | LaplandNightlife' at runtime and the generator appends the same suffix when emitting prerender-meta.json.",
+  "_readme": "Legal-page SEO meta, 12 locales. Read at RUNTIME by src/lib/pageSeo.ts (getPageSeo) and at BUILD by scripts/generate-prerender-meta.mjs, so prerendered shells match the client render per locale. Titles are the SHORT form (no brand): PageSeo.tsx appends '' at runtime and the generator appends the same suffix when emitting prerender-meta.json.",
   "privacy": {
     "en": {
       "title": "Privacy Policy",

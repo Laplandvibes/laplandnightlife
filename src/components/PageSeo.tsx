@@ -51,7 +51,7 @@ export default function PageSeo({ title, description, path, ogImage, jsonLd }: P
   const enUrl = `${ORIGIN}${cleanPath === '/' ? '' : cleanPath}`.replace(/\/?$/, '/');
   const url = `${ORIGIN}${localised(cleanPath, lang)}`.replace(/\/?$/, '/');
   const og = ogImage ?? DEFAULT_OG;
-  const fullTitle = cleanPath === '/' ? title : `${title} | LaplandNightlife`;
+  const fullTitle = cleanPath === '/' ? title : `${title}`;
   const bcp47 = BCP47[lang];
 
   const graph = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : null;
