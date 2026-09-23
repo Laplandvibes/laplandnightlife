@@ -84,16 +84,20 @@ export default function Hero() {
         >
           {c.meta(String(VENUE_COUNT))}
         </div>
-
-        <a
-          href="#prime-time"
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white hover:text-pink transition-colors"
-          aria-label={c.scroll}
-          style={SHADOW}
-        >
-          <ChevronDown size={32} className="animate-bounce" />
-        </a>
       </div>
+
+      {/* 🔴 Heron (section) lapsi, ei tekstilohkon: tekstilohkon sisällä `bottom-6` osui
+          lohkon viimeiseen riviin, ja 375 px:llä kolmelle riville rivittyvä meta-rivi
+          ("Osa LaplandVibes-verkostoa · 14 kaupunkia …") jäi nuolen alle
+          (tekstipaallekkain-portti 24.9.2026). Nyt nuoli on heron 80 px:n alapehmusteessa. */}
+      <a
+        href="#prime-time"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white hover:text-pink transition-colors"
+        aria-label={c.scroll}
+        style={SHADOW}
+      >
+        <ChevronDown size={32} className="animate-bounce" />
+      </a>
     </section>
   );
 }
