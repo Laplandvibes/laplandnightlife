@@ -150,7 +150,12 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
                 <div className="relative mt-auto p-5">
-                  <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>{sc.tag}</p>
+                  {/* Tumma pilli (23.9.2026): 10 px aksenttiväri kuvan päällä jäi 1440 px:llä
+                      kolmessa kortissa 1,0–1,1:1:een pahimmillaan (korttiteksti-portti).
+                      Umpinainen yö takana: pinkki 5,1:1, violetti 6,6:1, sininen ja keltainen yli. */}
+                  <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ color: sc.accent }}>
+                    <span className="inline-block rounded-full border border-white/15 bg-night px-2.5 py-0.5">{sc.tag}</span>
+                  </p>
                   {/* Tasakorkeat lohkot: eri pituinen copy siirsi tekstin alun eri
                       korkeudelle joka kortissa (Vesa 9.9.). */}
                   <h3 className="font-heading text-2xl text-white tracking-wide mb-1 line-clamp-1" style={OVERLAY_SHADOW}>{sc.h}</h3>

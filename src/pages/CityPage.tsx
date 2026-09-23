@@ -118,8 +118,13 @@ export default function CityPage() {
           aria-label={`Aurora over a rooftop bar in ${city.name}: Lapland nightlife`}
         />
         {/* Left-weighted scrim darkens the upper-left headline zone over bright
-            city photos; top fade + bottom fade keep the rest readable. */}
-        <div className="absolute inset-0 bg-gradient-to-r from-night/70 via-night/25 to-transparent pointer-events-none" />
+            city photos; top fade + bottom fade keep the rest readable.
+            🔴 23.9.2026 vahvennettu (oli from-night/70 via-night/25 to-transparent):
+            heroteksti-portti mittasi 14 kaupungista 3 leveydellä tagline-rivin ja
+            otsikon kirkasta kuvaa vasten 59 kertaa rajan alle (pahin Ivalo 375 px
+            1,90:1), tekstivarjosta huolimatta — varjo ei ole tausta. Puhelimessa
+            teksti ulottuu oikeaan laitaan asti, joten siellä peite on tasaisempi. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-night/82 via-night/66 via-55% to-night/50 sm:via-night/55 sm:via-45% sm:to-night/12 pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/35 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/55 to-transparent pointer-events-none" />
         <IllustrationMark />
@@ -132,11 +137,13 @@ export default function CityPage() {
           >
             <ArrowLeft size={14} /> {c.back}
           </Link>
-          <p
-            className="text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3"
-            style={SHADOW}
-          >
-            {city.tag} · {city.region}
+          {/* 🔴 Pieni pinkki teksti ei erotu valokuvasta millään peitteellä: #EC4899
+              vaatii 4,5:1:een lähes mustan taustan (luminanssi ≤ 0,016). Siksi tumma
+              pilli (5,06:1 aina, kuvasta riippumatta) — väri ja muoto pysyvät. */}
+          <p className="text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">
+            <span className="inline-block rounded-full border border-pink/45 bg-night px-3 py-1">
+              {city.tag} · {city.region}
+            </span>
           </p>
           <h1
             className="font-heading text-5xl sm:text-7xl md:text-8xl text-white tracking-wide leading-[0.95] mb-4"

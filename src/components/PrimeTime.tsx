@@ -59,8 +59,12 @@ export default function PrimeTime() {
               {/* Scrim must reach the date eyebrow (~120px from card top =
                   ~70% up), not just the bottom 3/5 — otherwise the small pink
                   date floats on the bare image and vanishes on bright shots
-                  like the sunset card (Vesa 2026-07-07). */}
-              <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent pointer-events-none" />
+                  like the sunset card (Vesa 2026-07-07).
+                  🔴 Umpitumma kaista 3 % → 16 % (23.9.2026): kortin alin rivi "Koko
+                  2026-kalenteri →" on 12 px pinkkiä, ja korttiteksti-portti mittasi sen
+                  Rukan kortissa 4,2:1 (41 % pikseleistä alle rajan). Pieni pinkki tarvitsee
+                  lähes umpinaisen yön taakseen; kaista kattaa nyt linkkirivin. */}
+              <div className="absolute inset-0 bg-gradient-to-t from-night from-16% via-night/55 via-[45%] to-transparent pointer-events-none" />
               {eventImage(card.enName) && <IllustrationMark />}
 
               <div className="relative p-7 min-h-[440px] flex flex-col">

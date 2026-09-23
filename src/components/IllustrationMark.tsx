@@ -41,6 +41,10 @@ export default function IllustrationMark({ className = '' }: { className?: strin
   return (
     <span
       aria-hidden="true"
+      /* Korttiteksti-portti ohittaa tämän (monorepo scripts/audit_korttiteksti.mjs):
+         heikko näkyvyys on Vesan päätös, ei vika. Portti tulostaa ohitusten määrän
+         ja tämän syyn joka ajossa. */
+      data-kontrastiportti-ohita="IllustrationMark: vapaaehtoinen kuvituskuvamerkintä, tarkoituksella lähes näkymätön (Vesa 9.9.2026: melkein vaan näkyy)"
       className={
         'pointer-events-none absolute bottom-1.5 left-2 z-10 select-none ' +
         'text-[0.5rem] uppercase tracking-[0.14em] text-white/25 ' +
