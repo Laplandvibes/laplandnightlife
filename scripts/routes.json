@@ -11,7 +11,12 @@
   {
     "path": "/cities",
     "copyKey": "cities",
-    "fallbackTitle": "Nightlife by City | LaplandNightlife"
+    "fallbackTitle": "Nightlife by City | LaplandNightlife",
+    "ogImage": "/og/cities.jpg",
+    "ogCard": {
+      "hero": "/images/hero/cities-rovaniemi-bridge.webp",
+      "line": "Going out in Rovaniemi, Levi and Oulu"
+    }
   },
   {
     "path": "/nightclubs",
@@ -19,17 +24,32 @@
     "fallbackTitle": "Nightclubs in Lapland | LaplandNightlife",
     "harvestFiles": [
       "src/pages/Nightclubs.tsx"
-    ]
+    ],
+    "ogImage": "/og/nightclubs.jpg",
+    "ogCard": {
+      "hero": "/images/drive/pillarNightclubs.webp",
+      "line": "Clubs and live music, sorted by size"
+    }
   },
   {
     "path": "/aurora-bars",
     "copyKey": "aurora",
-    "fallbackTitle": "Aurora Bars: Northern Lights with a Drink | LaplandNightlife"
+    "fallbackTitle": "Aurora Bars: Northern Lights with a Drink | LaplandNightlife",
+    "ogImage": "/og/aurora-bars.jpg",
+    "ogCard": {
+      "hero": "/images/drive/pillarAuroraBars.webp",
+      "line": "Glass-roof bars and ice bars"
+    }
   },
   {
     "path": "/events",
     "copyKey": "events",
-    "fallbackTitle": "Nightlife Events & Festivals | LaplandNightlife"
+    "fallbackTitle": "Nightlife Events & Festivals | LaplandNightlife",
+    "ogImage": "/og/events.jpg",
+    "ogCard": {
+      "hero": "/images/drive/pillarEvents.webp",
+      "line": "Festivals and gigs, month by month"
+    }
   },
   {
     "path": "/photography",

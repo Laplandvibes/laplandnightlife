@@ -1,0 +1,326 @@
+{
+  "cities": {
+    "route": "/cities",
+    "line": "Going out in Rovaniemi, Levi and Oulu",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/hero/cities-rovaniemi-bridge.webp",
+        "bytes": 102830,
+        "sha256": "48a4230e28c03b76917e275a6066a0194eb2fb1db18ff9eaeed8f143fcce764a",
+        "heroSha": "63635c816b98dcbf",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18537,
+        "inkBox": [
+          340,
+          493,
+          859,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 52.3,
+        "centerSq": 61.3,
+        "photoRegion": 57.5,
+        "photoRegionRef": 57.5,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 521,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/hero/cities-rovaniemi-bridge.webp",
+        "bytes": 102830,
+        "sha256": "48a4230e28c03b76917e275a6066a0194eb2fb1db18ff9eaeed8f143fcce764a",
+        "heroSha": "63635c816b98dcbf",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18537,
+        "inkBox": [
+          340,
+          493,
+          859,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 52.3,
+        "centerSq": 61.3,
+        "photoRegion": 57.5,
+        "photoRegionRef": 57.5,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 521,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "nightclubs": {
+    "route": "/nightclubs",
+    "line": "Clubs and live music, sorted by size",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/drive/pillarNightclubs.webp",
+        "bytes": 140294,
+        "sha256": "470edc309a48e5af00cbc1927d5368a66e426053739b2cfb7bc8a3f6b2794dcc",
+        "heroSha": "50ed4b2d94d53e1c",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18246,
+        "inkBox": [
+          353,
+          493,
+          846,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 60.4,
+        "centerSq": 70,
+        "photoRegion": 68.5,
+        "photoRegionRef": 68.5,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 496,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/drive/pillarNightclubs.webp",
+        "bytes": 140294,
+        "sha256": "470edc309a48e5af00cbc1927d5368a66e426053739b2cfb7bc8a3f6b2794dcc",
+        "heroSha": "50ed4b2d94d53e1c",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18246,
+        "inkBox": [
+          353,
+          493,
+          846,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 60.4,
+        "centerSq": 70,
+        "photoRegion": 68.5,
+        "photoRegionRef": 68.5,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 496,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "aurora-bars": {
+    "route": "/aurora-bars",
+    "line": "Glass-roof bars and ice bars",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/drive/pillarAuroraBars.webp",
+        "bytes": 165004,
+        "sha256": "5fe9c3784014c858df9436be76c64635cb312cbbdba97da570ea841e37b0cf54",
+        "heroSha": "dee5c3dda4655e0b",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 17405,
+        "inkBox": [
+          363,
+          493,
+          834,
+          597
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 60.6,
+        "centerSq": 67.9,
+        "photoRegion": 69,
+        "photoRegionRef": 69,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 399,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/drive/pillarAuroraBars.webp",
+        "bytes": 165004,
+        "sha256": "5fe9c3784014c858df9436be76c64635cb312cbbdba97da570ea841e37b0cf54",
+        "heroSha": "dee5c3dda4655e0b",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 17405,
+        "inkBox": [
+          363,
+          493,
+          834,
+          597
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 60.6,
+        "centerSq": 67.9,
+        "photoRegion": 69,
+        "photoRegionRef": 69,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 399,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "events": {
+    "route": "/events",
+    "line": "Festivals and gigs, month by month",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/drive/pillarEvents.webp",
+        "bytes": 156556,
+        "sha256": "d9f94693c0d0a8656f537f65ef92950c063173de066025d90a97401a886c1f07",
+        "heroSha": "55b7264444fc1a6b",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18415,
+        "inkBox": [
+          355,
+          493,
+          844,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 63.4,
+        "centerSq": 76.7,
+        "photoRegion": 72.7,
+        "photoRegionRef": 72.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 492,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/drive/pillarEvents.webp",
+        "bytes": 156556,
+        "sha256": "d9f94693c0d0a8656f537f65ef92950c063173de066025d90a97401a886c1f07",
+        "heroSha": "55b7264444fc1a6b",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18415,
+        "inkBox": [
+          355,
+          493,
+          844,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 63.4,
+        "centerSq": 76.7,
+        "photoRegion": 72.7,
+        "photoRegionRef": 72.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 492,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  }
+}
