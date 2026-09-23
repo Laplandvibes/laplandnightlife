@@ -537,6 +537,12 @@ function resolveRouteMeta(loc, route) {
 // that is already long enough, or a page with nothing harvested, is untouched.
 function ensureDescriptionLength(desc, paragraphs, lang) {
   const cjk = /^(ja|ko|zh|kr|cn)/.test(String(lang || ''));
+  // [LV-KO-SENTENCES 2026-09-19] Korean is CJK for the length floor but NOT for the
+  // splitting rules: it spaces words and ends sentences with ASCII . ! ? — the 。！？-only
+  // split glued 2–3 sentences into one block and the mid-word slice cut '…VR' / '…당사의'
+  // on ~15 laplandtransport /kr/ pages (ko native review 19.9.2026). ja/zh keep the CJK rules.
+  const ko = /^(ko|kr)/.test(String(lang || ''));
+  const noSpaces = cjk && !ko;
   // CJK floor raised 40 → 70 on 2026-09-07: OpenSEO measures characters regardless of script,
   // and the extension text is the page's own same-locale copy, so a 70-char ja/ko/zh
   // description is two sentences of real content, not padding.
@@ -575,11 +581,11 @@ function ensureDescriptionLength(desc, paragraphs, lang) {
     const head = sliceW(d.slice(0, MAX), MAXW);
     const lastEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '), head.lastIndexOf('。'));
     if (lastEnd >= 90 || (lastEnd > 0 && riittava(head.slice(0, lastEnd + 1)))) return head.slice(0, lastEnd + 1).trim();
-    return (cjk ? head : head.replace(/\s+\S*$/, '')).replace(/[,;:\s]+$/, '');
+    return (noSpaces ? head : head.replace(/\s+\S*$/, '')).replace(/[,;:\s]+$/, '');
   }
   if (riittava(d) || !Array.isArray(paragraphs) || !paragraphs.length) return desc;
   const text = paragraphs.map((t) => String(t).replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ');
-  const sentences = (cjk ? text.split(/(?<=[。！？])/) : text.split(/(?<=[.!?])\s+/))
+  const sentences = (noSpaces ? text.split(/(?<=[。！？])/) : text.split(/(?<=[.!?。！？])\s+/))
     .map((s) => s.trim())
     .filter((s) => s && s.length > 3);
   let out = d;
@@ -589,7 +595,7 @@ function ensureDescriptionLength(desc, paragraphs, lang) {
     const candidate = out + joiner + s;
     if (candidate.length > MAX || leveys(candidate) > MAXW) {
       if (riittava(out)) break;
-      const cut = cjk ? sliceW(candidate, MAXW) : sliceW(candidate.slice(0, MAX), MAXW).replace(/\s+\S*$/, '');
+      const cut = noSpaces ? sliceW(candidate, MAXW) : sliceW(candidate.slice(0, MAX), MAXW).replace(/\s+\S*$/, '');
       if (riittava(cut)) out = cut.replace(/[,;:\s]+$/, '');
       break;
     }
@@ -663,6 +669,52 @@ function routeUrl(route, loc) {
 // "harvestKeys": ["hero", "intro"] when their own copy block is meta-only.
 const HARVEST_SKIP_KEY_RE = /(pre$|post$|suffix|prefix|aria|alt$|alt[A-Z]|cta|button|label|placeholder|img|image|icon|logo|photo|src|href|url|link|badge|eyebrow|kicker|watching|scroll|consent|cookie[A-Z]|menu|^nav$|nav[A-Z]|search|lang|switch|toggle|price|amount|date|meta[A-Z]|seo)/i;
 
+// [LV-HARVEST-LIMITS 2026-09-18] Per-route harvest limits, opt-in via routes.json:
+//   "harvestBudget": 3000   words      (default 700)
+//   "harvestMaxParas": 200  paragraphs (default 40) — a SEPARATE cap: raising the
+//                           budget alone still cut laplandwork's terms off in the
+//                           middle of A7 (measured 2026-09-09)
+//   "harvestMinLen": 12     characters (default 40; CJK min(18, value)) — without it
+//                           short headings like "A9. Hakijaprofiilit (työnhakijat)"
+//                           (33 chars) drop out and the text loses its numbering
+// The defaults are sized for a marketing page: clear the thin-content line, not
+// reprint the page. A legal or reference page whose own text runs longer loses
+// its tail from the static HTML, so JS-less bots never read it and
+// sitemap-lastmod (which hashes this HTML) never sees the tail change. A route
+// that names none of the keys gets exactly the defaults.
+// 🔴🔴 laplandwork added these to its vendored copy on 2026-09-09 (ca85524). The
+// 2026-09-13 re-vendor (6055472) replaced that copy with this file, which did not
+// have them, and the routes.json values went dead without a single error:
+// /privacy's applicant-pool section was 0–1/27 fields in the static HTML in every
+// language for five days. They live HERE now; scripts/prerender_harvest_limits.test.mjs
+// runs this file against a fixture site, and laplandwork's own
+// scripts/assert-crawlable-copy.mjs fails its build if they vanish again.
+const HARVEST_DEFAULTS = { harvestBudget: 700, harvestMaxParas: 40, harvestMinLen: 40 };
+const HARVEST_CJK_MIN_LEN = 18;
+// The route being harvested sets this (harvestRouteText) and harvestKeep and the
+// LV-HEAD-PAIR check read it. Routes are harvested one at a time, and
+// harvestRouteText restores the default on the way out.
+let harvestMinLen = HARVEST_DEFAULTS.harvestMinLen;
+const harvestLimitWarned = new Set();
+function routeHarvestLimit(route, key) {
+  const v = route[key];
+  if (v == null) return HARVEST_DEFAULTS[key];
+  if (Number.isFinite(v) && v > 0) return v;
+  // A quoted "3000" or a 0 would otherwise be ignored as silently as the keys were
+  // on 2026-09-13. Warn once per route, not once per locale.
+  const id = `${route.path} ${key}`;
+  if (!harvestLimitWarned.has(id)) {
+    harvestLimitWarned.add(id);
+    console.warn(`[prerender] WARN: ${route.path}: ${key} must be a positive number, got ${JSON.stringify(v)} — using the default ${HARVEST_DEFAULTS[key]}`);
+  }
+  return HARVEST_DEFAULTS[key];
+}
+/** Shortest string the harvest keeps on the current route. */
+function harvestMinLenOf(v) {
+  const cjk = (v.match(/[぀-ヿ㐀-䶿一-鿿가-힯]/g) || []).length;
+  return cjk > v.length * 0.3 ? Math.min(HARVEST_CJK_MIN_LEN, harvestMinLen) : harvestMinLen;
+}
+
 function harvestKeep(value, meta, seen) {
   if (typeof value !== 'string') return null;
   const v = value.replace(/\s+/g, ' ').trim();
@@ -670,9 +722,7 @@ function harvestKeep(value, meta, seen) {
   if (v.includes('{') || v.includes('}')) return null; // runtime placeholders would render raw
   if (/^(https?:)?\//.test(v) || /^[\w.+-]+@[\w.-]+$/.test(v)) return null; // paths, URLs, emails
   if (/^[\d\s€$£%+.,;:–—-]+$/.test(v)) return null; // bare numbers/prices
-  const cjk = (v.match(/[぀-ヿ㐀-䶿一-鿿가-힯]/g) || []).length;
-  const minLen = cjk > v.length * 0.3 ? 18 : 40;
-  if (v.length < minLen) return null;
+  if (v.length < harvestMinLenOf(v)) return null;
   if (meta && (v === meta.title || v === meta.description)) return null; // already in the block
   seen.add(v);
   return v;
@@ -691,12 +741,43 @@ function harvestFromObject(node, out, meta, seen, budget) {
     return;
   }
   if (typeof node === 'object') {
+    // [LV-HEAD-PAIR 2026-09-17] A short heading ("Palace", "Ravintola Nili",
+    // "Villi, ei viljelty") falls under harvestKeep's minimum length, so the
+    // crawlable body carried the paragraph WITHOUT the thing it is about: the
+    // laplandfood Michelin list prerendered as 8 descriptions and 0 restaurant
+    // names (measured 17.9.2026, dist/fi/michelin-dining). Same defect class as
+    // the faqNQ+faqNA pairing in harvestFromTsBlock. Pair a too-short heading
+    // with the object's first kept paragraph as ONE string; a heading long
+    // enough to survive on its own is left to the normal loop below.
+    // "Long enough" is harvestKeep's own threshold, so it follows the route's
+    // harvestMinLen (LV-HARVEST-LIMITS): a second hard-coded 40 here would glue
+    // a heading to its paragraph on a route that keeps it standalone.
+    let head = null;
+    for (const hk of ['name', 'title', 'question', 'q', 'headline', 'heading']) {
+      const hv = node[hk];
+      if (typeof hv !== 'string') continue;
+      const h = hv.replace(/\s+/g, ' ').trim();
+      if (!h || seen.has(h) || h.includes('{') || h.includes('}')) continue;
+      if (meta && (h === meta.title || h === meta.description)) continue;
+      if (h.length >= harvestMinLenOf(h)) continue;
+      head = { key: hk, text: h };
+      break;
+    }
     for (const [k, v] of Object.entries(node)) {
       if (budget.words <= 0) return;
       if (HARVEST_SKIP_KEY_RE.test(k)) continue;
       if (typeof v === 'string') {
+        if (head && k === head.key) continue;
         const kept = harvestKeep(v, meta, seen);
-        if (kept) { out.push(kept); budget.words -= kept.split(/\s+/).length; }
+        if (kept) {
+          let line = kept;
+          if (head) {
+            line = /[.!?:]$/.test(head.text) ? `${head.text} ${kept}` : `${head.text}: ${kept}`;
+            seen.add(head.text);
+            head = null;
+          }
+          out.push(line); budget.words -= line.split(/\s+/).length;
+        }
       } else harvestFromObject(v, out, meta, seen, budget);
     }
   }
@@ -940,7 +1021,9 @@ function readJsonSubtree(loc, jsonKey) {
 function harvestRouteText(loc, route, meta) {
   const out = [];
   const seen = new Set();
-  const budget = { words: 700 };
+  // Per-route limits (LV-HARVEST-LIMITS); a route without the keys gets 700 / 40 / 40.
+  const budget = { words: routeHarvestLimit(route, 'harvestBudget') };
+  harvestMinLen = routeHarvestLimit(route, 'harvestMinLen');
   try {
     // Curated FAQ first (same locale ONLY — the JSON-LD EN fallback is fine for
     // structured data, but visible EN text on a non-EN URL is not).
@@ -1239,7 +1322,8 @@ function harvestRouteText(loc, route, meta) {
       if (budget.words > 0) harvestFromObject(readJsonSubtree(loc, key), out, meta, seen, budget);
     }
   } catch { /* fail open — fewer paragraphs, never a broken build */ }
-  return out.slice(0, 40);
+  finally { harvestMinLen = HARVEST_DEFAULTS.harvestMinLen; }
+  return out.slice(0, routeHarvestLimit(route, 'harvestMaxParas'));
 }
 
 // ---------- crawlable pre-hydration block (--crawlableBody) ----------
@@ -1430,6 +1514,15 @@ function injectShell({ shell, bcp47, og, canonical, title, description, hreflang
     }
   } catch { /* never block the build on FAQ derivation */ }
 
+  // Poistaa metan kokonaan. Avaimet ovat tassa tiedostossa kirjoitettuja
+  // vakioita (`og:image:alt`), joten sailytetaan vain sanamerkit, kaksoispiste
+  // ja viiva — silloin regexiin ei voi paasta erikoismerkkeja lainkaan.
+  function poistaMeta(attr, key) {
+    const turvallinen = key.replace(/[^\w:-]/g, '');
+    const re = new RegExp(`[ \\t]*<meta\\s+${attr}="${turvallinen}"[^>]*>\\n?`, 'i');
+    if (hasTagOutsideComments(html, re)) html = replaceOutsideComments(html, re, '');
+  }
+
   function setMeta(attr, key, value) {
     const re = new RegExp(
       `<meta\\s+${attr}="${key.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')}"[^>]*>`,
@@ -1446,12 +1539,23 @@ function injectShell({ shell, bcp47, og, canonical, title, description, hreflang
   setMeta('property', 'og:description', description || '');
   setMeta('property', 'og:url', canonical);
   setMeta('property', 'og:locale', og);
-  setMeta('property', 'og:image', /^https?:/.test(ogImage) ? ogImage : `${SITE}${ogImage}`);
+  const ogImageAbs = /^https?:/.test(ogImage) ? ogImage : `${SITE}${ogImage}`;
+  setMeta('property', 'og:image', ogImageAbs);
+  // 🔴🔴 Sivukohtainen jakokuva ei nay Facebookissa, jos `og:image:secure_url`
+  // jaa osoittamaan sivustokorttiin: kun molemmat ovat, Facebook kayttaa
+  // https-osoitetta eli secure_urlia. Se on kirjoitettu kasin jokaisen sivuston
+  // `index.html`-kuoreen, eika prerenderoija koskenut siihen ennen 21.9.2026 —
+  // mitattu hubin 57 sivukortilla, jotka olisi jaettu vaaralla kuvalla.
+  setMeta('property', 'og:image:secure_url', ogImageAbs);
+  // Kuoren `og:image:alt` kuvailee SIVUSTOKORTTIA. Kun sivulla on oma kortti,
+  // se kuvaus on vaara — ja vaara vaihtoehtoteksti on huonompi kuin ei mitaan,
+  // koska ruudunlukija ja hakukone lukevat sen kuvan sisallon kuvauksena.
+  if (ogImage !== DEFAULT_OG) poistaMeta('property', 'og:image:alt');
   setMeta('name', 'twitter:card', 'summary_large_image');
   setMeta('name', 'twitter:title', title);
   setMeta('name', 'twitter:description', description || '');
   setMeta('name', 'twitter:site', TWITTER);
-  setMeta('name', 'twitter:image', /^https?:/.test(ogImage) ? ogImage : `${SITE}${ogImage}`);
+  setMeta('name', 'twitter:image', ogImageAbs);
 
   // Pre-hydration crawlable body. Only touches an EMPTY #root, so a site that
   // already ships server-rendered markup is left alone; combined with the strip

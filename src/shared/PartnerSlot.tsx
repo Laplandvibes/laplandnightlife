@@ -41,6 +41,23 @@ export type Partner = {
    */
   urlFi?: string;
   imageSrc?: string;
+  /**
+   * Kokovaihtoehdot kortin kuvalle: `srcset` ja `sizes` sellaisenaan.
+   *
+   * 🔴 MIKSI SIVUSTO ANTAA NAMA, EI KOMPONENTTI: kapeat kopiot generoidaan
+   * sivustokohtaisesti (`scripts/gen_responsive_images.mjs`) ja niiden lista on
+   * sivuston omassa datassa. Jaettu komponentti ei voi tietaa mille kuville
+   * kopioita on olemassa, ja arvaus tuottaisi srcset-rivin tiedostoon jota ei
+   * ole — se nakyisi lukijalle rikkinaisena kuvana.
+   *
+   * 🔴 `sizes` on pakko antaa `srcSet`:n kanssa. Ilman sita selain olettaa kuvan
+   * olevan koko ikkunan levyinen ja valitsee kortillekin suurimman tiedoston,
+   * eli mitaan ei saasty. Mitattu laplandactivitiesissa 20.9.2026.
+   *
+   * Jos naita ei anneta, kortti toimii tasmalleen kuten ennen.
+   */
+  imageSrcSet?: string;
+  imageSizes?: string;
   /** Lifestyle/mood photo for ad units that show both a photo and the logo. */
   photoSrc?: string;
   /**
@@ -337,7 +354,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
   /** Pieni badge-pilleri, aina näkyvissä kuluttajansuojalain edellyttämänä */
   function Badge() {
     return (
-      <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 rounded-full bg-pink-600/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
+      <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 rounded-full bg-[#BE185D] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
         {badge}
       </span>
     );
@@ -392,7 +409,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
           aria-label={`${badge}: ${partner.name}`}
           className={[
             'block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibe-pink',
-            layout === 'wide' ? 'md:w-5/12 md:shrink-0' : '',
+            layout === 'wide' ? 'md:w-1/2 md:shrink-0' : '',
           ].filter(Boolean).join(' ')}
         >
         {/* KUVA + TEKSTI KUVAN PÄÄLLÄ.
@@ -403,10 +420,12 @@ export default function PartnerSlot({ partner, variant, locale, className, place
             vammalta kuin maksava asiakas. Maksetun paikan pitää viestiä että
             tuon voi varata: teksti kuvan päälle scrimin kanssa + oma CTA-nappi,
             samalla logiikalla kuin alasivujen AdUnit. */}
-        <div className={['relative aspect-[16/10] overflow-hidden', layout === 'wide' ? 'md:aspect-auto md:h-full md:min-h-[22rem]' : ''].filter(Boolean).join(' ')}>
+        <div className={['relative aspect-[16/10] overflow-hidden', layout === 'wide' ? 'md:aspect-auto md:h-full md:min-h-[20rem]' : ''].filter(Boolean).join(' ')}>
           {partner.imageSrc ? (
             <img
               src={partner.imageSrc}
+              srcSet={partner.imageSrcSet}
+              sizes={partner.imageSrcSet ? partner.imageSizes : undefined}
               alt={partner.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
@@ -597,7 +616,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
         {/* Teksti */}
         <div className="flex flex-col gap-0.5 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-full bg-pink-600/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
+            <span className="inline-flex items-center rounded-full bg-[#BE185D] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
               {badge}
             </span>
           </div>
@@ -715,7 +734,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
       {/* Teksti */}
       <div className="flex flex-col gap-0.5 min-w-0">
         <div className="flex items-center gap-1.5">
-          <span className="inline-flex items-center rounded-full bg-pink-600/90 px-1.5 py-px text-[9px] font-semibold uppercase tracking-widest text-white shadow-sm">
+          <span className="inline-flex items-center rounded-full bg-pink-600 px-1.5 py-px text-[9px] font-semibold uppercase tracking-widest text-white shadow-sm">
             {badge}
           </span>
           <p className="font-body font-semibold text-sm text-snow group-hover:text-pink-400 transition-colors truncate">
