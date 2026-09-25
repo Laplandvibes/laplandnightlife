@@ -131,17 +131,25 @@ function parseOverlay(file) {
 
 // ---- description builder: faithful to runtime (tagline + intro slice) but
 // trimmed to a clean word boundary for SERP quality (<=160 chars). ----
-function buildDescription(tagline, intro) {
-  let base = `${tagline} ${intro}`.replace(/\s+/g, ' ').trim();
+function buildDescription(tagline, intro, lang) {
+  // [LV-CJK-JOIN 2026-09-25] ja/zh eivat valista virkkeita: taysleveän 。！？
+  // jalkeen ei valilyontia (live /cn/city/rovaniemi: "北极之都。 一座城…").
+  // Korea ja latinalaiset kielet valistavat, joten ne pitavat valilyonnin.
+  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(String(tagline).trim()) ? '' : ' ';
+  let base = `${tagline}${liitos}${intro}`.replace(/\s+/g, ' ').trim();
   if ([...base].length <= 160) return base;
   // 🔴 Ellipsi tuloslistalla kertoo lukijalle etta teksti loppui kesken.
   // Mitattu 1.9.2026 metaportilla: 14 hollanninkielista kuvausta paattyi
   // ellipsiin talla sivustolla, ja hollannin CTR on verkoston heikoin.
   // Kokonainen ajatus voittaa pidemman katkennaneen: kokeile ensin
   // tagline + rungon ENSIMMAINEN VIRKE, sitten pelkka virke.
-  const virke = (String(intro).match(/^[^.!?]*[.!?]/) || [])[0];
+  // 🔴 Virke paattyy taysleveaan 。！？ tai ASCII-merkkiin, jota seuraa
+  // valilyonti tai loppu. Vanha `^[^.!?]*[.!?]` katkaisi desimaaliin: zh Oulun
+  // intro alkaa "21.8万人口…", joten live /cn/city/oulu -kuvaus oli
+  // "2026 年欧洲文化之都。 21." (17 merkkia, 25.9.2026).
+  const virke = (String(intro).match(/^[\s\S]*?(?:[。！？]|[.!?](?=\s|$))/) || [])[0];
   if (virke) {
-    const lyhyt = `${tagline} ${virke.trim()}`.replace(/\s+/g, ' ').trim();
+    const lyhyt = `${tagline}${liitos}${virke.trim()}`.replace(/\s+/g, ' ').trim();
     if ([...lyhyt].length <= 160) return lyhyt;
     const yksin = virke.trim();
     if ([...yksin].length >= 50 && [...yksin].length <= 160) return yksin;
@@ -196,7 +204,7 @@ for (const slug of slugs) {
     // Overlay saa yliajaa myös nimen (fi: "Kittilän kirkonkylä", ei "Kittilä town").
     const name = (ov && ov.name) || b.name;
     const title = `${name}: ${tagline}`;
-    const description = buildDescription(tagline, intro);
+    const description = buildDescription(tagline, intro, lang);
     meta[path][lang] = { title, description };
   }
 }

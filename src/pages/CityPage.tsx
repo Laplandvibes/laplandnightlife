@@ -87,7 +87,10 @@ export default function CityPage() {
     { to: to('/photography'), label: c.pillar4, icon: Camera, why: c.pillar4Why },
   ];
 
-  const description = `${city.pageTagline} ${city.intro.slice(0, 120)}`;
+  // ja/zh eivät välistä virkkeitä: täysleveän 。！？ jälkeen ei välilyöntiä
+  // (sama sääntö kuin scripts/generate-prerender-meta.mjs [LV-CJK-JOIN]).
+  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(city.pageTagline.trim()) ? '' : ' ';
+  const description = `${city.pageTagline}${liitos}${city.intro.slice(0, 120)}`;
   const quickFacts = localizeQuickFacts(city.slug, lang);
   const crossLinks = getCrossLinks(city, lang);
   const nearbySlugs = NEARBY[city.slug] ?? [];
