@@ -46,7 +46,7 @@ const ptBR = {
       body: 'Caça à aurora, jantares no iglu, safáris de moto de neve. Preços reais, confirmação imediata, nada entre você e o guia.',
     },
     scenes: {
-      h: 'Não existe uma única "vida noturna lapona".',
+      h: 'Não existe uma única "vida noturna da Lapônia".',
       body: 'Cinco cenas distintas dentro de uma mesma região. Saber qual é qual é a diferença entre uma boa noite e uma passagem desperdiçada.',
       c1Tag: 'Cinco cenas · uma região', c1H: 'Cena real', c1Body: '8 baladas · 1 rua', c1Desc: 'Rotuaari de Oulu, Koskikatu de Rovaniemi',
       c2Tag: 'Festa de estação de esqui', c2H: 'Levi', c2Body: 'Hullu Poro · cap. 1.700', c2Desc: 'A maior casa noturna da Lapônia',

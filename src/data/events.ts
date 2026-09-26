@@ -240,7 +240,7 @@ const EVENTS_BASE: Record<'en' | 'fi' | 'de' | 'it' | 'fr', MonthBlock[]> = {
       { name: 'Festival Elojazz', date: '30 juil. – 2 août 2026', city: 'Oulu', body: 'Quatre jours de jazz : scènes en plein air autour de Rotuaari, grands concerts au Tarkastamo.' },
     ]},
     { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 août 2026', city: 'Rovaniemi', body: `Festival rock de début août à l'Ounaspaviljonki. Public lapon, plus petit que Qstock mais plus lourd.` },
+      { name: 'Simerock', date: '7–8 août 2026', city: 'Rovaniemi', body: `Festival rock de début août à l'Ounaspaviljonki. Public local de Laponie, plus petit que Qstock mais plus lourd.` },
       { name: 'Festival de musique sámi Ijahis Idja', date: '14–15 août 2026', city: 'Inari', body: 'Festival de musique autochtone au Sajos. Ce qui ressemble le plus à une soirée club à Inari.' },
       { name: 'Finale des Air Guitar World Championships', date: '28–29 août 2026', city: 'Oulu', body: 'Les vraies finales mondiales au parc Pokkinen. 40 pays, des locaux de 8 à 80 ans.' },
     ]},
