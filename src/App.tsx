@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import React, { useEffect, useReducer, lazy, Suspense, type ReactNode } from 'react';
 import Navbar from './components/Navbar';
-import SharedFooter from './shared/Footer';
+import SharedFooter from './components/Footer';
 import SharedCookieBanner from './shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
 const Home = lazy(() => import('./pages/Home'))
