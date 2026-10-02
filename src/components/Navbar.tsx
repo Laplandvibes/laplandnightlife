@@ -50,20 +50,22 @@ export default function Navbar() {
       scrolled ? 'bg-night/95 backdrop-blur-md border-b border-white/10 shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 gap-4">
+        <div className="lv-navrivi flex items-center h-16 gap-4">
           {/* Not `shrink-0`: the menu button is the last item in this row, so any
               overflow evicted it off a `fixed` bar — invisible to horizontal
               scroll, fatal to navigation on a 375px phone. The wordmark yields
               first now. */}
-          <div className="flex items-center gap-2 sm:gap-5 min-w-0">
+          <div className="lv-navvasen flex items-center gap-2 sm:gap-5 min-w-0">
             <EcosystemMenu lang={lang} currentDomain="laplandnightlife.com" />
-            <Link
-              to={to('/')}
-              className="no-underline flex items-center min-h-11"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
-              <Logo />
-            </Link>
+            <div className="lv-wm-paikka">
+              <Link
+                to={to('/')}
+                className="no-underline flex items-center min-h-11"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                <Logo nav />
+              </Link>
+            </div>
           </div>
 
           {/* Centered between logo and lang switch so the bar reads balanced
