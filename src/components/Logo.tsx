@@ -18,7 +18,7 @@ interface LogoProps {
 export default function Logo({ className = '', nav = false }: LogoProps) {
   return (
     <span
-      className={`font-heading text-2xl tracking-wide leading-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] ${nav ? ' lv-wm' : ''} ${className}`}
+      className={`font-heading text-2xl xl:text-3xl tracking-wide leading-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] ${nav ? ' lv-wm' : ''} ${className}`}
       data-lv-sanamerkki={nav ? '' : undefined}
       style={nav ? WM_STYLE : undefined}
     >
