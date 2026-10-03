@@ -78,7 +78,7 @@ export default function Navbar() {
                 // inline-flex + min-h-11 (23.9.2026): leading-none teki osuma-alueesta 12 px
                 // korkean (navi-portti, 216 loydosta 12 kielta x 3 leveytta). Ulkoasu ei muutu,
                 // kosketusalue kasvaa 44 px:iin — sama korjaus kuin snowmobilella 21.9.
-                className={`inline-flex items-center min-h-11 font-body font-medium text-xs uppercase tracking-[0.15em] leading-none whitespace-nowrap transition-colors duration-200 no-underline ${
+                className={`inline-flex items-center min-h-11 font-body font-medium text-sm leading-none whitespace-nowrap transition-colors duration-200 no-underline ${
                   samePath(location.pathname, link.to) ? 'text-pink' : 'text-white/90 hover:text-pink'
                 }`}
               >
@@ -114,7 +114,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block font-body font-medium text-sm uppercase tracking-[0.15em] py-2 no-underline ${
+                className={`block font-body font-medium text-sm py-2 no-underline ${
                   samePath(location.pathname, link.to) ? 'text-pink' : 'text-white/90 hover:text-pink'
                 }`}
               >
