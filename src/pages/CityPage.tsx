@@ -6,7 +6,7 @@ import PageBreadcrumb from '../components/PageBreadcrumb';
 import AffiliateCTA from '../components/AffiliateCTA';
 import GygWidget from '../components/GygWidget';
 import VenueRating from '../components/VenueRating';
-import IllustrationMark from '../components/IllustrationMark';
+import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
 import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
@@ -118,7 +118,7 @@ export default function CityPage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${city.img})` }}
           role="img"
-          aria-label={`Aurora over a rooftop bar in ${city.name}: Lapland nightlife`}
+          aria-label={photoAlt(city.img, `${city.name}: Lapland nightlife`)}
         />
         {/* Left-weighted scrim darkens the upper-left headline zone over bright
             city photos; top fade + bottom fade keep the rest readable.
@@ -130,7 +130,7 @@ export default function CityPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-night/82 via-night/66 via-55% to-night/50 sm:via-night/55 sm:via-45% sm:to-night/12 pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/35 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/55 to-transparent pointer-events-none" />
-        <IllustrationMark />
+        <ImageMark src={city.img} />
 
         <div className="relative w-full max-w-5xl mx-auto">
           <Link
@@ -393,6 +393,7 @@ export default function CityPage() {
                     aria-hidden="true"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
+                  <ImageMark src={cc.img} linked={false} />
                   <div className="relative p-4 min-h-[160px] flex flex-col justify-end">
                     <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
                       {cc.tag}

@@ -18,9 +18,9 @@ import { IMG } from './images';
 export const EVENT_IMG: Record<string, string> = {
   'Skábmagovat Indigenous Film Festival': IMG.eventFilmFestival,
   'Sami Week / Sámi Soveeknaki': IMG.eventSamiMusic,
-  'Ijahis Idja Sámi Music Festival': IMG.eventSamiMusic,
-  'Frozen People Festival': IMG.eventCityRock,
-  'Yllas Soikoon Music Festival': IMG.eventJazz,
+  'Ijahis Idja Sámi Music Festival': IMG.eventIjahisIdja, // Sajos, Inari (paikka)
+  'Frozen People Festival': IMG.eventFrozenPeople, // Oulun kauppatori helmikuussa 2026 (paikka)
+  'Yllas Soikoon Music Festival': IMG.eventYllasSoikoon, // Ylläksen laki huhtikuussa
   'SnowCastle final weeks': IMG.iceCastle,
   'Midnight Sun Window opens': IMG.primeWindow,
   'Midnight Sun Film Festival': IMG.primeFilm,
@@ -53,5 +53,10 @@ export const EVENT_IMG: Record<string, string> = {
  *  näyttää puuttuvalta; väärä kuva näyttää väitteeltä.
  *
  *  Oikea korjaus on generoida talvitapahtumille omat kuvat — se on maksullista
- *  työtä ja odottaa Vesan hyväksyntää kustannukselle. */
+ *  työtä ja odottaa Vesan hyväksyntää kustannukselle.
+ *
+ *  🟢 4.10.2026: tapahtumakuvat ovat nyt Wikimedia Commonsin valokuvia tapahtumasta
+ *  tai sen paikasta (data/photoCredits.ts). Yksi kuva = yksi tapahtuma: entiset
+ *  yhteiskuvat (jazz, rock, saamelaismusiikki) jaettiin, koska Ylläksen rinnefestivaalin
+ *  kuva ei kelpaa Oulun jazzviikolle. */
 export const eventImage = (enName: string): string | null => EVENT_IMG[enName] ?? null;

@@ -3,7 +3,7 @@ import { heroHomeSeasonal, isSummerSeason } from '../data/images';
 import { VENUE_COUNT } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import IllustrationMark from './IllustrationMark';
+import ImageMark, { photoAlt } from './PhotoCredit';
 
 const SHADOW = {
   textShadow:
@@ -28,7 +28,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
         role="img"
-        aria-label={isSummer ? 'A midsummer bonfire on a Lapland lake under the midnight sun' : 'Aurora glowing over a Finnish Lapland nightlife scene: bars and the night sky'}
+        aria-label={photoAlt(heroImage, isSummer ? 'A midsummer bonfire on a Lapland lake under the midnight sun' : 'Aurora glowing over a Finnish Lapland nightlife scene: bars and the night sky')}
       />
       {/* Center scrim — darkens behind the headline block so white text stays legible
           even over a bright midnight-sun image (Vesa: "liian kirkas, tekstit pitää tulla esiin"). */}
@@ -36,9 +36,13 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse 90% 70% at 50% 46%, rgba(8,10,22,0.64) 0%, rgba(8,10,22,0.34) 46%, rgba(8,10,22,0.10) 74%, transparent 90%)' }}
       />
+      {/* 4.10.2026: valokuva (revontulet) on kirkkaampi kuin tekoälykuva oli; puhelimella
+          ingressi ulottuu reunoille asti radiaalisen peitteen ulkopuolelle ⇒ tasainen lisäpeite
+          vain kapealla näytöllä (heroteksti-portti 375 px: mediaani 4,46:1 → yli 4,5:1). */}
+      <div className="absolute inset-0 bg-night/40 sm:bg-transparent pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-night/80 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-night to-transparent pointer-events-none" />
-      <IllustrationMark />
+      <ImageMark src={heroImage} />
 
       <div className="relative z-10 w-full max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span

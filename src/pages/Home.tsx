@@ -23,6 +23,7 @@ import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 import { AppPromoHero } from '../components/AppPromo';
+import ImageMark, { photoAlt } from '../components/PhotoCredit';
 
 // Text-shadow for copy that sits over a photo (same recipe as PrimeTime).
 const OVERLAY_SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
@@ -82,7 +83,7 @@ export default function Home() {
 
   const scenes = [
     { tag: c.scenes.c1Tag, h: c.scenes.c1H, body: c.scenes.c1Body, desc: c.scenes.c1Desc, img: IMG.pubScene, accent: '#EC4899', to: to('/city/oulu') },
-    { tag: c.scenes.c2Tag, h: c.scenes.c2H, body: c.scenes.c2Body, desc: c.scenes.c2Desc, img: IMG.pillarNightclubs, accent: '#38BDF8', to: to('/city/levi') },
+    { tag: c.scenes.c2Tag, h: c.scenes.c2H, body: c.scenes.c2Body, desc: c.scenes.c2Desc, img: IMG.sceneLevi, accent: '#38BDF8', to: to('/city/levi') },
     { tag: c.scenes.c3Tag, h: c.scenes.c3H, body: c.scenes.c3Body, desc: c.scenes.c3Desc, img: IMG.pillarAuroraBars, accent: '#A78BFA', to: to('/aurora-bars') },
     { tag: c.scenes.c4Tag, h: c.scenes.c4H, body: c.scenes.c4Body, desc: c.scenes.c4Desc, img: IMG.pillarSummer, accent: '#FACC15', to: to('/city/sodankyla') },
   ];
@@ -147,8 +148,11 @@ export default function Home() {
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${sc.img})` }}
+                  role="img"
+                  aria-label={photoAlt(sc.img, sc.h)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
+                <ImageMark src={sc.img} linked={false} />
                 <div className="relative mt-auto p-5">
                   {/* Tumma pilli (23.9.2026): 10 px aksenttiväri kuvan päällä jäi 1440 px:llä
                       kolmessa kortissa 1,0–1,1:1:een pahimmillaan (korttiteksti-portti).
@@ -161,7 +165,9 @@ export default function Home() {
                   <h3 className="font-heading text-2xl text-white tracking-wide mb-1 line-clamp-1" style={OVERLAY_SHADOW}>{sc.h}</h3>
                   <p className="text-sm text-white font-semibold mb-0.5 line-clamp-1" style={OVERLAY_SHADOW}>{sc.body}</p>
                   <p className="text-xs text-white/75 mb-3 leading-snug line-clamp-2 min-h-[2.4em]" style={OVERLAY_SHADOW}>{sc.desc}</p>
-                  <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
+                  {/* Tumma pilli myös linkkiriville (4.10.2026): valokuvan kirkas alareuna (Leskisen valaistu
+                      julkisivu) laski 10 px aksenttivärin 4,0:1:een (korttiteksti-portti). */}
+                  <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1 rounded-full bg-night px-2.5 py-0.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
                     {c.scenes.go} <ArrowRight size={12} />
                   </span>
                 </div>
@@ -228,6 +234,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-night-light via-night to-night" />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent pointer-events-none" />
+                {e.img && <ImageMark src={e.img} linked={false} />}
                 {/* Date as a top pill (own dark backing) so it stays legible on any
                     image regardless of how tall the body copy below runs. */}
                 <div className="relative p-5">

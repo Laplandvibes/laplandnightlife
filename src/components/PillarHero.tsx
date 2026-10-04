@@ -1,6 +1,7 @@
 import type { LucideIcon } from 'lucide-react';
 import PageBreadcrumb from './PageBreadcrumb';
-import IllustrationMark from './IllustrationMark';
+import ImageMark, { photoAlt } from './PhotoCredit';
+import { creditFor } from '../data/photoCredits';
 
 interface PillarHeroProps {
   icon: LucideIcon;
@@ -57,14 +58,15 @@ export default function PillarHero({
     <section className="relative min-h-[56vh] md:min-h-[62vh] pt-28 py-16 md:py-20 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bgImage})`, filter: 'saturate(1.2)' }}
+        style={{ backgroundImage: `url(${bgImage})`, ...(creditFor(bgImage) ? {} : { filter: 'saturate(1.2)' }) }}
         role="img"
-        aria-label={imageAlt ?? `${title}: Finnish Lapland nightlife`}
+        aria-label={imageAlt ?? photoAlt(bgImage, `${title}: Finnish Lapland nightlife`)}
       />
       {/* Full dark wash + center radial scrim so the centered text stays legible
           even over the brightest pillar images. Sits under the neon accents. */}
-      <div className="absolute inset-0 bg-night/35 pointer-events-none" aria-hidden="true" />
-      <IllustrationMark />
+      {/* Puhelimella teksti täyttää koko leveyden: tasainen peite vahvempi (4.10.2026, valokuvat). */}
+      <div className="absolute inset-0 bg-night/50 sm:bg-night/35 pointer-events-none" aria-hidden="true" />
+      <ImageMark src={bgImage} />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

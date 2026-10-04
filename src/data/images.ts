@@ -68,6 +68,17 @@ export const IMG = {
   // CSS-taustakuvina, minkä takia <img>-pohjainen mittari ei nähnyt niitä.
   // Talvitapahtumien omat kuvat (9.9.2026). Naita ei ollut lainkaan, joten
   // etusivulle tuli tummia tyhjia kortteja.
+  // 🟢 4.10.2026: valtaosa alla olevista on nyt Wikimedia Commonsin VALOKUVIA, ei
+  // tekoälykuvitusta — tekijät, lisenssit ja kuitit `data/photoCredits.ts`. Tiedostonimet
+  // pidettiin, jotta välimuistitagi (?v=) ja kaikki viittaukset pysyvät. Yhä tekoälyä:
+  // eventJutajaiset, eventSamiMusic (Saamelaisten viikko), summerSauna ja kaupunkikortti
+  // city-pyha — aitoa vapaata kuvaa juuri niistä ei löytynyt (haut kirjattu muistiin).
+  // Yhteiset kuvat jaettiin tapahtumittain: kuva sanoo saman kuin kortti.
+  eventIjahisIdja: '/images/drive/eventIjahisIdja.webp',
+  eventFrozenPeople: '/images/drive/eventFrozenPeople.webp',
+  eventYllasSoikoon: '/images/drive/eventYllasSoikoon.webp',
+  // Etusivun Levi / Hullu Poro -kortti (ennen lainasi /nightclubs-heron).
+  sceneLevi: '/images/drive/sceneLevi.webp',
   eventJutajaiset: '/images/drive/eventJutajaiset.webp',
   eventLeviFis: '/images/drive/eventLeviFis.webp',
   eventRukaFis: '/images/drive/eventRukaFis.webp',

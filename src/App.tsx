@@ -23,6 +23,7 @@ import { COPY, loadCopy, isCopyLoaded } from './locales/copy';
 import { isCityOverlayLoaded, loadCityOverlays } from './data/cityI18n';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import { AppPromoNudge } from './components/AppPromo';
+import { CreditsProvider, PhotoCreditList } from './components/PhotoCredit';
 
 /**
  * Non-EN copy + city overlays live in per-language lazy chunks (see
@@ -105,6 +106,7 @@ function AppLayout() {
       <LocaleSync />
       <CopyGate>
       <Navbar />
+      <CreditsProvider>
       <MainOrDiv>
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
@@ -139,7 +141,11 @@ function AppLayout() {
           })()}
         </Routes>
         </Suspense>
+        {/* Sivun valokuvien tekijät ja lisenssit linkkeinä (CC BY / BY-SA). Korttien
+            päällä merkintä on pelkkää tekstiä, koska kortti on itse linkki. */}
+        <PhotoCreditList />
       </MainOrDiv>
+      </CreditsProvider>
       <FooterWithLocale />
       </CopyGate>
       <SharedCookieBanner consentKey="laplandnightlife_cookie_consent" lang={lang} />

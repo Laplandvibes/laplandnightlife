@@ -1,7 +1,7 @@
 import CityCard from '../components/CityCard';
 import PageBreadcrumb from '../components/PageBreadcrumb';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
-import IllustrationMark from '../components/IllustrationMark';
+import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import { CITIES, VENUE_COUNT } from '../data/cities';
 import { localizeCity } from '../data/cityI18n';
 import { useLang, useLocalePath } from '../i18n/useLang';
@@ -44,7 +44,7 @@ export default function Cities() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/images/hero/cities-rovaniemi-bridge.webp)' }}
           role="img"
-          aria-label={`${c.heroH}: nightlife bars and clubs across Lapland and the North`}
+          aria-label={photoAlt('/images/hero/cities-rovaniemi-bridge.webp', `${c.heroH}: nightlife bars and clubs across Lapland and the North`)}
         />
         {/* 🔴 Ylikorjasin taman 9.9.: poistin opacity-30:n jolloin kuva tuli nakyviin
             mutta TEKSTI katosi (Vesa: "eihan tekstit erotu hero osiosta ollenkaan").
@@ -56,7 +56,7 @@ export default function Cities() {
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(8,10,22,0.82) 0%, rgba(8,10,22,0.55) 45%, rgba(8,10,22,0.15) 75%, transparent 92%)' }}
         />
-        <IllustrationMark />
+        <ImageMark src="/images/hero/cities-rovaniemi-bridge.webp" />
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide mb-5">{c.heroH}</h1>

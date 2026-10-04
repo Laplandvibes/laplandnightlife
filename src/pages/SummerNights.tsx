@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import { Sun, Flame, Music, Camera, Waves, Bike, Compass, Film } from 'lucide-react';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
 import PageBreadcrumb from '../components/PageBreadcrumb';
@@ -31,12 +32,12 @@ export default function SummerNights() {
     // Jokaisella tapahtumalla oma kuva. Aiemmin nämä lainasivat cityScenesin ja
     // localListin kuvia, jolloin sama kuva näkyi kahdesti samalla sivulla.
     { h: c.e1H, when: c.e1When, body: c.e1Body, icon: Sun, img: IMG.eventMidnightSun, badge: c.e1Badge },
-    { h: c.e2H, when: c.e2When, body: c.e2Body, icon: Film, img: IMG.eventFilmFestival, badge: c.e2Badge },
+    { h: c.e2H, when: c.e2When, body: c.e2Body, icon: Film, img: IMG.primeFilm, badge: c.e2Badge },
     { h: c.e3H, when: c.e3When, body: c.e3Body, icon: Flame, img: IMG.summerJuhannus, badge: c.e3Badge },
     { h: c.e4H, when: c.e4When, body: c.e4Body, icon: Music, img: IMG.summerAirGuitar, badge: c.e4Badge },
     { h: c.e5H, when: c.e5When, body: c.e5Body, icon: Music, img: IMG.eventRockFestival, badge: c.e5Badge },
     { h: c.e6H, when: c.e6When, body: c.e6Body, icon: Music, img: IMG.eventJazz, badge: c.e6Badge },
-    { h: c.e7H, when: c.e7When, body: c.e7Body, icon: Music, img: IMG.eventSamiMusic, badge: c.e7Badge },
+    { h: c.e7H, when: c.e7When, body: c.e7Body, icon: Music, img: IMG.eventIjahisIdja, badge: c.e7Badge },
     { h: c.e8H, when: c.e8When, body: c.e8Body, icon: Music, img: IMG.eventCityRock, badge: c.e8Badge },
   ];
 
@@ -74,8 +75,9 @@ export default function SummerNights() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${IMG.summerHero})` }}
             role="img"
-            aria-label="Midnight sun over a Finnish Lapland summer night, open-air bars and festivals"
+            aria-label={photoAlt(IMG.summerHero, 'Midnight sun over a Finnish Lapland summer night, open-air bars and festivals')}
           />
+          <ImageMark src={IMG.summerHero} />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-night to-transparent pointer-events-none" />
 
           <div className="absolute top-24 right-4 sm:right-8">
@@ -183,7 +185,10 @@ export default function SummerNights() {
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${s.img})` }}
+                  role="img"
+                  aria-label={photoAlt(s.img, s.city)}
                 />
+                <ImageMark src={s.img} linked={false} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
                 <div className="relative p-6 flex flex-col justify-end w-full">
@@ -224,7 +229,10 @@ export default function SummerNights() {
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${e.img})` }}
+                  role="img"
+                  aria-label={photoAlt(e.img, e.h)}
                 />
+                <ImageMark src={e.img} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent" />
                 <div className="relative p-5 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -265,7 +273,10 @@ export default function SummerNights() {
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${l.img})` }}
+                  role="img"
+                  aria-label={photoAlt(l.img, l.h)}
                 />
+                <ImageMark src={l.img} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/15 via-transparent to-transparent" />
                 <div className="relative p-5 flex flex-col w-full">

@@ -7,7 +7,7 @@ import { IMG } from '../data/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { eventImage } from '../data/eventImages';
-import IllustrationMark from '../components/IllustrationMark';
+import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import TicketmasterCard from '../components/TicketmasterCard';
 import {
   EVENTS, EVENTS_BASE, EVENT_COUNT, todayLocalIso, pastFlags,
@@ -129,10 +129,10 @@ export default function Events() {
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ backgroundImage: `url(${img})` }}
                             role="img"
-                            aria-label={e.name}
+                            aria-label={photoAlt(img, e.name)}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-night-light/90 via-night-light/20 to-transparent" />
-                          <IllustrationMark />
+                          <ImageMark src={img} />
                         </div>
                       )}
                       <div className="p-5">

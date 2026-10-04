@@ -27,7 +27,7 @@
     ],
     "ogImage": "/og/nightclubs.jpg",
     "ogCard": {
-      "hero": "/images/drive/pillarNightclubs.webp",
+      "hero": "/images/drive/sceneLevi.webp",
       "line": "Clubs and live music, sorted by size"
     }
   },
@@ -37,7 +37,7 @@
     "fallbackTitle": "Aurora Bars: Northern Lights with a Drink",
     "ogImage": "/og/aurora-bars.jpg",
     "ogCard": {
-      "hero": "/images/drive/pillarAuroraBars.webp",
+      "hero": "/images/drive/iceCastle.webp",
       "line": "Glass-roof bars and ice bars"
     }
   },
@@ -47,7 +47,7 @@
     "fallbackTitle": "Nightlife Events & Festivals",
     "ogImage": "/og/events.jpg",
     "ogCard": {
-      "hero": "/images/drive/pillarEvents.webp",
+      "hero": "/images/drive/eventRockFestival.webp",
       "line": "Festivals and gigs, month by month"
     }
   },

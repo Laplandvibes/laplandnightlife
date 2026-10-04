@@ -4,7 +4,7 @@ import { upcomingEvents } from '../data/events';
 import { eventImage } from '../data/eventImages';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import IllustrationMark from './IllustrationMark';
+import ImageMark from './PhotoCredit';
 
 const SHADOW = {
   textShadow:
@@ -65,7 +65,7 @@ export default function PrimeTime() {
                   Rukan kortissa 4,2:1 (41 % pikseleistä alle rajan). Pieni pinkki tarvitsee
                   lähes umpinaisen yön taakseen; kaista kattaa nyt linkkirivin. */}
               <div className="absolute inset-0 bg-gradient-to-t from-night from-16% via-night/55 via-[45%] to-transparent pointer-events-none" />
-              {eventImage(card.enName) && <IllustrationMark />}
+              {eventImage(card.enName) && <ImageMark src={eventImage(card.enName)} linked={false} />}
 
               <div className="relative p-7 min-h-[440px] flex flex-col">
                 <div className="flex items-start justify-between mb-6">
