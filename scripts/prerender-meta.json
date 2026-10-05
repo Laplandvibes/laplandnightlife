@@ -14,7 +14,7 @@
     },
     "ja": {
       "title": "プライバシーポリシー",
-      "description": "LaplandNightlifeの個人データの取り扱いについて。GDPR準拠。運営はLaPeso Oy。"
+      "description": "LaplandNightlifeの個人データの取り扱いについて。GDPR準拠。運営はLaPeso Oy。Google Analytics 4 を通じて仮名化されたアクセス解析データを収集しています。"
     },
     "es": {
       "title": "Política de privacidad",
@@ -26,11 +26,11 @@
     },
     "zh-CN": {
       "title": "隐私政策",
-      "description": "LaplandNightlife 如何处理您的数据。符合 GDPR。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 如何处理您的数据。符合 GDPR。由 LaPeso Oy 运营。我们通过 Google Analytics 4 收集假名化的访问分析数据。"
     },
     "ko": {
       "title": "개인정보 처리방침",
-      "description": "LaplandNightlife의 데이터 처리 방식. GDPR 준수. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife의 데이터 처리 방식. GDPR 준수. 운영사 LaPeso Oy. 당사는 Google Analytics 4를 통해 가명 처리된 분석 데이터를 수집합니다."
     },
     "fr": {
       "title": "Politique de confidentialité",
@@ -76,11 +76,11 @@
     },
     "zh-CN": {
       "title": "服务条款",
-      "description": "LaplandNightlife 服务条款：编辑标准、联盟营销披露、内容许可。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 服务条款：编辑标准、联盟营销披露、内容许可。由 LaPeso Oy 运营。访问或使用本网站，即表示您同意本条款。"
     },
     "ko": {
       "title": "이용약관",
-      "description": "LaplandNightlife 이용약관. 편집 기준, 제휴 고지, 콘텐츠 라이선스 안내. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife 이용약관. 편집 기준, 제휴 고지, 콘텐츠 라이선스 안내. 운영사 LaPeso Oy. 본 웹사이트에 접속하거나 이용하시는 것은 본 약관에 동의하시는 것입니다."
     },
     "fr": {
       "title": "Conditions d'utilisation",
@@ -114,7 +114,7 @@
     },
     "ja": {
       "title": "クッキーポリシー",
-      "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLaPeso Oy。"
+      "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLaPeso Oy。クッキーとは、ウェブサイトを訪問した際にお客様のデバイスに保存される小さなテキストファイルです。"
     },
     "es": {
       "title": "Política de cookies y consentimiento",
@@ -126,11 +126,11 @@
     },
     "zh-CN": {
       "title": "Cookie 政策",
-      "description": "LaplandNightlife 如何使用 Cookie。符合 GDPR。同意默认关闭。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 如何使用 Cookie。符合 GDPR。同意默认关闭。由 LaPeso Oy 运营。Cookie 是您访问网站时存储在您设备上的小型文本文件。"
     },
     "ko": {
       "title": "쿠키 정책",
-      "description": "LaplandNightlife의 쿠키 사용 안내. GDPR 준수. 동의는 기본 차단. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife의 쿠키 사용 안내. GDPR 준수. 동의는 기본 차단. 운영사 LaPeso Oy. 쿠키는 귀하가 웹사이트를 방문할 때 기기에 저장되는 작은 텍스트 파일입니다."
     },
     "fr": {
       "title": "Politique de cookies",
@@ -168,11 +168,11 @@
     },
     "es": {
       "title": "Oulu: Capital Europea de la Cultura 2026.",
-      "description": "Capital Europea de la Cultura 2026. 218 000 habitantes, una escena de clubes impulsada por estudiantes y la calle peatonal Rotuaari, que concentra la mayoría…"
+      "description": "Capital Europea de la Cultura 2026. 218 000 habitantes, una escena de clubes estudiantil y la calle peatonal Rotuaari, que concentra la mayoría de los locales."
     },
     "pt-BR": {
       "title": "Oulu: Capital Europeia da Cultura 2026.",
-      "description": "Capital Europeia da Cultura 2026. 200 mil habitantes, uma cena de clubes movida por estudantes e a rua de pedestres Rotuaari, que concentra a maioria dos…"
+      "description": "Capital Europeia da Cultura 2026. 218 mil habitantes, uma cena de clubes estudantil e a rua de pedestres Rotuaari, com a maioria dos endereços a poucos passos."
     },
     "zh-CN": {
       "title": "奥卢: 2026 年欧洲文化之都。",
@@ -184,11 +184,11 @@
     },
     "fr": {
       "title": "Oulu: Capitale européenne de la culture 2026.",
-      "description": "Capitale européenne de la culture 2026. 218 000 habitants, une scène club portée par les étudiants et la rue piétonne Rotuaari, qui concentre la plupart des…"
+      "description": "Capitale européenne de la culture 2026. 218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas."
     },
     "it": {
       "title": "Oulu: Capitale Europea della Cultura 2026.",
-      "description": "Capitale Europea della Cultura 2026. 218.000 abitanti, una scena club trainata dagli studenti e la via pedonale Rotuaari, che raccoglie la maggior parte dei…"
+      "description": "Capitale Europea della Cultura 2026. 218.000 abitanti, una scena club studentesca e la via pedonale Rotuaari, con la maggior parte dei locali a due passi."
     },
     "nl": {
       "title": "Oulu: Culturele Hoofdstad van Europa 2026.",
@@ -202,51 +202,51 @@
   "/city/rovaniemi": {
     "en": {
       "title": "Rovaniemi: The Arctic capital.",
-      "description": "The Arctic capital. Two speeds inside one city."
+      "description": "The Arctic capital. Two speeds inside one city. The Arctic capital, split between tourist weekends and locals-only weekdays."
     },
     "fi": {
       "title": "Rovaniemi: Arktinen pääkaupunki.",
-      "description": "Arktinen pääkaupunki. Kaksi rytmiä samassa kaupungissa."
+      "description": "Arktinen pääkaupunki. Kaksi rytmiä samassa kaupungissa. Arktinen pääkaupunki: jakautuu turistien viikonloppuihin ja paikallisten arkipäiviin."
     },
     "de": {
       "title": "Rovaniemi: Die arktische Hauptstadt.",
-      "description": "Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt."
+      "description": "Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt: Touristenwochenenden mit Schlangen und ruhige Werktage, die nur den Einheimischen gehören."
     },
     "ja": {
       "title": "ロヴァニエミ: 北極圏の首都。",
-      "description": "北極圏の首都。ひとつの街にふたつの速度。"
+      "description": "北極圏の首都。ひとつの街にふたつの速度。北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。"
     },
     "es": {
       "title": "Rovaniemi: La capital ártica.",
-      "description": "La capital ártica. Dos velocidades en una misma ciudad."
+      "description": "La capital ártica. Dos velocidades en una misma ciudad. La capital ártica: dividida entre los fines de semana turísticos y los días de diario solo para locales."
     },
     "pt-BR": {
       "title": "Rovaniemi: A capital do Ártico.",
-      "description": "A capital do Ártico. Duas velocidades em uma só cidade."
+      "description": "A capital do Ártico. Duas velocidades em uma só cidade. A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais."
     },
     "zh-CN": {
       "title": "罗瓦涅米: 北极之都。",
-      "description": "北极之都。一座城，两种节奏。"
+      "description": "北极之都。一座城，两种节奏：周末游客在科斯基卡图（Koskikatu）一带的酒吧门口排队，工作日的夜晚则安静下来，只属于本地人。"
     },
     "ko": {
       "title": "Rovaniemi: 북극의 수도.",
-      "description": "북극의 수도. 한 도시, 두 개의 속도."
+      "description": "북극의 수도. 한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다."
     },
     "fr": {
       "title": "Rovaniemi: La capitale arctique.",
-      "description": "La capitale arctique. Deux rythmes dans une seule ville."
+      "description": "La capitale arctique. Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux."
     },
     "it": {
       "title": "Rovaniemi: La capitale dell'Artico.",
-      "description": "La capitale dell'Artico. Due velocità in una sola città."
+      "description": "La capitale dell'Artico. Due velocità in una sola città. La capitale dell'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali."
     },
     "nl": {
       "title": "Rovaniemi: De arctische hoofdstad.",
-      "description": "De arctische hoofdstad. Twee snelheden in één stad."
+      "description": "De arctische hoofdstad. Twee snelheden in één stad. De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals."
     },
     "sv": {
       "title": "Rovaniemi: Den arktiska huvudstaden.",
-      "description": "Den arktiska huvudstaden. Två hastigheter i en och samma stad."
+      "description": "Den arktiska huvudstaden. Två hastigheter i en och samma stad. Den arktiska huvudstaden, delad mellan turisthelger och vardagskvällar för lokalbor."
     }
   },
   "/city/levi": {
@@ -306,7 +306,7 @@
     },
     "fi": {
       "title": "Saariselkä: Erämaaluksus: iglubaarien kylä.",
-      "description": "Erämaaluksus: iglubaarien kylä. Saariselkä ei ole klubikohde."
+      "description": "Erämaaluksus: iglubaarien kylä. Saariselkä ei ole klubikohde. Lasi-iglut, Kakslauttasen Igloo Bar ja yksi aito pubi: Local Pub Panimo."
     },
     "de": {
       "title": "Saariselkä: Wildnis-Luxus: das Dorf der Iglu-Bar.",
@@ -314,7 +314,7 @@
     },
     "ja": {
       "title": "サーリセルカ: ウィルダネス・プレミアム：イグルーバーの村。",
-      "description": "ウィルダネス・プレミアム：イグルーバーの村。Saariselkäはクラブの街ではない。"
+      "description": "ウィルダネス・プレミアム：イグルーバーの村。Saariselkäはクラブの街ではない。ガラスのイグルー、KakslauttanenのIgloo Bar、そして本物のパブが1軒：Local Pub Panimo。"
     },
     "es": {
       "title": "Saariselkä: Lujo en la naturaleza y bares iglú",
@@ -326,11 +326,11 @@
     },
     "zh-CN": {
       "title": "萨利色尔卡: 荒野高端，玻璃冰屋酒吧之村。",
-      "description": "荒野高端，玻璃冰屋酒吧之村。Saariselkä 不是一个去蹦迪的地方。"
+      "description": "荒野高端，玻璃冰屋酒吧之村。Saariselkä 不是一个去蹦迪的地方。玻璃冰屋、Kakslauttanen 的 Igloo Bar，外加一家真正的酒馆，Local Pub Panimo。"
     },
     "ko": {
       "title": "Saariselkä: 와일더니스 프리미엄: 이글루 바 마을.",
-      "description": "와일더니스 프리미엄: 이글루 바 마을. Saariselkä는 클럽을 위한 곳이 아닙니다."
+      "description": "와일더니스 프리미엄: 이글루 바 마을. Saariselkä는 클럽을 위한 곳이 아닙니다. 글래스 이글루, Kakslauttanen의 Igloo Bar, 그리고 진짜 펍 하나: Local Pub Panimo."
     },
     "fr": {
       "title": "Saariselkä: Le luxe sauvage : le village des bars-igloos.",
@@ -346,7 +346,7 @@
     },
     "sv": {
       "title": "Saariselkä: Vildmarkslyx: igloobarbyn.",
-      "description": "Vildmarkslyx: igloobarbyn. Saariselkä är ingen klubbdestination."
+      "description": "Vildmarkslyx: igloobarbyn. Saariselkä är ingen klubbdestination. Glasigloor, Kakslauttanens Igloo Bar och en enda äkta pub: Local Pub Panimo."
     }
   },
   "/city/inari": {
@@ -406,11 +406,11 @@
     },
     "fi": {
       "title": "Kemi: LumiLinna, jäänmurtaja, Meri-Lappi.",
-      "description": "LumiLinna, jäänmurtaja, Meri-Lappi. Kemi on portti Helsingin junayhteyden ja Lapin välissä ja kaupunki, jolla on yksi temppu: LumiLinnan alue, jolle on…"
+      "description": "Helsingistä junalla tultaessa Kemi on portti Lappiin, ja sen päävaltti on LumiLinnan alue, jolle on rakennettu jotain lumesta joka talvi vuodesta 1996."
     },
     "de": {
       "title": "Kemi: SnowCastle, Eisbrecher, Meereslappland.",
-      "description": "SnowCastle, Eisbrecher, Meereslappland. Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland, und eine Stadt mit einem Trick: dem SnowCastle-Areal…"
+      "description": "Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland und hat einen Trick: das SnowCastle-Areal, wo seit 1996 jeden Winter etwas aus Schnee entsteht."
     },
     "ja": {
       "title": "ケミ: SnowCastle、砕氷船、海のラップランド。",
@@ -418,11 +418,11 @@
     },
     "es": {
       "title": "Kemi: SnowCastle, rompehielos, Laponia del mar.",
-      "description": "SnowCastle, rompehielos, Laponia del mar. Kemi es la puerta entre el tren desde Helsinki y Laponia, y un pueblo con un único truco: la zona del SnowCastle…"
+      "description": "Kemi es la puerta entre el tren de Helsinki y Laponia, con un único truco: la zona del SnowCastle, donde cada invierno desde 1996 se construye algo con nieve."
     },
     "pt-BR": {
       "title": "Kemi: SnowCastle, quebra-gelo, Lapônia do mar.",
-      "description": "SnowCastle, quebra-gelo, Lapônia do mar. Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia, e uma cidade com um truque só: a área do…"
+      "description": "Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia, com um truque só: a área do SnowCastle, onde todo inverno desde 1996 se constrói algo de neve."
     },
     "zh-CN": {
       "title": "凯米: 雪堡、破冰船、海拉普兰。",
@@ -434,19 +434,19 @@
     },
     "fr": {
       "title": "Kemi: SnowCastle, brise-glace, Laponie maritime.",
-      "description": "SnowCastle, brise-glace, Laponie maritime. Kemi est la porte d'entrée entre le rail d'Helsinki et la Laponie, une ville avec un seul tour de magie : le site…"
+      "description": "Kemi, porte d'entrée entre le rail d'Helsinki et la Laponie, a un seul tour de magie : le site du SnowCastle, où l'on bâtit en neige chaque hiver depuis 1996."
     },
     "it": {
       "title": "Kemi: SnowCastle, rompighiaccio, Lapponia del mare.",
-      "description": "SnowCastle, rompighiaccio, Lapponia del mare. Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, e una cittadina con un asso nella manica: l'area…"
+      "description": "Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, con un asso nella manica: lo SnowCastle, dove dal 1996 ogni inverno si costruisce con la neve."
     },
     "nl": {
       "title": "Kemi: SnowCastle, ijsbreker, Zee-Lapland.",
-      "description": "SnowCastle, ijsbreker, Zee-Lapland. Kemi is de toegangspoort tussen de trein uit Helsinki en Lapland, en een stad met één troef: het SnowCastle-terrein, waar…"
+      "description": "Kemi is de poort tussen de trein uit Helsinki en Lapland, met één troef: het SnowCastle-terrein, waar sinds 1996 elke winter iets van sneeuw wordt gebouwd."
     },
     "sv": {
       "title": "Kemi: SnowCastle, isbrytare, Havslappland.",
-      "description": "SnowCastle, isbrytare, Havslappland. Kemi är porten mellan tåget från Helsingfors och Lappland, och en stad med ett trumfkort: SnowCastle-området, där något…"
+      "description": "Kemi är porten mellan tåget från Helsingfors och Lappland, med ett trumfkort: SnowCastle-området, där något har byggts av snö varje vinter sedan 1996."
     }
   },
   "/city/yllas": {
@@ -460,7 +460,7 @@
     },
     "de": {
       "title": "Ylläs: Eines der größten Skigebiete Finnlands.",
-      "description": "Eines der größten Skigebiete Finnlands. Ylläs hat 62 Pisten, verteilt auf zwei Dörfer, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten…"
+      "description": "Ylläs hat 62 Pisten in zwei Dörfern, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind."
     },
     "ja": {
       "title": "ユッラス: フィンランド有数の大きさのスキーエリア。",
@@ -468,7 +468,7 @@
     },
     "es": {
       "title": "Ylläs: Una de las mayores zonas esquiables de Finlandia.",
-      "description": "Una de las mayores zonas esquiables de Finlandia. Ylläs tiene 62 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), conectados por…"
+      "description": "Ylläs tiene 62 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), unidos por las pistas pero separados por 20 minutos en coche."
     },
     "pt-BR": {
       "title": "Ylläs: Uma das maiores áreas de esqui da Finlândia.",
@@ -502,15 +502,15 @@
   "/city/ruka": {
     "en": {
       "title": "Ruka: Bear country ski resort.",
-      "description": "Bear country ski resort. Ruka is technically Kuusamo, technically not in Lapland, but skiers don't care; it's one of the busiest resorts in Finland and the…"
+      "description": "Bear country ski resort. Ruka is technically Kuusamo, technically not in Lapland, but skiers don't care; it's one of the busiest resorts in Finland."
     },
     "fi": {
       "title": "Ruka: Karhumaan hiihtokeskus.",
-      "description": "Karhumaan hiihtokeskus. Ruka on virallisesti Kuusamoa eikä virallisesti Lappia, mutta laskettelijoita se ei haittaa: kyseessä on yksi Suomen vilkkaimmista…"
+      "description": "Karhumaan hiihtokeskus. Ruka on virallisesti Kuusamoa eikä Lappia, mutta laskettelijoita se ei haittaa: kyseessä on yksi Suomen vilkkaimmista keskuksista."
     },
     "de": {
       "title": "Ruka: Skigebiet im Bärenland.",
-      "description": "Skigebiet im Bärenland. Ruka gehört offiziell zu Kuusamo und offiziell nicht zu Lappland, aber das ist Skifahrern egal: es ist eines der meistbesuchten…"
+      "description": "Skigebiet im Bärenland. Ruka gehört offiziell zu Kuusamo, nicht zu Lappland, doch das ist Skifahrern egal: Es ist eines der meistbesuchten Skigebiete Finnlands."
     },
     "ja": {
       "title": "ルカ: クマの国のスキーリゾート。",
@@ -518,15 +518,15 @@
     },
     "es": {
       "title": "Ruka: Estación de esquí en tierra de osos.",
-      "description": "Estación de esquí en tierra de osos. Ruka es técnicamente Kuusamo y técnicamente no es Laponia, pero a los esquiadores les da igual: es una de las estaciones…"
+      "description": "Estación de esquí en tierra de osos. Ruka es técnicamente Kuusamo, no Laponia, pero a los esquiadores les da igual: es una de las más concurridas de Finlandia."
     },
     "pt-BR": {
       "title": "Ruka: Estação de esqui no país dos ursos.",
-      "description": "Estação de esqui no país dos ursos. Ruka é tecnicamente Kuusamo e tecnicamente não é Lapônia, mas os esquiadores não ligam; é uma das estações mais…"
+      "description": "Estação de esqui no país dos ursos. Ruka é tecnicamente Kuusamo, não Lapônia, mas os esquiadores não ligam: é uma das estações mais movimentadas da Finlândia."
     },
     "zh-CN": {
       "title": "鲁卡: 熊出没之地的滑雪场。",
-      "description": "熊出没之地的滑雪场。鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。淡季村子非常安静；11月到4月则火力全开。"
+      "description": "熊出没之地的滑雪场。鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。"
     },
     "ko": {
       "title": "Ruka: 곰의 땅, 스키 리조트.",
@@ -534,19 +534,19 @@
     },
     "fr": {
       "title": "Ruka: La station de ski au pays de l'ours.",
-      "description": "La station de ski au pays de l'ours. Ruka est techniquement à Kuusamo, techniquement pas en Laponie, mais les skieurs s'en moquent: c'est l'une des stations…"
+      "description": "La station de ski au pays de l'ours. Ruka est à Kuusamo, pas en Laponie, mais les skieurs s'en moquent : c'est l'une des plus fréquentées de Finlande."
     },
     "it": {
       "title": "Ruka: Stazione sciistica nella terra degli orsi.",
-      "description": "Stazione sciistica nella terra degli orsi. Ruka è tecnicamente Kuusamo, tecnicamente non Lapponia, ma agli sciatori non importa: è una delle stazioni più…"
+      "description": "Stazione sciistica nella terra degli orsi. Ruka è a Kuusamo, non in Lapponia, ma agli sciatori non importa: è tra le stazioni più frequentate della Finlandia."
     },
     "nl": {
       "title": "Ruka: Skiresort in berenland.",
-      "description": "Skiresort in berenland. Ruka is technisch Kuusamo, technisch geen Lapland, maar skiërs maakt het niets uit; het is een van de drukste skigebieden van Finland…"
+      "description": "Skiresort in berenland. Ruka is technisch Kuusamo, geen Lapland, maar skiërs maakt het niets uit: het is een van de drukste skigebieden van Finland."
     },
     "sv": {
       "title": "Ruka: Skidort i björnland.",
-      "description": "Skidort i björnland. Ruka är tekniskt sett Kuusamo, tekniskt sett inte Lappland, men för skidåkare spelar det ingen roll; det är ett av Finlands mest…"
+      "description": "Skidort i björnland. Ruka är tekniskt sett Kuusamo, inte Lappland, men för skidåkare spelar det ingen roll: det är ett av Finlands mest välbesökta skidområden."
     }
   },
   "/city/pyha-luosto": {
@@ -564,7 +564,7 @@
     },
     "ja": {
       "title": "ピュハ＆ルオスト: アメジストのフェル。",
-      "description": "アメジストのフェル。35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。"
+      "description": "アメジストのフェル。35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。"
     },
     "es": {
       "title": "Pyhä & Luosto: Los montes de amatista.",
@@ -576,11 +576,11 @@
     },
     "zh-CN": {
       "title": "皮哈-卢奥斯托: 紫水晶之峰。",
-      "description": "紫水晶之峰。两座相距 35 公里的小山峰，共享一座国家公园。"
+      "description": "紫水晶之峰。两座相距 35 公里的小山峰，共享一座国家公园。紫水晶、群峰，以及拉普兰最安静的滑雪。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。"
     },
     "ko": {
       "title": "Pyhä & Luosto: 자수정의 펠.",
-      "description": "자수정의 펠. 35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다."
+      "description": "자수정의 펠. 35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키."
     },
     "fr": {
       "title": "Pyhä & Luosto: Les fjälls d'améthyste.",
@@ -614,11 +614,11 @@
     },
     "ja": {
       "title": "ソダンキュラ: 真夜中の太陽映画祭。",
-      "description": "真夜中の太陽映画祭。ソダンキュラはケミ川沿いの人口9,000人の村。"
+      "description": "真夜中の太陽映画祭。ソダンキュラはケミ川沿いの人口9,000人の村。真夜中の太陽映画祭：真昼の明るさの中、03:00に映画を上映する。"
     },
     "es": {
       "title": "Sodankylä: La ciudad del Midnight Sun Film Festival.",
-      "description": "La ciudad del Midnight Sun Film Festival. Sodankylä es un pueblo de 9 000 habitantes junto al río Kemijoki, y una vez al año, a mediados de junio, se…"
+      "description": "Una vez al año, a mediados de junio, Sodankylä se convierte en el festival de cine más surrealista del mundo: cuatro días de proyecciones a todas horas."
     },
     "pt-BR": {
       "title": "Sodankylä: A cidade do Midnight Sun Film Festival.",
@@ -626,11 +626,11 @@
     },
     "zh-CN": {
       "title": "索丹屈莱: 午夜阳光电影节。",
-      "description": "午夜阳光电影节。索丹屈莱是凯米河畔一座9000人的村庄，而每年一次，6月中旬，它会变成世界上最超现实的电影节现场。午夜太阳电影节为期四天，昼夜连轴放映，没人睡觉，因为太阳不落。电影节之外，这里的场景就是一家酒店酒吧和几间本地酒馆。为电影节而来，或者为寂静而来。"
+      "description": "午夜阳光电影节。索丹屈莱是凯米河畔一座9000人的村庄，而每年一次，6月中旬，它会变成世界上最超现实的电影节现场。午夜太阳电影节为期四天，昼夜连轴放映，没人睡觉，因为太阳不落。"
     },
     "ko": {
       "title": "Sodankylä: 미드나이트 선 영화제.",
-      "description": "미드나이트 선 영화제. 소단퀼래는 케미요키 강가의 인구 9,000명 마을입니다."
+      "description": "미드나이트 선 영화제. 소단퀼래는 케미요키 강가의 인구 9,000명 마을입니다. 미드나이트 선 영화제: 환한 대낮에 03:00 상영을 한다."
     },
     "fr": {
       "title": "Sodankylä: La ville du Midnight Sun Film Festival.",
@@ -642,7 +642,7 @@
     },
     "nl": {
       "title": "Sodankylä: Thuisbasis van het Midnight Sun Film Festival.",
-      "description": "Thuisbasis van het Midnight Sun Film Festival. Sodankylä is een dorp van 9.000 inwoners aan de rivier de Kemijoki, en één keer per jaar, half juni, wordt het…"
+      "description": "Elk jaar half juni wordt Sodankylä het toneel van het meest surrealistische filmfestival ter wereld: vier dagen lang vertoningen rond de klok."
     },
     "sv": {
       "title": "Sodankylä: Hemstad för Midnight Sun Film Festival.",
@@ -676,7 +676,7 @@
     },
     "zh-CN": {
       "title": "基蒂莱镇: Levi 的本地人真正生活的地方。",
-      "description": "Levi 的本地人真正生活的地方。基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。想要一个没有莱维度假村价格的、安静的芬兰小镇之夜，就是这里。"
+      "description": "Levi 的本地人真正生活的地方。基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。"
     },
     "ko": {
       "title": "Kittilä 마을: Levi 현지인이 실제로 사는 곳.",
@@ -802,51 +802,51 @@
   "/city/salla": {
     "en": {
       "title": "Salla: In the middle of nowhere.",
-      "description": "In the middle of nowhere. 3 300 residents and one ski slope."
+      "description": "In the middle of nowhere. 3 300 residents and one ski slope. Finland's quietest ski resort."
     },
     "fi": {
       "title": "Salla: Keskellä ei-mitään.",
-      "description": "Keskellä ei-mitään. 3 300 asukasta ja yksi laskettelurinne."
+      "description": "Keskellä ei-mitään. 3 300 asukasta ja yksi laskettelurinne. Suomen hiljaisin hiihtokeskus."
     },
     "de": {
       "title": "Salla: Mitten im Nirgendwo.",
-      "description": "Mitten im Nirgendwo. 3 300 Einwohner und eine Skipiste."
+      "description": "Mitten im Nirgendwo. 3 300 Einwohner und eine Skipiste. Finnlands ruhigstes Skigebiet."
     },
     "ja": {
       "title": "サッラ: 何もないど真ん中。",
-      "description": "何もないど真ん中。人口3,300人、スキー場はひとつ。"
+      "description": "何もないど真ん中。人口3,300人、スキー場はひとつ。フィンランドで最も静かなスキーリゾート。町のスローガンは文字どおり「In the Middle of Nowhere」、しかも褒め言葉のつもりです。"
     },
     "es": {
       "title": "Salla: En medio de la nada.",
-      "description": "En medio de la nada. 3 300 habitantes y una pista de esquí."
+      "description": "En medio de la nada. 3 300 habitantes y una pista de esquí. La estación de esquí más tranquila de Finlandia."
     },
     "pt-BR": {
       "title": "Salla: No meio do nada.",
-      "description": "No meio do nada. 3.300 habitantes e uma pista de esqui."
+      "description": "No meio do nada. 3.300 habitantes e uma pista de esqui. A estação de esqui mais silenciosa da Finlândia."
     },
     "zh-CN": {
       "title": "萨拉: 位于天涯海角。",
-      "description": "位于天涯海角。3300名居民，一条雪道。"
+      "description": "位于天涯海角。3300名居民，一条雪道。芬兰最安静的滑雪度假区。镇子的口号就是字面意义上的\"In the Middle of Nowhere\"（在无人之境），而且他们当作夸奖来说。"
     },
     "ko": {
       "title": "Salla: 한복판의 아무것도 없는 곳.",
-      "description": "한복판의 아무것도 없는 곳. 인구 3,300명, 스키 슬로프 하나."
+      "description": "한복판의 아무것도 없는 곳. 인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 \"In the Middle of Nowhere\"."
     },
     "fr": {
       "title": "Salla: Au milieu de nulle part.",
-      "description": "Au milieu de nulle part. 3 300 habitants et une piste de ski."
+      "description": "Au milieu de nulle part. 3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande."
     },
     "it": {
       "title": "Salla: In mezzo al nulla.",
-      "description": "In mezzo al nulla. 3.300 abitanti e una pista da sci."
+      "description": "In mezzo al nulla. 3.300 abitanti e una pista da sci. La stazione sciistica più tranquilla della Finlandia."
     },
     "nl": {
       "title": "Salla: Middenin het niets.",
-      "description": "Middenin het niets. 3.300 inwoners en één skipiste."
+      "description": "Middenin het niets. 3.300 inwoners en één skipiste. Het rustigste skiresort van Finland."
     },
     "sv": {
       "title": "Salla: Mitt ute i ingenstans.",
-      "description": "Mitt ute i ingenstans. 3 300 invånare och en enda skidbacke."
+      "description": "Mitt ute i ingenstans. 3 300 invånare och en enda skidbacke. Finlands lugnaste skidort."
     }
   }
 }

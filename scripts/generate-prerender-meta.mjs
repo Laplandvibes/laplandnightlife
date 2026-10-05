@@ -1,34 +1,38 @@
 // scripts/generate-prerender-meta.mjs  (laplandnightlife)
 //
 // Emits scripts/prerender-meta.json — a per-route × per-locale meta map consumed
-// by ../_prerender_routes.mjs via --meta. It localizes the DYNAMIC /city/:slug
-// pages, whose <title>/<meta description> are built at RUNTIME in CityPage.tsx
-// from per-locale city data (cities.ts + cities.<lang>.ts overlays), so the
-// prerendered first-byte HTML matches the client render per locale.
+// by ./_prerender_routes.mjs via --meta, for the DYNAMIC /city/:slug pages and the
+// legal pages. Both read the SAME fields the page components read in the browser,
+// so the prerendered first-byte HTML and the hydrated page show one title and one
+// description (gate:meta-hydraatio in lv-ops). Static content pages are handled by
+// copyKey in routes.json.
 //
-// Runtime contract (CityPage.tsx):
-//   title       = `${city.name} — ${city.pageTagline}`   // name not localized; pageTagline localized
-//   description = `${city.pageTagline} ${city.intro.slice(0, 120)}`   // both localized, EN fallback
+// City pages (contract shared with src/data/cityI18n.ts cityMeta):
+//   title       = cityTitle(overlay name ?? name, overlay pageTagline ?? pageTagline)
+//                 — the function in src/data/cityMeta.mjs, imported by both sides
+//   description = metaDescription of the city in that language (cities.ts for en,
+//                 cities.<lang>.ts for the rest), word for word
+// Until 2026-10-05 the description was composed here from tagline + intro and the
+// browser composed its own (`tagline + intro.slice(0, 120)`), and the title took the
+// overlay's localized name here but the English name in the browser.
 //
-// localizeCity (cityI18n.ts) replaces pageTagline/intro field-by-field from the
-// overlay, English fallback when a field/lang is absent. We replicate that here
-// so prerender === runtime. Static content pages are handled by copyKey in
-// routes.json.
+// Legal pages (/privacy /terms /cookie-policy): per-locale meta in
+// src/locales/seo-meta.json, the same file the page components read via getPageSeo
+// (src/lib/pageSeo.ts).
 //
-// Legal pages (/privacy /terms /cookie-policy) are emitted here too (2026-08-03;
-// before that they fell back to the EN routes.json fallbackTitle in all 11 non-EN
-// locales — the "no-meta: <lang> /privacy" build lines). Their per-locale meta
-// lives in src/locales/seo-meta.json, the SAME file the page components read at
-// runtime via getPageSeo (src/lib/pageSeo.ts), so prerender === runtime with no
-// drift. seo-meta.json holds the SHORT title; the " | LaplandNightlife" brand
-// suffix is appended here to match what PageSeo.tsx renders on the client.
+// 🔴 Every description must already be inside the prerenderer's window: 70–160
+// characters, or for CJK 100–200 width units (a CJK character counts two), whole
+// sentences, no ellipsis. Outside it, ensureDescriptionLength()/clampDescription()
+// in _prerender_routes.mjs rewrite the server text and the browser keeps the
+// original. This script stops the build instead of letting that ship.
 //
 // Idempotent. Run from the site root (after or before vite build):
 //   node scripts/generate-prerender-meta.mjs
 
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { cityTitle } from '../src/data/cityMeta.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -57,17 +61,29 @@ function sliceBlock(src, openIdx) {
   return src.slice(start, end);
 }
 
-// Read a single-line string field value `key: '…'` (handles \' escapes) from a block.
-function field(block, key) {
-  const m = block.match(new RegExp(`(?:^|[\\s,{])${key}\\s*:\\s*(['"\`])((?:\\\\.|(?!\\1).)*)\\1`, 's'));
+/**
+ * The value of a one-line string field `key: '…'` exactly as JavaScript reads it, or null when the block has
+ * no such field. Only \' and \" escapes are accepted: any other escape ( , \n, \\) would need a JavaScript
+ * parser to read the way the browser bundle reads it, so it stops the build instead of drifting.
+ */
+function exactField(block, key, where) {
+  const m = new RegExp(`(?:^|[\\s,{])${key}\\s*:\\s*(['"])`).exec(block);
   if (!m) return null;
-  return m[2]
-    .replace(/\\'/g, "'")
-    .replace(/\\"/g, '"')
-    .replace(/\\`/g, '`')
-    .replace(/\\\\/g, '\\')
-    .replace(/\s+/g, ' ')
-    .trim();
+  const q = m[1];
+  let out = '';
+  for (let i = m.index + m[0].length; ; i++) {
+    const c = block[i];
+    if (c === undefined || c === '\n' || c === '\r') throw new Error(`${where}: ${key} ei pääty samalla rivillä`);
+    if (c === q) return out;
+    if (c === '\\') {
+      const n = block[i + 1];
+      if (n !== "'" && n !== '"') throw new Error(`${where}: ${key} sisältää escapen \\${n} — kirjoita merkki sellaisenaan`);
+      out += n;
+      i++;
+      continue;
+    }
+    out += c;
+  }
 }
 
 // ---- parse base cities.ts: top-level array objects, scoped by `slug:` ----
@@ -91,19 +107,20 @@ function parseBaseCities() {
     if (open < 0) continue;
     const block = sliceBlock(src, open);
     if (!block) continue;
+    const where = `cities.ts ${slug}`;
     // Only treat as a city if it has name + pageTagline + intro (skips nested venue objs).
-    const name = field(block, 'name');
-    const pageTagline = field(block, 'pageTagline');
-    const intro = field(block, 'intro');
+    const name = exactField(block, 'name', where);
+    const pageTagline = exactField(block, 'pageTagline', where);
+    const intro = exactField(block, 'intro', where);
     if (name && pageTagline && intro && !out[slug]) {
-      out[slug] = { name, pageTagline, intro };
+      out[slug] = { name, pageTagline, metaDescription: exactField(block, 'metaDescription', where) };
     }
   }
   return out;
 }
 
-// ---- parse an overlay cities.<lang>.ts: Record<slug, { pageTagline?, intro? }> ----
-function parseOverlay(file) {
+// ---- parse an overlay cities.<lang>.ts: Record<slug, { name?, pageTagline?, metaDescription?, … }> ----
+function parseOverlay(file, citySlugs) {
   let src;
   try { src = readFileSync(join(DATA, file), 'utf-8'); } catch { return {}; }
   const out = {};
@@ -113,61 +130,45 @@ function parseOverlay(file) {
   // every overlay at once — so all eleven localized /city/pyha-luosto pages
   // silently served the ENGLISH title and description while their body copy
   // (read by the shared harvester, which does allow quotes) was localized.
+  // Nested objects (venues, quickFacts) match the pattern too: only city slugs
+  // count, and only their first occurrence.
   const re = /(?:^|[\s,{])['"]?([a-z0-9-]+)['"]?\s*:\s*\{/g;
   let m;
   while ((m = re.exec(src)) !== null) {
     const slug = m[1];
-    // skip nested known sub-objects (venues/quickFacts) — only first occurrence
-    // of a slug at overlay top level matters; guard via brace depth of match.
+    if (!citySlugs.has(slug) || out[slug]) continue;
     const block = sliceBlock(src, m.index + m[0].length - 1);
     if (!block) continue;
-    const pageTagline = field(block, 'pageTagline');
-    const intro = field(block, 'intro');
-    const name = field(block, 'name'); // overlayn lokalisoitu näyttönimi (valinnainen)
-    if ((pageTagline || intro) && !out[slug]) out[slug] = { name, pageTagline, intro };
+    const where = `${file} ${slug}`;
+    out[slug] = {
+      name: exactField(block, 'name', where), // overlayn lokalisoitu näyttönimi (valinnainen)
+      pageTagline: exactField(block, 'pageTagline', where),
+      metaDescription: exactField(block, 'metaDescription', where),
+    };
   }
   return out;
 }
 
-// ---- description builder: faithful to runtime (tagline + intro slice) but
-// trimmed to a clean word boundary for SERP quality (<=160 chars). ----
-function buildDescription(tagline, intro, lang) {
-  // [LV-CJK-JOIN 2026-09-25] ja/zh eivat valista virkkeita: taysleveän 。！？
-  // jalkeen ei valilyontia (live /cn/city/rovaniemi: "北极之都。 一座城…").
-  // Korea ja latinalaiset kielet valistavat, joten ne pitavat valilyonnin.
-  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(String(tagline).trim()) ? '' : ' ';
-  let base = `${tagline}${liitos}${intro}`.replace(/\s+/g, ' ').trim();
-  if ([...base].length <= 160) return base;
-  // 🔴 Ellipsi tuloslistalla kertoo lukijalle etta teksti loppui kesken.
-  // Mitattu 1.9.2026 metaportilla: 14 hollanninkielista kuvausta paattyi
-  // ellipsiin talla sivustolla, ja hollannin CTR on verkoston heikoin.
-  // Kokonainen ajatus voittaa pidemman katkennaneen: kokeile ensin
-  // tagline + rungon ENSIMMAINEN VIRKE, sitten pelkka virke.
-  // 🔴 Virke paattyy taysleveaan 。！？ tai ASCII-merkkiin, jota seuraa
-  // valilyonti tai loppu. Vanha `^[^.!?]*[.!?]` katkaisi desimaaliin: zh Oulun
-  // intro alkaa "21.8万人口…", joten live /cn/city/oulu -kuvaus oli
-  // "2026 年欧洲文化之都。 21." (17 merkkia, 25.9.2026).
-  const virke = (String(intro).match(/^[\s\S]*?(?:[。！？]|[.!?](?=\s|$))/) || [])[0];
-  if (virke) {
-    const lyhyt = `${tagline}${liitos}${virke.trim()}`.replace(/\s+/g, ' ').trim();
-    if ([...lyhyt].length <= 160) return lyhyt;
-    const yksin = virke.trim();
-    if ([...yksin].length >= 50 && [...yksin].length <= 160) return yksin;
-  }
-  // trim to <=158 chars at the last space, then add ellipsis.
-  const chars = [...base];
-  let cut = chars.slice(0, 158).join('');
-  const lastSpace = cut.lastIndexOf(' ');
-  if (lastSpace > 110) cut = cut.slice(0, lastSpace);
-  return cut.replace(/[\s,;:–—-]+$/, '') + '…';
+// ---- the prerenderer's description window (ensureDescriptionLength + clampDescription) ----
+const WIDE = /[\u1100-\u11FF\u2E80-\uA4CF\uA960-\uA97F\uAC00-\uD7FF\uF900-\uFAFF\uFE30-\uFE4F\uFF00-\uFF60\uFFE0-\uFFE6]/;
+const width = (s) => [...s].reduce((n, c) => n + (WIDE.test(c) ? 2 : 1), 0);
+/** '' when the prerenderer leaves the description exactly as it is, else why it would not. */
+function descriptionProblem(d) {
+  if (typeof d !== 'string' || !d) return 'puuttuu';
+  if (d !== d.replace(/\s+/g, ' ').trim()) return 'tupla- tai sitova välilyönti tai reunavälilyönti (esirenderöinti tiivistää ne)';
+  if (d.length > 160 || width(d) > 200) return `liian pitkä: ${d.length} merkkiä / ${width(d)} leveysyksikköä (raja 160 / 200)`;
+  if (d.length < 70 && width(d) < 100) return `liian lyhyt: ${d.length} merkkiä / ${width(d)} leveysyksikköä (raja 70 / 100)`;
+  if (/(…|\.\.\.)$/.test(d) || !/[.!?。！？]["'”’」』）)]*$/u.test(d)) return 'ei pääty kokonaiseen virkkeeseen';
+  return '';
 }
 
 const base = parseBaseCities();
-const overlays = {};
-for (const [lang, file] of Object.entries(OVERLAY_FILE)) overlays[lang] = parseOverlay(file);
-
 const slugs = Object.keys(base);
+const overlays = {};
+for (const [lang, file] of Object.entries(OVERLAY_FILE)) overlays[lang] = parseOverlay(file, new Set(slugs));
+
 const meta = {};
+const problems = [];
 
 // ---- static legal pages from src/locales/seo-meta.json (shared with runtime) ----
 // 🔴 THIS MAP IS A META SOURCE IN ITS OWN RIGHT. Adding/renaming a legal page
@@ -190,6 +191,8 @@ for (const [key, path] of Object.entries(STATIC_ROUTE_OF_KEY)) {
   meta[path] = {};
   for (const lang of LANGS) {
     const e = byLang[lang] || byLang.en;
+    const p = descriptionProblem(e.description);
+    if (p) problems.push(`${path} ${lang} (src/locales/seo-meta.json): ${p}`);
     meta[path][lang] = { title: `${e.title}`, description: e.description };
   }
 }
@@ -199,14 +202,20 @@ for (const slug of slugs) {
   meta[path] = {};
   for (const lang of LANGS) {
     const ov = lang === 'en' ? null : overlays[lang]?.[slug];
-    const tagline = (ov && ov.pageTagline) || b.pageTagline;
-    const intro = (ov && ov.intro) || b.intro;
     // Overlay saa yliajaa myös nimen (fi: "Kittilän kirkonkylä", ei "Kittilä town").
-    const name = (ov && ov.name) || b.name;
-    const title = `${name}: ${tagline}`;
-    const description = buildDescription(tagline, intro, lang);
+    const title = cityTitle(ov?.name ?? b.name, ov?.pageTagline ?? b.pageTagline);
+    // Ei englantia varalle: puuttuva kieli pysäyttää buildin (alla).
+    const description = lang === 'en' ? b.metaDescription : ov?.metaDescription;
+    const p = descriptionProblem(description);
+    if (p) problems.push(`${path} ${lang} (src/data/${lang === 'en' ? 'cities.ts' : OVERLAY_FILE[lang]} metaDescription): ${p}`);
     meta[path][lang] = { title, description };
   }
+}
+
+if (problems.length) {
+  console.error(`[gen-meta] ❌ ${problems.length} kuvausta, jotka esirenderöinti muuttaisi (selain näyttäisi eri tekstin):`);
+  for (const p of problems) console.error(`  ${p}`);
+  process.exit(1);
 }
 
 writeFileSync(OUT, JSON.stringify(meta, null, 2), 'utf-8');

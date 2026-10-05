@@ -7,6 +7,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '欧州文化首都2026、そして北部で唯一、一年を通して本物のクラブシーンが回り続ける街。',
     pageTagline: '欧州文化首都2026。',
     intro: '人口21万8千人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。オウルは北部で唯一、平日の夜も本当に賑わう街で、人々は45 Special、Kaarlenholvi、St Michaelの間を夜遅くまで行き来します。2026年には欧州文化首都プログラムが加わり、エアギター世界選手権、Qstock、Elojazz、冬フェスFrozen Peopleなど1,500のイベントが開催されます。',
+    metaDescription: '欧州文化首都2026。人口21万8千人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。',
     venues: {
       'St Michael': { type: 'アイリッシュパブ+ライブ', note: 'ロトゥアーリの中心的存在：ツアーアーティストやトリビュートナイトのあるアイリッシュパブ。' },
       "Hemingway's": { type: 'バー', note: 'キルッココ通りのウイスキー&クラフトビールバー：落ち着いた一杯を、深夜まで。' },
@@ -32,6 +33,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。',
     pageTagline: '北極圏の首都。',
     intro: 'ひとつの街にふたつの速度。週末の観光客はコスキカトゥ周辺に並びます：Roy Clubは「1985年から街一番のパーティー」を掲げ、Bull Barは最も賑やかなスポーツテラス。地元の人々は歩行者天国沿いに散らばります：カクテルはCafe & Bar 21、ビールはRovaniemen Oluthuone、ウイスキーはOliver\'s Corner。観光客の週末は行列、平日は静かでローカルです。',
+    metaDescription: '北極圏の首都。ひとつの街にふたつの速度。北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。',
     venues: {
       'Cafe & Bar 21': { type: 'カクテルバー', note: '中心部にある、地元っ子お気に入りのカクテルバー。' },
       'Rovaniemen Oluthuone': { type: 'ビアパブ', note: '歩行者天国沿いのビアレストラン：大きなテラスと幅広いタップ。' },
@@ -60,6 +62,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hullu Poro Areena：収容1 700人、バー10軒、2フロア。ラップランド最大のナイトクラブ。',
     pageTagline: 'フィンランド最大のスキーリゾート・パーティー。',
     intro: 'Hullu Poro Areenaが中心です：収容1,700人、2フロア、10のバー、そしてヘルシンキ以北最大のダンスフロア。その周りには、スキーブーツのままダンスフロアに上がれる伝説のアフタースキー小屋Ihkuと、眺めの一杯ならHotel Levi PanoramaのPanorama Sky Bar。11月はFISワールドカップが10日間の祝祭を連れてきます。2〜4月はバチェラーパーティー、スキースクール、全開の週末。オフシーズンには村の多くが週の前半から静かになります。',
+    metaDescription: 'フィンランド最大のスキーリゾート・パーティー。Hullu Poro Areenaが中心です：収容1,700人、2フロア、10のバー、そしてヘルシンキ以北最大のダンスフロア。',
     venues: {
       'Panorama Sky Bar': { type: '展望バー', note: 'ゴンドラ上のHotel Levi Panoramaのバー：山々を眺めながらの一杯。' },
       'Hullu Poro Areena': { type: 'メガナイトクラブ', note: '収容1 700人、バー10軒、2フロア。水〜土はコンサート会場に。' },
@@ -84,6 +87,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'ガラスのイグルー、KakslauttanenのIgloo Bar、そして本物のパブが1軒：Local Pub Panimo。',
     pageTagline: 'ウィルダネス・プレミアム：イグルーバーの村。',
     intro: 'Saariselkäはクラブの街ではない。ガラスのイグルーの地であり、それこそが本質だ。Kakslauttanen Arctic Resortには世界で最も写真に撮られるバーがある（天井がオーロラになるガラスのイグルー）。村そのものはメインストリートが一本、食べる価値のあるレストランが二軒、そしてLocal Pub Panimo。ラップランドで最も安定したクラフトタップを揃えたマイクロブルワリーだ。日が暮れてからの賑わいは村ではなくリゾートにある。',
+    metaDescription: 'ウィルダネス・プレミアム：イグルーバーの村。Saariselkäはクラブの街ではない。ガラスのイグルー、KakslauttanenのIgloo Bar、そして本物のパブが1軒：Local Pub Panimo。',
     venues: {
       'Local Pub Panimo': { type: '村のパブ', note: '地元とクラフトのタップ、パブメニュー、カラオケやライブの夜。村自慢のパブ。' },
       'Hotel Riekonlinna Bar': { type: 'ホテルバー', note: 'ロビーの大きな暖炉。シーズン中は夜のプログラムも。' },
@@ -109,6 +113,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'サーミ文化の中心地：Sajos、Siida、Inari湖、そしてPielpajärviの原野教会。',
     pageTagline: 'サーミ文化の首都。',
     intro: 'Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。ここの「ナイトライフ」は文化そのもの：1月の先住民映画祭Skábmagovat、8月のサーミ音楽祭Ijahis Idja、そしてほとんどがディナーを出すだけの数軒のバー。クラブを目当てに来てはいけない。冷たい湖の水、ヨイクのコンサート、そして12月には14:00に真っ暗になる空を目当てに来よう。',
+    metaDescription: 'サーミ文化の首都。Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。',
     venues: {
       'Hotel Inari Bar': { type: 'ホテルバー', note: '湖を望むレストラン＋バー。01:00まで営業。' },
       'Café Čaiju': { type: '昼間向け', note: 'サーミ議会のカフェ：コーヒーと文化イベント。' },
@@ -132,6 +137,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'SnowCastle、Sampo砕氷船、そしてHotel Merihoviの重層的なレストラン複合施設。',
     pageTagline: 'SnowCastle、砕氷船、海のラップランド。',
     intro: 'Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来、毎冬なにかを雪で建て続けているSnowCastleエリア。現在は冬の雪パークと、通年営業の屋内雪ワールドSnowExperience365にある氷の壁のバーが中心で、礼拝堂とホテルを備えた城全体はもう建てられていない。12月から運航するSampo砕氷船は、バー会場を兼ねたツアーを毎晩催す。陸側のナイトライフは小さい。Hotel Merihoviが重層的な複合施設（ロビーバー＋スポーツテラス＋レストラン）を運営しており、ほぼそれだけだ。冬には実力以上の存在感を見せる工業港町。',
+    metaDescription: 'SnowCastle、砕氷船、海のラップランド。Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来、毎冬なにかを雪で建て続けているSnowCastleエリア。',
     venues: {
       'SnowCastle Ice Bar': { type: 'アイスバー', note: '1〜4月営業。氷のグラスでドリンクを、壁は–5°C。' },
       'Sampo Icebreaker': { type: '船上バー', note: 'シーズン中に運航。バーは航海の間ずっと営業。' },
@@ -156,6 +162,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'フィンランド有数の大きさのスキーエリア。',
     pageTagline: 'フィンランド有数の大きさのスキーエリア。',
     intro: 'ユッラスには62本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。ゲレンデでつながっていますが、車では20分の距離。夜が賑やかなのはアカスロンポロ側で、アフタースキーはSport Resort Ylläs、その後はRavintola Otsoへ。メガクラブはありません。レヴィより静かで、大人びていて、カップルが多め。パッラス=ユッラストゥントゥリ国立公園はフィンランド第3の広さです。',
+    metaDescription: 'フィンランド有数の大きさのスキーエリア。ユッラスには62本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。',
     venues: {
       'Sport Resort Ylläs': { type: 'アフタースキー+バー', note: 'ゲレンデ脇、アカスロンポロで一番賑わうアフタースキースポット。' },
       'Taiga Pub & Kitchen': { type: 'パブ+キッチン', note: 'ユッラスヤルヴィのパブレストラン：タップ、パブフード、スポーツ観戦。' },
@@ -180,6 +187,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'スキーヤー日数でフィンランド第2のスキーリゾート。ラップランドのすぐ南。',
     pageTagline: 'クマの国のスキーリゾート。',
     intro: 'ルカは正確にはクーサモ、正確にはラップランドではありませんが、スキーヤーは気にしません。フィンランド有数の賑わいを誇るリゾートで、11月のオープニングウィークが最も騒がしい時期です。ゲレンデ下のZoneがアフタースキーの中心で、PisteとColorado Barが夜を引き継ぎます。オフシーズンの村はとても静か。11〜4月はフル稼働です。',
+    metaDescription: 'クマの国のスキーリゾート。ルカは正確にはクーサモ、正確にはラップランドではありませんが、スキーヤーは気にしません。',
     venues: {
       'Restaurant Zone': { type: 'アフタースキー', note: 'ゲレンデの麓：ライブとFIS開幕週パーティーの本拠地。' },
       'Piste': { type: 'アフタースキー+バー', note: 'アフタースキーから夜まで途切れず続く村のバー。' },
@@ -206,6 +214,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。',
     pageTagline: 'アメジストのフェル。',
     intro: '35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。Pyhäの方がスキーエリアは大きく、Luostoにはオーロラの下、真夜中に訪れられるアメジスト鉱山がある。どちらにもクラブはない。どちらにも暖炉のある夜にふさわしいホテルバーがある：レストラン級の食事ならHotel Pyhätunturi、オーロラを望む窓辺のバーならLuostoのHotel Aurora。ラップランドで最も静かな「スキーの地」であり、それを誇りにしている。',
+    metaDescription: 'アメジストのフェル。35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'ホテルバー', note: 'レストラン＋バー、暖炉、ゲレンデサイド。' },
       'Santa\'s Hotel Aurora': { type: 'オーロラ窓のバー', note: '北向きのガラス張りバー：オーロラが出れば起こしてくれるサービスあり。' },
@@ -230,6 +239,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '真夜中の太陽映画祭：真昼の明るさの中、03:00に映画を上映する。',
     pageTagline: '真夜中の太陽映画祭。',
     intro: 'ソダンキュラはケミ川沿いの人口9,000人の村。そして年に一度、6月中旬、世界で最もシュールな映画祭の舞台になります。真夜中の太陽映画祭は4日間、昼夜を問わず上映が続きます。太陽が沈まないので、誰も眠りません。映画祭の週以外は、ホテルバーと地元パブが数軒あるだけ。映画祭のために来るか、静けさのために来るか。',
+    metaDescription: '真夜中の太陽映画祭。ソダンキュラはケミ川沿いの人口9,000人の村。真夜中の太陽映画祭：真昼の明るさの中、03:00に映画を上映する。',
     venues: {
       'Hotel Sodankylä Bar': { type: 'ホテルバー', note: '中心部のホテルバー：1:00まで営業。' },
       'Piitsi Pub': { type: 'パブ', note: 'キティネン川岸のテラス。夏はライブ出演者も。' },
@@ -254,6 +264,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '地元民が実際に暮らす場所（Leviはほぼ観光客だ）。',
     pageTagline: 'Leviの地元民が実際に暮らす場所。',
     intro: 'キッティラは自治体の中心地：人口6,500人、空港、そして18km先のレヴィを支える人々の街です。バーシーンは小さくローカル：ホテルバーと村のパブが数軒、観光プログラムはなし。ほとんどの旅行者は素通りします。レヴィのリゾート価格なしで、静かなフィンランドの小さな町の夜を過ごしたいなら、ここです。',
+    metaDescription: 'Leviの地元民が実際に暮らす場所。キッティラは自治体の中心地：人口6,500人、空港、そして18km先のレヴィを支える人々の街です。',
     venues: {
       'Hotel Kittilä Bar': { type: 'ホテルバー', note: '町の頼れる一軒：レヴィより静かでお手頃。' },
     },
@@ -276,6 +287,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hotel IvaloのロビーバーとHotel Kultahippuのパブ。',
     pageTagline: '最北の空港。夜はホテルバーだけ。',
     intro: 'Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。町そのものは4 000人。Hotel Ivaloにはロビーバーとレストラン、ラピン・ウーがあります。Hotel Kultahippuには村で唯一のまともなパブがある。それ以外はホテルバーと、ビールを売るガソリンスタンドの売店が一軒。',
+    metaDescription: '最北の空港。夜はホテルバーだけ。Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。',
     venues: {
       'Hotel Kultahippu Pub': { type: 'パブ', note: '毎日営業。地元の仕事終わりの溜まり場。' },
       'Hotel Ivalo Lobby Bar': { type: 'ホテルバー', note: 'より静かで、レストラン併設。' },
@@ -299,6 +311,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'ナイトライフはなし。Pallas-Yllästunturi国立公園が目当て。',
     pageTagline: '国立公園の玄関口。',
     intro: 'ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第3の広さ）への玄関口のひとつです。クラブはなく、パブ巡りもなく、ほとんどの夜は早めに終わります。Harriniva Wilderness Hotelはサファリ客向けに夜サウナ+ロビーバーのセットを、Jeris Lakeside Resortはイェリス湖畔で同じ体験を提供します。正直に言えば、それがムオニオの「シーン」です。',
+    metaDescription: '国立公園の玄関口。ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第3の広さ）への玄関口のひとつです。',
     venues: {
       'Jeris Lakeside Resort': { type: 'ホテルバー', note: 'イェリス湖畔のホテル：夜はレストランとバーで。' },
       'Harriniva Wilderness Hotel': { type: 'ホテルバー', note: 'サウナ＋バー、客のほとんどはサファリ参加者。' },
@@ -322,6 +335,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '何もないど真ん中。フィンランドで最も静かなスキーリゾート。',
     pageTagline: '何もないど真ん中。',
     intro: '人口3,300人、スキー場はひとつ。町のスローガンは文字どおり「In the Middle of Nowhere」、しかも褒め言葉のつもりです。遅くまで開いているバーはHotel Revontuliのみ。ゲレンデ側にはシーズン中にパブが1〜2軒加わります。冬以外は：静寂。ユーモアを効かせた「Salla 2032」冬季大会キャンペーンで町は有名になりましたが、シーン自体は変わっていません。クラブ目当てでは来ないでください。',
+    metaDescription: '何もないど真ん中。人口3,300人、スキー場はひとつ。フィンランドで最も静かなスキーリゾート。町のスローガンは文字どおり「In the Middle of Nowhere」、しかも褒め言葉のつもりです。',
     venues: {
       'Holiday Club Salla': { type: 'ホテルバー', note: '唯一の夜遅くまで開く会場。レストラン＋バー。' },
       'Salla Wilderness Park': { type: '昼間の会場', note: '公園の来訪者向けのランチと昼間のカフェ。' },

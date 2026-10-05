@@ -1,5 +1,5 @@
 {
-  "_readme": "Legal-page SEO meta, 12 locales. Read at RUNTIME by src/lib/pageSeo.ts (getPageSeo) and at BUILD by scripts/generate-prerender-meta.mjs, so prerendered shells match the client render per locale. Titles are the SHORT form (no brand): PageSeo.tsx appends '' at runtime and the generator appends the same suffix when emitting prerender-meta.json.",
+  "_readme": "Legal-page SEO meta, 12 locales. Read at RUNTIME by src/lib/pageSeo.ts (getPageSeo) and at BUILD by scripts/generate-prerender-meta.mjs, so prerendered shells match the client render per locale. Titles carry no site-name suffix. Every description is 70-160 characters (CJK: 100-200 width units, a CJK character counts two), so the prerenderer neither extends nor cuts it and the browser shows the same text; scripts/generate-prerender-meta.mjs stops the build otherwise.",
   "privacy": {
     "en": {
       "title": "Privacy Policy",
@@ -15,7 +15,7 @@
     },
     "ja": {
       "title": "プライバシーポリシー",
-      "description": "LaplandNightlifeの個人データの取り扱いについて。GDPR準拠。運営はLaPeso Oy。"
+      "description": "LaplandNightlifeの個人データの取り扱いについて。GDPR準拠。運営はLaPeso Oy。Google Analytics 4 を通じて仮名化されたアクセス解析データを収集しています。"
     },
     "es": {
       "title": "Política de privacidad",
@@ -27,11 +27,11 @@
     },
     "zh-CN": {
       "title": "隐私政策",
-      "description": "LaplandNightlife 如何处理您的数据。符合 GDPR。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 如何处理您的数据。符合 GDPR。由 LaPeso Oy 运营。我们通过 Google Analytics 4 收集假名化的访问分析数据。"
     },
     "ko": {
       "title": "개인정보 처리방침",
-      "description": "LaplandNightlife의 데이터 처리 방식. GDPR 준수. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife의 데이터 처리 방식. GDPR 준수. 운영사 LaPeso Oy. 당사는 Google Analytics 4를 통해 가명 처리된 분석 데이터를 수집합니다."
     },
     "fr": {
       "title": "Politique de confidentialité",
@@ -77,11 +77,11 @@
     },
     "zh-CN": {
       "title": "服务条款",
-      "description": "LaplandNightlife 服务条款：编辑标准、联盟营销披露、内容许可。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 服务条款：编辑标准、联盟营销披露、内容许可。由 LaPeso Oy 运营。访问或使用本网站，即表示您同意本条款。"
     },
     "ko": {
       "title": "이용약관",
-      "description": "LaplandNightlife 이용약관. 편집 기준, 제휴 고지, 콘텐츠 라이선스 안내. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife 이용약관. 편집 기준, 제휴 고지, 콘텐츠 라이선스 안내. 운영사 LaPeso Oy. 본 웹사이트에 접속하거나 이용하시는 것은 본 약관에 동의하시는 것입니다."
     },
     "fr": {
       "title": "Conditions d'utilisation",
@@ -115,7 +115,7 @@
     },
     "ja": {
       "title": "クッキーポリシー",
-      "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLaPeso Oy。"
+      "description": "LaplandNightlifeのクッキー使用について。GDPR準拠。同意は初期状態で無効。運営はLaPeso Oy。クッキーとは、ウェブサイトを訪問した際にお客様のデバイスに保存される小さなテキストファイルです。"
     },
     "es": {
       "title": "Política de cookies y consentimiento",
@@ -127,11 +127,11 @@
     },
     "zh-CN": {
       "title": "Cookie 政策",
-      "description": "LaplandNightlife 如何使用 Cookie。符合 GDPR。同意默认关闭。由 LaPeso Oy 运营。"
+      "description": "LaplandNightlife 如何使用 Cookie。符合 GDPR。同意默认关闭。由 LaPeso Oy 运营。Cookie 是您访问网站时存储在您设备上的小型文本文件。"
     },
     "ko": {
       "title": "쿠키 정책",
-      "description": "LaplandNightlife의 쿠키 사용 안내. GDPR 준수. 동의는 기본 차단. 운영사 LaPeso Oy."
+      "description": "LaplandNightlife의 쿠키 사용 안내. GDPR 준수. 동의는 기본 차단. 운영사 LaPeso Oy. 쿠키는 귀하가 웹사이트를 방문할 때 기기에 저장되는 작은 텍스트 파일입니다."
     },
     "fr": {
       "title": "Politique de cookies",

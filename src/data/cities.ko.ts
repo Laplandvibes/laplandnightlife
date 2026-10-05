@@ -6,6 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '2026 유럽 문화수도, 그리고 북부 핀란드에서 유일하게 사계절 내내 돌아가는 진짜 클럽 씬.',
     pageTagline: '2026 유럽 문화수도.',
     intro: '인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리. 오울루는 평일 밤이 실제로 돌아가는 북부 유일의 도시입니다. 사람들은 늦게까지 45 Special, Kaarlenholvi, St Michael 사이를 오갑니다. 2026년에는 유럽 문화수도 프로그램이 더해집니다: 에어기타 세계선수권, Qstock, Elojazz, 겨울 축제 Frozen People 등 1,500개 행사.',
+    metaDescription: '2026 유럽 문화수도. 인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리.',
     venues: {
       'St Michael': { type: '아이리시 펍 + 라이브', note: '로투아리의 중심축: 투어 공연과 트리뷰트 나이트가 열리는 아이리시 펍.' },
       "Hemingway's": { type: '바', note: '키르코카투의 위스키·크래프트 맥주 바: 조용한 한 잔, 늦게까지 영업.' },
@@ -30,6 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '북극의 수도: 관광객의 주말과 현지인만의 평일로 나뉜다.',
     pageTagline: '북극의 수도.',
     intro: '한 도시, 두 개의 속도. 주말 관광객은 코스키카투 주변에 줄을 섭니다: Roy Club은 "1985년부터 도시 최고의 파티"를 열고, Bull Bar는 가장 시끌벅적한 스포츠 테라스입니다. 현지인들은 보행자 거리를 따라 흩어집니다: 칵테일은 Cafe & Bar 21, 맥주는 Rovaniemen Oluthuone, 위스키는 Oliver\'s Corner. 관광 주말엔 줄, 평일엔 조용하고 로컬합니다.',
+    metaDescription: '북극의 수도. 한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다.',
     venues: {
       'Cafe & Bar 21': { type: '칵테일 바', note: '시내 중심에 있는 현지인들의 단골 칵테일 바.' },
       'Rovaniemen Oluthuone': { type: '비어 펍', note: '보행자 거리의 맥주 레스토랑: 넓은 야외석과 폭넓은 탭 리스트.' },
@@ -57,6 +59,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hullu Poro Areena: 수용 인원 1,700명, 바 10개, 2층. 라플란드 최대의 나이트클럽.',
     pageTagline: '핀란드 최대의 스키 리조트 파티.',
     intro: 'Hullu Poro Areena가 중심입니다: 수용 인원 1,700명, 2개 층, 10개의 바, 헬싱키 이북 최대의 댄스플로어. 그 주변엔 스키 부츠를 신고 춤춰도 되는 전설의 아프레스키 오두막 Ihku, 그리고 전망 한 잔을 위한 Hotel Levi Panorama의 Panorama Sky Bar가 있습니다. 11월엔 FIS 월드컵이 열흘간의 파티를 몰고 옵니다. 2–4월은 총각파티 무리, 스키 스쿨, 풀가동 주말. 비수기엔 마을 상당수가 주 초반부터 한산해집니다.',
+    metaDescription: '핀란드 최대의 스키 리조트 파티. Hullu Poro Areena가 중심입니다: 수용 인원 1,700명, 2개 층, 10개의 바, 헬싱키 이북 최대의 댄스플로어.',
     venues: {
       'Panorama Sky Bar': { type: '전망 바', note: '곤돌라 위 Hotel Levi Panorama의 바: 산 전망과 함께하는 한 잔.' },
       'Hullu Poro Areena': { type: '메가 나이트클럽', note: '수용 1,700명, 바 10개, 2층. 수–토 콘서트장으로도 운영.' },
@@ -80,6 +83,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '글래스 이글루, Kakslauttanen의 Igloo Bar, 그리고 진짜 펍 하나: Local Pub Panimo.',
     pageTagline: '와일더니스 프리미엄: 이글루 바 마을.',
     intro: 'Saariselkä는 클럽을 위한 곳이 아닙니다. 글래스 이글루를 위한 곳입니다. 그게 핵심입니다. Kakslauttanen Arctic Resort에는 세계에서 가장 많이 사진에 담긴 바가 있습니다 (천장이 곧 오로라인 글래스 이글루). 마을 자체는 메인 거리 하나, 식사할 만한 식당 둘, 그리고 라플란드에서 가장 믿을 만한 크래프트 탭 리스트를 갖춘 마이크로브루어리 Local Pub Panimo가 전부입니다. 해가 진 뒤의 무대는 마을이 아니라 리조트에 있습니다.',
+    metaDescription: '와일더니스 프리미엄: 이글루 바 마을. Saariselkä는 클럽을 위한 곳이 아닙니다. 글래스 이글루, Kakslauttanen의 Igloo Bar, 그리고 진짜 펍 하나: Local Pub Panimo.',
     venues: {
       'Local Pub Panimo': { type: '마을 펍', note: '로컬·크래프트 탭, 펍 메뉴, 노래방과 라이브의 밤. 마을의 자체 펍.' },
       'Hotel Riekonlinna Bar': { type: '호텔 바', note: '로비의 큰 벽난로; 시즌엔 저녁 프로그램도.' },
@@ -104,6 +108,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '사미 문화의 수도: Sajos, Siida, Inari 호수, 그리고 Pielpajärvi 황야의 교회.',
     pageTagline: '사미 문화의 수도.',
     intro: 'Inari는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida의 고향입니다. 이곳의 "나이트라이프"는 문화적입니다: 1월의 원주민 영화제 Skábmagovat, 8월의 사미 음악 축제 Ijahis Idja, 그리고 대부분 저녁 식사를 내는 바 몇 곳. 클럽을 기대하고 오지 마세요. 차가운 호숫물, 요이크(joik) 공연, 그리고 12월이면 14:00에 새카매지는 하늘을 위해 오세요.',
+    metaDescription: '사미 문화의 수도. Inari는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida의 고향입니다.',
     venues: {
       'Hotel Inari Bar': { type: '호텔 바', note: '호수 전망의 레스토랑 + 바, 01:00까지 영업.' },
       'Café Čaiju': { type: '주간', note: '사미 의회 카페: 커피 + 문화 행사.' },
@@ -126,6 +131,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'SnowCastle, Sampo 쇄빙선, 그리고 Hotel Merihovi의 층층이 쌓인 레스토랑 복합관.',
     pageTagline: 'SnowCastle, 쇄빙선, 바다 라플란드.',
     intro: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역. 지금은 겨울 스노우 파크와, 얼음 벽 바를 갖춘 연중 운영 실내 눈 세계 SnowExperience365가 중심입니다. 예배당과 호텔까지 갖춘 성 전체는 더 이상 짓지 않습니다. 12월부터 운항하는 Sampo 쇄빙선은 밤마다 투어를 도는데, 그 자체가 바 역할도 합니다. 본토 나이트라이프는 작습니다: Hotel Merihovi가 층층의 복합관(로비 바, 스포츠 테라스, 레스토랑)을 운영하고, 사실상 그게 전부입니다. 겨울이면 체급 이상으로 한 방 먹이는 산업 항구 도시입니다.',
+    metaDescription: 'SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역.',
     venues: {
       'SnowCastle Ice Bar': { type: '아이스 바', note: '1–4월 영업. 얼음 잔에 담긴 음료, 벽은 –5°C.' },
       'Sampo Icebreaker': { type: '선상 바', note: '시즌 중 운항; 바는 항해 내내 운영됩니다.' },
@@ -149,6 +155,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '핀란드에서 손꼽히는 규모의 스키 구역.',
     pageTagline: '핀란드에서 손꼽히는 규모의 스키 구역.',
     intro: '윌래스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스야르비(남)에 나뉘어 있습니다. 슬로프로는 이어져 있지만 차로는 20분 거리입니다. 저녁이 더 활기찬 쪽은 애캐슬롬폴로: 아프레는 Sport Resort Ylläs, 그다음은 Ravintola Otso. 메가클럽은 없습니다. 레비보다 조용하고, 어른스럽고, 커플이 많습니다. 팔라스-윌래스툰투리 국립공원은 핀란드에서 세 번째로 큽니다.',
+    metaDescription: '핀란드에서 손꼽히는 규모의 스키 구역. 윌래스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스야르비(남)에 나뉘어 있습니다.',
     venues: {
       'Sport Resort Ylläs': { type: '아프레 + 바', note: '슬로프 옆, 애캐슬롬폴로에서 가장 붐비는 아프레 스폿.' },
       'Taiga Pub & Kitchen': { type: '펍 + 키친', note: '윌래스야르비의 펍 레스토랑: 탭, 펍 푸드, 스포츠.' },
@@ -172,6 +179,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '스키어 이용일 수 기준 핀란드 2위 스키 리조트, 라플란드 바로 남쪽.',
     pageTagline: '곰의 땅, 스키 리조트.',
     intro: '루카는 엄밀히는 쿠사모이고 엄밀히는 라플란드가 아니지만, 스키어들은 개의치 않습니다. 핀란드에서 가장 붐비는 리조트 중 하나이며, 11월 개장 주간이 가장 시끌벅적합니다. 슬로프 아래 Zone이 아프레스키의 중심이고, Piste와 Colorado Bar가 밤을 이어갑니다. 비수기의 마을은 매우 조용하고, 11–4월엔 풀가동입니다.',
+    metaDescription: '곰의 땅, 스키 리조트. 루카는 엄밀히는 쿠사모이고 엄밀히는 라플란드가 아니지만, 스키어들은 개의치 않습니다.',
     venues: {
       'Restaurant Zone': { type: '아프레스키', note: '슬로프 바로 아래: 라이브 공연과 FIS 개장 주간 파티의 본거지.' },
       'Piste': { type: '아프레 + 바', note: '아프레스키에서 밤까지 쉼 없이 이어지는 마을 바.' },
@@ -197,6 +205,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키.',
     pageTagline: '자수정의 펠.',
     intro: '35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. Pyhä는 스키 구역이 더 크고, Luosto에는 오로라 아래 한밤중에 방문할 수 있는 자수정 광산이 있습니다. 둘 다 클럽은 없습니다. 둘 다 벽난로 앞 저녁을 보낼 만한 호텔 바를 갖췄습니다: 레스토랑급 식사는 Hotel Pyhätunturi, 오로라 창 바는 Luosto의 Hotel Aurora. 라플란드에서 가장 조용한 "스키 목적지"이며, 그 점을 자랑스러워합니다.',
+    metaDescription: '자수정의 펠. 35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: '호텔 바', note: '레스토랑 + 바, 벽난로, 슬로프 옆.' },
       'Santa\'s Hotel Aurora': { type: '오로라 창 바', note: '북쪽을 향한 유리벽 바: 오로라가 뜨면 깨워 주는 서비스.' },
@@ -220,6 +229,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '미드나이트 선 영화제: 환한 대낮에 03:00 상영을 한다.',
     pageTagline: '미드나이트 선 영화제.',
     intro: '소단퀼래는 케미요키 강가의 인구 9,000명 마을입니다. 그리고 1년에 한 번, 6월 중순이면 세계에서 가장 초현실적인 영화제의 무대가 됩니다. 백야 영화제(Midnight Sun Film Festival)는 나흘간 밤낮없이 상영이 이어집니다. 해가 지지 않으니 아무도 잠들지 않습니다. 축제 주간 외의 밤 문화는 호텔 바 하나와 로컬 펍 두어 곳. 축제를 위해 오거나, 고요함을 위해 오세요.',
+    metaDescription: '미드나이트 선 영화제. 소단퀼래는 케미요키 강가의 인구 9,000명 마을입니다. 미드나이트 선 영화제: 환한 대낮에 03:00 상영을 한다.',
     venues: {
       'Hotel Sodankylä Bar': { type: '호텔 바', note: '시내 중심의 호텔 바: 01:00까지 영업.' },
       'Piitsi Pub': { type: '펍', note: '키티넨 강변의 테라스; 여름엔 공연도 열립니다.' },
@@ -244,6 +254,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '현지인이 실제로 사는 곳 (Levi는 거의 관광객 차지).',
     pageTagline: 'Levi 현지인이 실제로 사는 곳.',
     intro: '키틸래는 지자체의 중심지입니다: 인구 6,500명, 공항, 그리고 18km 떨어진 레비를 움직이는 사람들. 바 생활은 작고 로컬합니다: 호텔 바 하나와 마을 펍 두어 곳, 관광 프로그램은 없습니다. 대부분의 방문객은 그냥 지나칩니다. 레비의 리조트 가격 없이 조용한 핀란드 소도시의 저녁을 원한다면, 바로 여기입니다.',
+    metaDescription: 'Levi 현지인이 실제로 사는 곳. 키틸래는 지자체의 중심지입니다: 인구 6,500명, 공항, 그리고 18km 떨어진 레비를 움직이는 사람들.',
     venues: {
       'Hotel Kittilä Bar': { type: '호텔 바', note: '시내의 믿을 만한 선택지: 레비보다 조용하고 저렴합니다.' },
     },
@@ -265,6 +276,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hotel Ivalo의 로비 바 + Hotel Kultahippu 펍.',
     pageTagline: '최북단 공항, 밤은 호텔 바뿐.',
     intro: 'Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문입니다. 마을 자체는 인구 4,000명입니다. Hotel Ivalo에는 로비 바와 Lapin Yö 레스토랑이 있습니다. Hotel Kultahippu에는 마을 유일의 제대로 된 펍이 있습니다. 그 외엔 호텔 바들과 맥주를 파는 주유소 키오스크 하나가 전부입니다.',
+    metaDescription: '최북단 공항, 밤은 호텔 바뿐. Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문입니다.',
     venues: {
       'Hotel Kultahippu Pub': { type: '펍', note: '매일 영업. 현지인의 퇴근 후 장소.' },
       'Hotel Ivalo Lobby Bar': { type: '호텔 바', note: '더 조용하고, 레스토랑이 딸려 있습니다.' },
@@ -287,6 +299,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '나이트라이프 없음. 매력은 Pallas-Yllästunturi 국립공원.',
     pageTagline: '국립공원의 관문.',
     intro: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁 사우나+로비 바 콤보를 운영하고, Jeris Lakeside Resort는 예리스야르비 호숫가에서 같은 경험을 제공합니다. 솔직히 그것이 무오니오의 밤 문화 전부입니다.',
+    metaDescription: '국립공원의 관문. 무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다.',
     venues: {
       'Jeris Lakeside Resort': { type: '호텔 바', note: '예리스야르비 호숫가 호텔: 저녁을 위한 레스토랑과 바.' },
       'Harriniva Wilderness Hotel': { type: '호텔 바', note: '사우나 + 바, 대부분 사파리 손님.' },
@@ -309,6 +322,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '한복판의 아무것도 없는 곳. 핀란드에서 가장 조용한 스키 리조트.',
     pageTagline: '한복판의 아무것도 없는 곳.',
     intro: '인구 3,300명, 스키 슬로프 하나. 마을 슬로건은 말 그대로 "In the Middle of Nowhere". 그리고 그것은 칭찬으로 쓰입니다. 늦게까지 여는 바는 Hotel Revontuli뿐이고, 슬로프 쪽엔 시즌에 펍이 한두 곳 더 열립니다. 겨울 외엔: 고요함. 위트 있는 "Salla 2032" 동계대회 캠페인이 마을을 지도에 올렸지만, 실제 밤 문화는 변하지 않았습니다. 클럽을 위해 오지는 마세요.',
+    metaDescription: '한복판의 아무것도 없는 곳. 인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 "In the Middle of Nowhere".',
     venues: {
       'Holiday Club Salla': { type: '호텔 바', note: '유일한 늦은 저녁 매장. 레스토랑 + 바.' },
       'Salla Wilderness Park': { type: '주간 매장', note: '공원 방문객을 위한 점심 + 낮 시간 카페.' },

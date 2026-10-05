@@ -8,7 +8,7 @@ import GygWidget from '../components/GygWidget';
 import VenueRating from '../components/VenueRating';
 import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
-import { localizeCity, localizeQuickFacts } from '../data/cityI18n';
+import { cityMeta, localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -87,10 +87,8 @@ export default function CityPage() {
     { to: to('/photography'), label: c.pillar4, icon: Camera, why: c.pillar4Why },
   ];
 
-  // ja/zh eivät välistä virkkeitä: täysleveän 。！？ jälkeen ei välilyöntiä
-  // (sama sääntö kuin scripts/generate-prerender-meta.mjs [LV-CJK-JOIN]).
-  const liitos = /^(ja|zh)/.test(lang) && /[。！？]$/.test(city.pageTagline.trim()) ? '' : ' ';
-  const description = `${city.pageTagline}${liitos}${city.intro.slice(0, 120)}`;
+  // Otsikko ja kuvaus samasta lähteestä kuin esirenderöity HTML (cityMeta + metaDescription-kenttä).
+  const meta = cityMeta(baseCity, lang);
   const quickFacts = localizeQuickFacts(city.slug, lang);
   const crossLinks = getCrossLinks(city, lang);
   const nearbySlugs = NEARBY[city.slug] ?? [];
@@ -106,8 +104,8 @@ export default function CityPage() {
   return (
     <>
       <PageSeo
-        title={`${city.name}: ${city.pageTagline}`}
-        description={description}
+        title={meta.title}
+        description={meta.description}
         path={path}
         ogImage={`https://laplandnightlife.com${city.img}`}
         jsonLd={citySchema(city.name, city.slug, city.intro)}

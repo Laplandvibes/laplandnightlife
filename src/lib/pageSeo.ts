@@ -5,9 +5,9 @@
 // <meta description> match what these page components render at runtime
 // (no English fallback on /fi/, /de/, … legal pages).
 //
-// Entries hold the SHORT title (no brand): PageSeo.tsx appends
-// " | LaplandNightlife" at runtime, and the prerender generator appends the
-// same suffix when emitting prerender-meta.json.
+// Titles carry no site-name suffix, and each description is already inside the
+// prerenderer's 70-160 character window (CJK 100-200 width units), so neither
+// side changes the text (gate:meta-hydraatio in lv-ops).
 
 import seoMeta from '../locales/seo-meta.json';
 import type { Lang } from '../i18n/useLang';

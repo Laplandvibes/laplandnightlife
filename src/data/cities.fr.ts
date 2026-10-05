@@ -6,6 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capitale européenne de la culture 2026 et la seule vraie scène club ouverte toute l\'année dans le Nord.',
     pageTagline: 'Capitale européenne de la culture 2026.',
     intro: '218 000 habitants, une scène club portée par les étudiants et la rue piétonne Rotuaari, qui concentre la plupart des adresses de la ville sur un court trajet à pied. Oulu est la seule ville du Nord où les soirées de semaine tournent vraiment. La foule circule entre le 45 Special, le Kaarlenholvi et le St Michael jusque tard. 2026 ajoute le programme de Capitale européenne de la culture : 1 500 événements, dont les Air Guitar World Championships, Qstock, Elojazz et le festival hivernal Frozen People.',
+    metaDescription: 'Capitale européenne de la culture 2026. 218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas.',
     venues: {
       'St Michael': { type: 'Pub irlandais + concerts', note: 'Le point d\'ancrage de Rotuaari, pub irlandais avec artistes en tournée et soirées tribute.' },
       "Hemingway's": { type: 'Bar', note: 'Bar à whisky et bières artisanales sur Kirkkokatu : la pinte tranquille, ouvert tard.' },
@@ -30,6 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux.',
     pageTagline: 'La capitale arctique.',
     intro: 'Deux rythmes dans une seule ville. Le week-end, les touristes font la queue autour de Koskikatu : le Roy Club organise « les meilleures fêtes de la ville depuis 1985 » et le Bull Bar est la terrasse sportive la plus bruyante. Les locaux se répartissent le long de la rue piétonne : le Cafe & Bar 21 pour les cocktails, le Rovaniemen Oluthuone pour la bière, l\'Oliver\'s Corner pour le whisky. Week-ends touristiques : files d\'attente ; en semaine, c\'est calme et local.',
+    metaDescription: 'La capitale arctique. Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux.',
     venues: {
       'Cafe & Bar 21': { type: 'Bar à cocktails', note: 'Le bar à cocktails préféré des locaux, en plein centre.' },
       'Rovaniemen Oluthuone': { type: 'Brasserie-pub', note: 'Restaurant à bières sur la rue piétonne : grande terrasse, large choix à la pression.' },
@@ -57,6 +59,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hullu Poro Areena : 1 700 places, 10 bars, 2 étages. La plus grande boîte de nuit de Laponie.',
     pageTagline: 'La plus grosse fête de station de ski de Finlande.',
     intro: 'Le Hullu Poro Areena est la pièce maîtresse : 1 700 places, deux étages, dix bars et la plus grande piste de danse au nord d\'Helsinki. Autour : l\'Ihku, la légendaire cabane d\'après-ski où les chaussures de ski sont les bienvenues sur la piste, et le Panorama Sky Bar de l\'Hotel Levi Panorama pour le verre avec vue. En novembre, la Coupe du monde FIS apporte dix jours de fête. De février à avril : enterrements de vie de garçon, écoles de ski et week-ends à plein régime. Hors saison, une bonne partie du village tourne au ralenti en début de semaine.',
+    metaDescription: 'Le Hullu Poro Areena est la pièce maîtresse : 1 700 places, deux étages, dix bars et la plus grande piste de danse au nord d\'Helsinki.',
     venues: {
       'Panorama Sky Bar': { type: 'Bar panoramique', note: 'Le bar de l\'Hotel Levi Panorama au-dessus de la télécabine : un verre avec vue sur les fjälls.' },
       'Hullu Poro Areena': { type: 'Méga-boîte de nuit', note: '1 700 places, 10 bars, 2 étages. Salle de concert du mercredi au samedi.' },
@@ -80,6 +83,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Igloos de verre, l\'Igloo Bar de Kakslauttanen et un seul vrai pub: le Local Pub Panimo.',
     pageTagline: 'Le luxe sauvage : le village des bars-igloos.',
     intro: 'Saariselkä n\'est pas une destination club. C\'est une destination igloos de verre, et c\'est tout l\'intérêt. Le Kakslauttanen Arctic Resort abrite le bar le plus photographié au monde (un igloo de verre dont le plafond, c\'est l\'aurore boréale). Le village lui-même, c\'est une rue principale, deux restaurants qui valent le détour et le Local Pub Panimo, une microbrasserie avec la carte de bières artisanales à la pression la plus fiable de Laponie. À la nuit tombée, l\'action se passe dans les resorts, pas dans le village.',
+    metaDescription: 'Le luxe sauvage : le village des bars-igloos. Saariselkä n\'est pas une destination club.',
     venues: {
       'Local Pub Panimo': { type: 'Pub du village', note: 'Pressions locales et artisanales, menu de pub, karaoké et soirées live. Le pub du village.' },
       'Hotel Riekonlinna Bar': { type: 'Bar d\'hôtel', note: 'Grande cheminée dans le lobby ; programme en soirée pendant la saison.' },
@@ -104,6 +108,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capitale culturelle sámi: Sajos, Siida, le lac Inari et l\'église sauvage de Pielpajärvi.',
     pageTagline: 'La capitale culturelle sámi.',
     intro: 'Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi. Ici, la « vie nocturne » est culturelle : le festival de cinéma autochtone Skábmagovat en janvier, le festival de musique sámi Ijahis Idja en août, et une poignée de bars qui servent surtout des dîners. Ne venez pas pour les clubs. Venez pour l\'eau froide du lac, les concerts de joik et un ciel qui vire au noir dès 14 h en décembre.',
+    metaDescription: 'La capitale culturelle sámi. Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi.',
     venues: {
       'Hotel Inari Bar': { type: 'Bar d\'hôtel', note: 'Restaurant + bar avec vue sur le lac, ouvert jusqu\'à 1 h.' },
       'Café Čaiju': { type: 'En journée', note: 'Café du parlement sámi : café + événements culturels.' },
@@ -126,6 +131,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Le SnowCastle, le brise-glace Sampo et le complexe de restaurants empilés de l\'Hotel Merihovi.',
     pageTagline: 'SnowCastle, brise-glace, Laponie maritime.',
     intro: 'Kemi est la porte d\'entrée entre le rail d\'Helsinki et la Laponie, une ville avec un seul tour de magie : le site du SnowCastle, où l\'on bâtit quelque chose en neige chaque hiver depuis 1996. Aujourd\'hui, ce sont un parc de neige hivernal et le monde de neige couvert SnowExperience365, ouvert toute l\'année, avec son bar aux murs de glace ; le château complet, avec chapelle et hôtel, n\'est plus construit. Les croisières du brise-glace Sampo, à partir de décembre, proposent des sorties nocturnes qui font aussi office de bars. La vie nocturne sur le continent est modeste : l\'Hotel Merihovi gère un complexe à plusieurs niveaux (bar du hall, terrasse sport, restaurant) et c\'est à peu près tout. Une ville portuaire industrielle qui joue au-dessus de sa catégorie en hiver.',
+    metaDescription: 'Kemi, porte d\'entrée entre le rail d\'Helsinki et la Laponie, a un seul tour de magie : le site du SnowCastle, où l\'on bâtit en neige chaque hiver depuis 1996.',
     venues: {
       'SnowCastle Ice Bar': { type: 'Bar de glace', note: 'Ouvert de janvier à avril. Boissons dans des verres de glace, murs à –5 °C.' },
       'Sampo Icebreaker': { type: 'Bar à bord', note: 'Croisières en saison ; le bar fonctionne pendant tout le trajet.' },
@@ -149,6 +155,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'L\'un des plus grands domaines skiables de Finlande.',
     pageTagline: 'L\'un des plus grands domaines skiables de Finlande.',
     intro: 'Ylläs compte 62 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par les pistes mais séparés par 20 minutes de route. Äkäslompolo a la scène du soir la plus animée : Sport Resort Ylläs pour l\'après-ski et Ravintola Otso pour la suite. Pas de méga-club. Plus calme, plus adulte, plus de couples qu\'à Levi. Le parc national Pallas-Yllästunturi est le troisième plus grand de Finlande.',
+    metaDescription: 'Ylläs compte 62 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par les pistes mais séparés par 20 minutes de route.',
     venues: {
       'Sport Resort Ylläs': { type: 'Après-ski + bar', note: 'Le spot d\'après-ski le plus fréquenté d\'Äkäslompolo, au pied des pistes.' },
       'Taiga Pub & Kitchen': { type: 'Pub + cuisine', note: 'Pub-restaurant de Ylläsjärvi : pressions, cuisine de pub, sport.' },
@@ -172,6 +179,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La deuxième station de ski de Finlande en journées-skieur, juste au sud de la Laponie.',
     pageTagline: 'La station de ski au pays de l\'ours.',
     intro: 'Ruka est techniquement à Kuusamo, techniquement pas en Laponie, mais les skieurs s\'en moquent: c\'est l\'une des stations les plus fréquentées de Finlande et la semaine d\'ouverture de novembre est la plus bruyante. Zone est l\'après-ski central au pied des pistes, Piste et le Colorado Bar prennent le relais en soirée. Hors saison, le village est très calme ; de novembre à avril, il tourne à plein.',
+    metaDescription: 'La station de ski au pays de l\'ours. Ruka est à Kuusamo, pas en Laponie, mais les skieurs s\'en moquent : c\'est l\'une des plus fréquentées de Finlande.',
     venues: {
       'Restaurant Zone': { type: 'Après-ski', note: 'Au pied des pistes : concerts et QG de la fête d\'ouverture FIS.' },
       'Piste': { type: 'Après-ski + bar', note: 'Le bar du village qui enchaîne l\'après-ski et la soirée.' },
@@ -197,6 +205,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Améthyste, fjälls et le ski le plus tranquille de Laponie.',
     pageTagline: 'Les fjälls d\'améthyste.',
     intro: 'Deux petits fjälls, à 35 km l\'un de l\'autre, partageant un parc national. Pyhä a le plus grand domaine skiable ; Luosto a la mine d\'améthyste que l\'on peut visiter à minuit sous l\'aurore boréale. Ni l\'un ni l\'autre n\'a de club. Tous deux ont des bars d\'hôtel qui valent une soirée près du feu : l\'Hotel Pyhätunturi pour une table de qualité restaurant, l\'Hotel Aurora à Luosto pour son bar aux baies vitrées tournées vers l\'aurore. La « destination ski » la plus tranquille de Laponie, et elle en est fière.',
+    metaDescription: 'Les fjälls d\'améthyste. Deux petits fjälls, à 35 km l\'un de l\'autre, partageant un parc national.',
     venues: {
       'Hotel Pyhätunturi Bar': { type: 'Bar d\'hôtel', note: 'Restaurant + bar, cheminée, au pied des pistes.' },
       'Santa\'s Hotel Aurora': { type: 'Bar à baies vitrées sur l\'aurore', note: 'Bar aux parois de verre orienté nord : réveil par le personnel si l\'aurore est active.' },
@@ -220,6 +229,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Le Midnight Sun Film Festival: on y projette des films à 03:00 en plein jour.',
     pageTagline: 'La ville du Midnight Sun Film Festival.',
     intro: 'Sodankylä est un village de 9 000 habitants au bord de la Kemijoki, et une fois par an, mi-juin, il devient le festival de cinéma le plus surréaliste du monde. Le Midnight Sun Film Festival dure quatre jours avec des projections jour et nuit : personne ne dort, puisque le soleil ne se couche pas. Hors semaine de festival, la scène se résume à un bar d\'hôtel et à deux pubs locaux. Venez pour le festival, ou pour le silence.',
+    metaDescription: 'Sodankylä est un village de 9 000 habitants au bord de la Kemijoki, et une fois par an, mi-juin, il devient le festival de cinéma le plus surréaliste du monde.',
     venues: {
       'Hotel Sodankylä Bar': { type: 'Bar d\'hôtel', note: 'Le bar de l\'hôtel au centre, ouvert jusqu\'à 1 h.' },
       'Piitsi Pub': { type: 'Pub', note: 'Terrasse au bord de la Kitinen ; artistes de passage l\'été.' },
@@ -244,6 +254,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Là où vivent vraiment les locaux (Levi, c\'est surtout des touristes).',
     pageTagline: 'Là où vivent vraiment les locaux de Levi.',
     intro: 'Kittilä est le chef-lieu de la commune : 6 500 habitants, l\'aéroport et les gens qui font tourner Levi, à 18 km. La vie de bar est modeste et locale : un bar d\'hôtel et deux pubs de village, pas de programme touristique. La plupart des visiteurs traversent sans s\'arrêter. Pour une soirée tranquille de petite ville finlandaise sans les tarifs resort de Levi, c\'est ici.',
+    metaDescription: 'Là où vivent vraiment les locaux de Levi. Kittilä est le chef-lieu de la commune : 6 500 habitants, l\'aéroport et les gens qui font tourner Levi, à 18 km.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Bar d\'hôtel', note: 'La valeur sûre du bourg, plus calme et moins chère que Levi.' },
     },
@@ -265,6 +276,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Le bar du hall de l\'Hotel Ivalo + le pub de l\'Hotel Kultahippu.',
     pageTagline: 'L\'aéroport le plus au nord, bars d\'hôtel seulement.',
     intro: 'Ivalo est l\'aéroport le plus au nord de Finlande et la porte d\'entrée vers Inari, Saariselkä et le Pays sámi. La ville elle-même compte 4 000 habitants. L\'Hotel Ivalo a un bar de hall et le restaurant Lapin Yö. L\'Hotel Kultahippu a le seul vrai pub du village. Au-delà, ce sont des bars d\'hôtel et un kiosque de station-service qui vend de la bière.',
+    metaDescription: 'Ivalo est l\'aéroport le plus au nord de Finlande et la porte d\'entrée vers Inari, Saariselkä et le Pays sámi.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Ouvert tous les jours. Le repaire local d\'après le travail.' },
       'Hotel Ivalo Lobby Bar': { type: 'Bar d\'hôtel', note: 'Plus tranquille, attenant au restaurant.' },
@@ -287,6 +299,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Pas de vie nocturne. C\'est le parc national de Pallas-Yllästunturi qui attire.',
     pageTagline: 'La porte d\'entrée du parc national.',
     intro: 'Muonio compte 2 300 habitants et constitue l\'une des portes du parc national Pallas-Yllästunturi (1 020 km², le troisième de Finlande). Pas de club, pas de tournée des bars, et la plupart des soirées finissent tôt. Le Harriniva Wilderness Hotel propose la combinaison sauna du soir + bar de lobby à ses clients de safari, et l\'Jeris Lakeside Resort fait de même au bord du lac Jerisjärvi. Voilà, honnêtement, la « scène » de Muonio.',
+    metaDescription: 'Muonio compte 2 300 habitants et constitue l\'une des portes du parc national Pallas-Yllästunturi (1 020 km², le troisième de Finlande).',
     venues: {
       'Jeris Lakeside Resort': { type: 'Bar d\'hôtel', note: 'Hôtel au bord du Jerisjärvi : restaurant et bar pour la soirée.' },
       'Harriniva Wilderness Hotel': { type: 'Bar d\'hôtel', note: 'Sauna + bar, surtout des clients de safari.' },
@@ -309,6 +322,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Au milieu de nulle part. La station de ski la plus tranquille de Finlande.',
     pageTagline: 'Au milieu de nulle part.',
     intro: '3 300 habitants et une piste de ski. Le slogan du bourg est littéralement « In the Middle of Nowhere », et c\'est un compliment assumé. L\'Hotel Revontuli possède le seul bar ouvert tard ; côté pistes s\'ajoutent un ou deux pubs en saison. Hors hiver : le silence. La campagne au second degré « Salla 2032 » pour les Jeux d\'hiver a mis le bourg sur la carte, mais la scène n\'a pas changé. Ne venez pas pour les clubs.',
+    metaDescription: 'Au milieu de nulle part. 3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande.',
     venues: {
       'Holiday Club Salla': { type: 'Bar d\'hôtel', note: 'Le seul lieu de fin de soirée. Restaurant + bar.' },
       'Salla Wilderness Park': { type: 'Lieu de jour', note: 'Déjeuner + café de jour pour les visiteurs du parc.' },

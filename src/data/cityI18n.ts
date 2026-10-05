@@ -6,6 +6,7 @@
 
 import type { City } from './cities';
 import { CITY_QUICK_FACTS } from './cities';
+import { cityTitle } from './cityMeta.mjs';
 import type { Lang } from '../i18n/useLang';
 
 /** Translatable fields of a city. venues/quickFacts are keyed by their English
@@ -18,6 +19,9 @@ export interface CityOverlay {
   blurb?: string;
   pageTagline?: string;
   intro?: string;
+  /** Meta description in this language (see City.metaDescription). Optional in the type, but
+   *  scripts/generate-prerender-meta.mjs stops the build when a city lacks it, so no page falls back to English. */
+  metaDescription?: string;
   /** venue English name -> { type?, note? } */
   venues?: Record<string, { type?: string; note?: string }>;
   knowList?: string[];
@@ -69,6 +73,18 @@ export function localizeCity(city: City, lang: Lang): City {
     }),
     knowList:
       ov.knowList && ov.knowList.length === city.knowList.length ? ov.knowList : city.knowList,
+  };
+}
+
+/** <title> and meta description of a city page: the same fields, read the same way, as
+ *  scripts/generate-prerender-meta.mjs reads them for the prerendered HTML, so Google, the share card and the
+ *  browser tab show one text. The title takes the overlay's localized name (ja, zh-CN, Kittilä), which the
+ *  visible h1 does not. Pass the base (English) city. */
+export function cityMeta(city: City, lang: Lang): { title: string; description: string } {
+  const ov = lang === 'en' ? undefined : OVERLAYS[lang]?.[city.slug];
+  return {
+    title: cityTitle(ov?.name ?? city.name, ov?.pageTagline ?? city.pageTagline),
+    description: ov?.metaDescription ?? city.metaDescription,
   };
 }
 
