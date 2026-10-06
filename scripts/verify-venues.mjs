@@ -296,10 +296,16 @@ async function main() {
       if (!pl.ok) { rejected.push(`"${candName}" wrong place — address "${p.formattedAddress}" has none of [${city.loc.join(', ')}]`); continue; }
       const bb = bboxGate(p.location);
       if (!bb.ok) { rejected.push(`"${candName}" ${bb.why}`); continue; }
+      // CLOSED_TEMPORARILY is RECORDED but NOT rejected (Vesa 2026-10-06: "kesällä monet paikat on
+      // kiinni ja avaa vasta marraskuussa"). Google flags an off-season pause as a temporary closure,
+      // so it stays on the closed list as a re-check flag and the match is kept. Any other
+      // non-operational status (CLOSED_PERMANENTLY) is still a finding AND a rejection.
       if (p.businessStatus && p.businessStatus !== 'OPERATIONAL') {
         closed.push({ key, name: venue.name, slug: venue.slug, matchedName: candName, businessStatus: p.businessStatus, address: p.formattedAddress, googlePlaceId: p.id });
-        rejected.push(`"${candName}" businessStatus=${p.businessStatus} (RECORDED as closed finding)`);
-        continue;
+        if (p.businessStatus !== 'CLOSED_TEMPORARILY') {
+          rejected.push(`"${candName}" businessStatus=${p.businessStatus} (RECORDED as closed finding)`);
+          continue;
+        }
       }
       accepted = { p, nameHow: n.how, localityHit: pl.hit };
       break;
