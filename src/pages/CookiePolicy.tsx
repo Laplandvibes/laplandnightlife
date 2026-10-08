@@ -9,7 +9,7 @@ export default function CookiePolicy() {
   return (
     <>
       <PageSeo title={seo.title} description={seo.description} path="/cookie-policy" />
-      <CookieContent siteName="LaplandNightlife" lang={lang} />
+      <CookieContent siteId="laplandnightlife" siteName="LaplandNightlife" lang={lang} />
     </>
   );
 }
