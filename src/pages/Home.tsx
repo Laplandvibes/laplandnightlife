@@ -126,7 +126,7 @@ export default function Home() {
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.tours.h}</h2>
             <p className="text-white/85 max-w-xl mx-auto">{c.tours.body}</p>
           </div>
-          <GygWidget query="Rovaniemi nightlife aurora" campaign="home_tours_top" count={6} />
+          <GygWidget query="Rovaniemi nightlife aurora" seeAllPath="rovaniemi-l2653" campaign="home_tours_top" count={6} />
         </div>
       </section>
 

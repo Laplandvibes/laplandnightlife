@@ -164,7 +164,7 @@ export default function Nightclubs() {
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
-          <GygWidget query="Rovaniemi Levi tours nightlife" campaign="nightclubs_pillar" count={6} />
+          <GygWidget query="Rovaniemi Levi tours nightlife" seeAllPath="lapland-finland-l2652" campaign="nightclubs_pillar" count={6} />
         </div>
       </section>
 

@@ -46,8 +46,21 @@ const FALLBACK_LEAD: Record<string, string> = {
 const SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
 
 interface GygWidgetProps {
-  /** GYG search query (e.g. "Rovaniemi nightlife", "Lapland aurora", "Levi tours"). */
+  /** Query for the embedded widget only (its own API, data-gyg-q). Never sent to the Worker. */
   query: string;
+  /**
+   * GetYourGuide path behind the "See all experiences" link: a location
+   * (`rovaniemi-l2653`) or a category (`lapland-finland-l2652/northern-lights-tc310`),
+   * taken from the GYG catalogue — never hand-written, never a search.
+   *
+   * 🔴🔴 8.10.2026: this link used to be `/go/activities/s?q=<query>`. The
+   * Worker forwarded `s` as a path: getyourguide.com/fi-fi/s/ with no query,
+   * measured 4.10. in a browser = Crete boat trips (Balos). Since 4.10. the
+   * Worker treats a path with no -l/-t/-tc id as search words (LV-GYG-TOPIC),
+   * but that is a safety net, not a link pattern; GYG search itself has been
+   * dead since 23.8.
+   */
+  seeAllPath: string;
   /** Number of items to render (default 6). */
   count?: number;
   /** Optional campaign tag — appears in CJ click attribution. */
@@ -72,6 +85,7 @@ interface GygWidgetProps {
  */
 export default function GygWidget({
   query,
+  seeAllPath,
   count = 6,
   campaign = 'laplandnightlife',
   currency = 'EUR',
@@ -142,8 +156,7 @@ export default function GygWidget({
             <AffiliateCTA
               partner="activities"
               sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_fallback`}
-              destination="s"
-              query={{ q: query }}
+              destination={seeAllPath}
               className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition-colors"
             >
               {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={14} />
@@ -155,8 +168,7 @@ export default function GygWidget({
           <AffiliateCTA
             partner="activities"
             sid={`${campaign.replace(/[^a-z0-9_]/g, '_')}_see_all`}
-            destination="s"
-            query={{ q: query }}
+            destination={seeAllPath}
             className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] font-bold text-white/70 hover:text-pink transition-colors"
           >
             {SEE_ALL[lang] ?? SEE_ALL.en} <ExternalLink size={12} />

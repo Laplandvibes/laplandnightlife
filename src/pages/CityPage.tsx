@@ -31,6 +31,43 @@ const SISTER_ICON: Record<string, LucideIcon> = {
   LaplandSkiResorts: MountainSnow,
 };
 
+/**
+ * GetYourGuide location page per city, for the "what is bookable tonight"
+ * button and the widget's "See all experiences" link.
+ *
+ * 🔴🔴 8.10.2026: both links used to take the free text below as a PATH:
+ * `/go/activities/Ivalo Inari` → getyourguide.com/fi-fi/Ivalo%20Inari/ = 404
+ * "Menitkö hukkaan?" (measured 4.10. in a browser), and cities without a
+ * GYG_CITY_Q row sent their bare name ("Muonio"). Since 4.10. the Worker reads
+ * such a path as search words (LV-GYG-TOPIC), a safety net, not a link pattern.
+ *
+ * Location ids: GYG catalogue (_gyg-catalog/catalog.json, 30.7.2026). A city
+ * the catalogue crawled is used as is; Oulu and Sodankylä use the location id
+ * of GYG products listed there (oulu-l95579, sodankyla-l192678). Ivalo = the
+ * municipality page the Worker resolves "Ivalo Inari" to (read 4.10.: 132
+ * activities). Kittilä = Levi, its fell resort. 🔴 Muonio has no GYG location
+ * in our data, so it gets the Lapland page; open until someone reads a Muonio
+ * id off GetYourGuide in a browser. Never type an id from memory: a wrong one
+ * answers 200 with a page somewhere else in the world.
+ */
+const GYG_CITY_PATH: Record<string, string> = {
+  oulu: 'oulu-l95579',
+  rovaniemi: 'rovaniemi-l2653',
+  levi: 'levi-sirkka-l150197',
+  saariselka: 'saariselka-l181615',
+  inari: 'inari-l245909',
+  kemi: 'kemi-l98127',
+  yllas: 'yllas-l87669',
+  ruka: 'ruka-l192178',
+  'pyha-luosto': 'pyha-luosto-national-park-l161152',
+  sodankyla: 'sodankyla-l192678',
+  kittila: 'levi-sirkka-l150197',
+  ivalo: 'inari-municipality-l164594',
+  muonio: 'lapland-finland-l2652',
+  salla: 'salla-l208811',
+};
+
+/** Query for the embedded GYG widget only (data-gyg-q), never a link path. */
 const GYG_CITY_Q: Record<string, string> = {
   ivalo: 'Ivalo Inari',
   inari: 'Inari Ivalo',
@@ -188,7 +225,7 @@ export default function CityPage() {
             <AffiliateCTA
               partner="activities"
               sid={`city_${city.slug}_top_tours`}
-              destination={GYG_CITY_Q[city.slug] ?? city.name}
+              destination={GYG_CITY_PATH[city.slug] ?? 'lapland-finland-l2652'}
               className="inline-flex items-center gap-2 border border-pink/50 hover:border-pink hover:bg-pink/10 text-white font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all"
             >
               {TONIGHT_CTA[lang](city.name)} <ArrowRight size={14} />
@@ -230,7 +267,7 @@ export default function CityPage() {
               </div>
               <div className="px-5 pt-4 pb-5">
                 <p className="text-sm text-white/65 leading-relaxed mb-4">{c.gygBody}</p>
-                <GygWidget query={GYG_CITY_Q[city.slug] ?? city.name} campaign={`city_${city.slug}`} count={4} bare />
+                <GygWidget query={GYG_CITY_Q[city.slug] ?? city.name} seeAllPath={GYG_CITY_PATH[city.slug] ?? 'lapland-finland-l2652'} campaign={`city_${city.slug}`} count={4} bare />
               </div>
             </div>
           </aside>

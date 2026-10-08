@@ -96,7 +96,7 @@ export default function AuroraBars() {
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
-          <GygWidget query="Lapland aurora hunt igloo" campaign="aurora_pillar" count={6} />
+          <GygWidget query="Lapland aurora hunt igloo" seeAllPath="lapland-finland-l2652/northern-lights-tc310" campaign="aurora_pillar" count={6} />
         </div>
       </section>
 

@@ -69,9 +69,14 @@ export function buildAffiliateHref({
   lang = "en",
 }: Pick<AffiliateCTAProps, 'partner' | 'sid' | 'destination' | 'query'> & { lang?: _Lang }): string {
   if (partner === 'activities') {
-    // Reitittää Workerin kautta 2026-08-03 alkaen. Worker hoitaa slugin,
-    // /s?q=-haun JA kielen polkuprefiksin (raaka ?language= on GYG:llä no-op,
-    // ja vanha getyourguide.de-domain-taulu jätti muut kielet englanniksi).
+    // Reitittää Workerin kautta 2026-08-03 alkaen. Worker hoitaa slugin ja
+    // sijainti-/kategoriapolun kieliprefiksin (raaka ?language= on GYG:llä no-op).
+    // 🔴🔴 Ei hakua (8.10.2026): GYG:n /s?q= kuoli 23.8.2026, ja vapaa teksti
+    // polkuna ("Ivalo Inari", "s") antoi 404:n ja Kreetan risteilyt. Anna
+    // `destination`iksi aina GYG-polku (`-lNNN`, `-tcNNN` tai `-tNNN`) katalogista.
+    // Tuotepolun (`-tNNN`) kieliprefiksiä tämä haara ei lisää, eikä Worker
+    // lisää sitä tuotteelle (LV-GYG-PRODUCT-NOPREFIX 20.9.): sivustolla ei
+    // 8.10. ole tuotelinkkejä, lisää prefiksi ennen ensimmäistä.
     // Suora linkitys menettäisi D1-klikkilokin ja veisi partner_id:n bundleen.
     const params = new URLSearchParams({ sid });
     const gygLang = GYG_WORKER_LANG[lang];
