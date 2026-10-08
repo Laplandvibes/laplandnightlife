@@ -78,9 +78,8 @@ export default function PageSeo({ title, description, path, jsonLd }: PageSeoPro
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content="LaplandNightlife" />
       <meta property="og:locale" content={OG_LOCALE[lang]} />
-      {SUPPORTED.filter((l) => l !== lang).map((l) => (
-        <meta key={l} property="og:locale:alternate" content={OG_LOCALE[l]} />
-      ))}
+      {/* og:locale:alternate EI täällä (8.10.2026): esirenderöity HTML ei kirjoita sitä, ja Facebook lukee vain
+          staattisen HTML:n, joten JS:n lisäämällä tagilla ei ollut lukijaa (gate:og-js "vain-js" joka sivulla). */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@laplandvibes" />
       <meta name="twitter:title" content={fullTitle} />
