@@ -18,9 +18,8 @@ const TP_TRS = '524131';
 /** Build a Travelpayouts deep link for a program + destination + placement. */
 // [LV-ADUNIT-WORKER-2 2026-07-27] Worker-routed so the click reaches D1; the
 // Worker rebuilds the identical tp.media URL and appends sub_id=<domain>_<sid>.
-// 5869 lisätty 2026-08-23: ilman riviä ektaLink() rakentaisi suoran tp.media-
-// linkin ohi Workerin (ei D1-lokiä) — sama ansa joka visitillä korjattiin 23.8.
-const TP_ROUTE: Record<number, string> = { 8310: 'airalo', 8919: 'welcomepickups', 5869: 'ekta' };
+// 5869 (EKTA) poistettu 2026-10-08: EKTA lopetti 7.10.2026, Worker-reitti purettu.
+const TP_ROUTE: Record<number, string> = { 8310: 'airalo', 8919: 'welcomepickups' };
 
 function tpLink(programId: number, dest: string, sid: string): string {
   const u = encodeURIComponent(dest);
@@ -57,21 +56,6 @@ export const WELCOME_PICKUPS = {
 } as const;
 export const welcomePickupsLink = (sid = 'transfer') =>
   tpLink(WELCOME_PICKUPS.programId, 'https://www.welcomepickups.com/', sid);
-
-// ── EKTA — travel insurance (any-GEO) ────────────────────────────────────────
-// Program p=5869. Any-residence cover (no Nordic-residence wall), so it works
-// for the whole international audience. Note the correct brand domain is
-// ektatraveling.com (not ekta.com) per affiliate-links.json flags. Evergreen.
-export const EKTA = {
-  slug: 'ekta',
-  /** Dark wordmark for light card surfaces. */
-  logo: '/images/partners/ekta.svg',
-  /** White wordmark for dark card surfaces. */
-  logoWhite: '/images/partners/ekta-white.svg',
-  programId: 5869,
-} as const;
-export const ektaLink = (sid = 'insurance') =>
-  tpLink(EKTA.programId, 'https://ektatraveling.com/', sid);
 
 // 🔴🔴 WELCOME PICKUPS POISTETTU TÄLTÄ SIVUSTOLTA 2026-08-23 (Vesan linjaus).
 //
