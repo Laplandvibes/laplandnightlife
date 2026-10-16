@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Calendar } from 'lucide-react';
 import PageSeo, { pillarBreadcrumb, articleSchema } from '../components/PageSeo';
 import PillarHero from '../components/PillarHero';
@@ -146,6 +147,11 @@ export default function Events() {
                       </p>
                       <h3 className={`font-heading text-xl tracking-wide mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
                       <p className={`text-sm leading-relaxed ${isPast ? 'text-white/50' : 'text-white/70'}`}>{e.body}</p>
+                      {e.id === 'new-year' && (
+                        <Link to={to('/new-year')} className="inline-block mt-2 text-xs uppercase tracking-[0.18em] text-pink font-bold hover:text-pink-dark">
+                          {c.newYearLink}
+                        </Link>
+                      )}
                       </div>
                     </div>
                   );

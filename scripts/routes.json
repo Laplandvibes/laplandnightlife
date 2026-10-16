@@ -52,6 +52,16 @@
     }
   },
   {
+    "path": "/new-year",
+    "copyKey": "newYear",
+    "fallbackTitle": "New Year's Eve in Lapland",
+    "ogImage": "/og/new-year.jpg",
+    "ogCard": {
+      "hero": "/images/drive/eventNewYear.webp",
+      "line": "Fireworks, late bars and getting home"
+    }
+  },
+  {
     "path": "/photography",
     "copyKey": "photo",
     "fallbackTitle": "Night Photography in Lapland"

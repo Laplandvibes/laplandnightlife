@@ -13,6 +13,7 @@ const Events = lazy(() => import('./pages/Events'))
 const Photography = lazy(() => import('./pages/Photography'))
 const SummerNights = lazy(() => import('./pages/SummerNights'))
 const Tips = lazy(() => import('./pages/Tips'))
+const NewYear = lazy(() => import('./pages/NewYear'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const Terms = lazy(() => import('./pages/Terms'))
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
@@ -119,6 +120,7 @@ function AppLayout() {
               { path: 'nightclubs', element: <Nightclubs /> },
               { path: 'aurora-bars', element: <AuroraBars /> },
               { path: 'events', element: <Events /> },
+              { path: 'new-year', element: <NewYear /> },
               { path: 'photography', element: <Photography /> },
               { path: 'summer-nights', element: <SummerNights /> },
               { path: 'tips', element: <Tips /> },

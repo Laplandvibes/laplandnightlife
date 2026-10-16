@@ -322,5 +322,86 @@
         "samaKuinKesa": true
       }
     }
+  },
+  "new-year": {
+    "route": "/new-year",
+    "line": "Fireworks, late bars and getting home",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/drive/eventNewYear.webp",
+        "bytes": 174215,
+        "sha256": "fe65ae75bd4c9ff0b8d9b0580be95159dc7d5e7993f0dcbcd4be2d71b9b96848",
+        "heroSha": "4d70ff56e08850c8",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18771,
+        "inkBox": [
+          340,
+          493,
+          860,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 48.9,
+        "centerSq": 75.5,
+        "photoRegion": 52.7,
+        "photoRegionRef": 52.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 522,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/drive/eventNewYear.webp",
+        "bytes": 174215,
+        "sha256": "fe65ae75bd4c9ff0b8d9b0580be95159dc7d5e7993f0dcbcd4be2d71b9b96848",
+        "heroSha": "4d70ff56e08850c8",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 18771,
+        "inkBox": [
+          340,
+          493,
+          860,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 48.9,
+        "centerSq": 75.5,
+        "photoRegion": 52.7,
+        "photoRegionRef": 52.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 522,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
   }
 }

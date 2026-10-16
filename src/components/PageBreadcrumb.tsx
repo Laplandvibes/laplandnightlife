@@ -18,6 +18,7 @@ export default function PageBreadcrumb() {
     '/nightclubs': c.nightclubs,
     '/aurora-bars': c.auroraBars,
     '/events': c.events,
+    '/new-year': c.newYear,
     '/photography': c.photography,
     '/summer-nights': c.summer,
     '/tips': c.tips,
