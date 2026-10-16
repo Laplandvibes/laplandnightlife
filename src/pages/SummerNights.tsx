@@ -8,6 +8,7 @@ import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { eventWhen } from '../data/events';
 
 const SHADOW = {
   textShadow:
@@ -31,14 +32,16 @@ export default function SummerNights() {
   const events = [
     // Jokaisella tapahtumalla oma kuva. Aiemmin nämä lainasivat cityScenesin ja
     // localListin kuvia, jolloin sama kuva näkyi kahdesti samalla sivulla.
-    { h: c.e1H, when: c.e1When, body: c.e1Body, icon: Sun, img: IMG.eventMidnightSun, badge: c.e1Badge },
-    { h: c.e2H, when: c.e2When, body: c.e2Body, icon: Film, img: IMG.primeFilm, badge: c.e2Badge },
-    { h: c.e3H, when: c.e3When, body: c.e3Body, icon: Flame, img: IMG.summerJuhannus, badge: c.e3Badge },
-    { h: c.e4H, when: c.e4When, body: c.e4Body, icon: Music, img: IMG.summerAirGuitar, badge: c.e4Badge },
-    { h: c.e5H, when: c.e5When, body: c.e5Body, icon: Music, img: IMG.eventRockFestival, badge: c.e5Badge },
-    { h: c.e6H, when: c.e6When, body: c.e6Body, icon: Music, img: IMG.eventJazz, badge: c.e6Badge },
-    { h: c.e7H, when: c.e7When, body: c.e7Body, icon: Music, img: IMG.eventIjahisIdja, badge: c.e7Badge },
-    { h: c.e8H, when: c.e8When, body: c.e8Body, icon: Music, img: IMG.eventCityRock, badge: c.e8Badge },
+    // Aika tulee tapahtumakalenterista (data/events.ts), ei copysta: seuraava kerta, tai
+    // "päivä ei vielä julkinen" + edellinen kerta, kun järjestäjä ei ole julkaissut päivää.
+    { h: c.e1H, when: eventWhen(lang, 'midnight-sun'), body: c.e1Body, icon: Sun, img: IMG.eventMidnightSun, badge: c.e1Badge },
+    { h: c.e2H, when: eventWhen(lang, 'msff'), body: c.e2Body, icon: Film, img: IMG.primeFilm, badge: c.e2Badge },
+    { h: c.e3H, when: eventWhen(lang, 'juhannus'), body: c.e3Body, icon: Flame, img: IMG.summerJuhannus, badge: c.e3Badge },
+    { h: c.e4H, when: eventWhen(lang, 'air-guitar'), body: c.e4Body, icon: Music, img: IMG.summerAirGuitar, badge: c.e4Badge },
+    { h: c.e5H, when: eventWhen(lang, 'qstock'), body: c.e5Body, icon: Music, img: IMG.eventRockFestival, badge: c.e5Badge },
+    { h: c.e6H, when: eventWhen(lang, 'elojazz'), body: c.e6Body, icon: Music, img: IMG.eventJazz, badge: c.e6Badge },
+    { h: c.e7H, when: eventWhen(lang, 'ijahis-idja'), body: c.e7Body, icon: Music, img: IMG.eventIjahisIdja, badge: c.e7Badge },
+    { h: c.e8H, when: eventWhen(lang, 'simerock'), body: c.e8Body, icon: Music, img: IMG.eventCityRock, badge: c.e8Badge },
   ];
 
   const timeline = [

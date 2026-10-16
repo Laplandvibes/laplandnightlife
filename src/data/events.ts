@@ -1,626 +1,440 @@
 import type { Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { formatDays, labelSep } from './eventDates';
 
-/* Tapahtumakalenterin data + apurit. Irrotettu `pages/Events.tsx`:sta 2026-09-09.
+/* Tapahtumakalenterin data + apurit. Irrotettu `pages/Events.tsx`:sta 2026-09-09; sama lähde ajaa
+ * etusivun nostot (`upcomingEvents`), joten menneet putoavat pois ilman että kukaan muistaa poistaa niitä.
  *
- * Vesa 9.9.: *"edelleen jo menneitä juttuja etusivulla? talven tapahtumat? eikö
- * automaattisesti etsitä näitä ja lisäillä?"* — etusivun kolme nostoa olivat
- * käsin valittuja copy-kenttiä ILMAN koneluettavaa päivää, joten ne eivät voineet
- * vanheta itsestään. Kalenterilla sen sijaan ON `endsBy`, ja 25.8. rakennettu
- * mennyt/tuleva-erottelu toimi jo /events-sivulla. Nyt sama lähde ajaa myös
- * etusivun: `upcomingEvents()` palauttaa seuraavat tapahtumat lukijan kellon
- * mukaan, joten menneet putoavat pois ilman että kukaan muistaa poistaa niitä.
- */
+ * 16.10.2026: kalenteri uudelleen vuosille 2026–2027.
+ * - Yksi tapahtuma = yksi rivi, jolla on ISO-päivät ja tekstit kaikilla 12 kielellä (`Record<Lang, Text>`
+ *   kaataa buildin, jos kieli puuttuu). Ennen jokainen kieli oli oma rinnakkainen listansa, joka luettiin
+ *   indeksillä EN-listaa vasten; nyt kuukausilohkot johdetaan samasta rivistä kaikille kielille.
+ * - Päivämäärä muotoillaan kielelle `formatDays`illa, ei kirjoiteta käsin 12 kertaa.
+ * - Päivä vain järjestäjän omalta sivulta (lähde ja lukupäivä rivin kommentissa). Tapahtuma, jonka seuraavaa
+ *   päivää järjestäjä ei ole julkaissut, on `PENDING`-listassa edellisen kerran päivällä, ei arvattuna
+ *   kuukautena.
+ * - Pois: "Sami Week / Sámi Soveeknaki" (tapahtumaa ei ole), "Peak Levi Concert Weeks" (ei lähdettä),
+ *   SnowCastle (lumilinnaa ei rakenneta; Winter Park ei ole tapahtuma), "Christmas in Rovaniemi" (ei
+ *   järjestäjää eikä päivää), Air Guitarin kesäkuun Oulun karsinta (ei ole olemassa).
+ * Lähdemuistiinpanot: side-session-notes/…/nightlife-tapahtumat-2027-{kevat,syksy}.md. */
 
+type Text = { name: string; city: string; body: string };
+type MonthKey = keyof typeof COPY.en.events.months;
+const MONTH_KEYS: MonthKey[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const LANGS: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 
-/* endsBy = the day after which this event is definitely over, ISO. For events with an
-   exact date it is the last day; for the ones the organiser only scopes to part of a
-   month ("Late Jan") it is that month's last day — an honest upper bound, not a guess
-   at the actual day. It lives ONLY on the EN list and is read by index for every other
-   language (see pastFlags), so twelve locales can never disagree about what has
-   already happened. `date` is translated prose and is not machine-readable. */
-type Item = { name: string; date: string; city: string; body: string; endsBy?: string };
-type MonthBlock = { monthKey: keyof typeof COPY.en.events.months; items: Item[] };
-
-/* Every date here comes from the organiser's own site — no "Late August" guesses.
-   Until 2026-08-24 the vague ones were wrong by up to three months: Jutajaiset sat
-   in the July block but runs in October, and Simerock was billed "Late August"
-   when it had already happened on 7–8 August.
-     Qstock      24–25 Jul  qstock.fi (attendance below)
-     Elojazz     30 Jul–2 Aug  elojazz.com "Vuonna 2026 Elojazz järjestetään 30.7.–2.8.2026."
-     Simerock    7–8 Aug    simerock.com "Rovaniemen Simerock, Rovaniemellä 7.-8.8. 2026"
-     Ijahis Idja 14–15 Aug  ijahisidja.fi
-     Air Guitar  28–29 Aug  airguitarworldchampionships.com (event runs 26–29 Aug)
-     Jutajaiset  22–25 Oct  jutajaiset.nuorisoseurat.fi "järjestetään Rovaniemellä 22.–25.10.2026"
-   Qstock attendance = 40 000 over two days (2026 edition, sold out), from the
-   operator's post-festival report 26.7.2026: "Tapahtuma keräsi yhteensä 40 000
-   kävijää kahden päivän aikana."
-   https://qstock.fi/uutiset/kiitos-40-000-kertaa-loppuunmyyty-qstock-sujui-mallikkaasti/
-   Third-party write-ups quote other totals for other years; take the figure from
-   qstock.fi for the edition being described. Dates and the attendance figure must
-   stay in sync with copy.*.ts summer.e4–e8When/e8Body and home.events.e3Desc
-   across all 12 languages. */
-const EVENTS_BASE: Record<Lang, MonthBlock[]> = {
-  en: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat Indigenous Film Festival', date: 'Late Jan 2026', city: 'Inari', body: 'Indigenous film festival inside Sajos. Joik concerts, dark-time screenings, Sámi dinner programmes.', endsBy: '2026-01-31' },
-      { name: 'Arctic Lapland Rally', date: 'Jan 23–24, 2026', city: 'Rovaniemi', body: 'Two days. Roy Club sells out. The non-rally crowd treat it as Friday.', endsBy: '2026-01-24' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Sami Week / Sámi Soveeknaki', date: 'Early Feb', city: 'Rovaniemi', body: 'Reindeer races, Sámi music, joik concerts, evening cultural events.', endsBy: '2026-02-28' },
-      { name: 'Frozen People Festival', date: 'Feb 21, 2026', city: 'Oulu', body: 'European Capital of Culture winter electronic festival. Outdoor + indoor stages, –20 °C.', endsBy: '2026-02-21' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Peak Levi Concert Weeks', date: 'Mid-Feb – Mid-Apr', city: 'Levi', body: 'Hullu Poro Areena hosts Finnish touring acts every Wed–Sat. Tickets sell out a week ahead.', endsBy: '2026-04-30' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Yllas Soikoon Music Festival', date: 'Mid-April', city: 'Ylläs', body: 'End-of-season ski-festival. DJ sets on the slopes, outdoor concerts, spring sun.', endsBy: '2026-04-30' },
-      { name: 'SnowCastle final weeks', date: 'Through Apr', city: 'Kemi', body: 'Last chance for the ice bar before April thaw. Vodka shots in ice glasses.', endsBy: '2026-04-30' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Midnight Sun Window opens', date: 'Jun 6, 2026', city: 'Above Arctic Circle', body: 'Sun stops setting. Continues until July 7.', endsBy: '2026-07-07' },
-      { name: 'Midnight Sun Film Festival', date: 'Jun 10–14, 2026', city: 'Sodankylä', body: '80+ films. The 03:00 screening at the 17th-century wooden church is the most photographed.', endsBy: '2026-06-14' },
-      { name: 'Juhannus / Midsummer', date: 'Jun 19–21, 2026', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out; locals leave.', endsBy: '2026-06-21' },
-      { name: 'Air Guitar World Championships qualifier', date: 'Jun, Oulu', city: 'Oulu', body: 'Qualifier for the August Oulu finals. ECoC2026 expanded programme.', endsBy: '2026-06-30' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: 'Jul 24–25, 2026', city: 'Oulu', body: "Northern Finland's biggest rock festival. 40 000 visitors, two days, Kuusisaari park.", endsBy: '2026-07-25' },
-      { name: 'Elojazz Festival', date: 'Jul 30 – Aug 2, 2026', city: 'Oulu', body: 'Four-day jazz week: outdoor stages around Rotuaari, main concerts at Tarkastamo.', endsBy: '2026-08-02' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: 'Aug 7–8, 2026', city: 'Rovaniemi', body: 'Early-August rock festival at Ounaspaviljonki. Local Lapland crowd, smaller than Qstock but heavier.', endsBy: '2026-08-08' },
-      { name: 'Ijahis Idja Sámi Music Festival', date: 'Aug 14–15, 2026', city: 'Inari', body: 'Indigenous music festival at Sajos. The closest thing to a club night Inari has.', endsBy: '2026-08-15' },
-      { name: 'Air Guitar World Championships Final', date: 'Aug 28–29, 2026', city: 'Oulu', body: 'The actual world finals at Pokkinen park. 40 countries, locals from age 8 to 80.', endsBy: '2026-08-29' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaiset Folklore Festival', date: 'Oct 22–25, 2026', city: 'Rovaniemi', body: 'International folklore festival. Parades, performances, evening concerts.', endsBy: '2026-10-25' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpine Ski World Cup', date: 'Nov 14–15, 2026', city: 'Levi', body: 'World Cup weekend. Hullu Poro Areena hosts after-parties; book accommodation a year ahead.', endsBy: '2026-11-15' },
-      { name: 'Ruka FIS Cross-Country Opening', date: 'Nov 27–29, 2026', city: 'Ruka', body: 'World-cup season opener. Restaurant Zone at the slope base is the after-party home.', endsBy: '2026-11-29' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Christmas in Rovaniemi', date: 'Dec 1–24, 2026', city: 'Rovaniemi', body: 'Tourist peak. Bars run extended hours; Roy Club queues are 45 minutes deep on Saturdays.', endsBy: '2026-12-24' },
-      { name: "New Year's Eve fireworks", date: 'Dec 31, 2026', city: 'All cities', body: "Public fireworks at midnight: Rovaniemi central square, Oulu's market square, Levi slope.", endsBy: '2026-12-31' },
-    ]},
-  ],
-  fi: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat-alkuperäiskansojen filmifestivaali', date: 'Tammikuun loppu 2026', city: 'Inari', body: 'Alkuperäiskansojen filmifestivaali Sajoksessa. Joikukonsertit, pimeän ajan näytökset, saamelaisateriaohjelmat.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24.1.2026', city: 'Rovaniemi', body: 'Kaksi päivää. Roy Club myydään loppuun. Muutkin kuin rallikansa pitävät tätä perjantai-iltana.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Saamelaisten viikko / Sámi Soveeknaki', date: 'Helmikuun alku', city: 'Rovaniemi', body: 'Poroajot, saamelaismusiikkia, joikukonsertit, iltakulttuuritapahtumat.' },
-      { name: 'Frozen People Festival', date: '21.2.2026', city: 'Oulu', body: 'Euroopan kulttuuripääkaupungin talvinen elektronisen musiikin festivaali. Ulko- ja sisälavat, –20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Levin huippukonserttiviikot', date: 'Helmi puolivälistä huhtikuun puoliväliin', city: 'Levi', body: 'Hullu Poro Areena isännöi suomalaisia kiertueartisteja joka keskiviikosta lauantaihin. Liput myydään loppuun viikkoa etukäteen.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon -musiikkifestivaali', date: 'Huhtikuun puoliväli', city: 'Ylläs', body: 'Kauden lopun hiihtofestivaali. DJ-setit rinteillä, ulkoilmakonsertit, kevätaurinko.' },
-      { name: 'LumiLinnan viimeiset viikot', date: 'Huhtikuu', city: 'Kemi', body: 'Viimeinen mahdollisuus jääbaariin ennen huhtikuun sulamista. Vodkashottina jäälaseissa.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Keskiyön auringon ikkuna avautuu', date: '6.6.2026', city: 'Napapiirin pohjoispuoli', body: 'Aurinko lakkaa laskemasta. Jatkuu 7. heinäkuuta saakka.' },
-      { name: 'Keskiyön auringon filmifestivaali', date: '10.–14.6.2026', city: 'Sodankylä', body: 'Yli 80 elokuvaa. 03:00-näytös 1600-luvun puukirkossa on kuvatuin.' },
-      { name: 'Juhannus', date: '19.–21.6.2026', city: 'Kaikkialla', body: 'Kokot, sauna, järviuinnit, mökkiviikonloput. Kaupungit tyhjenevät; paikalliset lähtevät.' },
-      { name: 'Ilmakitaransoiton MM-karsinta', date: 'Kesäkuu, Oulu', city: 'Oulu', body: 'Karsinta elokuun Oulun finaaleihin. ECoC2026:n laajennettu ohjelma.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock-festivaali 2026', date: '24.–25.7.2026', city: 'Oulu', body: 'Pohjois-Suomen suurin rockfestivaali. 40 000 kävijää, kaksi päivää, Kuusisaaren puisto.' },
-      { name: 'Elojazz-festivaali', date: '30.7.–2.8.2026', city: 'Oulu', body: 'Nelipäiväinen jazz-viikko: ulkoilmalavat Rotuaarin ympärillä, pääkonsertit Tarkastamolla.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7.–8.8.2026', city: 'Rovaniemi', body: 'Elokuun alun rockfestivaali Ounaspaviljongilla. Paikallinen Lappi-yleisö, Qstockia pienempi mutta raskaampi.' },
-      { name: 'Ijahis Idja -saamelaismusiikkifestivaali', date: '14.–15.8.2026', city: 'Inari', body: 'Alkuperäiskansojen musiikkifestivaali Sajoksessa. Lähimpänä klubi-iltaa, mitä Inarissa tarjotaan.' },
-      { name: 'Ilmakitaransoiton MM-finaali', date: '28.–29.8.2026', city: 'Oulu', body: 'Varsinaiset MM-finaalit Pokkisen puistossa. 40 maata, paikalliset 8-vuotiaista 80-vuotiaisiin.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaiset-folkloristifestivaali', date: '22.–25.10.2026', city: 'Rovaniemi', body: 'Kansainvälinen folkloristifestivaali. Paraatit, esitykset, iltakonsertit.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Levi FIS Alpine Ski World Cup', date: '14.–15.11.2026', city: 'Levi', body: 'Maailmancup-viikonloppu. Hullu Poro Areena isännöi jatkot; varaa majoitus vuotta etukäteen.' },
-      { name: 'Rukan FIS-maastohiihdon avaus', date: '27.–29.11.2026', city: 'Ruka', body: 'Maailmancup-kauden avaus. Restaurant Zone rinteen juurella on jatkojen koti.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Joulu Rovaniemellä', date: '1.–24.12.2026', city: 'Rovaniemi', body: 'Turistihuippu. Baarit pidentävät aukioloaikoja; Roy Clubin jonot 45 minuutin pituisia lauantaisin.' },
-      { name: 'Uudenvuoden ilotulitukset', date: '31.12.2026', city: 'Kaikki kaupungit', body: 'Julkiset ilotulitukset keskiyöllä: Rovaniemen keskustaaukio, Oulun kauppatori, Levin rinne.' },
-    ]},
-  ],
-  de: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat – Indigenes Filmfestival', date: 'Ende Januar 2026', city: 'Inari', body: 'Indigenes Filmfestival im Sajos. Joik-Konzerte, Vorführungen in der Dunkelzeit, samische Dinner-Programme.' },
-      { name: 'Arctic Lapland Rally', date: '23.–24. Jan 2026', city: 'Rovaniemi', body: 'Zwei Tage. Der Roy Club ist ausverkauft. Auch Nicht-Rallye-Gäste behandeln es als Freitagabend.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Samische Woche / Sámi Soveeknaki', date: 'Anfang Februar', city: 'Rovaniemi', body: 'Rentierrennen, samische Musik, Joik-Konzerte, abendliche Kulturveranstaltungen.' },
-      { name: 'Frozen People Festival', date: '21. Feb 2026', city: 'Oulu', body: 'Winterliches Electronic-Festival zur Kulturhauptstadt Europas. Open-Air- und Indoor-Bühnen, –20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Levi-Spitzen-Konzertwochen', date: 'Mitte Feb – Mitte Apr', city: 'Levi', body: 'Hullu Poro Areena empfängt finnische Tourneeacts jeden Mi–Sa. Tickets sind eine Woche im Voraus ausverkauft.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon Musikfestival', date: 'Mitte April', city: 'Ylläs', body: 'Saisonabschluss-Skifestival. DJ-Sets an den Pisten, Open-Air-Konzerte, Frühlingssonne.' },
-      { name: 'SnowCastle letzte Wochen', date: 'Durchgehend April', city: 'Kemi', body: 'Letzte Chance auf die Eisbar vor dem April-Tauwetter. Wodka-Shots in Eisgläsern.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Mitternachtssonnen-Fenster beginnt', date: '6. Jun 2026', city: 'Nördlich des Polarkreises', body: 'Die Sonne hört auf unterzugehen. Bis zum 7. Juli.' },
-      { name: 'Filmfestival der Mitternachtssonne', date: '10.–14. Jun 2026', city: 'Sodankylä', body: 'Über 80 Filme. Die Vorführung um 03:00 Uhr in der Holzkirche aus dem 17. Jahrhundert ist die meistfotografierte.' },
-      { name: 'Juhannus / Mittsommer', date: '19.–21. Jun 2026', city: 'Überall', body: 'Lagerfeuer, Sauna, Seebaden, Hütten-Wochenenden. Die Städte leeren sich; die Einheimischen fahren raus.' },
-      { name: 'Luftgitarren-WM-Qualifikation', date: 'Juni 2026', city: 'Oulu', body: 'Qualifikation für das August-Finale in Oulu. Erweitertes Programm zur Kulturhauptstadt 2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: '24.–25. Jul 2026', city: 'Oulu', body: 'Das größte Rockfestival Nordfinnlands. 40 000 Besucher, zwei Tage, Kuusisaari-Park.' },
-      { name: 'Elojazz-Festival', date: '30. Jul – 2. Aug 2026', city: 'Oulu', body: 'Viertägige Jazzwoche: Open-Air-Bühnen rund um den Rotuaari, Hauptkonzerte im Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7.–8. Aug 2026', city: 'Rovaniemi', body: 'Rockfestival Anfang August im Ounaspaviljonki. Lokales Lappland-Publikum, kleiner als Qstock, aber härter.' },
-      { name: 'Ijahis Idja: Samisches Musikfestival', date: '14.–15. Aug 2026', city: 'Inari', body: 'Indigenes Musikfestival im Sajos. Das, was einem Clubabend in Inari am nächsten kommt.' },
-      { name: 'Luftgitarren-WM-Finale', date: '28.–29. Aug 2026', city: 'Oulu', body: 'Das eigentliche Weltfinale im Pokkinen-Park. 40 Nationen, Einheimische zwischen 8 und 80.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaiset Folklorefestival', date: '22.–25. Okt 2026', city: 'Rovaniemi', body: 'Internationales Folklorefestival. Umzüge, Auftritte, Abendkonzerte.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'FIS Ski-Weltcup alpin in Levi', date: '14.–15. Nov 2026', city: 'Levi', body: 'Weltcup-Wochenende. Hullu Poro Areena richtet die Aftershows aus; Unterkunft ein Jahr im Voraus buchen.' },
-      { name: 'FIS Langlauf-Weltcup-Auftakt in Ruka', date: '27.–29. Nov 2026', city: 'Ruka', body: 'Weltcup-Saisoneröffnung. Das Restaurant Zone an der Talstation ist das Aftershow-Zuhause.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Weihnachten in Rovaniemi', date: '1.–24. Dez 2026', city: 'Rovaniemi', body: 'Touristen-Hochsaison. Bars haben verlängerte Öffnungszeiten; samstags 45-minütige Schlangen vor dem Roy Club.' },
-      { name: 'Silvester-Feuerwerk', date: '31. Dez 2026', city: 'Alle Städte', body: 'Öffentliches Feuerwerk um Mitternacht: Hauptplatz in Rovaniemi, Marktplatz in Oulu, Skihang in Levi.' },
-    ]},
-  ],
-  it: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat, festival del cinema indigeno', date: 'Fine gen 2026', city: 'Inari', body: 'Festival del cinema indigeno dentro il Sajos. Concerti di joik, proiezioni nel periodo buio, programmi di cena sámi.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 gen 2026', city: 'Rovaniemi', body: 'Due giorni. Il Roy Club va esaurito. Anche chi non segue il rally lo tratta come un venerdì sera.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Settimana sámi / Sámi Soveeknaki', date: 'Inizio feb', city: 'Rovaniemi', body: 'Corse di renne, musica sámi, concerti di joik, eventi culturali serali.' },
-      { name: 'Frozen People Festival', date: '21 feb 2026', city: 'Oulu', body: 'Festival invernale di musica elettronica della Capitale europea della cultura. Palchi all\'aperto e al chiuso, −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Settimane dei concerti di punta a Levi', date: 'Metà feb – metà apr', city: 'Levi', body: 'L\'Hullu Poro Areena ospita artisti finlandesi in tour ogni mer–sab. I biglietti si esauriscono con una settimana di anticipo.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon, festival musicale', date: 'Metà aprile', city: 'Ylläs', body: 'Festival sciistico di fine stagione. Set DJ sulle piste, concerti all\'aperto, sole di primavera.' },
-      { name: 'Ultime settimane dello SnowCastle', date: 'Per tutto apr', city: 'Kemi', body: 'Ultima occasione per il bar di ghiaccio prima del disgelo di aprile. Shot di vodka in bicchieri di ghiaccio.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Si apre la finestra del sole di mezzanotte', date: '6 giu 2026', city: 'A nord del Circolo Polare Artico', body: 'Il sole smette di tramontare. Continua fino al 7 luglio.' },
-      { name: 'Festival del cinema del sole di mezzanotte', date: '10–14 giu 2026', city: 'Sodankylä', body: 'Oltre 80 film. La proiezione delle 03:00 nella chiesa di legno del XVII secolo è la più fotografata.' },
-      { name: 'Juhannus / Mezza estate', date: '19–21 giu 2026', city: 'Ovunque', body: 'Falò, sauna, bagni nel lago, weekend in baita. Le città si svuotano; i locali partono.' },
-      { name: 'Qualificazione ai Campionati mondiali di air guitar', date: 'Giugno, Oulu', city: 'Oulu', body: 'Qualificazione per le finali di agosto a Oulu. Programma ampliato ECoC2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Festival Qstock 2026', date: '24–25 lug 2026', city: 'Oulu', body: 'Il più grande festival rock del nord della Finlandia. 40.000 visitatori, due giorni, parco Kuusisaari.' },
-      { name: 'Festival Elojazz', date: '30 lug – 2 ago 2026', city: 'Oulu', body: 'Quattro giorni di jazz: palchi all\'aperto attorno alla Rotuaari, concerti principali al Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 ago 2026', city: 'Rovaniemi', body: 'Festival rock di inizio agosto all\'Ounaspaviljonki. Pubblico locale della Lapponia, più piccolo di Qstock ma più pesante.' },
-      { name: 'Ijahis Idja, festival di musica sámi', date: '14–15 ago 2026', city: 'Inari', body: 'Festival di musica indigena al Sajos. La cosa più vicina a una serata in club che Inari abbia.' },
-      { name: 'Finale dei Campionati mondiali di air guitar', date: '28–29 ago 2026', city: 'Oulu', body: 'Le vere finali mondiali nel parco Pokkinen. 40 nazioni, locali dagli 8 agli 80 anni.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Festival folkloristico Jutajaiset', date: '22–25 ott 2026', city: 'Rovaniemi', body: 'Festival folkloristico internazionale. Sfilate, spettacoli, concerti serali.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Coppa del Mondo FIS di sci alpino a Levi', date: '14–15 nov 2026', city: 'Levi', body: 'Weekend di Coppa del Mondo. L\'Hullu Poro Areena ospita gli after party; prenoti l\'alloggio con un anno di anticipo.' },
-      { name: 'Apertura FIS di sci di fondo a Ruka', date: '27–29 nov 2026', city: 'Ruka', body: 'Apertura della stagione di Coppa del Mondo. Il Restaurant Zone ai piedi della pista è la casa degli after party.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Natale a Rovaniemi', date: '1–24 dic 2026', city: 'Rovaniemi', body: 'Picco turistico. I bar allungano gli orari; il sabato la coda al Roy Club è di 45 minuti.' },
-      { name: 'Fuochi d\'artificio di Capodanno', date: '31 dic 2026', city: 'Tutte le città', body: 'Fuochi pubblici a mezzanotte: piazza centrale di Rovaniemi, piazza del mercato di Oulu, pista di Levi.' },
-    ]},
-  ],
-  fr: [
-    { monthKey: 'January', items: [
-      { name: 'Festival du film autochtone Skábmagovat', date: 'Fin janvier 2026', city: 'Inari', body: 'Festival du film autochtone au Sajos. Concerts de joik, projections aux heures sombres, dîners sámi au programme.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 janv. 2026', city: 'Rovaniemi', body: 'Deux jours. Le Roy Club affiche complet. Ceux qui ne suivent pas le rallye le vivent comme un grand vendredi.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Semaine sámi / Sámi Soveeknaki', date: 'Début février', city: 'Rovaniemi', body: 'Courses de rennes, musique sámi, concerts de joik, soirées culturelles.' },
-      { name: 'Frozen People Festival', date: '21 févr. 2026', city: 'Oulu', body: 'Le festival électro hivernal de la Capitale européenne de la culture. Scènes en plein air et en salle, par −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Semaines de concerts du pic de Levi', date: 'Mi-févr. – mi-avr.', city: 'Levi', body: `Le Hullu Poro Areena reçoit les artistes finlandais en tournée du mercredi au samedi. Les billets partent une semaine à l'avance.` },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Festival Ylläs Soikoon', date: 'Mi-avril', city: 'Ylläs', body: 'Le festival de fin de saison de ski. DJ sets sur les pistes, concerts en plein air, soleil de printemps.' },
-      { name: 'Dernières semaines du SnowCastle', date: `Jusqu'à fin avril`, city: 'Kemi', body: `Dernière chance pour le bar de glace avant le dégel d'avril. Shots de vodka en verres de glace.` },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Ouverture de la fenêtre du soleil de minuit', date: '6 juin 2026', city: 'Au nord du cercle polaire', body: `Le soleil cesse de se coucher. Jusqu'au 7 juillet.` },
-      { name: 'Festival du film sous le soleil de minuit', date: '10–14 juin 2026', city: 'Sodankylä', body: `Plus de 80 films. La séance de 3 h à l'église en bois du XVIIe siècle est la plus photographiée.` },
-      { name: 'Juhannus / Saint-Jean', date: '19–21 juin 2026', city: 'Partout', body: 'Feux de joie, sauna, baignades dans les lacs, week-ends au chalet. Les villes se vident ; les locaux partent.' },
-      { name: 'Qualifications des Air Guitar World Championships', date: 'Juin, Oulu', city: 'Oulu', body: `Qualifications pour les finales d'août à Oulu. Programme élargi de la Capitale de la culture 2026.` },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Festival Qstock 2026', date: '24–25 juil. 2026', city: 'Oulu', body: 'Le plus grand festival rock du nord de la Finlande. 40 000 visiteurs, deux jours, parc de Kuusisaari.' },
-      { name: 'Festival Elojazz', date: '30 juil. – 2 août 2026', city: 'Oulu', body: 'Quatre jours de jazz : scènes en plein air autour de Rotuaari, grands concerts au Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 août 2026', city: 'Rovaniemi', body: `Festival rock de début août à l'Ounaspaviljonki. Public local de Laponie, plus petit que Qstock mais plus lourd.` },
-      { name: 'Festival de musique sámi Ijahis Idja', date: '14–15 août 2026', city: 'Inari', body: 'Festival de musique autochtone au Sajos. Ce qui ressemble le plus à une soirée club à Inari.' },
-      { name: 'Finale des Air Guitar World Championships', date: '28–29 août 2026', city: 'Oulu', body: 'Les vraies finales mondiales au parc Pokkinen. 40 pays, des locaux de 8 à 80 ans.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Festival de folklore Jutajaiset', date: '22–25 oct. 2026', city: 'Rovaniemi', body: 'Festival international de folklore. Défilés, spectacles, concerts en soirée.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Coupe du monde FIS de ski alpin à Levi', date: '14–15 nov. 2026', city: 'Levi', body: `Week-end de Coupe du monde. Le Hullu Poro Areena accueille les after ; réservez l'hébergement un an à l'avance.` },
-      { name: 'Ouverture FIS de ski de fond à Ruka', date: '27–29 nov. 2026', city: 'Ruka', body: 'Ouverture de la saison de Coupe du monde. Le Restaurant Zone, au pied des pistes, est le QG des after.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Noël à Rovaniemi', date: '1–24 déc. 2026', city: 'Rovaniemi', body: 'Pic touristique. Les bars prolongent leurs horaires ; le samedi, la file du Roy Club atteint 45 minutes.' },
-      { name: `Feux d'artifice du Nouvel An`, date: '31 déc. 2026', city: 'Toutes les villes', body: `Feux publics à minuit : place centrale de Rovaniemi, place du marché d'Oulu, piste de Levi.` },
-    ]},
-  ],
-  ja: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat先住民映画祭', date: '2026年1月下旬', city: 'イナリ', body: 'Sajos館内で開かれる先住民の映画祭です。ヨイクのコンサート、極夜の上映会、サーミ料理のディナープログラムがあります。' },
-      { name: 'Arctic Lapland Rally', date: '2026年1月23〜24日', city: 'ロヴァニエミ', body: '二日間の開催です。Roy Clubは満員になります。ラリーに興味のない人たちも、金曜の夜のように楽しみます。' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'サーミ週間 / Sámi Soveeknaki', date: '2月上旬', city: 'ロヴァニエミ', body: 'トナカイレース、サーミ音楽、ヨイクのコンサート、夜の文化イベント。' },
-      { name: 'Frozen People Festival', date: '2026年2月21日', city: 'オウル', body: '欧州文化首都の冬のエレクトロニック音楽フェスです。屋外と屋内にステージがあり、気温は−20℃です。' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'レヴィのハイシーズン・コンサート週間', date: '2月中旬〜4月中旬', city: 'レヴィ', body: 'Hullu Poro Areenaには、毎週水曜から土曜まで、ツアー中のフィンランドのアーティストが出演します。チケットは一週間前に売り切れます。' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon音楽フェスティバル', date: '4月中旬', city: 'ユッラス', body: 'シーズン終わりのスキーフェス。ゲレンデでのDJセット、野外コンサート、春の日差し。' },
-      { name: 'SnowCastle最後の数週間', date: '4月いっぱい', city: 'ケミ', body: '4月の雪解け前に氷のバーを楽しめる最後のチャンスです。氷のグラスでウォッカのショットを。' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: '白夜の窓が開く', date: '2026年6月6日', city: '北極圏以北', body: '太陽が沈まなくなります。7月7日まで続きます。' },
-      { name: 'ミッドナイトサン映画祭', date: '2026年6月10〜14日', city: 'ソダンキュラ', body: '80本以上の映画。17世紀の木造教会で行われる午前3時の上映が、最も多く写真に撮られています。' },
-      { name: 'ユハンヌス（夏至祭）', date: '2026年6月19〜21日', city: '各地', body: 'かがり火、サウナ、湖での水浴び、コテージで過ごす週末。地元の人が出ていき、街は空っぽになります。' },
-      { name: 'エアギター世界選手権・予選', date: '6月、オウル', city: 'オウル', body: '8月にオウルで開かれる決勝への予選です。欧州文化首都2026の拡大プログラムの一環です。' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstockフェスティバル2026', date: '2026年7月24〜25日', city: 'オウル', body: '北フィンランド最大のロックフェス。来場者40,000人、二日間、会場はKuusisaari公園。' },
-      { name: 'Elojazzフェスティバル', date: '2026年7月30日〜8月2日', city: 'オウル', body: '四日間のジャズウィーク。Rotuaari周辺に屋外ステージが並び、メインコンサートはTarkastamoで開かれます。' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '2026年8月7〜8日', city: 'ロヴァニエミ', body: '8月初旬にOunaspaviljonkiで開かれるロックフェス。ラップランドの地元客が中心で、Qstockより小規模ですが、よりヘヴィです。' },
-      { name: 'Ijahis Idjaサーミ音楽フェスティバル', date: '2026年8月14〜15日', city: 'イナリ', body: 'Sajosで開かれる先住民の音楽フェス。イナリで最もクラブイベントに近い存在です。' },
-      { name: 'エアギター世界選手権・決勝', date: '2026年8月28〜29日', city: 'オウル', body: 'Pokkinen公園で行われる、本番の世界決勝です。40か国が参加し、会場には8歳から80歳までの地元の人たちが集まります。' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaisetフォークロア・フェスティバル', date: '2026年10月22〜25日', city: 'ロヴァニエミ', body: '国際フォークロア祭。パレード、パフォーマンス、夜のコンサート。' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'FISアルペンスキー・ワールドカップ（レヴィ）', date: '2026年11月14〜15日', city: 'レヴィ', body: 'ワールドカップの週末。Hullu Poro Areenaでアフターパーティーが開かれます。宿泊は一年前に予約してください。' },
-      { name: 'FISクロスカントリースキー開幕戦（ルカ）', date: '2026年11月27〜29日', city: 'ルカ', body: 'ワールドカップシーズンの開幕戦。ゲレンデのふもとにあるRestaurant Zoneが、アフターパーティーの拠点です。' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'ロヴァニエミのクリスマス', date: '2026年12月1〜24日', city: 'ロヴァニエミ', body: '観光のピーク。バーは営業時間を延長し、土曜日のRoy Clubには45分待ちの行列ができます。' },
-      { name: '大晦日の花火', date: '2026年12月31日', city: '各都市', body: '真夜中、ロヴァニエミの中央広場、オウルのマーケット広場、レヴィのゲレンデで、誰でも見られる花火が上がります。' },
-    ]},
-  ],
-  es: [
-    { monthKey: 'January', items: [
-      { name: 'Festival de cine indígena Skábmagovat', date: 'Finales de enero de 2026', city: 'Inari', body: 'Festival de cine indígena en el Sajos. Conciertos de joik, proyecciones en la noche polar y cenas samis.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 ene de 2026', city: 'Rovaniemi', body: 'Dos días. El Roy Club se llena por completo. Incluso quienes no siguen el rally lo viven como un viernes por la noche.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Semana Sami / Sámi Soveeknaki', date: 'Principios de febrero', city: 'Rovaniemi', body: 'Carreras de renos, música sami, conciertos de joik y eventos culturales por la noche.' },
-      { name: 'Frozen People Festival', date: '21 feb de 2026', city: 'Oulu', body: 'Festival invernal de música electrónica de la Capital Europea de la Cultura. Escenarios al aire libre y bajo techo, a −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Semanas de conciertos de temporada alta en Levi', date: 'Mediados de feb – mediados de abr', city: 'Levi', body: 'El Hullu Poro Areena recibe a artistas finlandeses de gira cada semana, de miércoles a sábado. Las entradas se agotan con una semana de anticipación.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Festival de música Ylläs Soikoon', date: 'Mediados de abril', city: 'Ylläs', body: 'Festival de esquí de fin de temporada. Sesiones de DJ en las pistas, conciertos al aire libre y sol de primavera.' },
-      { name: 'Últimas semanas del SnowCastle', date: 'Todo abril', city: 'Kemi', body: 'Última oportunidad para el bar de hielo antes del deshielo de abril. Shots de vodka en vasos de hielo.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Se abre la ventana del sol de medianoche', date: '6 jun de 2026', city: 'Al norte del Círculo Polar Ártico', body: 'El sol deja de ponerse. Sigue así hasta el 7 de julio.' },
-      { name: 'Festival de cine del sol de medianoche', date: '10–14 jun de 2026', city: 'Sodankylä', body: 'Más de 80 películas. La proyección de las 03:00 en la iglesia de madera del siglo XVII es la más fotografiada.' },
-      { name: 'Juhannus / San Juan', date: '19–21 jun de 2026', city: 'En todas partes', body: 'Fogatas, sauna, baños en lagos y fines de semana en la cabaña. Las ciudades se vacían y la gente local se marcha.' },
-      { name: 'Clasificatoria de los Mundiales de Air Guitar', date: 'Junio, Oulu', city: 'Oulu', body: 'Clasificatoria para la final de agosto en Oulu. Programa ampliado de la Capital Europea de la Cultura 2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Festival Qstock 2026', date: '24–25 jul de 2026', city: 'Oulu', body: 'El mayor festival de rock del norte de Finlandia. 40.000 visitantes, dos días, parque Kuusisaari.' },
-      { name: 'Festival Elojazz', date: '30 jul – 2 ago de 2026', city: 'Oulu', body: 'Cuatro días de jazz: escenarios al aire libre alrededor de Rotuaari y conciertos principales en Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 ago de 2026', city: 'Rovaniemi', body: 'Festival de rock de principios de agosto en el Ounaspaviljonki. Público local de Laponia. Más pequeño que Qstock, pero con música más pesada.' },
-      { name: 'Festival de música sami Ijahis Idja', date: '14–15 ago de 2026', city: 'Inari', body: 'Festival de música indígena en el Sajos. Lo más parecido a una noche de club que tiene Inari.' },
-      { name: 'Final de los Mundiales de Air Guitar', date: '28–29 ago de 2026', city: 'Oulu', body: 'La verdadera final mundial, en el parque Pokkinen. 40 países y gente local de 8 a 80 años.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Festival de folclore Jutajaiset', date: '22–25 oct de 2026', city: 'Rovaniemi', body: 'Festival internacional de folclore. Desfiles, espectáculos y conciertos nocturnos.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Copa del Mundo FIS de esquí alpino en Levi', date: '14–15 nov de 2026', city: 'Levi', body: 'Fin de semana de Copa del Mundo. El Hullu Poro Areena acoge las fiestas después de las carreras; reserve el alojamiento con un año de anticipación.' },
-      { name: 'Apertura FIS de esquí de fondo en Ruka', date: '27–29 nov de 2026', city: 'Ruka', body: 'Inicio de la temporada de Copa del Mundo. El Restaurant Zone, al pie de las pistas, es donde se celebran las fiestas después de las carreras.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Navidad en Rovaniemi', date: '1–24 dic de 2026', city: 'Rovaniemi', body: 'Temporada alta turística. Los bares amplían su horario; los sábados, la fila del Roy Club llega a 45 minutos.' },
-      { name: 'Fuegos artificiales de Año Nuevo', date: '31 dic de 2026', city: 'Todas las ciudades', body: 'Fuegos artificiales públicos a medianoche: plaza central de Rovaniemi, plaza del mercado de Oulu y pista de Levi.' },
-    ]},
-  ],
-  'pt-BR': [
-    { monthKey: 'January', items: [
-      { name: 'Festival de cinema indígena Skábmagovat', date: 'Fim de janeiro de 2026', city: 'Inari', body: 'Festival de cinema indígena no Sajos. Shows de joik, sessões na noite polar e jantares sámi.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 jan de 2026', city: 'Rovaniemi', body: 'Dois dias. O Roy Club lota. Mesmo quem não liga para o rali sai como se fosse sexta à noite.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Semana Sámi / Sámi Soveeknaki', date: 'Início de fevereiro', city: 'Rovaniemi', body: 'Corridas de renas, música sámi, shows de joik e eventos culturais à noite.' },
-      { name: 'Frozen People Festival', date: '21 fev de 2026', city: 'Oulu', body: 'Festival de inverno de música eletrônica da Capital Europeia da Cultura. Palcos ao ar livre e cobertos, a −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Semanas de shows da alta temporada em Levi', date: 'Meados de fev – meados de abr', city: 'Levi', body: 'O Hullu Poro Areena recebe artistas finlandeses em turnê toda semana, de quarta a sábado. Os ingressos esgotam com uma semana de antecedência.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Festival de música Ylläs Soikoon', date: 'Meados de abril', city: 'Ylläs', body: 'Festival de esqui de fim de temporada. Sets de DJ nas pistas, shows ao ar livre e sol de primavera.' },
-      { name: 'Últimas semanas do SnowCastle', date: 'Abril inteiro', city: 'Kemi', body: 'Última chance de curtir o bar de gelo antes do degelo de abril. Doses de vodca em copos de gelo.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'A janela do sol da meia-noite se abre', date: '6 jun de 2026', city: 'Ao norte do Círculo Polar Ártico', body: 'O sol para de se pôr. Segue assim até 7 de julho.' },
-      { name: 'Festival de cinema do sol da meia-noite', date: '10–14 jun de 2026', city: 'Sodankylä', body: 'Mais de 80 filmes. A sessão das 03:00 na igreja de madeira do século XVII é a mais fotografada.' },
-      { name: 'Juhannus / Solstício de verão', date: '19–21 jun de 2026', city: 'Em toda parte', body: 'Fogueiras, sauna, banhos de lago e fins de semana na cabana. As cidades se esvaziam e os moradores vão embora.' },
-      { name: 'Classificatória do Mundial de Air Guitar', date: 'Junho, Oulu', city: 'Oulu', body: 'Classificatória para a final de agosto em Oulu. Programação ampliada da Capital Europeia da Cultura 2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Festival Qstock 2026', date: '24–25 jul de 2026', city: 'Oulu', body: 'O maior festival de rock do norte da Finlândia. 40.000 visitantes, dois dias, parque Kuusisaari.' },
-      { name: 'Festival Elojazz', date: '30 jul – 2 ago de 2026', city: 'Oulu', body: 'Quatro dias de jazz: palcos ao ar livre em volta do Rotuaari e shows principais no Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 ago de 2026', city: 'Rovaniemi', body: 'Festival de rock do início de agosto no Ounaspaviljonki. Público local da Lapônia. Menor que o Qstock, mas com som mais pesado.' },
-      { name: 'Festival de música sámi Ijahis Idja', date: '14–15 ago de 2026', city: 'Inari', body: 'Festival de música indígena no Sajos. O mais perto de uma noite de balada que Inari tem.' },
-      { name: 'Final do Mundial de Air Guitar', date: '28–29 ago de 2026', city: 'Oulu', body: 'A verdadeira final mundial, no parque Pokkinen. 40 países e moradores de 8 a 80 anos.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Festival de folclore Jutajaiset', date: '22–25 out de 2026', city: 'Rovaniemi', body: 'Festival internacional de folclore. Desfiles, apresentações e shows à noite.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'Copa do Mundo FIS de esqui alpino em Levi', date: '14–15 nov de 2026', city: 'Levi', body: 'Fim de semana de Copa do Mundo. O Hullu Poro Areena recebe as festas pós-prova; reserve a hospedagem com um ano de antecedência.' },
-      { name: 'Abertura FIS de esqui cross-country em Ruka', date: '27–29 nov de 2026', city: 'Ruka', body: 'Abertura da temporada da Copa do Mundo. O Restaurant Zone, ao pé das pistas, é onde rolam as festas pós-prova.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Natal em Rovaniemi', date: '1–24 dez de 2026', city: 'Rovaniemi', body: 'Pico do turismo. Os bares estendem o horário; aos sábados, a fila do Roy Club chega a 45 minutos.' },
-      { name: 'Fogos de Ano-Novo', date: '31 dez de 2026', city: 'Todas as cidades', body: 'Fogos públicos à meia-noite: praça central de Rovaniemi, praça do mercado de Oulu e pista de Levi.' },
-    ]},
-  ],
-  'zh-CN': [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat 原住民电影节', date: '2026 年 1 月下旬', city: '伊纳里', body: '在 Sajos 举办的原住民电影节。约伊克（joik）音乐会、极夜放映和萨米晚餐活动。' },
-      { name: 'Arctic Lapland Rally', date: '2026 年 1 月 23–24 日', city: '罗瓦涅米', body: '为期两天。Roy Club 爆满。不看拉力赛的人，也把这两天当周五晚上来过。' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: '萨米周 / Sámi Soveeknaki', date: '2 月上旬', city: '罗瓦涅米', body: '驯鹿赛跑、萨米音乐、约伊克音乐会和晚间文化活动。' },
-      { name: 'Frozen People Festival', date: '2026 年 2 月 21 日', city: '奥卢', body: '欧洲文化之都的冬季电子音乐节。户外和室内都有舞台，气温零下 20 °C。' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: '莱维旺季音乐会周', date: '2 月中旬 – 4 月中旬', city: '莱维', body: 'Hullu Poro Areena 每周三至周六都有芬兰巡演艺人登台。门票提前一周售罄。' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon 音乐节', date: '4 月中旬', city: '于拉斯', body: '雪季收尾的滑雪音乐节。雪道上的 DJ 表演、户外音乐会和春日阳光。' },
-      { name: 'SnowCastle 最后几周', date: '整个 4 月', city: '凯米', body: '4 月冰雪消融前体验冰吧的最后机会。用冰杯喝伏特加。' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: '午夜阳光窗口开启', date: '2026 年 6 月 6 日', city: '北极圈以北', body: '太阳不再落下，一直持续到 7 月 7 日。' },
-      { name: '午夜阳光电影节', date: '2026 年 6 月 10–14 日', city: '索丹屈莱', body: '80 多部电影。在 17 世纪木教堂举行的凌晨 3 点放映，是被拍得最多的一场。' },
-      { name: 'Juhannus / 仲夏节', date: '2026 年 6 月 19–21 日', city: '各地', body: '篝火、桑拿、湖中游泳，在小屋度周末。城市变得空荡，本地人纷纷离开。' },
-      { name: '空气吉他世锦赛预选赛', date: '6 月，奥卢', city: '奥卢', body: '8 月奥卢决赛的预选赛。欧洲文化之都 2026 扩展项目之一。' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock 音乐节 2026', date: '2026 年 7 月 24–25 日', city: '奥卢', body: '北芬兰规模最大的摇滚音乐节。40,000 名观众，为期两天，地点在 Kuusisaari 公园。' },
-      { name: 'Elojazz 音乐节', date: '2026 年 7 月 30 日 – 8 月 2 日', city: '奥卢', body: '为期四天的爵士周：Rotuaari 周边设有户外舞台，主要音乐会在 Tarkastamo 举行。' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '2026 年 8 月 7–8 日', city: '罗瓦涅米', body: '八月初在 Ounaspaviljonki 举办的摇滚音乐节。以拉普兰本地观众为主，规模比 Qstock 小，但风格更重。' },
-      { name: 'Ijahis Idja 萨米音乐节', date: '2026 年 8 月 14–15 日', city: '伊纳里', body: '在 Sajos 举办的原住民音乐节，是伊纳里最接近夜店派对的活动。' },
-      { name: '空气吉他世锦赛决赛', date: '2026 年 8 月 28–29 日', city: '奥卢', body: '在 Pokkinen 公园举行的正式世界决赛。40 个国家参赛，现场从 8 岁到 80 岁的本地人都有。' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaiset 民间艺术节', date: '2026 年 10 月 22–25 日', city: '罗瓦涅米', body: '国际民间艺术节。游行、表演和晚间音乐会。' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: '莱维 FIS 高山滑雪世界杯', date: '2026 年 11 月 14–15 日', city: '莱维', body: '世界杯周末。Hullu Poro Areena 举办赛后派对；请提前一年预订住宿。' },
-      { name: '鲁卡 FIS 越野滑雪揭幕战', date: '2026 年 11 月 27–29 日', city: '鲁卡', body: '世界杯赛季的揭幕战。雪道脚下的 Restaurant Zone 是赛后派对的大本营。' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: '罗瓦涅米的圣诞节', date: '2026 年 12 月 1–24 日', city: '罗瓦涅米', body: '旅游高峰期。酒吧延长营业时间；周六 Roy Club 门口要排队 45 分钟。' },
-      { name: '跨年烟花', date: '2026 年 12 月 31 日', city: '所有城市', body: '午夜有面向公众的烟花表演：罗瓦涅米中央广场、奥卢集市广场和莱维雪道。' },
-    ]},
-  ],
-  ko: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat 원주민 영화제', date: '2026년 1월 하순', city: '이나리', body: 'Sajos에서 열리는 원주민 영화제입니다. 요이크 콘서트, 극야 상영회, 사미 디너 프로그램이 이어집니다.' },
-      { name: 'Arctic Lapland Rally', date: '2026년 1월 23–24일', city: '로바니에미', body: '이틀간 열립니다. Roy Club은 사람들로 가득 찹니다. 랠리 팬이 아닌 사람들도 금요일 밤처럼 즐깁니다.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: '사미 주간 / Sámi Soveeknaki', date: '2월 초', city: '로바니에미', body: '순록 경주, 사미 음악, 요이크 콘서트, 저녁 문화 행사가 열립니다.' },
-      { name: 'Frozen People Festival', date: '2026년 2월 21일', city: '오울루', body: '유럽 문화 수도의 겨울 전자음악 페스티벌입니다. 야외와 실내에 무대가 있으며, 기온은 영하 20°C입니다.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: '레비 성수기 콘서트 주간', date: '2월 중순 – 4월 중순', city: '레비', body: 'Hullu Poro Areena에서 매주 수요일부터 토요일까지 투어 중인 핀란드 아티스트들이 공연합니다. 티켓은 일주일 전에 매진됩니다.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Ylläs Soikoon 음악 페스티벌', date: '4월 중순', city: '윌래스', body: '시즌을 마무리하는 스키 페스티벌입니다. 슬로프 위 DJ 세트, 야외 콘서트, 봄 햇살.' },
-      { name: 'SnowCastle 마지막 몇 주', date: '4월 내내', city: '케미', body: '4월 해빙 전에 얼음 바를 즐길 수 있는 마지막 기회입니다. 얼음잔에 담긴 보드카 샷.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: '백야의 창 시작', date: '2026년 6월 6일', city: '북극권 이북', body: '해가 더 이상 지지 않습니다. 7월 7일까지 이어집니다.' },
-      { name: '백야 영화제', date: '2026년 6월 10–14일', city: '소단퀼래', body: '80편 이상의 영화. 17세기 목조 교회에서 열리는 03:00 상영이 가장 많이 사진에 담깁니다.' },
-      { name: 'Juhannus / 하지절', date: '2026년 6월 19–21일', city: '전국 각지', body: '모닥불, 사우나, 호수 수영, 오두막에서 보내는 주말. 현지인들이 떠나면서 도시는 텅 빕니다.' },
-      { name: '에어 기타 세계 선수권 예선', date: '6월, 오울루', city: '오울루', body: '8월 오울루 결승을 위한 예선입니다. 유럽 문화 수도 2026 확대 프로그램의 일부입니다.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock 페스티벌 2026', date: '2026년 7월 24–25일', city: '오울루', body: '북부 핀란드 최대의 록 페스티벌입니다. 방문객 40,000명, 이틀간, Kuusisaari 공원.' },
-      { name: 'Elojazz 페스티벌', date: '2026년 7월 30일 – 8월 2일', city: '오울루', body: '나흘간의 재즈 주간입니다. Rotuaari 주변에 야외 무대가 서고, 메인 콘서트는 Tarkastamo에서 열립니다.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '2026년 8월 7–8일', city: '로바니에미', body: 'Ounaspaviljonki에서 열리는 8월 초 록 페스티벌입니다. 라플란드 현지 관객이 중심이며, Qstock보다 작지만 더 묵직합니다.' },
-      { name: 'Ijahis Idja 사미 음악 페스티벌', date: '2026년 8월 14–15일', city: '이나리', body: 'Sajos에서 열리는 원주민 음악 페스티벌입니다. 이나리에서 클럽 분위기에 가장 가까운 행사입니다.' },
-      { name: '에어 기타 세계 선수권 결승', date: '2026년 8월 28–29일', city: '오울루', body: 'Pokkinen 공원에서 열리는 진짜 세계 결승전입니다. 40개국이 참가하고, 현장에는 8세부터 80세까지의 현지인들이 모여듭니다.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Jutajaiset 민속 페스티벌', date: '2026년 10월 22–25일', city: '로바니에미', body: '국제 민속 페스티벌입니다. 퍼레이드, 공연, 저녁 콘서트가 열립니다.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: '레비 FIS 알파인 스키 월드컵', date: '2026년 11월 14–15일', city: '레비', body: '월드컵 주말입니다. Hullu Poro Areena에서 애프터파티가 열립니다. 숙소는 일 년 전에 예약하세요.' },
-      { name: '루카 FIS 크로스컨트리 스키 개막전', date: '2026년 11월 27–29일', city: '루카', body: '월드컵 시즌의 개막전입니다. 슬로프 아래의 Restaurant Zone이 애프터파티의 본거지입니다.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: '로바니에미의 크리스마스', date: '2026년 12월 1–24일', city: '로바니에미', body: '관광 성수기입니다. 바들은 영업시간을 연장하고, 토요일 Roy Club 대기 줄은 45분에 달합니다.' },
-      { name: '새해 전야 불꽃놀이', date: '2026년 12월 31일', city: '모든 도시', body: '자정에는 로바니에미 중앙 광장, 오울루 마켓 광장, 레비 슬로프에서 누구나 볼 수 있는 불꽃놀이가 열립니다.' },
-    ]},
-  ],
-  nl: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat, festival voor inheemse film', date: 'Eind jan 2026', city: 'Inari', body: 'Festival voor inheemse film in het Sajos. Joikconcerten, voorstellingen in de poolnacht en Samische dinerprogramma’s.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 jan 2026', city: 'Rovaniemi', body: 'Twee dagen. De Roy Club zit bomvol. Ook wie niets met rally heeft, viert het als een vrijdagavond.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Samische week / Sámi Soveeknaki', date: 'Begin feb', city: 'Rovaniemi', body: 'Rendierraces, Samische muziek, joikconcerten en culturele avondprogramma’s.' },
-      { name: 'Frozen People Festival', date: '21 feb 2026', city: 'Oulu', body: 'Winters elektronisch festival van de Culturele Hoofdstad van Europa. Podia buiten en binnen, bij −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Concertweken in het hoogseizoen van Levi', date: 'Half feb – half apr', city: 'Levi', body: 'Hullu Poro Areena haalt elke week van woensdag tot en met zaterdag Finse artiesten op tournee binnen. Kaartjes zijn een week van tevoren uitverkocht.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Muziekfestival Ylläs Soikoon', date: 'Half april', city: 'Ylläs', body: 'Skifestival aan het eind van het seizoen. Dj-sets op de pistes, openluchtconcerten en voorjaarszon.' },
-      { name: 'Laatste weken van het SnowCastle', date: 'Heel april', city: 'Kemi', body: 'Laatste kans om naar de ijsbar te gaan, vóór de dooi in april. Wodkashots in glazen van ijs.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Het middernachtzon-venster gaat open', date: '6 jun 2026', city: 'Ten noorden van de poolcirkel', body: 'De zon gaat niet meer onder. Dat duurt tot 7 juli.' },
-      { name: 'Midnight Sun Film Festival', date: '10–14 jun 2026', city: 'Sodankylä', body: 'Meer dan 80 films. De vertoning om 03:00 in de houten kerk uit de 17e eeuw is de meest gefotografeerde.' },
-      { name: 'Juhannus / Midzomer', date: '19–21 jun 2026', city: 'Overal', body: 'Vreugdevuren, sauna, zwemmen in meren en weekenden in de hut. De steden lopen leeg en de inwoners trekken erop uit.' },
-      { name: 'Kwalificatie voor de Air Guitar World Championships', date: 'Juni, Oulu', city: 'Oulu', body: 'Kwalificatie voor de finales in augustus in Oulu. Uitgebreid programma van Culturele Hoofdstad 2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: '24–25 jul 2026', city: 'Oulu', body: 'Het grootste rockfestival van Noord-Finland. 40.000 bezoekers, twee dagen, park Kuusisaari.' },
-      { name: 'Elojazz Festival', date: '30 jul – 2 aug 2026', city: 'Oulu', body: 'Vier dagen jazz: openluchtpodia rond de Rotuaari en de grote concerten in Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 aug 2026', city: 'Rovaniemi', body: 'Rockfestival begin augustus in Ounaspaviljonki. Lokaal publiek uit Lapland. Kleiner dan Qstock, maar met zwaardere muziek.' },
-      { name: 'Ijahis Idja, Samisch muziekfestival', date: '14–15 aug 2026', city: 'Inari', body: 'Festival voor inheemse muziek in het Sajos. Wat in Inari het meest op een clubavond lijkt.' },
-      { name: 'Finale van de Air Guitar World Championships', date: '28–29 aug 2026', city: 'Oulu', body: 'De echte wereldfinale, in park Pokkinen. 40 landen, inwoners van 8 tot 80 jaar.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Folklorefestival Jutajaiset', date: '22–25 okt 2026', city: 'Rovaniemi', body: 'Internationaal folklorefestival. Optochten, voorstellingen en avondconcerten.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'FIS-wereldbeker alpineskiën in Levi', date: '14–15 nov 2026', city: 'Levi', body: 'Wereldbekerweekend. Hullu Poro Areena verzorgt de afterparty’s; boek uw accommodatie een jaar van tevoren.' },
-      { name: 'FIS-seizoensopening langlaufen in Ruka', date: '27–29 nov 2026', city: 'Ruka', body: 'Opening van het wereldbekerseizoen. Restaurant Zone aan de voet van de piste is de thuisbasis van de afterparty’s.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Kerstmis in Rovaniemi', date: '1–24 dec 2026', city: 'Rovaniemi', body: 'Toeristische piek. Bars zijn langer open; op zaterdag staat u bij de Roy Club 45 minuten in de rij.' },
-      { name: 'Oudejaarsvuurwerk', date: '31 dec 2026', city: 'Alle steden', body: 'Openbaar vuurwerk om middernacht: het centrale plein van Rovaniemi, de markt van Oulu en de piste van Levi.' },
-    ]},
-  ],
-  sv: [
-    { monthKey: 'January', items: [
-      { name: 'Skábmagovat, urfolksfilmfestival', date: 'Slutet av jan 2026', city: 'Inari', body: 'Urfolksfilmfestival i Sajos. Jojkkonserter, visningar under polarnatten och samiska middagsprogram.' },
-      { name: 'Arctic Lapland Rally', date: '23–24 jan 2026', city: 'Rovaniemi', body: 'Två dagar. Roy Club blir fullsatt. Även de som inte bryr sig om rallyt firar det som en fredagskväll.' },
-    ]},
-    { monthKey: 'February', items: [
-      { name: 'Samiska veckan / Sámi Soveeknaki', date: 'Början av feb', city: 'Rovaniemi', body: 'Renkapplöpning, samisk musik, jojkkonserter och kulturevenemang på kvällarna.' },
-      { name: 'Frozen People Festival', date: '21 feb 2026', city: 'Oulu', body: 'Europeiska kulturhuvudstadens elektroniska vinterfestival. Scener ute och inne, −20 °C.' },
-    ]},
-    { monthKey: 'March', items: [
-      { name: 'Konsertveckor under högsäsongen i Levi', date: 'Mitten av feb – mitten av apr', city: 'Levi', body: 'Hullu Poro Areena tar emot turnerande finska artister varje vecka, onsdag till lördag. Biljetterna är slutsålda en vecka i förväg.' },
-    ]},
-    { monthKey: 'April', items: [
-      { name: 'Musikfestivalen Ylläs Soikoon', date: 'Mitten av april', city: 'Ylläs', body: 'Skidfestival i slutet av säsongen. DJ-set i backarna, utomhuskonserter och vårsol.' },
-      { name: 'SnowCastles sista veckor', date: 'Hela april', city: 'Kemi', body: 'Sista chansen att besöka isbaren innan den smälter i april. Vodkashots i glas av is.' },
-    ]},
-    { monthKey: 'June', items: [
-      { name: 'Midnattssolsfönstret öppnar', date: '6 juni 2026', city: 'Norr om polcirkeln', body: 'Solen slutar gå ner. Det håller i sig till 7 juli.' },
-      { name: 'Midnight Sun Film Festival', date: '10–14 juni 2026', city: 'Sodankylä', body: 'Fler än 80 filmer. Visningen klockan 03:00 i träkyrkan från 1600-talet är den mest fotograferade.' },
-      { name: 'Juhannus / midsommar', date: '19–21 juni 2026', city: 'Överallt', body: 'Brasor, bastu, sjöbad och helger i stugan. Städerna töms och lokalborna åker därifrån.' },
-      { name: 'Kval till Air Guitar World Championships', date: 'Juni, Oulu', city: 'Oulu', body: 'Kval till finalerna i Oulu i augusti. Utökat program under kulturhuvudstadsåret 2026.' },
-    ]},
-    { monthKey: 'July', items: [
-      { name: 'Qstock Festival 2026', date: '24–25 juli 2026', city: 'Oulu', body: 'Norra Finlands största rockfestival. 40 000 besökare, två dagar, Kuusisaari-parken.' },
-      { name: 'Elojazz Festival', date: '30 juli – 2 aug 2026', city: 'Oulu', body: 'Fyra dagars jazz: utomhusscener runt Rotuaari och huvudkonserterna på Tarkastamo.' },
-    ]},
-    { monthKey: 'August', items: [
-      { name: 'Simerock', date: '7–8 aug 2026', city: 'Rovaniemi', body: 'Rockfestival i början av augusti i Ounaspaviljonki. Lokal publik från Lappland. Mindre än Qstock, men med tyngre musik.' },
-      { name: 'Ijahis Idja, samisk musikfestival', date: '14–15 aug 2026', city: 'Inari', body: 'Urfolksmusikfestival i Sajos. Det närmaste en klubbkväll som Inari har.' },
-      { name: 'Final i Air Guitar World Championships', date: '28–29 aug 2026', city: 'Oulu', body: 'De riktiga världsfinalerna, i Pokkinen-parken. 40 länder och lokalbor från 8 till 80 år.' },
-    ]},
-    { monthKey: 'October', items: [
-      { name: 'Folklorefestivalen Jutajaiset', date: '22–25 okt 2026', city: 'Rovaniemi', body: 'Internationell folklorefestival. Parader, uppträdanden och kvällskonserter.' },
-    ]},
-    { monthKey: 'November', items: [
-      { name: 'FIS-världscupen i alpint i Levi', date: '14–15 nov 2026', city: 'Levi', body: 'Världscuphelg. Hullu Poro Areena håller i efterfesterna; boka boende ett år i förväg.' },
-      { name: 'FIS-premiären i längdskidåkning i Ruka', date: '27–29 nov 2026', city: 'Ruka', body: 'Världscupsäsongens första tävlingar. Restaurant Zone vid backens fot är där efterfesterna hålls.' },
-    ]},
-    { monthKey: 'December', items: [
-      { name: 'Jul i Rovaniemi', date: '1–24 dec 2026', city: 'Rovaniemi', body: 'Högsäsong för turister. Barerna har förlängda öppettider; på lördagar är kön till Roy Club 45 minuter lång.' },
-      { name: 'Nyårsfyrverkerier', date: '31 dec 2026', city: 'Alla städer', body: 'Offentliga fyrverkerier vid midnatt: Rovaniemis centrala torg, Oulus salutorg och backen i Levi.' },
-    ]},
-  ],
+type CalendarEvent = {
+  /** Pysyvä tunniste (kuvakartta, kesäsivu). Ei käänny. */
+  id: string;
+  /** Ensimmäinen ja viimeinen päivä, ISO. `end` puuttuu = yksipäiväinen. */
+  start: string;
+  end?: string;
+  t: Record<Lang, Text>;
 };
 
-/* Every language has its own list. Until 2026-09-28 ja, es, pt-BR, zh-CN, ko, nl
-   and sv fell back to EVENTS_BASE.en, so readers of seven languages saw the event
-   calendar and the homepage event cards in English (measured on the live site:
-   /kr/events/, /ja/, /cn/, /br/ …). The Record<Lang, …> type now fails the build
-   if a language is missing, instead of silently showing English. */
-const EVENTS: Record<Lang, MonthBlock[]> = EVENTS_BASE;
+/** Palaava tapahtuma, jonka seuraavaa päivää järjestäjä ei ole vielä julkaissut. */
+type PendingEvent = { id: string; lastStart: string; lastEnd?: string; t: Record<Lang, Omit<Text, 'body'>> };
 
-// Real count of events on this page, derived from the EN source list so the
-// hero eyebrow can never drift from the calendar below (was a hardcoded "20"
-// while the list held 21).
-const EVENT_COUNT = EVENTS_BASE.en.reduce((n, m) => n + m.items.length, 0);
+const CALENDAR: CalendarEvent[] = [
+  // jutajaiset.nuorisoseurat.fi: "Jutajaiset järjestetään 53:n kerran 22.-25.10.2026"; ohjelma: pe 23.10.
+  // "Konsertti Pakkasfolk klo 18.00-21.00 … pelimannitanssit" (luettu 16.10.2026).
+  { id: 'jutajaiset', start: '2026-10-22', end: '2026-10-25', t: {
+    en: { name: 'Jutajaiset Folk Festival', city: 'Rovaniemi', body: "Northern folk festival, held for the 53rd time. Most of the programme is daytime workshops; on Friday evening a concert turns into fiddlers' dances." },
+    fi: { name: 'Jutajaiset-folkfestivaali', city: 'Rovaniemi', body: 'Pohjoisen folkin festivaali, nyt 53. kertaa. Suurin osa ohjelmasta on päiväkursseja; perjantai-iltana konsertti vaihtuu pelimannitansseiksi.' },
+    de: { name: 'Jutajaiset Folkfestival', city: 'Rovaniemi', body: 'Festival für Folkmusik aus dem Norden, zum 53. Mal. Das meiste sind Workshops am Tag; am Freitagabend geht ein Konzert in Spielmannstänze über.' },
+    ja: { name: 'Jutajaisetフォーク・フェスティバル', city: 'ロヴァニエミ', body: '北のフォークの祭典で、今回が53回目。プログラムの多くは昼間のワークショップで、金曜の夜はコンサートからフィドル奏者の演奏によるダンスへと続きます。' },
+    es: { name: 'Festival de folk Jutajaiset', city: 'Rovaniemi', body: 'Festival de folk del norte, en su 53.ª edición. La mayor parte del programa son talleres de día; el viernes por la noche, un concierto se convierte en baile tradicional.' },
+    'pt-BR': { name: 'Festival de folk Jutajaiset', city: 'Rovaniemi', body: 'Festival de folk do norte, na 53ª edição. A maior parte da programação são oficinas durante o dia; na sexta à noite, um show vira baile tradicional.' },
+    'zh-CN': { name: 'Jutajaiset 民谣节', city: '罗瓦涅米', body: '北方民谣节，今年是第 53 届。大部分节目是白天的工作坊；周五晚上，一场音乐会会接着变成民间乐手伴奏的舞会。' },
+    ko: { name: 'Jutajaiset 포크 페스티벌', city: '로바니에미', body: '북부 포크 음악 축제로, 올해 53회째입니다. 프로그램 대부분은 낮 워크숍이고, 금요일 밤에는 콘서트가 전통 악사들의 댄스로 이어집니다.' },
+    fr: { name: 'Festival folk Jutajaiset', city: 'Rovaniemi', body: "Festival de folk du Nord, dans sa 53e édition. L'essentiel du programme, ce sont des ateliers en journée ; le vendredi soir, un concert se termine en bal de ménétriers." },
+    it: { name: 'Festival folk Jutajaiset', city: 'Rovaniemi', body: 'Festival di folk del Nord, alla 53ª edizione. Il programma è fatto soprattutto di laboratori diurni; il venerdì sera un concerto si trasforma in balli tradizionali.' },
+    nl: { name: 'Folkfestival Jutajaiset', city: 'Rovaniemi', body: 'Festival voor noordelijke folkmuziek, voor de 53e keer. Het programma bestaat vooral uit workshops overdag; op vrijdagavond gaat een concert over in volksdansen.' },
+    sv: { name: 'Folkfestivalen Jutajaiset', city: 'Rovaniemi', body: 'Festival för nordlig folkmusik, för 53:e gången. Det mesta av programmet är workshops på dagen; på fredagskvällen övergår en konsert i spelmansdanser.' },
+  } },
+  // levi.fi + FIS: "14–15 November 2026", 2xSL. hulluporo.fi: "Apulanta 13.11.2026", "Steve 'n' Seagulls 14.11.2026" (16.10.2026).
+  { id: 'levi-fis', start: '2026-11-14', end: '2026-11-15', t: {
+    en: { name: 'Levi FIS Alpine Ski World Cup', city: 'Levi', body: "Slalom World Cup weekend at the start of the season. Hullu Poro Areena has gigs the same weekend: Apulanta on Friday 13 November and Steve 'n' Seagulls on Saturday." },
+    fi: { name: 'Levin FIS-alppihiihdon maailmancup', city: 'Levi', body: "Kauden alun pujottelun maailmancup-viikonloppu. Hullu Poro Areenalla on samana viikonloppuna keikat: Apulanta perjantaina 13.11. ja Steve 'n' Seagulls lauantaina." },
+    de: { name: 'FIS Ski-Weltcup alpin in Levi', city: 'Levi', body: "Slalom-Weltcup-Wochenende zum Saisonauftakt. In der Hullu Poro Areena gibt es am selben Wochenende Konzerte: Apulanta am Freitag, 13. November, und Steve 'n' Seagulls am Samstag." },
+    ja: { name: 'FISアルペンスキー・ワールドカップ（レヴィ）', city: 'レヴィ', body: "シーズン序盤のスラローム・ワールドカップの週末。同じ週末にHullu Poro Areenaではライブがあり、11月13日（金）はApulanta、土曜はSteve 'n' Seagullsです。" },
+    es: { name: 'Copa del Mundo FIS de esquí alpino en Levi', city: 'Levi', body: "Fin de semana de Copa del Mundo de eslalon al inicio de la temporada. El Hullu Poro Areena tiene conciertos ese mismo fin de semana: Apulanta el viernes 13 de noviembre y Steve 'n' Seagulls el sábado." },
+    'pt-BR': { name: 'Copa do Mundo FIS de esqui alpino em Levi', city: 'Levi', body: "Fim de semana de Copa do Mundo de slalom no início da temporada. O Hullu Poro Areena tem shows no mesmo fim de semana: Apulanta na sexta, 13 de novembro, e Steve 'n' Seagulls no sábado." },
+    'zh-CN': { name: '莱维 FIS 高山滑雪世界杯', city: '莱维', body: "赛季初的回转世界杯周末。同一个周末 Hullu Poro Areena 有演出：11 月 13 日周五是 Apulanta，周六是 Steve 'n' Seagulls。" },
+    ko: { name: '레비 FIS 알파인 스키 월드컵', city: '레비', body: "시즌 초반 회전 종목 월드컵 주말입니다. 같은 주말 Hullu Poro Areena에서는 11월 13일 금요일 Apulanta, 토요일 Steve 'n' Seagulls 공연이 있습니다." },
+    fr: { name: 'Coupe du monde FIS de ski alpin à Levi', city: 'Levi', body: "Week-end de Coupe du monde de slalom en début de saison. Le Hullu Poro Areena a des concerts le même week-end : Apulanta le vendredi 13 novembre et Steve 'n' Seagulls le samedi." },
+    it: { name: 'Coppa del Mondo FIS di sci alpino a Levi', city: 'Levi', body: "Weekend di Coppa del Mondo di slalom a inizio stagione. L'Hullu Poro Areena ha concerti lo stesso weekend: Apulanta venerdì 13 novembre e Steve 'n' Seagulls sabato." },
+    nl: { name: 'FIS-wereldbeker alpineskiën in Levi', city: 'Levi', body: "Wereldbekerweekend slalom aan het begin van het seizoen. In Hullu Poro Areena zijn hetzelfde weekend concerten: Apulanta op vrijdag 13 november en Steve 'n' Seagulls op zaterdag." },
+    sv: { name: 'FIS-världscupen i alpint i Levi', city: 'Levi', body: "Världscuphelg i slalom i början av säsongen. På Hullu Poro Areena blir det spelningar samma helg: Apulanta fredagen den 13 november och Steve 'n' Seagulls på lördagen." },
+  } },
+  // laplandnorth.fi (alueen matkailusivu): "Saariselkä Christmas Festival", "21.11.2026", "10:00 - 23:00",
+  // "Saariselän tori", järjestäjä "Inarin kunta", "Ailu Valle will perform at the anniversary year's closing event" (16.10.2026).
+  { id: 'saariselka-christmas', start: '2026-11-21', t: {
+    en: { name: 'Saariselkä Christmas Festival', city: 'Saariselkä', body: "Inari municipality closes its 150th anniversary year on the Saariselkä square, from 10:00 to 23:00, with Ailu Valle performing." },
+    fi: { name: 'Saariselän joulufestivaali', city: 'Saariselkä', body: 'Inarin kunta päättää 150-vuotisjuhlavuotensa Saariselän torilla klo 10–23, ja esiintymässä on Ailu Valle.' },
+    de: { name: 'Weihnachtsfestival Saariselkä', city: 'Saariselkä', body: 'Die Gemeinde Inari beschließt ihr 150-jähriges Jubiläumsjahr auf dem Marktplatz von Saariselkä, von 10:00 bis 23:00 Uhr, mit einem Auftritt von Ailu Valle.' },
+    ja: { name: 'サーリセルカ・クリスマスフェスティバル', city: 'サーリセルカ', body: 'イナリ自治体の150周年の締めくくりとして、サーリセルカの広場で10:00〜23:00に開催。Ailu Valleが出演します。' },
+    es: { name: 'Festival de Navidad de Saariselkä', city: 'Saariselkä', body: 'El municipio de Inari cierra su año del 150.º aniversario en la plaza de Saariselkä, de 10:00 a 23:00, con actuación de Ailu Valle.' },
+    'pt-BR': { name: 'Festival de Natal de Saariselkä', city: 'Saariselkä', body: 'O município de Inari encerra o ano do seu 150º aniversário na praça de Saariselkä, das 10:00 às 23:00, com show de Ailu Valle.' },
+    'zh-CN': { name: 'Saariselkä 圣诞庆典', city: 'Saariselkä', body: '伊纳里市在 Saariselkä 广场为建市 150 周年画上句号，10:00 至 23:00，Ailu Valle 登台演出。' },
+    ko: { name: '사리셀카 크리스마스 페스티벌', city: '사리셀카', body: '이나리 지자체가 150주년 기념의 해를 사리셀카 광장에서 마무리합니다. 10:00–23:00, Ailu Valle가 공연합니다.' },
+    fr: { name: 'Festival de Noël de Saariselkä', city: 'Saariselkä', body: "La commune d'Inari clôt l'année de ses 150 ans sur la place de Saariselkä, de 10 h à 23 h, avec un concert d'Ailu Valle." },
+    it: { name: 'Festival di Natale di Saariselkä', city: 'Saariselkä', body: 'Il comune di Inari chiude il suo anno del 150º anniversario sulla piazza di Saariselkä, dalle 10:00 alle 23:00, con Ailu Valle sul palco.' },
+    nl: { name: 'Kerstfestival Saariselkä', city: 'Saariselkä', body: 'De gemeente Inari sluit haar 150-jarige jubileumjaar af op het plein van Saariselkä, van 10:00 tot 23:00, met een optreden van Ailu Valle.' },
+    sv: { name: 'Julfestivalen i Saariselkä', city: 'Saariselkä', body: 'Inari kommun avslutar sitt 150-årsjubileum på torget i Saariselkä, 10:00–23:00, och Ailu Valle uppträder.' },
+  } },
+  // rukanordic.com: "Ruka Nordic - 27.-29.11.2026", "juhlii 25-vuotista taivaltaan"; aikataulu pe 18:15, la 17:30;
+  // "Alueella on useita anniskelupisteitä" (16.10.2026).
+  { id: 'ruka-nordic', start: '2026-11-27', end: '2026-11-29', t: {
+    en: { name: 'Ruka Nordic World Cup opening', city: 'Ruka', body: 'The World Cup season opener in cross-country, Nordic combined and ski jumping, for the 25th year. Ski jumping runs into the evening (Friday 18:15, Saturday 17:30), and the stadium has several bars.' },
+    fi: { name: 'Ruka Nordic, maailmancupin avaus', city: 'Ruka', body: 'Maastohiihdon, yhdistetyn ja mäkihypyn maailmancup-kauden avaus, 25. kerran. Mäkihyppy jatkuu iltaan (perjantaina 18:15, lauantaina 17:30), ja stadionilla on useita anniskelupisteitä.' },
+    de: { name: 'Ruka Nordic, Weltcup-Auftakt', city: 'Ruka', body: 'Weltcup-Saisonauftakt in Langlauf, Nordischer Kombination und Skispringen, zum 25. Mal. Das Skispringen geht bis in den Abend (Freitag 18:15, Samstag 17:30 Uhr), und im Stadion gibt es mehrere Bars.' },
+    ja: { name: 'ルカ・ノルディック（ワールドカップ開幕戦）', city: 'ルカ', body: 'クロスカントリー、ノルディック複合、スキージャンプのワールドカップ開幕戦で、今年が25年目。ジャンプは夜まで続き（金曜18:15、土曜17:30）、スタジアムにはバーが複数あります。' },
+    es: { name: 'Ruka Nordic, apertura de la Copa del Mundo', city: 'Ruka', body: 'Apertura de la Copa del Mundo de esquí de fondo, combinada nórdica y saltos, en su 25.ª edición. Los saltos siguen hasta la noche (viernes 18:15, sábado 17:30) y el estadio tiene varios bares.' },
+    'pt-BR': { name: 'Ruka Nordic, abertura da Copa do Mundo', city: 'Ruka', body: 'Abertura da Copa do Mundo de esqui cross-country, combinado nórdico e saltos, pelo 25º ano. Os saltos vão até a noite (sexta 18:15, sábado 17:30), e o estádio tem vários bares.' },
+    'zh-CN': { name: '鲁卡北欧滑雪世界杯揭幕战', city: '鲁卡', body: '越野滑雪、北欧两项和跳台滑雪的世界杯赛季揭幕战，今年是第 25 年。跳台滑雪一直进行到晚上（周五 18:15，周六 17:30），赛场内有多个酒水供应点。' },
+    ko: { name: '루카 노르딕 월드컵 개막전', city: '루카', body: '크로스컨트리, 노르딕 복합, 스키점프 월드컵 시즌 개막전으로, 올해로 25년째입니다. 스키점프는 저녁까지 이어지고(금요일 18:15, 토요일 17:30), 경기장에는 주류 판매대가 여러 곳 있습니다.' },
+    fr: { name: "Ruka Nordic, ouverture de la Coupe du monde", city: 'Ruka', body: "Ouverture de la saison de Coupe du monde en ski de fond, combiné nordique et saut à ski, pour la 25e année. Le saut se prolonge en soirée (vendredi 18 h 15, samedi 17 h 30) et le stade compte plusieurs bars." },
+    it: { name: 'Ruka Nordic, apertura della Coppa del Mondo', city: 'Ruka', body: "Apertura della stagione di Coppa del Mondo di fondo, combinata nordica e salto, per il 25º anno. Il salto va avanti fino a sera (venerdì 18:15, sabato 17:30) e lo stadio ha diversi bar." },
+    nl: { name: 'Ruka Nordic, opening van de wereldbeker', city: 'Ruka', body: 'Seizoensopening van de wereldbeker langlaufen, noordse combinatie en schansspringen, voor het 25e jaar. Het schansspringen loopt door tot in de avond (vrijdag 18:15, zaterdag 17:30), en in het stadion zijn meerdere bars.' },
+    sv: { name: 'Ruka Nordic, världscuppremiär', city: 'Ruka', body: 'Världscuppremiär i längdskidåkning, nordisk kombination och backhoppning, för 25:e året. Backhoppningen pågår in på kvällen (fredag 18:15, lördag 17:30), och på stadion finns flera barer.' },
+  } },
+  // levi.fi 22.12.2025: "Levi's traditional New Year's fireworks are organized near the front slope on New Year's Eve at
+  // midnight." rovaniemi.fi 30.12.2024: "Ilotulitus jokirannassa klo 24". ouka.fi 30.12.2025: "The city of Oulu does not
+  // organize a firework display." Vuoden 2026/27 ohjelmaa ei vielä julkaistu (16.10.2026).
+  { id: 'new-year', start: '2026-12-31', t: {
+    en: { name: "New Year's Eve fireworks", city: 'Levi · Rovaniemi', body: "Levi's traditional fireworks go up at midnight by the Front Slopes, and Rovaniemi has held its city fireworks on the riverside at midnight. The City of Oulu does not organise a display." },
+    fi: { name: 'Uudenvuoden ilotulitukset', city: 'Levi · Rovaniemi', body: 'Levin perinteinen ilotulitus ammutaan keskiyöllä eturinteen lähellä, ja Rovaniemen kaupungin ilotulitus on ollut jokirannassa keskiyöllä. Oulun kaupunki ei järjestä ilotulitusta.' },
+    de: { name: 'Silvester-Feuerwerk', city: 'Levi · Rovaniemi', body: 'Das traditionelle Feuerwerk in Levi steigt um Mitternacht an den Front Slopes, und Rovaniemi hat sein städtisches Feuerwerk um Mitternacht am Flussufer gezündet. Die Stadt Oulu veranstaltet kein Feuerwerk.' },
+    ja: { name: '大晦日の花火', city: 'レヴィ · ロヴァニエミ', body: 'レヴィでは恒例の花火が真夜中にフロントスロープ近くで打ち上げられ、ロヴァニエミでは市の花火が真夜中に川岸で行われてきました。オウル市は花火を主催していません。' },
+    es: { name: 'Fuegos artificiales de Año Nuevo', city: 'Levi · Rovaniemi', body: 'Los fuegos artificiales tradicionales de Levi se lanzan a medianoche junto a las Front Slopes, y Rovaniemi ha celebrado sus fuegos artificiales municipales a medianoche junto al río. El Ayuntamiento de Oulu no organiza fuegos artificiales.' },
+    'pt-BR': { name: 'Fogos de Ano-Novo', city: 'Levi · Rovaniemi', body: 'Os fogos tradicionais de Levi sobem à meia-noite perto das Front Slopes, e Rovaniemi tem feito sua queima de fogos à meia-noite na beira do rio. A prefeitura de Oulu não organiza queima de fogos.' },
+    'zh-CN': { name: '跨年烟花', city: '莱维 · 罗瓦涅米', body: '莱维的传统烟花在午夜于正面雪坡附近燃放，罗瓦涅米市的烟花一直是午夜在河岸燃放。奥卢市不组织烟花表演。' },
+    ko: { name: '새해 전야 불꽃놀이', city: '레비 · 로바니에미', body: '레비의 전통 불꽃놀이는 자정에 프런트 슬로프 근처에서 열리고, 로바니에미는 시 불꽃놀이를 자정에 강변에서 열어 왔습니다. 오울루시는 불꽃놀이를 열지 않습니다.' },
+    fr: { name: "Feux d'artifice du Nouvel An", city: 'Levi · Rovaniemi', body: "Le feu d'artifice traditionnel de Levi est tiré à minuit près des Front Slopes, et Rovaniemi a tiré son feu d'artifice municipal à minuit au bord de la rivière. La ville d'Oulu n'organise pas de feu d'artifice." },
+    it: { name: "Fuochi d'artificio di Capodanno", city: 'Levi · Rovaniemi', body: "I fuochi tradizionali di Levi partono a mezzanotte vicino alle Front Slopes, e Rovaniemi ha fatto i fuochi cittadini a mezzanotte sulla riva del fiume. Il comune di Oulu non organizza fuochi d'artificio." },
+    nl: { name: 'Oudejaarsvuurwerk', city: 'Levi · Rovaniemi', body: 'Het traditionele vuurwerk van Levi gaat om middernacht de lucht in bij de Front Slopes, en Rovaniemi hield het stadsvuurwerk om middernacht aan de rivieroever. De stad Oulu organiseert geen vuurwerk.' },
+    sv: { name: 'Nyårsfyrverkerier', city: 'Levi · Rovaniemi', body: 'Levis traditionella fyrverkeri skjuts upp vid midnatt nära Front Slopes, och Rovaniemi har haft sitt stadsfyrverkeri vid midnatt på älvstranden. Oulu stad ordnar inget fyrverkeri.' },
+  } },
+  // skabmagovat.fi: "Inari, Aanaar, Finland 28.1.-31.1.2027"; paikat Siida, Sajos, Lumiteatteri; 2026 Skábmaklubba
+  // K-18 pe ja la Sajoksessa (16.10.2026).
+  { id: 'skabmagovat', start: '2027-01-28', end: '2027-01-31', t: {
+    en: { name: 'Skábmagovat Indigenous Film Festival', city: 'Inari', body: 'Indigenous film festival in the polar-night dark, with films at Siida, Sajos and an open-air snow theatre. In 2026 the festival club Skábmaklubba ran on Friday and Saturday nights at Sajos.' },
+    fi: { name: 'Alkuperäiskansojen elokuvafestivaali Skábmagovat', city: 'Inari', body: 'Alkuperäiskansojen elokuvafestivaali kaamoksen pimeydessä: elokuvia Siidassa, Sajoksessa ja ulkoilman lumiteatterissa. Vuonna 2026 festivaaliklubi Skábmaklubba järjestettiin Sajoksessa perjantai- ja lauantai-iltana.' },
+    de: { name: 'Skábmagovat: Indigenes Filmfestival', city: 'Inari', body: 'Indigenes Filmfestival in der Dunkelheit der Polarnacht: Filme im Siida, im Sajos und in einem Schneetheater unter freiem Himmel. 2026 lief der Festivalclub Skábmaklubba am Freitag- und Samstagabend im Sajos.' },
+    ja: { name: 'Skábmagovat先住民映画祭', city: 'イナリ', body: '極夜の暗さの中で開かれる先住民の映画祭。上映はSiida、Sajos、屋外の雪の劇場で行われます。2026年はフェスティバルクラブ「Skábmaklubba」が金曜と土曜の夜にSajosで開かれました。' },
+    es: { name: 'Festival de cine indígena Skábmagovat', city: 'Inari', body: 'Festival de cine indígena en la oscuridad de la noche polar, con proyecciones en el Siida, el Sajos y un teatro de nieve al aire libre. En 2026, el club del festival, Skábmaklubba, abrió el viernes y el sábado por la noche en el Sajos.' },
+    'pt-BR': { name: 'Festival de cinema indígena Skábmagovat', city: 'Inari', body: 'Festival de cinema indígena no escuro da noite polar, com sessões no Siida, no Sajos e num teatro de neve ao ar livre. Em 2026, o clube do festival, Skábmaklubba, abriu na sexta e no sábado à noite no Sajos.' },
+    'zh-CN': { name: 'Skábmagovat 原住民电影节', city: '伊纳里', body: '在极夜的黑暗中举办的原住民电影节，放映地点包括 Siida、Sajos 和一座露天雪剧场。2026 年，电影节俱乐部 Skábmaklubba 于周五和周六晚上在 Sajos 开放。' },
+    ko: { name: 'Skábmagovat 원주민 영화제', city: '이나리', body: '극야의 어둠 속에서 열리는 원주민 영화제로, Siida와 Sajos, 야외 눈 극장에서 상영합니다. 2026년에는 페스티벌 클럽 Skábmaklubba가 금요일과 토요일 밤 Sajos에서 열렸습니다.' },
+    fr: { name: 'Festival du film autochtone Skábmagovat', city: 'Inari', body: "Festival du film autochtone dans l'obscurité de la nuit polaire, avec des projections au Siida, au Sajos et dans un théâtre de neige en plein air. En 2026, le club du festival, Skábmaklubba, a ouvert le vendredi et le samedi soir au Sajos." },
+    it: { name: 'Skábmagovat, festival del cinema indigeno', city: 'Inari', body: "Festival del cinema indigeno nel buio della notte polare, con proiezioni al Siida, al Sajos e in un teatro di neve all'aperto. Nel 2026 il club del festival, Skábmaklubba, ha aperto il venerdì e il sabato sera al Sajos." },
+    nl: { name: 'Skábmagovat, festival voor inheemse film', city: 'Inari', body: 'Festival voor inheemse film in het donker van de poolnacht, met voorstellingen in het Siida, het Sajos en een sneeuwtheater in de open lucht. In 2026 draaide de festivalclub Skábmaklubba op vrijdag- en zaterdagavond in het Sajos.' },
+    sv: { name: 'Skábmagovat, urfolksfilmfestival', city: 'Inari', body: 'Urfolksfilmfestival i polarnattens mörker, med visningar på Siida, Sajos och i en snöteater under bar himmel. 2026 höll festivalklubben Skábmaklubba öppet fredag och lördag kväll på Sajos.' },
+  } },
+  // arcticrally.fi: "62. Arctic Lapland Rally 28.-30.1.2027"; reittisivun luonnosaikataulu: to 28.1. klo 19 seremoniallinen
+  // lähtö ja la 30.1. podium Lordin aukiolla (16.10.2026).
+  { id: 'arctic-rally', start: '2027-01-28', end: '2027-01-30', t: {
+    en: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: "A round of the Finnish Rally Championship. The ceremonial start is on Thursday evening and the podium on Saturday evening, both on Lordi's Square in central Rovaniemi." },
+    fi: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Rallin SM-sarjan osakilpailu. Seremoniallinen lähtö on torstai-iltana ja palkintojenjako lauantai-iltana, molemmat Rovaniemen keskustassa Lordin aukiolla.' },
+    de: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Lauf der Finnischen Rallye-Meisterschaft. Der zeremonielle Start ist am Donnerstagabend, die Siegerehrung am Samstagabend, beide auf dem Lordi-Platz im Zentrum von Rovaniemi.' },
+    ja: { name: 'Arctic Lapland Rally', city: 'ロヴァニエミ', body: 'フィンランド・ラリー選手権の一戦。セレモニアルスタートは木曜の夜、表彰式は土曜の夜で、どちらもロヴァニエミ中心部のローディ広場（Lordin aukio）で行われます。' },
+    es: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Prueba del Campeonato de Finlandia de Rally. La salida ceremonial es el jueves por la noche y el podio, el sábado por la noche, ambos en la plaza Lordi del centro de Rovaniemi.' },
+    'pt-BR': { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Etapa do Campeonato Finlandês de Rali. A largada cerimonial é na quinta à noite e o pódio no sábado à noite, ambos na praça Lordi, no centro de Rovaniemi.' },
+    'zh-CN': { name: 'Arctic Lapland Rally', city: '罗瓦涅米', body: '芬兰拉力锦标赛分站赛。仪式发车在周四晚上，颁奖在周六晚上，都在罗瓦涅米市中心的 Lordi 广场（Lordin aukio）举行。' },
+    ko: { name: 'Arctic Lapland Rally', city: '로바니에미', body: '핀란드 랠리 선수권의 한 라운드입니다. 세리머니 출발은 목요일 저녁, 시상식은 토요일 저녁이며 모두 로바니에미 중심가의 로르디 광장(Lordin aukio)에서 열립니다.' },
+    fr: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Manche du championnat de Finlande des rallyes. Le départ fictif a lieu le jeudi soir et le podium le samedi soir, tous deux sur la place Lordi, au centre de Rovaniemi.' },
+    it: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Prova del campionato finlandese di rally. La partenza cerimoniale è il giovedì sera e il podio il sabato sera, entrambi in piazza Lordi, nel centro di Rovaniemi.' },
+    nl: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Ronde van het Finse rallykampioenschap. De ceremoniële start is op donderdagavond en de podiumceremonie op zaterdagavond, allebei op het Lordiplein in het centrum van Rovaniemi.' },
+    sv: { name: 'Arctic Lapland Rally', city: 'Rovaniemi', body: 'Deltävling i finska rallymästerskapet. Den ceremoniella starten är på torsdagskvällen och prisutdelningen på lördagskvällen, båda på Lordis torg i centrala Rovaniemi.' },
+  } },
+  // almanakka.helsinki.fi liputuspäivät 2027: "6.2. Saamelaisten kansallispäivä"; sajos.fi: "Saamelaisten kansallispäivä
+  // Sajoksessa 6.2.2026" + koko perheen konsertti 7.2.2026. Vuoden 2027 ohjelmaa ei vielä julkaistu (16.10.2026).
+  { id: 'sami-day', start: '2027-02-06', t: {
+    en: { name: 'Sámi National Day', city: 'Inari', body: 'The Sámi flag is flown across Finland. Sajos, the Sámi cultural centre in Inari, marked the day in 2026 with a celebration and a family concert.' },
+    fi: { name: 'Saamelaisten kansallispäivä', city: 'Inari', body: 'Saamelaisten lippu liehuu kautta Suomen. Inarin saamelaiskulttuurikeskus Sajos juhli päivää vuonna 2026 juhlalla ja koko perheen konsertilla.' },
+    de: { name: 'Nationalfeiertag der Samen', city: 'Inari', body: 'In ganz Finnland weht die samische Flagge. Das samische Kulturzentrum Sajos in Inari feierte den Tag 2026 mit einer Feier und einem Familienkonzert.' },
+    ja: { name: 'サーミ・ナショナルデー', city: 'イナリ', body: 'フィンランド各地でサーミの旗が掲げられます。イナリのサーミ文化センターSajosでは、2026年に記念の催しと家族向けコンサートが開かれました。' },
+    es: { name: 'Día Nacional Sami', city: 'Inari', body: 'La bandera sami ondea en toda Finlandia. El centro cultural sami Sajos, en Inari, celebró el día en 2026 con un acto y un concierto familiar.' },
+    'pt-BR': { name: 'Dia Nacional Sámi', city: 'Inari', body: 'A bandeira sámi é hasteada em toda a Finlândia. O centro cultural sámi Sajos, em Inari, celebrou a data em 2026 com uma festa e um show para toda a família.' },
+    'zh-CN': { name: '萨米民族日', city: '伊纳里', body: '萨米旗在芬兰各地飘扬。2026 年，伊纳里的萨米文化中心 Sajos 以庆祝活动和一场家庭音乐会纪念这一天。' },
+    ko: { name: '사미 민족의 날', city: '이나리', body: '핀란드 곳곳에 사미 깃발이 걸립니다. 이나리의 사미 문화센터 Sajos는 2026년에 기념 행사와 가족 콘서트로 이날을 기렸습니다.' },
+    fr: { name: 'Fête nationale sámi', city: 'Inari', body: 'Le drapeau sámi flotte dans toute la Finlande. Le centre culturel sámi Sajos, à Inari, a marqué la journée en 2026 par une célébration et un concert familial.' },
+    it: { name: 'Giornata nazionale sámi', city: 'Inari', body: 'La bandiera sámi sventola in tutta la Finlandia. Il centro culturale sámi Sajos, a Inari, ha celebrato la giornata nel 2026 con una festa e un concerto per famiglie.' },
+    nl: { name: 'Samische nationale feestdag', city: 'Inari', body: 'In heel Finland wappert de Samische vlag. Het Samische cultuurcentrum Sajos in Inari vierde de dag in 2026 met een viering en een familieconcert.' },
+    sv: { name: 'Samernas nationaldag', city: 'Inari', body: 'Den samiska flaggan hissas i hela Finland. Det samiska kulturcentret Sajos i Inari firade dagen 2026 med en fest och en familjekonsert.' },
+  } },
+  // porokilpailijat.fi: "ROVANIEMI 27.2.-28.2.2027 Järjestäjä: Lions Club Rovaniemi / Ounasvaara ry" (16.10.2026).
+  { id: 'porocup-rovaniemi', start: '2027-02-27', end: '2027-02-28', t: {
+    en: { name: 'Reindeer racing in Rovaniemi', city: 'Rovaniemi', body: 'A round of the Porocup reindeer-racing series, organised by Lions Club Rovaniemi / Ounasvaara ry. Racing runs in the daytime.' },
+    fi: { name: 'Rovaniemen porokilpailut', city: 'Rovaniemi', body: 'Porocup-sarjan osakilpailu, järjestäjänä Lions Club Rovaniemi / Ounasvaara ry. Kilpailut ajetaan päiväsaikaan.' },
+    de: { name: 'Rentierrennen in Rovaniemi', city: 'Rovaniemi', body: 'Lauf der Rentierrennserie Porocup, ausgerichtet vom Lions Club Rovaniemi / Ounasvaara ry. Gefahren wird tagsüber.' },
+    ja: { name: 'ロヴァニエミのトナカイレース', city: 'ロヴァニエミ', body: 'トナカイレースのシリーズ「Porocup」の一戦で、主催はLions Club Rovaniemi / Ounasvaara ry。レースは日中に行われます。' },
+    es: { name: 'Carreras de renos en Rovaniemi', city: 'Rovaniemi', body: 'Prueba de la serie de carreras de renos Porocup, organizada por el Lions Club Rovaniemi / Ounasvaara ry. Las carreras son de día.' },
+    'pt-BR': { name: 'Corridas de renas em Rovaniemi', city: 'Rovaniemi', body: 'Etapa da série de corridas de renas Porocup, organizada pelo Lions Club Rovaniemi / Ounasvaara ry. As corridas são durante o dia.' },
+    'zh-CN': { name: '罗瓦涅米驯鹿赛', city: '罗瓦涅米', body: '驯鹿赛系列 Porocup 的分站赛，由 Lions Club Rovaniemi / Ounasvaara ry 主办。比赛在白天进行。' },
+    ko: { name: '로바니에미 순록 경주', city: '로바니에미', body: '순록 경주 시리즈 Porocup의 한 라운드로, Lions Club Rovaniemi / Ounasvaara ry가 주최합니다. 경주는 낮에 열립니다.' },
+    fr: { name: 'Courses de rennes à Rovaniemi', city: 'Rovaniemi', body: 'Manche de la série de courses de rennes Porocup, organisée par le Lions Club Rovaniemi / Ounasvaara ry. Les courses ont lieu en journée.' },
+    it: { name: 'Corse di renne a Rovaniemi', city: 'Rovaniemi', body: 'Tappa della serie di corse di renne Porocup, organizzata dal Lions Club Rovaniemi / Ounasvaara ry. Le gare si corrono di giorno.' },
+    nl: { name: 'Rendierraces in Rovaniemi', city: 'Rovaniemi', body: 'Ronde van de rendierraceserie Porocup, georganiseerd door Lions Club Rovaniemi / Ounasvaara ry. Er wordt overdag gereden.' },
+    sv: { name: 'Renkapplöpning i Rovaniemi', city: 'Rovaniemi', body: 'Deltävling i renkapplöpningsserien Porocup, arrangerad av Lions Club Rovaniemi / Ounasvaara ry. Loppen körs dagtid.' },
+  } },
+  // omj.fi: "Festivaali järjestetään uudelleen 15.–25.3.2027"; avajaiskonsertti Madetojan salissa (16.10.2026).
+  { id: 'oulu-music-festival', start: '2027-03-15', end: '2027-03-25', t: {
+    en: { name: 'Oulu Music Festival', city: 'Oulu', body: 'Eleven days of concerts in Oulu; the 2027 opening concert is at Madetoja Hall.' },
+    fi: { name: 'Oulun Musiikkijuhlat', city: 'Oulu', body: 'Yksitoista päivää konsertteja Oulussa; vuoden 2027 avajaiskonsertti on Madetojan salissa.' },
+    de: { name: 'Musikfestspiele Oulu', city: 'Oulu', body: 'Elf Tage Konzerte in Oulu; das Eröffnungskonzert 2027 findet im Madetoja-Saal statt.' },
+    ja: { name: 'オウル音楽祭', city: 'オウル', body: 'オウルで11日間にわたるコンサート。2027年の開幕コンサートはマデトヤ・ホールで行われます。' },
+    es: { name: 'Festival de Música de Oulu', city: 'Oulu', body: 'Once días de conciertos en Oulu; el concierto inaugural de 2027 es en la sala Madetoja.' },
+    'pt-BR': { name: 'Festival de Música de Oulu', city: 'Oulu', body: 'Onze dias de shows em Oulu; o concerto de abertura de 2027 é na sala Madetoja.' },
+    'zh-CN': { name: '奥卢音乐节', city: '奥卢', body: '在奥卢连续 11 天的音乐会；2027 年的开幕音乐会在 Madetoja 音乐厅举行。' },
+    ko: { name: '오울루 음악 축제', city: '오울루', body: '오울루에서 열하루 동안 이어지는 콘서트로, 2027년 개막 공연은 마데토야 홀에서 열립니다.' },
+    fr: { name: "Festival de musique d'Oulu", city: 'Oulu', body: "Onze jours de concerts à Oulu ; le concert d'ouverture 2027 a lieu à la salle Madetoja." },
+    it: { name: 'Festival musicale di Oulu', city: 'Oulu', body: "Undici giorni di concerti a Oulu; il concerto d'apertura 2027 è nella sala Madetoja." },
+    nl: { name: 'Muziekfestival Oulu', city: 'Oulu', body: 'Elf dagen concerten in Oulu; het openingsconcert van 2027 is in de Madetoja-zaal.' },
+    sv: { name: 'Musikfestspelen i Oulu', city: 'Oulu', body: 'Elva dagar med konserter i Oulu; öppningskonserten 2027 är i Madetojasalen.' },
+  } },
+  // porokilpailijat.fi: "porokuninkuusajot inari 20.-21.3.2027 Järjestäjä: Suomen Porokilpailijat ry"; visitinari.fi: "ajetaan
+  // joka kevättalvi Inarijärven jäällä Lomakylä Inarin rannassa" (16.10.2026).
+  { id: 'kuninkuusajot', start: '2027-03-20', end: '2027-03-21', t: {
+    en: { name: "Reindeer Racing King's Cup (Porokuninkuusajot)", city: 'Inari', body: "The King's Cup of reindeer racing, run every late winter on the ice of Lake Inari by Lomakylä Inari. Organised by Suomen Porokilpailijat ry." },
+    fi: { name: 'Porokuninkuusajot', city: 'Inari', body: 'Porokuninkuusajot ajetaan joka kevättalvi Inarijärven jäällä Lomakylä Inarin rannassa. Järjestäjä on Suomen Porokilpailijat ry.' },
+    de: { name: 'Rentier-Königsrennen (Porokuninkuusajot)', city: 'Inari', body: 'Das Königsrennen der Rentierrennen wird jeden Spätwinter auf dem Eis des Inarisees beim Lomakylä Inari gefahren. Veranstalter ist Suomen Porokilpailijat ry.' },
+    ja: { name: 'トナカイレース王座決定戦（Porokuninkuusajot）', city: 'イナリ', body: 'トナカイレースの王座決定戦。毎年晩冬、イナリ湖の氷上、Lomakylä Inariのそばで行われます。主催はSuomen Porokilpailijat ry。' },
+    es: { name: 'Carrera real de renos (Porokuninkuusajot)', city: 'Inari', body: 'La carrera real de renos se corre cada final de invierno sobre el hielo del lago Inari, junto a Lomakylä Inari. La organiza Suomen Porokilpailijat ry.' },
+    'pt-BR': { name: 'Corrida real de renas (Porokuninkuusajot)', city: 'Inari', body: 'A corrida real de renas acontece todo fim de inverno sobre o gelo do lago Inari, junto ao Lomakylä Inari. A organização é da Suomen Porokilpailijat ry.' },
+    'zh-CN': { name: '驯鹿赛王者赛（Porokuninkuusajot）', city: '伊纳里', body: '驯鹿赛王者赛每年冬末在伊纳里湖冰面上举行，地点在 Lomakylä Inari 岸边。主办方为 Suomen Porokilpailijat ry。' },
+    ko: { name: '순록 경주 왕좌전(Porokuninkuusajot)', city: '이나리', body: '순록 경주 왕좌전은 매년 늦겨울 Lomakylä Inari 앞 이나리 호수 얼음 위에서 열립니다. 주최는 Suomen Porokilpailijat ry입니다.' },
+    fr: { name: 'Courses royales de rennes (Porokuninkuusajot)', city: 'Inari', body: "Les courses royales de rennes se disputent chaque fin d'hiver sur la glace du lac Inari, devant le Lomakylä Inari. Organisation : Suomen Porokilpailijat ry." },
+    it: { name: 'Corse reali delle renne (Porokuninkuusajot)', city: 'Inari', body: 'Le corse reali delle renne si disputano ogni fine inverno sul ghiaccio del lago Inari, davanti al Lomakylä Inari. Le organizza la Suomen Porokilpailijat ry.' },
+    nl: { name: 'Koningsrace voor rendieren (Porokuninkuusajot)', city: 'Inari', body: 'De koningsrace voor rendieren wordt elke late winter gereden op het ijs van het Inarimeer, bij Lomakylä Inari. Organisator is Suomen Porokilpailijat ry.' },
+    sv: { name: 'Kungsloppet i renkapplöpning (Porokuninkuusajot)', city: 'Inari', body: 'Kungsloppet i renkapplöpning körs varje senvinter på isen på Enare träsk vid Lomakylä Inari. Arrangör är Suomen Porokilpailijat ry.' },
+  } },
+  // Visit Rovaniemi: "the Midnight Sun period in Rovaniemi lasts for a month, from 6th June to 7th July". Sama joka vuosi.
+  { id: 'midnight-sun', start: '2027-06-06', end: '2027-07-07', t: {
+    en: { name: 'Midnight sun in Rovaniemi', city: 'Rovaniemi', body: 'The sun stays above the horizon around the clock. Further north the period is longer.' },
+    fi: { name: 'Yötön yö Rovaniemellä', city: 'Rovaniemi', body: 'Aurinko pysyy horisontin yläpuolella vuorokauden ympäri. Pohjoisempana jakso on pidempi.' },
+    de: { name: 'Mitternachtssonne in Rovaniemi', city: 'Rovaniemi', body: 'Die Sonne bleibt rund um die Uhr über dem Horizont. Weiter nördlich ist der Zeitraum länger.' },
+    ja: { name: 'ロヴァニエミの白夜', city: 'ロヴァニエミ', body: '太陽が一日中地平線の上にとどまります。さらに北では、この期間がもっと長くなります。' },
+    es: { name: 'Sol de medianoche en Rovaniemi', city: 'Rovaniemi', body: 'El sol permanece sobre el horizonte las 24 horas. Más al norte, el periodo es más largo.' },
+    'pt-BR': { name: 'Sol da meia-noite em Rovaniemi', city: 'Rovaniemi', body: 'O sol não desce abaixo do horizonte o dia inteiro. Mais ao norte, o período é mais longo.' },
+    'zh-CN': { name: '罗瓦涅米的午夜阳光', city: '罗瓦涅米', body: '太阳全天停留在地平线之上。越往北，这段时间越长。' },
+    ko: { name: '로바니에미의 백야', city: '로바니에미', body: '해가 하루 종일 지평선 위에 머뭅니다. 더 북쪽으로 갈수록 이 기간이 깁니다.' },
+    fr: { name: 'Soleil de minuit à Rovaniemi', city: 'Rovaniemi', body: "Le soleil reste au-dessus de l'horizon jour et nuit. Plus au nord, la période est plus longue." },
+    it: { name: 'Sole di mezzanotte a Rovaniemi', city: 'Rovaniemi', body: "Il sole resta sopra l'orizzonte giorno e notte. Più a nord il periodo è più lungo." },
+    nl: { name: 'Middernachtszon in Rovaniemi', city: 'Rovaniemi', body: 'De zon blijft dag en nacht boven de horizon. Verder naar het noorden duurt de periode langer.' },
+    sv: { name: 'Midnattssol i Rovaniemi', city: 'Rovaniemi', body: 'Solen stannar ovanför horisonten dygnet runt. Längre norrut varar perioden längre.' },
+  } },
+  // msfilmfestival.fi: "16. - 20. Kesäkuuta 2027"; esityspaikat Lapinsuu, iso teltta, punainen teltta, koulu, Kitisen
+  // keidas, pubiteltta; 2026: "32000 kävijää"; ohjelmakartassa näytöksiä klo 03:00 (16.10.2026). Ei kirkkoa.
+  { id: 'msff', start: '2027-06-16', end: '2027-06-20', t: {
+    en: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Five days of films around the clock, with screenings at 03:00 in full daylight. Venues include the Lapinsuu cinema, the big tent and the school; the 2026 festival drew 32 000 visitors.' },
+    fi: { name: 'Sodankylän elokuvajuhlat', city: 'Sodankylä', body: 'Viisi päivää elokuvia kellon ympäri, näytöksiä myös 03:00 täydessä päivänvalossa. Esityspaikkoja ovat muun muassa elokuvateatteri Lapinsuu, iso teltta ja koulu; vuoden 2026 elokuvajuhlat keräsivät 32 000 kävijää.' },
+    de: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Fünf Tage Kino rund um die Uhr, mit Vorführungen um 03:00 Uhr bei vollem Tageslicht. Gespielt wird unter anderem im Kino Lapinsuu, im großen Zelt und in der Schule; 2026 kamen 32 000 Besucher.' },
+    ja: { name: 'ミッドナイトサン映画祭', city: 'ソダンキュラ', body: '5日間、昼夜を問わず映画を上映。午前3時の回も真昼のような明るさの中で行われます。会場は映画館ラピンスー、大テント、学校など。2026年の来場者は32,000人でした。' },
+    es: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Cinco días de cine a todas horas, con sesiones a las 03:00 a plena luz del día. Entre las sedes están el cine Lapinsuu, la gran carpa y la escuela; la edición de 2026 reunió a 32.000 visitantes.' },
+    'pt-BR': { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Cinco dias de cinema a qualquer hora, com sessões às 03:00 em plena luz do dia. Entre os locais estão o cinema Lapinsuu, a grande tenda e a escola; a edição de 2026 reuniu 32.000 visitantes.' },
+    'zh-CN': { name: '午夜阳光电影节', city: '索丹屈莱', body: '连续五天全天候放映电影，凌晨 3 点的场次也在明亮的日光中进行。放映地点包括 Lapinsuu 电影院、大帐篷和学校；2026 年的电影节吸引了 32,000 名观众。' },
+    ko: { name: '백야 영화제', city: '소단퀼래', body: '닷새 동안 밤낮없이 영화를 상영하며, 새벽 3시 상영도 환한 햇빛 속에서 열립니다. 상영관은 Lapinsuu 영화관, 대형 텐트, 학교 등이며, 2026년 영화제에는 32,000명이 찾았습니다.' },
+    fr: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: "Cinq jours de cinéma jour et nuit, avec des séances à 3 h du matin en plein jour. Parmi les lieux : le cinéma Lapinsuu, le grand chapiteau et l'école ; l'édition 2026 a attiré 32 000 visiteurs." },
+    it: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: "Cinque giorni di cinema a tutte le ore, con proiezioni alle 3 di notte in piena luce. Tra le sedi ci sono il cinema Lapinsuu, il tendone grande e la scuola; l'edizione 2026 ha richiamato 32.000 visitatori." },
+    nl: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Vijf dagen film rond de klok, met voorstellingen om 03:00 uur bij vol daglicht. Locaties zijn onder meer bioscoop Lapinsuu, de grote tent en de school; de editie van 2026 trok 32.000 bezoekers.' },
+    sv: { name: 'Midnight Sun Film Festival', city: 'Sodankylä', body: 'Fem dagar med film dygnet runt, med visningar klockan tre på natten i fullt dagsljus. Visningsplatserna är bland annat biografen Lapinsuu, det stora tältet och skolan; 2026 kom 32 000 besökare.' },
+  } },
+  // almanakka.helsinki.fi: juhannuspäivä la 26.6.2027; aatto = sitä edeltävä perjantai 25.6.2027.
+  { id: 'juhannus', start: '2027-06-25', end: '2027-06-26', t: {
+    en: { name: 'Juhannus / Midsummer', city: 'Everywhere', body: 'Bonfires, sauna, lake swims, cabin weekends. Cities empty out; locals leave.' },
+    fi: { name: 'Juhannus', city: 'Kaikkialla', body: 'Kokot, sauna, järviuinnit, mökkiviikonloput. Kaupungit tyhjenevät; paikalliset lähtevät.' },
+    de: { name: 'Juhannus / Mittsommer', city: 'Überall', body: 'Lagerfeuer, Sauna, Seebaden, Hütten-Wochenenden. Die Städte leeren sich; die Einheimischen fahren raus.' },
+    ja: { name: 'ユハンヌス（夏至祭）', city: '各地', body: 'かがり火、サウナ、湖での水浴び、コテージで過ごす週末。地元の人が出ていき、街は空っぽになります。' },
+    es: { name: 'Juhannus / San Juan', city: 'En todas partes', body: 'Fogatas, sauna, baños en lagos y fines de semana en la cabaña. Las ciudades se vacían y la gente local se marcha.' },
+    'pt-BR': { name: 'Juhannus / Solstício de verão', city: 'Em toda parte', body: 'Fogueiras, sauna, banhos de lago e fins de semana na cabana. As cidades se esvaziam e os moradores vão embora.' },
+    'zh-CN': { name: 'Juhannus / 仲夏节', city: '各地', body: '篝火、桑拿、湖中游泳，在小屋度周末。城市变得空荡，本地人纷纷离开。' },
+    ko: { name: 'Juhannus / 하지절', city: '전국 각지', body: '모닥불, 사우나, 호수 수영, 오두막에서 보내는 주말. 현지인들이 떠나면서 도시는 텅 빕니다.' },
+    fr: { name: 'Juhannus / Saint-Jean', city: 'Partout', body: 'Feux de joie, sauna, baignades dans les lacs, week-ends au chalet. Les villes se vident ; les habitants partent.' },
+    it: { name: 'Juhannus / Mezza estate', city: 'Ovunque', body: 'Falò, sauna, bagni nel lago, weekend in baita. Le città si svuotano; gli abitanti partono.' },
+    nl: { name: 'Juhannus / Midzomer', city: 'Overal', body: 'Vreugdevuren, sauna, zwemmen in meren en weekenden in de hut. De steden lopen leeg en de inwoners trekken erop uit.' },
+    sv: { name: 'Juhannus / midsommar', city: 'Överallt', body: 'Brasor, bastu, sjöbad och helger i stugan. Städerna töms och lokalborna åker därifrån.' },
+  } },
+  // inariviikot.fi: "kesätapahtumat järjestetään jälleen 23.7.–1.8.2027"; ohjelma perinteisesti "kyläjuhlia, kultakisoja,
+  // lastentapahtumia, markkinatunnelmaa, konsertteja"; järjestäjä Inarin kunnan kulttuuritoimi (16.10.2026).
+  { id: 'inariviikot', start: '2027-07-23', end: '2027-08-01', t: {
+    en: { name: 'Inari Weeks (Inariviikot)', city: 'Inari', body: "Ten days of summer events across Inari municipality: village festivals, gold-panning contests, markets and concerts. Organised by the municipality's cultural services." },
+    fi: { name: 'Inariviikot', city: 'Inari', body: 'Kymmenen päivää kesätapahtumia eri puolilla Inarin kuntaa: kyläjuhlia, kullanhuuhdontakisoja, markkinoita ja konsertteja. Järjestäjä on Inarin kunnan kulttuuritoimi.' },
+    de: { name: 'Inari-Wochen (Inariviikot)', city: 'Inari', body: 'Zehn Tage Sommerveranstaltungen in der ganzen Gemeinde Inari: Dorffeste, Goldwasch-Wettbewerbe, Märkte und Konzerte. Veranstalter ist das Kulturamt der Gemeinde.' },
+    ja: { name: 'イナリ・ウィークス（Inariviikot）', city: 'イナリ', body: '10日間にわたり、イナリ自治体の各地で夏のイベントが開かれます。村祭り、砂金掘り大会、マーケット、コンサートなど。主催はイナリ自治体の文化部門です。' },
+    es: { name: 'Semanas de Inari (Inariviikot)', city: 'Inari', body: 'Diez días de eventos de verano por todo el municipio de Inari: fiestas de pueblo, concursos de bateo de oro, mercados y conciertos. Los organiza el departamento de cultura del municipio.' },
+    'pt-BR': { name: 'Semanas de Inari (Inariviikot)', city: 'Inari', body: 'Dez dias de eventos de verão em todo o município de Inari: festas de vilarejo, competições de garimpo de ouro, feiras e shows. A organização é do departamento de cultura do município.' },
+    'zh-CN': { name: '伊纳里周（Inariviikot）', city: '伊纳里', body: '为期十天的夏季活动遍布伊纳里市各地：村庄节庆、淘金比赛、集市和音乐会。由伊纳里市文化部门主办。' },
+    ko: { name: '이나리 위크(Inariviikot)', city: '이나리', body: '이나리 지역 곳곳에서 열흘간 여름 행사가 이어집니다. 마을 축제, 사금 채취 대회, 장터, 콘서트 등이 열리며, 이나리 지자체 문화과가 주최합니다.' },
+    fr: { name: "Semaines d'Inari (Inariviikot)", city: 'Inari', body: "Dix jours d'événements estivaux dans toute la commune d'Inari : fêtes de village, concours d'orpaillage, marchés et concerts. Organisation : le service culturel de la commune." },
+    it: { name: 'Settimane di Inari (Inariviikot)', city: 'Inari', body: "Dieci giorni di eventi estivi in tutto il comune di Inari: feste di paese, gare di ricerca dell'oro, mercati e concerti. Li organizza l'ufficio cultura del comune." },
+    nl: { name: 'Inari-weken (Inariviikot)', city: 'Inari', body: 'Tien dagen zomerevenementen in de hele gemeente Inari: dorpsfeesten, goudwaswedstrijden, markten en concerten. Georganiseerd door de culturele dienst van de gemeente.' },
+    sv: { name: 'Inariveckorna (Inariviikot)', city: 'Inari', body: 'Tio dagar med sommarevenemang i hela Inari kommun: byfester, guldvaskningstävlingar, marknader och konserter. Arrangör är kommunens kulturförvaltning.' },
+  } },
+  // qstock.fi: "Nähdään jälleen Qstockissa 30.–31.7.2027"; 2026: "40 000 kävijää", "loppuunmyyty jo kolmattatoista kertaa
+  // peräkkäin"; alueet "Kuusisaari, Raatti and Linnansaari" (16.10.2026).
+  { id: 'qstock', start: '2027-07-30', end: '2027-07-31', t: {
+    en: { name: 'Qstock Festival', city: 'Oulu', body: 'Two-day rock festival on Kuusisaari, Raatti and Linnansaari. The 2026 festival sold out for the 13th year running, with 40 000 visitors.' },
+    fi: { name: 'Qstock-festivaali', city: 'Oulu', body: 'Kaksipäiväinen rockfestivaali Kuusisaaressa, Raatissa ja Linnansaaressa. Vuonna 2026 festivaali myytiin loppuun 13. kertaa peräkkäin, ja kävijöitä oli 40 000.' },
+    de: { name: 'Qstock Festival', city: 'Oulu', body: 'Zweitägiges Rockfestival auf Kuusisaari, Raatti und Linnansaari. 2026 war es zum 13. Mal in Folge ausverkauft, mit 40 000 Besuchern.' },
+    ja: { name: 'Qstockフェスティバル', city: 'オウル', body: 'クーシサーリ、ラーッティ、リンナンサーリで開かれる2日間のロックフェス。2026年は13年連続で完売し、40,000人が来場しました。' },
+    es: { name: 'Festival Qstock', city: 'Oulu', body: 'Festival de rock de dos días en Kuusisaari, Raatti y Linnansaari. En 2026 agotó las entradas por 13.º año seguido, con 40.000 visitantes.' },
+    'pt-BR': { name: 'Festival Qstock', city: 'Oulu', body: 'Festival de rock de dois dias em Kuusisaari, Raatti e Linnansaari. Em 2026 esgotou pelo 13º ano seguido, com 40.000 visitantes.' },
+    'zh-CN': { name: 'Qstock 音乐节', city: '奥卢', body: '在 Kuusisaari、Raatti 和 Linnansaari 举办的两天摇滚音乐节。2026 年连续第 13 年门票售罄，共有 40,000 名观众。' },
+    ko: { name: 'Qstock 페스티벌', city: '오울루', body: '쿠시사리, 라티, 린난사리에서 열리는 이틀간의 록 페스티벌. 2026년에는 13년 연속 매진됐고 40,000명이 찾았습니다.' },
+    fr: { name: 'Festival Qstock', city: 'Oulu', body: 'Festival rock de deux jours à Kuusisaari, Raatti et Linnansaari. En 2026, il a affiché complet pour la 13e année consécutive, avec 40 000 visiteurs.' },
+    it: { name: 'Festival Qstock', city: 'Oulu', body: 'Festival rock di due giorni a Kuusisaari, Raatti e Linnansaari. Nel 2026 ha fatto il tutto esaurito per il 13º anno di fila, con 40.000 visitatori.' },
+    nl: { name: 'Qstock Festival', city: 'Oulu', body: 'Tweedaags rockfestival op Kuusisaari, Raatti en Linnansaari. In 2026 was het voor het 13e jaar op rij uitverkocht, met 40.000 bezoekers.' },
+    sv: { name: 'Qstock Festival', city: 'Oulu', body: 'Tvådagars rockfestival på Kuusisaari, Raatti och Linnansaari. 2026 blev den utsåld för 13:e året i rad, med 40 000 besökare.' },
+  } },
+  // simerock.com: "Simerock 25V. ROVANIEMELLÄ 13.-14.8.2027"; Tiketti: "Ounaspaviljonki, Rovaniemi"; uutinen 4.2.2026:
+  // "Lapin suurin tapahtuma, Simerock" (16.10.2026).
+  { id: 'simerock', start: '2027-08-13', end: '2027-08-14', t: {
+    en: { name: 'Simerock', city: 'Rovaniemi', body: "Rovaniemi's rock festival at Ounaspaviljonki. Simerock turns 25 in 2027, and the organiser calls it Lapland's biggest event." },
+    fi: { name: 'Simerock', city: 'Rovaniemi', body: 'Rovaniemen rockfestivaali Ounaspaviljongilla. Vuonna 2027 Simerock täyttää 25 vuotta, ja järjestäjä kutsuu sitä Lapin suurimmaksi tapahtumaksi.' },
+    de: { name: 'Simerock', city: 'Rovaniemi', body: 'Rovaniemis Rockfestival im Ounaspaviljonki. 2027 wird Simerock 25 Jahre alt, und der Veranstalter nennt es die größte Veranstaltung Lapplands.' },
+    ja: { name: 'Simerock', city: 'ロヴァニエミ', body: 'Ounaspaviljonkiで開かれるロヴァニエミのロックフェス。2027年に25周年を迎え、主催者はラップランド最大のイベントとうたっています。' },
+    es: { name: 'Simerock', city: 'Rovaniemi', body: 'El festival de rock de Rovaniemi, en el Ounaspaviljonki. En 2027 Simerock cumple 25 años, y la organización lo llama el mayor evento de Laponia.' },
+    'pt-BR': { name: 'Simerock', city: 'Rovaniemi', body: 'O festival de rock de Rovaniemi, no Ounaspaviljonki. Em 2027 o Simerock completa 25 anos, e a organização o chama de maior evento da Lapônia.' },
+    'zh-CN': { name: 'Simerock', city: '罗瓦涅米', body: '罗瓦涅米的摇滚音乐节，在 Ounaspaviljonki 举行。2027 年 Simerock 迎来 25 周年，主办方称其为拉普兰最大的活动。' },
+    ko: { name: 'Simerock', city: '로바니에미', body: 'Ounaspaviljonki에서 열리는 로바니에미의 록 페스티벌입니다. 2027년에 25주년을 맞으며, 주최 측은 라플란드 최대의 행사라고 소개합니다.' },
+    fr: { name: 'Simerock', city: 'Rovaniemi', body: "Le festival rock de Rovaniemi, à l'Ounaspaviljonki. En 2027, Simerock fête ses 25 ans, et l'organisateur le présente comme le plus grand événement de Laponie." },
+    it: { name: 'Simerock', city: 'Rovaniemi', body: "Il festival rock di Rovaniemi, all'Ounaspaviljonki. Nel 2027 Simerock compie 25 anni, e gli organizzatori lo definiscono il più grande evento della Lapponia." },
+    nl: { name: 'Simerock', city: 'Rovaniemi', body: 'Het rockfestival van Rovaniemi in Ounaspaviljonki. In 2027 bestaat Simerock 25 jaar, en de organisator noemt het het grootste evenement van Lapland.' },
+    sv: { name: 'Simerock', city: 'Rovaniemi', body: 'Rovaniemis rockfestival på Ounaspaviljonki. 2027 fyller Simerock 25 år, och arrangören kallar den Lapplands största evenemang.' },
+  } },
+  // ijahisidja.fi: "Ijahis idja 20.-21.8.2027"; 2026: "Ijahis idjassa 2800 kävijää", etkot to 13.8. Wilderness Hotel
+  // Juutua klo 22, ohjelma Sajoksessa (16.10.2026).
+  { id: 'ijahis-idja', start: '2027-08-20', end: '2027-08-21', t: {
+    en: { name: 'Ijahis Idja Sámi Music Festival', city: 'Inari', body: 'Indigenous music festival at Sajos, the Sámi cultural centre. The 2026 festival drew 2 800 visitors; its pre-party was a Thursday-night concert at Wilderness Hotel Juutua.' },
+    fi: { name: 'Ijahis Idja -saamelaismusiikkifestivaali', city: 'Inari', body: 'Alkuperäiskansojen musiikkifestivaali saamelaiskulttuurikeskus Sajoksessa. Vuonna 2026 kävijöitä oli 2 800, ja etkoina oli torstai-illan konsertti Wilderness Hotel Juutuassa.' },
+    de: { name: 'Ijahis Idja: Samisches Musikfestival', city: 'Inari', body: 'Indigenes Musikfestival im samischen Kulturzentrum Sajos. 2026 kamen 2 800 Besucher; zum Auftakt gab es am Donnerstagabend ein Konzert im Wilderness Hotel Juutua.' },
+    ja: { name: 'Ijahis Idjaサーミ音楽フェスティバル', city: 'イナリ', body: 'サーミ文化センターSajosで開かれる先住民の音楽フェス。2026年の来場者は2,800人で、木曜の夜にはWilderness Hotel Juutuaで前夜祭コンサートがありました。' },
+    es: { name: 'Festival de música sami Ijahis Idja', city: 'Inari', body: 'Festival de música indígena en el Sajos, el centro cultural sami. La edición de 2026 reunió a 2.800 visitantes; la fiesta previa fue un concierto el jueves por la noche en el Wilderness Hotel Juutua.' },
+    'pt-BR': { name: 'Festival de música sámi Ijahis Idja', city: 'Inari', body: 'Festival de música indígena no Sajos, o centro cultural sámi. A edição de 2026 reuniu 2.800 visitantes; o esquenta foi um show na quinta à noite no Wilderness Hotel Juutua.' },
+    'zh-CN': { name: 'Ijahis Idja 萨米音乐节', city: '伊纳里', body: '在萨米文化中心 Sajos 举办的原住民音乐节。2026 年有 2,800 名观众；前夜派对是周四晚上在 Wilderness Hotel Juutua 的音乐会。' },
+    ko: { name: 'Ijahis Idja 사미 음악 페스티벌', city: '이나리', body: '사미 문화센터 Sajos에서 열리는 원주민 음악 페스티벌입니다. 2026년에는 2,800명이 찾았고, 목요일 밤 Wilderness Hotel Juutua에서 전야 콘서트가 열렸습니다.' },
+    fr: { name: 'Festival de musique sámi Ijahis Idja', city: 'Inari', body: "Festival de musique autochtone au Sajos, le centre culturel sámi. L'édition 2026 a attiré 2 800 visiteurs ; l'avant-soirée était un concert le jeudi soir au Wilderness Hotel Juutua." },
+    it: { name: 'Ijahis Idja, festival di musica sámi', city: 'Inari', body: "Festival di musica indigena al Sajos, il centro culturale sámi. L'edizione 2026 ha richiamato 2.800 visitatori; la festa d'apertura è stata un concerto il giovedì sera al Wilderness Hotel Juutua." },
+    nl: { name: 'Ijahis Idja, Samisch muziekfestival', city: 'Inari', body: 'Festival voor inheemse muziek in het Sajos, het Samische cultuurcentrum. De editie van 2026 trok 2.800 bezoekers; het voorfeest was een concert op donderdagavond in Wilderness Hotel Juutua.' },
+    sv: { name: 'Ijahis Idja, samisk musikfestival', city: 'Inari', body: 'Urfolksmusikfestival på Sajos, det samiska kulturcentret. 2026 kom 2 800 besökare; förfesten var en konsert på torsdagskvällen på Wilderness Hotel Juutua.' },
+  } },
+  // airguitarworldchampionships.com: "Ilmakitaransoiton MM-kisat 2027 järjestetään 25. – 27. elokuuta"; 2026: finaali Delta
+  // Life -lavalla suistossa, "ikärajaton ja pääsymaksuton"; kansallisia osakilpailuja "yli kymmenessä maassa" (16.10.2026).
+  { id: 'air-guitar', start: '2027-08-25', end: '2027-08-27', t: {
+    en: { name: 'Air Guitar World Championships', city: 'Oulu', body: "The world championships of air guitar. National qualifiers run in more than ten countries; in 2026 the finals were free, open to all ages and held on a stage in Oulu's river delta." },
+    fi: { name: 'Ilmakitaransoiton MM-kisat', city: 'Oulu', body: 'Ilmakitaransoiton maailmanmestaruuskisat. Kansallisia karsintoja järjestetään yli kymmenessä maassa; vuonna 2026 finaalit olivat ilmaiset, ikärajattomat ja Oulujoen suistoon rakennetulla lavalla.' },
+    de: { name: 'Luftgitarren-WM', city: 'Oulu', body: 'Die Weltmeisterschaft im Luftgitarrespielen. Nationale Vorentscheide gibt es in mehr als zehn Ländern; 2026 war das Finale kostenlos, ohne Altersgrenze und auf einer Bühne im Flussdelta von Oulu.' },
+    ja: { name: 'エアギター世界選手権', city: 'オウル', body: 'エアギターの世界選手権。各国の予選は10か国以上で開かれ、2026年の決勝は入場無料、年齢制限なしで、オウルの河口デルタに設けられたステージで行われました。' },
+    es: { name: 'Mundiales de Air Guitar', city: 'Oulu', body: 'El campeonato mundial de guitarra imaginaria. Hay clasificatorias nacionales en más de diez países; en 2026 las finales fueron gratuitas, para todas las edades y en un escenario en el delta del río de Oulu.' },
+    'pt-BR': { name: 'Mundial de Air Guitar', city: 'Oulu', body: 'O campeonato mundial de guitarra imaginária. Há seletivas nacionais em mais de dez países; em 2026 as finais foram gratuitas, para todas as idades e num palco no delta do rio, em Oulu.' },
+    'zh-CN': { name: '空气吉他世锦赛', city: '奥卢', body: '空气吉他世界锦标赛。各国预选赛在十多个国家举行；2026 年决赛免费、不限年龄，舞台搭在奥卢的河口三角洲上。' },
+    ko: { name: '에어 기타 세계 선수권', city: '오울루', body: '에어 기타 세계 선수권 대회입니다. 국가별 예선은 10개국 이상에서 열리며, 2026년 결승은 무료에 나이 제한 없이 오울루 강 하구 삼각주의 무대에서 열렸습니다.' },
+    fr: { name: 'Air Guitar World Championships', city: 'Oulu', body: "Le championnat du monde d'air guitar. Des sélections nationales ont lieu dans plus de dix pays ; en 2026, les finales étaient gratuites, ouvertes à tous les âges et sur une scène dans le delta du fleuve, à Oulu." },
+    it: { name: 'Campionati mondiali di air guitar', city: 'Oulu', body: "Il campionato del mondo di chitarra immaginaria. Le selezioni nazionali si tengono in più di dieci paesi; nel 2026 le finali erano gratuite, aperte a tutte le età e su un palco nel delta del fiume a Oulu." },
+    nl: { name: 'Air Guitar World Championships', city: 'Oulu', body: 'Het wereldkampioenschap luchtgitaar. Nationale voorrondes worden in meer dan tien landen gehouden; in 2026 waren de finales gratis, voor alle leeftijden en op een podium in de rivierdelta van Oulu.' },
+    sv: { name: 'Air Guitar World Championships', city: 'Oulu', body: 'VM i luftgitarr. Nationella uttagningar hålls i mer än tio länder; 2026 var finalerna gratis, utan åldersgräns och på en scen i älvdeltat i Oulu.' },
+  } },
+];
+
+/* Palaavat tapahtumat ilman julkaistua seuraavaa päivää (tarkistettu 16.10.2026):
+ *   Frozen People: frozenpeople.fi yhä "Feb 28, 2026 · Oulu".
+ *   Elojazz: elojazz.com "Nähdään jälleen Elojazzeilla 2027!" ilman päivää; 2026 "30.7.–2.8.2026".
+ *   Ylläs Soikoon: yllassoikoon.fi "Ylläs Soikoon 2026 järjestetään 8.-11.7.2026", 2027 ei julkaistu.
+ * Tapahtuma siirtyy CALENDARiin heti kun järjestäjä julkaisee päivän. */
+const PENDING: PendingEvent[] = [
+  { id: 'frozen-people', lastStart: '2026-02-28', t: {
+    en: { name: 'Frozen People Festival', city: 'Oulu' }, fi: { name: 'Frozen People Festival', city: 'Oulu' },
+    de: { name: 'Frozen People Festival', city: 'Oulu' }, ja: { name: 'Frozen People Festival', city: 'オウル' },
+    es: { name: 'Frozen People Festival', city: 'Oulu' }, 'pt-BR': { name: 'Frozen People Festival', city: 'Oulu' },
+    'zh-CN': { name: 'Frozen People Festival', city: '奥卢' }, ko: { name: 'Frozen People Festival', city: '오울루' },
+    fr: { name: 'Frozen People Festival', city: 'Oulu' }, it: { name: 'Frozen People Festival', city: 'Oulu' },
+    nl: { name: 'Frozen People Festival', city: 'Oulu' }, sv: { name: 'Frozen People Festival', city: 'Oulu' },
+  } },
+  { id: 'yllas-soikoon', lastStart: '2026-07-08', lastEnd: '2026-07-11', t: {
+    en: { name: 'Ylläs Soikoon dance festival', city: 'Ylläs' }, fi: { name: 'Ylläs Soikoon -tanssitapahtuma', city: 'Ylläs' },
+    de: { name: 'Ylläs Soikoon, Tanzfestival', city: 'Ylläs' }, ja: { name: 'Ylläs Soikoonダンスフェスティバル', city: 'ユッラス' },
+    es: { name: 'Festival de baile Ylläs Soikoon', city: 'Ylläs' }, 'pt-BR': { name: 'Festival de dança Ylläs Soikoon', city: 'Ylläs' },
+    'zh-CN': { name: 'Ylläs Soikoon 舞蹈节', city: '于拉斯' }, ko: { name: 'Ylläs Soikoon 댄스 페스티벌', city: '윌래스' },
+    fr: { name: 'Festival de danse Ylläs Soikoon', city: 'Ylläs' }, it: { name: 'Ylläs Soikoon, festival di ballo', city: 'Ylläs' },
+    nl: { name: 'Dansfestival Ylläs Soikoon', city: 'Ylläs' }, sv: { name: 'Dansfestivalen Ylläs Soikoon', city: 'Ylläs' },
+  } },
+  { id: 'elojazz', lastStart: '2026-07-30', lastEnd: '2026-08-02', t: {
+    en: { name: 'Elojazz Festival', city: 'Oulu' }, fi: { name: 'Elojazz-festivaali', city: 'Oulu' },
+    de: { name: 'Elojazz-Festival', city: 'Oulu' }, ja: { name: 'Elojazzフェスティバル', city: 'オウル' },
+    es: { name: 'Festival Elojazz', city: 'Oulu' }, 'pt-BR': { name: 'Festival Elojazz', city: 'Oulu' },
+    'zh-CN': { name: 'Elojazz 音乐节', city: '奥卢' }, ko: { name: 'Elojazz 페스티벌', city: '오울루' },
+    fr: { name: 'Festival Elojazz', city: 'Oulu' }, it: { name: 'Festival Elojazz', city: 'Oulu' },
+    nl: { name: 'Elojazz Festival', city: 'Oulu' }, sv: { name: 'Elojazz Festival', city: 'Oulu' },
+  } },
+];
+
+/* `endsBy` = viimeinen päivä, jonka jälkeen tapahtuma on varmasti ohi (ISO). */
+type Item = { id: string; name: string; date: string; city: string; body: string; endsBy: string };
+type MonthBlock = { year: number; monthKey: MonthKey; items: Item[] };
+
+const SORTED = [...CALENDAR].sort((a, b) =>
+  a.start.localeCompare(b.start) || (a.end ?? a.start).localeCompare(b.end ?? b.start));
+
+/* Kuukausilohkot johdetaan samasta järjestetystä listasta jokaiselle kielelle, joten lohkot ja niiden
+   rivit ovat kaikilla kielillä samassa järjestyksessä rakenteen vuoksi, ei sopimuksen. */
+function blocksFor(lang: Lang): MonthBlock[] {
+  const out: MonthBlock[] = [];
+  for (const e of SORTED) {
+    const [y, m] = e.start.split('-').map(Number);
+    const monthKey = MONTH_KEYS[m - 1];
+    let blk = out[out.length - 1];
+    if (!blk || blk.year !== y || blk.monthKey !== monthKey) {
+      blk = { year: y, monthKey, items: [] };
+      out.push(blk);
+    }
+    const tx = e.t[lang];
+    blk.items.push({ id: e.id, name: tx.name, city: tx.city, body: tx.body, date: formatDays(lang, e.start, e.end), endsBy: e.end ?? e.start });
+  }
+  return out;
+}
+
+const EVENTS = Object.fromEntries(LANGS.map((l) => [l, blocksFor(l)])) as Record<Lang, MonthBlock[]>;
+
+const EVENT_COUNT = CALENDAR.length;
 
 /* Local calendar day as YYYY-MM-DD. Deliberately the READER's clock, not build time:
-   a static page stamped at deploy would call August events "past" for the rest of the
-   year and go stale the moment it shipped. toISOString() is wrong here — it converts
-   to UTC, so before 02:00 Finnish time it reports yesterday. */
+   a static page stamped at deploy would call events "past" too early or too late and go stale the
+   moment it shipped. toISOString() is wrong here — it converts to UTC, so before 02:00 Finnish time
+   it reports yesterday. */
 function todayLocalIso(d: Date): string {
   const p = (n: number) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
 
-/* Which entries are over, keyed by [month index][item index] against the EN list.
-   The fi/de lists are parallel to it — same months, same events, same order — so the
-   index is the join key. If that ever stops being true the lengths diverge and we fall
-   back to "not past", which shows a real event rather than mislabelling a live one. */
+/* Which entries are over, keyed by [month block][item]. The blocks are the same for every language. */
 function pastFlags(today: string): boolean[][] {
-  return EVENTS_BASE.en.map((m) =>
-    m.items.map((e) => !!e.endsBy && e.endsBy < today),
-  );
+  return EVENTS.en.map((m) => m.items.map((e) => e.endsBy < today));
 }
 
-/* Litteä lista tapahtumia aikajärjestyksessä, menneet pudotettuna.
- *
- * 🔴 Lukijan kello, ei build-aika — sama sääntö kuin `pastFlags`issa: deployssa
- * leimattu päivä vanhenisi heti julkaisuhetkellä.
- * 🔴 `endsBy` elää vain EN-listalla ja luetaan indeksillä muille kielille. Jos
- * listat ajautuvat erilleen (eri pituus), palautetaan EN-lista sellaisenaan
- * eikä yritetä arvata pareja.
- * 🔴 Tapahtuma ilman `endsBy`:tä EI putoa pois: tuntematon päättymispäivä ei ole
- * peruste piilottaa elävää tapahtumaa. Se järjestetään listan loppuun.
- */
+/* Litteä lista tulevista tapahtumista aikajärjestyksessä (etusivu, PrimeTime). Lukijan kello, ei build-aika. */
 export function upcomingEvents(lang: Lang, count: number, skip = 0) {
   const today = todayLocalIso(new Date());
-  const base = EVENTS_BASE.en;
-  const loc = EVENTS[lang] ?? base;
-  const parallel =
-    loc.length === base.length && loc.every((m, i) => m.items.length === base[i].items.length);
-
-  // enName = EN-listan nimi. Se on ainoa avain joka ei kaanny, ja kuvakartta
-  // (data/eventImages.ts) on avaimitettu silla.
-  const out: (Item & { monthKey: MonthBlock['monthKey']; enName: string })[] = [];
-  base.forEach((m, mi) => {
-    m.items.forEach((e, ii) => {
-      if (e.endsBy && e.endsBy < today) return;
-      const shown = parallel ? loc[mi].items[ii] : e;
-      out.push({ ...shown, endsBy: e.endsBy, monthKey: m.monthKey, enName: e.name });
-    });
-  });
-  out.sort((a, b) => (a.endsBy ?? '9999-99-99').localeCompare(b.endsBy ?? '9999-99-99'));
+  const out: (Item & { monthKey: MonthKey })[] = [];
+  for (const m of EVENTS[lang] ?? EVENTS.en) {
+    for (const e of m.items) if (e.endsBy >= today) out.push({ ...e, monthKey: m.monthKey });
+  }
+  out.sort((a, b) => a.endsBy.localeCompare(b.endsBy));
   return out.slice(skip, skip + count);
 }
 
-export { EVENTS, EVENTS_BASE, EVENT_COUNT, todayLocalIso, pastFlags };
-export type { Item, MonthBlock };
+/* Kesäsivun tapahtumakortin aika: seuraava kalenterissa oleva kerta, tai jos järjestäjä ei ole julkaissut
+   päivää, merkintä "päivä ei vielä julkinen" ja edellisen kerran päivä. */
+export function eventWhen(lang: Lang, id: string): string {
+  const today = todayLocalIso(new Date());
+  const runs = SORTED.filter((e) => e.id === id);
+  const next = runs.find((e) => (e.end ?? e.start) >= today) ?? runs[runs.length - 1];
+  if (next) return formatDays(lang, next.start, next.end);
+  const p = PENDING.find((e) => e.id === id);
+  const c = COPY[lang]?.events ?? COPY.en.events;
+  return p ? `${c.pendingH} · ${c.lastEdition}${labelSep(lang)}${formatDays(lang, p.lastStart, p.lastEnd)}` : '';
+}
 
+export { EVENTS, EVENT_COUNT, PENDING, todayLocalIso, pastFlags };
+export type { Item, MonthBlock, PendingEvent };

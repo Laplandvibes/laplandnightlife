@@ -1,5 +1,5 @@
 import type { City } from './cities';
-import type { Lang } from '../i18n/useLang';
+import { LANG_PREFIX, type Lang } from '../i18n/useLang';
 
 /** Sister-LV-site ecosystem cross-links derived per city tag.
  *  Drives the "More in Lapland" section on each city page. */
@@ -135,6 +135,19 @@ export const ACCENT = {
   ski: '#38BDF8',       // aurora blue
 } as const;
 
+/** Our town -> the LaplandBars town page(s) covering it (laplandbars-new/src/data/barCities.ts
+ *  BAR_CITIES). Pyhä and Luosto are two pages there and one here. Towns missing from this map have
+ *  no page on LaplandBars. */
+const BARS_CITY: Record<string, { slug: string; name: string }[]> = {
+  rovaniemi: [{ slug: 'rovaniemi', name: 'Rovaniemi' }],
+  levi: [{ slug: 'levi', name: 'Levi' }],
+  yllas: [{ slug: 'yllas', name: 'Ylläs' }],
+  saariselka: [{ slug: 'saariselka', name: 'Saariselkä' }],
+  ruka: [{ slug: 'ruka', name: 'Ruka' }],
+  'pyha-luosto': [{ slug: 'pyha', name: 'Pyhä' }, { slug: 'luosto', name: 'Luosto' }],
+  salla: [{ slug: 'salla', name: 'Salla' }],
+};
+
 export function getCrossLinks(city: City, lang: Lang = 'en'): CrossLink[] {
   const t = CL[lang] ?? CL.en;
   const links: CrossLink[] = [];
@@ -188,14 +201,19 @@ export function getCrossLinks(city: City, lang: Lang = 'en'): CrossLink[] {
       why: t.transportWhy,
       accent: ACCENT.transport,
     },
-    {
+  );
+
+  // LaplandBars has its own page for these towns only; elsewhere the card would land on its
+  // front page and promise a town the site does not cover, so there is no card.
+  for (const b of BARS_CITY[city.slug] ?? []) {
+    links.push({
       site: 'LaplandBars',
-      url: 'https://laplandbars.com',
-      label: t.bars(city.name),
+      url: `https://laplandbars.com${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/city/${b.slug}/`,
+      label: t.bars(b.name),
       why: t.barsWhy,
       accent: ACCENT.food,
-    }
-  );
+    });
+  }
 
   return links;
 }

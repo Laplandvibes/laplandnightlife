@@ -10,8 +10,8 @@ import type { Lang } from '../i18n/useLang';
  */
 
 export type OpenKey =
-  | 'wedSatSeason'
-  | 'weekendsLate'
+  | 'gigNights'
+  | 'dailyLate'
   | 'weekends'
   | 'wedSat'
   | 'friSatDisco'
@@ -20,15 +20,15 @@ export type OpenKey =
 
 export interface UpliftDict {
   open: Record<OpenKey, string>;
-  clubStats: { capacity: string; venues: string; strip: string; lastCall: string };
+  clubStats: { capacity: string; venues: string; royClub: string; lastCall: string };
   cityStats: { cities: string; venues: string; scenes: string; ski: string };
 }
 
 export const UPLIFT: Record<Lang, UpliftDict> = {
   en: {
     open: {
-      wedSatSeason: 'Wed–Sat in season',
-      weekendsLate: 'Weekends, late',
+      gigNights: 'Gig nights, until 03:30',
+      dailyLate: 'Daily 22–04:30',
       weekends: 'Weekends',
       wedSat: 'Wed–Sat',
       friSatDisco: 'Fri–Sat disco',
@@ -38,8 +38,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Biggest club capacity, Levi',
       venues: 'Venues listed across 14 cities',
-      strip: 'Venues on the 400 m Rotuaari strip',
-      lastCall: 'Last call in peak season',
+      royClub: 'Year Roy Club opened, Rovaniemi',
+      lastCall: 'Latest legal serving time',
     },
     cityStats: {
       cities: 'Cities, ranked honestly',
@@ -50,8 +50,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   fi: {
     open: {
-      wedSatSeason: 'Ke–la sesongissa',
-      weekendsLate: 'Viikonloppuisin, myöhään',
+      gigNights: 'Keikkailtoina, 03:30 asti',
+      dailyLate: 'Joka päivä 22–04:30',
       weekends: 'Viikonloppuisin',
       wedSat: 'Ke–la',
       friSatDisco: 'Pe–la disko',
@@ -61,8 +61,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Suurimman klubin kapasiteetti, Levi',
       venues: 'Listattua paikkaa 14 kaupungissa',
-      strip: 'Baaria Rotuaarin 400 metrillä',
-      lastCall: 'Viimeinen anniskelu huippusesongissa',
+      royClub: 'Roy Clubin avausvuosi, Rovaniemi',
+      lastCall: 'Myöhäisin sallittu anniskeluaika',
     },
     cityStats: {
       cities: 'Kaupunkia, rehellisesti arvioituna',
@@ -73,8 +73,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   de: {
     open: {
-      wedSatSeason: 'Mi–Sa in der Saison',
-      weekendsLate: 'Wochenenden, bis spät',
+      gigNights: 'An Konzertabenden, bis 03:30',
+      dailyLate: 'Täglich 22–04:30',
       weekends: 'Wochenenden',
       wedSat: 'Mi–Sa',
       friSatDisco: 'Fr–Sa Disco',
@@ -84,8 +84,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Kapazität des größten Clubs, Levi',
       venues: 'Gelistete Locations in 14 Städten',
-      strip: 'Locations auf 400 m Rotuaari',
-      lastCall: 'Letzte Runde in der Hochsaison',
+      royClub: 'Gründungsjahr des Roy Club, Rovaniemi',
+      lastCall: 'Späteste erlaubte Ausschankzeit',
     },
     cityStats: {
       cities: 'Städte, ehrlich bewertet',
@@ -96,8 +96,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   ja: {
     open: {
-      wedSatSeason: 'シーズン中の水〜土',
-      weekendsLate: '週末、深夜まで',
+      gigNights: 'ライブのある夜、03:30まで',
+      dailyLate: '毎日22時〜04:30',
       weekends: '週末',
       wedSat: '水〜土',
       friSatDisco: '金・土はディスコ',
@@ -107,8 +107,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: '最大クラブの収容人数（レヴィ）',
       venues: '14都市の掲載ベニュー',
-      strip: 'ロトゥアーリ400mのベニュー数',
-      lastCall: 'ピークシーズンのラストオーダー',
+      royClub: 'Roy Club開業の年（ロヴァニエミ）',
+      lastCall: '法律上の提供終了の上限',
     },
     cityStats: {
       cities: '都市を正直にランク付け',
@@ -119,8 +119,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   es: {
     open: {
-      wedSatSeason: 'Mié–sáb en temporada',
-      weekendsLate: 'Fines de semana, hasta tarde',
+      gigNights: 'Noches de concierto, hasta las 03:30',
+      dailyLate: 'Todos los días 22–04:30',
       weekends: 'Fines de semana',
       wedSat: 'Mié–sáb',
       friSatDisco: 'Vie–sáb disco',
@@ -130,8 +130,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Aforo del club más grande, Levi',
       venues: 'Locales listados en 14 ciudades',
-      strip: 'Locales en los 400 m de Rotuaari',
-      lastCall: 'Última ronda en temporada alta',
+      royClub: 'Año de apertura del Roy Club, Rovaniemi',
+      lastCall: 'Hora límite legal de servicio',
     },
     cityStats: {
       cities: 'Ciudades, valoradas con honestidad',
@@ -142,8 +142,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   'pt-BR': {
     open: {
-      wedSatSeason: 'Qua–sáb na temporada',
-      weekendsLate: 'Fins de semana, até tarde',
+      gigNights: 'Noites de show, até as 03:30',
+      dailyLate: 'Todos os dias 22–04:30',
       weekends: 'Fins de semana',
       wedSat: 'Qua–sáb',
       friSatDisco: 'Sex–sáb discoteca',
@@ -153,8 +153,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Capacidade do maior clube, Levi',
       venues: 'Locais listados em 14 cidades',
-      strip: 'Locais nos 400 m da Rotuaari',
-      lastCall: 'Última rodada na alta temporada',
+      royClub: 'Ano de abertura do Roy Club, Rovaniemi',
+      lastCall: 'Horário-limite legal de serviço',
     },
     cityStats: {
       cities: 'Cidades, avaliadas com honestidade',
@@ -165,8 +165,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   'zh-CN': {
     open: {
-      wedSatSeason: '雪季周三至周六',
-      weekendsLate: '周末，营业到深夜',
+      gigNights: '演出之夜，至 03:30',
+      dailyLate: '每天 22:00–04:30',
       weekends: '周末',
       wedSat: '周三至周六',
       friSatDisco: '周五、周六迪斯科',
@@ -176,8 +176,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: '最大夜店容量（莱维）',
       venues: '14 座城市的收录场所',
-      strip: '罗图阿里400米内的场所',
-      lastCall: '旺季最后点单时间',
+      royClub: 'Roy Club 开业年份，罗瓦涅米',
+      lastCall: '法定最晚供酒时间',
     },
     cityStats: {
       cities: '城市，诚实排序',
@@ -188,8 +188,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   ko: {
     open: {
-      wedSatSeason: '시즌 중 수–토',
-      weekendsLate: '주말, 늦게까지',
+      gigNights: '공연이 있는 밤, 03:30까지',
+      dailyLate: '매일 22시–04:30',
       weekends: '주말',
       wedSat: '수–토',
       friSatDisco: '금–토 디스코',
@@ -199,8 +199,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: '최대 클럽 수용 인원, 레비',
       venues: '14개 도시의 등재 베뉴',
-      strip: '로투아리 400m 구간의 베뉴',
-      lastCall: '성수기 라스트 콜',
+      royClub: 'Roy Club 개업 연도, 로바니에미',
+      lastCall: '법정 주류 판매 마감 시각',
     },
     cityStats: {
       cities: '도시, 솔직하게 평가',
@@ -211,8 +211,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   fr: {
     open: {
-      wedSatSeason: 'Mer–sam en saison',
-      weekendsLate: 'Week-ends, jusque tard',
+      gigNights: "Soirs de concert, jusqu'à 3 h 30",
+      dailyLate: 'Tous les jours 22 h – 4 h 30',
       weekends: 'Week-ends',
       wedSat: 'Mer–sam',
       friSatDisco: 'Ven–sam disco',
@@ -222,8 +222,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Capacité du plus grand club, Levi',
       venues: 'Adresses répertoriées dans 14 villes',
-      strip: 'Lieux sur les 400 m de Rotuaari',
-      lastCall: 'Dernière commande en haute saison',
+      royClub: "Année d'ouverture du Roy Club, Rovaniemi",
+      lastCall: 'Heure légale maximale de service',
     },
     cityStats: {
       cities: 'Villes, classées honnêtement',
@@ -234,8 +234,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   it: {
     open: {
-      wedSatSeason: 'Mer–sab in stagione',
-      weekendsLate: 'Weekend, fino a tardi',
+      gigNights: 'Sere di concerto, fino alle 03:30',
+      dailyLate: 'Tutti i giorni 22–04:30',
       weekends: 'Weekend',
       wedSat: 'Mer–sab',
       friSatDisco: 'Ven–sab disco',
@@ -245,8 +245,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Capienza del club più grande, Levi',
       venues: 'Locali elencati in 14 città',
-      strip: 'Locali sui 400 m di Rotuaari',
-      lastCall: 'Ultimo giro in alta stagione',
+      royClub: 'Anno di apertura del Roy Club, Rovaniemi',
+      lastCall: 'Orario massimo di mescita per legge',
     },
     cityStats: {
       cities: 'Città, valutate con onestà',
@@ -257,8 +257,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   nl: {
     open: {
-      wedSatSeason: 'Wo–za in het seizoen',
-      weekendsLate: 'Weekenden, tot laat',
+      gigNights: 'Concertavonden, tot 03:30',
+      dailyLate: 'Dagelijks 22–04:30',
       weekends: 'Weekenden',
       wedSat: 'Wo–za',
       friSatDisco: 'Vr–za disco',
@@ -268,8 +268,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Capaciteit grootste club, Levi',
       venues: 'Vermelde locaties in 14 steden',
-      strip: 'Locaties op 400 m Rotuaari',
-      lastCall: 'Laatste ronde in het hoogseizoen',
+      royClub: 'Openingsjaar van Roy Club, Rovaniemi',
+      lastCall: 'Uiterste wettelijke schenktijd',
     },
     cityStats: {
       cities: 'Steden, eerlijk beoordeeld',
@@ -280,8 +280,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
   },
   sv: {
     open: {
-      wedSatSeason: 'Ons–lör under säsongen',
-      weekendsLate: 'Helger, till sent',
+      gigNights: 'Spelningskvällar, till 03:30',
+      dailyLate: 'Varje dag 22–04:30',
       weekends: 'Helger',
       wedSat: 'Ons–lör',
       friSatDisco: 'Fre–lör disco',
@@ -291,8 +291,8 @@ export const UPLIFT: Record<Lang, UpliftDict> = {
     clubStats: {
       capacity: 'Största klubbens kapacitet, Levi',
       venues: 'Listade ställen i 14 städer',
-      strip: 'Ställen längs Rotuaaris 400 meter',
-      lastCall: 'Sista beställning under högsäsong',
+      royClub: 'Roy Clubs öppningsår, Rovaniemi',
+      lastCall: 'Senaste tillåtna serveringstid',
     },
     cityStats: {
       cities: 'Städer, ärligt rankade',

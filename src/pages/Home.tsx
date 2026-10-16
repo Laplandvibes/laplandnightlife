@@ -68,10 +68,10 @@ export default function Home() {
 
   /* Sama kalenterilahde kuin PrimeTimessa, mutta kolme SEURAAVAA (skip = 3),
      jotta etusivu ei toista itseaan. Kovakoodatut e1/e2/e3-kentat olivat
-     syyskuussa 2/3 menneita eivatka voineet vanheta itsestaan. Avaimet jaavat
-     copy.ts:aan kunnes on varmaa etta 2027-kalenteri on olemassa. */
+     syyskuussa 2/3 menneita eivatka voineet vanheta itsestaan; ne poistettiin
+     copysta, kun kalenteriin tuli vuosi 2027. */
   const events = upcomingEvents(lang, 3, 3).map((e) => ({
-    name: e.name, when: e.date, desc: e.body, img: eventImage(e.enName),
+    name: e.name, when: e.date, desc: e.body, img: eventImage(e.id),
   }));
 
   const tips = [

@@ -1,8 +1,7 @@
 import { IMG } from './images';
 
 /**
- * Tapahtuma → kuva. Avain on EN-listan nimi, koska se on ainoa joka ei
- * käänny (`data/events.ts` lukee lokalisoinnin indeksillä samasta listasta).
+ * Tapahtuma → kuva. Avain on tapahtuman tunniste (`data/events.ts` CALENDAR[].id), joka ei käänny.
  *
  * 🔴 **Puuttuva kuva ei saa tarkoittaa väärää kuvaa.** Jos tapahtumalle ei ole
  * omaa kuvaa, käytetään neutraalia tapahtumakuvaa — ei lähintä sinne päin
@@ -16,27 +15,20 @@ import { IMG } from './images';
  * siihen asti ne näyttävät varakuvaa.
  */
 export const EVENT_IMG: Record<string, string> = {
-  'Skábmagovat Indigenous Film Festival': IMG.eventFilmFestival,
-  'Sami Week / Sámi Soveeknaki': IMG.eventSamiMusic,
-  'Ijahis Idja Sámi Music Festival': IMG.eventIjahisIdja, // Sajos, Inari (paikka)
-  'Frozen People Festival': IMG.eventFrozenPeople, // Oulun kauppatori helmikuussa 2026 (paikka)
-  'Yllas Soikoon Music Festival': IMG.eventYllasSoikoon, // Ylläksen laki huhtikuussa
-  'SnowCastle final weeks': IMG.iceCastle,
-  'Midnight Sun Window opens': IMG.primeWindow,
-  'Midnight Sun Film Festival': IMG.primeFilm,
-  'Juhannus / Midsummer': IMG.primeJuhannus,
-  'Qstock Festival 2026': IMG.eventRockFestival,
-  'Elojazz Festival': IMG.eventJazz,
-  Simerock: IMG.eventCityRock,
-  'Air Guitar World Championships qualifier': IMG.summerAirGuitar,
-  'Air Guitar World Championships Final': IMG.summerAirGuitar,
-  'Midnight Sun Window closes': IMG.eventMidnightSun,
-  // Talvitapahtumat, generoitu 9.9.2026 (Vesa: "enko tapahtumiin pyytanyt kuvia").
-  'Jutajaiset Folklore Festival': IMG.eventJutajaiset,
-  'Levi FIS Alpine Ski World Cup': IMG.eventLeviFis,
-  'Ruka FIS Cross-Country Opening': IMG.eventRukaFis,
-  'Christmas in Rovaniemi': IMG.eventChristmas,
-  "New Year's Eve fireworks": IMG.eventNewYear,
+  skabmagovat: IMG.eventFilmFestival, // Skábmagovatin lumiteatteri, Inari 2024 (tapahtuma)
+  'ijahis-idja': IMG.eventIjahisIdja, // Sajos, Inari (paikka)
+  'midnight-sun': IMG.primeWindow,
+  msff: IMG.primeFilm,
+  juhannus: IMG.primeJuhannus,
+  qstock: IMG.eventRockFestival, // Qstockin ilotulitus 2012 (tapahtuma)
+  simerock: IMG.eventCityRock, // Ounaspaviljongin lava (paikka)
+  'air-guitar': IMG.summerAirGuitar, // AGWC Oulu 2019 (tapahtuma)
+  jutajaiset: IMG.eventJutajaiset,
+  'levi-fis': IMG.eventLeviFis,
+  'ruka-nordic': IMG.eventRukaFis,
+  // Ei kuvaa: new-year (ainoa ilotulituskuva on Oulusta 2008, ja Oulun kaupunki ei enää järjestä
+  // ilotulitusta), sami-day (Sajoksen kuva on jo Ijahis Idjalla samalla sivulla), sekä 2027-kalenterin
+  // uudet tapahtumat, joista ei ole omaa vapaata valokuvaa.
 };
 
 /** 🔴🔴 EI VARAVALOKUVAA (Vesa 2026-09-09: *"sama kuva kaikissa?"*).
@@ -59,4 +51,4 @@ export const EVENT_IMG: Record<string, string> = {
  *  tai sen paikasta (data/photoCredits.ts). Yksi kuva = yksi tapahtuma: entiset
  *  yhteiskuvat (jazz, rock, saamelaismusiikki) jaettiin, koska Ylläksen rinnefestivaalin
  *  kuva ei kelpaa Oulun jazzviikolle. */
-export const eventImage = (enName: string): string | null => EVENT_IMG[enName] ?? null;
+export const eventImage = (id: string): string | null => EVENT_IMG[id] ?? null;

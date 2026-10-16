@@ -10,8 +10,9 @@ import { eventImage } from '../data/eventImages';
 import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import TicketmasterCard from '../components/TicketmasterCard';
 import {
-  EVENTS, EVENTS_BASE, EVENT_COUNT, todayLocalIso, pastFlags,
+  EVENTS, EVENT_COUNT, PENDING, todayLocalIso, pastFlags,
 } from '../data/events';
+import { formatDays, labelSep } from '../data/eventDates';
 
 export default function Events() {
   const lang = useLang();
@@ -42,8 +43,8 @@ export default function Events() {
   const firstPast = ordered.findIndex((x) => !x.upcoming);
   // First entry that has not finished yet — the one a reader can still act on.
   const next = (() => {
-    for (let mi = 0; mi < EVENTS_BASE.en.length; mi++) {
-      for (let ii = 0; ii < EVENTS_BASE.en[mi].items.length; ii++) {
+    for (let mi = 0; mi < data.length; mi++) {
+      for (let ii = 0; ii < data[mi].items.length; ii++) {
         if (!past[mi]?.[ii]) return data[mi]?.items[ii];
       }
     }
@@ -92,7 +93,7 @@ export default function Events() {
           )}
 
           {ordered.map(({ m, mi }, oi) => (
-            <div key={m.monthKey}>
+            <div key={`${m.year}-${m.monthKey}`}>
               {oi === firstPast && firstPast > 0 && (
                 <div className="flex items-center gap-4 mb-8 mt-4">
                   <span className="h-px flex-1 bg-white/10" />
@@ -104,18 +105,17 @@ export default function Events() {
               )}
               <div className="flex items-center gap-3 mb-5 border-b border-white/10 pb-3">
                 <h2 className="font-heading text-3xl text-white tracking-wide">{c.months[m.monthKey]}</h2>
-                <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">2026</span>
+                <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">{m.year}</span>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {m.items.map((e, ii) => {
                   const isPast = past[mi]?.[ii] ?? false;
-                  /* 🔴 Kuva haetaan EN-nimella indeksilla, ei kaannetylla nimella:
-                     `EVENTS_BASE.en` on kuvakartan ainoa vakaa avain (12 lokaalia
-                     ei voi olla eri mielta siita mika kuva kuuluu tapahtumaan). */
-                  const img = eventImage(EVENTS_BASE.en[mi]?.items[ii]?.name ?? '');
+                  /* Kuva haetaan tapahtuman tunnisteella, joka ei käänny: 12 kieltä
+                     eivät voi olla eri mieltä siitä, mikä kuva kuuluu tapahtumaan. */
+                  const img = eventImage(e.id);
                   return (
                     <div
-                      key={e.name}
+                      key={e.id}
                       className={
                         'overflow-hidden rounded-xl border transition-all ' +
                         (isPast
@@ -154,6 +154,27 @@ export default function Events() {
             </div>
           ))}
 
+          {/* Tapahtumat, jotka palaavat mutta joiden seuraavaa päivää järjestäjä ei ole vielä
+              julkaissut. Ne eivät ole kuukausilistassa, koska kuukausi olisi arvaus; edellinen
+              päivä kerrotaan, jotta lukija tietää mihin vuodenaikaan tapahtuma osuu. */}
+          {PENDING.length > 0 && (
+            <div className="border-t border-white/10 pt-8">
+              <h2 className="font-heading text-2xl text-white tracking-wide mb-2">{c.pendingH}</h2>
+              <p className="text-sm text-white/70 leading-relaxed mb-5 max-w-3xl">{c.pendingBody}</p>
+              <ul className="grid sm:grid-cols-2 gap-3">
+                {PENDING.map((p) => {
+                  const tx = p.t[lang];
+                  return (
+                    <li key={p.id} className="bg-night-light/30 border border-white/10 rounded-xl px-5 py-4">
+                      <p className="font-heading text-lg text-white tracking-wide">{tx.name}</p>
+                      <p className="text-sm text-white/70">{tx.city} · {c.lastEdition}{labelSep(lang)}{formatDays(lang, p.lastStart, p.lastEnd)}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
           {/* Ticketmaster FI — Vesa's documented exception (CLAUDE.md 2026-08-17):
               TP provides ONLY a ready-made front-page link for this programme, so
               no per-event deep link is possible. Reader-service, not a revenue
@@ -182,7 +203,7 @@ export default function Events() {
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
             <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
           </div>
-          <GygWidget query="Lapland festivals tours 2026" seeAllPath="lapland-finland-l2652" campaign="events_pillar" count={6} />
+          <GygWidget query="Lapland festivals tours" seeAllPath="lapland-finland-l2652" campaign="events_pillar" count={6} />
         </div>
       </section>
 

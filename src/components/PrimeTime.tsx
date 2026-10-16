@@ -43,14 +43,14 @@ export default function PrimeTime() {
         <div className="grid sm:grid-cols-3 gap-5">
           {cards.map((card) => (
             <Link
-              key={card.enName}
+              key={card.id}
               to={to('/events')}
               className="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)] flex flex-col"
             >
-              {eventImage(card.enName) ? (
+              {eventImage(card.id) ? (
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                  style={{ backgroundImage: `url(${eventImage(card.enName)!})` }}
+                  style={{ backgroundImage: `url(${eventImage(card.id)!})` }}
                 />
               ) : (
                 /* Ei kuvaa talle tapahtumalle: tumma pohja, ei lainattua valokuvaa. */
@@ -65,7 +65,7 @@ export default function PrimeTime() {
                   Rukan kortissa 4,2:1 (41 % pikseleistä alle rajan). Pieni pinkki tarvitsee
                   lähes umpinaisen yön taakseen; kaista kattaa nyt linkkirivin. */}
               <div className="absolute inset-0 bg-gradient-to-t from-night from-16% via-night/55 via-[45%] to-transparent pointer-events-none" />
-              {eventImage(card.enName) && <ImageMark src={eventImage(card.enName)} linked={false} />}
+              {eventImage(card.id) && <ImageMark src={eventImage(card.id)} linked={false} />}
 
               <div className="relative p-7 min-h-[440px] flex flex-col">
                 <div className="flex items-start justify-between mb-6">
