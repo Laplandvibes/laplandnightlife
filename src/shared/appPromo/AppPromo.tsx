@@ -118,6 +118,13 @@ function track(placement: string) {
   }
 }
 
+/*
+ * @container (max-width:559.98px): puhelimella (alle 560 px) otsikko, ingressi ja huomautus keskelle. Vasemmalle
+ * tasattuna koko paino jäi kortin vasempaan laitaan, kun puhelinkuvakin on vasemmalla (Vesa 6.10.2026: "appi mainos
+ * oli liian vasemman painotteinen mobiilissa"). Hyötyrivit pysyvät vasemmalle tasattuina listana puhelinkuvan vieressä.
+ * 🔴 Selitykset tänne, EI CSS-merkkijonon sisään: CSS-kommentti merkkijonossa päätyy sellaisenaan JS-pakettiin ja
+ * selaimelle (gate:kommentit, hubi 6.10.2026). JS-kommentin minifioija poistaa.
+ */
 const CSS = `
 .lvap{width:100%;margin:32px 0;font-family:'DM Sans',system-ui,sans-serif;color:#F9FAFB;container-type:inline-size}
 .lvap *{box-sizing:border-box}
@@ -167,6 +174,12 @@ const CSS = `
 .lvap-qr span{max-width:156px;font-size:14px;font-weight:600;line-height:1.4;color:rgba(249,250,251,.88);text-wrap:pretty}
 .lvap-wide{display:none}
 .lvap a:focus-visible{outline:2px solid #F9A8D4;outline-offset:3px;border-radius:12px}
+@container (max-width:559.98px){
+ .lvap-txt0{text-align:center}
+ .lvap-lockup{justify-content:center}
+ .lvap-lead{margin-left:auto;margin-right:auto}
+ .lvap-note{text-align:center}
+}
 @container (max-width:319.98px){
  .lvap-card{padding:16px}
  .lvap-title{font-size:27px}

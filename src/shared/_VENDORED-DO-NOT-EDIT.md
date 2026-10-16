@@ -32,6 +32,9 @@ Only the files listed below are vendored, on purpose — this is a refresh, not 
 - ads/data/partnerBrand.ts
 - ads/data/partnerTypes.ts
 - ads/rails/makia.ts
+- appPromo/AppPromo.tsx
+- appPromo/copy.ts
+- appPromo/screens.ts
 - appStats.ts
 - router/trailingSlashPlugin.ts
 - router/trailingSlashRouter.tsx
