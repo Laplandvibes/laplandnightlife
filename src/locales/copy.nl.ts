@@ -309,7 +309,7 @@ const nl = {
     notFoundLink: 'Terug naar alle steden →',
   },
   newYear: {
-    seoTitle: 'Oud en nieuw in Lapland 2026: vuurwerk, bars en regels',
+    seoTitle: 'Oud en nieuw in Lapland 2026–2027: vuurwerk, bars en regels',
     seoDesc: 'Waar het oudejaarsvuurwerk afgaat in Rovaniemi, Levi en Kemi, hoe lang bars mogen schenken (03:00), wat er op 1 januari open is en hoe u thuiskomt.',
     heroEyebrow: 'Donderdag 31 december 2026',
     heroTitle: 'Oudejaarsavond in Lapland',

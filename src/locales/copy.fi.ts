@@ -267,7 +267,7 @@ const fi = {
       footerLink: 'Käyttöehdot →',
     },
     newYear: {
-      seoTitle: 'Uusivuosi Lapissa 2026: ilotulitukset, baarit ja säännöt',
+      seoTitle: 'Uusivuosi Lapissa 2026–2027: ilotulitus, baarit, säännöt',
       seoDesc: 'Missä uudenvuoden ilotulitus ammutaan Rovaniemellä, Levillä ja Kemissä, kauanko baarit saavat anniskella (03:00), mitä on auki 1.1. ja miten pääsee kotiin.',
       heroEyebrow: 'Torstai 31.12.2026',
       heroTitle: 'Uudenvuodenaatto Lapissa',
