@@ -131,8 +131,8 @@ const fi = {
       ctaBtn: 'Selaa revontulimajoitusta →',
     },
     events: {
-      seoTitle: 'Tapahtumakalenteri 2026–2027: Lappi ja pohjoinen',
-      seoDesc: 'Kuukausi kuukaudelta läpi vuosien 2026 ja 2027: Skábmagovat, Sodankylän elokuvajuhlat, Qstock, ilmakitaran MM, FIS-viikonloput ja mistä liput saa.',
+      seoTitle: 'Lapin ja Oulun tapahtumat ja festarit 2026–2027',
+      seoDesc: 'Lapin ja Oulun tapahtumat kuukausittain: Skábmagovat, saamelaisten kansallispäivä, Arctic Lapland Rally, Sodankylän elokuvajuhlat, Qstock, Simerock ja liput.',
       heroEyebrow: (n: string) => `${n} keskeistä viikonloppua`,
       heroTitle: 'Tapahtumakalenteri 2026–2027',
       heroSub: 'Festivaaleja, kisoja ja saamelaiskulttuuria kuukausi kuukaudelta.',
