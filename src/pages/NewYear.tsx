@@ -68,7 +68,8 @@ export default function NewYear() {
         intro={c.heroIntro}
         bgImage={IMG.eventNewYear}
         imageAlt={c.heroAlt}
-        accentVia="via-pink/25"
+        accentVia="via-night/60"
+        wash="bg-night/55"
       />
 
       <section className="px-4 sm:px-6 lg:px-8 pt-10">
@@ -157,7 +158,7 @@ export default function NewYear() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-white/75 mt-3">{c.sunSource}</p>
+          <p className="text-base text-white/80 mt-3">{c.sunSource}</p>
           <div className="grid sm:grid-cols-2 gap-4 mt-8">
             <div className="bg-night-light/40 border border-white/10 rounded-xl p-5">
               <h3 className="font-heading text-lg text-white tracking-wide mb-2 flex items-center gap-2">

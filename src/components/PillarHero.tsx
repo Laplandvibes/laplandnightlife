@@ -29,6 +29,12 @@ interface PillarHeroProps {
    */
   accentVia?: string;
   /**
+   * Tasaisen peitteen vahvuus, oletus `bg-night/50 sm:bg-night/35`. Vain sivuille,
+   * joiden kuva on poikkeuksellisen kirkas: /new-year/:n ilotulitus antoi
+   * heroteksti-portissa 16.10.2026 ingressille 4,44:1 (1440 px) ja 4,06:1 (2000 px).
+   */
+  wash?: string;
+  /**
    * Accessible description of the background image. Defaults to a descriptive
    * label built from the (already-localized) page title so the primary visual
    * is exposed to screen readers and image search instead of being an
@@ -52,6 +58,7 @@ export default function PillarHero({
   bgImage = '/images/hero/aurora-bars-neon.webp',
   accentVia,
   imageAlt,
+  wash,
 }: PillarHeroProps) {
   return (
     <>
@@ -65,7 +72,7 @@ export default function PillarHero({
       {/* Full dark wash + center radial scrim so the centered text stays legible
           even over the brightest pillar images. Sits under the neon accents. */}
       {/* Puhelimella teksti täyttää koko leveyden: tasainen peite vahvempi (4.10.2026, valokuvat). */}
-      <div className="absolute inset-0 bg-night/50 sm:bg-night/35 pointer-events-none" aria-hidden="true" />
+      <div className={`absolute inset-0 ${wash ?? 'bg-night/50 sm:bg-night/35'} pointer-events-none`} aria-hidden="true" />
       <ImageMark src={bgImage} />
       <div
         className="absolute inset-0 pointer-events-none"
