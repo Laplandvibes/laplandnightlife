@@ -87,9 +87,11 @@ export default function AuroraBars() {
               </div>
             ))}
           </div>
-
-          {/* Herätyspalvelun kortin perään: sama herätys omaan puhelimeen. Appin revontuliyksikkö, jonka nappi
-              avaa appin revontulinäkymän (tämän yön todennäköisyys tunneittain). */}
+        </div>
+        {/* Herätyspalvelun kortin perään: sama herätys omaan puhelimeen. Appin revontuliyksikkö, jonka nappi avaa
+            appin revontulinäkymän (tämän yön todennäköisyys tunneittain). Oma 5xl-palsta: 4xl:ssä (896 px) kortti jäi
+            alle 900 px:n rajan, jolloin puhelin ja QR pinoutuivat ja tekstin alle jäi tyhjää (mitattu livenä 19.10.). */}
+        <div className="max-w-5xl mx-auto">
           <AppPromoAurora placement="aurora_bars_plan" />
         </div>
       </section>
