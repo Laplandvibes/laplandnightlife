@@ -6,6 +6,7 @@ import AffiliateCTA from '../components/AffiliateCTA';
 import { IMG } from '../data/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { AppPromoAurora } from '../components/AppPromo';
 
 export default function AuroraBars() {
   const lang = useLang();
@@ -86,6 +87,10 @@ export default function AuroraBars() {
               </div>
             ))}
           </div>
+
+          {/* Herätyspalvelun kortin perään: sama herätys omaan puhelimeen. Appin revontuliyksikkö, jonka nappi
+              avaa appin revontulinäkymän (tämän yön todennäköisyys tunneittain). */}
+          <AppPromoAurora placement="aurora_bars_plan" />
         </div>
       </section>
 
