@@ -19,6 +19,8 @@ export interface CityOverlay {
   blurb?: string;
   pageTagline?: string;
   intro?: string;
+  /** Written <title> for this language (cityTitle uses it as such). Only cities.fi.ts has them (19.10.2026). */
+  seoTitle?: string;
   /** Meta description in this language (see City.metaDescription). Optional in the type, but
    *  scripts/generate-prerender-meta.mjs stops the build when a city lacks it, so no page falls back to English. */
   metaDescription?: string;
@@ -83,7 +85,7 @@ export function localizeCity(city: City, lang: Lang): City {
 export function cityMeta(city: City, lang: Lang): { title: string; description: string } {
   const ov = lang === 'en' ? undefined : OVERLAYS[lang]?.[city.slug];
   return {
-    title: cityTitle(ov?.name ?? city.name, ov?.pageTagline ?? city.pageTagline),
+    title: cityTitle(ov?.name ?? city.name, ov?.pageTagline ?? city.pageTagline, lang, ov?.seoTitle),
     description: ov?.metaDescription ?? city.metaDescription,
   };
 }

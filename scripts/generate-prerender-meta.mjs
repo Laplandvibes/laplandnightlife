@@ -8,7 +8,7 @@
 // copyKey in routes.json.
 //
 // City pages (contract shared with src/data/cityI18n.ts cityMeta):
-//   title       = cityTitle(overlay name ?? name, overlay pageTagline ?? pageTagline)
+//   title       = cityTitle(overlay name ?? name, overlay pageTagline ?? pageTagline, lang, overlay seoTitle)
 //                 — the function in src/data/cityMeta.mjs, imported by both sides
 //   description = metaDescription of the city in that language (cities.ts for en,
 //                 cities.<lang>.ts for the rest), word for word
@@ -144,6 +144,7 @@ function parseOverlay(file, citySlugs) {
       name: exactField(block, 'name', where), // overlayn lokalisoitu näyttönimi (valinnainen)
       pageTagline: exactField(block, 'pageTagline', where),
       metaDescription: exactField(block, 'metaDescription', where),
+      seoTitle: exactField(block, 'seoTitle', where), // kirjoitettu otsikko (vain fi, 19.10.2026)
     };
   }
   return out;
@@ -203,7 +204,7 @@ for (const slug of slugs) {
   for (const lang of LANGS) {
     const ov = lang === 'en' ? null : overlays[lang]?.[slug];
     // Overlay saa yliajaa myös nimen (fi: "Kittilän kirkonkylä", ei "Kittilä town").
-    const title = cityTitle(ov?.name ?? b.name, ov?.pageTagline ?? b.pageTagline);
+    const title = cityTitle(ov?.name ?? b.name, ov?.pageTagline ?? b.pageTagline, lang, ov?.seoTitle);
     // Ei englantia varalle: puuttuva kieli pysäyttää buildin (alla).
     const description = lang === 'en' ? b.metaDescription : ov?.metaDescription;
     const p = descriptionProblem(description);

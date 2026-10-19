@@ -6,7 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capitale européenne de la culture 2026 et la seule vraie scène club ouverte toute l\'année dans le Nord.',
     pageTagline: 'Capitale européenne de la culture 2026.',
     intro: '218 000 habitants, une scène club portée par les étudiants et la rue piétonne Rotuaari, qui concentre la plupart des adresses de la ville sur un court trajet à pied. Oulu est la seule ville du Nord où les soirées de semaine tournent vraiment. La foule circule entre le 45 Special, le Kaarlenholvi et le St Michael jusque tard. 2026 ajoute le programme de Capitale européenne de la culture : 1 500 événements, dont les Air Guitar World Championships, Qstock, Elojazz et le festival hivernal Frozen People.',
-    metaDescription: 'Capitale européenne de la culture 2026. 218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas.',
+    metaDescription: '218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas.',
     venues: {
       'St Michael': { type: 'Pub irlandais + concerts', note: 'Le point d\'ancrage de Rotuaari, pub irlandais avec artistes en tournée et soirées tribute.' },
       "Hemingway's": { type: 'Bar', note: 'Bar à whisky et bières artisanales sur Kirkkokatu : la pinte tranquille, ouvert tard.' },
@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux.',
     pageTagline: 'La capitale arctique.',
     intro: 'Deux rythmes dans une seule ville. Le week-end, les touristes font la queue autour de Koskikatu : le Roy Club organise « les meilleures fêtes de la ville depuis 1985 » et le Bull Bar est la terrasse sportive la plus bruyante. Les locaux se répartissent le long de la rue piétonne : le Cafe & Bar 21 pour les cocktails, le Rovaniemen Oluthuone pour la bière, l\'Oliver\'s Corner pour le whisky. Week-ends touristiques : files d\'attente ; en semaine, c\'est calme et local.',
-    metaDescription: 'La capitale arctique. Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux.',
+    metaDescription: 'Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux.',
     venues: {
       'Cafe & Bar 21': { type: 'Bar à cocktails', note: 'Le bar à cocktails préféré des locaux, en plein centre.' },
       'Rovaniemen Oluthuone': { type: 'Brasserie-pub', note: 'Restaurant à bières sur la rue piétonne : grande terrasse, large choix à la pression.' },
@@ -108,7 +108,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capitale culturelle sámi: Sajos, Siida, le lac Inari et l\'église sauvage de Pielpajärvi.',
     pageTagline: 'La capitale culturelle sámi.',
     intro: "Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi. Ici, la « vie nocturne » est culturelle : le festival de cinéma autochtone Skábmagovat en janvier, le festival de musique sámi Ijahis Idja en août, et des bars d'hôtel qui ferment au plus tard à 23:00. Ne venez pas pour les clubs. Venez pour l'eau froide du lac, les concerts de joik et un ciel qui vire au noir dès 14 h en décembre.",
-    metaDescription: 'La capitale culturelle sámi. Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi.',
+    metaDescription: 'Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi.',
     venues: {
       'Hotel Inari Bar': { type: "Bar d'hôtel", note: "Bar lounge de l'Hotel Inari : ouvert de 07:00 à 22:00, à partir de 08:00 le week-end." },
       'Wilderness Hotel Inari': { type: "Bar d'hôtel", note: 'Bar à côté du restaurant Ukko : ouvert de 09:00 à 22:30.' },
@@ -181,7 +181,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La deuxième station de ski de Finlande en journées-skieur, juste au sud de la Laponie.',
     pageTagline: 'La station de ski au pays de l\'ours.',
     intro: 'Ruka est techniquement à Kuusamo, techniquement pas en Laponie, mais les skieurs s\'en moquent: c\'est l\'une des stations les plus fréquentées de Finlande et la semaine d\'ouverture de novembre est la plus bruyante. Zone est l\'après-ski central au pied des pistes, Piste et le Colorado Bar prennent le relais en soirée. Hors saison, le village est très calme ; de novembre à avril, il tourne à plein.',
-    metaDescription: 'La station de ski au pays de l\'ours. Ruka est à Kuusamo, pas en Laponie, mais les skieurs s\'en moquent : c\'est l\'une des plus fréquentées de Finlande.',
+    metaDescription: 'Ruka est à Kuusamo, pas en Laponie, mais les skieurs s\'en moquent : c\'est l\'une des plus fréquentées de Finlande.',
     venues: {
       'Restaurant Zone': { type: 'Après-ski', note: 'Au pied des pistes : concerts et QG de la fête d\'ouverture FIS.' },
       'Piste': { type: 'Après-ski + bar', note: 'Le bar du village qui enchaîne l\'après-ski et la soirée.' },
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Améthyste, fjälls et le ski le plus tranquille de Laponie.',
     pageTagline: 'Les fjälls d\'améthyste.',
     intro: "Deux petits fjells, à 35 km l'un de l'autre, se partagent un parc national. Pyhä a le plus grand domaine skiable ; Luosto a la mine d'améthyste et la boîte de nuit : le Karhu, au Lapland Hotels Luostotunturi, où les soirées dansantes du printemps, avec orchestres et artistes invités, durent jusqu'à 04:00. À Pyhä, le bar le plus tardif de la liste de la station, le SportBar Pyhä, ferme à minuit. La « destination ski » la plus calme de Laponie, et fière de l'être.",
-    metaDescription: 'Les fjälls d\'améthyste. Deux petits fjälls, à 35 km l\'un de l\'autre, partageant un parc national.',
+    metaDescription: 'Deux petits fjälls, à 35 km l\'un de l\'autre, partageant un parc national.',
     venues: {
       'Nightclub Karhu': { type: 'Boîte de nuit', note: "La boîte de nuit du Lapland Hotels Luostotunturi à Luosto : karaoké et groupes live, et au printemps des soirées dansantes jusqu'à 04:00." },
       "Santa's Hotel Aurora": { type: "Bar d'hôtel", note: "Bar du hall de l'hôtel de Luosto." },
@@ -256,7 +256,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Là où vivent vraiment les locaux (Levi, c\'est surtout des touristes).',
     pageTagline: 'Là où vivent vraiment les locaux de Levi.',
     intro: 'Kittilä est le chef-lieu de la commune : 6 500 habitants, l\'aéroport et les gens qui font tourner Levi, à 18 km. La vie de bar est modeste et locale : un bar d\'hôtel et deux pubs de village, pas de programme touristique. La plupart des visiteurs traversent sans s\'arrêter. Pour une soirée tranquille de petite ville finlandaise sans les tarifs resort de Levi, c\'est ici.',
-    metaDescription: 'Là où vivent vraiment les locaux de Levi. Kittilä est le chef-lieu de la commune : 6 500 habitants, l\'aéroport et les gens qui font tourner Levi, à 18 km.',
+    metaDescription: 'Kittilä est le chef-lieu de la commune : 6 500 habitants, l\'aéroport et les gens qui font tourner Levi, à 18 km.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Bar d\'hôtel', note: 'La valeur sûre du bourg, plus calme et moins chère que Levi.' },
     },
@@ -324,7 +324,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Au milieu de nulle part. La station de ski la plus tranquille de Finlande.',
     pageTagline: 'Au milieu de nulle part.',
     intro: "3 300 habitants et une piste de ski. Le slogan du bourg est littéralement « In the Middle of Nowhere », et c'est un compliment assumé. Les horaires les plus tardifs sont ceux du Majan Pubi, au Ravintola Sallan Maja : le vendredi de 22:00 à 04:00, le samedi de 22:00 à 02:00 et parfois jusqu'à 04:00. Hors hiver : le silence. La campagne au second degré « Salla 2032 » pour les Jeux d'hiver a mis le bourg sur la carte, mais la scène n'a pas changé. Ne venez pas pour les clubs.",
-    metaDescription: 'Au milieu de nulle part. 3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande.',
+    metaDescription: '3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande.',
     venues: {
       'Ravintola Sallan Maja': { type: 'Restaurant + pub', note: "Son Majan Pubi propose karaoké et jeux de société : ouvert le vendredi 22–04 et le samedi 22–02 (parfois jusqu'à 04), interdit aux moins de 18 ans dès 22:00." },
       'Salla Wilderness Park': { type: 'Lieu de jour', note: 'Déjeuner + café de jour pour les visiteurs du parc.' },

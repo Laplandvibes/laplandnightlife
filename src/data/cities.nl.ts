@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals.',
     pageTagline: 'De arctische hoofdstad.',
     intro: 'Twee snelheden in één stad. In het weekend staan toeristen in de rij rond Koskikatu: Roy Club gooit "de beste feesten van de stad sinds 1985", en Bull Bar is het luidste sportterras. De locals verspreiden zich langs de voetgangersstraat: Cafe & Bar 21 voor cocktails, Rovaniemen Oluthuone voor bier, Oliver\'s Corner voor whisky. Toeristenweekends betekenen rijen; doordeweeks is het rustig en lokaal.',
-    metaDescription: 'De arctische hoofdstad. Twee snelheden in één stad. De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals.',
+    metaDescription: 'Twee snelheden in één stad. De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals.',
     venues: {
       'Cafe & Bar 21': { type: 'Cocktailbar', note: 'De favoriete cocktailbar van de locals, midden in het centrum.' },
       'Rovaniemen Oluthuone': { type: 'Bierlokaal', note: 'Bierrestaurant aan de voetgangersstraat: grote tuin, breed tapaanbod.' },
@@ -181,7 +181,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Finlands op een na grootste skiresort gemeten in skidagen, net ten zuiden van Lapland.',
     pageTagline: 'Skiresort in berenland.',
     intro: 'Ruka is technisch Kuusamo, technisch geen Lapland, maar skiërs maakt het niets uit; het is een van de drukste skigebieden van Finland en de openingsweek in november is de luidste. Zone is de centrale après-zaak aan de voet van de pistes, met Piste en Colorado Bar die de avond verder dragen. Buiten het seizoen is het dorp erg stil; van november tot april draait het op volle kracht.',
-    metaDescription: 'Skiresort in berenland. Ruka is technisch Kuusamo, geen Lapland, maar skiërs maakt het niets uit: het is een van de drukste skigebieden van Finland.',
+    metaDescription: 'Ruka is technisch Kuusamo, geen Lapland, maar skiërs maakt het niets uit: het is een van de drukste skigebieden van Finland.',
     venues: {
       'Restaurant Zone': { type: 'Après-ski', note: 'Aan de voet van de pistes: live-acts en het thuis van het FIS-openingsfeest.' },
       'Piste': { type: 'Après + bar', note: 'De dorpsbar die doorloopt van après tot diep in de avond.' },
@@ -278,7 +278,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'De lobbybar van Hotel Ivalo + de pub van Hotel Kultahippu.',
     pageTagline: 'De noordelijkste luchthaven, alleen hotelbars.',
     intro: 'Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland. De plaats zelf telt 4.000 inwoners. Hotel Ivalo heeft een lobbybar en het restaurant Lapin Yö. Hotel Kultahippu heeft de enige echte pub van het dorp. Verder zijn er hotelbars en één tankstationkiosk die bier verkoopt.',
-    metaDescription: 'De noordelijkste luchthaven, alleen hotelbars. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland.',
+    metaDescription: 'Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Dagelijks open. De lokale borrelplek na het werk.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotelbar', note: 'Rustiger, aan het restaurant gekoppeld.' },

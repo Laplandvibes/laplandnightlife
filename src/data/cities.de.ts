@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Die arktische Hauptstadt, gespalten zwischen Touristenwochenenden und Werktagen, die nur den Einheimischen gehören.',
     pageTagline: 'Die arktische Hauptstadt.',
     intro: 'Zwei Geschwindigkeiten in einer Stadt. Wochenendtouristen stehen rund um die Koskikatu an: der Roy Club veranstaltet „die besten Partys der Stadt seit 1985“ und die Bull Bar ist die lauteste Sportterrasse. Die Einheimischen verteilen sich entlang der Fußgängerzone: Cafe & Bar 21 für Cocktails, Rovaniemen Oluthuone fürs Bier, Oliver\'s Corner für Whisky. Touristenwochenenden heißen Schlangen; unter der Woche ist es ruhig und lokal.',
-    metaDescription: 'Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt: Touristenwochenenden mit Schlangen und ruhige Werktage, die nur den Einheimischen gehören.',
+    metaDescription: 'Zwei Geschwindigkeiten in einer Stadt: Touristenwochenenden mit Schlangen und ruhige Werktage, die nur den Einheimischen gehören.',
     venues: {
       'Cafe & Bar 21': { type: 'Cocktailbar', note: 'Die Lieblings-Cocktailbar der Einheimischen im Stadtzentrum.' },
       'Rovaniemen Oluthuone': { type: 'Bierlokal', note: 'Bierrestaurant an der Fußgängerzone: großer Garten, breite Zapfauswahl.' },
@@ -181,7 +181,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Finnlands zweitgrößter Skiort nach Skitagen, knapp südlich der Grenze Lapplands.',
     pageTagline: 'Skigebiet im Bärenland.',
     intro: 'Ruka gehört offiziell zu Kuusamo und offiziell nicht zu Lappland, aber das ist Skifahrern egal: es ist eines der meistbesuchten Skigebiete Finnlands, und die Eröffnungswoche im November ist die lauteste. Zone ist das zentrale Après-Ski-Lokal am Pistenfuß, Piste und Colorado Bar tragen den Abend weiter. Außerhalb der Saison ist das Dorf sehr ruhig; von November bis April läuft es auf voller Tiefe.',
-    metaDescription: 'Skigebiet im Bärenland. Ruka gehört offiziell zu Kuusamo, nicht zu Lappland, doch das ist Skifahrern egal: Es ist eines der meistbesuchten Skigebiete Finnlands.',
+    metaDescription: 'Ruka gehört offiziell zu Kuusamo, nicht zu Lappland, doch das ist Skifahrern egal: Es ist eines der meistbesuchten Skigebiete Finnlands.',
     venues: {
       'Restaurant Zone': { type: 'Après-Ski', note: 'Am Pistenfuß: Live-Acts und das Zuhause der FIS-Eröffnungswochen-Party.' },
       'Piste': { type: 'Après + Bar', note: 'Bar im Skidorf, die vom Après bis in die Nacht durchläuft.' },
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Amethyst, Fjells und das ruhigste Skifahren Lapplands.',
     pageTagline: 'Die Amethyst-Fjells.',
     intro: 'Zwei kleine Fjells, 35 km voneinander entfernt, teilen sich einen Nationalpark. Pyhä hat das größere Skigebiet; Luosto hat die Amethystmine und den Nachtclub: das Karhu im Lapland Hotels Luostotunturi, wo im Frühjahr zu Bands und Gastkünstlern bis 04:00 Uhr getanzt wird. In Pyhä schließt die späteste Bar auf der eigenen Liste des Skigebiets, die SportBar Pyhä, um Mitternacht. Das ruhigste „Skiziel“ Lapplands, und stolz darauf.',
-    metaDescription: 'Die Amethyst-Fjells. Zwei kleine Fjells, 35 km voneinander entfernt, die sich einen Nationalpark teilen.',
+    metaDescription: 'Zwei kleine Fjells, 35 km voneinander entfernt, die sich einen Nationalpark teilen.',
     venues: {
       'Nightclub Karhu': { type: 'Nachtclub', note: 'Der Nachtclub des Lapland Hotels Luostotunturi in Luosto: Karaoke und Livebands, im Frühjahr Tanzabende bis 04:00 Uhr.' },
       "Santa's Hotel Aurora": { type: 'Hotelbar', note: 'Lobbybar des Hotels in Luosto.' },
@@ -278,7 +278,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Die Lobbybar des Hotel Ivalo + der Pub des Hotel Kultahippu.',
     pageTagline: 'Der nördlichste Flughafen, nur Hotelbars.',
     intro: 'Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen. Die Stadt selbst hat 4 000 Einwohner. Das Hotel Ivalo hat eine Lobbybar und das Restaurant Lapin Yö. Das Hotel Kultahippu hat den einzigen richtigen Pub im Dorf. Darüber hinaus: Hotelbars und ein Tankstellenkiosk, der Bier verkauft.',
-    metaDescription: 'Der nördlichste Flughafen, nur Hotelbars. Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen.',
+    metaDescription: 'Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Täglich geöffnet. Der Feierabend-Treff der Einheimischen.' },
       'Hotel Ivalo Lobby Bar': { type: 'Hotelbar', note: 'Ruhiger, mit angeschlossenem Restaurant.' },
@@ -301,7 +301,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Kein Nachtleben. Der Pallas-Yllästunturi-Nationalpark ist die Attraktion.',
     pageTagline: 'Das Tor zum Nationalpark.',
     intro: 'Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands). Es gibt keinen Club, keinen Pub-Crawl, und die meisten Abende enden früh. Das Harriniva Wilderness Hotel bietet Safari-Gästen die Kombi Abendsauna + Lobbybar, und das Jeris Lakeside Resort macht dasselbe am See Jerisjärvi. Das ist die „Szene“ von Muonio, ganz ehrlich.',
-    metaDescription: 'Das Tor zum Nationalpark. Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands).',
+    metaDescription: 'Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands).',
     venues: {
       'Jeris Lakeside Resort': { type: 'Hotelbar', note: 'Seehotel am Jerisjärvi: Restaurant und Bar für den Abend.' },
       'Harriniva Wilderness Hotel': { type: 'Hotelbar', note: 'Sauna + Bar, überwiegend Safari-Gäste.' },

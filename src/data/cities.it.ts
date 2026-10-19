@@ -6,7 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capitale Europea della Cultura 2026, e l\'unica vera scena clubbing attiva tutto l\'anno nel nord.',
     pageTagline: 'Capitale Europea della Cultura 2026.',
     intro: '218.000 abitanti, una scena club trainata dagli studenti e la via pedonale Rotuaari, che raccoglie la maggior parte dei locali della città in una breve passeggiata. Oulu è l\'unica città del Nord dove le serate infrasettimanali girano davvero: la gente si sposta tra 45 Special, Kaarlenholvi e St Michael fino a tardi. Nel 2026 si aggiunge il programma di Capitale europea della cultura: 1.500 eventi, tra cui i Mondiali di Air Guitar, Qstock, Elojazz e il festival invernale Frozen People.',
-    metaDescription: 'Capitale Europea della Cultura 2026. 218.000 abitanti, una scena club studentesca e la via pedonale Rotuaari, con la maggior parte dei locali a due passi.',
+    metaDescription: '218.000 abitanti, una scena club studentesca e la via pedonale Rotuaari, con la maggior parte dei locali a due passi.',
     venues: {
       'St Michael': { type: 'Pub irlandese + live', note: 'L\'àncora di Rotuaari: pub irlandese con artisti in tour e serate tribute.' },
       "Hemingway's": { type: 'Bar', note: 'Bar di whisky e birre artigianali su Kirkkokatu: la pinta tranquilla, aperto fino a tardi.' },
@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La capitale dell\'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali.',
     pageTagline: 'La capitale dell\'Artico.',
     intro: 'Due velocità in una sola città. Nei weekend i turisti fanno la fila attorno a Koskikatu: il Roy Club organizza "le migliori feste della città dal 1985" e il Bull Bar è la terrazza sportiva più rumorosa. I locali si distribuiscono lungo la via pedonale: Cafe & Bar 21 per i cocktail, Rovaniemen Oluthuone per la birra, Oliver\'s Corner per il whisky. Weekend turistici: code; nei giorni feriali tutto è tranquillo e locale.',
-    metaDescription: 'La capitale dell\'Artico. Due velocità in una sola città. La capitale dell\'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali.',
+    metaDescription: 'Due velocità in una sola città. La capitale dell\'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali.',
     venues: {
       'Cafe & Bar 21': { type: 'Cocktail bar', note: 'Il cocktail bar preferito dai locali, in pieno centro.' },
       'Rovaniemen Oluthuone': { type: 'Birreria', note: 'Ristorante-birreria sulla via pedonale: grande dehors, ampia scelta alla spina.' },
@@ -181,7 +181,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'La seconda stazione sciistica della Finlandia per giornate-sciatore, appena a sud della Lapponia.',
     pageTagline: 'Stazione sciistica nella terra degli orsi.',
     intro: 'Ruka è tecnicamente Kuusamo, tecnicamente non Lapponia, ma agli sciatori non importa: è una delle stazioni più frequentate della Finlandia e la settimana di apertura di novembre è la più rumorosa. Zone è il locale après centrale ai piedi delle piste, con Piste e il Colorado Bar a portare avanti la serata. Fuori stagione il villaggio è molto tranquillo; da novembre ad aprile gira a pieno regime.',
-    metaDescription: 'Stazione sciistica nella terra degli orsi. Ruka è a Kuusamo, non in Lapponia, ma agli sciatori non importa: è tra le stazioni più frequentate della Finlandia.',
+    metaDescription: 'Ruka è a Kuusamo, non in Lapponia, ma agli sciatori non importa: è tra le stazioni più frequentate della Finlandia.',
     venues: {
       'Restaurant Zone': { type: 'Après-ski', note: 'Ai piedi delle piste: live e casa della festa d\'apertura FIS.' },
       'Piste': { type: 'Après + bar', note: 'Il bar del villaggio che passa dall\'après alla notte senza pause.' },
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Ametista, fjäll e lo sci più tranquillo della Lapponia.',
     pageTagline: 'I fjäll dell\'ametista.',
     intro: 'Due piccoli fjell, a 35 km l\'uno dall\'altro, si dividono un parco nazionale. Pyhä ha il comprensorio sciistico più grande; Luosto ha la miniera di ametista e la discoteca: il Karhu al Lapland Hotels Luostotunturi, dove in primavera si balla con orchestre e artisti ospiti fino alle 04:00. A Pyhä il bar aperto più a lungo tra quelli dell\'elenco della stazione, lo SportBar Pyhä, chiude a mezzanotte. La "meta sciistica" più tranquilla della Lapponia, e fiera di esserlo.',
-    metaDescription: 'I fjäll dell\'ametista. Due piccoli fjäll, a 35 km l\'uno dall\'altro, che condividono un parco nazionale.',
+    metaDescription: 'Due piccoli fjäll, a 35 km l\'uno dall\'altro, che condividono un parco nazionale.',
     venues: {
       'Nightclub Karhu': { type: 'Discoteca', note: 'La discoteca del Lapland Hotels Luostotunturi a Luosto: karaoke e band dal vivo, e in primavera serate di ballo fino alle 04:00.' },
       "Santa's Hotel Aurora": { type: "Bar d'hotel", note: "Lobby bar dell'hotel di Luosto." },
@@ -256,7 +256,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Dove vivono davvero i locali (Levi è soprattutto turisti).',
     pageTagline: 'Dove vivono davvero i locali di Levi.',
     intro: 'Kittilä è il capoluogo del comune: 6.500 abitanti, l\'aeroporto e le persone che mandano avanti Levi, a 18 km. La vita da bar è piccola e locale: un bar d\'hotel e un paio di pub di paese, nessun programma turistico. La maggior parte dei visitatori tira dritto. Se cerca una serata tranquilla da cittadina finlandese senza i prezzi resort di Levi, è qui.',
-    metaDescription: 'Dove vivono davvero i locali di Levi. Kittilä è il capoluogo del comune: 6.500 abitanti, l\'aeroporto e le persone che mandano avanti Levi, a 18 km.',
+    metaDescription: 'Kittilä è il capoluogo del comune: 6.500 abitanti, l\'aeroporto e le persone che mandano avanti Levi, a 18 km.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Bar d\'hotel', note: 'L\'opzione affidabile del paese, più tranquilla ed economica di Levi.' },
     },
@@ -278,7 +278,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Il lobby bar dell\'Hotel Ivalo + il pub dell\'Hotel Kultahippu.',
     pageTagline: 'L\'aeroporto più a nord, solo bar d\'albergo.',
     intro: 'Ivalo è l\'aeroporto più a nord della Finlandia e la porta d\'accesso a Inari, Saariselkä e alla Terra dei Sámi. La cittadina conta 4.000 persone. L\'Hotel Ivalo ha un lobby bar e il ristorante Lapin Yö. L\'Hotel Kultahippu ha l\'unico vero pub del villaggio. Oltre a questo, bar d\'hotel e un chiosco di una stazione di servizio che vende birra.',
-    metaDescription: 'L\'aeroporto più a nord, solo bar d\'albergo. Ivalo è l\'aeroporto più a nord della Finlandia e la porta d\'accesso a Inari, Saariselkä e alla Terra dei Sámi.',
+    metaDescription: 'Ivalo è l\'aeroporto più a nord della Finlandia e la porta d\'accesso a Inari, Saariselkä e alla Terra dei Sámi.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Aperto tutti i giorni. Il punto di ritrovo locale del dopo-lavoro.' },
       'Hotel Ivalo Lobby Bar': { type: 'Bar d\'hotel', note: 'Più tranquillo, annesso al ristorante.' },
@@ -301,7 +301,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Niente vita notturna. L\'attrazione è il parco nazionale di Pallas-Yllästunturi.',
     pageTagline: 'La porta del parco nazionale.',
     intro: 'Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia). Non c\'è un club, non c\'è un giro di pub, e la maggior parte delle serate finisce presto. L\'Harriniva Wilderness Hotel propone agli ospiti dei suoi safari la combinazione sauna serale + lobby bar, e il Jeris Lakeside Resort fa lo stesso sul lago Jerisjärvi. Questa, onestamente, è la "scena" di Muonio.',
-    metaDescription: 'La porta del parco nazionale. Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia).',
+    metaDescription: 'Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia).',
     venues: {
       'Jeris Lakeside Resort': { type: 'Bar d\'hotel', note: 'Hotel in riva al Jerisjärvi: ristorante e bar per la serata.' },
       'Harriniva Wilderness Hotel': { type: 'Bar d\'hotel', note: 'Sauna e bar, soprattutto ospiti dei safari.' },
@@ -324,7 +324,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'In mezzo al nulla. La stazione sciistica più tranquilla della Finlandia.',
     pageTagline: 'In mezzo al nulla.',
     intro: '3.300 abitanti e una pista da sci. Lo slogan del paese è letteralmente "In the Middle of Nowhere", ed è inteso come un complimento. Gli orari più tardi sono quelli del Majan Pubi del Ravintola Sallan Maja: il venerdì 22–04, il sabato 22–02 e a volte fino alle 04. Fuori dall\'inverno: silenzio. L\'ironica campagna "Salla 2032" per i Giochi invernali ha messo il paese sulla mappa, ma la scena vera non è cambiata. Non venga per i club.',
-    metaDescription: 'In mezzo al nulla. 3.300 abitanti e una pista da sci. La stazione sciistica più tranquilla della Finlandia.',
+    metaDescription: '3.300 abitanti e una pista da sci. La stazione sciistica più tranquilla della Finlandia.',
     venues: {
       'Ravintola Sallan Maja': { type: 'Ristorante + pub', note: 'Il suo Majan Pubi offre karaoke e giochi da tavolo: aperto ven 22–04 e sab 22–02 (a volte fino alle 04), vietato ai minori di 18 anni dalle 22:00.' },
       'Salla Wilderness Park': { type: 'Locale diurno', note: 'Pranzo e caffè diurno per i visitatori del parco.' },

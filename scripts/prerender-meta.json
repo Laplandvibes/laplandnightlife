@@ -151,701 +151,701 @@
   },
   "/city/oulu": {
     "en": {
-      "title": "Oulu: European Capital of Culture 2026.",
+      "title": "Oulu bars & nightlife: European Capital of Culture 2026",
       "description": "218 000 people, a student-driven club scene, and the Rotuaari pedestrian strip with most of the city's venues inside a short walk."
     },
     "fi": {
-      "title": "Oulu: Euroopan kulttuuripääkaupunki 2026.",
+      "title": "Oulun baarit ja yökerhot: Rotuaari ja klubiskene",
       "description": "218 000 asukasta, opiskelijavetoinen klubiskene ja Rotuaarin kävelykatu, jonka varrelta löytyy valtaosa kaupungin menopaikoista lyhyen kävelyn säteellä."
     },
     "de": {
-      "title": "Oulu: Kulturhauptstadt Europas 2026.",
+      "title": "Bars und Nachtleben in Oulu: Kulturhauptstadt Europas 2026",
       "description": "218 000 Einwohner, eine studentisch geprägte Clubszene und die Fußgängerzone Rotuaari, an der die meisten Adressen der Stadt in kurzer Gehdistanz liegen."
     },
     "ja": {
-      "title": "オウル: 欧州文化首都2026。",
-      "description": "欧州文化首都2026。人口21万8千人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。"
+      "title": "オウルのナイトライフ：欧州文化首都2026",
+      "description": "人口21万8千人、学生が牽引するクラブシーン、そして市内の主要スポットの大半が徒歩圏内に収まる歩行者天国ロトゥアーリ通り。"
     },
     "es": {
-      "title": "Oulu: Capital Europea de la Cultura 2026.",
-      "description": "Capital Europea de la Cultura 2026. 218 000 habitantes, una escena de clubes estudiantil y la calle peatonal Rotuaari, que concentra la mayoría de los locales."
+      "title": "Bares y vida nocturna en Oulu",
+      "description": "218 000 habitantes, una escena de clubes estudiantil y la calle peatonal Rotuaari, que concentra la mayoría de los locales."
     },
     "pt-BR": {
-      "title": "Oulu: Capital Europeia da Cultura 2026.",
-      "description": "Capital Europeia da Cultura 2026. 218 mil habitantes, uma cena de clubes estudantil e a rua de pedestres Rotuaari, com a maioria dos endereços a poucos passos."
+      "title": "Bares e vida noturna em Oulu",
+      "description": "218 mil habitantes, uma cena de clubes estudantil e a rua de pedestres Rotuaari, com a maioria dos endereços a poucos passos."
     },
     "zh-CN": {
-      "title": "奥卢: 2026 年欧洲文化之都。",
-      "description": "2026 年欧洲文化之都。21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。"
+      "title": "奥卢夜生活与酒吧：2026 年欧洲文化之都",
+      "description": "21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。"
     },
     "ko": {
-      "title": "Oulu: 2026 유럽 문화수도.",
-      "description": "2026 유럽 문화수도. 인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리."
+      "title": "Oulu 나이트라이프: 2026 유럽 문화수도",
+      "description": "인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리."
     },
     "fr": {
-      "title": "Oulu: Capitale européenne de la culture 2026.",
-      "description": "Capitale européenne de la culture 2026. 218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas."
+      "title": "Bars et vie nocturne à Oulu",
+      "description": "218 000 habitants, une scène club étudiante et la rue piétonne Rotuaari, où la plupart des adresses sont à deux pas."
     },
     "it": {
-      "title": "Oulu: Capitale Europea della Cultura 2026.",
-      "description": "Capitale Europea della Cultura 2026. 218.000 abitanti, una scena club studentesca e la via pedonale Rotuaari, con la maggior parte dei locali a due passi."
+      "title": "Bar e vita notturna a Oulu",
+      "description": "218.000 abitanti, una scena club studentesca e la via pedonale Rotuaari, con la maggior parte dei locali a due passi."
     },
     "nl": {
-      "title": "Oulu: Culturele Hoofdstad van Europa 2026.",
+      "title": "Uitgaan in Oulu: Culturele Hoofdstad van Europa 2026",
       "description": "218.000 inwoners, een door studenten gedreven clubscene en de voetgangersstraat Rotuaari, waar de meeste adressen van de stad binnen een korte wandeling liggen."
     },
     "sv": {
-      "title": "Oulu: Europas kulturhuvudstad 2026.",
-      "description": "Europas kulturhuvudstad 2026. 218 000 invånare, en studentdriven klubbscen och gågatan Rotuaari, där de flesta av stadens adresser ligger inom en kort promenad."
+      "title": "Barer och nattliv i Oulu: Europas kulturhuvudstad 2026",
+      "description": "218 000 invånare, en studentdriven klubbscen och gågatan Rotuaari, där de flesta av stadens adresser ligger inom en kort promenad."
     }
   },
   "/city/rovaniemi": {
     "en": {
-      "title": "Rovaniemi: The Arctic capital.",
-      "description": "The Arctic capital. Two speeds inside one city. The Arctic capital, split between tourist weekends and locals-only weekdays."
+      "title": "Rovaniemi bars & nightlife: The Arctic capital",
+      "description": "Two speeds inside one city. The Arctic capital, split between tourist weekends and locals-only weekdays."
     },
     "fi": {
-      "title": "Rovaniemi: Arktinen pääkaupunki.",
-      "description": "Arktinen pääkaupunki. Kaksi rytmiä samassa kaupungissa. Arktinen pääkaupunki: jakautuu turistien viikonloppuihin ja paikallisten arkipäiviin."
+      "title": "Rovaniemen baarit ja yökerhot: arktinen pääkaupunki",
+      "description": "Rovaniemen baarit ja yökerhot Roy Clubista Oluthuoneeseen. Viikonloppuisin turistit jonottavat Koskikadun tuntumassa, arki-illat kuuluvat paikallisille."
     },
     "de": {
-      "title": "Rovaniemi: Die arktische Hauptstadt.",
-      "description": "Die arktische Hauptstadt. Zwei Geschwindigkeiten in einer Stadt: Touristenwochenenden mit Schlangen und ruhige Werktage, die nur den Einheimischen gehören."
+      "title": "Bars und Nachtleben in Rovaniemi: die arktische Hauptstadt",
+      "description": "Zwei Geschwindigkeiten in einer Stadt: Touristenwochenenden mit Schlangen und ruhige Werktage, die nur den Einheimischen gehören."
     },
     "ja": {
-      "title": "ロヴァニエミ: 北極圏の首都。",
-      "description": "北極圏の首都。ひとつの街にふたつの速度。北極圏の首都、観光客の週末と、地元民だけの平日に二分される街。"
+      "title": "ロヴァニエミのナイトライフ：北極圏の首都",
+      "description": "ひとつの街にふたつの速度。週末はコスキカトゥ周辺のバーに観光客の列ができ、平日の夜は静かになって地元の人だけの街に戻る。"
     },
     "es": {
-      "title": "Rovaniemi: La capital ártica.",
-      "description": "La capital ártica. Dos velocidades en una misma ciudad. La capital ártica: dividida entre los fines de semana turísticos y los días de diario solo para locales."
+      "title": "Bares y vida nocturna en Rovaniemi: la capital ártica",
+      "description": "Dos velocidades en una misma ciudad. La capital ártica: dividida entre los fines de semana turísticos y los días de diario solo para locales."
     },
     "pt-BR": {
-      "title": "Rovaniemi: A capital do Ártico.",
-      "description": "A capital do Ártico. Duas velocidades em uma só cidade. A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais."
+      "title": "Bares e vida noturna em Rovaniemi: a capital do Ártico",
+      "description": "Duas velocidades em uma só cidade. A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais."
     },
     "zh-CN": {
-      "title": "罗瓦涅米: 北极之都。",
-      "description": "北极之都。一座城，两种节奏：周末游客在科斯基卡图（Koskikatu）一带的酒吧门口排队，工作日的夜晚则安静下来，只属于本地人。"
+      "title": "罗瓦涅米夜生活与酒吧：北极之都",
+      "description": "一座城，两种节奏：周末游客在科斯基卡图（Koskikatu）一带的酒吧门口排队，工作日的夜晚则安静下来，只属于本地人。"
     },
     "ko": {
-      "title": "Rovaniemi: 북극의 수도.",
-      "description": "북극의 수도. 한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다."
+      "title": "Rovaniemi 나이트라이프: 북극의 수도",
+      "description": "한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다."
     },
     "fr": {
-      "title": "Rovaniemi: La capitale arctique.",
-      "description": "La capitale arctique. Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux."
+      "title": "Bars et vie nocturne à Rovaniemi : la capitale arctique",
+      "description": "Deux rythmes dans une seule ville. La capitale arctique, partagée entre week-ends touristiques et soirées de semaine réservées aux locaux."
     },
     "it": {
-      "title": "Rovaniemi: La capitale dell'Artico.",
-      "description": "La capitale dell'Artico. Due velocità in una sola città. La capitale dell'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali."
+      "title": "Bar e vita notturna a Rovaniemi: la capitale dell'Artico",
+      "description": "Due velocità in una sola città. La capitale dell'Artico, divisa tra i weekend turistici e le serate infrasettimanali solo per i locali."
     },
     "nl": {
-      "title": "Rovaniemi: De arctische hoofdstad.",
-      "description": "De arctische hoofdstad. Twee snelheden in één stad. De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals."
+      "title": "Uitgaan in Rovaniemi: de arctische hoofdstad",
+      "description": "Twee snelheden in één stad. De arctische hoofdstad: verdeeld tussen toeristenweekends en doordeweekse avonden voor locals."
     },
     "sv": {
-      "title": "Rovaniemi: Den arktiska huvudstaden.",
-      "description": "Den arktiska huvudstaden. Två hastigheter i en och samma stad. Den arktiska huvudstaden, delad mellan turisthelger och vardagskvällar för lokalbor."
+      "title": "Barer och nattliv i Rovaniemi: den arktiska huvudstaden",
+      "description": "Två hastigheter i en och samma stad. Den arktiska huvudstaden, delad mellan turisthelger och vardagskvällar för lokalbor."
     }
   },
   "/city/levi": {
     "en": {
-      "title": "Levi: Finland's biggest ski-resort party.",
-      "description": "Finland's biggest ski-resort party. Hullu Poro Areena is the centrepiece: room for 1 700 across two floors, ten bars and a large dance floor."
+      "title": "Levi bars & nightlife: Finland's biggest ski-resort party",
+      "description": "Hullu Poro Areena is the centrepiece: room for 1 700 across two floors, ten bars and a large dance floor."
     },
     "fi": {
-      "title": "Levi: Suomen suurimmat hiihtokeskusbileet.",
-      "description": "Suomen suurimmat hiihtokeskusbileet. Hullu Poro Areena on keskipiste: tilaa 1 700 hengelle kahdessa kerroksessa, kymmenen baaria ja iso tanssilattia."
+      "title": "Levin baarit ja after ski: Hullu Poro Areena ja Ihku",
+      "description": "Levin illan keskipiste on Hullu Poro Areena: tilaa 1 700 hengelle kahdessa kerroksessa ja kymmenen baaria. After skille mennään myös Ihkuun rinteen juurelle."
     },
     "de": {
-      "title": "Levi: Die größte Skigebiets-Party Finnlands.",
+      "title": "Bars und Nachtleben in Levi",
       "description": "Finnlands größte Skigebiets-Party. Herzstück ist die Hullu Poro Areena: Platz für 1 700 Gäste auf zwei Etagen, zehn Bars und eine große Tanzfläche."
     },
     "ja": {
-      "title": "レヴィ: フィンランド最大のスキーリゾート・パーティー。",
+      "title": "レヴィのナイトライフ",
       "description": "フィンランド最大のスキーリゾート・パーティー。中心はHullu Poro Areenaで、2フロアに1,700人を収容し、バーは10か所、広いダンスフロアがあります。"
     },
     "es": {
-      "title": "Levi: La mayor fiesta de estación de esquí de Finlandia.",
-      "description": "La mayor fiesta de estación de esquí de Finlandia. El centro es el Hullu Poro Areena: 1.700 personas en dos plantas, diez barras y una gran pista de baile."
+      "title": "Bares y vida nocturna en Levi",
+      "description": "El centro es el Hullu Poro Areena: 1.700 personas en dos plantas, diez barras y una gran pista de baile."
     },
     "pt-BR": {
-      "title": "Levi: A maior festa de estação de esqui da Finlândia.",
-      "description": "A maior festa de estação de esqui da Finlândia. O centro é o Hullu Poro Areena: 1.700 pessoas em dois andares, dez bares e uma pista de dança grande."
+      "title": "Bares e vida noturna em Levi",
+      "description": "O centro é o Hullu Poro Areena: 1.700 pessoas em dois andares, dez bares e uma pista de dança grande."
     },
     "zh-CN": {
-      "title": "莱维: 芬兰最盛大的滑雪场派对。",
+      "title": "莱维夜生活与酒吧：芬兰最盛大的滑雪场派对",
       "description": "芬兰最大的滑雪度假区派对。核心是 Hullu Poro Areena：两层楼可容纳 1,700 人，有十个吧台和一个大舞池，有演出的晚上营业到 03:30。"
     },
     "ko": {
-      "title": "Levi: 핀란드 최대의 스키 리조트 파티.",
+      "title": "Levi 나이트라이프: 핀란드 최대의 스키 리조트 파티",
       "description": "핀란드 최대의 스키 리조트 파티. 중심은 Hullu Poro Areena로, 2개 층에 1,700명이 들어가고 바 10곳과 넓은 댄스플로어가 있습니다."
     },
     "fr": {
-      "title": "Levi: La plus grosse fête de station de ski de Finlande.",
+      "title": "Bars et vie nocturne à Levi",
       "description": "La plus grande fête de station de ski de Finlande. Le cœur, c'est le Hullu Poro Areena : 1 700 places sur deux niveaux, dix bars et une grande piste de danse."
     },
     "it": {
-      "title": "Levi: La festa da sci più grande della Finlandia",
+      "title": "Bar e vita notturna a Levi",
       "description": "Il più grande party di una località sciistica della Finlandia. Il cuore è l'Hullu Poro Areena: 1.700 posti su due piani, dieci bar e una grande pista da ballo."
     },
     "nl": {
-      "title": "Levi: Het grootste skigebiedsfeest van Finland.",
+      "title": "Uitgaan in Levi: het grootste skigebiedsfeest van Finland",
       "description": "Het grootste skifeest van Finland. Hullu Poro Areena is het middelpunt: plaats voor 1.700 mensen op twee verdiepingen, tien bars en een grote dansvloer."
     },
     "sv": {
-      "title": "Levi: Finlands största skidortsfest.",
-      "description": "Finlands största skidortsfest. Hullu Poro Areena är navet: plats för 1 700 på två våningar, tio barer och ett stort dansgolv."
+      "title": "Barer och nattliv i Levi: Finlands största skidortsfest",
+      "description": "Hullu Poro Areena är navet: plats för 1 700 på två våningar, tio barer och ett stort dansgolv."
     }
   },
   "/city/saariselka": {
     "en": {
-      "title": "Saariselkä: Wilderness premium: the igloo-bar village.",
-      "description": "Wilderness premium: the igloo-bar village. Kakslauttanen's Igloo Bar, Local Pub Panimo and the Teerenpesä nightclub."
+      "title": "Saariselkä bars & nightlife",
+      "description": "Kakslauttanen's Igloo Bar, Local Pub Panimo and the Teerenpesä nightclub."
     },
     "fi": {
-      "title": "Saariselkä: Erämaaluksus: iglubaarien kylä.",
-      "description": "Erämaaluksus: iglubaarien kylä. Kakslauttasen Igloo Bar, Local Pub Panimo ja Teerenpesän yökerho."
+      "title": "Saariselän baarit: Igloo Bar, Panimo ja Teerenpesä",
+      "description": "Saariselän illat: Kakslauttasen lasikattoinen Igloo Bar, Local Pub Panimo, Riekonlinnan hotellibaari sekä Teerenpesän pubi ja yökerho kylän keskustassa."
     },
     "de": {
-      "title": "Saariselkä: Wildnis-Luxus: das Dorf der Iglu-Bar.",
+      "title": "Bars und Nachtleben in Saariselkä",
       "description": "Wildnis-Premium: das Dorf der Iglu-Bars. Kakslauttanens Igloo Bar, der Local Pub Panimo und der Nachtclub im Teerenpesä."
     },
     "ja": {
-      "title": "サーリセルカ: ウィルダネス・プレミアム：イグルーバーの村。",
+      "title": "サーリセルカのナイトライフ",
       "description": "大自然のプレミアム、イグルーバーの村。KakslauttanenのIgloo Bar、Local Pub Panimo、そしてTeerenpesäのナイトクラブがあります。"
     },
     "es": {
-      "title": "Saariselkä: Lujo en la naturaleza y bares iglú",
+      "title": "Bares y vida nocturna en Saariselkä",
       "description": "Naturaleza de lujo: el pueblo de los bares iglú. El Igloo Bar de Kakslauttanen, el Local Pub Panimo y la discoteca del Teerenpesä."
     },
     "pt-BR": {
-      "title": "Saariselkä: Luxo na natureza: a vila dos bares-iglu.",
+      "title": "Bares e vida noturna em Saariselkä",
       "description": "Natureza premium: o vilarejo dos bares-iglu. O Igloo Bar de Kakslauttanen, o Local Pub Panimo e a balada do Teerenpesä."
     },
     "zh-CN": {
-      "title": "萨利色尔卡: 荒野高端，玻璃冰屋酒吧之村。",
+      "title": "萨利色尔卡夜生活与酒吧：荒野高端，玻璃冰屋酒吧之村",
       "description": "荒野里的高端之选：冰屋酒吧之村。这里有 Kakslauttanen 的 Igloo Bar、Local Pub Panimo 和 Teerenpesä 的夜店。"
     },
     "ko": {
-      "title": "Saariselkä: 와일더니스 프리미엄: 이글루 바 마을.",
+      "title": "Saariselkä 나이트라이프",
       "description": "자연 속 프리미엄, 이글루 바의 마을. Kakslauttanen의 Igloo Bar, Local Pub Panimo, 그리고 Teerenpesä의 나이트클럽이 있습니다."
     },
     "fr": {
-      "title": "Saariselkä: Le luxe sauvage : le village des bars-igloos.",
+      "title": "Bars et vie nocturne à Saariselkä",
       "description": "Nature haut de gamme : le village des bars-igloos. L'Igloo Bar de Kakslauttanen, le Local Pub Panimo et la boîte de nuit du Teerenpesä."
     },
     "it": {
-      "title": "Saariselkä: Wilderness premium: il villaggio dell'igloo-bar.",
+      "title": "Bar e vita notturna a Saariselkä",
       "description": "Natura di lusso: il villaggio dei bar-igloo. L'Igloo Bar di Kakslauttanen, il Local Pub Panimo e la discoteca del Teerenpesä."
     },
     "nl": {
-      "title": "Saariselkä: Wildernis-premium: het iglobar-dorp.",
+      "title": "Uitgaan in Saariselkä",
       "description": "Wildernis-premium: het dorp van de iglobars. De Igloo Bar van Kakslauttanen, Local Pub Panimo en de nachtclub van Teerenpesä."
     },
     "sv": {
-      "title": "Saariselkä: Vildmarkslyx: igloobarbyn.",
+      "title": "Barer och nattliv i Saariselkä",
       "description": "Vildmarkspremium: igloobarernas by. Kakslauttanens Igloo Bar, Local Pub Panimo och nattklubben på Teerenpesä."
     }
   },
   "/city/inari": {
     "en": {
-      "title": "Inari: The Sámi cultural capital.",
+      "title": "Inari bars & nightlife: The Sámi cultural capital",
       "description": "Inari is the cultural seat of the Sámi parliament (Sajos) and home to Siida, the museum that explains everything you didn't know about Sápmi."
     },
     "fi": {
-      "title": "Inari: Saamelaiskulttuurin pääkaupunki.",
-      "description": "Inari on saamelaiskäräjien (Sajos) kulttuurinen kotipaikka, ja täällä on myös Siida, museo, joka selittää kaiken, mitä et tiennyt Saamenmaasta."
+      "title": "Inarin baarit: hotellibaarit ja ravintola Aanaar",
+      "description": "Inarin illat vietetään hotellien baareissa ja Wilderness Hotel Juutuan ravintola Aanaarissa. Kylä on saamelaiskulttuurin keskus: täällä ovat Sajos ja Siida."
     },
     "de": {
-      "title": "Inari: Die kulturelle Hauptstadt der Samen.",
+      "title": "Bars und Nachtleben in Inari",
       "description": "Inari ist der kulturelle Sitz des samischen Parlaments (Sajos) und Heimat des Siida, des Museums, das alles erklärt, was man über Sápmi nicht wusste."
     },
     "ja": {
-      "title": "イナリ: サーミ文化の首都。",
-      "description": "サーミ文化の首都。Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。"
+      "title": "イナリのナイトライフ：サーミ文化の首都",
+      "description": "Inariはサーミ議会（Sajos）が置かれた文化の拠点であり、Sápmi（サーミの地）について知らなかったすべてを教えてくれる博物館Siidaのある町だ。"
     },
     "es": {
-      "title": "Inari: La capital cultural sami.",
-      "description": "La capital cultural sami. Inari es la sede cultural del parlamento sami (Sajos) y alberga Siida, el museo que le explica todo lo que no sabía sobre Sápmi."
+      "title": "Bares y vida nocturna en Inari: la capital cultural sami",
+      "description": "Inari es la sede cultural del parlamento sami (Sajos) y alberga Siida, el museo que le explica todo lo que no sabía sobre Sápmi."
     },
     "pt-BR": {
-      "title": "Inari: A capital cultural sámi.",
-      "description": "A capital cultural sámi. Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida, o museu que explica tudo que você não sabia sobre Sápmi."
+      "title": "Bares e vida noturna em Inari: a capital cultural sámi",
+      "description": "Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida, o museu que explica tudo que você não sabia sobre Sápmi."
     },
     "zh-CN": {
-      "title": "伊纳里: 萨米文化之都。",
-      "description": "萨米文化之都。Inari 是萨米议会（Sajos）的文化所在地，也是 Siida 的所在地，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。"
+      "title": "伊纳里夜生活与酒吧：萨米文化之都",
+      "description": "Inari 是萨米议会（Sajos）的文化所在地，也是 Siida 的所在地，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。"
     },
     "ko": {
-      "title": "Inari: 사미 문화의 수도.",
-      "description": "사미 문화의 수도. 이나리는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida가 있는 곳입니다."
+      "title": "Inari 나이트라이프: 사미 문화의 수도",
+      "description": "이나리는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida가 있는 곳입니다."
     },
     "fr": {
-      "title": "Inari: La capitale culturelle sámi.",
-      "description": "La capitale culturelle sámi. Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi."
+      "title": "Bars et vie nocturne à Inari : la capitale culturelle sámi",
+      "description": "Inari est le siège culturel du parlement sámi (Sajos) et abrite Siida, le musée qui explique tout ce que vous ignoriez du Sápmi."
     },
     "it": {
-      "title": "Inari: La capitale culturale Sámi.",
+      "title": "Bar e vita notturna a Inari: la capitale culturale Sámi",
       "description": "Inari è la sede culturale del parlamento sámi (Sajos) e ospita il Siida, il museo che Le spiega tutto ciò che non sapeva sulla Sápmi."
     },
     "nl": {
-      "title": "Inari: De culturele hoofdstad van de Sámi.",
+      "title": "Uitgaan in Inari: de culturele hoofdstad van de Sámi",
       "description": "Inari is de culturele zetel van het Samische parlement (Sajos) en de thuisbasis van Siida, het museum dat alles uitlegt wat u niet wist over Sápmi."
     },
     "sv": {
-      "title": "Inari: Samernas kulturella huvudstad.",
-      "description": "Samernas kulturella huvudstad. Inari är sameparlamentets kulturella säte (Sajos) och hemvist för Siida, museet som förklarar allt du inte visste om Sápmi."
+      "title": "Barer och nattliv i Inari: samernas kulturella huvudstad",
+      "description": "Inari är sameparlamentets kulturella säte (Sajos) och hemvist för Siida, museet som förklarar allt du inte visste om Sápmi."
     }
   },
   "/city/kemi": {
     "en": {
-      "title": "Kemi: SnowCastle, icebreaker, sea Lapland.",
+      "title": "Kemi bars & nightlife: SnowCastle, icebreaker, sea Lapland",
       "description": "Kemi is the gateway between Helsinki rail and Lapland, and a town with one trick: the SnowCastle Area, building something from snow every winter since 1996."
     },
     "fi": {
-      "title": "Kemi: LumiLinna, jäänmurtaja, Meri-Lappi.",
-      "description": "Helsingistä junalla tultaessa Kemi on portti Lappiin, ja sen päävaltti on LumiLinnan alue, jolle on rakennettu jotain lumesta joka talvi vuodesta 1996."
+      "title": "Kemin baarit: LumiLinnan jääbaari ja jäänmurtaja Sampo",
+      "description": "Kemin erikoisuudet ovat LumiLinnan jääbaari ja jäänmurtaja Sammon baari, joka palvelee koko risteilyn ajan. Kaupungissa iltaa vietetään myös Merihovissa."
     },
     "de": {
-      "title": "Kemi: SnowCastle, Eisbrecher, Meereslappland.",
+      "title": "Bars und Nachtleben in Kemi",
       "description": "Kemi ist das Tor zwischen der Bahn aus Helsinki und Lappland und hat einen Trick: das SnowCastle-Areal, wo seit 1996 jeden Winter etwas aus Schnee entsteht."
     },
     "ja": {
-      "title": "ケミ: SnowCastle、砕氷船、海のラップランド。",
-      "description": "SnowCastle、砕氷船、海のラップランド。Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来、毎冬なにかを雪で建て続けているSnowCastleエリア。"
+      "title": "ケミのナイトライフ：SnowCastle、砕氷船、海のラップランド",
+      "description": "Kemiはヘルシンキからの鉄道とラップランドをつなぐ玄関口であり、ひとつの切り札を持つ町だ：1996年以来、毎冬なにかを雪で建て続けているSnowCastleエリア。"
     },
     "es": {
-      "title": "Kemi: SnowCastle, rompehielos, Laponia del mar.",
+      "title": "Bares y vida nocturna en Kemi",
       "description": "Kemi es la puerta entre el tren de Helsinki y Laponia, con un único truco: la zona del SnowCastle, donde cada invierno desde 1996 se construye algo con nieve."
     },
     "pt-BR": {
-      "title": "Kemi: SnowCastle, quebra-gelo, Lapônia do mar.",
+      "title": "Bares e vida noturna em Kemi",
       "description": "Kemi é a porta de entrada entre o trem de Helsinque e a Lapônia, com um truque só: a área do SnowCastle, onde todo inverno desde 1996 se constrói algo de neve."
     },
     "zh-CN": {
-      "title": "凯米: 雪堡、破冰船、海拉普兰。",
-      "description": "雪堡、破冰船、海拉普兰。Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。"
+      "title": "凯米夜生活与酒吧：雪堡、破冰船、海拉普兰",
+      "description": "Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。"
     },
     "ko": {
-      "title": "Kemi: SnowCastle, 쇄빙선, 바다 라플란드.",
-      "description": "SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역."
+      "title": "Kemi 나이트라이프: SnowCastle, 쇄빙선, 바다 라플란드",
+      "description": "Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역."
     },
     "fr": {
-      "title": "Kemi: SnowCastle, brise-glace, Laponie maritime.",
+      "title": "Bars et vie nocturne à Kemi",
       "description": "Kemi, porte d'entrée entre le rail d'Helsinki et la Laponie, a un seul tour de magie : le site du SnowCastle, où l'on bâtit en neige chaque hiver depuis 1996."
     },
     "it": {
-      "title": "Kemi: SnowCastle, rompighiaccio, Lapponia del mare.",
+      "title": "Bar e vita notturna a Kemi",
       "description": "Kemi è la porta tra la ferrovia di Helsinki e la Lapponia, con un asso nella manica: lo SnowCastle, dove dal 1996 ogni inverno si costruisce con la neve."
     },
     "nl": {
-      "title": "Kemi: SnowCastle, ijsbreker, Zee-Lapland.",
+      "title": "Uitgaan in Kemi: SnowCastle, ijsbreker, Zee-Lapland",
       "description": "Kemi is de poort tussen de trein uit Helsinki en Lapland, met één troef: het SnowCastle-terrein, waar sinds 1996 elke winter iets van sneeuw wordt gebouwd."
     },
     "sv": {
-      "title": "Kemi: SnowCastle, isbrytare, Havslappland.",
+      "title": "Barer och nattliv i Kemi",
       "description": "Kemi är porten mellan tåget från Helsingfors och Lappland, med ett trumfkort: SnowCastle-området, där något har byggts av snö varje vinter sedan 1996."
     }
   },
   "/city/yllas": {
     "en": {
-      "title": "Ylläs: One of Finland's biggest ski areas.",
+      "title": "Ylläs bars & nightlife: One of Finland's biggest ski areas",
       "description": "Ylläs has 62 slopes split between two villages, Äkäslompolo (north) and Ylläsjärvi (south), connected by ski runs but separated by a 20-minute drive."
     },
     "fi": {
-      "title": "Ylläs: Yksi Suomen suurimmista hiihtoalueista.",
-      "description": "Ylläksellä on 62 rinnettä kahden kylän, Äkäslompolon (pohjoinen) ja Ylläsjärven (etelä), kesken; kyliä yhdistävät rinteet mutta erottaa 20 minuutin ajomatka."
+      "title": "Ylläksen baarit ja after ski: Äkäslompolo ja Ylläsjärvi",
+      "description": "Ylläksen illanvietto jakautuu kahteen kylään, joiden välillä on 20 minuutin ajomatka. Äkäslompolossa on yökerho Pirtukellari, ravintola Otso on molemmissa."
     },
     "de": {
-      "title": "Ylläs: Eines der größten Skigebiete Finnlands.",
+      "title": "Bars und Nachtleben in Ylläs",
       "description": "Ylläs hat 62 Pisten in zwei Dörfern, Äkäslompolo (Nord) und Ylläsjärvi (Süd), die durch Abfahrten verbunden, aber 20 Fahrminuten voneinander entfernt sind."
     },
     "ja": {
-      "title": "ユッラス: フィンランド有数の大きさのスキーエリア。",
-      "description": "フィンランド有数の大きさのスキーエリア。ユッラスには62本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。"
+      "title": "ユッラスのナイトライフ",
+      "description": "ユッラスには62本のゲレンデがあり、アカスロンポロ（北）とユッラスヤルヴィ（南）の2つの村に分かれています。"
     },
     "es": {
-      "title": "Ylläs: Una de las mayores zonas esquiables de Finlandia.",
+      "title": "Bares y vida nocturna en Ylläs",
       "description": "Ylläs tiene 62 pistas repartidas entre dos pueblos, Äkäslompolo (norte) y Ylläsjärvi (sur), unidos por las pistas pero separados por 20 minutos en coche."
     },
     "pt-BR": {
-      "title": "Ylläs: Uma das maiores áreas de esqui da Finlândia.",
+      "title": "Bares e vida noturna em Ylläs",
       "description": "Ylläs tem 62 pistas divididas entre dois vilarejos, Äkäslompolo (norte) e Ylläsjärvi (sul), conectados pelas pistas, mas separados por 20 minutos de carro."
     },
     "zh-CN": {
-      "title": "于莱斯: 芬兰规模最大的滑雪区之一。",
-      "description": "芬兰规模最大的滑雪区之一。于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。"
+      "title": "于莱斯夜生活与酒吧：芬兰规模最大的滑雪区之一",
+      "description": "于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。"
     },
     "ko": {
-      "title": "Ylläs: 핀란드에서 손꼽히는 규모의 스키 구역.",
+      "title": "Ylläs 나이트라이프: 핀란드에서 손꼽히는 규모의 스키 구역",
       "description": "핀란드에서 손꼽히는 규모의 스키 구역. 윌래스에는 62개의 슬로프가 두 마을, 애캐슬롬폴로(북)와 윌래스야르비(남)에 나뉘어 있습니다."
     },
     "fr": {
-      "title": "Ylläs: L'un des plus grands domaines skiables de Finlande.",
+      "title": "Bars et vie nocturne à Ylläs",
       "description": "Ylläs compte 62 pistes réparties entre deux villages, Äkäslompolo (nord) et Ylläsjärvi (sud), reliés par les pistes mais séparés par 20 minutes de route."
     },
     "it": {
-      "title": "Ylläs: Una delle aree sciistiche più grandi della Finlandia.",
+      "title": "Bar e vita notturna a Ylläs",
       "description": "Ylläs ha 62 piste divise tra due villaggi, Äkäslompolo (nord) e Ylläsjärvi (sud), collegati dalle piste ma separati da 20 minuti di auto."
     },
     "nl": {
-      "title": "Ylläs: Een van de grootste skigebieden van Finland.",
+      "title": "Uitgaan in Ylläs",
       "description": "Ylläs heeft 62 pistes, verdeeld over twee dorpen, Äkäslompolo (noord) en Ylläsjärvi (zuid), verbonden via de pistes maar gescheiden door 20 minuten rijden."
     },
     "sv": {
-      "title": "Ylläs: Ett av Finlands största skidområden.",
+      "title": "Barer och nattliv i Ylläs",
       "description": "Ylläs har 62 nedfarter, fördelade på två byar, Äkäslompolo (norr) och Ylläsjärvi (söder), sammanbundna via backarna men åtskilda av 20 minuters bilväg."
     }
   },
   "/city/ruka": {
     "en": {
-      "title": "Ruka: Bear country ski resort.",
-      "description": "Bear country ski resort. Ruka is technically Kuusamo, technically not in Lapland, but skiers don't care; it's one of the busiest resorts in Finland."
+      "title": "Ruka bars & nightlife: Bear country ski resort",
+      "description": "Ruka is technically Kuusamo, technically not in Lapland, but skiers don't care; it's one of the busiest resorts in Finland."
     },
     "fi": {
-      "title": "Ruka: Karhumaan hiihtokeskus.",
-      "description": "Karhumaan hiihtokeskus. Ruka on virallisesti Kuusamoa eikä Lappia, mutta laskettelijoita se ei haittaa: kyseessä on yksi Suomen vilkkaimmista keskuksista."
+      "title": "Rukan baarit ja after ski: Zone, Piste ja Colorado",
+      "description": "Rukan after ski -paikat ovat Zone ja Piste, illan baarit Colorado Bar ja Hanki Baari. Ruka on virallisesti Kuusamoa eikä Lappia."
     },
     "de": {
-      "title": "Ruka: Skigebiet im Bärenland.",
-      "description": "Skigebiet im Bärenland. Ruka gehört offiziell zu Kuusamo, nicht zu Lappland, doch das ist Skifahrern egal: Es ist eines der meistbesuchten Skigebiete Finnlands."
+      "title": "Bars und Nachtleben in Ruka: Skigebiet im Bärenland",
+      "description": "Ruka gehört offiziell zu Kuusamo, nicht zu Lappland, doch das ist Skifahrern egal: Es ist eines der meistbesuchten Skigebiete Finnlands."
     },
     "ja": {
-      "title": "ルカ: クマの国のスキーリゾート。",
+      "title": "ルカのナイトライフ：クマの国のスキーリゾート",
       "description": "クマの国のスキーリゾート。ルカは正確にはクーサモ、正確にはラップランドではありませんが、スキーヤーは気にしません。"
     },
     "es": {
-      "title": "Ruka: Estación de esquí en tierra de osos.",
-      "description": "Estación de esquí en tierra de osos. Ruka es técnicamente Kuusamo, no Laponia, pero a los esquiadores les da igual: es una de las más concurridas de Finlandia."
+      "title": "Bares y vida nocturna en Ruka",
+      "description": "Ruka es técnicamente Kuusamo, no Laponia, pero a los esquiadores les da igual: es una de las más concurridas de Finlandia."
     },
     "pt-BR": {
-      "title": "Ruka: Estação de esqui no país dos ursos.",
-      "description": "Estação de esqui no país dos ursos. Ruka é tecnicamente Kuusamo, não Lapônia, mas os esquiadores não ligam: é uma das estações mais movimentadas da Finlândia."
+      "title": "Bares e vida noturna em Ruka",
+      "description": "Ruka é tecnicamente Kuusamo, não Lapônia, mas os esquiadores não ligam: é uma das estações mais movimentadas da Finlândia."
     },
     "zh-CN": {
-      "title": "鲁卡: 熊出没之地的滑雪场。",
-      "description": "熊出没之地的滑雪场。鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。"
+      "title": "鲁卡夜生活与酒吧：熊出没之地的滑雪场",
+      "description": "鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。"
     },
     "ko": {
-      "title": "Ruka: 곰의 땅, 스키 리조트.",
+      "title": "Ruka 나이트라이프: 곰의 땅, 스키 리조트",
       "description": "곰의 땅, 스키 리조트. 루카는 엄밀히는 쿠사모이고 엄밀히는 라플란드가 아니지만, 스키어들은 개의치 않습니다."
     },
     "fr": {
-      "title": "Ruka: La station de ski au pays de l'ours.",
-      "description": "La station de ski au pays de l'ours. Ruka est à Kuusamo, pas en Laponie, mais les skieurs s'en moquent : c'est l'une des plus fréquentées de Finlande."
+      "title": "Bars et vie nocturne à Ruka",
+      "description": "Ruka est à Kuusamo, pas en Laponie, mais les skieurs s'en moquent : c'est l'une des plus fréquentées de Finlande."
     },
     "it": {
-      "title": "Ruka: Stazione sciistica nella terra degli orsi.",
-      "description": "Stazione sciistica nella terra degli orsi. Ruka è a Kuusamo, non in Lapponia, ma agli sciatori non importa: è tra le stazioni più frequentate della Finlandia."
+      "title": "Bar e vita notturna a Ruka",
+      "description": "Ruka è a Kuusamo, non in Lapponia, ma agli sciatori non importa: è tra le stazioni più frequentate della Finlandia."
     },
     "nl": {
-      "title": "Ruka: Skiresort in berenland.",
-      "description": "Skiresort in berenland. Ruka is technisch Kuusamo, geen Lapland, maar skiërs maakt het niets uit: het is een van de drukste skigebieden van Finland."
+      "title": "Uitgaan in Ruka: skiresort in berenland",
+      "description": "Ruka is technisch Kuusamo, geen Lapland, maar skiërs maakt het niets uit: het is een van de drukste skigebieden van Finland."
     },
     "sv": {
-      "title": "Ruka: Skidort i björnland.",
-      "description": "Skidort i björnland. Ruka är tekniskt sett Kuusamo, inte Lappland, men för skidåkare spelar det ingen roll: det är ett av Finlands mest välbesökta skidområden."
+      "title": "Barer och nattliv i Ruka: skidort i björnland",
+      "description": "Ruka är tekniskt sett Kuusamo, inte Lappland, men för skidåkare spelar det ingen roll: det är ett av Finlands mest välbesökta skidområden."
     }
   },
   "/city/pyha-luosto": {
     "en": {
-      "title": "Pyhä & Luosto: The amethyst fells.",
+      "title": "Pyhä & Luosto bars & nightlife: The amethyst fells",
       "description": "The amethyst fells. Two small fells, 35 km apart, sharing a national park."
     },
     "fi": {
-      "title": "Pyhä & Luosto: Ametistituntureilla.",
-      "description": "Ametistituntureilla. Kaksi pientä tunturia 35 km:n päässä toisistaan jakavat saman kansallispuiston."
+      "title": "Pyhän ja Luoston baarit: yökerho Karhu ja hotellibaarit",
+      "description": "Luostolla on yökerho Karhu ja Santa's Hotel Auroran aulabaari, Pyhällä SportBar Pyhä. Tunturit ovat 35 km:n päässä toisistaan samassa kansallispuistossa."
     },
     "de": {
-      "title": "Pyhä & Luosto: Die Amethyst-Fjells.",
-      "description": "Die Amethyst-Fjells. Zwei kleine Fjells, 35 km voneinander entfernt, die sich einen Nationalpark teilen."
+      "title": "Bars und Nachtleben in Pyhä & Luosto: die Amethyst-Fjells",
+      "description": "Zwei kleine Fjells, 35 km voneinander entfernt, die sich einen Nationalpark teilen."
     },
     "ja": {
-      "title": "ピュハ＆ルオスト: アメジストのフェル。",
-      "description": "アメジストのフェル。35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。"
+      "title": "ピュハ＆ルオストのナイトライフ：アメジストのフェル",
+      "description": "35 km離れた二つの小さなフェルが、ひとつの国立公園を分け合っている。アメジスト、フェル（丘）、そしてラップランドで最も静かなスキー。"
     },
     "es": {
-      "title": "Pyhä & Luosto: Los montes de amatista.",
-      "description": "Los montes de amatista. Dos pequeños montes, a 35 km uno del otro, que comparten un parque nacional."
+      "title": "Bares y vida nocturna en Pyhä & Luosto",
+      "description": "Dos pequeños montes, a 35 km uno del otro, que comparten un parque nacional."
     },
     "pt-BR": {
-      "title": "Pyhä & Luosto: Os montes de ametista.",
-      "description": "Os montes de ametista. Dois pequenos montes, a 35 km um do outro, dividindo um parque nacional."
+      "title": "Bares e vida noturna em Pyhä & Luosto: os montes de ametista",
+      "description": "Dois pequenos montes, a 35 km um do outro, dividindo um parque nacional."
     },
     "zh-CN": {
-      "title": "皮哈-卢奥斯托: 紫水晶之峰。",
-      "description": "紫水晶之峰。两座相距 35 公里的小山峰，共享一座国家公园。紫水晶、群峰，以及拉普兰最安静的滑雪。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。"
+      "title": "皮哈-卢奥斯托夜生活与酒吧：紫水晶之峰",
+      "description": "两座相距 35 公里的小山峰，共享一座国家公园。紫水晶、群峰，以及拉普兰最安静的滑雪。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。"
     },
     "ko": {
-      "title": "Pyhä & Luosto: 자수정의 펠.",
-      "description": "자수정의 펠. 35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키."
+      "title": "Pyhä & Luosto 나이트라이프: 자수정의 펠",
+      "description": "35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키."
     },
     "fr": {
-      "title": "Pyhä & Luosto: Les fjälls d'améthyste.",
-      "description": "Les fjälls d'améthyste. Deux petits fjälls, à 35 km l'un de l'autre, partageant un parc national."
+      "title": "Bars et vie nocturne à Pyhä & Luosto",
+      "description": "Deux petits fjälls, à 35 km l'un de l'autre, partageant un parc national."
     },
     "it": {
-      "title": "Pyhä & Luosto: I fjäll dell'ametista.",
-      "description": "I fjäll dell'ametista. Due piccoli fjäll, a 35 km l'uno dall'altro, che condividono un parco nazionale."
+      "title": "Bar e vita notturna a Pyhä & Luosto: i fjäll dell'ametista",
+      "description": "Due piccoli fjäll, a 35 km l'uno dall'altro, che condividono un parco nazionale."
     },
     "nl": {
-      "title": "Pyhä & Luosto: De amethistfjälls.",
+      "title": "Uitgaan in Pyhä & Luosto: de amethistfjälls",
       "description": "De amethistfjälls. Twee kleine fjälls, 35 km uit elkaar, samen één nationaal park."
     },
     "sv": {
-      "title": "Pyhä & Luosto: Ametistfjällen.",
+      "title": "Barer och nattliv i Pyhä & Luosto: ametistfjällen",
       "description": "Ametistfjällen. Två små fjäll, 35 km isär, tillsammans en nationalpark."
     }
   },
   "/city/sodankyla": {
     "en": {
-      "title": "Sodankylä: Midnight Sun Film Festival.",
+      "title": "Sodankylä bars & nightlife: Midnight Sun Film Festival",
       "description": "Sodankylä is a village on the Kitinen river, and once a year, in mid-June, it becomes the most surreal cinema festival in the world."
     },
     "fi": {
-      "title": "Sodankylä: Sodankylän elokuvajuhlat.",
-      "description": "Sodankylä on kylä Kitisen varrella, ja kerran vuodessa, kesäkuun puolivälissä, siitä tulee maailman surrealistisin elokuvafestivaali."
+      "title": "Sodankylän baarit: pubit ja elokuvajuhlien yöt",
+      "description": "Sodankylän illat vietetään Piitsi Pubissa Kitisen rannalla, Olohuone Tähdessä ja hotellin baarissa. Kesäkuun puolivälissä kylän täyttävät elokuvajuhlat."
     },
     "de": {
-      "title": "Sodankylä: Heimat des Midnight Sun Film Festival.",
+      "title": "Bars und Nachtleben in Sodankylä",
       "description": "Sodankylä ist ein Dorf am Fluss Kitinen, und einmal im Jahr, Mitte Juni, wird es zum surrealsten Filmfestival der Welt."
     },
     "ja": {
-      "title": "ソダンキュラ: 真夜中の太陽映画祭。",
+      "title": "ソダンキュラのナイトライフ：真夜中の太陽映画祭",
       "description": "ソダンキュラはキティネン川沿いの村。年に一度、6月中旬になると、昼夜を問わず上映が続く世界で最もシュールな映画祭の舞台になります。"
     },
     "es": {
-      "title": "Sodankylä: La ciudad del Midnight Sun Film Festival.",
+      "title": "Bares y vida nocturna en Sodankylä",
       "description": "Una vez al año, a mediados de junio, Sodankylä se convierte en el festival de cine más surrealista del mundo: cinco días de proyecciones a todas horas."
     },
     "pt-BR": {
-      "title": "Sodankylä: A cidade do Midnight Sun Film Festival.",
+      "title": "Bares e vida noturna em Sodankylä",
       "description": "Sodankylä é um vilarejo à beira do rio Kitinen, e uma vez por ano, em meados de junho, vira o festival de cinema mais surreal do mundo."
     },
     "zh-CN": {
-      "title": "索丹屈莱: 午夜阳光电影节。",
+      "title": "索丹屈莱夜生活与酒吧：午夜阳光电影节",
       "description": "索丹屈莱是基蒂宁河畔的村庄。每年 6 月中旬，这里会变成世界上最超现实的电影节现场：午夜阳光电影节连续五天昼夜放映，没人睡觉，因为太阳不落。"
     },
     "ko": {
-      "title": "Sodankylä: 미드나이트 선 영화제.",
+      "title": "Sodankylä 나이트라이프: 미드나이트 선 영화제",
       "description": "소단퀼래는 키티넨 강가의 마을로, 해마다 6월 중순이면 밤낮없이 상영이 이어지는 세계에서 가장 초현실적인 영화제의 무대가 됩니다."
     },
     "fr": {
-      "title": "Sodankylä: La ville du Midnight Sun Film Festival.",
+      "title": "Bars et vie nocturne à Sodankylä",
       "description": "Sodankylä est un village au bord de la rivière Kitinen, et une fois par an, mi-juin, il devient le festival de cinéma le plus surréaliste du monde."
     },
     "it": {
-      "title": "Sodankylä: La città del Midnight Sun Film Festival.",
+      "title": "Bar e vita notturna a Sodankylä",
       "description": "Sodankylä è un villaggio sul fiume Kitinen, e una volta all'anno, a metà giugno, diventa il festival di cinema più surreale del mondo."
     },
     "nl": {
-      "title": "Sodankylä: Thuisbasis van het Midnight Sun Film Festival.",
+      "title": "Uitgaan in Sodankylä",
       "description": "Elk jaar half juni wordt Sodankylä, een dorp aan de rivier de Kitinen, het toneel van het meest surrealistische filmfestival ter wereld."
     },
     "sv": {
-      "title": "Sodankylä: Hemstad för Midnight Sun Film Festival.",
+      "title": "Barer och nattliv i Sodankylä",
       "description": "Sodankylä är en by vid älven Kitinen, och en gång om året, i mitten av juni, blir den världens mest surrealistiska filmfestival."
     }
   },
   "/city/kittila": {
     "en": {
-      "title": "Kittilä town: Where Levi locals actually live.",
-      "description": "Where Levi locals actually live. Kittilä is the municipal seat: 6 500 residents, the airport, and the people who staff Levi 18 km away."
+      "title": "Kittilä town bars & nightlife",
+      "description": "Kittilä is the municipal seat: 6 500 residents, the airport, and the people who staff Levi 18 km away."
     },
     "fi": {
-      "title": "Kittilän kirkonkylä: Missä Levin paikalliset oikeasti asuvat",
-      "description": "Missä Levin paikalliset oikeasti asuvat Kittilä on kuntakeskus: 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä."
+      "title": "Kittilän baarit: kirkonkylä, jossa Levin väki asuu",
+      "description": "Kittilän kirkonkylä on kuntakeskus: 6 500 asukasta, lentokenttä ja väki, joka pyörittää Leviä 18 kilometrin päässä. Iltaa istutaan Hotelli Kittilän baarissa."
     },
     "de": {
-      "title": "Kittilä (Ortskern): Wo Levis Einheimische wirklich wohnen",
+      "title": "Bars und Nachtleben in Kittilä (Ortskern)",
       "description": "Kittilä ist der Hauptort der Gemeinde: 6 500 Einwohner, der Flughafen und die Menschen, die das 18 km entfernte Levi am Laufen halten."
     },
     "ja": {
-      "title": "キッティラの町: Leviの地元民が実際に暮らす場所。",
+      "title": "キッティラの町のナイトライフ：Leviの地元民が実際に暮らす場所",
       "description": "Leviの地元民が実際に暮らす場所。キッティラは自治体の中心地：人口6,500人、空港、そして18km先のレヴィを支える人々の街です。"
     },
     "es": {
-      "title": "Kittilä (pueblo): Donde viven de verdad los locales de Levi.",
-      "description": "Donde viven de verdad los locales de Levi. Kittilä es la capital del municipio: 6 500 habitantes, el aeropuerto y la gente que hace funcionar Levi, a 18 km."
+      "title": "Bares y vida nocturna en Kittilä (pueblo)",
+      "description": "Kittilä es la capital del municipio: 6 500 habitantes, el aeropuerto y la gente que hace funcionar Levi, a 18 km."
     },
     "pt-BR": {
-      "title": "Kittilä (vila): Onde os locais de Levi realmente moram.",
-      "description": "Onde os locais de Levi realmente moram. Kittilä é a sede do município: 6.500 habitantes, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km."
+      "title": "Bares e vida noturna em Kittilä (vila)",
+      "description": "Kittilä é a sede do município: 6.500 habitantes, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km."
     },
     "zh-CN": {
-      "title": "基蒂莱镇: Levi 的本地人真正生活的地方。",
-      "description": "Levi 的本地人真正生活的地方。基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。"
+      "title": "基蒂莱镇夜生活与酒吧：Levi 的本地人真正生活的地方",
+      "description": "基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。"
     },
     "ko": {
-      "title": "Kittilä 마을: Levi 현지인이 실제로 사는 곳.",
+      "title": "Kittilä 마을 나이트라이프: Levi 현지인이 실제로 사는 곳",
       "description": "Levi 현지인이 실제로 사는 곳. 키틸래는 지자체의 중심지입니다: 인구 6,500명, 공항, 그리고 18km 떨어진 레비를 움직이는 사람들."
     },
     "fr": {
-      "title": "Kittilä (bourg): Là où vivent vraiment les locaux de Levi.",
-      "description": "Là où vivent vraiment les locaux de Levi. Kittilä est le chef-lieu de la commune : 6 500 habitants, l'aéroport et les gens qui font tourner Levi, à 18 km."
+      "title": "Bars et vie nocturne à Kittilä (bourg)",
+      "description": "Kittilä est le chef-lieu de la commune : 6 500 habitants, l'aéroport et les gens qui font tourner Levi, à 18 km."
     },
     "it": {
-      "title": "Kittilä (paese): Dove vivono davvero i locali di Levi.",
-      "description": "Dove vivono davvero i locali di Levi. Kittilä è il capoluogo del comune: 6.500 abitanti, l'aeroporto e le persone che mandano avanti Levi, a 18 km."
+      "title": "Bar e vita notturna a Kittilä (paese)",
+      "description": "Kittilä è il capoluogo del comune: 6.500 abitanti, l'aeroporto e le persone che mandano avanti Levi, a 18 km."
     },
     "nl": {
-      "title": "Kittilä (dorp): Waar de locals van Levi echt wonen.",
+      "title": "Uitgaan in Kittilä (dorp)",
       "description": "Kittilä is de hoofdplaats van de gemeente: 6.500 inwoners, de luchthaven en de mensen die het 18 km verderop gelegen Levi draaiende houden."
     },
     "sv": {
-      "title": "Kittilä (kyrkby): Där Levis lokalbor faktiskt bor.",
-      "description": "Där Levis lokalbor faktiskt bor. Kittilä är kommunens centralort: 6 500 invånare, flygplatsen och de människor som håller i gång Levi 18 km bort."
+      "title": "Barer och nattliv i Kittilä (kyrkby)",
+      "description": "Kittilä är kommunens centralort: 6 500 invånare, flygplatsen och de människor som håller i gång Levi 18 km bort."
     }
   },
   "/city/ivalo": {
     "en": {
-      "title": "Ivalo: The northernmost airport, hotel bars only.",
-      "description": "The northernmost airport, hotel bars only. Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland."
+      "title": "Ivalo bars & nightlife",
+      "description": "Ivalo is the northernmost airport in Finland and the gateway to Inari, Saariselkä and the Sámi Homeland."
     },
     "fi": {
-      "title": "Ivalo: Pohjoisin lentoasema, yöelämä hotellibaareissa.",
-      "description": "Pohjoisin lentoasema, yöelämä hotellibaareissa. Ivalo on Suomen pohjoisin lentoasema ja portti Inariin, Saariselälle ja saamelaisten kotiseutualueelle."
+      "title": "Ivalon baarit: Kultahipun pubi ja hotellien baarit",
+      "description": "Ivalo on Suomen pohjoisin lentoasema ja portti Inariin ja Saariselälle. Illat vietetään hotellien baareissa: Kultahipun pubissa ja Hotelli Ivalon aulabaarissa."
     },
     "de": {
-      "title": "Ivalo: Der nördlichste Flughafen, nur Hotelbars.",
-      "description": "Der nördlichste Flughafen, nur Hotelbars. Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen."
+      "title": "Bars und Nachtleben in Ivalo",
+      "description": "Ivalo ist der nördlichste Flughafen Finnlands und das Tor zu Inari, Saariselkä und dem Heimatgebiet der Samen."
     },
     "ja": {
-      "title": "イヴァロ: 最北の空港。夜はホテルバーだけ。",
+      "title": "イヴァロのナイトライフ：最北の空港。夜はホテルバーだけ",
       "description": "最北の空港。夜はホテルバーだけ。Ivaloはフィンランド最北の空港であり、Inari、Saariselkä、そしてサーミの故郷への玄関口だ。"
     },
     "es": {
-      "title": "Ivalo: El aeropuerto más al norte, solo bares de hotel.",
+      "title": "Bares y vida nocturna en Ivalo",
       "description": "Ivalo es el aeropuerto más al norte de Finlandia y la puerta de entrada a Inari, Saariselkä y la Tierra Natal Sami."
     },
     "pt-BR": {
-      "title": "Ivalo: O aeroporto mais ao norte, só bares de hotel.",
-      "description": "O aeroporto mais ao norte, só bares de hotel. Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi."
+      "title": "Bares e vida noturna em Ivalo",
+      "description": "Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi."
     },
     "zh-CN": {
-      "title": "伊瓦洛: 最北的机场，夜生活只有酒店酒吧。",
+      "title": "伊瓦洛夜生活与酒吧：最北的机场，夜生活只有酒店酒吧",
       "description": "最北的机场，夜生活只有酒店酒吧。Ivalo 是芬兰最北的机场，也是通往 Inari、Saariselkä 和萨米故土的门户。"
     },
     "ko": {
-      "title": "Ivalo: 최북단 공항, 밤은 호텔 바뿐.",
+      "title": "Ivalo 나이트라이프: 최북단 공항, 밤은 호텔 바뿐",
       "description": "최북단 공항, 밤은 호텔 바뿐. Ivalo는 핀란드 최북단 공항이자 Inari, Saariselkä, 사미 본향으로 가는 관문입니다."
     },
     "fr": {
-      "title": "Ivalo: L'aéroport le plus au nord, bars d'hôtel seulement.",
+      "title": "Bars et vie nocturne à Ivalo",
       "description": "Ivalo est l'aéroport le plus au nord de Finlande et la porte d'entrée vers Inari, Saariselkä et le Pays sámi."
     },
     "it": {
-      "title": "Ivalo: L'aeroporto più a nord, solo bar d'albergo.",
-      "description": "L'aeroporto più a nord, solo bar d'albergo. Ivalo è l'aeroporto più a nord della Finlandia e la porta d'accesso a Inari, Saariselkä e alla Terra dei Sámi."
+      "title": "Bar e vita notturna a Ivalo",
+      "description": "Ivalo è l'aeroporto più a nord della Finlandia e la porta d'accesso a Inari, Saariselkä e alla Terra dei Sámi."
     },
     "nl": {
-      "title": "Ivalo: De noordelijkste luchthaven, alleen hotelbars.",
-      "description": "De noordelijkste luchthaven, alleen hotelbars. Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland."
+      "title": "Uitgaan in Ivalo",
+      "description": "Ivalo is de noordelijkste luchthaven van Finland en de toegangspoort tot Inari, Saariselkä en het Sámi-thuisland."
     },
     "sv": {
-      "title": "Ivalo: Den nordligaste flygplatsen, bara hotellbarer.",
-      "description": "Den nordligaste flygplatsen, bara hotellbarer. Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland."
+      "title": "Barer och nattliv i Ivalo",
+      "description": "Ivalo är Finlands nordligaste flygplats och porten till Inari, Saariselkä och sameland."
     }
   },
   "/city/muonio": {
     "en": {
-      "title": "Muonio: The national-park gateway.",
-      "description": "The national-park gateway. Muonio is 2 300 people and one of the gateways to Pallas-Yllästunturi National Park (1 020 km², third-biggest in Finland)."
+      "title": "Muonio bars & nightlife: The national-park gateway",
+      "description": "Muonio is 2 300 people and one of the gateways to Pallas-Yllästunturi National Park (1 020 km², third-biggest in Finland)."
     },
     "fi": {
-      "title": "Muonio: Portti kansallispuistoon.",
-      "description": "Portti kansallispuistoon. Muoniossa on 2 300 asukasta, ja se on yksi Pallas-Yllästunturin kansallispuiston (1 020 km², Suomen kolmanneksi suurin) porteista."
+      "title": "Muonion baarit: hotellibaarit kansallispuiston portilla",
+      "description": "Muonion illat vietetään hotellien baareissa Harrinivassa ja Jeris Lakeside Resortissa. Muonio on yksi Pallas-Yllästunturin kansallispuiston porteista."
     },
     "de": {
-      "title": "Muonio: Das Tor zum Nationalpark.",
-      "description": "Das Tor zum Nationalpark. Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands)."
+      "title": "Bars und Nachtleben in Muonio: das Tor zum Nationalpark",
+      "description": "Muonio hat 2 300 Einwohner und ist eines der Tore zum Nationalpark Pallas-Yllästunturi (1 020 km², der drittgrößte Finnlands)."
     },
     "ja": {
-      "title": "ムオニオ: 国立公園の玄関口。",
-      "description": "国立公園の玄関口。ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第3の広さ）への玄関口のひとつです。"
+      "title": "ムオニオのナイトライフ：国立公園の玄関口",
+      "description": "ムオニオは人口2,300人、パッラス=ユッラストゥントゥリ国立公園（1,020 km²、フィンランド第3の広さ）への玄関口のひとつです。"
     },
     "es": {
-      "title": "Muonio: La puerta al parque nacional.",
+      "title": "Bares y vida nocturna en Muonio",
       "description": "Muonio tiene 2 300 habitantes y es una de las puertas del Parque Nacional Pallas-Yllästunturi (1 020 km², el tercero más grande de Finlandia)."
     },
     "pt-BR": {
-      "title": "Muonio: A porta de entrada do parque nacional.",
+      "title": "Bares e vida noturna em Muonio",
       "description": "Muonio tem 2.300 habitantes e é uma das portas de entrada do Parque Nacional Pallas-Yllästunturi (1.020 km², o terceiro maior da Finlândia)."
     },
     "zh-CN": {
-      "title": "穆奥尼奥: 国家公园门户。",
+      "title": "穆奥尼奥夜生活与酒吧：国家公园门户",
       "description": "国家公园门户。穆奥尼奥有2300名居民，是帕拉斯-于拉斯通图里国家公园（1020平方公里，芬兰第三大）的门户之一。"
     },
     "ko": {
-      "title": "Muonio: 국립공원의 관문.",
-      "description": "국립공원의 관문. 무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다."
+      "title": "Muonio 나이트라이프: 국립공원의 관문",
+      "description": "무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다."
     },
     "fr": {
-      "title": "Muonio: La porte d'entrée du parc national.",
+      "title": "Bars et vie nocturne à Muonio",
       "description": "Muonio compte 2 300 habitants et constitue l'une des portes du parc national Pallas-Yllästunturi (1 020 km², le troisième de Finlande)."
     },
     "it": {
-      "title": "Muonio: La porta del parco nazionale.",
-      "description": "La porta del parco nazionale. Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia)."
+      "title": "Bar e vita notturna a Muonio: la porta del parco nazionale",
+      "description": "Muonio ha 2.300 abitanti ed è una delle porte del Parco nazionale Pallas-Yllästunturi (1.020 km², il terzo della Finlandia)."
     },
     "nl": {
-      "title": "Muonio: De toegangspoort tot het nationaal park.",
+      "title": "Uitgaan in Muonio: de toegangspoort tot het nationaal park",
       "description": "Muonio telt 2.300 inwoners en is een van de poorten naar nationaal park Pallas-Yllästunturi (1.020 km², het op twee na grootste van Finland)."
     },
     "sv": {
-      "title": "Muonio: Porten till nationalparken.",
-      "description": "Porten till nationalparken. Muonio har 2 300 invånare och är en av portarna till nationalparken Pallas-Yllästunturi (1 020 km², Finlands tredje största)."
+      "title": "Barer och nattliv i Muonio: porten till nationalparken",
+      "description": "Muonio har 2 300 invånare och är en av portarna till nationalparken Pallas-Yllästunturi (1 020 km², Finlands tredje största)."
     }
   },
   "/city/salla": {
     "en": {
-      "title": "Salla: In the middle of nowhere.",
+      "title": "Salla bars & nightlife: In the middle of nowhere",
       "description": "In the middle of nowhere. 3 300 residents and one ski slope. Finland's quietest ski resort."
     },
     "fi": {
-      "title": "Salla: Keskellä ei-mitään.",
-      "description": "Keskellä ei-mitään. 3 300 asukasta ja yksi laskettelurinne. Suomen hiljaisin hiihtokeskus."
+      "title": "Sallan baarit: Sallan Maja keskellä ei-mitään",
+      "description": "Sallassa on 3 300 asukasta ja yksi laskettelurinne, ja illan paikka on ravintola Sallan Maja: karaokea ja lautapelejä viikonloppuisin."
     },
     "de": {
-      "title": "Salla: Mitten im Nirgendwo.",
+      "title": "Bars und Nachtleben in Salla: mitten im Nirgendwo",
       "description": "Mitten im Nirgendwo. 3 300 Einwohner und eine Skipiste. Finnlands ruhigstes Skigebiet."
     },
     "ja": {
-      "title": "サッラ: 何もないど真ん中。",
-      "description": "何もないど真ん中。人口3,300人、スキー場はひとつ。フィンランドで最も静かなスキーリゾート。町のスローガンは文字どおり「In the Middle of Nowhere」（何もない場所のど真ん中）、しかも褒め言葉のつもりです。"
+      "title": "サッラのナイトライフ：何もないど真ん中",
+      "description": "人口3,300人、スキー場はひとつ。フィンランドで最も静かなスキーリゾート。町のスローガンは文字どおり「In the Middle of Nowhere」（何もない場所のど真ん中）、しかも褒め言葉のつもりです。"
     },
     "es": {
-      "title": "Salla: En medio de la nada.",
-      "description": "En medio de la nada. 3.300 habitantes y una pista de esquí. La estación de esquí más tranquila de Finlandia."
+      "title": "Bares y vida nocturna en Salla: en medio de la nada",
+      "description": "3.300 habitantes y una pista de esquí. La estación de esquí más tranquila de Finlandia."
     },
     "pt-BR": {
-      "title": "Salla: No meio do nada.",
-      "description": "No meio do nada. 3.300 habitantes e uma pista de esqui. A estação de esqui mais silenciosa da Finlândia."
+      "title": "Bares e vida noturna em Salla: no meio do nada",
+      "description": "3.300 habitantes e uma pista de esqui. A estação de esqui mais silenciosa da Finlândia."
     },
     "zh-CN": {
-      "title": "萨拉: 位于天涯海角。",
-      "description": "位于天涯海角。3,300 名居民，一条雪道。芬兰最安静的滑雪度假区。镇子的口号就是字面意义上的“In the Middle of Nowhere”（在无人之境），而且他们是把它当作夸奖来说的。"
+      "title": "萨拉夜生活与酒吧：位于天涯海角",
+      "description": "3,300 名居民，一条雪道。芬兰最安静的滑雪度假区。镇子的口号就是字面意义上的“In the Middle of Nowhere”（在无人之境），而且他们是把它当作夸奖来说的。"
     },
     "ko": {
-      "title": "Salla: 한복판의 아무것도 없는 곳.",
-      "description": "한복판의 아무것도 없는 곳. 인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 \"In the Middle of Nowhere\"."
+      "title": "Salla 나이트라이프: 한복판의 아무것도 없는 곳",
+      "description": "인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 \"In the Middle of Nowhere\"."
     },
     "fr": {
-      "title": "Salla: Au milieu de nulle part.",
-      "description": "Au milieu de nulle part. 3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande."
+      "title": "Bars et vie nocturne à Salla : au milieu de nulle part",
+      "description": "3 300 habitants et une piste de ski. La station de ski la plus tranquille de Finlande."
     },
     "it": {
-      "title": "Salla: In mezzo al nulla.",
-      "description": "In mezzo al nulla. 3.300 abitanti e una pista da sci. La stazione sciistica più tranquilla della Finlandia."
+      "title": "Bar e vita notturna a Salla: in mezzo al nulla",
+      "description": "3.300 abitanti e una pista da sci. La stazione sciistica più tranquilla della Finlandia."
     },
     "nl": {
-      "title": "Salla: Middenin het niets.",
+      "title": "Uitgaan in Salla: middenin het niets",
       "description": "Middenin het niets. 3.300 inwoners en één skipiste. Het rustigste skiresort van Finland."
     },
     "sv": {
-      "title": "Salla: Mitt ute i ingenstans.",
+      "title": "Barer och nattliv i Salla: mitt ute i ingenstans",
       "description": "Mitt ute i ingenstans. 3 300 invånare och en enda skidbacke. Finlands lugnaste skidort."
     }
   }

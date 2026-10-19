@@ -7,7 +7,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '2026 年欧洲文化之都，也是北方唯一一座全年都有真正夜店场景的城市。',
     pageTagline: '2026 年欧洲文化之都。',
     intro: '21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。奥卢是北部唯一工作日夜晚也真正热闹的城市，人群在 45 Special、Kaarlenholvi 和 St Michael 之间流连到深夜。2026年还有欧洲文化之都项目加持：1500场活动，包括空气吉他世界锦标赛、Qstock、Elojazz 和冬季音乐节 Frozen People。',
-    metaDescription: '2026 年欧洲文化之都。21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。',
+    metaDescription: '21.8万人口、由学生撑起的俱乐部场景，以及步行街罗图阿里（Rotuaari），城里大多数好去处都在一小段步行范围内。',
     venues: {
       'St Michael': { type: '爱尔兰酒吧+现场演出', note: '罗图阿里的定盘星，有巡演乐队和致敬之夜的爱尔兰酒吧。' },
       "Hemingway's": { type: '酒吧', note: 'Kirkkokatu 街上的威士忌与精酿啤酒吧，安静的一杯，营业到深夜。' },
@@ -33,7 +33,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '北极之都，在游客云集的周末和只属于本地人的工作日之间一分为二。',
     pageTagline: '北极之都。',
     intro: '一座城，两种节奏。周末游客在科斯基卡图（Koskikatu）一带排队，Roy Club 自称"自1985年起全城最棒的派对"，Bull Bar 是最喧闹的体育露台。本地人则散布在步行街沿线，鸡尾酒去 Cafe & Bar 21，啤酒去 Rovaniemen Oluthuone，威士忌去 Oliver\'s Corner。旅游旺季的周末要排队；工作日则安静而本地。',
-    metaDescription: '北极之都。一座城，两种节奏：周末游客在科斯基卡图（Koskikatu）一带的酒吧门口排队，工作日的夜晚则安静下来，只属于本地人。',
+    metaDescription: '一座城，两种节奏：周末游客在科斯基卡图（Koskikatu）一带的酒吧门口排队，工作日的夜晚则安静下来，只属于本地人。',
     venues: {
       'Cafe & Bar 21': { type: '鸡尾酒吧', note: '市中心本地人最爱的鸡尾酒吧。' },
       'Rovaniemen Oluthuone': { type: '啤酒馆', note: '步行街上的啤酒餐厅，大院子，酒头选择丰富。' },
@@ -113,7 +113,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '萨米文化之都，Sajos、Siida、Inari 湖与 Pielpajärvi 荒野教堂。',
     pageTagline: '萨米文化之都。',
     intro: 'Inari 是萨米议会（Sajos）的文化所在地，也是 Siida 的所在地，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。这里的“夜生活”是文化性的：1 月的 Skábmagovat 原住民电影节、8 月的 Ijahis Idja 萨米音乐节，再加上最晚 23:00 打烊的酒店酒吧。别为夜店而来。为冰冷的湖水、约伊克（joik）演唱会，以及 12 月里 14:00 就黑透的天空而来。',
-    metaDescription: '萨米文化之都。Inari 是萨米议会（Sajos）的文化所在地，也是 Siida 的所在地，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。',
+    metaDescription: 'Inari 是萨米议会（Sajos）的文化所在地，也是 Siida 的所在地，这座博物馆会把你对萨普米（Sápmi）一无所知的一切讲清楚。',
     venues: {
       'Hotel Inari Bar': { type: '酒店酒吧', note: 'Hotel Inari 的休闲吧：07 至 22 点营业，周末 08 点起。' },
       'Wilderness Hotel Inari': { type: '酒店酒吧', note: 'Ukko 餐厅旁的酒吧：09:00 至 22:30 营业。' },
@@ -139,7 +139,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '雪堡（SnowCastle）、Sampo 破冰船，以及 Hotel Merihovi 层层叠叠的餐厅综合体。',
     pageTagline: '雪堡、破冰船、海拉普兰。',
     intro: 'Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。如今是一座冬季雪公园，加上全年开放的室内雪世界 SnowExperience365 及其冰墙酒吧；带礼拜堂和酒店的完整城堡已不再建造。Sampo 破冰船从 12 月起每晚出航，航程本身也兼作酒吧场地。陆地上的夜生活规模很小：Hotel Merihovi 经营着一个多层综合体（大堂吧、体育露台、餐厅），差不多就这些了。一座工业港口小城，冬天却打出了远超身量的拳。',
-    metaDescription: '雪堡、破冰船、海拉普兰。Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。',
+    metaDescription: 'Kemi 是赫尔辛基铁路与拉普兰之间的门户，一座只有一招的城镇：雪堡园区（SnowCastle Area），自 1996 年起每年冬天都用雪建造新东西。',
     venues: {
       'SnowCastle Ice Bar': { type: '冰吧', note: '全年开放的 SnowExperience 里的冰吧，约零下 5 °C：周一至周六 07–17 点，周日 08–17 点营业。' },
       'Sampo Icebreaker': { type: '船上酒吧', note: '旺季航行；酒吧全程营业。' },
@@ -164,7 +164,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '芬兰规模最大的滑雪区之一。',
     pageTagline: '芬兰规模最大的滑雪区之一。',
     intro: '于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。晚上更热闹的是阿卡斯隆波洛，这一带的夜店 Pirtukellari 也在这里，位于 Lapland Hotels Äkäshotelli 的 Pirtukirkko 地下。没有大型夜店。比莱维更安静、更成熟、情侣更多。帕拉斯-于拉斯通图里国家公园是芬兰第三大国家公园。',
-    metaDescription: '芬兰规模最大的滑雪区之一。于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。',
+    metaDescription: '于拉斯有62条雪道，分属两个村子，北边的阿卡斯隆波洛（Äkäslompolo）和南边的于拉斯耶尔维（Ylläsjärvi），雪道相连，开车却要20分钟。',
     venues: {
       'Pirtukellari Night Club': { type: '夜店', note: '位于阿卡斯隆波洛 Lapland Hotels Äkäshotelli 的 Pirtukirkko 地下。未公布固定营业时间，请向酒店确认。' },
       'Taiga Pub': { type: '酒馆', note: '啤酒选择经常更换，部分晚上有现场音乐。' },
@@ -189,7 +189,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '按滑雪人次计算，芬兰第二大滑雪度假区，拉普兰以南不远。',
     pageTagline: '熊出没之地的滑雪场。',
     intro: '鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。淡季村子非常安静；11月到4月则火力全开。',
-    metaDescription: '熊出没之地的滑雪场。鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。',
+    metaDescription: '鲁卡严格说属于库萨莫，严格说不算拉普兰，但滑雪的人不在乎，它是芬兰最热闹的雪场之一，11月开板周最为喧腾。雪道下的 Zone 是滑雪后的中心，Piste 和 Colorado Bar 接力撑起夜晚。',
     venues: {
       'Restaurant Zone': { type: '滑雪后', note: '就在雪道脚下，现场演出与FIS开板周派对的大本营。' },
       'Piste': { type: '滑雪后+酒吧', note: '从滑雪后一路营业到深夜的雪村酒吧。' },
@@ -216,7 +216,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '紫水晶、群峰，以及拉普兰最安静的滑雪。',
     pageTagline: '紫水晶之峰。',
     intro: '两座相距 35 公里的小山峰，共享一座国家公园。Pyhä 的滑雪区更大；Luosto 则有紫水晶矿和夜店：Lapland Hotels Luostotunturi 的 Karhu，春天里伴着乐队和客座艺人的舞会一直持续到 04:00。在 Pyhä，度假区自己名单上最晚打烊的酒吧 SportBar Pyhä 午夜关门。这是拉普兰最安静的“滑雪目的地”，而且引以为傲。',
-    metaDescription: '紫水晶之峰。两座相距 35 公里的小山峰，共享一座国家公园。紫水晶、群峰，以及拉普兰最安静的滑雪。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。',
+    metaDescription: '两座相距 35 公里的小山峰，共享一座国家公园。紫水晶、群峰，以及拉普兰最安静的滑雪。Pyhä 的滑雪区更大；Luosto 则有一座可以在午夜、极光之下参观的紫水晶矿。',
     venues: {
       'Nightclub Karhu': { type: '夜店', note: 'Luosto 的 Lapland Hotels Luostotunturi 旗下夜店：卡拉 OK 和现场乐队，春天的舞会一直到 04:00。' },
       "Santa's Hotel Aurora": { type: '酒店酒吧', note: 'Luosto 这家酒店的大堂吧。' },
@@ -266,7 +266,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '本地人真正生活的地方（Levi 多半是游客）。',
     pageTagline: 'Levi 的本地人真正生活的地方。',
     intro: '基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。想要一个没有莱维度假村价格的、安静的芬兰小镇之夜，就是这里。',
-    metaDescription: 'Levi 的本地人真正生活的地方。基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。',
+    metaDescription: '基蒂莱是市镇中心，6500名居民、机场，以及支撑着18公里外莱维运转的人们。酒吧生活规模小而本地化：一家酒店酒吧和几间村酒馆，没有旅游项目。大多数游客径直路过。',
     venues: {
       'Hotel Kittilä Bar': { type: '酒店酒吧', note: '镇上靠得住的选择，比莱维安静也便宜。' },
     },
@@ -337,7 +337,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '位于天涯海角。芬兰最安静的滑雪度假区。',
     pageTagline: '位于天涯海角。',
     intro: '3,300 名居民，一条雪道。镇子的口号就是字面意义上的“In the Middle of Nowhere”（在无人之境），而且他们是把它当作夸奖来说的。营业最晚的是 Ravintola Sallan Maja 的 Majan Pubi：周五 22 点至 04 点，周六 22 点至 02 点，有时到 04 点。冬季之外：一片寂静。半开玩笑的“Salla 2032”冬季运动会宣传活动让小镇出了名，但实际场景没有变。别为夜店而来。',
-    metaDescription: '位于天涯海角。3,300 名居民，一条雪道。芬兰最安静的滑雪度假区。镇子的口号就是字面意义上的“In the Middle of Nowhere”（在无人之境），而且他们是把它当作夸奖来说的。',
+    metaDescription: '3,300 名居民，一条雪道。芬兰最安静的滑雪度假区。镇子的口号就是字面意义上的“In the Middle of Nowhere”（在无人之境），而且他们是把它当作夸奖来说的。',
     venues: {
       'Ravintola Sallan Maja': { type: '餐厅 + 酒馆', note: 'Majan Pubi 有卡拉 OK 和桌游：周五 22–04 点、周六 22–02 点营业（有时到 04 点），22:00 起仅限 18 岁以上。' },
       'Salla Wilderness Park': { type: '日间场所', note: '为公园访客提供午餐 + 日间咖啡馆。' },

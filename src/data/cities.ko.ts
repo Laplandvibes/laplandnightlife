@@ -6,7 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '2026 유럽 문화수도, 그리고 북부 핀란드에서 유일하게 사계절 내내 돌아가는 진짜 클럽 씬.',
     pageTagline: '2026 유럽 문화수도.',
     intro: '인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리. 오울루는 평일 밤이 실제로 돌아가는 북부 유일의 도시입니다. 사람들은 늦게까지 45 Special, Kaarlenholvi, St Michael 사이를 오갑니다. 2026년에는 유럽 문화수도 프로그램이 더해집니다: 에어기타 세계선수권, Qstock, Elojazz, 겨울 축제 Frozen People 등 1,500개 행사.',
-    metaDescription: '2026 유럽 문화수도. 인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리.',
+    metaDescription: '인구 21만 8천 명, 학생들이 이끄는 클럽 씬, 그리고 도시 대부분의 명소가 짧은 도보 거리에 모여 있는 보행자 거리 로투아리.',
     venues: {
       'St Michael': { type: '아이리시 펍 + 라이브', note: '로투아리의 중심축: 투어 공연과 트리뷰트 나이트가 열리는 아이리시 펍.' },
       "Hemingway's": { type: '바', note: '키르코카투의 위스키·크래프트 맥주 바: 조용한 한 잔, 늦게까지 영업.' },
@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '북극의 수도: 관광객의 주말과 현지인만의 평일로 나뉜다.',
     pageTagline: '북극의 수도.',
     intro: '한 도시, 두 개의 속도. 주말 관광객은 코스키카투 주변에 줄을 섭니다: Roy Club은 "1985년부터 도시 최고의 파티"를 열고, Bull Bar는 가장 시끌벅적한 스포츠 테라스입니다. 현지인들은 보행자 거리를 따라 흩어집니다: 칵테일은 Cafe & Bar 21, 맥주는 Rovaniemen Oluthuone, 위스키는 Oliver\'s Corner. 관광 주말엔 줄, 평일엔 조용하고 로컬합니다.',
-    metaDescription: '북극의 수도. 한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다.',
+    metaDescription: '한 도시, 두 개의 속도: 주말 관광객은 코스키카투 주변에 줄을 서고, 현지인들은 보행자 거리를 따라 흩어집니다. 평일엔 조용하고 현지인 위주입니다.',
     venues: {
       'Cafe & Bar 21': { type: '칵테일 바', note: '시내 중심에 있는 현지인들의 단골 칵테일 바.' },
       'Rovaniemen Oluthuone': { type: '비어 펍', note: '보행자 거리의 맥주 레스토랑: 넓은 야외석과 폭넓은 탭 리스트.' },
@@ -108,7 +108,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '사미 문화의 수도: Sajos, Siida, Inari 호수, 그리고 Pielpajärvi 황야의 교회.',
     pageTagline: '사미 문화의 수도.',
     intro: '이나리는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida가 있는 곳입니다. 이곳의 "나이트라이프"는 문화적입니다: 1월의 원주민 영화제 Skábmagovat, 8월의 사미 음악 축제 Ijahis Idja, 그리고 늦어도 23:00에는 문을 닫는 호텔 바. 클럽을 기대하고 오지 마세요. 차가운 호숫물, 요이크(joik) 공연, 그리고 12월이면 14:00에 새카매지는 하늘을 위해 오세요.',
-    metaDescription: '사미 문화의 수도. 이나리는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida가 있는 곳입니다.',
+    metaDescription: '이나리는 사미 의회(Sajos)가 자리한 문화의 중심이자, 사프미(Sápmi)에 대해 미처 몰랐던 모든 것을 설명해 주는 박물관 Siida가 있는 곳입니다.',
     venues: {
       'Hotel Inari Bar': { type: '호텔 바', note: 'Hotel Inari의 라운지 바: 07–22시 영업, 주말에는 08시부터.' },
       'Wilderness Hotel Inari': { type: '호텔 바', note: 'Ukko 레스토랑 옆 바: 09:00–22:30 영업.' },
@@ -133,7 +133,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'SnowCastle, Sampo 쇄빙선, 그리고 Hotel Merihovi의 층층이 쌓인 레스토랑 복합관.',
     pageTagline: 'SnowCastle, 쇄빙선, 바다 라플란드.',
     intro: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역. 지금은 겨울 스노우 파크와, 얼음 벽 바를 갖춘 연중 운영 실내 눈 세계 SnowExperience365가 중심입니다. 예배당과 호텔까지 갖춘 성 전체는 더 이상 짓지 않습니다. 12월부터 운항하는 Sampo 쇄빙선은 밤마다 투어를 도는데, 그 자체가 바 역할도 합니다. 본토 나이트라이프는 작습니다: Hotel Merihovi가 층층의 복합관(로비 바, 스포츠 테라스, 레스토랑)을 운영하고, 사실상 그게 전부입니다. 겨울이면 체급 이상으로 한 방 먹이는 산업 항구 도시입니다.',
-    metaDescription: 'SnowCastle, 쇄빙선, 바다 라플란드. Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역.',
+    metaDescription: 'Kemi는 헬싱키 철도와 라플란드를 잇는 관문이자, 단 하나의 카드를 쥔 도시입니다: 1996년 이래 매년 겨울 눈으로 무언가를 지어 온 SnowCastle 구역.',
     venues: {
       'SnowCastle Ice Bar': { type: '아이스 바', note: '연중 운영하는 SnowExperience 안의 아이스 바, 약 –5 °C: 월–토 07–17시, 일 08–17시 영업.' },
       'Sampo Icebreaker': { type: '선상 바', note: '시즌 중 운항; 바는 항해 내내 운영됩니다.' },
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키.',
     pageTagline: '자수정의 펠.',
     intro: '35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. Pyhä는 스키 구역이 더 크고, Luosto에는 자수정 광산과 나이트클럽이 있습니다. Lapland Hotels Luostotunturi의 Karhu에서는 봄이면 밴드와 게스트 아티스트의 댄스 나이트가 04:00까지 이어집니다. Pyhä에서는 리조트 자체 목록에서 가장 늦게까지 여는 SportBar Pyhä가 자정에 문을 닫습니다. 라플란드에서 가장 조용한 "스키 목적지"이며, 그 점을 자랑스러워합니다.',
-    metaDescription: '자수정의 펠. 35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키.',
+    metaDescription: '35km 떨어진 두 개의 작은 펠이 하나의 국립공원을 공유합니다. 자수정, 펠(fell), 그리고 라플란드에서 가장 조용한 스키.',
     venues: {
       'Nightclub Karhu': { type: '나이트클럽', note: 'Luosto에 있는 Lapland Hotels Luostotunturi의 나이트클럽: 가라오케와 라이브 밴드, 봄에는 04:00까지 이어지는 댄스 나이트.' },
       "Santa's Hotel Aurora": { type: '호텔 바', note: 'Luosto 호텔의 로비 바.' },
@@ -301,7 +301,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '나이트라이프 없음. 매력은 Pallas-Yllästunturi 국립공원.',
     pageTagline: '국립공원의 관문.',
     intro: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다. 클럽도, 펍 크롤도 없고, 대부분의 저녁은 일찍 끝납니다. Harriniva Wilderness Hotel은 사파리 손님을 위한 저녁 사우나+로비 바 콤보를 운영하고, Jeris Lakeside Resort는 예리스야르비 호숫가에서 같은 경험을 제공합니다. 솔직히 그것이 무오니오의 밤 문화 전부입니다.',
-    metaDescription: '국립공원의 관문. 무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다.',
+    metaDescription: '무오니오는 인구 2,300명으로, 팔라스-윌래스툰투리 국립공원(1,020km², 핀란드 3위)으로 가는 관문 중 하나입니다.',
     venues: {
       'Jeris Lakeside Resort': { type: '호텔 바', note: '예리스야르비 호숫가 호텔: 저녁을 위한 레스토랑과 바.' },
       'Harriniva Wilderness Hotel': { type: '호텔 바', note: '사우나 + 바, 대부분 사파리 손님.' },
@@ -324,7 +324,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: '한복판의 아무것도 없는 곳. 핀란드에서 가장 조용한 스키 리조트.',
     pageTagline: '한복판의 아무것도 없는 곳.',
     intro: '인구 3,300명, 스키 슬로프 하나. 마을 슬로건은 말 그대로 "In the Middle of Nowhere"(아무것도 없는 곳 한가운데)이며, 칭찬의 뜻으로 쓴 말입니다. 가장 늦게까지 여는 곳은 Ravintola Sallan Maja의 Majan Pubi로, 금요일 22–04시, 토요일 22–02시, 가끔은 04시까지 엽니다. 겨울이 아니면 고요합니다. 위트 있는 "Salla 2032" 동계대회 캠페인이 마을을 지도에 올렸지만, 실제 밤 문화는 변하지 않았습니다. 클럽을 위해 오지는 마세요.',
-    metaDescription: '한복판의 아무것도 없는 곳. 인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 "In the Middle of Nowhere".',
+    metaDescription: '인구 3,300명, 스키 슬로프 하나. 핀란드에서 가장 조용한 스키 리조트. 마을 슬로건은 말 그대로 "In the Middle of Nowhere".',
     venues: {
       'Ravintola Sallan Maja': { type: '레스토랑 + 펍', note: 'Majan Pubi에서는 가라오케와 보드게임을 즐길 수 있습니다. 금 22–04시, 토 22–02시(가끔 04시까지) 영업, 22:00부터 18세 이상만 입장.' },
       'Salla Wilderness Park': { type: '주간 매장', note: '공원 방문객을 위한 점심 + 낮 시간 카페.' },

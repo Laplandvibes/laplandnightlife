@@ -6,7 +6,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capital Europeia da Cultura 2026, e a única cena de balada de verdade que rola o ano inteiro no norte.',
     pageTagline: 'Capital Europeia da Cultura 2026.',
     intro: '200 mil habitantes, uma cena de clubes movida por estudantes e a rua de pedestres Rotuaari, que concentra a maioria dos endereços da cidade em uma caminhada curta. Oulu é a única cidade do norte onde as noites de semana realmente acontecem: o público circula entre 45 Special, Kaarlenholvi e St Michael até tarde. Em 2026 entra o programa de Capital Europeia da Cultura: 1.500 eventos, incluindo o Mundial de Air Guitar, Qstock, Elojazz e o festival de inverno Frozen People.',
-    metaDescription: 'Capital Europeia da Cultura 2026. 218 mil habitantes, uma cena de clubes estudantil e a rua de pedestres Rotuaari, com a maioria dos endereços a poucos passos.',
+    metaDescription: '218 mil habitantes, uma cena de clubes estudantil e a rua de pedestres Rotuaari, com a maioria dos endereços a poucos passos.',
     venues: {
       'St Michael': { type: 'Pub irlandês + shows', note: 'A âncora da Rotuaari: pub irlandês com artistas em turnê e noites de tributo.' },
       "Hemingway's": { type: 'Bar', note: 'Bar de uísque e cerveja artesanal na Kirkkokatu: o copo tranquilo, aberto até tarde.' },
@@ -31,7 +31,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais.',
     pageTagline: 'A capital do Ártico.',
     intro: 'Duas velocidades em uma só cidade. No fim de semana, turistas fazem fila em torno da Koskikatu: o Roy Club dá "as melhores festas da cidade desde 1985" e o Bull Bar é o terraço esportivo mais barulhento. Os locais se espalham pela rua de pedestres: Cafe & Bar 21 para coquetéis, Rovaniemen Oluthuone para cerveja, Oliver\'s Corner para uísque. Fins de semana turísticos significam filas; nos dias úteis tudo é calmo e local.',
-    metaDescription: 'A capital do Ártico. Duas velocidades em uma só cidade. A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais.',
+    metaDescription: 'Duas velocidades em uma só cidade. A capital do Ártico, dividida entre fins de semana de turistas e dias de semana só de locais.',
     venues: {
       'Cafe & Bar 21': { type: 'Bar de coquetéis', note: 'O bar de coquetéis favorito dos locais, no centro.' },
       'Rovaniemen Oluthuone': { type: 'Cervejaria', note: 'Restaurante cervejeiro na rua de pedestres: quintal grande, ampla seleção de torneiras.' },
@@ -59,7 +59,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Hullu Poro Areena: capacidade de 1.700, 10 bares, 2 andares.',
     pageTagline: 'A maior festa de estação de esqui da Finlândia.',
     intro: 'O centro de tudo é o Hullu Poro Areena: espaço para 1.700 pessoas em dois andares, dez bares e uma pista de dança grande, aberto em noites de show até as 03:30. Ao redor: o Ihku, a lendária cabana de après-ski onde bota de esqui na pista de dança é bem-vinda, e o Panorama Sky Bar no alto do Hotel Levi Panorama para o drinque com vista. Em meados de novembro, a Copa do Mundo FIS de esqui alpino traz um fim de semana de provas. De fevereiro a abril: despedidas de solteiro, escolas de esqui e fins de semana a todo vapor. Fora de temporada, boa parte do vilarejo sossega já no começo da semana.',
-    metaDescription: 'A maior festa de estação de esqui da Finlândia. O centro é o Hullu Poro Areena: 1.700 pessoas em dois andares, dez bares e uma pista de dança grande.',
+    metaDescription: 'O centro é o Hullu Poro Areena: 1.700 pessoas em dois andares, dez bares e uma pista de dança grande.',
     venues: {
       'Panorama Sky Bar': { type: 'Bar panorâmico', note: 'Bar do Hotel Levi Panorama acima da gôndola: drinques com vista para os montes.' },
       'Hullu Poro Areena': { type: 'Megabalada', note: 'Capacidade de 1.700, 10 bares, 2 andares. Aberto em noites de show até as 03:30.' },
@@ -108,7 +108,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Capital cultural sámi: Sajos, Siida, o Lago Inari e a igreja selvagem de Pielpajärvi.',
     pageTagline: 'A capital cultural sámi.',
     intro: 'Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida, o museu que explica tudo que você não sabia sobre Sápmi. A "vida noturna" aqui é cultural: o festival de cinema indígena Skábmagovat em janeiro, o festival de música sámi Ijahis Idja em agosto e bares de hotel que fecham no máximo às 23:00. Não venha pelas baladas. Venha pela água gelada do lago, por concertos de joik e por um céu que fica preto às 14:00 em dezembro.',
-    metaDescription: 'A capital cultural sámi. Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida, o museu que explica tudo que você não sabia sobre Sápmi.',
+    metaDescription: 'Inari é a sede cultural do parlamento sámi (Sajos) e o lar do Siida, o museu que explica tudo que você não sabia sobre Sápmi.',
     venues: {
       'Hotel Inari Bar': { type: 'Bar de hotel', note: 'Lounge bar do Hotel Inari: aberto das 07 às 22, nos fins de semana a partir das 08.' },
       'Wilderness Hotel Inari': { type: 'Bar de hotel', note: 'Bar ao lado do restaurante Ukko: aberto das 09:00 às 22:30.' },
@@ -181,7 +181,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'A segunda estação de esqui da Finlândia em dias de esquiador, logo ao sul da Lapônia.',
     pageTagline: 'Estação de esqui no país dos ursos.',
     intro: 'Ruka é tecnicamente Kuusamo e tecnicamente não é Lapônia, mas os esquiadores não ligam; é uma das estações mais movimentadas da Finlândia, e a semana de abertura em novembro é a mais barulhenta. O Zone é o après central no pé das pistas, com Piste e Colorado Bar levando a noite adiante. Fora da temporada o vilarejo fica bem quieto; de novembro a abril funciona a plena carga.',
-    metaDescription: 'Estação de esqui no país dos ursos. Ruka é tecnicamente Kuusamo, não Lapônia, mas os esquiadores não ligam: é uma das estações mais movimentadas da Finlândia.',
+    metaDescription: 'Ruka é tecnicamente Kuusamo, não Lapônia, mas os esquiadores não ligam: é uma das estações mais movimentadas da Finlândia.',
     venues: {
       'Restaurant Zone': { type: 'Après-ski', note: 'No pé das pistas: shows ao vivo e a casa da festa de abertura da FIS.' },
       'Piste': { type: 'Après + bar', note: 'O bar do vilarejo que emenda o après com a madrugada.' },
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Ametista, montes e o esqui mais silencioso da Lapônia.',
     pageTagline: 'Os montes de ametista.',
     intro: 'Dois pequenos fells, a 35 km um do outro, dividem um parque nacional. Pyhä tem a área de esqui maior; Luosto tem a mina de ametista e a balada: o Karhu, no Lapland Hotels Luostotunturi, onde os bailes de primavera com bandas e artistas convidados vão até as 04:00. Em Pyhä, o bar que fecha mais tarde na lista da própria estação, o SportBar Pyhä, fecha à meia-noite. O "destino de esqui" mais tranquilo da Lapônia, e orgulhoso disso.',
-    metaDescription: 'Os montes de ametista. Dois pequenos montes, a 35 km um do outro, dividindo um parque nacional.',
+    metaDescription: 'Dois pequenos montes, a 35 km um do outro, dividindo um parque nacional.',
     venues: {
       'Nightclub Karhu': { type: 'Balada', note: 'A balada do Lapland Hotels Luostotunturi em Luosto: karaokê e bandas ao vivo, e na primavera bailes até as 04:00.' },
       "Santa's Hotel Aurora": { type: 'Bar de hotel', note: 'Bar do lobby do hotel em Luosto.' },
@@ -256,7 +256,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'Onde os locais realmente moram (Levi é quase só turista).',
     pageTagline: 'Onde os locais de Levi realmente moram.',
     intro: 'Kittilä é a sede do município: 6.500 habitantes, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km. A vida de bar é pequena e local: um bar de hotel e uns dois pubs de vilarejo, sem programação turística. A maioria dos visitantes passa direto. Se você quer uma noite tranquila de cidadezinha finlandesa sem os preços de resort de Levi, é aqui.',
-    metaDescription: 'Onde os locais de Levi realmente moram. Kittilä é a sede do município: 6.500 habitantes, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km.',
+    metaDescription: 'Kittilä é a sede do município: 6.500 habitantes, o aeroporto e as pessoas que fazem Levi funcionar, a 18 km.',
     venues: {
       'Hotel Kittilä Bar': { type: 'Bar de hotel', note: 'A opção confiável da cidade, mais calma e barata que Levi.' },
     },
@@ -278,7 +278,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'O lobby bar do Hotel Ivalo + o pub do Hotel Kultahippu.',
     pageTagline: 'O aeroporto mais ao norte, só bares de hotel.',
     intro: 'Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi. A cidade em si tem 4 mil pessoas. O Hotel Ivalo tem um lobby bar e o restaurante Lapin Yö. O Hotel Kultahippu tem o único pub de verdade da vila. Fora isso, bares de hotel e um quiosque de posto de gasolina que vende cerveja.',
-    metaDescription: 'O aeroporto mais ao norte, só bares de hotel. Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi.',
+    metaDescription: 'Ivalo é o aeroporto mais ao norte da Finlândia e a porta de entrada para Inari, Saariselkä e a Terra Natal Sámi.',
     venues: {
       'Hotel Kultahippu Pub': { type: 'Pub', note: 'Abre todo dia. O ponto local de pós-expediente.' },
       'Hotel Ivalo Lobby Bar': { type: 'Bar de hotel', note: 'Mais tranquilo, anexo ao restaurante.' },
@@ -324,7 +324,7 @@ const overlay: Record<string, CityOverlay> = {
     blurb: 'No meio do nada. A estação de esqui mais silenciosa da Finlândia.',
     pageTagline: 'No meio do nada.',
     intro: '3.300 habitantes e uma pista de esqui. O slogan da cidade é literalmente "In the Middle of Nowhere", e é dito como elogio. O horário mais tardio é o do Majan Pubi, do Ravintola Sallan Maja: sextas das 22 às 04, sábados das 22 às 02 e às vezes até as 04. Fora do inverno: silêncio. A bem-humorada campanha "Salla 2032" para os Jogos de Inverno colocou a cidade no mapa, mas a cena real não mudou. Não venha pelas baladas.',
-    metaDescription: 'No meio do nada. 3.300 habitantes e uma pista de esqui. A estação de esqui mais silenciosa da Finlândia.',
+    metaDescription: '3.300 habitantes e uma pista de esqui. A estação de esqui mais silenciosa da Finlândia.',
     venues: {
       'Ravintola Sallan Maja': { type: 'Restaurante + pub', note: 'O Majan Pubi tem karaokê e jogos de tabuleiro: aberto sex 22–04 e sáb 22–02 (às vezes até as 04), só maiores de 18 a partir das 22:00.' },
       'Salla Wilderness Park': { type: 'Espaço diurno', note: 'Almoço + café diurno para os visitantes do parque.' },
