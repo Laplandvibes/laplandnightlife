@@ -48,6 +48,16 @@ export default function AuroraBars() {
         accentVia="via-purple/25"
       />
 
+      {/* Appin revontuliyksikkö heti heron perään: nappi avaa appin revontulinäkymän (tämän yön todennäköisyys
+          tunneittain), sama herätys omaan puhelimeen kuin baarien herätyspalvelu. 🔴 Vesa 20.10.2026: "aivan liian
+          alhaalla" — herätyspalvelukortin perässä se oli 3,4 näytöllistä alhaalla puhelimella. Oma 5xl-palsta:
+          4xl:ssä (896 px) puhelin ja QR pinoutuivat (19.10.). */}
+      <section className="pt-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <AppPromoAurora placement="aurora_bars_intro" />
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {venues.map((v) => (
@@ -87,12 +97,6 @@ export default function AuroraBars() {
               </div>
             ))}
           </div>
-        </div>
-        {/* Herätyspalvelun kortin perään: sama herätys omaan puhelimeen. Appin revontuliyksikkö, jonka nappi avaa
-            appin revontulinäkymän (tämän yön todennäköisyys tunneittain). Oma 5xl-palsta: 4xl:ssä (896 px) kortti jäi
-            alle 900 px:n rajan, jolloin puhelin ja QR pinoutuivat ja tekstin alle jäi tyhjää (mitattu livenä 19.10.). */}
-        <div className="max-w-5xl mx-auto">
-          <AppPromoAurora placement="aurora_bars_plan" />
         </div>
       </section>
 
