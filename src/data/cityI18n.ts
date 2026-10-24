@@ -78,6 +78,42 @@ export function localizeCity(city: City, lang: Lang): City {
   };
 }
 
+/** Card/heading name: the overlay's localized name (fi "Kittilän kirkonkylä", ja "オウル") when the
+ *  English one does not work in the language. Pass the base or localized city (slug is the key). */
+export function localizedCityName(city: City, lang: Lang): string {
+  if (lang === 'en') return city.name;
+  return OVERLAYS[lang]?.[city.slug]?.name ?? city.name;
+}
+
+/** Visible label of a city tag. The tag itself stays English: it is a colour key (CityCard) and a
+ *  filter key (Cities stats, cityCrossLinks). Wording follows the home-page scene cards (copy.*.ts). */
+const TAG_LABEL: Record<City['tag'], Record<Exclude<Lang, 'en'>, string>> = {
+  'Real scene': {
+    fi: 'Oikea skene', sv: 'Äkta scen', de: 'Echte Szene', es: 'Escena real', fr: 'Scène réelle', it: 'Scena vera',
+    nl: 'Echte scene', 'pt-BR': 'Cena real', ja: '本物のシーン', ko: '진짜 씬', 'zh-CN': '真实夜生活',
+  },
+  'Ski resort': {
+    fi: 'Hiihtokeskus', sv: 'Skidort', de: 'Skigebiet', es: 'Estación de esquí', fr: 'Station de ski', it: 'Stazione sciistica',
+    nl: 'Skigebied', 'pt-BR': 'Estação de esqui', ja: 'スキーリゾート', ko: '스키 리조트', 'zh-CN': '滑雪胜地',
+  },
+  'Wilderness premium': {
+    fi: 'Erämaaluksus', sv: 'Vildmarkslyx', de: 'Wildnis-Luxus', es: 'Premium salvaje', fr: 'Luxe sauvage', it: 'Lusso selvaggio',
+    nl: 'Wildernisluxe', 'pt-BR': 'Premium selvagem', ja: 'ウィルダネス・プレミアム', ko: '와일더니스 프리미엄', 'zh-CN': '高端旷野体验',
+  },
+  'Cultural anchor': {
+    fi: 'Kulttuuriankkuri', sv: 'Kulturellt ankare', de: 'Kultureller Anker', es: 'Ancla cultural', fr: 'Ancre culturelle', it: 'Ancoraggio culturale',
+    nl: 'Cultureel anker', 'pt-BR': 'Âncora cultural', ja: '文化的拠点', ko: '문화의 닻', 'zh-CN': '文化地标',
+  },
+  'Small town': {
+    fi: 'Pieni paikkakunta', sv: 'Liten ort', de: 'Kleiner Ort', es: 'Pueblo pequeño', fr: 'Petite localité', it: 'Piccolo centro',
+    nl: 'Kleine plaats', 'pt-BR': 'Cidade pequena', ja: '小さな町', ko: '작은 마을', 'zh-CN': '小镇',
+  },
+};
+
+export function cityTagLabel(tag: City['tag'], lang: Lang): string {
+  return lang === 'en' ? tag : TAG_LABEL[tag]?.[lang] ?? tag;
+}
+
 /** <title> and meta description of a city page: the same fields, read the same way, as
  *  scripts/generate-prerender-meta.mjs reads them for the prerendered HTML, so Google, the share card and the
  *  browser tab show one text. The title takes the overlay's localized name (ja, zh-CN, Kittilä), which the

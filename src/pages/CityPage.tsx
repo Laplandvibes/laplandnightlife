@@ -8,7 +8,7 @@ import GygWidget from '../components/GygWidget';
 import VenueRating from '../components/VenueRating';
 import ImageMark, { photoAlt } from '../components/PhotoCredit';
 import { CITIES, CITY_BY_SLUG } from '../data/cities';
-import { cityMeta, localizeCity, localizeQuickFacts } from '../data/cityI18n';
+import { cityMeta, cityTagLabel, localizedCityName, localizeCity, localizeQuickFacts } from '../data/cityI18n';
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -153,7 +153,7 @@ export default function CityPage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${city.img})` }}
           role="img"
-          aria-label={photoAlt(city.img, `${city.name}: Lapland nightlife`)}
+          aria-label={photoAlt(city.img, `${city.name}: Lapland nightlife`, lang)}
         />
         {/* Left-weighted scrim darkens the upper-left headline zone over bright
             city photos; top fade + bottom fade keep the rest readable.
@@ -180,7 +180,7 @@ export default function CityPage() {
               pilli (5,06:1 aina, kuvasta riippumatta) — väri ja muoto pysyvät. */}
           <p className="text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">
             <span className="inline-block rounded-full border border-pink/45 bg-night px-3 py-1">
-              {city.tag} · {city.region}
+              {cityTagLabel(city.tag, lang)} · {city.region}
             </span>
           </p>
           <h1
@@ -431,10 +431,10 @@ export default function CityPage() {
                   <ImageMark src={cc.img} linked={false} />
                   <div className="relative p-4 min-h-[160px] flex flex-col justify-end">
                     <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
-                      {cc.tag}
+                      {cityTagLabel(cc.tag, lang)}
                     </p>
                     <h3 className="font-heading text-xl text-white tracking-wide mb-1" style={SHADOW}>
-                      {cc.name}
+                      {localizedCityName(cc, lang)}
                     </h3>
                     <p className="text-xs text-white/80 line-clamp-2" style={SHADOW}>{cc.blurb}</p>
                   </div>

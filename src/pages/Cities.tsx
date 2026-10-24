@@ -44,7 +44,7 @@ export default function Cities() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/images/hero/cities-rovaniemi-bridge.webp)' }}
           role="img"
-          aria-label={photoAlt('/images/hero/cities-rovaniemi-bridge.webp', `${c.heroH}: nightlife bars and clubs across Lapland and the North`)}
+          aria-label={photoAlt('/images/hero/cities-rovaniemi-bridge.webp', `${c.heroH}: nightlife bars and clubs across Lapland and the North`, lang)}
         />
         {/* 🔴 Ylikorjasin taman 9.9.: poistin opacity-30:n jolloin kuva tuli nakyviin
             mutta TEKSTI katosi (Vesa: "eihan tekstit erotu hero osiosta ollenkaan").

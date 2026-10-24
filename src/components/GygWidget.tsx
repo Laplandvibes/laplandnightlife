@@ -28,6 +28,14 @@ const SEE_ALL: Record<string, string> = {
 
 // Shown only when the embed is blocked (ad-block / tracking-protection) — turns
 // what was a bare empty box + link into an enticing image panel with a CTA.
+/** Näkymätön lähdemaininta ruudunlukijalle sivun kielellä (gate:a11y-nimet 24.10.2026). */
+const POWERED_BY: Record<string, string> = {
+  en: 'Powered by GetYourGuide', fi: 'Palvelun tarjoaa GetYourGuide', sv: 'Tillhandahålls av GetYourGuide',
+  de: 'Bereitgestellt von GetYourGuide', es: 'Ofrecido por GetYourGuide', fr: 'Proposé par GetYourGuide',
+  it: 'Offerto da GetYourGuide', nl: 'Aangeboden door GetYourGuide', 'pt-BR': 'Oferecido pela GetYourGuide',
+  ja: 'GetYourGuide提供', ko: 'GetYourGuide 제공', 'zh-CN': '由 GetYourGuide 提供',
+};
+
 const FALLBACK_LEAD: Record<string, string> = {
   en: 'Live prices and instant confirmation: open the bookable tours on GetYourGuide.',
   fi: 'Live-hinnat ja välitön vahvistus: avaa varattavat retket GetYourGuidessa.',
@@ -142,7 +150,7 @@ export default function GygWidget({
         data-gyg-partner-id="VRMKD7N"
         data-gyg-q={query}
       >
-        <span className="sr-only">Powered by GetYourGuide</span>
+        <span className="sr-only">{POWERED_BY[lang] ?? POWERED_BY.en}</span>
       </div>
 
       {blocked ? (

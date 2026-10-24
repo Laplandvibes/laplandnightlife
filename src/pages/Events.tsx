@@ -130,7 +130,7 @@ export default function Events() {
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ backgroundImage: `url(${img})` }}
                             role="img"
-                            aria-label={photoAlt(img, e.name)}
+                            aria-label={photoAlt(img, e.name, lang)}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-night-light/90 via-night-light/20 to-transparent" />
                           <ImageMark src={img} />

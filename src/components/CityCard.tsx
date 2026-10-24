@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import type { City } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { cityTagLabel, localizedCityName } from '../data/cityI18n';
+import type { Lang } from '../i18n/useLang';
 import ImageMark, { photoAlt } from './PhotoCredit';
 
 const tagColor: Record<City['tag'], string> = {
@@ -12,9 +14,25 @@ const tagColor: Record<City['tag'], string> = {
   'Small town': 'bg-white/10 text-white/70 border-white/20',
 };
 
+/** Varateksti kuvalle ilman krediittiä (esim. Pyhä & Luosto): sivun kielellä, ei englanniksi. */
+const FALLBACK_ALT: Record<Exclude<Lang, 'en'>, (n: string) => string> = {
+  fi: (n) => `${n}: baarit ja yökerhot Suomen Lapissa`,
+  sv: (n) => `${n}: barer och nattklubbar i finska Lappland`,
+  de: (n) => `${n}: Bars und Clubs in Finnisch-Lappland`,
+  es: (n) => `${n}: bares y discotecas en la Laponia finlandesa`,
+  fr: (n) => `${n}\u00a0: bars et boîtes de nuit en Laponie finlandaise`,
+  it: (n) => `${n}: bar e locali notturni nella Lapponia finlandese`,
+  nl: (n) => `${n}: bars en clubs in Fins Lapland`,
+  'pt-BR': (n) => `${n}: bares e baladas na Lapônia finlandesa`,
+  ja: (n) => `${n}のナイトライフ：フィンランド・ラップランドのバーとクラブ`,
+  ko: (n) => `${n} 나이트라이프: 핀란드 라플란드의 바와 클럽`,
+  'zh-CN': (n) => `${n}夜生活：芬兰拉普兰的酒吧和夜店`,
+};
+
 export default function CityCard({ city }: { city: City }) {
   const lang = useLang();
   const explore = COPY[lang].cities.explore;
+  const name = localizedCityName(city, lang);
   return (
     <Link
       to={`/city/${city.slug}`}
@@ -23,11 +41,11 @@ export default function CityCard({ city }: { city: City }) {
       <div className="aspect-[4/3] relative overflow-hidden">
         <img
           src={city.img}
-          alt={photoAlt(city.img, city.slug === 'ruka'
+          alt={photoAlt(city.img, lang !== 'en' ? FALLBACK_ALT[lang](name) : city.slug === 'ruka'
             ? `${city.name} nightlife: bars and clubs in Kuusamo, just south of the Lapland border`
             : city.slug === 'oulu'
               ? `${city.name} nightlife: bars and clubs in North Ostrobothnia, gateway to Lapland`
-              : `${city.name} nightlife: bars and clubs in Finnish Lapland`)}
+              : `${city.name} nightlife: bars and clubs in Finnish Lapland`, lang)}
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
@@ -36,12 +54,12 @@ export default function CityCard({ city }: { city: City }) {
         <ImageMark src={city.img} linked={false} />
         <div className="absolute top-4 left-4 flex flex-col gap-2">
           <span className={`text-[0.6rem] uppercase tracking-wider font-bold px-2.5 py-1 rounded-full border ${tagColor[city.tag]}`}>
-            {city.tag}
+            {cityTagLabel(city.tag, lang)}
           </span>
         </div>
         <div className="absolute bottom-4 left-4 right-4">
           <p className="text-[0.7rem] uppercase tracking-[0.2em] text-white/85 mb-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{city.region}</p>
-          <h3 className="font-heading text-2xl text-white tracking-wide leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{city.name}</h3>
+          <h3 className="font-heading text-2xl text-white tracking-wide leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">{name}</h3>
         </div>
       </div>
       <div className="p-5">

@@ -2,6 +2,7 @@ import type { LucideIcon } from 'lucide-react';
 import PageBreadcrumb from './PageBreadcrumb';
 import ImageMark, { photoAlt } from './PhotoCredit';
 import { creditFor } from '../data/photoCredits';
+import { useLang } from '../i18n/useLang';
 
 interface PillarHeroProps {
   icon: LucideIcon;
@@ -60,6 +61,7 @@ export default function PillarHero({
   imageAlt,
   wash,
 }: PillarHeroProps) {
+  const lang = useLang();
   return (
     <>
     <section className="relative min-h-[56vh] md:min-h-[62vh] pt-28 py-16 md:py-20 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden">
@@ -67,7 +69,7 @@ export default function PillarHero({
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bgImage})`, ...(creditFor(bgImage) ? {} : { filter: 'saturate(1.2)' }) }}
         role="img"
-        aria-label={imageAlt ?? photoAlt(bgImage, `${title}: Finnish Lapland nightlife`)}
+        aria-label={imageAlt ?? photoAlt(bgImage, `${title}: Finnish Lapland nightlife`, lang)}
       />
       {/* Full dark wash + center radial scrim so the centered text stays legible
           even over the brightest pillar images. Sits under the neon accents. */}

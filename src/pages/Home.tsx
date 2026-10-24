@@ -149,7 +149,7 @@ export default function Home() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${sc.img})` }}
                   role="img"
-                  aria-label={photoAlt(sc.img, sc.h)}
+                  aria-label={photoAlt(sc.img, sc.h, lang)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-4% via-night/55 via-[42%] to-transparent pointer-events-none" />
                 <ImageMark src={sc.img} linked={false} />

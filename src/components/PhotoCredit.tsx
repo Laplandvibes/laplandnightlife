@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { creditFor, photoKey, type PhotoCredit as Credit } from '../data/photoCredits';
+import { PHOTO_ALT_I18N } from '../data/photoAltI18n';
 import { useLang, type Lang } from '../i18n/useLang';
 import IllustrationMark from './IllustrationMark';
 
@@ -115,9 +116,16 @@ export default function ImageMark({ src, linked = true }: { src?: string | null;
   return <IllustrationMark />;
 }
 
-/** Totuudellinen kuvateksti: krediitin alt, tai annettu varateksti tekoälykuvitukselle. */
-export function photoAlt(src: string | null | undefined, fallback: string): string {
-  return creditFor(src)?.alt ?? fallback;
+/** 🔴 Avaimet normalisoidaan: version-images.mjs kirjoittaa `?v=`-version myös tämän taulun avaimiin. */
+const ALT_BY_KEY = Object.fromEntries(Object.entries(PHOTO_ALT_I18N).map(([k, v]) => [photoKey(k), v]));
+
+/** Totuudellinen kuvateksti: krediitin alt sivun kielellä (photoAltI18n.ts, englanti varalla),
+ *  tai annettu varateksti tekoälykuvitukselle. Ilman `lang`ia englanniksi. */
+export function photoAlt(src: string | null | undefined, fallback: string, lang?: Lang): string {
+  const c = creditFor(src);
+  if (!c) return fallback;
+  if (lang && lang !== 'en') return ALT_BY_KEY[photoKey(src)]?.[lang] ?? c.alt;
+  return c.alt;
 }
 
 /** Sivun lopun kuvaluettelo: tämän sivun valokuvat linkkeineen (tiedostosivu + lisenssi). */

@@ -78,7 +78,7 @@ export default function SummerNights() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${IMG.summerHero})` }}
             role="img"
-            aria-label={photoAlt(IMG.summerHero, 'Midnight sun over a Finnish Lapland summer night, open-air bars and festivals')}
+            aria-label={photoAlt(IMG.summerHero, 'Midnight sun over a Finnish Lapland summer night, open-air bars and festivals', lang)}
           />
           <ImageMark src={IMG.summerHero} />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-night to-transparent pointer-events-none" />
@@ -189,7 +189,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${s.img})` }}
                   role="img"
-                  aria-label={photoAlt(s.img, s.city)}
+                  aria-label={photoAlt(s.img, s.city, lang)}
                 />
                 <ImageMark src={s.img} linked={false} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent" />
@@ -233,7 +233,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${e.img})` }}
                   role="img"
-                  aria-label={photoAlt(e.img, e.h)}
+                  aria-label={photoAlt(e.img, e.h, lang)}
                 />
                 <ImageMark src={e.img} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent" />
@@ -277,7 +277,7 @@ export default function SummerNights() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
                   style={{ backgroundImage: `url(${l.img})` }}
                   role="img"
-                  aria-label={photoAlt(l.img, l.h)}
+                  aria-label={photoAlt(l.img, l.h, lang)}
                 />
                 <ImageMark src={l.img} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
