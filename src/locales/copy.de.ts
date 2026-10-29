@@ -76,7 +76,7 @@ const de = {
     },
     cities: {
       seoTitle: 'Alle 14 Städte: Nachtleben in Lappland & im Norden',
-      seoDesc: 'Vierzehn Orte, fünf Arten von Nacht: von Oulus Fußgängerzone am Rotuaari bis zu Sallas einziger Skipiste. Jeder Ort mit Nachtleben-Anspruch, ehrlich eingeordnet.',
+      seoDesc: "Vierzehn Orte, fünf Arten von Nacht: von Oulus Fußgängerzone am Rotuaari bis zu Sallas einziger Skipiste.",
       heroEyebrow: 'Reiseziele',
       heroH: 'Alle 14 Städte',
       heroBody: 'Von Oulus Fußgängerzone am Rotuaari bis zu Sallas 3 300 Einwohnern und einer Skipiste. Jeder Ort in und um Lappland mit Nachtleben-Anspruch, ehrlich eingeordnet.',
@@ -242,7 +242,7 @@ const de = {
     },
     tips: {
       seoTitle: 'Tipps & lokale Regeln für Lapplands Nächte',
-      seoDesc: 'Sieben Gewohnheiten, die Einheimische von Touristen unterscheiden: Ausschank höchstens bis 04:00 Uhr, die Taxinummer zum Speichern, das Salmiakki-Ritual und vier finnische Gesetze.',
+      seoDesc: "Sieben Tipps fürs Nachtleben: Ausschank höchstens bis 04:00 Uhr, Taxinummer, Salmiakki-Ritual und vier finnische Gesetze.",
       heroEyebrow: 'Redaktionelle Hinweise',
       heroTitle: 'Gut zu wissen vor dem Ausgehen.',
       heroSub: 'Die sieben Gewohnheiten, die Einheimische von Touristen unterscheiden, plus die vier Gesetze, die aus einem guten Abend ein Problem machen.',

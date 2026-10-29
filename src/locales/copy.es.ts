@@ -82,7 +82,7 @@ const es = {
   },
   cities: {
     seoTitle: 'Las 14 ciudades: la noche en Laponia y el norte',
-    seoDesc: 'Catorce localidades, cinco tipos de noche: de las calles peatonales de Rotuaari en Oulu a la única pista de esquí de Salla. Cada lugar con vida nocturna, clasificado con honestidad.',
+    seoDesc: "Catorce localidades, cinco tipos de noche: de las calles peatonales de Rotuaari en Oulu a la única pista de esquí de Salla.",
     heroEyebrow: 'Destinos',
     heroH: 'Las 14 ciudades',
     heroBody: 'De las calles peatonales de Rotuaari en Oulu a los 3.300 habitantes y la única pista de Salla. Cada localidad de Laponia y alrededores con vida nocturna, clasificada con honestidad.',
@@ -244,7 +244,7 @@ const es = {
   },
   tips: {
     seoTitle: 'Consejos y reglas locales para salir en Laponia',
-    seoDesc: 'Siete hábitos que distinguen a los residentes de los turistas: servicio hasta las 04:00 como mucho, el número de taxi para guardar, el ritual del salmiakki y cuatro leyes finlandesas.',
+    seoDesc: "Siete consejos para salir: servicio hasta las 04:00 como máximo, taxis, el ritual del salmiakki y cuatro leyes finlandesas.",
     heroEyebrow: 'Información editorial',
     heroTitle: 'Lo que conviene saber antes de salir.',
     heroSub: 'Los siete hábitos que separan a los locales de los turistas, más las cuatro leyes que convierten una buena noche en un problema.',

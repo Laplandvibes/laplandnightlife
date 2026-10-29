@@ -84,7 +84,7 @@ const fr = {
   cities: {
     ...en.cities,
     seoTitle: 'Les 14 villes : la nuit en Laponie et alentours',
-    seoDesc: "Quatorze villes, cinq façons de sortir : des rues piétonnes de Rotuaari, à Oulu, jusqu'à l'unique piste de Salla. Chaque lieu qui promet une vie nocturne, classé honnêtement.",
+    seoDesc: "Quatorze villes, cinq façons de sortir : des rues piétonnes de Rotuaari, à Oulu, jusqu'à l'unique piste de Salla.",
     heroEyebrow: 'Destinations',
     heroH: 'Les 14 villes',
     heroBody: "Des rues piétonnes de Rotuaari à Oulu jusqu'aux 3 300 habitants et à l'unique piste de Salla. Chaque ville de Laponie et des environs qui promet une vie nocturne, classée honnêtement.",
@@ -144,7 +144,7 @@ const fr = {
   events: {
     ...en.events,
     seoTitle: 'Calendrier des événements 2026–2027 : Laponie et le Nord',
-    seoDesc: "Mois par mois en 2026 et 2027 : Skábmagovat, Midnight Sun Film Festival, Qstock, mondiaux d'air guitar, week-ends de Coupe du monde FIS et où trouver les billets.",
+    seoDesc: "Mois par mois en 2026 et 2027 : Skábmagovat, Midnight Sun Film Festival, Qstock, mondiaux d'air guitar, week-ends de Coupe du monde FIS.",
     newYearLink: 'Guide du Nouvel An →',
     heroEyebrow: (n: string) => `${n} week-ends phares`,
     heroTitle: 'Calendrier des événements 2026–2027',
@@ -256,7 +256,7 @@ const fr = {
   tips: {
     ...en.tips,
     seoTitle: 'Conseils et règles locales pour sortir en Laponie',
-    seoDesc: "Sept habitudes qui distinguent les habitants des touristes : service jusqu'à 4 h au plus tard, le numéro de taxi à enregistrer, le rite du salmiakki et quatre lois finlandaises.",
+    seoDesc: "Sept conseils pour sortir : service jusqu’à 4 h au plus tard, taxis, rite du salmiakki et quatre lois finlandaises.",
     heroEyebrow: 'Le carnet de la rédac',
     heroTitle: 'Bon à savoir avant de sortir.',
     heroSub: 'Les sept habitudes qui séparent les locaux des touristes, plus les quatre lois qui transforment une bonne soirée en problème.',

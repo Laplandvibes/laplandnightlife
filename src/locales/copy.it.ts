@@ -84,7 +84,7 @@ const it = {
   cities: {
     ...en.cities,
     seoTitle: 'Le 14 città: vita notturna in Lapponia e dintorni',
-    seoDesc: "Quattordici località, cinque tipi di notte: dalle vie pedonali della Rotuaari, a Oulu, all'unica pista di Salla. Ogni posto che promette vita notturna, valutato con onestà.",
+    seoDesc: "Quattordici località, cinque tipi di notte: dalle vie pedonali della Rotuaari, a Oulu, all'unica pista di Salla.",
     heroEyebrow: 'Destinazioni',
     heroH: 'Tutte le 14 città',
     heroBody: "Dalle vie pedonali della Rotuaari a Oulu ai 3.300 abitanti e all'unica pista di Salla. Ogni località dentro e intorno alla Lapponia che promette vita notturna, valutata con onestà.",
@@ -256,7 +256,7 @@ const it = {
   tips: {
     ...en.tips,
     seoTitle: 'Consigli e regole locali per uscire in Lapponia',
-    seoDesc: 'Sette abitudini che distinguono i residenti dai turisti: mescita al massimo fino alle 04:00, il numero di taxi da salvare, il rito del salmiakki e quattro leggi finlandesi.',
+    seoDesc: "Sette consigli per uscire: mescita al massimo fino alle 04:00, taxi, rito del salmiakki e quattro leggi finlandesi.",
     heroEyebrow: 'Note di redazione',
     heroTitle: 'Da sapere prima di uscire.',
     heroSub: 'Le sette abitudini che separano i locali dai turisti, più le quattro leggi che trasformano una bella serata in un problema.',

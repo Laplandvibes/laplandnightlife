@@ -241,7 +241,7 @@ const en = {
     },
     tips: {
       seoTitle: 'Tips & Local Rules for a Lapland Night Out',
-      seoDesc: 'Seven habits that separate locals from tourists: serving until 04:00 at the latest, the taxi number to save, the salmiakki rite and four Finnish laws to know first.',
+      seoDesc: "Seven local nightlife tips: serving until 04:00 at the latest, the taxi number to save, the salmiakki rite and four Finnish laws.",
       heroEyebrow: 'Editorial intel',
       heroTitle: 'Know before you go.',
       heroSub: 'The seven habits that separate locals from tourists, plus the four laws that turn a good night into a problem.',

@@ -84,7 +84,7 @@ const nl = {
   cities: {
     ...en.cities,
     seoTitle: 'Alle 14 steden: nachtleven in Lapland en het noorden',
-    seoDesc: 'Veertien plaatsen, vijf soorten nacht: van de voetgangersstraten rond Rotuaari in Oulu tot de enige skipiste van Salla. Elke plek met nachtleven, eerlijk gerangschikt.',
+    seoDesc: "Veertien plaatsen, vijf soorten nacht: van de voetgangersstraten rond Rotuaari in Oulu tot de enige skipiste van Salla.",
     heroEyebrow: 'Bestemmingen',
     heroH: 'Alle 14 steden',
     heroBody: 'Van de voetgangersstraten rond Rotuaari in Oulu tot de 3.300 inwoners en de ene skipiste van Salla. Elke plaats in en rond Lapland met nachtleven, eerlijk gerangschikt.',

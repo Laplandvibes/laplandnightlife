@@ -78,7 +78,7 @@ const ptBR = {
   },
   cities: {
     seoTitle: 'As 14 cidades: a noite na Lapônia e arredores',
-    seoDesc: 'Catorze cidades, cinco tipos de noite: das ruas de pedestres do Rotuaari, em Oulu, à única pista de esqui de Salla. Cada lugar com vida noturna, avaliado com honestidade.',
+    seoDesc: "Catorze cidades, cinco tipos de noite: das ruas de pedestres do Rotuaari, em Oulu, à única pista de esqui de Salla.",
     heroEyebrow: 'Destinos',
     heroH: 'Todas as 14 cidades',
     heroBody: 'Das ruas de pedestres do Rotuaari, em Oulu, aos 3.300 habitantes e à única pista de Salla. Cada cidade na Lapônia e arredores com vida noturna, avaliada com honestidade.',

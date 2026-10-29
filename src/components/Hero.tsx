@@ -83,7 +83,7 @@ export default function Hero() {
         </p>
 
         <div
-          className="text-center text-xs text-white uppercase tracking-[0.22em] font-bold"
+          className="text-center text-sm text-white uppercase tracking-[0.22em] font-bold"
           style={SHADOW}
         >
           {c.meta(String(VENUE_COUNT))}
