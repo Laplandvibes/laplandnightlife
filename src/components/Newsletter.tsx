@@ -189,7 +189,7 @@ export default function Newsletter() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto">
           <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/85 font-semibold mb-3">
-            {c.pre && <>{c.pre} </>}<span className="font-heading tracking-wider">{c.brand}</span>{c.post}
+            {c.pre && <>{c.pre} </>}<span translate="no" className="notranslate font-heading tracking-wider">{c.brand}</span>{c.post}
           </p>
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white tracking-wide mb-4">
             {c.h}
