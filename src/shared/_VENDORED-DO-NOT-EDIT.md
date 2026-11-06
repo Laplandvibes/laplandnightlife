@@ -36,6 +36,11 @@ Only the files listed below are vendored, on purpose — this is a refresh, not 
 - appPromo/copy.ts
 - appPromo/screens.ts
 - appStats.ts
+- cjk/cjkJsxDevRuntime.ts
+- cjk/cjkJsxRuntime.ts
+- cjk/cjkOtsikotPlugin.ts
+- cjk/fraasit.ts
+- cjk/otsikko.ts
 - router/trailingSlashPlugin.ts
 - router/trailingSlashRouter.tsx
 
