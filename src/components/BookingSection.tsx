@@ -18,7 +18,7 @@ export default function BookingSection() {
         <div className="text-center mb-8">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.eyebrow}</p>
           <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.h}</h2>
-          <p className="text-white/85 max-w-xl mx-auto">
+          <p className="text-white/85 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
             {c.body}
           </p>
         </div>

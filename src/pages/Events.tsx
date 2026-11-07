@@ -104,7 +104,7 @@ export default function Events() {
                   <span className="h-px flex-1 bg-white/10" />
                 </div>
               )}
-              <div className="flex items-center gap-3 mb-5 border-b border-white/10 pb-3">
+              <div className="flex items-center justify-center gap-3 mb-5 border-b border-white/10 pb-3 lg:justify-start">
                 <h2 className="font-heading text-3xl text-white tracking-wide">{c.months[m.monthKey]}</h2>
                 <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">{m.year}</span>
               </div>
@@ -165,8 +165,8 @@ export default function Events() {
               päivä kerrotaan, jotta lukija tietää mihin vuodenaikaan tapahtuma osuu. */}
           {PENDING.length > 0 && (
             <div className="border-t border-white/10 pt-8">
-              <h2 className="font-heading text-2xl text-white tracking-wide mb-2">{c.pendingH}</h2>
-              <p className="text-sm text-white/70 leading-relaxed mb-5 max-w-3xl">{c.pendingBody}</p>
+              <h2 className="font-heading text-2xl text-white tracking-wide mb-2 text-center lg:text-left">{c.pendingH}</h2>
+              <p className="text-sm text-white/70 leading-relaxed mb-5 max-w-3xl mx-auto w-fit lg:mx-0 lg:w-auto">{c.pendingBody}</p>
               <ul className="grid sm:grid-cols-2 gap-3">
                 {PENDING.map((p) => {
                   const tx = p.t[lang];

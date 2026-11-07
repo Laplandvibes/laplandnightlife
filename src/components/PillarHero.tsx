@@ -125,13 +125,13 @@ export default function PillarHero({
           {title}
         </h1>
         <p
-          className="text-xl sm:text-2xl text-white italic mb-6 max-w-2xl mx-auto leading-tight font-medium"
+          className="text-xl sm:text-2xl text-white italic mb-6 max-w-2xl mx-auto max-lg:w-fit max-lg:text-left leading-tight font-medium"
           style={SHADOW}
         >
           {subtitle}
         </p>
         <p
-          className="text-white text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-medium"
+          className="text-white text-base sm:text-lg max-w-2xl mx-auto max-lg:w-fit max-lg:text-left leading-relaxed font-medium"
           style={SHADOW}
         >
           {intro}

@@ -124,7 +124,7 @@ export default function Home() {
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.tours.eyebrow}</p>
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.tours.h}</h2>
-            <p className="text-white/85 max-w-xl mx-auto">{c.tours.body}</p>
+            <p className="text-white/85 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">{c.tours.body}</p>
           </div>
           <GygWidget query="Rovaniemi nightlife aurora" seeAllPath="rovaniemi-l2653" campaign="home_tours_top" count={6} />
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
           <h2 className="font-heading text-4xl sm:text-5xl text-white mb-4 tracking-wide">
             {c.scenes.h}
           </h2>
-          <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-10 sm:mb-12">
+          <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto max-lg:w-fit max-lg:text-left mb-10 sm:mb-12">
             {c.scenes.body}
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -194,7 +194,7 @@ export default function Home() {
           <div className="text-center mb-10 sm:mb-12">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.cities.eyebrow}</p>
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.cities.h}</h2>
-            <p className="text-white/85 max-w-2xl mx-auto">{c.cities.body}</p>
+            <p className="text-white/85 max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">{c.cities.body}</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {homeCities.map((city) => <CityCard key={city.slug} city={city} />)}

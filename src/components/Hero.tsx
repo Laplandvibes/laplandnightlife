@@ -76,7 +76,7 @@ export default function Hero() {
         </p>
 
         <p
-          className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto mb-10 leading-relaxed font-medium"
+          className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto max-lg:w-fit max-lg:text-left mb-10 leading-relaxed font-medium"
           style={SHADOW}
         >
           {sub}

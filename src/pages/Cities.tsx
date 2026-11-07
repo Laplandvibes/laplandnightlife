@@ -60,7 +60,7 @@ export default function Cities() {
         <div className="relative max-w-5xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.heroEyebrow}</p>
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide mb-5">{c.heroH}</h1>
-          <p className="text-white/75 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white/75 text-lg max-w-2xl mx-auto max-lg:w-fit max-lg:text-left leading-relaxed">
             {c.heroBody}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function Cities() {
           3 300 shares a list with Oulu. Same block the prerender harvests. */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-5">{c.leadH}</h2>
+          <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-5 text-center lg:text-left">{c.leadH}</h2>
           <p className="text-white/75 leading-relaxed mb-4">{c.leadP1}</p>
           <p className="text-white/75 leading-relaxed mb-4">{c.leadP2}</p>
           <p className="text-white/75 leading-relaxed">{c.leadP3}</p>

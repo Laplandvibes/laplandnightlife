@@ -162,12 +162,12 @@ export default function CityPage() {
             otsikon kirkasta kuvaa vasten 59 kertaa rajan alle (pahin Ivalo 375 px
             1,90:1), tekstivarjosta huolimatta — varjo ei ole tausta. Puhelimessa
             teksti ulottuu oikeaan laitaan asti, joten siellä peite on tasaisempi. */}
-        <div className="absolute inset-0 bg-gradient-to-r from-night/82 via-night/66 via-55% to-night/50 sm:via-night/55 sm:via-45% sm:to-night/12 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-night/82 via-night/66 via-55% to-night/50 lg:via-night/55 lg:via-45% lg:to-night/12 pointer-events-none" />
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-night/35 to-transparent pointer-events-none" />
         <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-night via-night/55 to-transparent pointer-events-none" />
         <ImageMark src={city.img} />
 
-        <div className="relative w-full max-w-5xl mx-auto">
+        <div className="relative w-full max-w-5xl mx-auto text-center lg:text-left">
           <Link
             to={to('/cities')}
             className="lv-tap inline-flex items-center gap-2 text-white hover:text-pink mb-5 text-xs sm:text-sm uppercase tracking-wider font-bold"
@@ -190,7 +190,7 @@ export default function CityPage() {
             {city.name}
           </h1>
           <p
-            className="text-white italic text-xl sm:text-2xl md:text-3xl max-w-2xl leading-tight font-medium"
+            className="text-white italic text-xl sm:text-2xl md:text-3xl max-w-2xl mx-auto max-lg:w-fit max-lg:text-left lg:mx-0 leading-tight font-medium"
             style={SHADOW}
           >
             {city.pageTagline}
@@ -274,7 +274,7 @@ export default function CityPage() {
 
           <div className="order-2 lg:order-1 flex flex-col gap-12">
             <div>
-              <div className="mb-8">
+              <div className="mb-8 text-center lg:text-left">
                 <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.verifiedEyebrow}</p>
                 <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide">
                   {c.verifiedH(city.name)}
@@ -300,7 +300,7 @@ export default function CityPage() {
             </div>
 
             <div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center gap-3 mb-6 lg:justify-start">
                 <AlertTriangle className="text-neon-yellow" size={20} />
                 <h2 className="font-heading text-3xl text-white tracking-wide">{c.intel}</h2>
               </div>
