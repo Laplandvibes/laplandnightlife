@@ -4,6 +4,7 @@ import { VENUE_COUNT } from '../data/cities';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import ImageMark, { photoAlt } from './PhotoCredit';
+import { erotinOsat } from '../shared/Erotin';
 
 const SHADOW = {
   textShadow:
@@ -83,10 +84,10 @@ export default function Hero() {
         </p>
 
         <div
-          className="text-center text-sm text-white uppercase tracking-[0.22em] font-bold"
+          className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-center text-sm text-white uppercase tracking-[0.22em] font-bold"
           style={SHADOW}
         >
-          {c.meta(String(VENUE_COUNT))}
+          {erotinOsat(c.meta(String(VENUE_COUNT))).map((osa) => <span key={osa}>{osa}</span>)}
         </div>
       </div>
 

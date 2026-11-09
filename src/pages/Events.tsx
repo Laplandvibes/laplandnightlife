@@ -14,6 +14,7 @@ import {
   EVENTS, EVENT_COUNT, PENDING, todayLocalIso, pastFlags,
 } from '../data/events';
 import { formatDays, labelSep } from '../data/eventDates';
+import { Erotinrivi } from '../shared/Erotin';
 
 export default function Events() {
   const lang = useLang();
@@ -86,11 +87,11 @@ export default function Events() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-12">
           {next && (
-            <p className="text-sm text-white/70 max-lg:mx-auto max-lg:w-fit max-lg:text-left">
-              <span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mr-2">{c.nextUp}</span>
-              <span className="text-white font-semibold">{next.name}</span>
-              <span className="text-white/50"> · {next.date} · {next.city}</span>
-            </p>
+            <Erotinrivi className="text-sm text-white/70 max-lg:mx-auto max-lg:w-fit max-lg:text-left" osat={[
+              <><span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mr-2">{c.nextUp}</span><span className="text-white font-semibold">{next.name}</span></>,
+              <span className="text-white/50">{next.date}</span>,
+              <span className="text-white/50">{next.city}</span>,
+            ]} />
           )}
 
           {ordered.map(({ m, mi }, oi) => (
@@ -140,12 +141,11 @@ export default function Events() {
                       )}
                       <div className="p-5">
                       <p className={`text-[0.65rem] uppercase tracking-[0.18em] font-bold mb-1 ${isPast ? 'text-white/45' : 'text-pink'}`}>
-                        {e.date} · {e.city}
-                        {isPast && (
+                        <Erotinrivi as="span" osat={[e.date, <>{e.city}{isPast && (
                           <span className="ml-2 border border-white/20 rounded px-1.5 py-0.5 text-white/55 tracking-normal">
                             {c.pastLabel}
                           </span>
-                        )}
+                        )}</>]} />
                       </p>
                       <h3 className={`font-heading text-xl tracking-wide mb-2 ${isPast ? 'text-white/70' : 'text-white'}`}>{e.name}</h3>
                       <p className={`text-sm leading-relaxed ${isPast ? 'text-white/50' : 'text-white/70'}`}>{e.body}</p>
@@ -175,7 +175,7 @@ export default function Events() {
                   return (
                     <li key={p.id} className="bg-night-light/30 border border-white/10 rounded-xl px-5 py-4">
                       <p className="font-heading text-lg text-white tracking-wide">{tx.name}</p>
-                      <p className="text-sm text-white/70">{tx.city} · {c.lastEdition}{labelSep(lang)}{formatDays(lang, p.lastStart, p.lastEnd)}</p>
+                      <Erotinrivi className="text-sm text-white/70" osat={[tx.city, <>{c.lastEdition}{labelSep(lang)}{formatDays(lang, p.lastStart, p.lastEnd)}</>]} />
                     </li>
                   );
                 })}

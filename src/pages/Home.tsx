@@ -24,6 +24,7 @@ import { COPY } from '../locales/copy';
 
 import { AppPromoHero } from '../components/AppPromo';
 import ImageMark, { photoAlt } from '../components/PhotoCredit';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 // Text-shadow for copy that sits over a photo (same recipe as PrimeTime).
 const OVERLAY_SHADOW = { textShadow: '0 2px 4px rgba(0,0,0,0.85), 0 4px 10px rgba(0,0,0,0.7)' };
@@ -122,7 +123,7 @@ export default function Home() {
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.tours.eyebrow}</p>
+            <Erotinrivi pino className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3" osat={erotinOsat(c.tours.eyebrow)} />
             <h2 className="font-heading text-4xl sm:text-5xl text-white tracking-wide mb-3">{c.tours.h}</h2>
             <p className="text-white/85 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">{c.tours.body}</p>
           </div>
@@ -158,7 +159,7 @@ export default function Home() {
                       kolmessa kortissa 1,0–1,1:1:een pahimmillaan (korttiteksti-portti).
                       Umpinainen yö takana: pinkki 5,1:1, violetti 6,6:1, sininen ja keltainen yli. */}
                   <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ color: sc.accent }}>
-                    <span className="inline-block rounded-full border border-white/15 bg-night px-2.5 py-0.5">{sc.tag}</span>
+                    <span className="inline-block rounded-full border border-white/15 bg-night px-2.5 py-0.5"><Erotinrivi as="span" osat={erotinOsat(sc.tag)} /></span>
                   </p>
                   {/* Tasakorkeat lohkot: eri pituinen copy siirsi tekstin alun eri
                       korkeudelle joka kortissa (Vesa 9.9.). */}

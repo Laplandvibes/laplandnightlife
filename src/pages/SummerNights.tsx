@@ -9,6 +9,7 @@ import { IMG } from '../data/images';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { eventWhen } from '../data/events';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 const SHADOW = {
   textShadow:
@@ -137,7 +138,7 @@ export default function SummerNights() {
                 <p className="font-heading text-4xl sm:text-5xl text-neon-yellow tracking-wide leading-none mb-2 drop-shadow-[0_0_24px_rgba(250,204,21,0.5)]">
                   {s.v}
                 </p>
-                <p className="text-xs sm:text-sm text-white/75 leading-snug">{s.l}</p>
+                <p className="text-xs sm:text-sm text-white/75 leading-snug">{erotinOsat(s.l).map((osa) => <span key={osa} className="block">{osa}</span>)}</p>
               </div>
             ))}
           </div>
@@ -248,7 +249,7 @@ export default function SummerNights() {
                     </span>
                   </div>
                   <div className="mt-auto">
-                    <p className="text-[0.65rem] uppercase tracking-[0.2em] text-neon-yellow font-bold mb-2" style={SHADOW}>{e.when}</p>
+                    <Erotinrivi className="text-[0.65rem] uppercase tracking-[0.2em] text-neon-yellow font-bold mb-2" style={SHADOW} osat={erotinOsat(e.when)} />
                     <h3 className="font-heading text-xl text-white tracking-wide mb-2 leading-tight" style={SHADOW}>{e.h}</h3>
                     <p className="text-xs sm:text-sm text-white/85 leading-relaxed line-clamp-3" style={SHADOW}>{e.body}</p>
                   </div>

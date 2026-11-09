@@ -12,6 +12,7 @@ import { cityMeta, cityTagLabel, localizedCityName, localizeCity, localizeQuickF
 import { getCrossLinks, NEARBY } from '../data/cityCrossLinks';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 const SHADOW = {
   textShadow:
@@ -180,7 +181,7 @@ export default function CityPage() {
               pilli (5,06:1 aina, kuvasta riippumatta) — väri ja muoto pysyvät. */}
           <p className="text-[0.7rem] sm:text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">
             <span className="inline-block rounded-full border border-pink/45 bg-night px-3 py-1">
-              {cityTagLabel(city.tag, lang)} · {city.region}
+              <Erotinrivi as="span" osat={[cityTagLabel(city.tag, lang), city.region]} />
             </span>
           </p>
           <h1
@@ -211,9 +212,7 @@ export default function CityPage() {
                 <p className="text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mb-1">
                   {f.label}
                 </p>
-                <p className="font-heading text-base sm:text-lg text-white tracking-wide leading-tight">
-                  {f.value}
-                </p>
+                <Erotinrivi className="font-heading text-base sm:text-lg text-white tracking-wide leading-tight" osat={erotinOsat(f.value)} />
               </div>
             ))}
           </div>

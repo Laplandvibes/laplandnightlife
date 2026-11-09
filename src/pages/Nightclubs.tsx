@@ -8,6 +8,7 @@ import { VENUE_COUNT } from '../data/cities';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { UPLIFT, type OpenKey } from '../locales/upliftI18n';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 // Opening-hours values live in upliftI18n (were hardcoded EN — leaked on 11 locales).
 const top: { name: string; city: string; cap: string; openKey: OpenKey }[] = [
@@ -93,7 +94,7 @@ export default function Nightclubs() {
               <div className={`absolute inset-0 bg-gradient-to-br ${t.accent} opacity-90`} />
               <div className="absolute inset-0 bg-gradient-to-t from-night-light to-transparent" />
               <div className="relative p-6">
-                <p className="text-[0.65rem] uppercase tracking-[0.2em] text-pink font-bold mb-2">{t.where}</p>
+                <Erotinrivi className="text-[0.65rem] uppercase tracking-[0.2em] text-pink font-bold mb-2" osat={erotinOsat(t.where)} />
                 <h2 className="font-heading text-2xl text-white tracking-wide mb-2">{t.h}</h2>
                 <p className="text-sm text-white/80 leading-relaxed">{t.body}</p>
               </div>

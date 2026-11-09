@@ -3,6 +3,7 @@ import PageBreadcrumb from './PageBreadcrumb';
 import ImageMark, { photoAlt } from './PhotoCredit';
 import { creditFor } from '../data/photoCredits';
 import { useLang } from '../i18n/useLang';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 interface PillarHeroProps {
   icon: LucideIcon;
@@ -116,7 +117,7 @@ export default function PillarHero({
       <div className="relative w-full max-w-4xl lg:max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 backdrop-blur-md rounded-full px-4 py-1.5 mb-6">
           <Icon size={14} className={iconColor} />
-          <span className="text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW}>{eyebrow}</span>
+          <Erotinrivi as="span" className="min-w-0 text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW} osat={erotinOsat(eyebrow)} />
         </div>
         <h1
           className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-7xl text-white tracking-wide leading-[0.95] mb-5 break-words hyphens-auto md:hyphens-none text-balance"
