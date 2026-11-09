@@ -358,7 +358,7 @@ export default function CityPage() {
               <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
                 {c.sisterH(city.name)}
               </h2>
-              <p className="text-white/80 max-w-xl mx-auto">
+              <p className="text-white/80 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
                 {c.sisterBody}
               </p>
             </div>
@@ -449,7 +449,7 @@ export default function CityPage() {
         <div className="max-w-3xl mx-auto text-center">
           <MapPin className="text-pink mx-auto mb-3" size={26} />
           <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.stayH(city.name)}</h2>
-          <p className="text-white/65 mb-6 max-w-xl mx-auto">
+          <p className="text-white/65 mb-6 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
             {c.stayBody}
           </p>
           <AffiliateCTA

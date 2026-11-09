@@ -51,7 +51,8 @@ export default function Tips() {
               {c.sevenH}
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Kahdessa sarakkeessa (640–1023 px) pariton viimeinen kortti keskelle muiden levyisenä (9.11.2026). */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_8px)]">
             {tips.map((t) => (
               <Link
                 key={t.h}

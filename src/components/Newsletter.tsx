@@ -310,7 +310,7 @@ export default function Newsletter() {
             </div>
           )}
 
-          <p className="text-white/90 text-sm mt-5">
+          <p className="text-white/90 text-sm mt-5 max-lg:mx-auto max-lg:w-fit max-lg:text-left">
             {c.footer}
           </p>
         </div>

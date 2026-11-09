@@ -137,7 +137,7 @@ export default function Nightclubs() {
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
-            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
+            <p className="text-white/80 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">{c.gygBody}</p>
           </div>
           <GygWidget query="Rovaniemi Levi tours nightlife" seeAllPath="lapland-finland-l2652" campaign="nightclubs_pillar" count={6} />
         </div>
@@ -146,7 +146,7 @@ export default function Nightclubs() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
-          <p className="text-white/65 mb-6">{c.ctaBody}</p>
+          <p className="text-white/65 mb-6 max-lg:mx-auto max-lg:w-fit max-lg:text-left">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="nightclubs_cta" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}
           </AffiliateCTA>

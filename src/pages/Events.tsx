@@ -86,7 +86,7 @@ export default function Events() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-12">
           {next && (
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-white/70 max-lg:mx-auto max-lg:w-fit max-lg:text-left">
               <span className="text-[0.65rem] uppercase tracking-[0.18em] text-pink font-bold mr-2">{c.nextUp}</span>
               <span className="text-white font-semibold">{next.name}</span>
               <span className="text-white/50"> · {next.date} · {next.city}</span>
@@ -108,7 +108,9 @@ export default function Events() {
                 <h2 className="font-heading text-3xl text-white tracking-wide">{c.months[m.monthKey]}</h2>
                 <span className="text-xs uppercase tracking-wider text-pink/70 font-semibold">{m.year}</span>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              {/* Kahdessa sarakkeessa (640–1023 px) pariton viimeinen kortti keskelle muiden levyisenä, ei venytetä
+                  (gate:tabletti laaja 9.11.2026). Työpöytä ennallaan. */}
+              <div className="grid sm:grid-cols-2 gap-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_8px)]">
                 {m.items.map((e, ii) => {
                   const isPast = past[mi]?.[ii] ?? false;
                   /* Kuva haetaan tapahtuman tunnisteella, joka ei käänny: 12 kieltä
@@ -207,7 +209,7 @@ export default function Events() {
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
-            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
+            <p className="text-white/80 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">{c.gygBody}</p>
           </div>
           <GygWidget query="Lapland festivals tours" seeAllPath="lapland-finland-l2652" campaign="events_pillar" count={6} />
         </div>
@@ -216,7 +218,7 @@ export default function Events() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
-          <p className="text-white/65 mb-6">{c.ctaBody}</p>
+          <p className="text-white/65 mb-6 max-lg:mx-auto max-lg:w-fit max-lg:text-left">{c.ctaBody}</p>
           <AffiliateCTA partner="hotels" sid="events_cta" destination="Lapland" className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
             {c.ctaBtn}
           </AffiliateCTA>

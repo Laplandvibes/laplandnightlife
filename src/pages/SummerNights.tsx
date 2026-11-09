@@ -104,7 +104,7 @@ export default function SummerNights() {
             <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white tracking-wide leading-[0.95] mb-6">
               {c.h1}
             </h1>
-            <p className="text-white/90 text-lg sm:text-xl md:text-2xl leading-snug font-light max-w-2xl mx-auto">
+            <p className="text-white/90 text-lg sm:text-xl md:text-2xl leading-snug font-light max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">
               {c.sub}
             </p>
           </div>
@@ -219,7 +219,7 @@ export default function SummerNights() {
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white tracking-wide">
               {c.evH}
             </h2>
-            <p className="text-white/65 max-w-2xl mx-auto mt-3">
+            <p className="text-white/65 max-w-2xl mx-auto mt-3 max-lg:w-fit max-lg:text-left">
               {c.evBody}
             </p>
           </div>
@@ -267,7 +267,8 @@ export default function SummerNights() {
               {c.localH}
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Kahdessa sarakkeessa (640–1023 px) pariton viimeinen kortti keskelle muiden levyisenä (9.11.2026). */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_8px)]">
             {localList.map((l, i) => (
               <article
                 key={l.h}
@@ -305,7 +306,7 @@ export default function SummerNights() {
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
               {c.gygH}
             </h2>
-            <p className="text-white/65 max-w-xl mx-auto">
+            <p className="text-white/65 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
               {c.gygBody}
             </p>
           </div>

@@ -82,9 +82,10 @@ export default function NewYear() {
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.fwEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-3">{c.fwH}</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">{c.fwBody}</p>
+            <p className="text-white/80 max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">{c.fwBody}</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Kahdessa sarakkeessa (640–1023 px) pariton viimeinen kortti keskelle muiden levyisenä (9.11.2026). */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_8px)]">
             {towns.map((t) => (
               <article key={t.id} className="flex flex-col bg-night-light/40 border border-white/10 rounded-xl p-5">
                 <div className="flex items-start justify-between gap-3 mb-2">
@@ -115,7 +116,7 @@ export default function NewYear() {
           <div className="text-center mb-10">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.barsEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-3">{c.barsH}</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">{c.barsBody}</p>
+            <p className="text-white/80 max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">{c.barsBody}</p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             {c.bars.map((b) => (
@@ -137,7 +138,7 @@ export default function NewYear() {
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.darkEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-3">{c.darkH}</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">{c.darkBody}</p>
+            <p className="text-white/80 max-w-2xl mx-auto max-lg:w-fit max-lg:text-left">{c.darkBody}</p>
           </div>
           <div className="overflow-x-auto rounded-xl border border-white/10">
             <table className="w-full text-sm text-left">
@@ -206,7 +207,9 @@ export default function NewYear() {
       <section className="py-14 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8">
           <div>
-            <h2 className="font-heading text-3xl text-white tracking-wide mb-5 flex items-center gap-3">
+            {/* Alle 1024 px palstat ovat päällekkäin: kuvake otsikon yllä ja otsikko keskelle (rivittyvä otsikko jäi
+                kuvakkeen viereen vasemmalle, 9.11.2026). */}
+            <h2 className="font-heading text-3xl text-white tracking-wide mb-5 flex flex-col items-center gap-2 text-center lg:flex-row lg:gap-3 lg:text-left">
               <Store size={22} className="text-pink shrink-0" aria-hidden="true" />
               {c.openH}
             </h2>
@@ -220,7 +223,7 @@ export default function NewYear() {
             </ul>
           </div>
           <div>
-            <h2 className="font-heading text-3xl text-white tracking-wide mb-5 flex items-center gap-3">
+            <h2 className="font-heading text-3xl text-white tracking-wide mb-5 flex flex-col items-center gap-2 text-center lg:flex-row lg:gap-3 lg:text-left">
               <Car size={22} className="text-pink shrink-0" aria-hidden="true" />
               {c.homeH}
             </h2>
@@ -259,7 +262,7 @@ export default function NewYear() {
           <div className="text-center mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-pink font-bold mb-3">{c.gygEyebrow}</p>
             <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">{c.gygH}</h2>
-            <p className="text-white/80 max-w-xl mx-auto">{c.gygBody}</p>
+            <p className="text-white/80 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">{c.gygBody}</p>
           </div>
           <GygWidget query="Rovaniemi New Year" seeAllPath="rovaniemi-l2653" campaign="newyear_pillar" count={6} fallbackImage={IMG.eventNewYear} />
         </div>
@@ -268,12 +271,13 @@ export default function NewYear() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-3xl text-white tracking-wide mb-3">{c.ctaH}</h2>
-          <p className="text-white/80 mb-6">{c.ctaBody}</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <AffiliateCTA partner="hotels" sid="newyear_rovaniemi" destination="Rovaniemi" className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-7 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
+          <p className="text-white/80 mb-6 max-lg:mx-auto max-lg:w-fit max-lg:text-left">{c.ctaBody}</p>
+          {/* Puhelimella (alle 640 px) napit pinossa saman levyisinä (9.11.2026). */}
+          <div className="flex flex-col items-stretch gap-3 max-w-sm mx-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
+            <AffiliateCTA partner="hotels" sid="newyear_rovaniemi" destination="Rovaniemi" className="inline-flex items-center justify-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-7 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
               {c.ctaRov}
             </AffiliateCTA>
-            <AffiliateCTA partner="hotels" sid="newyear_levi" destination="Levi" className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-7 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
+            <AffiliateCTA partner="hotels" sid="newyear_levi" destination="Levi" className="inline-flex items-center justify-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-7 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5">
               {c.ctaLevi}
             </AffiliateCTA>
           </div>
