@@ -53,7 +53,7 @@ const overlay: Record<string, CityOverlay> = {
       'Population': { label: '人口', value: '6.4 万' },
       'Closest airport': { label: '最近机场', value: 'RVN · 10 分钟' },
       'Last call': { label: '最后点单', value: '04:00（Roy Club）' },
-      'Best season': { label: '最佳季节', value: '9 月–3 月（极光）· 12 月（圣诞老人）' },
+      'Best season': { label: '最佳季节', value: '9 月–3 月（极光） · 12 月（圣诞老人）' },
     },
   },
   levi: {
@@ -130,7 +130,7 @@ const overlay: Record<string, CityOverlay> = {
       'Population': { label: '人口', value: '6 800' },
       'Closest airport': { label: '最近机场', value: 'IVL · 40 分钟' },
       'Last call': { label: '最后点单', value: '23:00（Aanaar）' },
-      'Best season': { label: '最佳季节', value: '8 月中旬（Ijahis Idja）· 1 月（Skábmagovat）' },
+      'Best season': { label: '最佳季节', value: '8 月中旬（Ijahis Idja） · 1 月（Skábmagovat）' },
     },
   },
   kemi: {
@@ -180,7 +180,7 @@ const overlay: Record<string, CityOverlay> = {
       'Beds in resort': { label: '度假区床位', value: '2.3 万' },
       'Closest airport': { label: '最近机场', value: 'KTT · 50 分钟' },
       'Last call': { label: '最后点单', value: '02:00' },
-      'Best season': { label: '最佳季节', value: '11 月–4 月（滑雪）· 3 月（日照更长）' },
+      'Best season': { label: '最佳季节', value: '11 月–4 月（滑雪） · 3 月（日照更长）' },
     },
   },
   ruka: {
@@ -207,7 +207,7 @@ const overlay: Record<string, CityOverlay> = {
       'Beds in resort': { label: '度假区床位', value: '1.5 万' },
       'Closest airport': { label: '最近机场', value: 'KAO · 30 分钟' },
       'Last call': { label: '最后点单', value: '03:00（旺季）' },
-      'Best season': { label: '最佳季节', value: '11 月下旬（FIS 开幕）· 12 月–4 月' },
+      'Best season': { label: '最佳季节', value: '11 月下旬（FIS 开幕） · 12 月–4 月' },
     },
   },
   'pyha-luosto': {
@@ -232,7 +232,7 @@ const overlay: Record<string, CityOverlay> = {
       'Beds in two villages': { label: '两村床位', value: '5 000' },
       'Closest airport': { label: '最近机场', value: 'RVN · 1 小时 30 分 · 或 KTT · 2 小时 30 分' },
       'Last call': { label: '最后点单', value: '04:00（Karhu，春季）' },
-      'Best season': { label: '最佳季节', value: '12 月–4 月（滑雪）· 9 月–3 月（极光）' },
+      'Best season': { label: '最佳季节', value: '12 月–4 月（滑雪） · 9 月–3 月（极光）' },
     },
   },
   sodankyla: {
@@ -304,7 +304,7 @@ const overlay: Record<string, CityOverlay> = {
       'Population': { label: '人口', value: '4 000' },
       'Closest airport': { label: '最近机场', value: 'IVL · 5 分钟' },
       'Last call': { label: '最后点单', value: '02:00 / 周末 03:00' },
-      'Best season': { label: '最佳季节', value: '9 月–3 月（极光）· 8 月（音乐节）' },
+      'Best season': { label: '最佳季节', value: '9 月–3 月（极光） · 8 月（音乐节）' },
     },
   },
   muonio: {
