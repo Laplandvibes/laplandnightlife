@@ -83,8 +83,10 @@ export default function Hero() {
           {sub}
         </p>
 
+        {/* Tumma läpikuultava pohja: rivin osat ovat omia elementtejään (välipiste 9.11.2026), ja korttiteksti-portti
+            mittaa jokaisen erikseen ⇒ neonkuvan kirkkaimman kohdan päällä "tapahtumakalenteri" oli 2,08:1 (1440 px). */}
         <div
-          className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-center text-sm text-white uppercase tracking-[0.22em] font-bold"
+          className="mx-auto flex w-fit max-w-full flex-wrap justify-center gap-x-5 gap-y-1 rounded-2xl bg-deep-night/70 px-4 py-2 text-center text-sm text-white uppercase tracking-[0.22em] font-bold backdrop-blur-sm"
           style={SHADOW}
         >
           {erotinOsat(c.meta(String(VENUE_COUNT))).map((osa) => <span key={osa}>{osa}</span>)}
