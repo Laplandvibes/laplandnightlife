@@ -1,9 +1,9 @@
 {
-  "version": "e233f03a",
+  "version": "369c8d02",
   "domain": "laplandnightlife.com",
   "brand": "NIGHTLIFE",
   "tagline": "Where Finland's North goes out",
-  "generated": "2026-10-08T13:16:21.512Z",
+  "generated": "2026-11-12T10:36:49.223Z",
   "staticFallbackSeason": "winter",
   "seasons": {
     "summer": {
@@ -11,18 +11,20 @@
       "heroUrl": "https://laplandnightlife.com/images/drive/summerJuhannus.webp",
       "heroAlt": "A Midsummer bonfire burning by lake Kilpisjärvi, fells across the water",
       "heroSha": "44aeef9a67c20aed",
-      "bytes": 205687,
-      "sha256": "b13612aa5923d6b6f8a90a53a75989d2d596cd7f979d734e76961c09579fe6d3",
+      "bytes": 203359,
+      "sha256": "1efde1a5c85e25addf124a94fbc73365275156e992ad1bda5543d6e88973390e",
       "bandH": 168,
       "photoPct": 73.3,
-      "ink": 17931,
+      "ink": 17977,
       "inkBox": [
         363,
-        493,
+        26,
         834,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,
@@ -37,7 +39,7 @@
         "size": 74,
         "lines": 1,
         "ts": 30,
-        "tagW": 420,
+        "tagW": 437,
         "fits": true,
         "bandH": 168
       },
@@ -50,18 +52,20 @@
       "heroUrl": "https://laplandnightlife.com/images/card/city-oulu.webp",
       "heroAlt": "Christmas lights over the Rotuaari pedestrian street in Oulu on a December night",
       "heroSha": "02ab5569e6ee698a",
-      "bytes": 186771,
-      "sha256": "25abff0436e40e73420d34e727c3b9c5cc76db0405d62ece21b52e9dbefeabef",
+      "bytes": 183974,
+      "sha256": "c93788b3ef4f9eba919d2804743871ef98a63af9c0f2a3ffc3ec6ba39db44bb3",
       "bandH": 168,
       "photoPct": 73.3,
-      "ink": 17931,
+      "ink": 17977,
       "inkBox": [
         363,
-        493,
+        26,
         834,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,
@@ -76,7 +80,7 @@
         "size": 74,
         "lines": 1,
         "ts": 30,
-        "tagW": 420,
+        "tagW": 437,
         "fits": true,
         "bandH": 168
       },
