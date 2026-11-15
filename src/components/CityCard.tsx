@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { City } from '../data/cities';
-import { useLang } from '../i18n/useLang';
+import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { cityTagLabel, localizedCityName } from '../data/cityI18n';
 import type { Lang } from '../i18n/useLang';
@@ -31,11 +31,13 @@ const FALLBACK_ALT: Record<Exclude<Lang, 'en'>, (n: string) => string> = {
 
 export default function CityCard({ city }: { city: City }) {
   const lang = useLang();
+  // Kortti näkyy etusivulla ja /cities-sivulla: kaupunkisivu sivun omalla kielellä (/ja/city/oulu), ei englanniksi.
+  const to = useLocalePath();
   const explore = COPY[lang].cities.explore;
   const name = localizedCityName(city, lang);
   return (
     <Link
-      to={`/city/${city.slug}`}
+      to={to(`/city/${city.slug}`)}
       className="group relative block overflow-hidden rounded-2xl bg-night-light border border-white/10 hover:border-pink/40 transition-all duration-300 hover:-translate-y-1"
     >
       <div className="aspect-[4/3] relative overflow-hidden">
