@@ -7,11 +7,11 @@ import type { Lang } from '../i18n/useLang';
 import ImageMark, { photoAlt } from './PhotoCredit';
 
 const tagColor: Record<City['tag'], string> = {
-  'Real scene': 'bg-pink/15 text-pink border-pink/30',
-  'Ski resort': 'bg-aurora-blue/15 text-aurora-blue border-aurora-blue/30',
-  'Wilderness premium': 'bg-purple/15 text-purple-light border-purple/30',
-  'Cultural anchor': 'bg-neon-yellow/15 text-neon-yellow border-neon-yellow/30',
-  'Small town': 'bg-white/10 text-white/70 border-white/20',
+  'Real scene': 'bg-[rgba(15,23,42,0.82)] text-white border-white/20',
+  'Ski resort': 'bg-[rgba(15,23,42,0.82)] text-white border-white/20',
+  'Wilderness premium': 'bg-[rgba(15,23,42,0.82)] text-white border-white/20',
+  'Cultural anchor': 'bg-[rgba(15,23,42,0.82)] text-white border-white/20',
+  'Small town': 'bg-[rgba(15,23,42,0.82)] text-white border-white/20',
 };
 
 /** Varateksti kuvalle ilman krediittiä (esim. Pyhä & Luosto): sivun kielellä, ei englanniksi. */

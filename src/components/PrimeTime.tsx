@@ -45,7 +45,7 @@ export default function PrimeTime() {
             <Link
               key={card.id}
               to={to('/events')}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)] flex flex-col"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] flex flex-col"
             >
               {eventImage(card.id) ? (
                 <div

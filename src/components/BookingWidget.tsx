@@ -146,7 +146,7 @@ export default function BookingWidget() {
         const el = e.target as HTMLInputElement;
         track('booking_blocked', { ...funnelData, tab, reason: el.type === 'date' ? 'dates' : 'field' });
       }}
-      className="bg-night/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_20px_60px_-20px_rgba(124,58,237,0.4)] overflow-hidden w-full"
+      className="bg-night/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] overflow-hidden w-full"
     >
       <div className="flex border-b border-white/10">
         <button type="button" onClick={() => setTab('hotels')} className={tabBtn(tab === 'hotels')}>
@@ -264,7 +264,7 @@ export default function BookingWidget() {
 
         <button
           type="submit"
-          className="mt-5 w-full bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-3.5 sm:py-4 rounded-xl transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 sm:gap-2.5 hover:shadow-xl hover:shadow-pink/30 hover:-translate-y-0.5 active:translate-y-0"
+          className="mt-5 w-full bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-3.5 sm:py-4 rounded-xl transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2 sm:gap-2.5 hover:shadow-xl hover:shadow-black/40 hover:-translate-y-0.5 active:translate-y-0"
         >
           <Search size={16} className="shrink-0 sm:hidden" />
           <Search size={18} className="shrink-0 hidden sm:inline-block" />

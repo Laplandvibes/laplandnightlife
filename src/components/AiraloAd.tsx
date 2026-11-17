@@ -356,10 +356,10 @@ export default function AiraloAd({
                 aria-hidden="true"
               />
             </a>
-            <p className="text-[11px] uppercase tracking-[0.12em] text-stone-400">{poweredBy}</p>
+            <p className="text-[11px] uppercase tracking-[0.12em] text-stone-600">{poweredBy}</p>
           </div>
 
-          <AffiliateDisclosure variant="compact" className="mt-6 !text-stone-500" />
+          <AffiliateDisclosure variant="compact" className="mt-6 !text-stone-600" />
         </div>
 
         {/* ── Brand visual stage (no fake product photo) ──────────────── */}

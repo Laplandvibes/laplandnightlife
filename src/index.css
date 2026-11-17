@@ -105,7 +105,128 @@
   --color-aurora-green: #10B981;
 }
 
+/* ── RAUHALLINEN VÄRILINJA ───────────────────────────────────────────────────
+   Kirkas väri tummalla pohjalla ei ole tekstin väri. Pinkki jää logoon ja
+   varausnappiin. Muu korostus on vaaleaa jäänsinistä, lämmintä vaaleaa tai
+   valkoista, reunat neutraaleja (kerma pysyy raamien tehostevärinä), hehkuja ei ole.
+
+   Miten: luokat (text-pink, border-neon-yellow/30, bg-purple/10 …) pysyvät koodissa,
+   mutta teksti, reuna ja täyttö saavat kukin oman arvonsa. Arvo on muuttuja, jonka
+   lähin pinta tai rooli asettaa (alla @layer base). inline on pakollinen: ilman sitä
+   muuttuja ratkeaisi :rootissa eikä elementissä, jossa sitä käytetään. */
+@theme inline {
+  --text-color-pink:         var(--lv-ink-pink);
+  --text-color-vibe-pink:    var(--lv-ink-pink);
+  --text-color-pink-300:     var(--lv-ink-pink);
+  --text-color-purple-light: var(--lv-ink-violet);
+  --text-color-violet-300:   var(--lv-ink-violet);
+  --text-color-aurora-blue:  var(--lv-ink-cyan);
+  --text-color-arctic-cyan:  var(--lv-ink-cyan);
+  --text-color-blue-300:     var(--lv-ink-cyan);
+  --text-color-neon-yellow:  var(--lv-ink-warm);
+  --text-color-amber-300:    var(--lv-ink-warm);
+  --text-color-aurora-green: var(--lv-ink-green);
+  --text-color-emerald-300:  var(--lv-ink-green);
+  --text-color-rose-400:     var(--lv-ink-rose);
+
+  --border-color-pink:         var(--lv-line);
+  --border-color-vibe-pink:    var(--lv-line);
+  --border-color-purple:       var(--lv-line);
+  --border-color-neon-yellow:  var(--lv-line);
+  --border-color-aurora-blue:  var(--lv-line);
+  --border-color-arctic-cyan:  var(--lv-line);
+  --border-color-aurora-green: var(--lv-line);
+  --border-color-emerald-500:  var(--lv-line);
+  --border-color-amber-500:    var(--lv-line);
+  --border-color-violet-500:   var(--lv-line);
+  --border-color-blue-500:     var(--lv-line);
+
+  --ring-color-pink:        var(--lv-line);
+  --ring-color-vibe-pink:   var(--lv-line);
+  --ring-color-arctic-cyan: var(--lv-line);
+
+  --background-color-pink:        var(--lv-fill-lasi);
+  --background-color-purple:      var(--lv-fill-lasi);
+  --background-color-aurora-blue: var(--lv-fill-lasi);
+  --background-color-neon-yellow: var(--lv-fill-lasi);
+  --background-color-emerald-500: var(--lv-fill-lasi);
+  --background-color-amber-500:   var(--lv-fill-lasi);
+  --background-color-amber-400:   var(--lv-fill-lasi);
+  --background-color-amber-300:   var(--lv-fill-lasi);
+  --background-color-violet-500:  var(--lv-fill-lasi);
+  --background-color-blue-500:    var(--lv-fill-lasi);
+  --background-color-vibe-pink:   var(--lv-fill-pink);
+  --background-color-arctic-cyan: var(--lv-fill-cyan);
+}
+
 @layer base {
+  /* RAUHALLINEN VÄRILINJA: oletus = tumma pohja. */
+  :root {
+    --lv-ink-pink:   #BAE6FD;   /* linkki, kuvake, korostus: jäänsininen */
+    --lv-ink-cyan:   #BAE6FD;
+    --lv-ink-violet: #DDD6FE;   /* violetti merkki pastellina */
+    --lv-ink-warm:   #F8E3B0;   /* aurinko, tähti, varoitus: lämmin vaalea */
+    --lv-ink-green:  #A7F3D0;   /* tilaväri pastellina */
+    --lv-ink-rose:   #FECDD3;
+    --lv-line:       #94A3B8;   /* korostusreuna neutraalina; läpikuultavuus tulee luokasta (/30) */
+    --lv-fill-lasi:  #CBD5E1;   /* sävytetty merkki tai laatta: neutraali lasi (/10–/25) */
+    --lv-fill-pink:  #DB2777;   /* sivun ainoa pinkki täyttö: varausnappi */
+    --lv-fill-cyan:  #E2E8F0;
+  }
+  /* Jaettujen osien sävylasi (bg-vibe-pink/12 …) on neutraali; umpinainen bg-vibe-pink on varausnappi. */
+  :where([class~="bg-vibe-pink/12"], [class~="hover:bg-vibe-pink/10"], [class~="bg-vibe-pink/10"], [class~="bg-vibe-pink/20"]) {
+    --lv-fill-pink: #CBD5E1;
+  }
+  /* Pieni versaaliyläotsikko: himmennetty versio ympäröivästä tekstiväristä, joten sama
+     sääntö käy tummalle ja vaalealle pinnalle. Linkissä ja napissa vahvempi. */
+  :where(.uppercase) {
+    --lv-ink-pink:   color-mix(in oklab, currentColor 66%, transparent);
+    --lv-ink-cyan:   color-mix(in oklab, currentColor 66%, transparent);
+    --lv-ink-violet: color-mix(in oklab, currentColor 66%, transparent);
+    --lv-ink-warm:   color-mix(in oklab, currentColor 66%, transparent);
+  }
+  :where(a.uppercase, button.uppercase, a .uppercase, button .uppercase) {
+    --lv-ink-pink:   color-mix(in oklab, currentColor 86%, transparent);
+    --lv-ink-cyan:   color-mix(in oklab, currentColor 86%, transparent);
+    --lv-ink-violet: color-mix(in oklab, currentColor 86%, transparent);
+    --lv-ink-warm:   color-mix(in oklab, currentColor 86%, transparent);
+  }
+  /* Otsikon korostussana ja otsikkofontilla ladottu iso luku ovat ympäröivän tekstin väriä:
+     ei kaksivärisiä otsikoita eikä värillisiä lukuja.
+     Tämän pitää olla versaalisäännön JÄLKEEN (versaaliotsikko on otsikko). */
+  :where(h1, h2, h3, h4, h5, h6, .font-heading) {
+    --lv-ink-pink:   currentColor;
+    --lv-ink-cyan:   currentColor;
+    --lv-ink-violet: currentColor;
+    --lv-ink-warm:   currentColor;
+  }
+  /* Vaalea pinta: korostus on syvä sävy. */
+  :where(.bg-white, .bg-snow, .bg-cream, .lv-vaalea) {
+    --lv-ink-pink:   #BE185D;
+    --lv-ink-cyan:   #0E7490;
+    --lv-ink-violet: #6D28D9;
+    --lv-ink-warm:   #92400E;
+    --lv-ink-green:  #047857;
+    --lv-ink-rose:   #BE123C;
+    --lv-line:       #64748B;
+    --lv-fill-lasi:  #64748B;
+  }
+  /* Tumma esine vaalean pinnan sisällä palauttaa tumman oletuksen. */
+  :where(.bg-deep-night, .bg-night, .bg-night-light, .bg-night-lighter, .lv-yo) {
+    --lv-ink-pink:   #BAE6FD;
+    --lv-ink-cyan:   #BAE6FD;
+    --lv-ink-violet: #DDD6FE;
+    --lv-ink-warm:   #F8E3B0;
+    --lv-ink-green:  #A7F3D0;
+    --lv-ink-rose:   #FECDD3;
+    --lv-line:       #94A3B8;
+    --lv-fill-lasi:  #CBD5E1;
+  }
+  /* Logo pitää pinkkinsä (yläpalkin piirros, heron ja tekstin sanamerkit). */
+  [data-lv-sanamerkki], .notranslate {
+    --lv-ink-pink: #EC4899;
+  }
+
   body {
     font-family: var(--font-body);
     background-color: var(--color-night);
@@ -141,7 +262,7 @@
 
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--color-night); }
-  ::-webkit-scrollbar-thumb { background: var(--color-purple); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
 
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

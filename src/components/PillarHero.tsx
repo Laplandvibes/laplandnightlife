@@ -14,11 +14,11 @@ interface PillarHeroProps {
   intro: string;
   bgImage?: string;
   /**
-   * Sivukohtainen sävy alareunan vinjettiin, esim. `'via-purple/25'`.
+   * Sivukohtainen sävy alareunan vinjettiin, esim. `'via-white/15'`.
    *
    * 🔴🔴 **Tässä annetaan VAIN keskipysäkki, ei koko liukuväriä** — ja se on
    * korjaus, ei tyyliseikka. Aiemmin tämä oli `accentClass` johon sivut
-   * kirjoittivat koko gradientin (`from-aurora-blue/20 via-night/80 to-night`).
+   * kirjoittivat koko gradientin (`from-white/[0.07] via-night/80 to-night`).
    * Suunta on `to-t`, joten `to-` on kaistan **yläreunassa** — ja `to-night`
    * on `rgb(15,23,42)` ilman alfaa eli **täysin peittävä**. Kaista on 40 %
    * korkea, joten kuva loppui suoraan viivaan 60 %:n kohdalla:
@@ -88,12 +88,12 @@ export default function PillarHero({
       {/* Neon glow accents — adds nightlife energy without obscuring image */}
       <div
         className="absolute top-1/4 -left-32 w-[500px] h-[500px] rounded-full pointer-events-none mix-blend-screen opacity-50"
-        style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.55) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(148,163,184,0.20) 0%, transparent 70%)' }}
         aria-hidden="true"
       />
       <div
         className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none mix-blend-screen opacity-45"
-        style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.55) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(148,163,184,0.16) 0%, transparent 70%)' }}
         aria-hidden="true"
       />
       <div
@@ -115,7 +115,7 @@ export default function PillarHero({
       {/* lg:max-w-6xl antaa pitkille FI/DE-yhdyssanoille ("Veranstaltungskalender")
           tilaa pysyä yhdellä rivillä; leipätekstit pitävät oman max-w-2xl-leveytensä. */}
       <div className="relative w-full max-w-4xl lg:max-w-6xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 backdrop-blur-md rounded-full px-4 py-1.5 mb-6">
+        <div className="inline-flex items-center gap-2 bg-[rgba(15,23,42,0.82)] border border-white/25 rounded-full px-4 py-1.5 mb-6">
           <Icon size={14} className={iconColor} />
           <Erotinrivi as="span" className="min-w-0 text-[0.65rem] uppercase tracking-[0.25em] text-white font-bold" style={SHADOW} osat={erotinOsat(eyebrow)} />
         </div>

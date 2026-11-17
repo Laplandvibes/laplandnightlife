@@ -40,10 +40,10 @@ export default function Nightclubs() {
   ];
 
   const tiers = [
-    { h: c.tier1H, where: c.tier1Where, body: c.tier1Body, accent: 'from-pink/30 to-night-light' },
-    { h: c.tier2H, where: c.tier2Where, body: c.tier2Body, accent: 'from-purple/30 to-night-light' },
-    { h: c.tier3H, where: c.tier3Where, body: c.tier3Body, accent: 'from-aurora-blue/25 to-night-light' },
-    { h: c.tier4H, where: c.tier4Where, body: c.tier4Body, accent: 'from-neon-yellow/15 to-night-light' },
+    { h: c.tier1H, where: c.tier1Where, body: c.tier1Body, accent: 'from-white/[0.07] to-night-light' },
+    { h: c.tier2H, where: c.tier2Where, body: c.tier2Body, accent: 'from-white/[0.07] to-night-light' },
+    { h: c.tier3H, where: c.tier3Where, body: c.tier3Body, accent: 'from-white/[0.07] to-night-light' },
+    { h: c.tier4H, where: c.tier4Where, body: c.tier4Body, accent: 'from-white/[0.07] to-night-light' },
   ];
 
   return (
@@ -65,7 +65,7 @@ export default function Nightclubs() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarNightclubs}
-        accentVia="via-pink/25"
+        accentVia="via-white/15"
       />
 
       {/* Stat glass tiles (skiresorts recipe) — real numbers only, all sourced

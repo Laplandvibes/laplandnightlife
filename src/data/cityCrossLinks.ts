@@ -127,12 +127,12 @@ const CL: Record<Lang, CLDict> = {
 // Category colours mirrored from shared/EcosystemMenu CAT_RGB so the network
 // reads colour-coded everywhere, not as a wall of identical dark cards.
 export const ACCENT = {
-  stay: '#EC4899',      // vibe pink
-  activity: '#06B6D4',  // arctic cyan
-  food: '#F97316',      // orange
-  transport: '#93C5FD', // sky blue
-  guide: '#34D399',     // aurora green
-  ski: '#38BDF8',       // aurora blue
+  stay: '#F9A8D4',      // vibe pink
+  activity: '#A5F3FC',  // arctic cyan
+  food: '#FED7AA',      // orange
+  transport: '#BAE6FD', // sky blue
+  guide: '#A7F3D0',     // aurora green
+  ski: '#BAE6FD',       // aurora blue
 } as const;
 
 /** Our town -> the LaplandBars town page(s) covering it (laplandbars-new/src/data/barCities.ts

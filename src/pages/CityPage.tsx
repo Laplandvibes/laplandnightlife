@@ -353,7 +353,7 @@ export default function CityPage() {
           <div className="absolute -bottom-24 right-1/5 w-[460px] h-[220px] bg-pink/10 rounded-full blur-[110px] pointer-events-none" />
           <div className="relative max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3 drop-shadow-[0_0_16px_rgba(250,204,21,0.45)]">{c.sisterEyebrow}</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3">{c.sisterEyebrow}</p>
               <h2 className="font-heading text-3xl sm:text-4xl text-white tracking-wide mb-2">
                 {c.sisterH(city.name)}
               </h2>
@@ -371,28 +371,28 @@ export default function CityPage() {
                     target="_blank"
                     rel="noopener"
                     className="group relative overflow-hidden bg-night-light/40 border rounded-xl p-5 hover:-translate-y-1 transition-all flex flex-col"
-                    style={{ borderColor: `${l.accent}45` }}
+                    style={{ borderColor: 'rgba(255,255,255,0.16)' }}
                   >
                     <span
                       className="absolute inset-x-0 top-0 h-[3px]"
-                      style={{ background: `linear-gradient(90deg, ${l.accent}, transparent)` }}
+                      style={{ background: 'linear-gradient(90deg, rgba(255,255,255,0.35), transparent)' }}
                       aria-hidden="true"
                     />
                     <span
                       className="absolute -top-10 -left-10 w-40 h-40 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
-                      style={{ background: `${l.accent}2E` }}
+                      style={{ background: 'rgba(148,163,184,0.10)' }}
                       aria-hidden="true"
                     />
                     <div className="relative flex items-start justify-between mb-3">
                       <span
                         className="inline-flex items-center justify-center w-9 h-9 rounded-lg"
-                        style={{ background: `${l.accent}1F`, color: l.accent, boxShadow: `0 0 18px ${l.accent}40` }}
+                        style={{ background: 'rgba(255,255,255,0.08)', color: l.accent }}
                       >
                         <Icon size={18} strokeWidth={1.8} />
                       </span>
-                      <ExternalLink size={13} style={{ color: l.accent }} />
+                      <ExternalLink size={13} className="text-white/60" />
                     </div>
-                    <p className="relative text-[0.6rem] uppercase tracking-[0.18em] font-bold mb-1.5" style={{ color: l.accent }}>{l.site}</p>
+                    <p className="relative text-[0.6rem] uppercase tracking-[0.18em] font-bold mb-1.5 text-white/70">{l.site}</p>
                     <p className="relative font-heading text-base text-white tracking-wide mb-2 leading-snug">
                       {l.label}
                     </p>
@@ -429,7 +429,7 @@ export default function CityPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
                   <ImageMark src={cc.img} linked={false} />
                   <div className="relative p-4 min-h-[160px] flex flex-col justify-end">
-                    <p className="text-[0.6rem] uppercase tracking-[0.18em] text-pink font-bold mb-1" style={SHADOW}>
+                    <p className="inline-block w-fit rounded-full bg-[rgba(15,23,42,0.82)] px-2 py-0.5 text-[0.6rem] uppercase tracking-[0.18em] text-white font-bold mb-1">
                       {cityTagLabel(cc.tag, lang)}
                     </p>
                     <h3 className="font-heading text-xl text-white tracking-wide mb-1" style={SHADOW}>
@@ -455,7 +455,7 @@ export default function CityPage() {
             partner="hotels"
             sid={`city_${city.slug}_cta`}
             destination={city.name}
-            className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink/30"
+            className="inline-flex items-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-4 px-8 rounded-xl text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
           >
             {c.stayBtn(city.name)}
           </AffiliateCTA>

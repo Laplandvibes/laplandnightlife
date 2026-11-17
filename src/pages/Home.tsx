@@ -144,7 +144,7 @@ export default function Home() {
               <Link
                 key={sc.h}
                 to={sc.to}
-                className="group relative flex flex-col min-h-[260px] overflow-hidden rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(236,72,153,0.35)] text-left"
+                className="group relative flex flex-col min-h-[260px] overflow-hidden rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.6)] text-left"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
@@ -158,7 +158,7 @@ export default function Home() {
                   {/* Tumma pilli (23.9.2026): 10 px aksenttiväri kuvan päällä jäi 1440 px:llä
                       kolmessa kortissa 1,0–1,1:1:een pahimmillaan (korttiteksti-portti).
                       Umpinainen yö takana: pinkki 5,1:1, violetti 6,6:1, sininen ja keltainen yli. */}
-                  <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5" style={{ color: sc.accent }}>
+                  <p className="text-[0.62rem] uppercase tracking-[0.2em] font-bold mb-1.5 text-white">
                     <span className="inline-block rounded-full border border-white/15 bg-night px-2.5 py-0.5"><Erotinrivi as="span" osat={erotinOsat(sc.tag)} /></span>
                   </p>
                   {/* Tasakorkeat lohkot: eri pituinen copy siirsi tekstin alun eri
@@ -168,7 +168,7 @@ export default function Home() {
                   <p className="text-xs text-white/75 mb-3 leading-snug line-clamp-2 min-h-[2.4em]" style={OVERLAY_SHADOW}>{sc.desc}</p>
                   {/* Tumma pilli myös linkkiriville (4.10.2026): valokuvan kirkas alareuna (Leskisen valaistu
                       julkisivu) laski 10 px aksenttivärin 4,0:1:een (korttiteksti-portti). */}
-                  <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1 rounded-full bg-night px-2.5 py-0.5" style={{ ...OVERLAY_SHADOW, color: sc.accent }}>
+                  <span className="text-[0.62rem] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-1 rounded-full bg-night px-2.5 py-0.5 text-white" style={OVERLAY_SHADOW}>
                     {c.scenes.go} <ArrowRight size={12} />
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export default function Home() {
               <Link
                 key={e.name}
                 to={to('/events')}
-                className="group relative flex flex-col min-h-[320px] overflow-hidden rounded-2xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(236,72,153,0.4)]"
+                className="group relative flex flex-col min-h-[320px] overflow-hidden rounded-2xl border border-white/10 hover:border-pink/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]"
               >
                 {e.img ? (
                   <div

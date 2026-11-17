@@ -88,7 +88,7 @@ export function PhotoCredit({ src, linked = true, className = '' }: { src?: stri
   if (!c) return null;
   // Yksi rivi (whitespace-nowrap): kaksirivinen merkintä nousi kortin otsikon päälle
   // (tekstipaallekkain-portti 4.10.2026, "Ximonic (Simo Räsänen) · CC BY-SA 4.0" 280 px:n kortissa).
-  const base = `absolute bottom-0 right-0 z-20 max-w-full whitespace-nowrap rounded-tl bg-black/55 px-1.5 py-[2px] text-[9px] sm:text-[10px] leading-tight text-white ${className}`;
+  const base = `absolute bottom-0 right-0 z-20 max-w-full whitespace-nowrap rounded-tl bg-black/75 px-1.5 py-[2px] text-[9px] sm:text-[10px] leading-tight text-white ${className}`;
   return (
     <span className={base} data-photo-credit="">
       {PHOTO[lang]}:{' '}

@@ -47,7 +47,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span
-          className="inline-block bg-pink/25 border border-pink/60 text-white text-xs uppercase tracking-[0.25em] font-bold px-4 py-1.5 rounded-full mb-7 backdrop-blur-md"
+          className="inline-block bg-[rgba(15,23,42,0.82)] border border-white/20 text-white text-xs uppercase tracking-[0.25em] font-bold px-4 py-1.5 rounded-full mb-7"
           style={SHADOW}
         >
           {c.badge}

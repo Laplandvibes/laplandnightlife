@@ -45,7 +45,7 @@ export default function AuroraBars() {
         subtitle={c.heroSub}
         intro={c.heroIntro}
         bgImage={IMG.pillarAuroraBars}
-        accentVia="via-purple/25"
+        accentVia="via-white/15"
       />
 
       {/* Appin revontuliyksikkö heti heron perään: nappi avaa appin revontulinäkymän (tämän yön todennäköisyys

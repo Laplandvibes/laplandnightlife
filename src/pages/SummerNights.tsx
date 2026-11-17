@@ -121,7 +121,7 @@ export default function SummerNights() {
         <div className="absolute -top-20 left-1/4 w-[520px] h-[240px] bg-amber-400/10 rounded-full blur-[110px] pointer-events-none" />
         <div className="absolute -bottom-20 right-1/4 w-[420px] h-[200px] bg-pink/10 rounded-full blur-[110px] pointer-events-none" />
         <div className="relative max-w-5xl mx-auto">
-          <p className="text-center text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-8 drop-shadow-[0_0_16px_rgba(250,204,21,0.45)]">
+          <p className="text-center text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-8">
             {c.statsEyebrow}
           </p>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -135,7 +135,7 @@ export default function SummerNights() {
                 key={s.v}
                 className="bg-night-light/40 border border-neon-yellow/20 hover:border-neon-yellow/50 rounded-2xl p-5 sm:p-6 text-center transition-colors"
               >
-                <p className="font-heading text-4xl sm:text-5xl text-neon-yellow tracking-wide leading-none mb-2 drop-shadow-[0_0_24px_rgba(250,204,21,0.5)]">
+                <p className="font-heading text-4xl sm:text-5xl text-neon-yellow tracking-wide leading-none mb-2">
                   {s.v}
                 </p>
                 <p className="text-xs sm:text-sm text-white/75 leading-snug">{erotinOsat(s.l).map((osa) => <span key={osa} className="block">{osa}</span>)}</p>
@@ -146,7 +146,7 @@ export default function SummerNights() {
       </section>
 
       <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-pink/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.05] via-transparent to-white/[0.02] pointer-events-none" />
         <div className="relative max-w-5xl mx-auto">
           <div className="text-center mb-10 sm:mb-12">
             <p className="text-xs uppercase tracking-[0.25em] text-neon-yellow font-bold mb-3">{c.timeEyebrow}</p>
@@ -157,7 +157,7 @@ export default function SummerNights() {
           <ol className="relative border-l-2 border-neon-yellow/30 pl-6 sm:pl-8 space-y-6 sm:space-y-8 max-w-2xl mx-auto">
             {timeline.map((t) => (
               <li key={t.time} className="relative">
-                <span className="absolute -left-[2.1rem] sm:-left-[2.6rem] top-1 w-4 h-4 rounded-full bg-neon-yellow shadow-[0_0_18px_rgba(250,204,21,0.7)]" />
+                <span className="absolute -left-[2.1rem] sm:-left-[2.6rem] top-1 w-4 h-4 rounded-full bg-neon-yellow" />
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-4">
                   <p className="font-heading text-2xl sm:text-3xl text-neon-yellow tracking-wide w-24 shrink-0">{t.time}</p>
                   <div>
@@ -194,9 +194,9 @@ export default function SummerNights() {
                 />
                 <ImageMark src={s.img} linked={false} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/52 via-[42%] to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-transparent" />
                 <div className="relative p-6 flex flex-col justify-end w-full">
-                  <p className="text-[0.65rem] uppercase tracking-[0.22em] text-neon-yellow font-bold mb-2" style={SHADOW}>
+                  <p className="inline-block w-fit rounded-full bg-[rgba(15,23,42,0.82)] px-2.5 py-0.5 text-[0.65rem] uppercase tracking-[0.22em] text-white font-bold mb-2">
                     {s.when}
                   </p>
                   <h3 className="font-heading text-3xl text-white tracking-wide mb-3 group-hover:text-neon-yellow transition-colors" style={SHADOW}>
@@ -240,16 +240,16 @@ export default function SummerNights() {
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/55 via-[45%] to-transparent" />
                 <div className="relative p-5 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-4">
-                    <e.icon size={26} className="text-neon-yellow drop-shadow-[0_0_18px_rgba(250,204,21,0.6)]" strokeWidth={1.5} />
+                    <e.icon size={26} className="text-neon-yellow" strokeWidth={1.5} />
                     <span
-                      className="text-[0.55rem] uppercase tracking-[0.22em] font-bold text-white bg-black/40 backdrop-blur-md border border-white/30 rounded-full px-2.5 py-1"
+                      className="text-[0.55rem] uppercase tracking-[0.22em] font-bold text-white bg-[rgba(15,23,42,0.82)] border border-white/30 rounded-full px-2.5 py-1"
                       style={SHADOW}
                     >
                       {e.badge}
                     </span>
                   </div>
                   <div className="mt-auto">
-                    <Erotinrivi className="text-[0.65rem] uppercase tracking-[0.2em] text-neon-yellow font-bold mb-2" style={SHADOW} osat={erotinOsat(e.when)} />
+                    <Erotinrivi className="inline-block w-fit rounded-lg bg-[rgba(15,23,42,0.82)] px-2.5 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-white font-bold mb-2" osat={erotinOsat(e.when)} />
                     <h3 className="font-heading text-xl text-white tracking-wide mb-2 leading-tight" style={SHADOW}>{e.h}</h3>
                     <p className="text-xs sm:text-sm text-white/85 leading-relaxed line-clamp-3" style={SHADOW}>{e.body}</p>
                   </div>
@@ -283,11 +283,11 @@ export default function SummerNights() {
                 />
                 <ImageMark src={l.img} />
                 <div className="absolute inset-0 bg-gradient-to-t from-night from-3% via-night/50 via-[45%] to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/15 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-transparent" />
                 <div className="relative p-5 flex flex-col w-full">
                   <div className="flex items-start gap-3 mb-3">
-                    <span className="font-heading text-4xl text-neon-yellow leading-none drop-shadow-[0_0_18px_rgba(250,204,21,0.6)]" style={SHADOW}>0{i + 1}</span>
-                    <l.icon size={22} className="text-neon-yellow mt-2 drop-shadow-[0_0_18px_rgba(250,204,21,0.6)]" strokeWidth={1.6} />
+                    <span className="font-heading text-4xl text-white leading-none rounded-lg bg-[rgba(15,23,42,0.82)] px-2 py-1">0{i + 1}</span>
+                    <l.icon size={22} className="text-neon-yellow mt-2" strokeWidth={1.6} />
                   </div>
                   <div className="mt-auto">
                     <h3 className="font-heading text-xl text-white tracking-wide mb-2" style={SHADOW}>{l.h}</h3>
@@ -323,7 +323,7 @@ export default function SummerNights() {
 
       <section
         className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5 overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, rgba(250,204,21,0.08) 0%, rgba(236,72,153,0.06) 100%)' }}
+        style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)' }}
       >
         <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-5">
           <div className="bg-night-light/50 border border-white/10 rounded-2xl p-7 flex flex-col">
@@ -341,7 +341,7 @@ export default function SummerNights() {
               {c.photoBtn}
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-pink/15 to-purple/10 border border-pink/20 rounded-2xl p-7 flex flex-col">
+          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-pink/20 rounded-2xl p-7 flex flex-col">
             <Sun className="text-neon-yellow mb-3" size={26} />
             <h3 className="font-heading text-2xl text-white tracking-wide mb-3">
               {c.stayH}
@@ -353,7 +353,7 @@ export default function SummerNights() {
               partner="hotels"
               sid="summer_nights_cta"
               destination="Lapland"
-              className="inline-flex items-center gap-2 self-start bg-neon-yellow hover:bg-amber-300 text-night font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-neon-yellow/30"
+              className="inline-flex items-center gap-2 self-start bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-wider transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40"
             >
               {c.stayBtn}
             </AffiliateCTA>
